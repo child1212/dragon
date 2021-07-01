@@ -1,0 +1,111 @@
+syntax = "proto2";
+package com.common.msg;
+
+enum TeamBuildingModuleMsgSubCommand {
+	//*****************************公会建筑活动[12121 - 12140]*****************************
+	//请求公会建筑活动信息
+	TEAMBUILDINGMODULEMSG_SUB_TEAMBUILDINGINFO = 12121;
+	//请求公会建筑排行情况
+	TEAMBUILDINGMODULEMSG_SUB_TEAMBUILDINGRANKINFO = 12122;
+	//请求公会玩家收集情况
+	TEAMBUILDINGMODULEMSG_SUB_TEAMBUILDINGMEMBERINFO = 12123;
+	//请求领取公会积分累计奖励
+	TEAMBUILDINGMODULEMSG_SUB_TEAMBUILDINGSCOREAWARD = 12124;
+	//请求领取公会排行奖励
+	TEAMBUILDINGMODULEMSG_SUB_TEAMBUILDINGRANKAWARD = 12125;
+	//公会当前排名等情况变化数据更新
+	TEAMBUILDINGMODULEMSG_SUB_TEAMBUILDINGDATACHANGED = 12126;
+}
+
+//请求公会建筑活动信息
+message TeamBuildingInfoRequest {
+	required string activityId = 1;
+}
+
+//请求公会建筑活动信息响应
+message TeamBuildingInfoResponse {
+	//false:不能参加活动  true:可以参见活动  
+	required bool ok = 1;
+	//公会建筑活动积分 不需要显示 先不发了 要单查一次数据库
+	//optional int32 score = 2;
+	//公会建筑活动排行 小于1的值说明现在没有排行
+	optional int32 rank = 3;
+	//是否领取了公会排行奖励 0:未领取 1:已经领取了
+	optional int32 rankAwarded = 4;
+	//已经领取的积分阶段奖励
+	repeated string scoreRewards = 5;
+}
+
+//请求公会建筑活动排行情况
+message TeamBuildingRankInfoRequest {
+	required string activityId = 1;
+}
+
+message TeamBuildingRankUnit {
+	required string teamId = 1;
+	required string teamName = 2;
+	required string teamIcon = 3;
+	required int32 score = 4;
+}
+
+// 请求公会建筑活动排行情况返回
+message TeamBuildingRankInfoResponse {
+	//公会排行信息 从第一开始依次排列
+	repeated TeamBuildingRankUnit teamBuildingRankUnits = 1;
+	//队伍排行
+	optional int32 rank = 2;
+	optional TeamBuildingRankUnit myTeamRankUnit = 3;
+}
+
+//请求公会玩家收集情况 服务器未排序
+message TeamBuildingMemberInfoRequest  {
+	required string activityId = 1;
+}
+
+message MemberUnit {
+	required string id = 1;
+	required string name = 2;
+	required string icon = 3;
+	//协助icon的显示问题
+	optional string account = 4;
+	required int32 score = 5;
+}
+
+// 请求公会玩家收集情况响应
+message TeamBuildingMemberInfoResponse {
+	repeated MemberUnit memberUnits = 1;
+}
+
+// 请求领取公会积分累计奖励
+message TeamBuildingScoreAwardRequest {
+	required string activityId = 1;
+	//配置表具体的id
+	required string awardIndex = 2;
+}
+
+// 请求领取公会积分累计奖励响应
+message TeamBuildingScoreAwardResponse {
+}
+
+// 请求领取公会排行奖励
+message TeamBuildingRankAwardRequest {
+	required string activityId = 1;
+}
+
+// 请求领取公会排行奖励响应
+message TeamBuildingRankAwardResponse {
+}
+
+//公会当前排名等情况变化数据更新
+message TeamBuildingDataChangedRequest {
+	required string activityId = 1;
+}
+
+message TeamBuildingDataChangedResponse {
+	//false:不能参加活动  true:可以参见活动  
+	required  bool ok = 1;
+	//排名
+	optional int32 rank = 2;
+}
+
+

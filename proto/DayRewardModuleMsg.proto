@@ -1,0 +1,44 @@
+syntax = "proto2";
+package com.common.msg;
+
+enum DayRewardModuleMsgSubCommand {
+	//加载签到信息请求
+    DAYREWARDMODULEMSG_SUB_DAYREWARDINFO = 9001;
+    //领取签到奖励请求
+    DAYREWARDMODULEMSG_SUB_GETDAYREWARD = 9002;
+}
+
+//签到信息请求
+message DayRewardInfoRequest {
+	required bool flag = 1;
+}
+
+//签到信息响应
+message DayRewardInfoResponse {
+	//连续登陆天数
+	required int32 continueEnterGameNum = 1;
+	//领取批次数
+	required int32 batchNum = 2;
+	//当天是否领取过奖励
+	required bool isRewarded = 3;
+	//随机建筑奖励id
+	required string rdBuildingId = 4;
+	//当天是否领取过看广告奖励
+	optional bool isAdsRewarded = 5;
+}
+
+//获取每日奖励请求
+message GetDayRewardRequest {
+	required bool flag = 1;
+	optional bool adsFlag = 2;   // 广告
+}
+
+//获取每日奖励响应
+message GetDayRewardResponse {
+	//领取的批次数
+	required int32 batchNum = 1;
+	//连续登陆天数
+	required int32 continueEnterGameNum = 2;
+	//领取奖励时如果包含随机建筑奖励则不为null
+	optional string rdBuildingId = 3;
+}

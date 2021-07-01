@@ -1,0 +1,295 @@
+syntax = "proto2";
+package com.common.msg;
+
+import "SceneModuleMsg.proto";
+import "ItemModuleMsg.proto";
+
+enum MagicalCreatureModuleMsgSubCommand {
+	// 购买蛋
+	MAGICALCREATUREMODULEMSG_SUB_BUYEGG = 24001;
+	// 蛋合成魔法生物
+	MAGICALCREATUREMODULEMSG_SUB_EGGSYNTHESIS = 24002;
+	// 三个魔法生物合成升级
+	MAGICALCREATUREMODULEMSG_SUB_CREATURELEVELUP = 24003;
+	// 培育
+	MAGICALCREATUREMODULEMSG_SUB_BREED = 24004;
+	// 获取魔法生物数据
+	MAGICALCREATUREMODULEMSG_SUB_GETCREATUREDATA = 24005;
+	// 龙巢开启
+	MAGICALCREATUREMODULEMSG_SUB_OPENNEST = 24006;
+	// 龙巢升级
+	MAGICALCREATUREMODULEMSG_SUB_NESTLEVELUP = 24007;
+	// 领取指定龙的挂机奖励
+	MAGICALCREATUREMODULEMSG_SUB_COLLECTHANGUPREWARD = 24008;
+	// 领取所有挂机奖励
+	MAGICALCREATUREMODULEMSG_SUB_COLLECTALLHANGUPREWARD = 24009;
+	// 指定龙进入龙巢
+	MAGICALCREATUREMODULEMSG_SUB_MOVETONEST = 24010;
+	// 采集
+	MAGICALCREATUREMODULEMSG_SUB_COLLECT = 24011;
+	// 点击采集奖励
+	MAGICALCREATUREMODULEMSG_SUB_COLLECTPLANTREWARD = 24012;
+	// 加速挂机
+	MAGICALCREATUREMODULEMSG_SUB_ACCELERATEHANGUP = 24013;
+	// 喂食
+	MAGICALCREATUREMODULEMSG_SUB_FEED = 24014;
+	// 购买龙
+	MAGICALCREATUREMODULEMSG_SUB_BUYCREATURE = 24015;
+	// 抚摸龙奖励
+	MAGICALCREATUREMODULEMSG_SUB_CARESSREWARD = 24016;
+	// 宠物龙奖励
+	MAGICALCREATUREMODULEMSG_SUB_PETREWARD = 24017;
+	// 指引过程使龙进入饥饿状态
+	MAGICALCREATUREMODULEMSG_SUB_GUIDEENTERHUNGER = 24018;
+	// 补充龙体力
+	MAGICALCREATUREMODULEMSG_SUB_BUYPHYSICALSTRENGTH = 24019;
+}
+
+message MagicalCreatureBuyMsg {
+  // 龙或蛋模板id
+  required string templateId = 1;
+  // 购买次数
+  required int32 buyCnt = 2;
+}
+
+message MagicalCreatureMsg {
+	// 实例id
+	required int64 creatureId = 1;
+	// 模板id
+	required string templateId = 2;
+	// 体力
+	optional int32 physicalStrength = 3;
+	// 上次体力恢复时间
+	optional int64 getPhysicalStrengthTime = 4;
+	// 所在巢type
+	optional int32 nestType = 5;
+	// 上次收集挂机收益时间
+	optional int64 lastCollectHangUpRewardTime = 6;
+	// 饱食结束时间
+	optional int64 repletionEndTime = 7;
+	// cd时间内抚摸奖励次数
+	optional int32 rewardCnt = 8;
+	// cd时间内首次抚摸领奖励时间
+	optional int64 firstRewardTime = 9;
+}
+
+message MagicalNestMsg {
+  // 巢类型
+  required int32 nestType = 1;
+  // 巢等级
+  required int32 nestLevel = 2;
+}
+
+// 购买蛋 请求
+message BuyEggRequest {
+	required string eggId = 1;
+}
+
+// 购买蛋 响应
+message BuyEggResponse {
+}
+
+// 蛋合成魔法生物 请求
+message EggSynthesisRequest {
+	required string eggId = 1;
+}
+
+// 蛋合成魔法生物 响应
+message EggSynthesisResponse {
+	required MagicalCreatureMsg creature = 1;
+}
+
+// 三个魔法生物合成升级 请求
+message CreatureLevelUpRequest {
+	required int32 creatureId1 = 1;
+	required int32 creatureId2 = 2;
+	required int32 creatureId3 = 3;
+}
+
+// 三个魔法生物合成升级 响应
+message CreatureLevelUpResponse {
+	required MagicalCreatureMsg creature = 1;
+	// 同步道具
+	repeated ItemMsg items = 2;
+}
+
+// 培育 请求
+message BreedRequest {
+	required string templateId1 = 1;
+	required string templateId2 = 2;
+}
+
+// 培育 响应
+message BreedResponse {
+	// 获得龙
+	optional MagicalCreatureMsg creature = 1;
+	// 获得道具
+	repeated ItemMsg items = 2;
+}
+
+//魔法生物数据和碎片数据请求
+message GetCreatureDataRequest {
+}
+
+//魔法生物数据和碎片数据响应
+message GetCreatureDataResponse {
+	repeated MagicalCreatureBuyMsg buys = 1;
+	repeated MagicalCreatureMsg creatures = 2;
+}
+
+message OpenNestRequest {
+	required int32 nestType = 1;
+}
+
+message OpenNestResponse {
+}
+
+message NestLevelUpRequest {
+	required int32 nestType = 1;
+}
+
+message NestLevelUpResponse {
+}
+
+message CollectHangupRewardRequest {
+	required int32 creatureId = 1;
+	// 龙挂机收益物品id
+	optional string itemId = 2;
+	// 龙挂机收益物品数量
+	optional int32 itemCnt = 3;
+}
+
+message CollectHangupRewardResponse {
+	// 同步道具
+	repeated ItemMsg items = 1;
+	optional MagicalCreatureMsg creatures = 2;
+}
+
+message CollectAllHangupRewardRequest {
+}
+
+message CollectAllHangupRewardResponse {
+	// 同步道具
+	repeated ItemMsg items = 1;
+	repeated MagicalCreatureMsg creatures = 2;
+}
+
+message MoveToNestRequest {
+	required int32 creatureId = 1;
+	required int32 nestType = 2;
+}
+
+message MoveToNestResponse {
+	optional MagicalCreatureMsg creatures = 1;
+}
+
+// 采集请求
+message CollectRequest {
+	required int32 creatureId = 1;
+	// 场景ID
+	optional string sceneId = 2;
+	// 障碍物ID
+	optional string plantId = 3;
+}
+
+// 采集响应
+message CollectResponse {
+	required MagicalCreatureMsg creature = 1;
+	optional PlantMsg plant = 2;
+}
+
+// 领取障碍物龙采集奖励请求
+message CollectPlantRewardRequest {
+	// 场景ID
+	optional string sceneId = 1;
+	// 障碍物ID
+	optional string plantId = 2;
+}
+
+// 领取障碍物龙采集奖励返回
+message CollectPlantRewardResponse {
+	// 采集障碍物结果
+	optional ClearPlantResponse clearRet = 1;
+}
+
+// 加速挂机请求
+message AccelerateHangUpRequest {
+	required int32 creatureId = 1;
+	// 消耗item
+	required ItemMsg consume = 2;
+}
+
+// 加速挂机返回
+message AccelerateHangUpResponse {
+	// 同步道具
+	repeated ItemMsg items = 1;
+	optional MagicalCreatureMsg creatures = 2;
+}
+
+message FeedMsg {
+	required int32 creatureId = 1;
+	required string itemId = 2;
+	required int64 feedTime = 3;
+}
+
+// 喂食请求
+message FeedRequest {
+	repeated FeedMsg feedMsgs = 1;
+}
+
+// 喂食返回
+message FeedResponse {
+	// 同步道具
+	repeated ItemMsg items = 1;
+	repeated MagicalCreatureMsg creatures = 2;
+}
+
+// 购买龙请求
+message BuyCreatureRequest {
+	required string templateId = 1;
+}
+
+// 购买龙返回
+message BuyCreatureResponse {
+	required MagicalCreatureMsg creature = 1;
+}
+
+// 抚摸龙奖励请求
+message CaressRewardRequest {
+	required int32 creatureId = 1;
+	required bool reset = 2;
+}
+
+// 抚摸龙奖励返回
+message CaressRewardResponse {
+	required string rewardItemId = 1;
+	required int32 rewardCount = 2;
+}
+
+// 宠物龙奖励请求
+message PetRewardRequest {
+}
+
+// 宠物龙奖励返回
+message PetRewardResponse {
+	// 奖励道具
+	required ItemMsg rewardItem = 1;
+}
+
+message GuideEnterHungerRequest {
+	required int32 creatureId = 1;
+}
+
+message GuideEnterHungerResponse {
+}
+
+message BuyPhysicalStrengthRequest {
+	required int32 creatureId = 1;
+	required int32 price = 2;
+}
+
+message BuyPhysicalStrengthResponse {
+	required MagicalCreatureMsg creature = 1;
+	// 同步道具
+	repeated ItemMsg items = 2;	
+}

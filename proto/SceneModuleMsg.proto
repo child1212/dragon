@@ -1,0 +1,348 @@
+syntax = "proto2";
+package com.common.msg;
+import "ItemModuleMsg.proto";
+import "FarmlandModuleMsg.proto";
+import "ConvertFactoryModuleMsg.proto";
+
+enum SceneModuleMsgSubCommand {
+	// 场景数据
+	SCENEMODULEMSG_SUB_SCENEINFO = 25301;
+	// 消除障碍物
+	SCENEMODULEMSG_SUB_CLEARPLANT = 25302;
+	//场景障碍物查询
+	SCENEMODULEMSG_SUB_FINDSCENEPLANTS = 25303;
+	//场景建筑升级
+	SCENEMODULEMSG_SUB_BUILDINGLEVELUP = 25304;
+	// 商人信息请求
+	SCENEMODULEMSG_SUB_TRADERINFO = 25305;
+	// 商人普通交换请求
+	SCENEMODULEMSG_SUB_TRADENORMALEXCHANGE = 25306;
+	// 商人限时特惠交换请求
+	SCENEMODULEMSG_SUB_TRADETIMELIMITEXCHANGE = 25307;
+	// 怪物转盘信息请求
+	SCENEMODULEMSG_SUB_MONSTERWHEELINFO = 25308;
+	// 怪物转盘随机请求
+	SCENEMODULEMSG_SUB_MONSTERWHEELTURN = 25309;
+	// 场景采集障碍成就信息请求
+	SCENEMODULEMSG_SUB_OBSTACLEACHIEVEMENTINFO = 25310;
+	//场景障碍物无云遮挡解锁通知
+	SCENEMODULEMSG_SUB_PLANTAPPEAR = 25311;
+	// 引爆炸弹请求
+	SCENEMODULEMSG_SUB_FIREBOMB = 25312;
+	// 请求所有场景对应的关闭时间
+	SCENEMODULEMSG_SUB_SCENECLOSETIME = 25313;
+	// 领取建筑掉落奖励
+	SCENEMODULEMSG_SUB_BUILDINGDROPREWARD = 25314;
+}
+
+// 障碍物
+message PlantMsg {
+	// 障碍物唯一ID
+	optional string plantId = 1;
+	// 已经消耗的物资
+	optional ItemMsg consumed = 2;
+	// 未领取的龙采集奖励
+	repeated ItemMsg collectRewards = 3;
+}
+
+// 场景数据请求
+message SceneInfoRequest {
+	// 场景ID
+	optional string sceneId = 1;
+}
+
+//场景建筑信息
+message BuildingMsg{
+	//场景上障碍唯一ID
+	required string plantId = 1;
+	//建筑等级
+	required int32  level = 2;
+	//是否有建筑掉落
+	optional bool drop = 3;
+}
+
+// 商人信息
+message TraderMsg {
+	//场景上障碍唯一ID
+	required string plantId = 1;
+}
+
+// 怪物信息
+message MonsterMsg {
+	//场景上障碍唯一ID
+	required string plantId = 1;
+	// hp
+	required int32 hp = 2;	
+}
+
+// 场景数据返回
+message SceneInfoResponse {
+	// 障碍物
+	repeated PlantMsg plants = 1;
+	// 已消除的
+	repeated string cleared = 2;
+	// 自动领取的龙采集奖励
+	repeated ItemMsg autoReceivedCollectRewards = 3; 
+	//场景建筑信息
+	repeated BuildingMsg buildingMsgs = 4;
+	// 种植信息
+	repeated FarmlandMsg farmlandMsgs = 5;
+	// 商人信息
+	repeated TraderMsg traderMsgs = 6;
+	// 兑换工厂信息
+	repeated ConvertFactoryMsg convertFactorys = 7;
+	// 怪物信息
+	repeated MonsterMsg monsterMsgs = 8;
+	//场景关闭时间 <=0 没有关闭时间
+	optional int64 closeTime = 9;
+}
+
+// 收集障碍物成就奖励
+message ObstacleAchievementRewardMsg {
+	// 成就ID
+	optional string achievementId = 1;
+	// 成就奖励
+	repeated ItemMsg rewards = 2;
+	// 所有完成奖励
+	repeated ItemMsg completeRewards = 3;
+}
+
+// 消除障碍物请求
+message ClearPlantRequest {
+	// 场景ID
+	optional string sceneId = 1;
+	// 障碍物ID
+	optional string plantId = 2;	
+}
+
+// 消除障碍物返回
+message ClearPlantResponse {
+	// 完全消除
+	optional bool cleared = 1; 
+	// 奖励
+	repeated ItemMsg produced = 2;
+	// 障碍物信息(cleared==false 会有此信息)
+	optional PlantMsg plant = 3;
+	// 同步道具
+	repeated ItemMsg items = 4;
+	// 收集障碍物成就奖励
+	optional ObstacleAchievementRewardMsg achievementReward = 5;
+	//障碍物ID
+	optional string plantId = 6;
+}
+
+//查询场景障碍物是否被清除 用于没有场景数据时的查询
+message FindScenePlantsRequest{
+	//查询的场景id
+	required string sceneId = 1;
+	//查询的障碍物
+	repeated string plantIds = 2;
+}
+//返回场景上存在的障碍物
+message FindScenePlantsResponse{
+	//存在的障碍物id
+	repeated string plantIds = 1;
+	//障碍物如果是建筑 要发送的额外建筑信息
+	repeated BuildingMsg buildings = 2;
+}
+
+//障碍物无云遮挡显现出来通知服务器(仅针对服务器需要用到的通知 目前仅任务有需求)
+message PlantAppearRequest{
+	//场景id
+	required string sceneId = 1;
+	//场景障碍物instanceId
+	required string plantId = 2;
+}
+//障碍物无云遮挡显现出来通知服务器返回
+message PlantAppearResponse{
+}
+
+//场景建筑升级请求
+message BuildingLevelUpRequest{
+	//场景id
+	required string sceneId = 1;
+	//场景建筑instanceId
+	required string plantId = 2;
+}
+
+//场景建筑升级相应
+message BuildingLevelUpResponse{
+
+}
+
+// 商人信息请求
+message TraderInfoRequest {
+	// 场景ID
+	optional string sceneId = 1;
+	// 商人ID
+	optional string traderId = 2;
+}
+
+// 商人兑换普通奖励兑换信息
+message TradeExchangeMsg {
+	optional bool done = 1;			// 完成状态
+	optional ItemMsg reward = 2;	// 奖励
+	optional ItemMsg exchange = 3;  // 兑换需要
+	optional ItemMsg bag = 4;		// 玩家当前存量
+}
+
+// 商人兑换特惠奖励兑换信息
+message TradeTimeLimitExchangeMsg {
+	optional int64 leftTime = 1;	// 剩余时间ms
+	optional TradeExchangeMsg exchangeInfo = 2;	// 兑换信息
+}
+
+// 商人信息返回
+message TraderInfoResponse {
+	optional bool done = 1;	// 完成状态
+	repeated TradeExchangeMsg normals = 2;	// 普通兑换信息
+	optional TradeTimeLimitExchangeMsg timeLimit = 3;	// 限时特惠兑换信息
+	repeated ItemMsg completeRewards = 4;	// 完成奖励
+}
+
+// 商人普通交换请求
+message TradeNormalExchangeRequest {
+	// 场景ID
+	optional string sceneId = 1;
+	// 商人ID
+	optional string traderId = 2;
+	// 励索引从1开始
+	optional int32 normalIndex = 3;	
+}
+
+// 商人普通交换返回
+message TradeNormalExchangeResponse {
+	optional ItemMsg rewards = 1;	// 奖励
+	optional TradeExchangeMsg exchangeInfo = 2;	// 兑换信息
+	repeated ItemMsg completeRewards = 3;	// 完成奖励
+}
+
+// 商人限时特惠交换请求
+message TradeTimeLimitExchangeRequest {
+	// 场景ID
+	optional string sceneId = 1;
+	// 商人ID
+	optional string traderId = 2;	
+}
+
+// 商人限时特惠交换返回
+message TradeTimeLimitExchangeResponse {
+	optional ItemMsg rewards = 1;	// 奖励
+	repeated ItemMsg boxRewards = 2;	// 宝箱奖励
+	optional TradeTimeLimitExchangeMsg exchangeInfo = 3;	// 兑换信息
+	repeated ItemMsg completeRewards = 4;	// 完成奖励
+}
+
+// 怪物转盘信息请求
+message MonsterWheelInfoRequest {
+	// 场景ID
+	optional string sceneId = 1;
+	// 怪物ID
+	optional string plantId = 2;
+}
+
+// 怪物转盘信息返回
+message MonsterWheelInfoResponse {
+	// 剩余hp
+	optional int32 hp = 1;
+	// hp上限
+	optional int32 hpLimit = 2;
+	// 每次消耗体力
+	optional int32 round = 3;
+	// 转盘(体力)
+	repeated int32 wheel = 4;
+}
+
+// 怪物转盘随机请求
+message MonsterWheelTurnRequest {
+	// 场景ID
+	optional string sceneId = 1;
+	// 怪物ID
+	optional string plantId = 2;
+}
+
+// 怪物转盘随机返回
+message MonsterWheelTurnResponse {
+	// 随机到的转盘下标从1开始
+	optional int32 index = 1;
+	// 怪物剩余hp
+	optional int32 hp = 2;
+	// 玩家剩余体力
+	optional int32 energy = 3;
+}
+
+// 场景采集障碍成就信息请求
+message ObstacleAchievementInfoRequest {
+	// 场景ID
+	optional string sceneId = 1;
+}
+
+// 采集成就信息
+message ObstacleAchievementMsg {
+	// 成就完成
+	optional bool complete = 1;
+	// 成就ID
+	optional string achievementId = 2;
+	// 采集障碍物类型
+	optional int32 type = 3;
+	// 已采集数量
+	optional int32 count = 4;
+	// 数量上限
+	optional int32 limit = 5;
+}
+
+// 场景采集障碍成就信息返回
+message ObstacleAchievementInfoResponse {
+	// 成就全完成
+	optional bool complete = 1;
+	// 采集成就信息
+	repeated ObstacleAchievementMsg achievements = 2;
+}
+
+// 引爆炸弹请求
+message FireBombRequest {
+	// 场景ID
+	optional string sceneId = 1;
+	// 爆炸位置x
+	optional int32 x = 2;
+	// 爆炸位置y
+	optional int32 y = 3;
+	// 炸弹ID
+	optional string bombId = 4;
+	// 目标
+	repeated string plantIds = 5;
+}
+
+// 引爆炸弹返回
+message FireBombResponse {
+	// 爆炸效果
+	repeated ClearPlantResponse effects = 1;
+}
+
+//请求场景关闭的时间信息
+message SceneCloseTimeRequest {
+}
+message SceneCloseEntry{
+	//场景id
+	required string sceneId = 1;
+	required int64 closeTime = 2;
+}
+//请求场景关闭的时间信息相应
+message SceneCloseTimeResponse {
+	//关闭信息
+	repeated SceneCloseEntry closeEntries = 1;
+}
+
+// 建筑掉落奖励请求
+message BuildingDropRewardRequest {
+	// 场景ID
+	optional string sceneId = 1;
+	// 建筑ID
+	optional string plantId = 2;
+}
+
+// 建筑掉落奖励返回
+message BuildingDropRewardResponse {
+	// 奖励
+	repeated ItemMsg rewards = 1;
+}

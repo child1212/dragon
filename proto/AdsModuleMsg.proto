@@ -1,0 +1,117 @@
+syntax = "proto2";
+package com.common.msg;
+
+import "LevelsModuleMsg.proto";
+import "ItemModuleMsg.proto";
+enum AdsModuleMsgSubCommand {
+	// 请求Ads广告信息
+	ADSMODULEMSG_SUB_ADSINFO = 13001;
+	// 请求领取广告奖励
+	ADSMODULEMSG_SUB_ADSREWARD = 13002;
+	// 请求激励广告信息
+	ADSMODULEMSG_SUB_ADSINCENTIVEINFO = 13003;
+	// 领取激励广告奖励
+	ADSMODULEMSG_SUB_ADSINCENTIVEREWARD = 13004;
+	// 请求领取钻石气球奖励
+	ADSMODULEMSG_SUB_ADSDIAMONDBALLREWARD = 13005;
+	// 请求开启礼包活动
+	ADSMODULEMSG_SUB_ADSOPENNEWGIFT = 13006;}
+
+// 广告观看信息
+message AdsViewInfo {
+	// 广告ID
+	required string id = 1;
+	// 上次观看广告时间
+	required int64 lastViewTime = 2;
+	// 当日观看次数
+	required int32 todayViewCount = 3;
+	// 转盘抽奖次数
+	optional int32 prizeWheelDrawCount = 4;
+}
+
+message AdsOpenNewGiftRequest{
+	//商品id
+	required string id = 1;
+}
+message AdsOpenNewGiftResponse{
+}
+
+// Ads广告信息请求
+message AdsInfoRequest {
+	
+}
+//当日购买ads气球礼包信息
+message AdsNewGiftLimit {
+	//商品id
+	required string id = 1;
+	//已购买次数
+	required int32 count = 2;
+	//开启时间 默认为0
+	optional int64 startTime=3;
+}
+
+// Ads广告信息响应
+message AdsInfoResponse {
+	// 用户广告分层
+	required string adsGroup = 1;
+	// 上次观看广告时间
+	required int64 lastViewTime = 2;
+	// 当日观看次数
+	required int32 todayViewCount = 3;
+	// 当日领取钻石次数
+	optional int32 diamondCount = 4;
+	// 当日购买ads气球礼包信息
+	repeated AdsNewGiftLimit adsNewGiftLimit = 5;
+}
+
+// 领取广告奖励请求
+message AdsRewardRequest {
+	
+}
+
+// 领取广告奖励响应
+message AdsRewardResponse {
+	
+}
+
+// 激励广告信息请求
+message AdsIncentiveInfoRequest {
+	
+}
+
+
+// 激励广告信息响应
+message AdsIncentiveInfoResponse {
+	repeated AdsViewInfo viewInfos = 1;	// 广告信息
+	optional string hotAirBalloonAwardId = 2;//热气球广告信息奖励配置的唯一id
+	optional int32 hotAirBalloonAwardCount = 3;//广告气球奖励次数 一次未奖励过为0
+	repeated int32 wheelGrandTotalRewards = 4;	// 已领取的转盘累计奖励
+}
+
+// 激励广告奖励请求
+message AdsIncentiveRewardRequest {
+	required string adsId = 1;	// 广告ID
+	optional LevelBoxMsg levelBoxMsg = 2;	// 符石宝箱
+	optional int32 prizeWheelIndex = 3;	// 转盘奖励索引,从1开始
+	optional bool prizeWheelRest = 4;	// 转盘重置
+	optional string hotAirBalloonAwardId = 5;//广告气球奖励配置id
+	optional int32 hotAirBalloonAwardIndex = 6;//广告气球奖励索引,从1开始
+	repeated ItemMsg oldMaterialReward = 7; // ReRoll之前的材料建筑宝箱奖励
+	repeated ItemMsg newMaterialReward = 8; // ReRoll之后的材料建筑宝箱奖励
+}
+
+// 激励广告奖励响应
+message AdsIncentiveRewardResponse {
+	
+}
+
+// 请求领取钻石气球奖励
+message AdsDiamondBallRewardRequest {
+	//由于是随机值 客户端离线可玩 因此客户端负责随机
+	required int32 num = 1;
+}
+
+// 请求领取钻石气球奖励响应
+message AdsDiamondBallRewardResponse {
+	
+}

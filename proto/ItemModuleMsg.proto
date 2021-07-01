@@ -1,0 +1,165 @@
+syntax = "proto2";
+package com.common.msg;
+
+enum ItemModuleMsgSubCommand {
+	//获取道具列表请求
+    ITEMMODULEMSG_SUB_ITEMLIST = 2001;
+   	//使用道具请求
+  	ITEMMODULEMSG_SUB_USEITEM = 2002;
+  	//扣除道具请求
+	ITEMMODULEMSG_SUB_SUBITEM = 2003;
+	//道具改变通知
+	ITEMMODULEMSG_SUB_ITEMCHANGE = 2004;
+	//兑换道具请求
+	ITEMMODULEMSG_SUB_EXCHANGEITEM = 2005;
+	//订阅道具提示记录
+	ITEMMODULEMSG_SUB_USESUBSCRIBEITEMTIPRECORD = 2006;
+	//查询背包中物品数量
+	ITEMMODULEMSG_SUB_FINDITEMS = 2007;
+	//dragon 道具收藏
+	ITEMMODULEMSG_SUB_COLLECTITEMS = 2008;
+	//补充体力请求
+	ITEMMODULEMSG_SUB_SUPPLEMENTENERGY = 2009;
+}
+
+//玩家道具
+message ItemMsg {
+	//道具模板id
+	optional string itemTemplateId = 1;
+	//道具数量
+	optional int32 count = 2;
+	//道具生效剩余时间
+	repeated int64 cdTimes = 3;
+}
+
+//加载道具列表请求
+message ItemListRequest {
+	optional int32 flag = 1;
+}
+
+//道具列表响应
+message ItemListResponse {
+	//玩家拥有的道具
+	repeated ItemMsg items = 1;
+}
+
+//道具变化通知
+message ItemChangeNotify {
+	//操作状态 true:添加  false:删除
+	repeated bool isAdds = 1;
+	//道具信息
+	repeated ItemMsg msgs = 2;
+}
+
+//扣除道具请求
+message SubItemRequest {
+	//道具id
+	repeated string itemTemplateIds = 1;
+	//道具数量
+	repeated int32 itemCounts = 2;
+}
+
+//扣除道具响应
+message SubItemResponse {
+	//扣除道具是否成功
+	optional bool isSuccess = 1;
+}
+
+//使用道具请求
+message UseItemRequest {
+	//使用的道具id
+	optional string itemTemplateId = 1;
+	//使用数量
+	optional int32 count = 2;
+	//附加参数（建造建筑时使用 direction,x,y）
+	optional string param = 3;
+	//关卡类型 不是关卡消耗不用传递
+	optional int32 levelType = 4;
+	//使用类型  1.订阅的每天赠送道具
+	optional int32 useType = 5;
+}
+
+//使用道具响应
+message UseItemResponse {
+	//使用的道具id
+	optional string itemTemplateId = 1;
+	//使用后产生的实例id(建筑)
+	optional string entityId = 2;
+	//使用后产生的龙实例id
+	optional int64 creatureId = 3;
+}
+
+//兑换道具请求
+message ExchangeItemRequest {
+	//兑换道具模板id(如果为-1表示兑换体力值)
+	optional string itemTemplateId = 1;
+	//兑换道具数量
+	optional int32 count = 2;
+	//是否直接使用
+	optional bool isUse = 3;
+	//关卡类型 不是关卡兑换不用传递
+	optional int32 levelType = 4;
+	//兑换来源(0默认1工厂2订单3航海)
+	optional int32 source = 5;
+}
+
+//兑换道具响应
+message ExchangeItemResponse {
+	
+}
+
+//订阅道具提示记录
+message UseSubscribeItemTipRecordRequest {
+	//使用的道具id
+	optional string itemTemplateId = 1;
+	//tip时间 如无需记录 不发此值或者发送0
+	optional int64 timeMs = 2;
+	//上次提示时间 如无需记录 不发此值或者发送0
+	optional int64 lastTipMs = 3;
+}
+
+//订阅道具提示记录响应
+message UseSubscribeItemTipRecordResponse {
+}
+
+//查询背包中物品数量（一个或多个物品查询）
+message FindItemsRequest {
+	//道具id
+	repeated string templateIds = 1;
+}
+
+//查询背包中物品数量响应
+message FindItemsResponse {
+	//物品信息返回
+	repeated ItemMsg itemMsgs = 1;
+}
+
+//道具收藏请求
+message CollectItemsRequest {
+	//收藏配置id
+	required string id  = 1;
+}
+
+//道具收藏返回
+message CollectItemsResponse {
+}
+
+//补充体力请求
+message SupplementEnergyRequest {
+	//标记位  1:固定消耗补满体力   2:固定消耗补充指定体力 3:计算消耗补充一定量体力
+	required int32 mark = 1;
+	//需要的钻石数量
+	required int32 diamonds = 2;
+	//补充的体力值
+	required int32 energies = 3;
+}
+
+//补充体力回复
+message SupplementEnergyResponse {
+	//标记位  1:固定消耗补满体力   2:固定消耗补充指定体力 3:计算消耗补充一定量体力
+	required int32 mark = 1;
+	//需要的钻石数量
+	required int32 diamonds = 2;
+	//补充的体力值
+	required int32 energies = 3;
+}

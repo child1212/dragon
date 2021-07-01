@@ -1,0 +1,573 @@
+syntax = "proto2";
+package com.common.msg;
+import "BuffModuleMsg.proto";
+import "ItemModuleMsg.proto";
+enum BuildingModuleMsgSubCommand {
+	//建筑列表请求
+    BUILDINGMODULEMSG_SUB_BUILDINGLIST = 3001;
+    //移动建筑请求
+    BUILDINGMODULEMSG_SUB_MVBUILDING = 3002;
+    //建筑升级请求
+    BUILDINGMODULEMSG_SUB_BUILDINGLEVELUP = 3003;
+    //完成升级建筑请求
+    BUILDINGMODULEMSG_SUB_FINISHLEVELUPBUILDING = 3004;
+    //获取建筑奖励请求
+    BUILDINGMODULEMSG_SUB_RECIEVEBUILDINGREWARD = 3005;
+    //获取建筑挂机奖励请求
+    BUILDINGMODULEMSG_SUB_RECIEVEHANGUPREWARD = 3006;
+    //清除建筑挂机cd
+    BUILDINGMODULEMSG_SUB_CLEARHANGUPCD = 3007;
+    //开启礼盒建筑
+    BUILDINGMODULEMSG_SUB_OPENGIFTBUILDING = 3008;
+    //铲除建筑
+    BUILDINGMODULEMSG_SUB_SUPDUPBUILDING = 3009;
+    //地块售卖
+    BUILDINGMODULEMSG_SUB_REGIONSELL = 3010;
+    //临时建筑购买请求
+    BUILDINGMODULEMSG_SUB_SALEBUILDINGBUY = 3011;
+    //临时建筑过期请求
+    BUILDINGMODULEMSG_SUB_SALEBUILDINGEXPIRE= 3012;
+    //获取区域信息
+    BUILDINGMODULEMSG_SUB_GETAREAINFO = 3013;
+    //订阅支付前端打点
+    BUILDINGMODULEMSG_SUB_CLIENTDOTFORSUBSCRIBE = 3014;
+    //请求回收L1-L5级建筑材料
+    BUILDINGMODULEMSG_SUB_RECYCLEBUILDINGMATERIAL = 3015;
+    // 请求查询道具建筑过期时间
+    BUILDINGMODULEMSG_SUB_ITEMBUILDINGEXPIREDTIME = 3016;
+    // 请求删除过期的道具建筑
+    BUILDINGMODULEMSG_SUB_ITEMBUILDINGEXPIREDTIMEREMOVE = 3017;
+    //请求领取并替换皮肤
+    BUILDINGMODULEMSG_SUB_TAKEANDUSESKIN = 3018;
+    //请求使用或者取消使用皮肤
+    BUILDINGMODULEMSG_SUB_USESKIN = 3019;
+    //请求收集信息
+    BUILDINGMODULEMSG_SUB_COLLECTIONINFO = 3020;
+    //请求兑换收集建筑奖励
+    BUILDINGMODULEMSG_SUB_BUILDINGCOLLECTEXCHANGE = 3021;
+    //请求皮肤信息
+    BUILDINGMODULEMSG_SUB_SKININFO = 3022;
+    //批量领取建筑挂机奖励
+    BUILDINGMODULEMSG_SUB_BULKRECEIVEHANGUPREWARD = 3023;
+}
+
+// 被偷的建筑信息
+message StealBuildingStruct {
+	// 建筑id
+	optional string buildingId = 1;
+	// 模板ID
+	optional string templateId = 2;
+	// 盾ID
+	optional string shield = 3;
+	// 盾补偿
+	optional ItemMsg shieldCompensate = 4;
+	// 盾耐久
+	optional int32 durability = 5;
+	// 盾index
+	optional int32 shieldIndex = 6;
+	// 网ID
+	optional string netId = 7;
+	// 网补偿
+	optional ItemMsg netCompensate = 8;
+	// 网唯一ID
+	optional string netUniqueId = 9;
+}
+
+// 建筑被偷事件结构体
+message BuildingStolenEventStruct {
+	// 建筑
+	optional StealBuildingStruct buildings = 1;
+	// 被偷的时间
+	optional int64 eventTime = 2;
+	// 小偷玩家PlayerId
+	optional string thiefId = 3;
+ 	// 名字
+ 	optional string nickname = 4;
+ 	// 头像
+ 	optional string icon = 5;
+ 	// account
+ 	optional string account = 6;
+ 	// 已复仇
+ 	optional bool avenged = 7;
+ 	// 历史ID
+ 	optional string historyId = 8;
+ 	// 建筑被偷补偿
+	optional ItemMsg compensate = 9;
+	//是否为vip
+	optional bool isVip = 10;
+}
+
+//物件信息
+message ModelMsg {
+	//物件id
+	required int32 id = 1;
+	//物件配置(当用在修理请求时 如果值为-1则表示此次请求为删除物件)
+	required string setting = 2;
+}
+
+//格子位置信息
+message PointMsg {
+	//格子横坐标
+	optional int32 x = 1;
+	//格子纵坐标
+	optional int32 y = 2;
+}
+
+//区域信息
+message AreaInfoMsg {
+	//区域id
+	required int32 areaId = 1;
+	//区域解锁等级
+	required int32 curUnlockLevel = 2;
+	//解锁的区块id(如果集合中只有一个元素 并且这一个元素的值为-1 则表示全部解锁)
+	repeated int32 unlockBlockIds = 3;
+	//区域过期时间（永久区域0，限时区域为失效时间戳）
+	optional int64 expiresTime = 4;
+	//客户端订阅购买该区域需要打点次数
+	optional int32 dotCnt = 5;
+}
+
+// 建筑奖励信息
+message BuildingRewardMsg{
+	// 奖励钻石
+	optional int32 diamondCnt = 1;
+	// 奖励buff
+	optional BuffMsg buffMsg = 2;
+	// 是否有奖励
+	optional bool hasReward = 3;
+	// 建筑id
+	optional string buildingId = 4;
+	// 礼盒id
+	optional string giftBoxId = 5;
+}
+
+//建筑信息
+message BuildingMsg {
+	//建筑id
+	optional string buildingId = 1;
+	//建筑模板id
+	optional string buildingTemplateId = 2;
+	//建筑原点
+	optional PointMsg srcPoint = 3;
+	//建筑朝向
+	optional bool direction = 4;
+	//升级需要的cd时间(-1为非升级中状态)
+	optional int64 levelUpCdTime = 5;
+	//建筑解锁等级
+	optional int32 curUnlockLevel = 6;
+	//最大建筑解锁等级
+	optional int32 maxUnlockLevel = 7;
+	//建筑奖励信息
+	optional BuildingRewardMsg rewardInfo = 8;
+	// 是否可拷贝（访问好友家园时的特殊建筑, 0不可以，1可以）
+	optional int32 canCopy = 9;
+	// 建筑挂机结束时间（超过该时间可领取挂机奖励）
+	optional int64 hangupTime = 10;
+	// 临时建筑实际模板ID
+	optional string saleBuildingRealTemplateId = 11;
+	// 临时建筑创建时间
+	optional int64 saleBuildingCreateTime = 12;
+	// 订阅建筑过期时间 0表示没有过期时间
+	optional int64 expiredTime = 13;
+	// 采集CD结束时间
+	optional int64 collectCDEndTime = 14;
+}
+
+
+//临时建筑CD
+message SaleBuildingCdMsg {
+	// 品质
+	optional int32 quality = 1;
+	// 等级
+	optional int32 level = 2;
+	// 上次创建时间
+	optional int64 lastCreateTime = 3;
+}
+
+// 真实拥有建筑数量信息
+message BuildingOwnData{
+	//建筑模板id
+	optional string buildingTemplateId = 1;
+	//拥有建筑数量
+	optional int32 number = 2;
+}
+
+// 获取建筑奖励请求
+message RecieveBuildingRewardRequest{
+	// 建筑id
+	optional string buildingId = 1;
+	// 建筑template v19.1
+	optional string templateId = 2;
+}
+
+// 获取建筑奖励响应
+message RecieveBuildingRewardResponse{
+	// 是否被偷 v19.1
+    optional bool stolen = 1;
+    // 被偷事件 v19.1
+    repeated BuildingStolenEventStruct stolenEvent = 2;
+}
+
+
+//获取建筑列表请求
+message BuildingListRequest {
+	//占位符
+	optional int32 flag = 1;
+}
+
+//建筑列表响应
+message BuildingListResponse {
+	//拥有的全部建筑
+	repeated BuildingMsg msgs = 1;
+	//访问人数
+	optional int32 curAccessNum = 2;
+	//全部区域信息
+	repeated AreaInfoMsg areaInfoMsgs = 3;
+	//全部物件信息
+	repeated ModelMsg models = 4;
+	//当前建筑自增id
+	optional int64 autoIncrId = 5;
+	//魔法书已开出的建筑列表
+	repeated string magicBuildings = 6;
+	// 临时建筑CD
+	repeated SaleBuildingCdMsg cdMsg = 7;
+	// 已经在场景中创建过的道具建筑
+	repeated string templateId = 8;
+}
+
+//移动建筑请求
+message MvBuildingRequest {
+	//要移动的建筑id
+	optional string buildingId = 1;
+	//建筑朝向 0:横 1:纵
+	optional bool direction = 2;
+	//建筑原点
+	optional PointMsg srcPoint = 3;
+	//建筑template v19.1
+	optional string templateId = 4;
+}
+message MvBuildingResponse{
+	// 是否被偷 v19.1
+	optional bool stolen = 1;
+	// 被偷事件 v19.1
+	repeated BuildingStolenEventStruct stolenEvent = 2;
+}
+
+//挂机奖励加倍信息
+message HungUpDoubleMsg {
+	//触发加倍道具配置id集合
+	repeated string itemTemplateIds = 1;
+}
+
+//建筑升级请求
+message BuildingLevelUpRequest {
+	//选中的建筑id
+	optional string selectedBuildingId = 1;
+	//被升级的建筑1
+	optional string buildingId1 = 2;
+	//被升级的建筑2
+	optional string buildingId2 = 3;
+	//材料建筑宝箱奖励
+	repeated ItemMsg rewards = 4;
+	//魔法书开启次数
+	optional int32 openMagicNum = 5;
+	//生成的临时建筑1
+	optional string saleBuildingId1 = 6;
+	//临时建筑1模板ID
+	optional string saleBuildingTemplateId1 = 7;
+	//生成的临时建筑2
+	optional string saleBuildingId2 = 8;
+	//临时建筑2模板ID
+	optional string saleBuildingTemplateId2 = 9;
+	// 合成时是否领取建筑的挂机奖励(次序为selectedBuildingId，buildingId1，buildingId2)
+	repeated bool hasHangup = 10;
+	// 是否有合成奖励可以领取(合成活动会用到,服务器做检测，检测到错误(非玩家改时间造成)，会加上道具，记录错误日志，如果发现客户端往前调时间，报错8006 往后调时间大于一定值(目前是20分钟)报错1005)
+	optional bool hasLevelUp = 11;
+	//合成时是否触发了繁荣度双倍奖励(次序为selectedBuildingId，buildingId1，buildingId2)
+	repeated HungUpDoubleMsg hangUpDoubleMsgs = 12;
+	// 升级的建筑templateID v19.1
+	optional string templateId = 13;
+}
+
+message BuildingLevelUpResponse{
+	// 是否被偷 v19.1
+	optional bool stolen = 1;
+	// 被偷事件 v19.1
+	repeated BuildingStolenEventStruct stolenEvent = 2;
+	// 合成触发的网 v19.1
+	optional string net = 3;
+	// 合成触发的盾 v19.1
+	optional string shield = 4;
+	// 盾满补偿 v19.1
+	repeated ItemMsg shieldCompensate = 5;
+	// 偷建筑转盘奖励ID
+	optional int32 stealWheelChunk = 6;
+	// 偷建筑转盘奖励
+	optional ItemMsg stealWheelReward = 7;
+}
+
+//完成建筑升级请求
+message FinishLevelUpBuildingRequest {
+	//选中的建筑id
+	optional string selectedBuildingId = 1;
+	//是否快速完成
+	optional bool isQuickFinish = 2;
+	//快速完成客户端预计花费金币数(校验是否与服务器端一致)
+	optional int32 goldNum = 3;
+}
+
+//完成建筑升级响应
+message FinishLevelUpBuildingResponse {
+	//完成升级的建筑id
+	required string buildingId = 1;
+	
+}
+
+// 领取建筑挂机奖励请求
+message RecieveHangupRewardRequest {
+	// 建筑id
+	optional string buildingId = 1;
+	//是否是触发了繁荣度双倍奖励
+	optional HungUpDoubleMsg hungUpDoubleMsg = 2;
+	// 建筑templateId v19.1
+	optional string templateId = 3;
+}
+
+// 领取建筑挂机奖励响应
+message RecieveHangupRewardResponse {
+	// 是否被偷 v19.1
+	optional bool stolen = 1;
+	// 被偷事件 v19.1
+	repeated BuildingStolenEventStruct stolenEvent = 2;
+}
+
+// 清除建筑挂机cd
+message ClearHangupCDRequest {
+	// 建筑id
+	optional string buildingId = 1;
+	// 剩余cd毫秒数
+	optional int64 cd = 2;
+	// 是否引导
+	optional bool isGuide = 3;
+	// 建筑templateId v19.1
+	optional string templateId = 4;
+}
+
+// 清除建筑挂机cd响应
+message ClearHangupCDResponse {
+	// 是否被偷 v19.1
+	optional bool stolen = 1;
+	// 被偷事件 v19.1
+	repeated BuildingStolenEventStruct stolenEvent = 2;
+}
+
+// 开启礼盒建筑请求
+message OpenGiftBuildingRequest {
+	// 建筑id
+	optional string buildingId = 1;
+	// 礼盒开出的建筑配置表id
+	optional string randBuildingId = 2;
+}
+
+// 开启礼盒建筑响应
+message OpenGiftBuildingResponse {
+
+}
+
+// 铲除建筑
+message SupdupBuildingRequest {
+	// 建筑唯一id
+	optional string buildingId = 1;
+	//是否观看了广告
+	optional bool adsFlag = 2;
+	// 建筑templateID v19.1
+	optional string templateId = 3;
+}
+
+// 铲除建筑
+message SupdupBuildingResponse {
+	// 是否被偷 v19.1
+	optional bool stolen = 1;
+	// 被偷事件 v19.1
+	repeated BuildingStolenEventStruct stolenEvent = 2;
+}
+
+// 地块售卖请求
+message RegionSellRequest {
+	// 区域id
+	optional int32 areaId = 1;
+	// 地块id
+	optional int32 regionId = 2;
+}
+
+// 地块售卖响应
+message RegionSellResponse {
+
+}
+
+// 临时建筑购买
+message SaleBuildingBuyRequest {
+	// 建筑id
+	optional string buildingId = 1;
+}
+
+// 临时建筑响应
+message SaleBuildingBuyResponse {
+
+}
+
+// 临时建筑过期请求
+message SaleBuildingExpireRequest {
+	// 建筑id
+	optional string buildingId = 1;
+}
+
+// 临时建筑过期响应
+message SaleBuildingExpireResponse {
+
+}
+
+// 获取区域信息
+message GetAreaInfoRequest {
+	// 区域id
+	optional int32 areaId = 1;
+}
+
+// 获取区域信息
+message GetAreaInfoResponse {
+	// 区域信息
+	optional AreaInfoMsg areaInfo = 1;
+}
+
+// 订阅支付前端打点
+message ClientDotForSubscribeRequest {
+	// 区域id列表
+	repeated int32 areaIds = 1;
+}
+
+// 订阅支付前端打点
+message ClientDotForSubscribeResponse {
+
+}
+
+// 请求回收建筑材料
+message RecycleBuildingMaterialRequest {
+}
+
+// 请求回收建筑材料回复
+message RecycleBuildingMaterialResponse {
+}
+
+//请求查询道具建筑过期时间
+message ItemBuildingExpiredTimeRequest{
+	
+}
+
+message ItemBuildingExpiredInfo {
+	// 建筑配置id
+	required string buildingTemplateId = 1;
+	//过期时间
+	required int64 expiredTime = 2;
+}
+
+//请求查询道具建筑过期时间回复
+message ItemBuildingExpiredTimeResponse {
+	// 回复已经订阅的建筑包括过期的 （未订阅建筑不回复）
+	repeated ItemBuildingExpiredInfo expiredInfos = 1;
+}
+
+// 请求删除过期的道具建筑
+message ItemBuildingExpiredTimeRemoveRequest {
+	// 删除类型 1:场景中建筑   2：背包中道具
+	required int32 rmType = 1;
+	// 场景中建筑发送 buildingid   背包中建筑发送buildingtemplateid
+	required string id = 2;
+	// 对于移除的场景中建筑 是否有挂机奖励可以领取
+	optional bool hasHungUp=3;
+}
+
+message ItemBuildingExpiredTimeRemoveResponse {
+}
+
+//请求领取并替换皮肤
+message TakeAndUseSkinRequest {
+	//配置的皮肤的id
+	required string id = 1;
+}
+//请求领取并替换皮肤响应
+message TakeAndUseSkinResponse {
+}
+
+//请求使用或者取消使用皮肤
+message UseSkinRequest {
+	//配置的皮肤的id
+	required string id = 1;
+	//是否为使用 true:使用 false:取消使用
+	required bool use = 2;
+}
+
+//请求使用或者取消使用皮肤响应
+message UseSkinResponse {
+}
+
+//请求建筑收集信息
+message CollectionInfoRequest {
+}
+
+message BuildingCollectInfo {
+	//建筑配置id
+	required string templateId = 1;
+	//收集数量
+	required int32 num = 2;
+	//收集领取奖励进度 从0开始 0表示从未领取过奖励  1 表示已领取第一阶段奖励
+	optional int32 progress = 3;
+}
+//请求收集信息响应
+message CollectionInfoResponse {
+	//建筑收集信息
+	repeated BuildingCollectInfo buildingCollectInfos = 1;
+}
+
+//请求兑换收集建筑奖励
+message BuildingCollectExchangeRequest {
+	//配置的收集兑换的id
+	required string id = 1;
+	//请求领取的进度值(用来容错 及时发现错误 防止道具不一致)
+	optional int32 progress = 2;
+}
+//请求兑换收集建筑奖励响应
+message BuildingCollectExchangeResponse {
+}
+
+//请求皮肤信息
+message SkinInfoRequest {
+}
+//请求皮肤信息响应
+message SkinInfoResponse {
+	//拥有的皮肤
+	repeated string skins = 1;
+	//使用的区域皮肤集合(如果使用的默认皮肤 那么集合为空)
+	repeated string usedSkins = 2;
+}
+
+message ReceiveHangUpRewardReqStruct {
+	// 建筑id
+  	optional string buildingId = 1;
+  	// 建筑templateId
+  	optional string templateId = 2;
+  	//是否是触发了繁荣度双倍奖励
+  	optional HungUpDoubleMsg hungUpDoubleMsg = 3;
+}
+
+// 批量领取建筑挂机奖励请求
+message BulkReceiveHangUpRewardRequest {
+	repeated ReceiveHangUpRewardReqStruct reqs = 1;
+}
+
+// 批量领取建筑挂机奖励返回
+message BulkReceiveHangUpRewardResponse {
+	// 成功领取建筑挂机奖励的集合
+	repeated string buildingIds = 1;
+	// 被偷事件集合
+  	repeated BuildingStolenEventStruct stolenEvents = 2;
+}

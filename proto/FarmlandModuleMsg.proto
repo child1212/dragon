@@ -1,0 +1,86 @@
+syntax = "proto2";
+package com.common.msg;
+
+import "ItemModuleMsg.proto";
+
+enum FarmlandModuleMsgSubCommand {
+	// 解锁
+	FARMLANDMODULEMSG_SUB_OPENFARMLAND = 25401;
+	// 种植
+	FARMLANDMODULEMSG_SUB_PLANTCROP = 25402;
+	// 领取
+	FARMLANDMODULEMSG_SUB_RECEIVECROP = 25403;
+	// 加速
+	FARMLANDMODULEMSG_SUB_ACCELERATEGROW = 25404;
+}
+
+message FarmlandMsg {
+  // 障碍物id
+  required string plantId = 1;
+  // 种植开始时间
+  optional int64 startTime = 2;
+  // 种植id
+  optional string cropId = 3;
+}
+
+// 解锁 请求
+message OpenFarmlandRequest {
+	required string sceneId = 1;
+	required string plantId = 2;
+}
+
+// 解锁 响应
+message OpenFarmlandResponse {
+
+}
+
+message PlantCropMsg {
+  	required string sceneId = 1;
+	required string plantId = 2;
+	required string cropId = 3;
+	required int64 startTime = 4;
+}
+
+// 种植 请求
+message PlantCropRequest {
+	repeated PlantCropMsg plantCrops = 1;
+}
+
+// 种植 响应
+message PlantCropResponse {
+	// 同步道具
+	repeated ItemMsg items = 1;
+}
+
+message ReceiveCropMsg {
+	required string sceneId = 1;
+	required string plantId = 2;
+}
+
+// 领取 请求
+message ReceiveCropRequest {
+	repeated ReceiveCropMsg receiveCrops = 1;
+}
+
+// 领取 响应
+message ReceiveCropResponse {
+	// 同步道具
+	repeated ItemMsg items = 1;
+}
+
+message AccelerateGrowMsg {
+	required string sceneId = 1;
+	required string plantId = 2;
+}
+
+//加速 请求
+message AccelerateGrowRequest {
+	repeated AccelerateGrowMsg accelerateGrows = 1;
+}
+
+//加速 响应
+message AccelerateGrowResponse {
+	// 同步道具
+	repeated ItemMsg items = 1;
+	
+}

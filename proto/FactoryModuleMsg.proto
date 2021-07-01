@@ -1,0 +1,90 @@
+syntax = "proto2";
+package com.common.msg;
+
+import "ItemModuleMsg.proto";
+
+enum FactoryModuleMsgSubCommand {
+	// 开启工厂槽位
+	FACTORYMODULEMSG_SUB_OPENSLOT = 25101;
+	// 添加生产物资
+	FACTORYMODULEMSG_SUB_ADDFACTORYPRODUCE = 25102;
+	// 领取生产物资
+	FACTORYMODULEMSG_SUB_RECEIVEFACTORYPRODUCE = 25103;
+	// 加速生产
+	FACTORYMODULEMSG_SUB_ACCELERATEPRODUCE = 25104;
+	// 生产基地升级
+	FACTORYMODULEMSG_SUB_FACTORYCENTERUPLEVEL = 25105;
+}
+
+message FactoryMsg {
+  // 工厂id
+  required string factoryId = 1;
+  // 开启槽个数
+  required int32 openSlotCnt = 2;
+  // 开始采集时间
+  required int64 startTime = 3;
+  // 生产物资
+  repeated string itemIds = 4;
+}
+
+message FactoryProduceMsg {
+  // 工厂id
+  required string factoryId = 1;
+  // 生产物资
+  repeated string itemIds = 4;
+}
+
+// 开启工厂槽位 请求
+message OpenSlotRequest {
+	required string factoryId = 1;
+}
+
+// 开启工厂槽位 响应
+message OpenSlotResponse {
+
+}
+
+// 添加生产物资队列 请求
+message AddFactoryProduceRequest {
+	required string factoryId = 1;
+	required string itemId = 2;
+}
+
+// 添加生产物资队列 响应
+message AddFactoryProduceResponse {
+	// 同步道具
+	repeated ItemMsg items = 1;
+}
+
+// 领取生产物资 请求
+message ReceiveFactoryProduceRequest {
+	repeated FactoryProduceMsg produces = 1;
+}
+
+// 领取生产物资 响应
+message ReceiveFactoryProduceResponse {
+	// 同步道具
+	repeated ItemMsg items = 1;
+}
+
+// 加速生产 请求
+message AccelerateProduceRequest {
+	required string factoryId = 1;
+	required int32 price = 2;
+}
+
+// 加速生产 响应
+message AccelerateProduceResponse {
+	// 同步道具
+	repeated ItemMsg items = 1;
+}
+
+// 生产基地升级 请求
+message FactoryCenterUpLevelRequest {
+}
+
+// 生产基地升级 响应
+message FactoryCenterUpLevelResponse {
+	// 同步道具
+	repeated ItemMsg items = 1;
+}

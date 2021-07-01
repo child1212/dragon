@@ -1,0 +1,204 @@
+syntax = "proto2";
+package com.common.msg;
+
+import "ActivityModuleMsg.proto";
+import "BuildingModuleMsg.proto";
+import "ItemModuleMsg.proto";
+import "FriendsModuleMsg.proto";
+
+// 偷建筑活动消息ID (23001-24000)
+enum BuildingStealModuleMsgSubCommand {
+	// 偷建筑活动信息请求
+	BUILDINGSTEALMODULEMSG_SUB_BUILDINGSTEALINFO = 23001;
+	// 寻找可偷玩家请求
+	BUILDINGSTEALMODULEMSG_SUB_SEARCHSTEALPLAYER = 23002;
+	// 被偷建筑列表请求（对应呼吸包Flag）
+	BUILDINGSTEALMODULEMSG_SUB_BUILDINGSTOLENLIST = 23003;
+	// 被偷建筑列表确认请求
+	BUILDINGSTEALMODULEMSG_SUB_BUILDINGSTOLENLISTCONFIRM = 23004;
+	// 使用网请求
+	BUILDINGSTEALMODULEMSG_SUB_BUILDINGSTEALNETUSE = 23005;
+	// 复仇列表请求
+	BUILDINGSTEALMODULEMSG_SUB_BUILDINGSTEALREVENGELIST = 23006;
+	// 领取偷建筑累计奖励
+	BUILDINGSTEALMODULEMSG_SUB_BUILDINGSTEALRECEIVEMILESREWARD = 23007;
+	// 被偷建筑重建请求
+	BUILDINGSTEALMODULEMSG_SUB_BUILDINGSTEALREBUILD = 23008;
+}
+
+// 偷建筑活动信息请求
+message BuildingStealInfoRequest {
+	// 活动id
+	required string activityId = 1;
+}
+
+// 偷取历史
+message StealHistoryStruct {
+	// 历史ID
+	optional string historyId = 1;
+	// 目标玩家ID
+	optional string playerId = 2;
+	// 名字
+	optional string nickname = 3;
+	// 头像
+ 	optional string icon = 4;
+ 	// account
+ 	optional string account = 5;
+ 	// 时间ms
+ 	optional int64 time = 6;
+ 	// 建筑
+	repeated StealBuildingStruct buildings = 7;
+	// 已重建 v20.1
+	optional bool rebuild = 8;
+	//是否为vip
+	optional bool isVip = 9;
+}
+
+// 偷建筑活动信息返回
+message BuildingStealInfoResponse {
+	// 活动信息
+	required ActivityMsg activity = 1;
+	// 是否有排行榜奖励可以领取（0. 没有 1.有）
+	required int32 rankReward = 2;
+	// 我的积分
+	optional int32 myScore = 3;
+	// 已领取里程碑奖励ids(RankingMilestoneConfigTemplate#id)
+	repeated string milestoneIds = 4;
+	// 活动是否已结算
+	optional bool rankEnd = 5;
+	// 偷取历史
+	repeated StealHistoryStruct attackHistory = 6;
+	// 被偷历史
+	repeated StealHistoryStruct defenseHistory = 7;
+	// 已被偷取次数 v20.1
+	optional int32 dayStolenCount = 8;
+	// 被偷次数上限 v20.1
+	optional int32 dayStolenCountLimit = 9;
+}
+
+// 寻找可偷玩家请求
+message SearchStealPlayerRequest {
+	// 网ID
+	optional string netId = 1;
+	// 复仇玩家ID
+	optional string enemyId = 2;
+}
+
+// 寻找可偷玩家响应
+message SearchStealPlayerResponse {
+	// 无玩家时的补偿
+	repeated ItemMsg items = 1;
+	// 目标玩家ID
+	optional string playerId = 2;
+	// 玩家简单信息
+	optional PlayerSimpleInfoMsg playerSimpleInfo = 3;
+	//全部区域信息
+	repeated AreaInfoMsg areaInfoMsgs = 4;
+	//拥有的全部建筑
+	repeated BuildingMsg msgs = 5;
+	//皮肤信息
+	optional SkinInfoResponse skinInfoResponse = 6;
+	// 偷取的建筑（服务器先随机出来，使用的时候回传）
+	repeated StealBuildingStruct stealBuildings = 7;
+	//好友访问人数
+	optional int32 curAccessNum = 8;
+}
+
+// 被偷建筑列表请求
+message BuildingStolenListRequest {
+	
+}
+
+// 玩家护盾
+message PlayerShieldStruct {
+	optional string index1 = 1;
+	optional int32 durability1 = 2;
+	optional string index2 = 3;
+	optional int32 durability2 = 4;
+	optional string index3 = 5;
+	optional int32 durability3 = 6;
+}
+
+// 被偷建筑列表响应
+message BuildingStolenListResponse {
+	// 护盾状态
+	optional PlayerShieldStruct shieldStruct = 1; 
+	// 被偷事件
+	repeated BuildingStolenEventStruct stolenEvent = 2;
+}
+
+// 被偷建筑列表确认请求
+message BuildingStolenListConfirmRequest {
+	// 被偷事件
+	repeated StealBuildingStruct buildings = 1;
+}
+
+// 被偷建筑列表确认响应
+message BuildingStolenListConfirmResponse {
+	
+}
+
+// 使用偷建筑网请求
+message BuildingStealNetUseRequest {
+    // 网ID
+    optional string netId = 1;
+    // 目标玩家ID
+    optional string targetId = 2;
+    // 偷取的建筑
+    repeated StealBuildingStruct stealBuildings = 3;
+    // 历史ID
+ 	optional string historyId = 4;
+ 	// 魔盒网标记
+ 	optional bool magicBox = 5;
+}
+ 
+// 使用偷建筑网响应
+message BuildingStealNetUseResponse {
+    // 偷取建筑结果
+    repeated StealBuildingStruct results = 1;
+    // 触发的魔盒奖励
+    repeated ItemMsg magicboxitems = 2;
+    // retCode
+    optional int32 retCode = 3;
+    // 被偷玩家护盾状态(被偷之前
+    optional PlayerShieldStruct targetShieldStatus = 4;
+}
+
+// 复仇列表请求
+message BuildingStealRevengeListRequest {
+	
+}
+
+// 复仇列表返回
+message BuildingStealRevengeListResponse {
+	// 被偷历史
+	repeated BuildingStolenEventStruct stolenEvent = 7;
+}
+
+
+// 偷建筑累计奖励请求
+message BuildingStealReceiveMilesRewardRequest {
+	// 活动ID
+	optional string activityId = 1;	
+	// 里程碑ID
+	optional string milestoneId = 2;
+}
+
+
+// 偷建筑累计奖励响应
+message BuildingStealReceiveMilesRewardResponse {
+	// 奖励内容
+	repeated ItemMsg rewards = 1;
+}
+
+
+// 被偷建筑重建请求
+message BuildingStealReBuildRequest {
+	// 历史ID
+	optional string historyId = 1;
+}
+
+// 被偷建筑重建响应
+message BuildingStealReBuildResponse {
+	
+}

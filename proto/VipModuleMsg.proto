@@ -1,0 +1,45 @@
+syntax = "proto2";
+package com.common.msg;
+
+enum VipErrorCodeEnum{
+	//vip在有效期内 不能设置无效
+	VIP_VALID = 25001;
+
+	//累计天数不足，不能领奖
+	VIP_AWARD_DAYS_NOT_ENOUGH = 25002;
+
+	//当前已经不是vip了
+	VIP_INVALID = 25003;
+	
+	//奖励已经领取过了
+	VIP_AWARDED = 25004;
+}
+enum VipModuleMsgSubCommand {
+	//vip基本信息
+	VIPMODULEMSG_SUB_VIPINFO = 25001;
+	//请求领取vip累计登陆奖励
+	VIPMODULEMSG_SUB_TAKEAWARD = 25002;
+	
+}
+
+// vip基本信息请求
+message VipInfoRequest {
+}
+
+// vip基本信息回复
+message VipInfoResponse {
+	// 累计登陆天数
+	required int32 days = 1;
+	//已经领取奖励的集合
+	repeated int32 awardIndex = 2;
+}
+
+//请求领取vip累计登陆奖励
+message TakeAwardRequest {
+	//从1开始 连续的值(具体参见策划配置调整)
+	required int32 awardIndex = 1;
+}
+
+//请求领取vip累计登陆奖励回复
+message TakeAwardResponse {
+}
