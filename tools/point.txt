@@ -1,0 +1,13 @@
+level
+reward
+sceneId
+orderNum
+diamondCount
+energyCount
+goldCount
+dragonCount
+platform
+playerid
+deviceId
+ts
+version

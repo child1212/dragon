@@ -38,7 +38,6 @@ def senditems(account, item, num, server):
     info = get_playerid(account, log_res,server)    #获取playerId
     player = info['playerid']
     session = info['sessionid']
-    # player = 'lc8b8r' 
     db = pymysql.connect('localhost','root', '123456', 'Townest')
     cursor = db.cursor()
     # for i in range(len(item)):
