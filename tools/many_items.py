@@ -7,9 +7,9 @@ from func_dragon import *
 
 
 print("start time:",time.asctime(time.localtime()))
-account = "Fgy0030"
-num = 3000
-server = "http://10.0.102.197"                               
+account = "ll002"
+num = 300
+server = "http://dtest.gameyici.com"                               
 # item = items()
 
 table = open("D:\\pyprogram\\PyTestTools\\dragon\\tools\\ItemTemplate.csv",'r')

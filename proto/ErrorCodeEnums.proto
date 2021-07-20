@@ -65,8 +65,8 @@ enum ErrorCodeEnums {
 	//订阅每天额外使用道具的服务已过期
 	ITEM_SUBSCRIBE_ITEM_EXPIRED = 2009;
 	//*********************************************建筑模块***********************************************/
-	//不可升级
-	BUIDING_CAN_NOT_LEVELUP = 3001;
+	//建筑已达最大等级
+	BUIDING_TO_MAX_LEVEL = 3001;
 	
 	//升级材料不足
 	BUILDING_ITEM_NOT_ENOUGH = 3002;
@@ -281,6 +281,8 @@ enum ErrorCodeEnums {
 	COMMON_PARAM_ERROR = 13007;
 	// 当前版本不支持该操作
 	COMMON_VERSION_ERROR = 13008;
+	// 功能重复开启
+	COMMON_SYSTEM_REPEAT_OPEN = 13009;
 	/************************************活动模块*************************************/
 	// 活动尚未开启
 	ACTIVITY_NOT_OPEN = 14001;

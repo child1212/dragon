@@ -8,6 +8,7 @@ BuildingModuleMsg.proto
 BuildingStealModuleMsg.proto
 ConvertFactoryModuleMsg.proto
 CoreModuleMsg.proto
+CreatureModuleMsg.proto
 DayRewardModuleMsg.proto
 ErrorCodeEnums.proto
 FactoryModuleMsg.proto
@@ -21,6 +22,7 @@ GiftBoxModuleMsg.proto
 GMModuleMsg.proto
 ItemModuleMsg.proto
 LevelsModuleMsg.proto
+list.bat
 list.txt
 MagicalCreatureModuleMsg.proto
 MagicPassModuleMsg.proto
@@ -31,6 +33,7 @@ ProsperityModuleMsg.proto
 RandomShopModuleMsg.proto
 RichManModuleMsg.proto
 SceneModuleMsg.proto
+support.py
 TaskModuleMsg.proto
 TeamBuildingModuleMsg.proto
 TeamModuleMsg.proto

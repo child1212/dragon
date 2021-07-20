@@ -1,11 +1,10 @@
-level
+serialNumber
+degree
+needItem
+consumeDiamond
+quickPurchaseItem
 reward
-sceneId
-orderNum
-diamondCount
-energyCount
-goldCount
-dragonCount
+level
 platform
 playerid
 deviceId

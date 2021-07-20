@@ -43,6 +43,10 @@ enum MagicalCreatureModuleMsgSubCommand {
 	MAGICALCREATUREMODULEMSG_SUB_GUIDEENTERHUNGER = 24018;
 	// 补充龙体力
 	MAGICALCREATUREMODULEMSG_SUB_BUYPHYSICALSTRENGTH = 24019;
+	// 获取积攒的消耗体力累计值
+	MAGICALCREATUREMODULEMSG_SUB_GETCONSUMEENERGY = 24020;
+	// 选择探索龙
+	MAGICALCREATUREMODULEMSG_SUB_SELECTEXPLORE = 24021;
 }
 
 message MagicalCreatureBuyMsg {
@@ -50,27 +54,6 @@ message MagicalCreatureBuyMsg {
   required string templateId = 1;
   // 购买次数
   required int32 buyCnt = 2;
-}
-
-message MagicalCreatureMsg {
-	// 实例id
-	required int64 creatureId = 1;
-	// 模板id
-	required string templateId = 2;
-	// 体力
-	optional int32 physicalStrength = 3;
-	// 上次体力恢复时间
-	optional int64 getPhysicalStrengthTime = 4;
-	// 所在巢type
-	optional int32 nestType = 5;
-	// 上次收集挂机收益时间
-	optional int64 lastCollectHangUpRewardTime = 6;
-	// 饱食结束时间
-	optional int64 repletionEndTime = 7;
-	// cd时间内抚摸奖励次数
-	optional int32 rewardCnt = 8;
-	// cd时间内首次抚摸领奖励时间
-	optional int64 firstRewardTime = 9;
 }
 
 message MagicalNestMsg {
@@ -123,7 +106,7 @@ message BreedRequest {
 message BreedResponse {
 	// 获得龙
 	optional MagicalCreatureMsg creature = 1;
-	// 获得道具
+	// 同步道具
 	repeated ItemMsg items = 2;
 }
 
@@ -247,6 +230,8 @@ message FeedResponse {
 // 购买龙请求
 message BuyCreatureRequest {
 	required string templateId = 1;
+	// 购买途径 1合成界面，2龙获取界面
+	optional int32 way = 2;
 }
 
 // 购买龙返回
@@ -292,4 +277,20 @@ message BuyPhysicalStrengthResponse {
 	required MagicalCreatureMsg creature = 1;
 	// 同步道具
 	repeated ItemMsg items = 2;	
+}
+
+message GetConsumeEnergyRequest {
+}
+
+message GetConsumeEnergyResponse {
+	required int32 consumeEnergyCnt = 1;
+}
+
+message SelectExploreRequest {
+	repeated int32 creatureIds = 1;
+}
+
+message SelectExploreResponse {
+	// 取消探索的龙会重新计算挂机开始时间
+	repeated MagicalCreatureMsg creatures = 1;
 }

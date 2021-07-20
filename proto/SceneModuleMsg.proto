@@ -95,6 +95,8 @@ message SceneInfoResponse {
 	repeated MonsterMsg monsterMsgs = 8;
 	//场景关闭时间 <=0 没有关闭时间
 	optional int64 closeTime = 9;
+	// 探索的龙会重新计算挂机开始时间
+	repeated MagicalCreatureMsg creatures = 10;
 }
 
 // 收集障碍物成就奖励

@@ -27,6 +27,7 @@ message FarmlandMsg {
 message OpenFarmlandRequest {
 	required string sceneId = 1;
 	required string plantId = 2;
+	repeated string plantIds = 3;
 }
 
 // 解锁 响应

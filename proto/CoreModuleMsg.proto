@@ -60,6 +60,8 @@ enum CoreModuleMsgSubCommand {
 	COREMODULEMSG_SUB_DIAMONDPURCHASE = 1020;
 	// 心跳
 	COREMODULEMSG_SUB_HEARTBEAT = 1021;
+	// 系统开启记录
+	COREMODULEMSG_SUB_SYSTEMOPEN = 1022;
 }
 
 //玩家资源信息
@@ -271,10 +273,10 @@ message SubscribeDayItemInfo {
 	required int64 tipTimeMs = 4;//提示存储时间(客户端逻辑用 服务器只做存储)
 }
 
-//功能开启时间
-message FunctionInfo {
-	//队伍功能开放时间
-	optional int64 teamOpen = 1;
+// 系统开启记录
+message SystemOpenInfo {
+	// key
+	repeated string systemIds = 1;
 }
 
 // 建筑扭蛋活动 券兑换奖励
@@ -335,8 +337,8 @@ message EnterGameResponse {
 	repeated MagicalCreatureBuyMsg magicalCreatureBuys = 30;
 	// 魔法生物
 	repeated MagicalCreatureMsg magicalCreatures = 31;
-	//功能开启时间
-	optional FunctionInfo functionInfo = 32;
+	// 系统开启记录
+	optional SystemOpenInfo systemOpenInfo = 32;
 	// 建筑扭蛋活动 券兑换奖励
 	optional GashaponTicketReward gashaponTicketReward = 33;
 	// 生产工厂信息
@@ -560,4 +562,14 @@ message HeartBeatResponse {
 	required int64 serverTime = 1;
 	// 同步标记
 	repeated int32 flags = 2;
+}
+
+// 系统开启请求
+message SystemOpenRequest {
+	repeated string systemId = 1;
+}
+
+// 系统开启返回
+message SystemOpenResponse {
+	
 }
