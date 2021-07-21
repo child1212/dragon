@@ -4,15 +4,15 @@ import sys
 sys.path.append('D:\\pyprogram\\PyTestTools\\dragon\\function')
 import time
 from func_dragon import *
-
+import os
 
 print("start time:",time.asctime(time.localtime()))
-account = "ll002"
-num = 300
+account = input("输入账号：")
+num = 8888
 server = "http://dtest.gameyici.com"                               
 # item = items()
-
-table = open("D:\\pyprogram\\PyTestTools\\dragon\\tools\\ItemTemplate.csv",'r')
+pat = os.getcwd()
+table = open("{pat}\\ItemTemplate.csv".format(pat=pat),'r')
 log_res = login_gm(server)                      #登录GM平台
 info = get_playerid(account, log_res,server)    #获取playerId
 player = info['playerid']
@@ -30,9 +30,3 @@ print("Mission Completed!")
 
 
 
-#%%
-def test(**kwargs):
-    print(kwargs['a'])
-
-test(a=1, b=2)
-# %%

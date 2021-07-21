@@ -1,9 +1,5 @@
-serialNumber
-degree
-needItem
-consumeDiamond
-quickPurchaseItem
-reward
+farmlandID
+cost
 level
 platform
 playerid

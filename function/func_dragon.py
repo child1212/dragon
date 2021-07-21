@@ -1,6 +1,5 @@
 import requests
 import json
-import pymysql
 import time
 
 

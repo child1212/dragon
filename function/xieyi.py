@@ -12,7 +12,7 @@ import FarmlandModuleMsg_pb2
 import ItemModuleMsg_pb2
 import MagicalCreatureModuleMsg_pb2
 
-#登录
+#登录#1001
 def login(account, server, version):
     request = GatewayModuleMsg_pb2.GatewayPackageRequest()
     msgBody = CoreModuleMsg_pb2.LoginRequest()
@@ -47,7 +47,7 @@ def login(account, server, version):
         print("Server Disconnected ！！!")
         return 0
 
-#进入游戏
+#进入游戏#1002
 def enterGame(res_1001, server,version):
     '''
     参数说明：
@@ -79,7 +79,88 @@ def enterGame(res_1001, server,version):
     else:
         print("Server Disconnected ！！!")
         return 0
-        
+
+#已通过的新手引导步骤#1004
+def Guide(res_1001, server, version):
+    request = GatewayModuleMsg_pb2.GatewayPackageRequest()
+    body = CoreModuleMsg_pb2.GuideCompleteIdsRequest()
+    res = GatewayModuleMsg_pb2.GatewayPackageResponse()
+    request.senderId = res_1001.playerId
+    request.sessionId = res_1001.sessionId
+    msg = body.SerializeToString()
+    struct = request.bodys.add()
+    struct.code = 0
+    struct.msgId = 1004
+    struct.msgBody = msg
+    struct.genTime = int(time.time()*1000)
+    struct.sequenceId = 0
+    struct.version = version
+    url = "{server}/{version}?id=1004_&uid={playerid}".format(server=server,version=version,playerid=res_1001.playerId)
+    response = requests.put(url,data=request.SerializeToString())
+    if response.status_code==200 : 
+        res.ParseFromString(response.content)
+        if res.bodys[0].code == 0:
+            print("1004 is upgrade!")
+            return res
+        else:
+            print("Error: code={code}".format(code=res.bodys[0].code))
+    else:
+        print("Server Disconnected ！！!")
+        return 0
+
+#场景数据#25301
+def senceData(res_1001, server, version):
+    request = GatewayModuleMsg_pb2.GatewayPackageRequest()
+    body = SceneModuleMsg_pb2.SceneInfoRequest()
+    res = GatewayModuleMsg_pb2.GatewayPackageResponse()
+    request.senderId = res_1001.playerId
+    request.sessionId = res_1001.sessionId
+    body.sceneId = "city"
+    msg = body.SerializeToString()
+    struct = request.bodys.add()
+    struct.code = 0
+    struct.msgId = 25301
+    struct.msgBody = msg
+    struct.genTime = int(time.time()*1000)
+    struct.sequenceId =0
+    struct.version = version
+    url = "{server}/{version}?id=25301_&uid={playerid}&ver={version}".format(server=server, version=version, playerid=res_1001.playerId)
+    response = requests.put(url,data=request.SerializeToString())
+    if response.status_code==200 : 
+        res.ParseFromString(response.content)
+        return res
+    else:
+        print("Server Disconnected ！！!")
+        return 0
+
+#魔法生物数据#24005
+def magicalcreature(res_1001, server, version):
+    request = GatewayModuleMsg_pb2.GatewayPackageRequest()
+    body = MagicalCreatureModuleMsg_pb2.GetCreatureDataRequest()
+    res = GatewayModuleMsg_pb2.GatewayPackageResponse()
+    request.senderId = res_1001.playerId
+    request.sessionId = res_1001.sessionId
+    msg = body.SerializeToString()
+    struct = request.bodys.add()
+    struct.code = 0
+    struct.msgId = 24005
+    struct.msgBody = msg
+    struct.genTime = int(time.time()*1000)
+    struct.sequenceId = 0
+    struct.version = version
+    url = "{server}/{version}?id=24005_&uid={playerid}".format(server=server,version=version,playerid=res_1001.playerId)
+    response = requests.put(url,data=request.SerializeToString())
+    if response.status_code==200 : 
+        res.ParseFromString(response.content)
+        if res.bodys[0].code == 0:
+            return res 
+        else:
+            print("Error: code={code}".format(code=res.bodys[0].code))
+    else:
+        print("Server Disconnected ！！!")
+        return 0
+
+
 def protocol_post(requestId, playerid, version, server,session , **kwargs):
     if requestId == "1005":
         completeGuide(server,playerid,version,session,kwargs['guide'])
@@ -93,12 +174,178 @@ def protocol_post(requestId, playerid, version, server,session , **kwargs):
         getOrder(server,playerid,version,session,kwargs['position'])
     elif requestId == "25401":
         openFarm(server,playerid,version,session,kwargs['farm'])
+    elif requestId == "25402":
+        PlantCrop(server,playerid,version,session,kwargs['farm'],kwargs['scene'],kwargs['itemid'])
+    elif requestId == "25403":
+        ReceiveCrop(server,playerid,version,session,kwargs['farm'],kwargs['scene'])
     elif requestId == "25304":
         buildingUpgrade(server,playerid,version,session,kwargs['scene'],kwargs['building'])
     elif requestId == "24013":
         AccelerateHangUp(server,playerid,version,session,int(kwargs['building']),kwargs['itemid'],int(kwargs['itemcount']))
+    elif requestId == "24014":
+        FeedDragon(server,playerid,version,session,int(kwargs['building']),kwargs['itemid'])
     elif requestId == "2002":
         useItem(server,playerid,version,session,kwargs['itemid'],int(kwargs['itemcount']))
+    elif requestId == "24008":
+        ClearCollectCd(server,playerid,version,session,int(kwargs['building']),kwargs['itemid'],int(kwargs['itemcount']))
+    elif requestId == "24018":
+        guideHunger(server,playerid,version,session,kwargs['building'])
+
+#喂食
+def FeedDragon(server,playerid,version,session,creature,itemid):
+    request = GatewayModuleMsg_pb2.GatewayPackageRequest()
+    body = MagicalCreatureModuleMsg_pb2.FeedRequest()
+    res = GatewayModuleMsg_pb2.GatewayPackageResponse()
+    request.senderId = playerid
+    request.sessionId = session
+    fe = body.feedMsgs.add()
+    fe.creatureId=creature
+    fe.itemId=itemid
+    fe.feedTime=int(time.time()*1000)
+    msg = body.SerializeToString()
+    struct = request.bodys.add()
+    struct.code = 0
+    struct.msgId = 24014
+    struct.msgBody = msg
+    struct.genTime = int(time.time()*1000)
+    struct.sequenceId = 0
+    struct.version = version
+    url = "{server}/{version}?id=24014_&uid={playerid}".format(server=server,version=version,playerid=playerid)
+    response = requests.put(url,data=request.SerializeToString())
+    if response.status_code==200 : 
+        res.ParseFromString(response.content)
+        if res.bodys[0].code == 0:
+            print("useitem:{obstacle} is upgrade!".format(obstacle=creature))
+            return res
+        else:
+            print("Error: code={code}".format(code=res.bodys[0].code))
+    else:
+        print("Server Disconnected ！！!")
+        return 0
+
+#种植
+def PlantCrop(server,playerid,version,session,farm,scene,itemid):
+    request = GatewayModuleMsg_pb2.GatewayPackageRequest()
+    body = FarmlandModuleMsg_pb2.PlantCropRequest()
+    res = GatewayModuleMsg_pb2.GatewayPackageResponse()
+    request.senderId = playerid
+    request.sessionId = session
+    crop = body.plantCrops.add()
+    crop.sceneId=scene
+    crop.plantId=farm
+    crop.cropId=itemid
+    crop.startTime=int(time.time()*1000)
+    msg = body.SerializeToString()
+    struct = request.bodys.add()
+    struct.code = 0
+    struct.msgId = 25402
+    struct.msgBody = msg
+    struct.genTime = int(time.time()*1000)
+    struct.sequenceId = 0
+    struct.version = version
+    url = "{server}/{version}?id=25402_&uid={playerid}".format(server=server,version=version,playerid=playerid)
+    response = requests.put(url,data=request.SerializeToString())
+    if response.status_code==200 : 
+        res.ParseFromString(response.content)
+        if res.bodys[0].code == 0:
+            print("PlantCrop:{obstacle}!".format(obstacle=farm))
+            return res 
+        else:
+            print("Error: code={code}".format(code=res.bodys[0].code))
+    else:
+        print("Server Disconnected ！！!")
+        return 0
+
+#收取农产品
+def ReceiveCrop(server,playerid,version,session,farm,scene):
+    request = GatewayModuleMsg_pb2.GatewayPackageRequest()
+    body = FarmlandModuleMsg_pb2.ReceiveCropRequest()
+    res = GatewayModuleMsg_pb2.GatewayPackageResponse()
+    request.senderId = playerid
+    request.sessionId = session
+    crop = body.receiveCrops.add()
+    crop.sceneId=scene
+    crop.plantId=farm
+    msg = body.SerializeToString()
+    struct = request.bodys.add()
+    struct.code = 0
+    struct.msgId = 25403
+    struct.msgBody = msg
+    struct.genTime = int(time.time()*1000)
+    struct.sequenceId = 0
+    struct.version = version
+    url = "{server}/{version}?id=25403_&uid={playerid}".format(server=server,version=version,playerid=playerid)
+    response = requests.put(url,data=request.SerializeToString())
+    if response.status_code==200 : 
+        res.ParseFromString(response.content)
+        if res.bodys[0].code == 0:
+            print("ReceiveCrop:{obstacle}!".format(obstacle=farm))
+            return res 
+        else:
+            print("Error: code={code}".format(code=res.bodys[0].code))
+    else:
+        print("Server Disconnected ！！!")
+        return 0
+
+#引导使龙饥饿
+def guideHunger(server,playerid,version,session,creature):
+    request = GatewayModuleMsg_pb2.GatewayPackageRequest()
+    body = MagicalCreatureModuleMsg_pb2.GuideEnterHungerRequest()
+    res = GatewayModuleMsg_pb2.GatewayPackageResponse()
+    request.senderId = playerid
+    request.sessionId = session
+    body.creatureId = int(creature)
+    msg = body.SerializeToString()
+    struct = request.bodys.add()
+    struct.code = 0
+    struct.msgId = 24018
+    struct.msgBody = msg
+    struct.genTime = int(time.time()*1000)
+    struct.sequenceId = 0
+    struct.version = version
+    url = "{server}/{version}?id=24018_&uid={playerid}".format(server=server,version=version,playerid=playerid)
+    response = requests.put(url,data=request.SerializeToString())
+    if response.status_code==200 : 
+        res.ParseFromString(response.content)
+        if res.bodys[0].code == 0:
+            print("guide make dragon hunger:{obstacle}!".format(obstacle=creature))
+            return res 
+        else:
+            print("Error: code={code}".format(code=res.bodys[0].code))
+    else:
+        print("Server Disconnected ！！!")
+        return 0
+
+#加速采集
+def ClearCollectCd(server,playerid,version,session,creature,item,count):
+    request = GatewayModuleMsg_pb2.GatewayPackageRequest()
+    body = MagicalCreatureModuleMsg_pb2.CollectHangupRewardRequest()
+    res = GatewayModuleMsg_pb2.GatewayPackageResponse()
+    request.senderId = playerid
+    request.sessionId = session
+    body.creatureId = creature
+    body.itemId = item
+    body.itemCnt = count
+    msg = body.SerializeToString()
+    struct = request.bodys.add()
+    struct.code = 0
+    struct.msgId = 24008
+    struct.msgBody = msg
+    struct.genTime = int(time.time()*1000)
+    struct.sequenceId = 0
+    struct.version = version
+    url = "{server}/{version}?id=24008_&uid={playerid}".format(server=server,version=version,playerid=playerid)
+    response = requests.put(url,data=request.SerializeToString())
+    if response.status_code==200 : 
+        res.ParseFromString(response.content)
+        if res.bodys[0].code == 0:
+            print("ClearCollectCd:{obstacle} is upgrade!".format(obstacle=creature))
+            return res 
+        else:
+            print("Error: code={code}".format(code=res.bodys[0].code))
+    else:
+        print("Server Disconnected ！！!")
+        return 0
 
 #加速挂机
 def AccelerateHangUp(server,playerid,version,session,creature,item,count):
