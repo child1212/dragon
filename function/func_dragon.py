@@ -3,6 +3,33 @@ import json
 import time
 
 
+def banding(accountid,playerid,host,login_res):
+    url_banding = "{host}/BI/bi/biqatool/option".format(host=host)
+    
+    data_banding = '{"accountId":"gm","playerId":"100","sessionId":0,"optionIndex":9,"itemId":null,"itemNum":null,"stageId":null,"taskId":null,"newAccount":"673B07E9-B388-4CA3-82BE-EF1F88A66CD2","newPlayerId":"e8kqb0","buildingId":null,"nickname":null}'
+    data_banding = json.loads(data_banding)
+    data_banding["newAccount"] = accountid
+    data_banding["newPlayerId"] = playerid
+    data_banding = json.dumps(data_banding)
+
+    headers = {
+    "Accept": "application/json, text/javascript, */*; q=0.01",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept-Language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36",
+    "X-Requested-With": "XMLHttpRequest",
+    "Content-Type": "application/json",
+    "Origin": "{host}".format(host=host),
+    "Referer": "{host}/BI/modules/bi/biqatool.html".format(host=host)
+    }
+
+    res3 = requests.post(url_banding, data =data_banding,cookies = login_res.cookies, headers=headers)
+    res = res3.text
+    res = json.loads(res)
+    res = res["msg"]
+    return res
+
+
 #调关和任务
 def riselevel(account, level, task, server):
     '''
@@ -66,15 +93,15 @@ def get_playerid(accountid,login_res,host):
     data_checkout['accountId'] = accountid
     data_checkout = json.dumps(data_checkout)
     
-    url_checkout = '{host}:8084/BI/bi/biqatool/list'.format(host=host)
+    url_checkout = '{host}/BI/bi/biqatool/list'.format(host=host)
 
     headers = {
     "Accept": "application/json, text/javascript, */*; q=0.01",
     "X-Requested-With": "XMLHttpRequest",
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36",
     "Content-Type": "application/json",
-    "Origin": "{host}:8084".format(host=host),
-    "Referer": "{host}:8084/BI/modules/bi/biqatool.html".format(host=host),
+    "Origin": "{host}".format(host=host),
+    "Referer": "{host}/BI/modules/bi/biqatool.html".format(host=host),
     "Accept-Encoding": "gzip, deflate",
     "Accept-Language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7"
     }
@@ -88,7 +115,7 @@ def get_playerid(accountid,login_res,host):
 
 #登录gm工具
 def login_gm(host):
-    url_login = '{host}:8084/BI/sys/login'.format(host=host)
+    url_login = '{host}/BI/sys/login'.format(host=host)
 
     data_login = {"username":"lienfeng","password":"lienfeng","captcha":""}
 
@@ -98,8 +125,8 @@ def login_gm(host):
     "X-Requested-With": "XMLHttpRequest",
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36",
     "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
-    "Origin": "{host}:8084".format(host=host),
-    "Referer": "{host}:8084/BI/login.html".format(host=host),
+    "Origin": "{host}".format(host=host),
+    "Referer": "{host}/BI/login.html".format(host=host),
     "Accept-Encoding": "gzip, deflate",
     "Accept-Language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7"
     }
@@ -107,7 +134,7 @@ def login_gm(host):
 
 #获取道具列表（list）
 def get_itemlist(playerid,sessionid,accountid,login_res,host):
-    url_itemlist = "{host}:8084/BI/bi/biqatool/queryitem".format(host=host)
+    url_itemlist = "{host}/BI/bi/biqatool/queryitem".format(host=host)
     
     data_itemlist = '{"accountId":"qatest103","playerId":"9t3vry","sessionId":0,"optionIndex":1,"itemId":null,"itemNum":null,"stageId":null,"taskId":null,"newAccount":null,"newPlayerId":null,"buildingId":null,"nickname":null}'
     data_itemlist = json.loads(data_itemlist)
@@ -121,8 +148,8 @@ def get_itemlist(playerid,sessionid,accountid,login_res,host):
     "X-Requested-With": "XMLHttpRequest",
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36",
     "Content-Type": "application/json",
-    "Origin": "{host}:8084".format(host=host),
-    "Referer": "{host}:8084/BI/modules/bi/biqatool.html".format(host=host),
+    "Origin": "{host}".format(host=host),
+    "Referer": "{host}/BI/modules/bi/biqatool.html".format(host=host),
     "Accept-Encoding": "gzip, deflate",
     "Accept-Language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
     }
@@ -134,7 +161,7 @@ def get_itemlist(playerid,sessionid,accountid,login_res,host):
 
 #发道具
 def send_gift(item_id, item_num, playerid,sessionid , accountid,login_res,host):
-    url_sendgift = "{host}:8084/BI/bi/biqatool/option".format(host=host)
+    url_sendgift = "{host}/BI/bi/biqatool/option".format(host=host)
     
     data_sendgift = '{"accountId":"qatest102","playerId":"ogvct8","sessionId":0,"optionIndex":1,"itemId":"","itemNum":"","stageId":null,"taskId":null,"newAccount":null,"newPlayerId":null,"buildingId":null,"nickname":null}'
     data_sendgift = json.loads(data_sendgift)
@@ -150,8 +177,8 @@ def send_gift(item_id, item_num, playerid,sessionid , accountid,login_res,host):
     "X-Requested-With": "XMLHttpRequest",
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36",
     "Content-Type": "application/json",
-    "Origin": "{host}:8084".format(host=host),
-    "Referer": "{host}:8084/BI/modules/bi/biqatool.html".format(host=host),
+    "Origin": "{host}".format(host=host),
+    "Referer": "{host}/BI/modules/bi/biqatool.html".format(host=host),
     "Accept-Encoding": "gzip, deflate",
     "Accept-Language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7"
     }
@@ -166,7 +193,7 @@ def send_gift(item_id, item_num, playerid,sessionid , accountid,login_res,host):
 
 #账号解绑
 def untie(playerid,sessionid,accountid,login_res,host):
-    url_untie = "{host}:8084/BI/bi/biqatool/option".format(host=host)
+    url_untie = "{host}/BI/bi/biqatool/option".format(host=host)
 
     data_untie = '{"accountId":"qa_12.1_0","playerId":"9cnkmo","sessionId":0,"optionIndex":0,"itemId":null,"itemNum":null,"stageId":null,"taskId":null,"newAccount":null,"newPlayerId":null,"buildingId":null,"nickname":null}'
     data_untie = json.loads(data_untie)
@@ -180,8 +207,8 @@ def untie(playerid,sessionid,accountid,login_res,host):
     "X-Requested-With": "XMLHttpRequest",
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36",
     "Content-Type": "application/json",
-    "Origin": "{host}:8084".format(host=host),
-    "Referer": "{host}:8084/BI/modules/bi/biqatool.html".format(host=host),
+    "Origin": "{host}".format(host=host),
+    "Referer": "{host}/BI/modules/bi/biqatool.html".format(host=host),
     "Accept-Encoding": "gzip, deflate",
     "Accept-Language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7"
     }
@@ -194,7 +221,7 @@ def untie(playerid,sessionid,accountid,login_res,host):
 
 #修改关卡和任务
 def level_task(playerid,sessionid,accountid,levelid,taskid,login_res,host):
-    url_level = "{host}:8084/BI/bi/biqatool/option".format(host=host)
+    url_level = "{host}/BI/bi/biqatool/option".format(host=host)
 
     data_lt = '{"accountId":"dev_14.1_1","playerId":"7f1nau","sessionId":0,"optionIndex":2,"itemId":null,"itemNum":null,"stageId":"21","taskId":"1","newAccount":null,"newPlayerId":null,"buildingId":null,"nickname":null}'
     data_lt = json.loads(data_lt)
@@ -211,8 +238,8 @@ def level_task(playerid,sessionid,accountid,levelid,taskid,login_res,host):
     "X-Requested-With": "XMLHttpRequest",
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36",
     "Content-Type": "application/json",
-    "Origin": "{host}:8084".format(host=host),
-    "Referer": "{host}:8084/BI/modules/bi/biqatool.html".format(host=host),
+    "Origin": "{host}".format(host=host),
+    "Referer": "{host}/BI/modules/bi/biqatool.html".format(host=host),
     "Accept-Encoding": "gzip, deflate",
     "Accept-Language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7"
     }
