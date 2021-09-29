@@ -1,35 +1,22 @@
 syntax = "proto2";
 package com.common.msg;
+import "ItemModuleMsg.proto";
 
 enum BuffModuleMsgSubCommand {
-	//领取buff请求
-	BUFFMODULEMSG_SUB_GETBUFF = 11001;
 	//获取buff列表请求
-	BUFFMODULEMSG_SUB_BUFFLIST = 11002;
+	BUFFMODULEMSG_SUB_BUFFLIST = 11001;
+	//激活buff请求
+	BUFFMODULEMSG_SUB_BUFFACTIVE = 11002;
 }
 
 //buff信息
 message BuffMsg {
 	//buff实例id
-	required int64 buffId = 1;
+	optional int64 buffId = 1;
 	//buff模板id
-	required string buffTemplateId = 2;
-	//buff到时时间点 单位（毫秒）
-	required int64 cdTime = 3;
-	//生成buff的建筑id(如果是建筑生成的buff时才会有值)
-	optional string buildingId = 4;
-	
-}
-
-//领取buff请求
-message GetBuffRequest {
-	//要领取的buffid
-	required int64 buffId = 1;
-}
-
-//领取buff响应
-message GetBuffResponse {
-	required BuffMsg buff = 1;
+	optional string buffTemplateId = 2;
+	//buff剩余时间（毫秒）
+	optional int64 duration = 3;
 }
 
 //buff列表请求
@@ -41,9 +28,18 @@ message BuffListRequest {
 message BuffListResponse {
 	//生效buff
 	repeated BuffMsg effectiveBuffs = 1;
-	//未生效buff
-	repeated BuffMsg ineffectiveBuffs = 2;
-	// 当前buff自增id
-	optional int64 incrBuffId = 3;
 }
 
+//激活buff请求
+message BuffActiveRequest {
+	// 道具id (消耗道具激活buff)
+	optional string itemId = 1;
+}
+
+//激活buff响应
+message BuffActiveResponse {
+	//buff信息
+	optional BuffMsg buffMsg = 1;
+	// 道具信息
+	repeated ItemMsg items = 2;
+}

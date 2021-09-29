@@ -1,19 +1,13 @@
 #%%
 import sys
-sys.path.append('D:\\pyprogram\\PyTestTools\\dragon\\package')
+sys.path.append('D:\\pyprogram\\PyTestTools\\senditems\\package')
+import GatewayModuleMsg_pb2
+import CoreModuleMsg_pb2
+import GMModuleMsg_pb2
 import time
 import requests
-import CoreModuleMsg_pb2  #登录、进入游戏、引导
-import GatewayModuleMsg_pb2#结构
-import GMModuleMsg_pb2
-import TaskModuleMsg_pb2    #任务跳过
-import SceneModuleMsg_pb2
-import OrderTaskModuleMsg_pb2
-import FarmlandModuleMsg_pb2
-import ItemModuleMsg_pb2
-import MagicalCreatureModuleMsg_pb2
 
-#登录#1001
+
 def login(account,server,version):
     request = GatewayModuleMsg_pb2.GatewayPackageRequest()
     msgbody = CoreModuleMsg_pb2.LoginRequest()
@@ -43,12 +37,13 @@ def login(account,server,version):
     if response.status_code==200 : 
         resa.ParseFromString(response.content)
         res_1001.ParseFromString(resa.bodys[0].msgBody)
+        print("playerid:",res_1001.playerId)
         return res_1001
     else:
         print("Server Disconnected ！！!")
         return 0
 
-#进入游戏#1002
+
 def entergame(login_res,server,version):
     request = GatewayModuleMsg_pb2.GatewayPackageRequest()
     msgbody = CoreModuleMsg_pb2.EnterGameRequest()
@@ -75,7 +70,7 @@ def entergame(login_res,server,version):
         print("Server Disconnected ！！!")
         return 0
 
-#使用GM指令
+
 def GM_cmd(login_res,server,version,cmd):
     request = GatewayModuleMsg_pb2.GatewayPackageRequest()
     msgbody = GMModuleMsg_pb2.GMCommandRequest()
@@ -103,3 +98,12 @@ def GM_cmd(login_res,server,version,cmd):
         print("Server Disconnected ！！!")
         return 0
 
+account = "dragon706"
+server = "http://dtest.gameyici.com" 
+version = "7.1.0"
+cmd = "gmSubmitTask 2 Mission1_002Closeathand"
+log = login(account,server,version)
+entergame(log,server,version)
+GM = GM_cmd(log,server,version,cmd)
+
+# %%

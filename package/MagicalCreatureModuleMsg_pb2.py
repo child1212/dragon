@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1eMagicalCreatureModuleMsg.proto\x12\x0e\x63om.common.msg\x1a\x14SceneModuleMsg.proto\x1a\x13ItemModuleMsg.proto\";\n\x15MagicalCreatureBuyMsg\x12\x12\n\ntemplateId\x18\x01 \x02(\t\x12\x0e\n\x06\x62uyCnt\x18\x02 \x02(\x05\"5\n\x0eMagicalNestMsg\x12\x10\n\x08nestType\x18\x01 \x02(\x05\x12\x11\n\tnestLevel\x18\x02 \x02(\x05\"\x1e\n\rBuyEggRequest\x12\r\n\x05\x65ggId\x18\x01 \x02(\t\"\x10\n\x0e\x42uyEggResponse\"$\n\x13\x45ggSynthesisRequest\x12\r\n\x05\x65ggId\x18\x01 \x02(\t\"L\n\x14\x45ggSynthesisResponse\x12\x34\n\x08\x63reature\x18\x01 \x02(\x0b\x32\".com.common.msg.MagicalCreatureMsg\"W\n\x16\x43reatureLevelUpRequest\x12\x13\n\x0b\x63reatureId1\x18\x01 \x02(\x05\x12\x13\n\x0b\x63reatureId2\x18\x02 \x02(\x05\x12\x13\n\x0b\x63reatureId3\x18\x03 \x02(\x05\"w\n\x17\x43reatureLevelUpResponse\x12\x34\n\x08\x63reature\x18\x01 \x02(\x0b\x32\".com.common.msg.MagicalCreatureMsg\x12&\n\x05items\x18\x02 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"8\n\x0c\x42reedRequest\x12\x13\n\x0btemplateId1\x18\x01 \x02(\t\x12\x13\n\x0btemplateId2\x18\x02 \x02(\t\"m\n\rBreedResponse\x12\x34\n\x08\x63reature\x18\x01 \x01(\x0b\x32\".com.common.msg.MagicalCreatureMsg\x12&\n\x05items\x18\x02 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"\x18\n\x16GetCreatureDataRequest\"\x85\x01\n\x17GetCreatureDataResponse\x12\x33\n\x04\x62uys\x18\x01 \x03(\x0b\x32%.com.common.msg.MagicalCreatureBuyMsg\x12\x35\n\tcreatures\x18\x02 \x03(\x0b\x32\".com.common.msg.MagicalCreatureMsg\"#\n\x0fOpenNestRequest\x12\x10\n\x08nestType\x18\x01 \x02(\x05\"\x12\n\x10OpenNestResponse\"&\n\x12NestLevelUpRequest\x12\x10\n\x08nestType\x18\x01 \x02(\x05\"\x15\n\x13NestLevelUpResponse\"Q\n\x1a\x43ollectHangupRewardRequest\x12\x12\n\ncreatureId\x18\x01 \x02(\x05\x12\x0e\n\x06itemId\x18\x02 \x01(\t\x12\x0f\n\x07itemCnt\x18\x03 \x01(\x05\"|\n\x1b\x43ollectHangupRewardResponse\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12\x35\n\tcreatures\x18\x02 \x01(\x0b\x32\".com.common.msg.MagicalCreatureMsg\"\x1f\n\x1d\x43ollectAllHangupRewardRequest\"\x7f\n\x1e\x43ollectAllHangupRewardResponse\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12\x35\n\tcreatures\x18\x02 \x03(\x0b\x32\".com.common.msg.MagicalCreatureMsg\"9\n\x11MoveToNestRequest\x12\x12\n\ncreatureId\x18\x01 \x02(\x05\x12\x10\n\x08nestType\x18\x02 \x02(\x05\"K\n\x12MoveToNestResponse\x12\x35\n\tcreatures\x18\x01 \x01(\x0b\x32\".com.common.msg.MagicalCreatureMsg\"F\n\x0e\x43ollectRequest\x12\x12\n\ncreatureId\x18\x01 \x02(\x05\x12\x0f\n\x07sceneId\x18\x02 \x01(\t\x12\x0f\n\x07plantId\x18\x03 \x01(\t\"p\n\x0f\x43ollectResponse\x12\x34\n\x08\x63reature\x18\x01 \x02(\x0b\x32\".com.common.msg.MagicalCreatureMsg\x12\'\n\x05plant\x18\x02 \x01(\x0b\x32\x18.com.common.msg.PlantMsg\"=\n\x19\x43ollectPlantRewardRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\x0f\n\x07plantId\x18\x02 \x01(\t\"R\n\x1a\x43ollectPlantRewardResponse\x12\x34\n\x08\x63learRet\x18\x01 \x01(\x0b\x32\".com.common.msg.ClearPlantResponse\"W\n\x17\x41\x63\x63\x65lerateHangUpRequest\x12\x12\n\ncreatureId\x18\x01 \x02(\x05\x12(\n\x07\x63onsume\x18\x02 \x02(\x0b\x32\x17.com.common.msg.ItemMsg\"y\n\x18\x41\x63\x63\x65lerateHangUpResponse\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12\x35\n\tcreatures\x18\x02 \x01(\x0b\x32\".com.common.msg.MagicalCreatureMsg\"?\n\x07\x46\x65\x65\x64Msg\x12\x12\n\ncreatureId\x18\x01 \x02(\x05\x12\x0e\n\x06itemId\x18\x02 \x02(\t\x12\x10\n\x08\x66\x65\x65\x64Time\x18\x03 \x02(\x03\"8\n\x0b\x46\x65\x65\x64Request\x12)\n\x08\x66\x65\x65\x64Msgs\x18\x01 \x03(\x0b\x32\x17.com.common.msg.FeedMsg\"m\n\x0c\x46\x65\x65\x64Response\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12\x35\n\tcreatures\x18\x02 \x03(\x0b\x32\".com.common.msg.MagicalCreatureMsg\"5\n\x12\x42uyCreatureRequest\x12\x12\n\ntemplateId\x18\x01 \x02(\t\x12\x0b\n\x03way\x18\x02 \x01(\x05\"K\n\x13\x42uyCreatureResponse\x12\x34\n\x08\x63reature\x18\x01 \x02(\x0b\x32\".com.common.msg.MagicalCreatureMsg\"8\n\x13\x43\x61ressRewardRequest\x12\x12\n\ncreatureId\x18\x01 \x02(\x05\x12\r\n\x05reset\x18\x02 \x02(\x08\"A\n\x14\x43\x61ressRewardResponse\x12\x14\n\x0crewardItemId\x18\x01 \x02(\t\x12\x13\n\x0brewardCount\x18\x02 \x02(\x05\"\x12\n\x10PetRewardRequest\"@\n\x11PetRewardResponse\x12+\n\nrewardItem\x18\x01 \x02(\x0b\x32\x17.com.common.msg.ItemMsg\"-\n\x17GuideEnterHungerRequest\x12\x12\n\ncreatureId\x18\x01 \x02(\x05\"\x1a\n\x18GuideEnterHungerResponse\"?\n\x1a\x42uyPhysicalStrengthRequest\x12\x12\n\ncreatureId\x18\x01 \x02(\x05\x12\r\n\x05price\x18\x02 \x02(\x05\"{\n\x1b\x42uyPhysicalStrengthResponse\x12\x34\n\x08\x63reature\x18\x01 \x02(\x0b\x32\".com.common.msg.MagicalCreatureMsg\x12&\n\x05items\x18\x02 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"\x19\n\x17GetConsumeEnergyRequest\"4\n\x18GetConsumeEnergyResponse\x12\x18\n\x10\x63onsumeEnergyCnt\x18\x01 \x02(\x05\"+\n\x14SelectExploreRequest\x12\x13\n\x0b\x63reatureIds\x18\x01 \x03(\x05\"N\n\x15SelectExploreResponse\x12\x35\n\tcreatures\x18\x01 \x03(\x0b\x32\".com.common.msg.MagicalCreatureMsg*\xb5\x08\n\"MagicalCreatureModuleMsgSubCommand\x12)\n#MAGICALCREATUREMODULEMSG_SUB_BUYEGG\x10\xc1\xbb\x01\x12/\n)MAGICALCREATUREMODULEMSG_SUB_EGGSYNTHESIS\x10\xc2\xbb\x01\x12\x32\n,MAGICALCREATUREMODULEMSG_SUB_CREATURELEVELUP\x10\xc3\xbb\x01\x12(\n\"MAGICALCREATUREMODULEMSG_SUB_BREED\x10\xc4\xbb\x01\x12\x32\n,MAGICALCREATUREMODULEMSG_SUB_GETCREATUREDATA\x10\xc5\xbb\x01\x12+\n%MAGICALCREATUREMODULEMSG_SUB_OPENNEST\x10\xc6\xbb\x01\x12.\n(MAGICALCREATUREMODULEMSG_SUB_NESTLEVELUP\x10\xc7\xbb\x01\x12\x36\n0MAGICALCREATUREMODULEMSG_SUB_COLLECTHANGUPREWARD\x10\xc8\xbb\x01\x12\x39\n3MAGICALCREATUREMODULEMSG_SUB_COLLECTALLHANGUPREWARD\x10\xc9\xbb\x01\x12-\n\'MAGICALCREATUREMODULEMSG_SUB_MOVETONEST\x10\xca\xbb\x01\x12*\n$MAGICALCREATUREMODULEMSG_SUB_COLLECT\x10\xcb\xbb\x01\x12\x35\n/MAGICALCREATUREMODULEMSG_SUB_COLLECTPLANTREWARD\x10\xcc\xbb\x01\x12\x33\n-MAGICALCREATUREMODULEMSG_SUB_ACCELERATEHANGUP\x10\xcd\xbb\x01\x12\'\n!MAGICALCREATUREMODULEMSG_SUB_FEED\x10\xce\xbb\x01\x12.\n(MAGICALCREATUREMODULEMSG_SUB_BUYCREATURE\x10\xcf\xbb\x01\x12/\n)MAGICALCREATUREMODULEMSG_SUB_CARESSREWARD\x10\xd0\xbb\x01\x12,\n&MAGICALCREATUREMODULEMSG_SUB_PETREWARD\x10\xd1\xbb\x01\x12\x33\n-MAGICALCREATUREMODULEMSG_SUB_GUIDEENTERHUNGER\x10\xd2\xbb\x01\x12\x36\n0MAGICALCREATUREMODULEMSG_SUB_BUYPHYSICALSTRENGTH\x10\xd3\xbb\x01\x12\x33\n-MAGICALCREATUREMODULEMSG_SUB_GETCONSUMEENERGY\x10\xd4\xbb\x01\x12\x30\n*MAGICALCREATUREMODULEMSG_SUB_SELECTEXPLORE\x10\xd5\xbb\x01'
+  serialized_pb=b'\n\x1eMagicalCreatureModuleMsg.proto\x12\x0e\x63om.common.msg\x1a\x14SceneModuleMsg.proto\x1a\x13ItemModuleMsg.proto\"I\n\x15MagicalCreatureBuyMsg\x12\x12\n\ntemplateId\x18\x01 \x02(\t\x12\x0e\n\x06\x62uyCnt\x18\x02 \x02(\x05\x12\x0c\n\x04type\x18\x03 \x01(\x05\"5\n\x0eMagicalNestMsg\x12\x10\n\x08nestType\x18\x01 \x02(\x05\x12\x11\n\tnestLevel\x18\x02 \x02(\x05\"r\n\rCommissionMsg\x12\x14\n\x0c\x63ommissionId\x18\x01 \x01(\t\x12\x11\n\tstartTime\x18\x02 \x01(\x03\x12\x10\n\x08\x66inished\x18\x03 \x01(\x08\x12\x11\n\tcreatures\x18\x04 \x03(\x03\x12\x13\n\x0bunlockMaxId\x18\x05 \x01(\t\"\x1e\n\rBuyEggRequest\x12\r\n\x05\x65ggId\x18\x01 \x02(\t\"\x10\n\x0e\x42uyEggResponse\"$\n\x13\x45ggSynthesisRequest\x12\r\n\x05\x65ggId\x18\x01 \x02(\t\"L\n\x14\x45ggSynthesisResponse\x12\x34\n\x08\x63reature\x18\x01 \x02(\x0b\x32\".com.common.msg.MagicalCreatureMsg\"W\n\x16\x43reatureLevelUpRequest\x12\x13\n\x0b\x63reatureId1\x18\x01 \x02(\x05\x12\x13\n\x0b\x63reatureId2\x18\x02 \x02(\x05\x12\x13\n\x0b\x63reatureId3\x18\x03 \x02(\x05\"w\n\x17\x43reatureLevelUpResponse\x12\x34\n\x08\x63reature\x18\x01 \x02(\x0b\x32\".com.common.msg.MagicalCreatureMsg\x12&\n\x05items\x18\x02 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"8\n\x0c\x42reedRequest\x12\x13\n\x0btemplateId1\x18\x01 \x02(\t\x12\x13\n\x0btemplateId2\x18\x02 \x02(\t\"\x9c\x01\n\rBreedResponse\x12\x34\n\x08\x63reature\x18\x01 \x01(\x0b\x32\".com.common.msg.MagicalCreatureMsg\x12&\n\x05items\x18\x02 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12-\n\x0cproductItems\x18\x03 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"\x18\n\x16GetCreatureDataRequest\"\xac\x01\n\x17GetCreatureDataResponse\x12\x33\n\x04\x62uys\x18\x01 \x03(\x0b\x32%.com.common.msg.MagicalCreatureBuyMsg\x12\x35\n\tcreatures\x18\x02 \x03(\x0b\x32\".com.common.msg.MagicalCreatureMsg\x12\x10\n\x08skillCnt\x18\x03 \x01(\x05\x12\x13\n\x0brefreshTime\x18\x04 \x01(\x03\"#\n\x0fOpenNestRequest\x12\x10\n\x08nestType\x18\x01 \x02(\x05\"\x12\n\x10OpenNestResponse\"&\n\x12NestLevelUpRequest\x12\x10\n\x08nestType\x18\x01 \x02(\x05\"\x15\n\x13NestLevelUpResponse\"Q\n\x1a\x43ollectHangupRewardRequest\x12\x12\n\ncreatureId\x18\x01 \x02(\x05\x12\x0e\n\x06itemId\x18\x02 \x01(\t\x12\x0f\n\x07itemCnt\x18\x03 \x01(\x05\"|\n\x1b\x43ollectHangupRewardResponse\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12\x35\n\tcreatures\x18\x02 \x01(\x0b\x32\".com.common.msg.MagicalCreatureMsg\"\x1f\n\x1d\x43ollectAllHangupRewardRequest\"\x96\x01\n\x1e\x43ollectAllHangupRewardResponse\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12\x35\n\tcreatures\x18\x02 \x03(\x0b\x32\".com.common.msg.MagicalCreatureMsg\x12\x15\n\ritemChangeNum\x18\x03 \x03(\x05\"9\n\x11MoveToNestRequest\x12\x12\n\ncreatureId\x18\x01 \x02(\x05\x12\x10\n\x08nestType\x18\x02 \x02(\x05\"K\n\x12MoveToNestResponse\x12\x35\n\tcreatures\x18\x01 \x01(\x0b\x32\".com.common.msg.MagicalCreatureMsg\"F\n\x0e\x43ollectRequest\x12\x12\n\ncreatureId\x18\x01 \x02(\x05\x12\x0f\n\x07sceneId\x18\x02 \x01(\t\x12\x0f\n\x07plantId\x18\x03 \x01(\t\"\xb9\x01\n\x0f\x43ollectResponse\x12\x34\n\x08\x63reature\x18\x01 \x02(\x0b\x32\".com.common.msg.MagicalCreatureMsg\x12\'\n\x05plant\x18\x02 \x01(\x0b\x32\x18.com.common.msg.PlantMsg\x12G\n\x11\x61\x63hievementReward\x18\x03 \x01(\x0b\x32,.com.common.msg.ObstacleAchievementRewardMsg\"=\n\x19\x43ollectPlantRewardRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\x0f\n\x07plantId\x18\x02 \x01(\t\"R\n\x1a\x43ollectPlantRewardResponse\x12\x34\n\x08\x63learRet\x18\x01 \x01(\x0b\x32\".com.common.msg.ClearPlantResponse\"W\n\x17\x41\x63\x63\x65lerateHangUpRequest\x12\x12\n\ncreatureId\x18\x01 \x02(\x05\x12(\n\x07\x63onsume\x18\x02 \x02(\x0b\x32\x17.com.common.msg.ItemMsg\"y\n\x18\x41\x63\x63\x65lerateHangUpResponse\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12\x35\n\tcreatures\x18\x02 \x01(\x0b\x32\".com.common.msg.MagicalCreatureMsg\"?\n\x07\x46\x65\x65\x64Msg\x12\x12\n\ncreatureId\x18\x01 \x02(\x05\x12\x0e\n\x06itemId\x18\x02 \x02(\t\x12\x10\n\x08\x66\x65\x65\x64Time\x18\x03 \x02(\x03\"8\n\x0b\x46\x65\x65\x64Request\x12)\n\x08\x66\x65\x65\x64Msgs\x18\x01 \x03(\x0b\x32\x17.com.common.msg.FeedMsg\"m\n\x0c\x46\x65\x65\x64Response\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12\x35\n\tcreatures\x18\x02 \x03(\x0b\x32\".com.common.msg.MagicalCreatureMsg\"5\n\x12\x42uyCreatureRequest\x12\x12\n\ntemplateId\x18\x01 \x02(\t\x12\x0b\n\x03way\x18\x02 \x01(\x05\"K\n\x13\x42uyCreatureResponse\x12\x34\n\x08\x63reature\x18\x01 \x02(\x0b\x32\".com.common.msg.MagicalCreatureMsg\"8\n\x13\x43\x61ressRewardRequest\x12\x12\n\ncreatureId\x18\x01 \x02(\x05\x12\r\n\x05reset\x18\x02 \x02(\x08\"A\n\x14\x43\x61ressRewardResponse\x12\x14\n\x0crewardItemId\x18\x01 \x02(\t\x12\x13\n\x0brewardCount\x18\x02 \x02(\x05\"\x12\n\x10PetRewardRequest\"@\n\x11PetRewardResponse\x12+\n\nrewardItem\x18\x01 \x02(\x0b\x32\x17.com.common.msg.ItemMsg\"-\n\x17GuideEnterHungerRequest\x12\x12\n\ncreatureId\x18\x01 \x02(\x05\"\x1a\n\x18GuideEnterHungerResponse\"?\n\x1a\x42uyPhysicalStrengthRequest\x12\x12\n\ncreatureId\x18\x01 \x02(\x05\x12\r\n\x05price\x18\x02 \x02(\x05\"{\n\x1b\x42uyPhysicalStrengthResponse\x12\x34\n\x08\x63reature\x18\x01 \x02(\x0b\x32\".com.common.msg.MagicalCreatureMsg\x12&\n\x05items\x18\x02 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"\x19\n\x17GetConsumeEnergyRequest\"4\n\x18GetConsumeEnergyResponse\x12\x18\n\x10\x63onsumeEnergyCnt\x18\x01 \x02(\x05\"+\n\x14SelectExploreRequest\x12\x13\n\x0b\x63reatureIds\x18\x01 \x03(\x05\"N\n\x15SelectExploreResponse\x12\x35\n\tcreatures\x18\x01 \x03(\x0b\x32\".com.common.msg.MagicalCreatureMsg\"n\n\x0e\x44oSkillRequest\x12\x12\n\ncreatureId\x18\x01 \x02(\x05\x12\x0f\n\x07skillId\x18\x02 \x01(\t\x12\x0f\n\x07sceneId\x18\x03 \x01(\t\x12\t\n\x01x\x18\x04 \x01(\x05\x12\t\n\x01y\x18\x05 \x01(\x05\x12\x10\n\x08plantIds\x18\x06 \x03(\t\"n\n\x0f\x44oSkillResponse\x12\x33\n\x07\x65\x66\x66\x65\x63ts\x18\x01 \x03(\x0b\x32\".com.common.msg.ClearPlantResponse\x12&\n\x05items\x18\x02 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\">\n\x11\x43ommissionRequest\x12\x14\n\x0c\x63ommissionId\x18\x01 \x01(\t\x12\x13\n\x0b\x63reatureIds\x18\x02 \x03(\x03\"<\n\x12\x43ommissionResponse\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"C\n\x1b\x41\x63\x63\x65lerateCommissionRequest\x12\x14\n\x0c\x63ommissionId\x18\x01 \x01(\t\x12\x0e\n\x06itemId\x18\x02 \x01(\t\"y\n\x1c\x41\x63\x63\x65lerateCommissionResponse\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12\x31\n\ncommission\x18\x02 \x01(\x0b\x32\x1d.com.common.msg.CommissionMsg\"/\n\x17\x43ommissionRewardRequest\x12\x14\n\x0c\x63ommissionId\x18\x01 \x01(\t\"y\n\x18\x43ommissionRewardResponse\x12\x35\n\tcreatures\x18\x01 \x03(\x0b\x32\".com.common.msg.MagicalCreatureMsg\x12&\n\x05items\x18\x02 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"/\n\x17\x43ommissionUnlockRequest\x12\x14\n\x0c\x63ommissionId\x18\x01 \x01(\t\"\x1a\n\x18\x43ommissionUnlockResponse\")\n\x13SellCreatureRequest\x12\x12\n\ncreatureId\x18\x02 \x01(\x03\">\n\x14SellCreatureResponse\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg*\xe4\n\n\"MagicalCreatureModuleMsgSubCommand\x12)\n#MAGICALCREATUREMODULEMSG_SUB_BUYEGG\x10\xc1\xbb\x01\x12/\n)MAGICALCREATUREMODULEMSG_SUB_EGGSYNTHESIS\x10\xc2\xbb\x01\x12\x32\n,MAGICALCREATUREMODULEMSG_SUB_CREATURELEVELUP\x10\xc3\xbb\x01\x12(\n\"MAGICALCREATUREMODULEMSG_SUB_BREED\x10\xc4\xbb\x01\x12\x32\n,MAGICALCREATUREMODULEMSG_SUB_GETCREATUREDATA\x10\xc5\xbb\x01\x12+\n%MAGICALCREATUREMODULEMSG_SUB_OPENNEST\x10\xc6\xbb\x01\x12.\n(MAGICALCREATUREMODULEMSG_SUB_NESTLEVELUP\x10\xc7\xbb\x01\x12\x36\n0MAGICALCREATUREMODULEMSG_SUB_COLLECTHANGUPREWARD\x10\xc8\xbb\x01\x12\x39\n3MAGICALCREATUREMODULEMSG_SUB_COLLECTALLHANGUPREWARD\x10\xc9\xbb\x01\x12-\n\'MAGICALCREATUREMODULEMSG_SUB_MOVETONEST\x10\xca\xbb\x01\x12*\n$MAGICALCREATUREMODULEMSG_SUB_COLLECT\x10\xcb\xbb\x01\x12\x35\n/MAGICALCREATUREMODULEMSG_SUB_COLLECTPLANTREWARD\x10\xcc\xbb\x01\x12\x33\n-MAGICALCREATUREMODULEMSG_SUB_ACCELERATEHANGUP\x10\xcd\xbb\x01\x12\'\n!MAGICALCREATUREMODULEMSG_SUB_FEED\x10\xce\xbb\x01\x12.\n(MAGICALCREATUREMODULEMSG_SUB_BUYCREATURE\x10\xcf\xbb\x01\x12/\n)MAGICALCREATUREMODULEMSG_SUB_CARESSREWARD\x10\xd0\xbb\x01\x12,\n&MAGICALCREATUREMODULEMSG_SUB_PETREWARD\x10\xd1\xbb\x01\x12\x33\n-MAGICALCREATUREMODULEMSG_SUB_GUIDEENTERHUNGER\x10\xd2\xbb\x01\x12\x36\n0MAGICALCREATUREMODULEMSG_SUB_BUYPHYSICALSTRENGTH\x10\xd3\xbb\x01\x12\x33\n-MAGICALCREATUREMODULEMSG_SUB_GETCONSUMEENERGY\x10\xd4\xbb\x01\x12\x30\n*MAGICALCREATUREMODULEMSG_SUB_SELECTEXPLORE\x10\xd5\xbb\x01\x12*\n$MAGICALCREATUREMODULEMSG_SUB_DOSKILL\x10\xd6\xbb\x01\x12-\n\'MAGICALCREATUREMODULEMSG_SUB_COMMISSION\x10\xd7\xbb\x01\x12\x37\n1MAGICALCREATUREMODULEMSG_SUB_ACCELERATECOMMISSION\x10\xd8\xbb\x01\x12\x33\n-MAGICALCREATUREMODULEMSG_SUB_COMMISSIONREWARD\x10\xd9\xbb\x01\x12\x33\n-MAGICALCREATUREMODULEMSG_SUB_COMMISSIONUNLOCK\x10\xda\xbb\x01\x12/\n)MAGICALCREATUREMODULEMSG_SUB_SELLCREATURE\x10\xdb\xbb\x01'
   ,
   dependencies=[SceneModuleMsg__pb2.DESCRIPTOR,ItemModuleMsg__pb2.DESCRIPTOR,])
 
@@ -138,11 +138,41 @@ _MAGICALCREATUREMODULEMSGSUBCOMMAND = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='MAGICALCREATUREMODULEMSG_SUB_DOSKILL', index=21, number=24022,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='MAGICALCREATUREMODULEMSG_SUB_COMMISSION', index=22, number=24023,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='MAGICALCREATUREMODULEMSG_SUB_ACCELERATECOMMISSION', index=23, number=24024,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='MAGICALCREATUREMODULEMSG_SUB_COMMISSIONREWARD', index=24, number=24025,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='MAGICALCREATUREMODULEMSG_SUB_COMMISSIONUNLOCK', index=25, number=24026,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='MAGICALCREATUREMODULEMSG_SUB_SELLCREATURE', index=26, number=24027,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=3137,
-  serialized_end=4214,
+  serialized_start=4350,
+  serialized_end=5730,
 )
 _sym_db.RegisterEnumDescriptor(_MAGICALCREATUREMODULEMSGSUBCOMMAND)
 
@@ -168,6 +198,12 @@ MAGICALCREATUREMODULEMSG_SUB_GUIDEENTERHUNGER = 24018
 MAGICALCREATUREMODULEMSG_SUB_BUYPHYSICALSTRENGTH = 24019
 MAGICALCREATUREMODULEMSG_SUB_GETCONSUMEENERGY = 24020
 MAGICALCREATUREMODULEMSG_SUB_SELECTEXPLORE = 24021
+MAGICALCREATUREMODULEMSG_SUB_DOSKILL = 24022
+MAGICALCREATUREMODULEMSG_SUB_COMMISSION = 24023
+MAGICALCREATUREMODULEMSG_SUB_ACCELERATECOMMISSION = 24024
+MAGICALCREATUREMODULEMSG_SUB_COMMISSIONREWARD = 24025
+MAGICALCREATUREMODULEMSG_SUB_COMMISSIONUNLOCK = 24026
+MAGICALCREATUREMODULEMSG_SUB_SELLCREATURE = 24027
 
 
 
@@ -193,6 +229,13 @@ _MAGICALCREATUREBUYMSG = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='type', full_name='com.common.msg.MagicalCreatureBuyMsg.type', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -206,7 +249,7 @@ _MAGICALCREATUREBUYMSG = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=93,
-  serialized_end=152,
+  serialized_end=166,
 )
 
 
@@ -244,8 +287,68 @@ _MAGICALNESTMSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=154,
-  serialized_end=207,
+  serialized_start=168,
+  serialized_end=221,
+)
+
+
+_COMMISSIONMSG = _descriptor.Descriptor(
+  name='CommissionMsg',
+  full_name='com.common.msg.CommissionMsg',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='commissionId', full_name='com.common.msg.CommissionMsg.commissionId', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='startTime', full_name='com.common.msg.CommissionMsg.startTime', index=1,
+      number=2, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='finished', full_name='com.common.msg.CommissionMsg.finished', index=2,
+      number=3, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='creatures', full_name='com.common.msg.CommissionMsg.creatures', index=3,
+      number=4, type=3, cpp_type=2, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='unlockMaxId', full_name='com.common.msg.CommissionMsg.unlockMaxId', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=223,
+  serialized_end=337,
 )
 
 
@@ -276,8 +379,8 @@ _BUYEGGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=209,
-  serialized_end=239,
+  serialized_start=339,
+  serialized_end=369,
 )
 
 
@@ -301,8 +404,8 @@ _BUYEGGRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=241,
-  serialized_end=257,
+  serialized_start=371,
+  serialized_end=387,
 )
 
 
@@ -333,8 +436,8 @@ _EGGSYNTHESISREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=259,
-  serialized_end=295,
+  serialized_start=389,
+  serialized_end=425,
 )
 
 
@@ -365,8 +468,8 @@ _EGGSYNTHESISRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=297,
-  serialized_end=373,
+  serialized_start=427,
+  serialized_end=503,
 )
 
 
@@ -411,8 +514,8 @@ _CREATURELEVELUPREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=375,
-  serialized_end=462,
+  serialized_start=505,
+  serialized_end=592,
 )
 
 
@@ -450,8 +553,8 @@ _CREATURELEVELUPRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=464,
-  serialized_end=583,
+  serialized_start=594,
+  serialized_end=713,
 )
 
 
@@ -489,8 +592,8 @@ _BREEDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=585,
-  serialized_end=641,
+  serialized_start=715,
+  serialized_end=771,
 )
 
 
@@ -516,6 +619,13 @@ _BREEDRESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='productItems', full_name='com.common.msg.BreedResponse.productItems', index=2,
+      number=3, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -528,8 +638,8 @@ _BREEDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=643,
-  serialized_end=752,
+  serialized_start=774,
+  serialized_end=930,
 )
 
 
@@ -553,8 +663,8 @@ _GETCREATUREDATAREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=754,
-  serialized_end=778,
+  serialized_start=932,
+  serialized_end=956,
 )
 
 
@@ -580,6 +690,20 @@ _GETCREATUREDATARESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='skillCnt', full_name='com.common.msg.GetCreatureDataResponse.skillCnt', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='refreshTime', full_name='com.common.msg.GetCreatureDataResponse.refreshTime', index=3,
+      number=4, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -592,8 +716,8 @@ _GETCREATUREDATARESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=781,
-  serialized_end=914,
+  serialized_start=959,
+  serialized_end=1131,
 )
 
 
@@ -624,8 +748,8 @@ _OPENNESTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=916,
-  serialized_end=951,
+  serialized_start=1133,
+  serialized_end=1168,
 )
 
 
@@ -649,8 +773,8 @@ _OPENNESTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=953,
-  serialized_end=971,
+  serialized_start=1170,
+  serialized_end=1188,
 )
 
 
@@ -681,8 +805,8 @@ _NESTLEVELUPREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=973,
-  serialized_end=1011,
+  serialized_start=1190,
+  serialized_end=1228,
 )
 
 
@@ -706,8 +830,8 @@ _NESTLEVELUPRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1013,
-  serialized_end=1034,
+  serialized_start=1230,
+  serialized_end=1251,
 )
 
 
@@ -752,8 +876,8 @@ _COLLECTHANGUPREWARDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1036,
-  serialized_end=1117,
+  serialized_start=1253,
+  serialized_end=1334,
 )
 
 
@@ -791,8 +915,8 @@ _COLLECTHANGUPREWARDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1119,
-  serialized_end=1243,
+  serialized_start=1336,
+  serialized_end=1460,
 )
 
 
@@ -816,8 +940,8 @@ _COLLECTALLHANGUPREWARDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1245,
-  serialized_end=1276,
+  serialized_start=1462,
+  serialized_end=1493,
 )
 
 
@@ -843,6 +967,13 @@ _COLLECTALLHANGUPREWARDRESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='itemChangeNum', full_name='com.common.msg.CollectAllHangupRewardResponse.itemChangeNum', index=2,
+      number=3, type=5, cpp_type=1, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -855,8 +986,8 @@ _COLLECTALLHANGUPREWARDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1278,
-  serialized_end=1405,
+  serialized_start=1496,
+  serialized_end=1646,
 )
 
 
@@ -894,8 +1025,8 @@ _MOVETONESTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1407,
-  serialized_end=1464,
+  serialized_start=1648,
+  serialized_end=1705,
 )
 
 
@@ -926,8 +1057,8 @@ _MOVETONESTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1466,
-  serialized_end=1541,
+  serialized_start=1707,
+  serialized_end=1782,
 )
 
 
@@ -972,8 +1103,8 @@ _COLLECTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1543,
-  serialized_end=1613,
+  serialized_start=1784,
+  serialized_end=1854,
 )
 
 
@@ -999,6 +1130,13 @@ _COLLECTRESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='achievementReward', full_name='com.common.msg.CollectResponse.achievementReward', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1011,8 +1149,8 @@ _COLLECTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1615,
-  serialized_end=1727,
+  serialized_start=1857,
+  serialized_end=2042,
 )
 
 
@@ -1050,8 +1188,8 @@ _COLLECTPLANTREWARDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1729,
-  serialized_end=1790,
+  serialized_start=2044,
+  serialized_end=2105,
 )
 
 
@@ -1082,8 +1220,8 @@ _COLLECTPLANTREWARDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1792,
-  serialized_end=1874,
+  serialized_start=2107,
+  serialized_end=2189,
 )
 
 
@@ -1121,8 +1259,8 @@ _ACCELERATEHANGUPREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1876,
-  serialized_end=1963,
+  serialized_start=2191,
+  serialized_end=2278,
 )
 
 
@@ -1160,8 +1298,8 @@ _ACCELERATEHANGUPRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1965,
-  serialized_end=2086,
+  serialized_start=2280,
+  serialized_end=2401,
 )
 
 
@@ -1206,8 +1344,8 @@ _FEEDMSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2088,
-  serialized_end=2151,
+  serialized_start=2403,
+  serialized_end=2466,
 )
 
 
@@ -1238,8 +1376,8 @@ _FEEDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2153,
-  serialized_end=2209,
+  serialized_start=2468,
+  serialized_end=2524,
 )
 
 
@@ -1277,8 +1415,8 @@ _FEEDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2211,
-  serialized_end=2320,
+  serialized_start=2526,
+  serialized_end=2635,
 )
 
 
@@ -1316,8 +1454,8 @@ _BUYCREATUREREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2322,
-  serialized_end=2375,
+  serialized_start=2637,
+  serialized_end=2690,
 )
 
 
@@ -1348,8 +1486,8 @@ _BUYCREATURERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2377,
-  serialized_end=2452,
+  serialized_start=2692,
+  serialized_end=2767,
 )
 
 
@@ -1387,8 +1525,8 @@ _CARESSREWARDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2454,
-  serialized_end=2510,
+  serialized_start=2769,
+  serialized_end=2825,
 )
 
 
@@ -1426,8 +1564,8 @@ _CARESSREWARDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2512,
-  serialized_end=2577,
+  serialized_start=2827,
+  serialized_end=2892,
 )
 
 
@@ -1451,8 +1589,8 @@ _PETREWARDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2579,
-  serialized_end=2597,
+  serialized_start=2894,
+  serialized_end=2912,
 )
 
 
@@ -1483,8 +1621,8 @@ _PETREWARDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2599,
-  serialized_end=2663,
+  serialized_start=2914,
+  serialized_end=2978,
 )
 
 
@@ -1515,8 +1653,8 @@ _GUIDEENTERHUNGERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2665,
-  serialized_end=2710,
+  serialized_start=2980,
+  serialized_end=3025,
 )
 
 
@@ -1540,8 +1678,8 @@ _GUIDEENTERHUNGERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2712,
-  serialized_end=2738,
+  serialized_start=3027,
+  serialized_end=3053,
 )
 
 
@@ -1579,8 +1717,8 @@ _BUYPHYSICALSTRENGTHREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2740,
-  serialized_end=2803,
+  serialized_start=3055,
+  serialized_end=3118,
 )
 
 
@@ -1618,8 +1756,8 @@ _BUYPHYSICALSTRENGTHRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2805,
-  serialized_end=2928,
+  serialized_start=3120,
+  serialized_end=3243,
 )
 
 
@@ -1643,8 +1781,8 @@ _GETCONSUMEENERGYREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2930,
-  serialized_end=2955,
+  serialized_start=3245,
+  serialized_end=3270,
 )
 
 
@@ -1675,8 +1813,8 @@ _GETCONSUMEENERGYRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2957,
-  serialized_end=3009,
+  serialized_start=3272,
+  serialized_end=3324,
 )
 
 
@@ -1707,8 +1845,8 @@ _SELECTEXPLOREREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3011,
-  serialized_end=3054,
+  serialized_start=3326,
+  serialized_end=3369,
 )
 
 
@@ -1739,8 +1877,455 @@ _SELECTEXPLORERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3056,
-  serialized_end=3134,
+  serialized_start=3371,
+  serialized_end=3449,
+)
+
+
+_DOSKILLREQUEST = _descriptor.Descriptor(
+  name='DoSkillRequest',
+  full_name='com.common.msg.DoSkillRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='creatureId', full_name='com.common.msg.DoSkillRequest.creatureId', index=0,
+      number=1, type=5, cpp_type=1, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='skillId', full_name='com.common.msg.DoSkillRequest.skillId', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='sceneId', full_name='com.common.msg.DoSkillRequest.sceneId', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='x', full_name='com.common.msg.DoSkillRequest.x', index=3,
+      number=4, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='y', full_name='com.common.msg.DoSkillRequest.y', index=4,
+      number=5, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='plantIds', full_name='com.common.msg.DoSkillRequest.plantIds', index=5,
+      number=6, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3451,
+  serialized_end=3561,
+)
+
+
+_DOSKILLRESPONSE = _descriptor.Descriptor(
+  name='DoSkillResponse',
+  full_name='com.common.msg.DoSkillResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='effects', full_name='com.common.msg.DoSkillResponse.effects', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='items', full_name='com.common.msg.DoSkillResponse.items', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3563,
+  serialized_end=3673,
+)
+
+
+_COMMISSIONREQUEST = _descriptor.Descriptor(
+  name='CommissionRequest',
+  full_name='com.common.msg.CommissionRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='commissionId', full_name='com.common.msg.CommissionRequest.commissionId', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='creatureIds', full_name='com.common.msg.CommissionRequest.creatureIds', index=1,
+      number=2, type=3, cpp_type=2, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3675,
+  serialized_end=3737,
+)
+
+
+_COMMISSIONRESPONSE = _descriptor.Descriptor(
+  name='CommissionResponse',
+  full_name='com.common.msg.CommissionResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='items', full_name='com.common.msg.CommissionResponse.items', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3739,
+  serialized_end=3799,
+)
+
+
+_ACCELERATECOMMISSIONREQUEST = _descriptor.Descriptor(
+  name='AccelerateCommissionRequest',
+  full_name='com.common.msg.AccelerateCommissionRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='commissionId', full_name='com.common.msg.AccelerateCommissionRequest.commissionId', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='itemId', full_name='com.common.msg.AccelerateCommissionRequest.itemId', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3801,
+  serialized_end=3868,
+)
+
+
+_ACCELERATECOMMISSIONRESPONSE = _descriptor.Descriptor(
+  name='AccelerateCommissionResponse',
+  full_name='com.common.msg.AccelerateCommissionResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='items', full_name='com.common.msg.AccelerateCommissionResponse.items', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='commission', full_name='com.common.msg.AccelerateCommissionResponse.commission', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3870,
+  serialized_end=3991,
+)
+
+
+_COMMISSIONREWARDREQUEST = _descriptor.Descriptor(
+  name='CommissionRewardRequest',
+  full_name='com.common.msg.CommissionRewardRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='commissionId', full_name='com.common.msg.CommissionRewardRequest.commissionId', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3993,
+  serialized_end=4040,
+)
+
+
+_COMMISSIONREWARDRESPONSE = _descriptor.Descriptor(
+  name='CommissionRewardResponse',
+  full_name='com.common.msg.CommissionRewardResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='creatures', full_name='com.common.msg.CommissionRewardResponse.creatures', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='items', full_name='com.common.msg.CommissionRewardResponse.items', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4042,
+  serialized_end=4163,
+)
+
+
+_COMMISSIONUNLOCKREQUEST = _descriptor.Descriptor(
+  name='CommissionUnlockRequest',
+  full_name='com.common.msg.CommissionUnlockRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='commissionId', full_name='com.common.msg.CommissionUnlockRequest.commissionId', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4165,
+  serialized_end=4212,
+)
+
+
+_COMMISSIONUNLOCKRESPONSE = _descriptor.Descriptor(
+  name='CommissionUnlockResponse',
+  full_name='com.common.msg.CommissionUnlockResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4214,
+  serialized_end=4240,
+)
+
+
+_SELLCREATUREREQUEST = _descriptor.Descriptor(
+  name='SellCreatureRequest',
+  full_name='com.common.msg.SellCreatureRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='creatureId', full_name='com.common.msg.SellCreatureRequest.creatureId', index=0,
+      number=2, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4242,
+  serialized_end=4283,
+)
+
+
+_SELLCREATURERESPONSE = _descriptor.Descriptor(
+  name='SellCreatureResponse',
+  full_name='com.common.msg.SellCreatureResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='items', full_name='com.common.msg.SellCreatureResponse.items', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4285,
+  serialized_end=4347,
 )
 
 _EGGSYNTHESISRESPONSE.fields_by_name['creature'].message_type = ItemModuleMsg__pb2._MAGICALCREATUREMSG
@@ -1748,6 +2333,7 @@ _CREATURELEVELUPRESPONSE.fields_by_name['creature'].message_type = ItemModuleMsg
 _CREATURELEVELUPRESPONSE.fields_by_name['items'].message_type = ItemModuleMsg__pb2._ITEMMSG
 _BREEDRESPONSE.fields_by_name['creature'].message_type = ItemModuleMsg__pb2._MAGICALCREATUREMSG
 _BREEDRESPONSE.fields_by_name['items'].message_type = ItemModuleMsg__pb2._ITEMMSG
+_BREEDRESPONSE.fields_by_name['productItems'].message_type = ItemModuleMsg__pb2._ITEMMSG
 _GETCREATUREDATARESPONSE.fields_by_name['buys'].message_type = _MAGICALCREATUREBUYMSG
 _GETCREATUREDATARESPONSE.fields_by_name['creatures'].message_type = ItemModuleMsg__pb2._MAGICALCREATUREMSG
 _COLLECTHANGUPREWARDRESPONSE.fields_by_name['items'].message_type = ItemModuleMsg__pb2._ITEMMSG
@@ -1757,6 +2343,7 @@ _COLLECTALLHANGUPREWARDRESPONSE.fields_by_name['creatures'].message_type = ItemM
 _MOVETONESTRESPONSE.fields_by_name['creatures'].message_type = ItemModuleMsg__pb2._MAGICALCREATUREMSG
 _COLLECTRESPONSE.fields_by_name['creature'].message_type = ItemModuleMsg__pb2._MAGICALCREATUREMSG
 _COLLECTRESPONSE.fields_by_name['plant'].message_type = SceneModuleMsg__pb2._PLANTMSG
+_COLLECTRESPONSE.fields_by_name['achievementReward'].message_type = SceneModuleMsg__pb2._OBSTACLEACHIEVEMENTREWARDMSG
 _COLLECTPLANTREWARDRESPONSE.fields_by_name['clearRet'].message_type = SceneModuleMsg__pb2._CLEARPLANTRESPONSE
 _ACCELERATEHANGUPREQUEST.fields_by_name['consume'].message_type = ItemModuleMsg__pb2._ITEMMSG
 _ACCELERATEHANGUPRESPONSE.fields_by_name['items'].message_type = ItemModuleMsg__pb2._ITEMMSG
@@ -1769,8 +2356,17 @@ _PETREWARDRESPONSE.fields_by_name['rewardItem'].message_type = ItemModuleMsg__pb
 _BUYPHYSICALSTRENGTHRESPONSE.fields_by_name['creature'].message_type = ItemModuleMsg__pb2._MAGICALCREATUREMSG
 _BUYPHYSICALSTRENGTHRESPONSE.fields_by_name['items'].message_type = ItemModuleMsg__pb2._ITEMMSG
 _SELECTEXPLORERESPONSE.fields_by_name['creatures'].message_type = ItemModuleMsg__pb2._MAGICALCREATUREMSG
+_DOSKILLRESPONSE.fields_by_name['effects'].message_type = SceneModuleMsg__pb2._CLEARPLANTRESPONSE
+_DOSKILLRESPONSE.fields_by_name['items'].message_type = ItemModuleMsg__pb2._ITEMMSG
+_COMMISSIONRESPONSE.fields_by_name['items'].message_type = ItemModuleMsg__pb2._ITEMMSG
+_ACCELERATECOMMISSIONRESPONSE.fields_by_name['items'].message_type = ItemModuleMsg__pb2._ITEMMSG
+_ACCELERATECOMMISSIONRESPONSE.fields_by_name['commission'].message_type = _COMMISSIONMSG
+_COMMISSIONREWARDRESPONSE.fields_by_name['creatures'].message_type = ItemModuleMsg__pb2._MAGICALCREATUREMSG
+_COMMISSIONREWARDRESPONSE.fields_by_name['items'].message_type = ItemModuleMsg__pb2._ITEMMSG
+_SELLCREATURERESPONSE.fields_by_name['items'].message_type = ItemModuleMsg__pb2._ITEMMSG
 DESCRIPTOR.message_types_by_name['MagicalCreatureBuyMsg'] = _MAGICALCREATUREBUYMSG
 DESCRIPTOR.message_types_by_name['MagicalNestMsg'] = _MAGICALNESTMSG
+DESCRIPTOR.message_types_by_name['CommissionMsg'] = _COMMISSIONMSG
 DESCRIPTOR.message_types_by_name['BuyEggRequest'] = _BUYEGGREQUEST
 DESCRIPTOR.message_types_by_name['BuyEggResponse'] = _BUYEGGRESPONSE
 DESCRIPTOR.message_types_by_name['EggSynthesisRequest'] = _EGGSYNTHESISREQUEST
@@ -1814,6 +2410,18 @@ DESCRIPTOR.message_types_by_name['GetConsumeEnergyRequest'] = _GETCONSUMEENERGYR
 DESCRIPTOR.message_types_by_name['GetConsumeEnergyResponse'] = _GETCONSUMEENERGYRESPONSE
 DESCRIPTOR.message_types_by_name['SelectExploreRequest'] = _SELECTEXPLOREREQUEST
 DESCRIPTOR.message_types_by_name['SelectExploreResponse'] = _SELECTEXPLORERESPONSE
+DESCRIPTOR.message_types_by_name['DoSkillRequest'] = _DOSKILLREQUEST
+DESCRIPTOR.message_types_by_name['DoSkillResponse'] = _DOSKILLRESPONSE
+DESCRIPTOR.message_types_by_name['CommissionRequest'] = _COMMISSIONREQUEST
+DESCRIPTOR.message_types_by_name['CommissionResponse'] = _COMMISSIONRESPONSE
+DESCRIPTOR.message_types_by_name['AccelerateCommissionRequest'] = _ACCELERATECOMMISSIONREQUEST
+DESCRIPTOR.message_types_by_name['AccelerateCommissionResponse'] = _ACCELERATECOMMISSIONRESPONSE
+DESCRIPTOR.message_types_by_name['CommissionRewardRequest'] = _COMMISSIONREWARDREQUEST
+DESCRIPTOR.message_types_by_name['CommissionRewardResponse'] = _COMMISSIONREWARDRESPONSE
+DESCRIPTOR.message_types_by_name['CommissionUnlockRequest'] = _COMMISSIONUNLOCKREQUEST
+DESCRIPTOR.message_types_by_name['CommissionUnlockResponse'] = _COMMISSIONUNLOCKRESPONSE
+DESCRIPTOR.message_types_by_name['SellCreatureRequest'] = _SELLCREATUREREQUEST
+DESCRIPTOR.message_types_by_name['SellCreatureResponse'] = _SELLCREATURERESPONSE
 DESCRIPTOR.enum_types_by_name['MagicalCreatureModuleMsgSubCommand'] = _MAGICALCREATUREMODULEMSGSUBCOMMAND
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -1830,6 +2438,13 @@ MagicalNestMsg = _reflection.GeneratedProtocolMessageType('MagicalNestMsg', (_me
   # @@protoc_insertion_point(class_scope:com.common.msg.MagicalNestMsg)
   })
 _sym_db.RegisterMessage(MagicalNestMsg)
+
+CommissionMsg = _reflection.GeneratedProtocolMessageType('CommissionMsg', (_message.Message,), {
+  'DESCRIPTOR' : _COMMISSIONMSG,
+  '__module__' : 'MagicalCreatureModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.CommissionMsg)
+  })
+_sym_db.RegisterMessage(CommissionMsg)
 
 BuyEggRequest = _reflection.GeneratedProtocolMessageType('BuyEggRequest', (_message.Message,), {
   'DESCRIPTOR' : _BUYEGGREQUEST,
@@ -2131,6 +2746,90 @@ SelectExploreResponse = _reflection.GeneratedProtocolMessageType('SelectExploreR
   # @@protoc_insertion_point(class_scope:com.common.msg.SelectExploreResponse)
   })
 _sym_db.RegisterMessage(SelectExploreResponse)
+
+DoSkillRequest = _reflection.GeneratedProtocolMessageType('DoSkillRequest', (_message.Message,), {
+  'DESCRIPTOR' : _DOSKILLREQUEST,
+  '__module__' : 'MagicalCreatureModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.DoSkillRequest)
+  })
+_sym_db.RegisterMessage(DoSkillRequest)
+
+DoSkillResponse = _reflection.GeneratedProtocolMessageType('DoSkillResponse', (_message.Message,), {
+  'DESCRIPTOR' : _DOSKILLRESPONSE,
+  '__module__' : 'MagicalCreatureModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.DoSkillResponse)
+  })
+_sym_db.RegisterMessage(DoSkillResponse)
+
+CommissionRequest = _reflection.GeneratedProtocolMessageType('CommissionRequest', (_message.Message,), {
+  'DESCRIPTOR' : _COMMISSIONREQUEST,
+  '__module__' : 'MagicalCreatureModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.CommissionRequest)
+  })
+_sym_db.RegisterMessage(CommissionRequest)
+
+CommissionResponse = _reflection.GeneratedProtocolMessageType('CommissionResponse', (_message.Message,), {
+  'DESCRIPTOR' : _COMMISSIONRESPONSE,
+  '__module__' : 'MagicalCreatureModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.CommissionResponse)
+  })
+_sym_db.RegisterMessage(CommissionResponse)
+
+AccelerateCommissionRequest = _reflection.GeneratedProtocolMessageType('AccelerateCommissionRequest', (_message.Message,), {
+  'DESCRIPTOR' : _ACCELERATECOMMISSIONREQUEST,
+  '__module__' : 'MagicalCreatureModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.AccelerateCommissionRequest)
+  })
+_sym_db.RegisterMessage(AccelerateCommissionRequest)
+
+AccelerateCommissionResponse = _reflection.GeneratedProtocolMessageType('AccelerateCommissionResponse', (_message.Message,), {
+  'DESCRIPTOR' : _ACCELERATECOMMISSIONRESPONSE,
+  '__module__' : 'MagicalCreatureModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.AccelerateCommissionResponse)
+  })
+_sym_db.RegisterMessage(AccelerateCommissionResponse)
+
+CommissionRewardRequest = _reflection.GeneratedProtocolMessageType('CommissionRewardRequest', (_message.Message,), {
+  'DESCRIPTOR' : _COMMISSIONREWARDREQUEST,
+  '__module__' : 'MagicalCreatureModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.CommissionRewardRequest)
+  })
+_sym_db.RegisterMessage(CommissionRewardRequest)
+
+CommissionRewardResponse = _reflection.GeneratedProtocolMessageType('CommissionRewardResponse', (_message.Message,), {
+  'DESCRIPTOR' : _COMMISSIONREWARDRESPONSE,
+  '__module__' : 'MagicalCreatureModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.CommissionRewardResponse)
+  })
+_sym_db.RegisterMessage(CommissionRewardResponse)
+
+CommissionUnlockRequest = _reflection.GeneratedProtocolMessageType('CommissionUnlockRequest', (_message.Message,), {
+  'DESCRIPTOR' : _COMMISSIONUNLOCKREQUEST,
+  '__module__' : 'MagicalCreatureModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.CommissionUnlockRequest)
+  })
+_sym_db.RegisterMessage(CommissionUnlockRequest)
+
+CommissionUnlockResponse = _reflection.GeneratedProtocolMessageType('CommissionUnlockResponse', (_message.Message,), {
+  'DESCRIPTOR' : _COMMISSIONUNLOCKRESPONSE,
+  '__module__' : 'MagicalCreatureModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.CommissionUnlockResponse)
+  })
+_sym_db.RegisterMessage(CommissionUnlockResponse)
+
+SellCreatureRequest = _reflection.GeneratedProtocolMessageType('SellCreatureRequest', (_message.Message,), {
+  'DESCRIPTOR' : _SELLCREATUREREQUEST,
+  '__module__' : 'MagicalCreatureModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.SellCreatureRequest)
+  })
+_sym_db.RegisterMessage(SellCreatureRequest)
+
+SellCreatureResponse = _reflection.GeneratedProtocolMessageType('SellCreatureResponse', (_message.Message,), {
+  'DESCRIPTOR' : _SELLCREATURERESPONSE,
+  '__module__' : 'MagicalCreatureModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.SellCreatureResponse)
+  })
+_sym_db.RegisterMessage(SellCreatureResponse)
 
 
 # @@protoc_insertion_point(module_scope)

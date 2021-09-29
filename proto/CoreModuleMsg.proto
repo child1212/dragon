@@ -5,17 +5,11 @@ import "ItemModuleMsg.proto";
 import "DayRewardModuleMsg.proto";
 import "BuffModuleMsg.proto";
 import "TaskModuleMsg.proto";
-import "BoxModuleMsg.proto";
-import "FriendsModuleMsg.proto";
-import "ActivityModuleMsg.proto";
 import "AdsModuleMsg.proto";
-import "GiftBoxModuleMsg.proto";
-import "MailModuleMsg.proto";
-import "RandomShopModuleMsg.proto";
-import "RichManModuleMsg.proto";
 import "MagicalCreatureModuleMsg.proto";
 import "FactoryModuleMsg.proto";
 import "OrderTaskModuleMsg.proto";
+import "SceneModuleMsg.proto";
 
 enum CoreModuleMsgSubCommand {
 	//登录游戏
@@ -46,14 +40,6 @@ enum CoreModuleMsgSubCommand {
 	COREMODULEMSG_SUB_RECIEVECOMPENSATE = 1013;
 	//校验乐逗登录
 	COREMODULEMSG_SUB_AUTHLEDOULOGIN = 1014;
-	//订阅支付过期后是否继续订阅
-	COREMODULEMSG_SUB_CONTINUESUBSCRIBEAFTEREXPIRE = 1015;
-	//订阅打点信息请求
-	COREMODULEMSG_SUB_SUBSCRIBEPRODUCTINFOS=1016;
-	//订阅打完成信息请求
-	COREMODULEMSG_SUB_SUBSCRIBECDOTCNTFINISH=1017;
-	//取消订阅记录
-	COREMODULEMSG_SUB_SUBSCRIBECANCELRECORD = 1018;
 	//Facebook关注奖励
 	COREMODULEMSG_SUB_FACEBOOKFOLLOWREWARD = 1019;
 	//钻石商店购买
@@ -62,6 +48,8 @@ enum CoreModuleMsgSubCommand {
 	COREMODULEMSG_SUB_HEARTBEAT = 1021;
 	// 系统开启记录
 	COREMODULEMSG_SUB_SYSTEMOPEN = 1022;
+	// 精力同步
+	COREMODULEMSG_SUB_ENERGY = 1023;
 }
 
 //玩家资源信息
@@ -80,12 +68,8 @@ message ResourceMsg {
 	optional int64 energyValueTime = 6;
 	//icon
 	optional string icon = 7;
-	//当前关卡号
-	optional int32 currentLevelId = 8;
-	//星星数
-	optional int32 starNum = 9;
-	//连续过关数
-	required int32 continueLevelupNum = 10;
+	//精力上限
+	optional int32 energyLimit = 8;
 	//角色创建时间
 	optional int64 createTime = 11;
 	//玩家修改名字次数
@@ -94,80 +78,27 @@ message ResourceMsg {
 	optional int32 payPlayer = 13;
 	//玩家注册时版本号
 	optional string registVersion = 14;
-	//无限精力结束时间
-	optional int64 infiniteEnergy = 15;
-	//上次打关时间戳
-	optional int64 levelUpdateTime = 16;
-	//无限精力开始时间
-	optional int64 infiniteEnergyStart = 17;
-	//是否领取过补偿奖励sincev1.11 (0.没领取 1.已领取)
-	optional int32 compensateState = 18;
-	//魔法书开启次数
-	optional int32 openMagicNum = 19;
 	//上次进入游戏时间
 	optional int64 previousEnterTime = 20;
 	// 历史总充值(单位:美分)
 	optional int32 totalRecharge = 21;
-	// 玩家公会id
-	optional string teamId = 22;
-	// 玩家是否加入过公会 0：没有加入过 1:加入过
-	optional int32 joinedTeam = 23;
 	// 生产基地等级
 	optional int32 factoryCenterLv = 24;
 	// 经验
 	optional int32 exp = 25;
 	// 消耗体力数：累计到150可领取奖励，领取后重置为0
 	optional int64 consumeEnergyCnt = 26;
+	// 等级
+	optional int32 level = 27;
+	//最近一次消费时间
+	optional int64 lastRechargeTime = 28;
 }
 
-// 符石幸运礼盒信息
-message LuckyRunesInfo {
-	// 当前档位
-	optional int32 giftLevel = 1;
-	// 当前档位推送次数
-	optional int32 pushCnt = 2;
-	// 当前档位是否购买过
-	optional bool isRecharged = 3;
-}
-
-// 首冲活动信息
-message FirstRechargeInfo {
-	// 是否已开启
-	optional bool isOpen = 1;
-	// 破冰礼包是否购买过
-	optional bool isRecharged = 2;
-	// 礼包结束时间(0.破冰礼包  1. 1档礼包  2.2档礼包)
-	optional int64 endTime = 3;
-	// 商品ID
-	optional string shopId = 4;
-	// 档位 0.破冰礼包  1. 1档礼包  2.2档礼包
-	optional int32 shopLevel = 5;
-}
 
 // 商店信息
 message ShopInfoMsg {
 	required string shopId = 1;	// 商品ID
 	optional bool first = 2; // 是否首冲
-}
-
-// 7号特惠礼包信息
-message SpecialRechargeInfo {
-	// 触发次数
-	required int32 triggerCnt = 1;
-	// 进入7号分组时间
-	required int64 startTime = 2;
-	// 商品id
-	repeated string shopIds = 3;
-	// 礼包开始时间
-	repeated int64 startTimes = 4;
-}
-
-// 黑五折扣礼包信息
-message BlackFridayGiftInfo {
-	// 结束时间
-	required int64 endTime = 1;
-	// 礼包id
-	required string giftId = 2;
 }
 
 //登录请求
@@ -184,8 +115,8 @@ message LoginRequest {
 	optional int32 platformType = 5;
 	//fb和ios登录验证token
 	optional string inputToken = 6;
-	//fb邮箱
-	optional string fbMail = 7;
+	//邮箱
+	optional string mail = 7;
 	//idfa（安卓用户为uuid，ios用户为idfa，统一用字段idfa表示）
 	optional string idfa = 8;
 	//设备国家（如：en_US 没有写00）
@@ -210,6 +141,10 @@ message SelectPlayerInfo {
 	optional int32 diamond = 2;
 	//玩家等级
 	optional int32 level = 3;
+	//玩家上次登录时间
+	optional int64 lastLoginMill = 4;
+	//玩家昵称
+	optional string name = 5;
 }
 
 //登录响应
@@ -258,31 +193,10 @@ message EnterGameRequest {
 	optional bool flag = 1;
 }
 
-// 订阅信息
-message SubscribeProductInfo {
-	required string productId = 1;//商品id
-	required int32 cdotCnt = 2;//打点次数
-	optional int64 expiredTime = 3;//商品过期时间
-	optional bool cancelRecord = 4;//是否记录过过期不订阅
-}
-
-message SubscribeDayItemInfo {
-	required string itemId = 1;//道具id
-	required int32 cnt = 2;//今日已使用次数
-	required int64 lastTipMs  = 3;//上次提示存储时间(客户端逻辑用 服务器只做存储)
-	required int64 tipTimeMs = 4;//提示存储时间(客户端逻辑用 服务器只做存储)
-}
-
 // 系统开启记录
 message SystemOpenInfo {
 	// key
 	repeated string systemIds = 1;
-}
-
-// 建筑扭蛋活动 券兑换奖励
-message GashaponTicketReward {
-	// 兑换钻石数量
-	optional int32 diamondCnt = 1;
 }
 
 //进入游戏响应
@@ -297,50 +211,20 @@ message EnterGameResponse {
 	optional BuffListResponse buffList = 5;
 	//签到信息
 	optional DayRewardInfoResponse dayRewardInfo = 6;
-	//宝箱信息
-	optional BoxInfoResponse boxInfo = 7;
-	//好友列表
-	optional FriendsListResponse friendList = 8;
 	//新手引导信息
 	optional GuideCompleteIdsResponse guideIds = 9;
-	//活动列表信息
-	optional ActivityListResponse activities = 10;
-	//Ads广告信息
-	optional AdsInfoResponse ads = 11;
 	//激励广告信息
 	optional AdsIncentiveInfoResponse adsIncentive = 12;
-	//首冲活动信息
-	optional FirstRechargeInfo firstRecharge = 13;
-	//活动礼包信息
-	optional GiftBoxInfoResponse giftBox = 14;
-	//小猪存钱罐信息
-	optional PiggyBankInfoResponse piggyBank = 16;
 	//商店信息
 	repeated ShopInfoMsg shopMsg = 17;
 	// 过期邮件奖励
 	repeated ItemMsg expireMailRewards = 19;
-	// 符石幸运礼盒
-	optional LuckyRunesInfo luckyRunes = 20;
-	// 订阅信息结构
-	repeated SubscribeProductInfo productInfos = 21;
-	// 订阅服务后每日免费使用X次道具
-	repeated SubscribeDayItemInfo subscribeDayItemInfos = 22;
-	//随机商店返回
-	optional RandomShopItemResponse randomShopItemResponse = 25;
-	//7号特惠礼包信息
-	optional SpecialRechargeInfo specialRechargeInfo = 26;
-	// 大富翁活动信息
-	optional RichManInfoResponse richManInfoResponse = 28;
-	// 黑五折扣礼包信息
-	optional BlackFridayGiftInfo blackFridayGiftInfo = 29;
 	// 魔法生物购买次数
 	repeated MagicalCreatureBuyMsg magicalCreatureBuys = 30;
 	// 魔法生物
 	repeated MagicalCreatureMsg magicalCreatures = 31;
 	// 系统开启记录
 	optional SystemOpenInfo systemOpenInfo = 32;
-	// 建筑扭蛋活动 券兑换奖励
-	optional GashaponTicketReward gashaponTicketReward = 33;
 	// 生产工厂信息
 	repeated FactoryMsg factorys = 34;
 	// 订单总进度信息
@@ -351,6 +235,10 @@ message EnterGameResponse {
 	repeated MagicalNestMsg magicalNests = 37;
 	// 航海订单
 	optional TimeOrderMsg timeOrder = 38;
+	//场景关闭信息返回
+	optional SceneCloseTimeResponse sceneCloseTimeResp = 39;
+	//家园委托信息
+	repeated CommissionMsg commissions = 40;
 }
 
 //充值请求
@@ -370,12 +258,6 @@ message RechargeRequest {
 message RechargeResponse {
 	//是否是沙箱的订单(这个值有且为true时为沙箱订单)
 	optional bool sandbox = 1;
-	//小猪存钱罐
-	repeated ItemMsg piggyReward = 2;
-	//符石幸运礼盒,levelBox中对应的建筑奖励
-	optional ItemMsg luckyRunesReward = 3;
-	//订阅通用信息回复
-	optional SubscribeProductInfo subscribeProductInfo = 6;
 }
 
 // 客户端发起支付，预生成订单
@@ -384,8 +266,6 @@ message StartRechargeRequest{
 	required int32 platformType = 1;
 	//购买的产品id
 	required string productId = 2;
-	//额外的参数需求 (繁荣度礼包商品: prosperityLv  其他商品:无参数)
-	optional string extraParams = 3;
 }
 
 // 服务器返回，预生成订单
@@ -467,69 +347,6 @@ message GetVersionRewardsResponse{
 	optional string versionInfo = 2;
 }
 
-// 领取合成系统补偿奖励请求
-message RecieveCompensateRequest {
-
-}
-
-// 领取合成系统补偿奖励响应
-message RecieveCompensateResponse {
-
-}
-
-// 乐逗登录验证请求
-message AuthLedouLoginRequest {
-	// openId
-	optional string openId = 1;
-	// sessionId
-	optional string sessionId = 2;
-}
-
-// 乐逗登录验证响应
-message AuthLedouLoginResponse {
-	// authResult 0.成功 -1.失败
-	optional int32 authResult = 1;
-}
-
-// 订阅支付过期后是否继续订阅
-message ContinueSubscribeAfterExpireRequest {
-	// 区域id
-	optional int32 areaId = 1;
-	// 是否继续订阅
-	optional bool isContinue = 2;
-}
-
-// 订阅支付过期后是否继续订阅
-message ContinueSubscribeAfterExpireResponse {
-
-}
-
-// 前端订阅信息请求（历史原因 不包括订阅地块内容）
-message SubscribeProductInfosRequest {
-}
-
-// 前端订阅信息回复（历史原因 不包括订阅地块内容）
-message SubscribeProductInfosResponse {
-	repeated SubscribeProductInfo productInfos = 1;
-}
-
-// 前端打点完成请求（历史原因 不包括订阅地块内容）
-message SubscribeCdotcntFinishRequest {
-	repeated string productIds = 1;//商品id集合 英文字符串
-}
-
-// 前端打点完成回复（历史原因 不包括订阅地块内容）
-message SubscribeCdotcntFinishResponse {
-}
-
-//到期不在订阅记录 防止反复提示
-message SubscribeCancelRecordRequest {
-	required string productId= 1;//商品id 英文字符串
-}
-//到期不在订阅记录回复
-message SubscribeCancelRecordResponse {
-}
-
 //Facebook关注奖励请求
 message FacebookFollowRewardRequest {
 	
@@ -572,4 +389,16 @@ message SystemOpenRequest {
 // 系统开启返回
 message SystemOpenResponse {
 	
+}
+
+// 精力信息请求
+message EnergyRequest {
+	
+}
+
+// 精力信息响应
+message EnergyResponse {
+	optional int32 cur = 1;				//当前精力数
+	optional int32 limit = 2;			//精力上限
+	optional int64 energyValueTime = 3;	//上一次领取精力时间(毫秒)
 }

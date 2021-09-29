@@ -2,7 +2,8 @@
 #首先使用filename.bat创建文件名列表
 #编辑list.txt
 #创建批处理命令
-#执行批处理获得python库
+#执行批处理list.bat
+#获得python库
 
 import os
 path_n = os.getcwd()    #获取当前路径

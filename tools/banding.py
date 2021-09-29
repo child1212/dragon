@@ -6,9 +6,9 @@ from func_dragon import *
 import os
 
 print("start time:",time.asctime(time.localtime()))
-account = "673B07E9-B388-4CA3-82BE-EF1F88A66CD2"
-player = '6ecca0'
-server = "http://dtest.gameyici.com"      
+account = "A2A90680-DAF1-4C12-8DAE-F814635F1839"
+player = 'qfqudq'
+server = "https://dqa.gameyici.com"      
 log_res = login_gm(server)     
 
 fin = banding(account,player,server,log_res)

@@ -1,0 +1,12 @@
+sceneId
+buildingId
+diamondCost
+diamondCount
+item
+type
+level
+platform
+playerid
+deviceId
+ts
+version

@@ -16,17 +16,11 @@ import ItemModuleMsg_pb2 as ItemModuleMsg__pb2
 import DayRewardModuleMsg_pb2 as DayRewardModuleMsg__pb2
 import BuffModuleMsg_pb2 as BuffModuleMsg__pb2
 import TaskModuleMsg_pb2 as TaskModuleMsg__pb2
-import BoxModuleMsg_pb2 as BoxModuleMsg__pb2
-import FriendsModuleMsg_pb2 as FriendsModuleMsg__pb2
-import ActivityModuleMsg_pb2 as ActivityModuleMsg__pb2
 import AdsModuleMsg_pb2 as AdsModuleMsg__pb2
-import GiftBoxModuleMsg_pb2 as GiftBoxModuleMsg__pb2
-import MailModuleMsg_pb2 as MailModuleMsg__pb2
-import RandomShopModuleMsg_pb2 as RandomShopModuleMsg__pb2
-import RichManModuleMsg_pb2 as RichManModuleMsg__pb2
 import MagicalCreatureModuleMsg_pb2 as MagicalCreatureModuleMsg__pb2
 import FactoryModuleMsg_pb2 as FactoryModuleMsg__pb2
 import OrderTaskModuleMsg_pb2 as OrderTaskModuleMsg__pb2
+import SceneModuleMsg_pb2 as SceneModuleMsg__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -35,9 +29,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x13\x43oreModuleMsg.proto\x12\x0e\x63om.common.msg\x1a\x13ItemModuleMsg.proto\x1a\x18\x44\x61yRewardModuleMsg.proto\x1a\x13\x42uffModuleMsg.proto\x1a\x13TaskModuleMsg.proto\x1a\x12\x42oxModuleMsg.proto\x1a\x16\x46riendsModuleMsg.proto\x1a\x17\x41\x63tivityModuleMsg.proto\x1a\x12\x41\x64sModuleMsg.proto\x1a\x16GiftBoxModuleMsg.proto\x1a\x13MailModuleMsg.proto\x1a\x19RandomShopModuleMsg.proto\x1a\x16RichManModuleMsg.proto\x1a\x1eMagicalCreatureModuleMsg.proto\x1a\x16\x46\x61\x63toryModuleMsg.proto\x1a\x18OrderTaskModuleMsg.proto\"\xb8\x04\n\x0bResourceMsg\x12\x10\n\x08nickName\x18\x01 \x01(\t\x12\x0b\n\x03sex\x18\x02 \x01(\x08\x12\x10\n\x08\x64iamonds\x18\x03 \x01(\x05\x12\x10\n\x08material\x18\x04 \x01(\x05\x12\x13\n\x0b\x65nergyValue\x18\x05 \x01(\x05\x12\x17\n\x0f\x65nergyValueTime\x18\x06 \x01(\x03\x12\x0c\n\x04icon\x18\x07 \x01(\t\x12\x16\n\x0e\x63urrentLevelId\x18\x08 \x01(\x05\x12\x0f\n\x07starNum\x18\t \x01(\x05\x12\x1a\n\x12\x63ontinueLevelupNum\x18\n \x02(\x05\x12\x12\n\ncreateTime\x18\x0b \x01(\x03\x12\x14\n\x0c\x61lterNameCnt\x18\x0c \x01(\x05\x12\x11\n\tpayPlayer\x18\r \x01(\x05\x12\x15\n\rregistVersion\x18\x0e \x01(\t\x12\x16\n\x0einfiniteEnergy\x18\x0f \x01(\x03\x12\x17\n\x0flevelUpdateTime\x18\x10 \x01(\x03\x12\x1b\n\x13infiniteEnergyStart\x18\x11 \x01(\x03\x12\x17\n\x0f\x63ompensateState\x18\x12 \x01(\x05\x12\x14\n\x0copenMagicNum\x18\x13 \x01(\x05\x12\x19\n\x11previousEnterTime\x18\x14 \x01(\x03\x12\x15\n\rtotalRecharge\x18\x15 \x01(\x05\x12\x0e\n\x06teamId\x18\x16 \x01(\t\x12\x12\n\njoinedTeam\x18\x17 \x01(\x05\x12\x17\n\x0f\x66\x61\x63toryCenterLv\x18\x18 \x01(\x05\x12\x0b\n\x03\x65xp\x18\x19 \x01(\x05\x12\x18\n\x10\x63onsumeEnergyCnt\x18\x1a \x01(\x03\"I\n\x0eLuckyRunesInfo\x12\x11\n\tgiftLevel\x18\x01 \x01(\x05\x12\x0f\n\x07pushCnt\x18\x02 \x01(\x05\x12\x13\n\x0bisRecharged\x18\x03 \x01(\x08\"l\n\x11\x46irstRechargeInfo\x12\x0e\n\x06isOpen\x18\x01 \x01(\x08\x12\x13\n\x0bisRecharged\x18\x02 \x01(\x08\x12\x0f\n\x07\x65ndTime\x18\x03 \x01(\x03\x12\x0e\n\x06shopId\x18\x04 \x01(\t\x12\x11\n\tshopLevel\x18\x05 \x01(\x05\",\n\x0bShopInfoMsg\x12\x0e\n\x06shopId\x18\x01 \x02(\t\x12\r\n\x05\x66irst\x18\x02 \x01(\x08\"a\n\x13SpecialRechargeInfo\x12\x12\n\ntriggerCnt\x18\x01 \x02(\x05\x12\x11\n\tstartTime\x18\x02 \x02(\x03\x12\x0f\n\x07shopIds\x18\x03 \x03(\t\x12\x12\n\nstartTimes\x18\x04 \x03(\x03\"6\n\x13\x42lackFridayGiftInfo\x12\x0f\n\x07\x65ndTime\x18\x01 \x02(\x03\x12\x0e\n\x06giftId\x18\x02 \x02(\t\"\x8f\x02\n\x0cLoginRequest\x12\x0c\n\x04type\x18\x01 \x01(\x05\x12\x0f\n\x07\x61\x63\x63ount\x18\x02 \x01(\t\x12\x16\n\x0evisitorAccount\x18\x03 \x01(\t\x12\x0e\n\x06osType\x18\x04 \x01(\x05\x12\x14\n\x0cplatformType\x18\x05 \x01(\x05\x12\x12\n\ninputToken\x18\x06 \x01(\t\x12\x0e\n\x06\x66\x62Mail\x18\x07 \x01(\t\x12\x0c\n\x04idfa\x18\x08 \x01(\t\x12\x15\n\rdeviceCountry\x18\t \x01(\t\x12\x10\n\x08\x64\x65viceId\x18\n \x01(\t\x12\x10\n\x08\x61\x64sGroup\x18\x0b \x01(\t\x12\x10\n\x08playerId\x18\x0c \x01(\t\x12\x15\n\rledouPlayerId\x18\r \x01(\t\x12\x0c\n\x04idfv\x18\x0e \x01(\t\"D\n\x10SelectPlayerInfo\x12\x10\n\x08playerId\x18\x01 \x02(\t\x12\x0f\n\x07\x64iamond\x18\x02 \x01(\x05\x12\r\n\x05level\x18\x03 \x01(\x05\"\xad\x02\n\rLoginResponse\x12\x13\n\x0bloginStatus\x18\x01 \x01(\x05\x12\x0c\n\x04type\x18\x02 \x01(\x05\x12\x10\n\x08playerId\x18\x03 \x01(\t\x12\x11\n\tsessionId\x18\x04 \x01(\x03\x12\x0f\n\x07\x63urTime\x18\x05 \x01(\x03\x12\x12\n\nbindStatus\x18\x06 \x01(\x05\x12\x12\n\nsequenceId\x18\x07 \x01(\x03\x12\x13\n\x0b\x61\x63\x63ountType\x18\x08 \x01(\x05\x12;\n\x11selectPlayerInfos\x18\t \x03(\x0b\x32 .com.common.msg.SelectPlayerInfo\x12\x14\n\x0clastDeviceId\x18\n \x01(\t\x12\x11\n\tfbAccount\x18\x0b \x01(\t\x12\x10\n\x08\x66\x62\x46ollow\x18\x0c \x01(\x05\x12\x0e\n\x06\x66\x62\x42ind\x18\r \x01(\x05\"\x19\n\x17GuideCompleteIdsRequest\",\n\x18GuideCompleteIdsResponse\x12\x10\n\x08guideIds\x18\x01 \x03(\t\" \n\x10\x45nterGameRequest\x12\x0c\n\x04\x66lag\x18\x01 \x01(\x08\"e\n\x14SubscribeProductInfo\x12\x11\n\tproductId\x18\x01 \x02(\t\x12\x0f\n\x07\x63\x64otCnt\x18\x02 \x02(\x05\x12\x13\n\x0b\x65xpiredTime\x18\x03 \x01(\x03\x12\x14\n\x0c\x63\x61ncelRecord\x18\x04 \x01(\x08\"Y\n\x14SubscribeDayItemInfo\x12\x0e\n\x06itemId\x18\x01 \x02(\t\x12\x0b\n\x03\x63nt\x18\x02 \x02(\x05\x12\x11\n\tlastTipMs\x18\x03 \x02(\x03\x12\x11\n\ttipTimeMs\x18\x04 \x02(\x03\"#\n\x0eSystemOpenInfo\x12\x11\n\tsystemIds\x18\x01 \x03(\t\"*\n\x14GashaponTicketReward\x12\x12\n\ndiamondCnt\x18\x01 \x01(\x05\"\xc3\x0e\n\x11\x45nterGameResponse\x12\x30\n\x0bresourceMsg\x18\x01 \x01(\x0b\x32\x1b.com.common.msg.ResourceMsg\x12\x32\n\x08itemList\x18\x03 \x01(\x0b\x32 .com.common.msg.ItemListResponse\x12\x32\n\x08taskList\x18\x04 \x01(\x0b\x32 .com.common.msg.TaskListResponse\x12\x32\n\x08\x62uffList\x18\x05 \x01(\x0b\x32 .com.common.msg.BuffListResponse\x12<\n\rdayRewardInfo\x18\x06 \x01(\x0b\x32%.com.common.msg.DayRewardInfoResponse\x12\x30\n\x07\x62oxInfo\x18\x07 \x01(\x0b\x32\x1f.com.common.msg.BoxInfoResponse\x12\x37\n\nfriendList\x18\x08 \x01(\x0b\x32#.com.common.msg.FriendsListResponse\x12:\n\x08guideIds\x18\t \x01(\x0b\x32(.com.common.msg.GuideCompleteIdsResponse\x12\x38\n\nactivities\x18\n \x01(\x0b\x32$.com.common.msg.ActivityListResponse\x12,\n\x03\x61\x64s\x18\x0b \x01(\x0b\x32\x1f.com.common.msg.AdsInfoResponse\x12>\n\x0c\x61\x64sIncentive\x18\x0c \x01(\x0b\x32(.com.common.msg.AdsIncentiveInfoResponse\x12\x38\n\rfirstRecharge\x18\r \x01(\x0b\x32!.com.common.msg.FirstRechargeInfo\x12\x34\n\x07giftBox\x18\x0e \x01(\x0b\x32#.com.common.msg.GiftBoxInfoResponse\x12\x38\n\tpiggyBank\x18\x10 \x01(\x0b\x32%.com.common.msg.PiggyBankInfoResponse\x12,\n\x07shopMsg\x18\x11 \x03(\x0b\x32\x1b.com.common.msg.ShopInfoMsg\x12\x32\n\x11\x65xpireMailRewards\x18\x13 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12\x32\n\nluckyRunes\x18\x14 \x01(\x0b\x32\x1e.com.common.msg.LuckyRunesInfo\x12:\n\x0cproductInfos\x18\x15 \x03(\x0b\x32$.com.common.msg.SubscribeProductInfo\x12\x43\n\x15subscribeDayItemInfos\x18\x16 \x03(\x0b\x32$.com.common.msg.SubscribeDayItemInfo\x12\x46\n\x16randomShopItemResponse\x18\x19 \x01(\x0b\x32&.com.common.msg.RandomShopItemResponse\x12@\n\x13specialRechargeInfo\x18\x1a \x01(\x0b\x32#.com.common.msg.SpecialRechargeInfo\x12@\n\x13richManInfoResponse\x18\x1c \x01(\x0b\x32#.com.common.msg.RichManInfoResponse\x12@\n\x13\x62lackFridayGiftInfo\x18\x1d \x01(\x0b\x32#.com.common.msg.BlackFridayGiftInfo\x12\x42\n\x13magicalCreatureBuys\x18\x1e \x03(\x0b\x32%.com.common.msg.MagicalCreatureBuyMsg\x12<\n\x10magicalCreatures\x18\x1f \x03(\x0b\x32\".com.common.msg.MagicalCreatureMsg\x12\x36\n\x0esystemOpenInfo\x18  \x01(\x0b\x32\x1e.com.common.msg.SystemOpenInfo\x12\x42\n\x14gashaponTicketReward\x18! \x01(\x0b\x32$.com.common.msg.GashaponTicketReward\x12,\n\x08\x66\x61\x63torys\x18\" \x03(\x0b\x32\x1a.com.common.msg.FactoryMsg\x12?\n\x11orderTaskProgress\x18# \x01(\x0b\x32$.com.common.msg.OrderTaskProgressMsg\x12\x30\n\norderTasks\x18$ \x03(\x0b\x32\x1c.com.common.msg.OrderTaskMsg\x12\x34\n\x0cmagicalNests\x18% \x03(\x0b\x32\x1e.com.common.msg.MagicalNestMsg\x12/\n\ttimeOrder\x18& \x01(\x0b\x32\x1c.com.common.msg.TimeOrderMsg\"r\n\x0fRechargeRequest\x12\x11\n\torderInfo\x18\x01 \x02(\t\x12\x14\n\x0cplatformType\x18\x03 \x02(\x05\x12\x11\n\tproductId\x18\x04 \x02(\t\x12\x13\n\x0bgameOrderId\x18\x05 \x02(\x03\x12\x0e\n\x06\x64\x63Info\x18\x06 \x01(\t\"\xc8\x01\n\x10RechargeResponse\x12\x0f\n\x07sandbox\x18\x01 \x01(\x08\x12,\n\x0bpiggyReward\x18\x02 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12\x31\n\x10luckyRunesReward\x18\x03 \x01(\x0b\x32\x17.com.common.msg.ItemMsg\x12\x42\n\x14subscribeProductInfo\x18\x06 \x01(\x0b\x32$.com.common.msg.SubscribeProductInfo\"T\n\x14StartRechargeRequest\x12\x14\n\x0cplatformType\x18\x01 \x02(\x05\x12\x11\n\tproductId\x18\x02 \x02(\t\x12\x13\n\x0b\x65xtraParams\x18\x03 \x01(\t\",\n\x15StartRechargeResponse\x12\x13\n\x0bgameOrderId\x18\x01 \x02(\x03\";\n\x14\x43loseRechargeRequest\x12\x13\n\x0bgameOrderId\x18\x01 \x02(\x03\x12\x0e\n\x06reason\x18\x02 \x02(\t\"\x17\n\x15\x43loseRechargeResponse\"\'\n\x14GuideCompleteRequest\x12\x0f\n\x07guideId\x18\x01 \x02(\t\"\x17\n\x15GuideCompleteResponse\",\n\x16\x41lterPlayerNameRequest\x12\x12\n\nplayerName\x18\x01 \x02(\t\"\x19\n\x17\x41lterPlayerNameResponse\"&\n\x16\x41lterPlayerIconRequest\x12\x0c\n\x04icon\x18\x01 \x02(\t\"\x19\n\x17\x41lterPlayerIconResponse\"\x1a\n\x18RefreshCreateTimeRequest\"\x1b\n\x19RefreshCreateTimeResponse\"\x1b\n\x19VersionRewardsInfoRequest\"1\n\x1aVersionRewardsInfoResponse\x12\x13\n\x0bversionInfo\x18\x01 \x01(\t\"\x1a\n\x18GetVersionRewardsRequest\"0\n\x19GetVersionRewardsResponse\x12\x13\n\x0bversionInfo\x18\x02 \x01(\t\"\x1a\n\x18RecieveCompensateRequest\"\x1b\n\x19RecieveCompensateResponse\":\n\x15\x41uthLedouLoginRequest\x12\x0e\n\x06openId\x18\x01 \x01(\t\x12\x11\n\tsessionId\x18\x02 \x01(\t\",\n\x16\x41uthLedouLoginResponse\x12\x12\n\nauthResult\x18\x01 \x01(\x05\"I\n#ContinueSubscribeAfterExpireRequest\x12\x0e\n\x06\x61reaId\x18\x01 \x01(\x05\x12\x12\n\nisContinue\x18\x02 \x01(\x08\"&\n$ContinueSubscribeAfterExpireResponse\"\x1e\n\x1cSubscribeProductInfosRequest\"[\n\x1dSubscribeProductInfosResponse\x12:\n\x0cproductInfos\x18\x01 \x03(\x0b\x32$.com.common.msg.SubscribeProductInfo\"3\n\x1dSubscribeCdotcntFinishRequest\x12\x12\n\nproductIds\x18\x01 \x03(\t\" \n\x1eSubscribeCdotcntFinishResponse\"1\n\x1cSubscribeCancelRecordRequest\x12\x11\n\tproductId\x18\x01 \x02(\t\"\x1f\n\x1dSubscribeCancelRecordResponse\"\x1d\n\x1b\x46\x61\x63\x65\x62ookFollowRewardRequest\"\x1e\n\x1c\x46\x61\x63\x65\x62ookFollowRewardResponse\"(\n\x16\x44iamondPurchaseRequest\x12\x0e\n\x06shopId\x18\x01 \x02(\t\"\x19\n\x17\x44iamondPurchaseResponse\"\x12\n\x10HeartBeatRequest\"6\n\x11HeartBeatResponse\x12\x12\n\nserverTime\x18\x01 \x02(\x03\x12\r\n\x05\x66lags\x18\x02 \x03(\x05\"%\n\x11SystemOpenRequest\x12\x10\n\x08systemId\x18\x01 \x03(\t\"\x14\n\x12SystemOpenResponse*\x8f\x07\n\x17\x43oreModuleMsgSubCommand\x12\x1c\n\x17\x43OREMODULEMSG_SUB_LOGIN\x10\xe9\x07\x12 \n\x1b\x43OREMODULEMSG_SUB_ENTERGAME\x10\xea\x07\x12\x1f\n\x1a\x43OREMODULEMSG_SUB_RECHARGE\x10\xeb\x07\x12\'\n\"COREMODULEMSG_SUB_GUIDECOMPLETEIDS\x10\xec\x07\x12$\n\x1f\x43OREMODULEMSG_SUB_GUIDECOMPLETE\x10\xed\x07\x12$\n\x1f\x43OREMODULEMSG_SUB_STARTRECHARGE\x10\xee\x07\x12$\n\x1f\x43OREMODULEMSG_SUB_CLOSERECHARGE\x10\xef\x07\x12&\n!COREMODULEMSG_SUB_ALTERPLAYERNAME\x10\xf0\x07\x12&\n!COREMODULEMSG_SUB_ALTERPLAYERICON\x10\xf1\x07\x12(\n#COREMODULEMSG_SUB_REFRESHCREATETIME\x10\xf2\x07\x12)\n$COREMODULEMSG_SUB_VERSIONREWARDSINFO\x10\xf3\x07\x12(\n#COREMODULEMSG_SUB_GETVERSIONREWARDS\x10\xf4\x07\x12(\n#COREMODULEMSG_SUB_RECIEVECOMPENSATE\x10\xf5\x07\x12%\n COREMODULEMSG_SUB_AUTHLEDOULOGIN\x10\xf6\x07\x12\x33\n.COREMODULEMSG_SUB_CONTINUESUBSCRIBEAFTEREXPIRE\x10\xf7\x07\x12,\n\'COREMODULEMSG_SUB_SUBSCRIBEPRODUCTINFOS\x10\xf8\x07\x12-\n(COREMODULEMSG_SUB_SUBSCRIBECDOTCNTFINISH\x10\xf9\x07\x12,\n\'COREMODULEMSG_SUB_SUBSCRIBECANCELRECORD\x10\xfa\x07\x12+\n&COREMODULEMSG_SUB_FACEBOOKFOLLOWREWARD\x10\xfb\x07\x12&\n!COREMODULEMSG_SUB_DIAMONDPURCHASE\x10\xfc\x07\x12 \n\x1b\x43OREMODULEMSG_SUB_HEARTBEAT\x10\xfd\x07\x12!\n\x1c\x43OREMODULEMSG_SUB_SYSTEMOPEN\x10\xfe\x07'
+  serialized_pb=b'\n\x13\x43oreModuleMsg.proto\x12\x0e\x63om.common.msg\x1a\x13ItemModuleMsg.proto\x1a\x18\x44\x61yRewardModuleMsg.proto\x1a\x13\x42uffModuleMsg.proto\x1a\x13TaskModuleMsg.proto\x1a\x12\x41\x64sModuleMsg.proto\x1a\x1eMagicalCreatureModuleMsg.proto\x1a\x16\x46\x61\x63toryModuleMsg.proto\x1a\x18OrderTaskModuleMsg.proto\x1a\x14SceneModuleMsg.proto\"\x90\x03\n\x0bResourceMsg\x12\x10\n\x08nickName\x18\x01 \x01(\t\x12\x0b\n\x03sex\x18\x02 \x01(\x08\x12\x10\n\x08\x64iamonds\x18\x03 \x01(\x05\x12\x10\n\x08material\x18\x04 \x01(\x05\x12\x13\n\x0b\x65nergyValue\x18\x05 \x01(\x05\x12\x17\n\x0f\x65nergyValueTime\x18\x06 \x01(\x03\x12\x0c\n\x04icon\x18\x07 \x01(\t\x12\x13\n\x0b\x65nergyLimit\x18\x08 \x01(\x05\x12\x12\n\ncreateTime\x18\x0b \x01(\x03\x12\x14\n\x0c\x61lterNameCnt\x18\x0c \x01(\x05\x12\x11\n\tpayPlayer\x18\r \x01(\x05\x12\x15\n\rregistVersion\x18\x0e \x01(\t\x12\x19\n\x11previousEnterTime\x18\x14 \x01(\x03\x12\x15\n\rtotalRecharge\x18\x15 \x01(\x05\x12\x17\n\x0f\x66\x61\x63toryCenterLv\x18\x18 \x01(\x05\x12\x0b\n\x03\x65xp\x18\x19 \x01(\x05\x12\x18\n\x10\x63onsumeEnergyCnt\x18\x1a \x01(\x03\x12\r\n\x05level\x18\x1b \x01(\x05\x12\x18\n\x10lastRechargeTime\x18\x1c \x01(\x03\",\n\x0bShopInfoMsg\x12\x0e\n\x06shopId\x18\x01 \x02(\t\x12\r\n\x05\x66irst\x18\x02 \x01(\x08\"\x8d\x02\n\x0cLoginRequest\x12\x0c\n\x04type\x18\x01 \x01(\x05\x12\x0f\n\x07\x61\x63\x63ount\x18\x02 \x01(\t\x12\x16\n\x0evisitorAccount\x18\x03 \x01(\t\x12\x0e\n\x06osType\x18\x04 \x01(\x05\x12\x14\n\x0cplatformType\x18\x05 \x01(\x05\x12\x12\n\ninputToken\x18\x06 \x01(\t\x12\x0c\n\x04mail\x18\x07 \x01(\t\x12\x0c\n\x04idfa\x18\x08 \x01(\t\x12\x15\n\rdeviceCountry\x18\t \x01(\t\x12\x10\n\x08\x64\x65viceId\x18\n \x01(\t\x12\x10\n\x08\x61\x64sGroup\x18\x0b \x01(\t\x12\x10\n\x08playerId\x18\x0c \x01(\t\x12\x15\n\rledouPlayerId\x18\r \x01(\t\x12\x0c\n\x04idfv\x18\x0e \x01(\t\"i\n\x10SelectPlayerInfo\x12\x10\n\x08playerId\x18\x01 \x02(\t\x12\x0f\n\x07\x64iamond\x18\x02 \x01(\x05\x12\r\n\x05level\x18\x03 \x01(\x05\x12\x15\n\rlastLoginMill\x18\x04 \x01(\x03\x12\x0c\n\x04name\x18\x05 \x01(\t\"\xad\x02\n\rLoginResponse\x12\x13\n\x0bloginStatus\x18\x01 \x01(\x05\x12\x0c\n\x04type\x18\x02 \x01(\x05\x12\x10\n\x08playerId\x18\x03 \x01(\t\x12\x11\n\tsessionId\x18\x04 \x01(\x03\x12\x0f\n\x07\x63urTime\x18\x05 \x01(\x03\x12\x12\n\nbindStatus\x18\x06 \x01(\x05\x12\x12\n\nsequenceId\x18\x07 \x01(\x03\x12\x13\n\x0b\x61\x63\x63ountType\x18\x08 \x01(\x05\x12;\n\x11selectPlayerInfos\x18\t \x03(\x0b\x32 .com.common.msg.SelectPlayerInfo\x12\x14\n\x0clastDeviceId\x18\n \x01(\t\x12\x11\n\tfbAccount\x18\x0b \x01(\t\x12\x10\n\x08\x66\x62\x46ollow\x18\x0c \x01(\x05\x12\x0e\n\x06\x66\x62\x42ind\x18\r \x01(\x05\"\x19\n\x17GuideCompleteIdsRequest\",\n\x18GuideCompleteIdsResponse\x12\x10\n\x08guideIds\x18\x01 \x03(\t\" \n\x10\x45nterGameRequest\x12\x0c\n\x04\x66lag\x18\x01 \x01(\x08\"#\n\x0eSystemOpenInfo\x12\x11\n\tsystemIds\x18\x01 \x03(\t\"\xb7\x08\n\x11\x45nterGameResponse\x12\x30\n\x0bresourceMsg\x18\x01 \x01(\x0b\x32\x1b.com.common.msg.ResourceMsg\x12\x32\n\x08itemList\x18\x03 \x01(\x0b\x32 .com.common.msg.ItemListResponse\x12\x32\n\x08taskList\x18\x04 \x01(\x0b\x32 .com.common.msg.TaskListResponse\x12\x32\n\x08\x62uffList\x18\x05 \x01(\x0b\x32 .com.common.msg.BuffListResponse\x12<\n\rdayRewardInfo\x18\x06 \x01(\x0b\x32%.com.common.msg.DayRewardInfoResponse\x12:\n\x08guideIds\x18\t \x01(\x0b\x32(.com.common.msg.GuideCompleteIdsResponse\x12>\n\x0c\x61\x64sIncentive\x18\x0c \x01(\x0b\x32(.com.common.msg.AdsIncentiveInfoResponse\x12,\n\x07shopMsg\x18\x11 \x03(\x0b\x32\x1b.com.common.msg.ShopInfoMsg\x12\x32\n\x11\x65xpireMailRewards\x18\x13 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12\x42\n\x13magicalCreatureBuys\x18\x1e \x03(\x0b\x32%.com.common.msg.MagicalCreatureBuyMsg\x12<\n\x10magicalCreatures\x18\x1f \x03(\x0b\x32\".com.common.msg.MagicalCreatureMsg\x12\x36\n\x0esystemOpenInfo\x18  \x01(\x0b\x32\x1e.com.common.msg.SystemOpenInfo\x12,\n\x08\x66\x61\x63torys\x18\" \x03(\x0b\x32\x1a.com.common.msg.FactoryMsg\x12?\n\x11orderTaskProgress\x18# \x01(\x0b\x32$.com.common.msg.OrderTaskProgressMsg\x12\x30\n\norderTasks\x18$ \x03(\x0b\x32\x1c.com.common.msg.OrderTaskMsg\x12\x34\n\x0cmagicalNests\x18% \x03(\x0b\x32\x1e.com.common.msg.MagicalNestMsg\x12/\n\ttimeOrder\x18& \x01(\x0b\x32\x1c.com.common.msg.TimeOrderMsg\x12\x42\n\x12sceneCloseTimeResp\x18\' \x01(\x0b\x32&.com.common.msg.SceneCloseTimeResponse\x12\x32\n\x0b\x63ommissions\x18( \x03(\x0b\x32\x1d.com.common.msg.CommissionMsg\"r\n\x0fRechargeRequest\x12\x11\n\torderInfo\x18\x01 \x02(\t\x12\x14\n\x0cplatformType\x18\x03 \x02(\x05\x12\x11\n\tproductId\x18\x04 \x02(\t\x12\x13\n\x0bgameOrderId\x18\x05 \x02(\x03\x12\x0e\n\x06\x64\x63Info\x18\x06 \x01(\t\"#\n\x10RechargeResponse\x12\x0f\n\x07sandbox\x18\x01 \x01(\x08\"?\n\x14StartRechargeRequest\x12\x14\n\x0cplatformType\x18\x01 \x02(\x05\x12\x11\n\tproductId\x18\x02 \x02(\t\",\n\x15StartRechargeResponse\x12\x13\n\x0bgameOrderId\x18\x01 \x02(\x03\";\n\x14\x43loseRechargeRequest\x12\x13\n\x0bgameOrderId\x18\x01 \x02(\x03\x12\x0e\n\x06reason\x18\x02 \x02(\t\"\x17\n\x15\x43loseRechargeResponse\"\'\n\x14GuideCompleteRequest\x12\x0f\n\x07guideId\x18\x01 \x02(\t\"\x17\n\x15GuideCompleteResponse\",\n\x16\x41lterPlayerNameRequest\x12\x12\n\nplayerName\x18\x01 \x02(\t\"\x19\n\x17\x41lterPlayerNameResponse\"&\n\x16\x41lterPlayerIconRequest\x12\x0c\n\x04icon\x18\x01 \x02(\t\"\x19\n\x17\x41lterPlayerIconResponse\"\x1a\n\x18RefreshCreateTimeRequest\"\x1b\n\x19RefreshCreateTimeResponse\"\x1b\n\x19VersionRewardsInfoRequest\"1\n\x1aVersionRewardsInfoResponse\x12\x13\n\x0bversionInfo\x18\x01 \x01(\t\"\x1a\n\x18GetVersionRewardsRequest\"0\n\x19GetVersionRewardsResponse\x12\x13\n\x0bversionInfo\x18\x02 \x01(\t\"\x1d\n\x1b\x46\x61\x63\x65\x62ookFollowRewardRequest\"\x1e\n\x1c\x46\x61\x63\x65\x62ookFollowRewardResponse\"(\n\x16\x44iamondPurchaseRequest\x12\x0e\n\x06shopId\x18\x01 \x02(\t\"\x19\n\x17\x44iamondPurchaseResponse\"\x12\n\x10HeartBeatRequest\"6\n\x11HeartBeatResponse\x12\x12\n\nserverTime\x18\x01 \x02(\x03\x12\r\n\x05\x66lags\x18\x02 \x03(\x05\"%\n\x11SystemOpenRequest\x12\x10\n\x08systemId\x18\x01 \x03(\t\"\x14\n\x12SystemOpenResponse\"\x0f\n\rEnergyRequest\"E\n\x0e\x45nergyResponse\x12\x0b\n\x03\x63ur\x18\x01 \x01(\x05\x12\r\n\x05limit\x18\x02 \x01(\x05\x12\x17\n\x0f\x65nergyValueTime\x18\x03 \x01(\x03*\xee\x05\n\x17\x43oreModuleMsgSubCommand\x12\x1c\n\x17\x43OREMODULEMSG_SUB_LOGIN\x10\xe9\x07\x12 \n\x1b\x43OREMODULEMSG_SUB_ENTERGAME\x10\xea\x07\x12\x1f\n\x1a\x43OREMODULEMSG_SUB_RECHARGE\x10\xeb\x07\x12\'\n\"COREMODULEMSG_SUB_GUIDECOMPLETEIDS\x10\xec\x07\x12$\n\x1f\x43OREMODULEMSG_SUB_GUIDECOMPLETE\x10\xed\x07\x12$\n\x1f\x43OREMODULEMSG_SUB_STARTRECHARGE\x10\xee\x07\x12$\n\x1f\x43OREMODULEMSG_SUB_CLOSERECHARGE\x10\xef\x07\x12&\n!COREMODULEMSG_SUB_ALTERPLAYERNAME\x10\xf0\x07\x12&\n!COREMODULEMSG_SUB_ALTERPLAYERICON\x10\xf1\x07\x12(\n#COREMODULEMSG_SUB_REFRESHCREATETIME\x10\xf2\x07\x12)\n$COREMODULEMSG_SUB_VERSIONREWARDSINFO\x10\xf3\x07\x12(\n#COREMODULEMSG_SUB_GETVERSIONREWARDS\x10\xf4\x07\x12(\n#COREMODULEMSG_SUB_RECIEVECOMPENSATE\x10\xf5\x07\x12%\n COREMODULEMSG_SUB_AUTHLEDOULOGIN\x10\xf6\x07\x12+\n&COREMODULEMSG_SUB_FACEBOOKFOLLOWREWARD\x10\xfb\x07\x12&\n!COREMODULEMSG_SUB_DIAMONDPURCHASE\x10\xfc\x07\x12 \n\x1b\x43OREMODULEMSG_SUB_HEARTBEAT\x10\xfd\x07\x12!\n\x1c\x43OREMODULEMSG_SUB_SYSTEMOPEN\x10\xfe\x07\x12\x1d\n\x18\x43OREMODULEMSG_SUB_ENERGY\x10\xff\x07'
   ,
-  dependencies=[ItemModuleMsg__pb2.DESCRIPTOR,DayRewardModuleMsg__pb2.DESCRIPTOR,BuffModuleMsg__pb2.DESCRIPTOR,TaskModuleMsg__pb2.DESCRIPTOR,BoxModuleMsg__pb2.DESCRIPTOR,FriendsModuleMsg__pb2.DESCRIPTOR,ActivityModuleMsg__pb2.DESCRIPTOR,AdsModuleMsg__pb2.DESCRIPTOR,GiftBoxModuleMsg__pb2.DESCRIPTOR,MailModuleMsg__pb2.DESCRIPTOR,RandomShopModuleMsg__pb2.DESCRIPTOR,RichManModuleMsg__pb2.DESCRIPTOR,MagicalCreatureModuleMsg__pb2.DESCRIPTOR,FactoryModuleMsg__pb2.DESCRIPTOR,OrderTaskModuleMsg__pb2.DESCRIPTOR,])
+  dependencies=[ItemModuleMsg__pb2.DESCRIPTOR,DayRewardModuleMsg__pb2.DESCRIPTOR,BuffModuleMsg__pb2.DESCRIPTOR,TaskModuleMsg__pb2.DESCRIPTOR,AdsModuleMsg__pb2.DESCRIPTOR,MagicalCreatureModuleMsg__pb2.DESCRIPTOR,FactoryModuleMsg__pb2.DESCRIPTOR,OrderTaskModuleMsg__pb2.DESCRIPTOR,SceneModuleMsg__pb2.DESCRIPTOR,])
 
 _COREMODULEMSGSUBCOMMAND = _descriptor.EnumDescriptor(
   name='CoreModuleMsgSubCommand',
@@ -117,50 +111,35 @@ _COREMODULEMSGSUBCOMMAND = _descriptor.EnumDescriptor(
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='COREMODULEMSG_SUB_CONTINUESUBSCRIBEAFTEREXPIRE', index=14, number=1015,
+      name='COREMODULEMSG_SUB_FACEBOOKFOLLOWREWARD', index=14, number=1019,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='COREMODULEMSG_SUB_SUBSCRIBEPRODUCTINFOS', index=15, number=1016,
+      name='COREMODULEMSG_SUB_DIAMONDPURCHASE', index=15, number=1020,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='COREMODULEMSG_SUB_SUBSCRIBECDOTCNTFINISH', index=16, number=1017,
+      name='COREMODULEMSG_SUB_HEARTBEAT', index=16, number=1021,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='COREMODULEMSG_SUB_SUBSCRIBECANCELRECORD', index=17, number=1018,
+      name='COREMODULEMSG_SUB_SYSTEMOPEN', index=17, number=1022,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='COREMODULEMSG_SUB_FACEBOOKFOLLOWREWARD', index=18, number=1019,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='COREMODULEMSG_SUB_DIAMONDPURCHASE', index=19, number=1020,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='COREMODULEMSG_SUB_HEARTBEAT', index=20, number=1021,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='COREMODULEMSG_SUB_SYSTEMOPEN', index=21, number=1022,
+      name='COREMODULEMSG_SUB_ENERGY', index=18, number=1023,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=6046,
-  serialized_end=6957,
+  serialized_start=3739,
+  serialized_end=4489,
 )
 _sym_db.RegisterEnumDescriptor(_COREMODULEMSGSUBCOMMAND)
 
@@ -179,14 +158,11 @@ COREMODULEMSG_SUB_VERSIONREWARDSINFO = 1011
 COREMODULEMSG_SUB_GETVERSIONREWARDS = 1012
 COREMODULEMSG_SUB_RECIEVECOMPENSATE = 1013
 COREMODULEMSG_SUB_AUTHLEDOULOGIN = 1014
-COREMODULEMSG_SUB_CONTINUESUBSCRIBEAFTEREXPIRE = 1015
-COREMODULEMSG_SUB_SUBSCRIBEPRODUCTINFOS = 1016
-COREMODULEMSG_SUB_SUBSCRIBECDOTCNTFINISH = 1017
-COREMODULEMSG_SUB_SUBSCRIBECANCELRECORD = 1018
 COREMODULEMSG_SUB_FACEBOOKFOLLOWREWARD = 1019
 COREMODULEMSG_SUB_DIAMONDPURCHASE = 1020
 COREMODULEMSG_SUB_HEARTBEAT = 1021
 COREMODULEMSG_SUB_SYSTEMOPEN = 1022
+COREMODULEMSG_SUB_ENERGY = 1023
 
 
 
@@ -248,240 +224,85 @@ _RESOURCEMSG = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='currentLevelId', full_name='com.common.msg.ResourceMsg.currentLevelId', index=7,
+      name='energyLimit', full_name='com.common.msg.ResourceMsg.energyLimit', index=7,
       number=8, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='starNum', full_name='com.common.msg.ResourceMsg.starNum', index=8,
-      number=9, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='continueLevelupNum', full_name='com.common.msg.ResourceMsg.continueLevelupNum', index=9,
-      number=10, type=5, cpp_type=1, label=2,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='createTime', full_name='com.common.msg.ResourceMsg.createTime', index=10,
+      name='createTime', full_name='com.common.msg.ResourceMsg.createTime', index=8,
       number=11, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='alterNameCnt', full_name='com.common.msg.ResourceMsg.alterNameCnt', index=11,
+      name='alterNameCnt', full_name='com.common.msg.ResourceMsg.alterNameCnt', index=9,
       number=12, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='payPlayer', full_name='com.common.msg.ResourceMsg.payPlayer', index=12,
+      name='payPlayer', full_name='com.common.msg.ResourceMsg.payPlayer', index=10,
       number=13, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='registVersion', full_name='com.common.msg.ResourceMsg.registVersion', index=13,
+      name='registVersion', full_name='com.common.msg.ResourceMsg.registVersion', index=11,
       number=14, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='infiniteEnergy', full_name='com.common.msg.ResourceMsg.infiniteEnergy', index=14,
-      number=15, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='levelUpdateTime', full_name='com.common.msg.ResourceMsg.levelUpdateTime', index=15,
-      number=16, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='infiniteEnergyStart', full_name='com.common.msg.ResourceMsg.infiniteEnergyStart', index=16,
-      number=17, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='compensateState', full_name='com.common.msg.ResourceMsg.compensateState', index=17,
-      number=18, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='openMagicNum', full_name='com.common.msg.ResourceMsg.openMagicNum', index=18,
-      number=19, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='previousEnterTime', full_name='com.common.msg.ResourceMsg.previousEnterTime', index=19,
+      name='previousEnterTime', full_name='com.common.msg.ResourceMsg.previousEnterTime', index=12,
       number=20, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='totalRecharge', full_name='com.common.msg.ResourceMsg.totalRecharge', index=20,
+      name='totalRecharge', full_name='com.common.msg.ResourceMsg.totalRecharge', index=13,
       number=21, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='teamId', full_name='com.common.msg.ResourceMsg.teamId', index=21,
-      number=22, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='joinedTeam', full_name='com.common.msg.ResourceMsg.joinedTeam', index=22,
-      number=23, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='factoryCenterLv', full_name='com.common.msg.ResourceMsg.factoryCenterLv', index=23,
+      name='factoryCenterLv', full_name='com.common.msg.ResourceMsg.factoryCenterLv', index=14,
       number=24, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='exp', full_name='com.common.msg.ResourceMsg.exp', index=24,
+      name='exp', full_name='com.common.msg.ResourceMsg.exp', index=15,
       number=25, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='consumeEnergyCnt', full_name='com.common.msg.ResourceMsg.consumeEnergyCnt', index=25,
+      name='consumeEnergyCnt', full_name='com.common.msg.ResourceMsg.consumeEnergyCnt', index=16,
       number=26, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=396,
-  serialized_end=964,
-)
-
-
-_LUCKYRUNESINFO = _descriptor.Descriptor(
-  name='LuckyRunesInfo',
-  full_name='com.common.msg.LuckyRunesInfo',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
     _descriptor.FieldDescriptor(
-      name='giftLevel', full_name='com.common.msg.LuckyRunesInfo.giftLevel', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      name='level', full_name='com.common.msg.ResourceMsg.level', index=17,
+      number=27, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='pushCnt', full_name='com.common.msg.LuckyRunesInfo.pushCnt', index=1,
-      number=2, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='isRecharged', full_name='com.common.msg.LuckyRunesInfo.isRecharged', index=2,
-      number=3, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=966,
-  serialized_end=1039,
-)
-
-
-_FIRSTRECHARGEINFO = _descriptor.Descriptor(
-  name='FirstRechargeInfo',
-  full_name='com.common.msg.FirstRechargeInfo',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='isOpen', full_name='com.common.msg.FirstRechargeInfo.isOpen', index=0,
-      number=1, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='isRecharged', full_name='com.common.msg.FirstRechargeInfo.isRecharged', index=1,
-      number=2, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='endTime', full_name='com.common.msg.FirstRechargeInfo.endTime', index=2,
-      number=3, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='shopId', full_name='com.common.msg.FirstRechargeInfo.shopId', index=3,
-      number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='shopLevel', full_name='com.common.msg.FirstRechargeInfo.shopLevel', index=4,
-      number=5, type=5, cpp_type=1, label=1,
+      name='lastRechargeTime', full_name='com.common.msg.ResourceMsg.lastRechargeTime', index=18,
+      number=28, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -498,8 +319,8 @@ _FIRSTRECHARGEINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1041,
-  serialized_end=1149,
+  serialized_start=253,
+  serialized_end=653,
 )
 
 
@@ -537,100 +358,8 @@ _SHOPINFOMSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1151,
-  serialized_end=1195,
-)
-
-
-_SPECIALRECHARGEINFO = _descriptor.Descriptor(
-  name='SpecialRechargeInfo',
-  full_name='com.common.msg.SpecialRechargeInfo',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='triggerCnt', full_name='com.common.msg.SpecialRechargeInfo.triggerCnt', index=0,
-      number=1, type=5, cpp_type=1, label=2,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='startTime', full_name='com.common.msg.SpecialRechargeInfo.startTime', index=1,
-      number=2, type=3, cpp_type=2, label=2,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='shopIds', full_name='com.common.msg.SpecialRechargeInfo.shopIds', index=2,
-      number=3, type=9, cpp_type=9, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='startTimes', full_name='com.common.msg.SpecialRechargeInfo.startTimes', index=3,
-      number=4, type=3, cpp_type=2, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1197,
-  serialized_end=1294,
-)
-
-
-_BLACKFRIDAYGIFTINFO = _descriptor.Descriptor(
-  name='BlackFridayGiftInfo',
-  full_name='com.common.msg.BlackFridayGiftInfo',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='endTime', full_name='com.common.msg.BlackFridayGiftInfo.endTime', index=0,
-      number=1, type=3, cpp_type=2, label=2,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='giftId', full_name='com.common.msg.BlackFridayGiftInfo.giftId', index=1,
-      number=2, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1296,
-  serialized_end=1350,
+  serialized_start=655,
+  serialized_end=699,
 )
 
 
@@ -685,7 +414,7 @@ _LOGINREQUEST = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='fbMail', full_name='com.common.msg.LoginRequest.fbMail', index=6,
+      name='mail', full_name='com.common.msg.LoginRequest.mail', index=6,
       number=7, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -752,8 +481,8 @@ _LOGINREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1353,
-  serialized_end=1624,
+  serialized_start=702,
+  serialized_end=971,
 )
 
 
@@ -786,6 +515,20 @@ _SELECTPLAYERINFO = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='lastLoginMill', full_name='com.common.msg.SelectPlayerInfo.lastLoginMill', index=3,
+      number=4, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='name', full_name='com.common.msg.SelectPlayerInfo.name', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -798,8 +541,8 @@ _SELECTPLAYERINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1626,
-  serialized_end=1694,
+  serialized_start=973,
+  serialized_end=1078,
 )
 
 
@@ -914,8 +657,8 @@ _LOGINRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1697,
-  serialized_end=1998,
+  serialized_start=1081,
+  serialized_end=1382,
 )
 
 
@@ -939,8 +682,8 @@ _GUIDECOMPLETEIDSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2000,
-  serialized_end=2025,
+  serialized_start=1384,
+  serialized_end=1409,
 )
 
 
@@ -971,8 +714,8 @@ _GUIDECOMPLETEIDSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2027,
-  serialized_end=2071,
+  serialized_start=1411,
+  serialized_end=1455,
 )
 
 
@@ -1003,114 +746,8 @@ _ENTERGAMEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2073,
-  serialized_end=2105,
-)
-
-
-_SUBSCRIBEPRODUCTINFO = _descriptor.Descriptor(
-  name='SubscribeProductInfo',
-  full_name='com.common.msg.SubscribeProductInfo',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='productId', full_name='com.common.msg.SubscribeProductInfo.productId', index=0,
-      number=1, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='cdotCnt', full_name='com.common.msg.SubscribeProductInfo.cdotCnt', index=1,
-      number=2, type=5, cpp_type=1, label=2,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='expiredTime', full_name='com.common.msg.SubscribeProductInfo.expiredTime', index=2,
-      number=3, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='cancelRecord', full_name='com.common.msg.SubscribeProductInfo.cancelRecord', index=3,
-      number=4, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=2107,
-  serialized_end=2208,
-)
-
-
-_SUBSCRIBEDAYITEMINFO = _descriptor.Descriptor(
-  name='SubscribeDayItemInfo',
-  full_name='com.common.msg.SubscribeDayItemInfo',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='itemId', full_name='com.common.msg.SubscribeDayItemInfo.itemId', index=0,
-      number=1, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='cnt', full_name='com.common.msg.SubscribeDayItemInfo.cnt', index=1,
-      number=2, type=5, cpp_type=1, label=2,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='lastTipMs', full_name='com.common.msg.SubscribeDayItemInfo.lastTipMs', index=2,
-      number=3, type=3, cpp_type=2, label=2,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='tipTimeMs', full_name='com.common.msg.SubscribeDayItemInfo.tipTimeMs', index=3,
-      number=4, type=3, cpp_type=2, label=2,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=2210,
-  serialized_end=2299,
+  serialized_start=1457,
+  serialized_end=1489,
 )
 
 
@@ -1141,40 +778,8 @@ _SYSTEMOPENINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2301,
-  serialized_end=2336,
-)
-
-
-_GASHAPONTICKETREWARD = _descriptor.Descriptor(
-  name='GashaponTicketReward',
-  full_name='com.common.msg.GashaponTicketReward',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='diamondCnt', full_name='com.common.msg.GashaponTicketReward.diamondCnt', index=0,
-      number=1, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=2338,
-  serialized_end=2380,
+  serialized_start=1491,
+  serialized_end=1526,
 )
 
 
@@ -1222,191 +827,100 @@ _ENTERGAMERESPONSE = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='boxInfo', full_name='com.common.msg.EnterGameResponse.boxInfo', index=5,
-      number=7, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='friendList', full_name='com.common.msg.EnterGameResponse.friendList', index=6,
-      number=8, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='guideIds', full_name='com.common.msg.EnterGameResponse.guideIds', index=7,
+      name='guideIds', full_name='com.common.msg.EnterGameResponse.guideIds', index=5,
       number=9, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='activities', full_name='com.common.msg.EnterGameResponse.activities', index=8,
-      number=10, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='ads', full_name='com.common.msg.EnterGameResponse.ads', index=9,
-      number=11, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='adsIncentive', full_name='com.common.msg.EnterGameResponse.adsIncentive', index=10,
+      name='adsIncentive', full_name='com.common.msg.EnterGameResponse.adsIncentive', index=6,
       number=12, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='firstRecharge', full_name='com.common.msg.EnterGameResponse.firstRecharge', index=11,
-      number=13, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='giftBox', full_name='com.common.msg.EnterGameResponse.giftBox', index=12,
-      number=14, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='piggyBank', full_name='com.common.msg.EnterGameResponse.piggyBank', index=13,
-      number=16, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='shopMsg', full_name='com.common.msg.EnterGameResponse.shopMsg', index=14,
+      name='shopMsg', full_name='com.common.msg.EnterGameResponse.shopMsg', index=7,
       number=17, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='expireMailRewards', full_name='com.common.msg.EnterGameResponse.expireMailRewards', index=15,
+      name='expireMailRewards', full_name='com.common.msg.EnterGameResponse.expireMailRewards', index=8,
       number=19, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='luckyRunes', full_name='com.common.msg.EnterGameResponse.luckyRunes', index=16,
-      number=20, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='productInfos', full_name='com.common.msg.EnterGameResponse.productInfos', index=17,
-      number=21, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='subscribeDayItemInfos', full_name='com.common.msg.EnterGameResponse.subscribeDayItemInfos', index=18,
-      number=22, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='randomShopItemResponse', full_name='com.common.msg.EnterGameResponse.randomShopItemResponse', index=19,
-      number=25, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='specialRechargeInfo', full_name='com.common.msg.EnterGameResponse.specialRechargeInfo', index=20,
-      number=26, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='richManInfoResponse', full_name='com.common.msg.EnterGameResponse.richManInfoResponse', index=21,
-      number=28, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='blackFridayGiftInfo', full_name='com.common.msg.EnterGameResponse.blackFridayGiftInfo', index=22,
-      number=29, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='magicalCreatureBuys', full_name='com.common.msg.EnterGameResponse.magicalCreatureBuys', index=23,
+      name='magicalCreatureBuys', full_name='com.common.msg.EnterGameResponse.magicalCreatureBuys', index=9,
       number=30, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='magicalCreatures', full_name='com.common.msg.EnterGameResponse.magicalCreatures', index=24,
+      name='magicalCreatures', full_name='com.common.msg.EnterGameResponse.magicalCreatures', index=10,
       number=31, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='systemOpenInfo', full_name='com.common.msg.EnterGameResponse.systemOpenInfo', index=25,
+      name='systemOpenInfo', full_name='com.common.msg.EnterGameResponse.systemOpenInfo', index=11,
       number=32, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='gashaponTicketReward', full_name='com.common.msg.EnterGameResponse.gashaponTicketReward', index=26,
-      number=33, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='factorys', full_name='com.common.msg.EnterGameResponse.factorys', index=27,
+      name='factorys', full_name='com.common.msg.EnterGameResponse.factorys', index=12,
       number=34, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='orderTaskProgress', full_name='com.common.msg.EnterGameResponse.orderTaskProgress', index=28,
+      name='orderTaskProgress', full_name='com.common.msg.EnterGameResponse.orderTaskProgress', index=13,
       number=35, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='orderTasks', full_name='com.common.msg.EnterGameResponse.orderTasks', index=29,
+      name='orderTasks', full_name='com.common.msg.EnterGameResponse.orderTasks', index=14,
       number=36, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='magicalNests', full_name='com.common.msg.EnterGameResponse.magicalNests', index=30,
+      name='magicalNests', full_name='com.common.msg.EnterGameResponse.magicalNests', index=15,
       number=37, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='timeOrder', full_name='com.common.msg.EnterGameResponse.timeOrder', index=31,
+      name='timeOrder', full_name='com.common.msg.EnterGameResponse.timeOrder', index=16,
       number=38, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='sceneCloseTimeResp', full_name='com.common.msg.EnterGameResponse.sceneCloseTimeResp', index=17,
+      number=39, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='commissions', full_name='com.common.msg.EnterGameResponse.commissions', index=18,
+      number=40, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
@@ -1422,8 +936,8 @@ _ENTERGAMERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2383,
-  serialized_end=4242,
+  serialized_start=1529,
+  serialized_end=2608,
 )
 
 
@@ -1482,8 +996,8 @@ _RECHARGEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4244,
-  serialized_end=4358,
+  serialized_start=2610,
+  serialized_end=2724,
 )
 
 
@@ -1502,27 +1016,6 @@ _RECHARGERESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='piggyReward', full_name='com.common.msg.RechargeResponse.piggyReward', index=1,
-      number=2, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='luckyRunesReward', full_name='com.common.msg.RechargeResponse.luckyRunesReward', index=2,
-      number=3, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='subscribeProductInfo', full_name='com.common.msg.RechargeResponse.subscribeProductInfo', index=3,
-      number=6, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1535,8 +1028,8 @@ _RECHARGERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4361,
-  serialized_end=4561,
+  serialized_start=2726,
+  serialized_end=2761,
 )
 
 
@@ -1562,13 +1055,6 @@ _STARTRECHARGEREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='extraParams', full_name='com.common.msg.StartRechargeRequest.extraParams', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1581,8 +1067,8 @@ _STARTRECHARGEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4563,
-  serialized_end=4647,
+  serialized_start=2763,
+  serialized_end=2826,
 )
 
 
@@ -1613,8 +1099,8 @@ _STARTRECHARGERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4649,
-  serialized_end=4693,
+  serialized_start=2828,
+  serialized_end=2872,
 )
 
 
@@ -1652,8 +1138,8 @@ _CLOSERECHARGEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4695,
-  serialized_end=4754,
+  serialized_start=2874,
+  serialized_end=2933,
 )
 
 
@@ -1677,8 +1163,8 @@ _CLOSERECHARGERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4756,
-  serialized_end=4779,
+  serialized_start=2935,
+  serialized_end=2958,
 )
 
 
@@ -1709,8 +1195,8 @@ _GUIDECOMPLETEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4781,
-  serialized_end=4820,
+  serialized_start=2960,
+  serialized_end=2999,
 )
 
 
@@ -1734,8 +1220,8 @@ _GUIDECOMPLETERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4822,
-  serialized_end=4845,
+  serialized_start=3001,
+  serialized_end=3024,
 )
 
 
@@ -1766,8 +1252,8 @@ _ALTERPLAYERNAMEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4847,
-  serialized_end=4891,
+  serialized_start=3026,
+  serialized_end=3070,
 )
 
 
@@ -1791,8 +1277,8 @@ _ALTERPLAYERNAMERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4893,
-  serialized_end=4918,
+  serialized_start=3072,
+  serialized_end=3097,
 )
 
 
@@ -1823,8 +1309,8 @@ _ALTERPLAYERICONREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4920,
-  serialized_end=4958,
+  serialized_start=3099,
+  serialized_end=3137,
 )
 
 
@@ -1848,8 +1334,8 @@ _ALTERPLAYERICONRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4960,
-  serialized_end=4985,
+  serialized_start=3139,
+  serialized_end=3164,
 )
 
 
@@ -1873,8 +1359,8 @@ _REFRESHCREATETIMEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4987,
-  serialized_end=5013,
+  serialized_start=3166,
+  serialized_end=3192,
 )
 
 
@@ -1898,8 +1384,8 @@ _REFRESHCREATETIMERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5015,
-  serialized_end=5042,
+  serialized_start=3194,
+  serialized_end=3221,
 )
 
 
@@ -1923,8 +1409,8 @@ _VERSIONREWARDSINFOREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5044,
-  serialized_end=5071,
+  serialized_start=3223,
+  serialized_end=3250,
 )
 
 
@@ -1955,8 +1441,8 @@ _VERSIONREWARDSINFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5073,
-  serialized_end=5122,
+  serialized_start=3252,
+  serialized_end=3301,
 )
 
 
@@ -1980,8 +1466,8 @@ _GETVERSIONREWARDSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5124,
-  serialized_end=5150,
+  serialized_start=3303,
+  serialized_end=3329,
 )
 
 
@@ -2012,364 +1498,8 @@ _GETVERSIONREWARDSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5152,
-  serialized_end=5200,
-)
-
-
-_RECIEVECOMPENSATEREQUEST = _descriptor.Descriptor(
-  name='RecieveCompensateRequest',
-  full_name='com.common.msg.RecieveCompensateRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=5202,
-  serialized_end=5228,
-)
-
-
-_RECIEVECOMPENSATERESPONSE = _descriptor.Descriptor(
-  name='RecieveCompensateResponse',
-  full_name='com.common.msg.RecieveCompensateResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=5230,
-  serialized_end=5257,
-)
-
-
-_AUTHLEDOULOGINREQUEST = _descriptor.Descriptor(
-  name='AuthLedouLoginRequest',
-  full_name='com.common.msg.AuthLedouLoginRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='openId', full_name='com.common.msg.AuthLedouLoginRequest.openId', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='sessionId', full_name='com.common.msg.AuthLedouLoginRequest.sessionId', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=5259,
-  serialized_end=5317,
-)
-
-
-_AUTHLEDOULOGINRESPONSE = _descriptor.Descriptor(
-  name='AuthLedouLoginResponse',
-  full_name='com.common.msg.AuthLedouLoginResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='authResult', full_name='com.common.msg.AuthLedouLoginResponse.authResult', index=0,
-      number=1, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=5319,
-  serialized_end=5363,
-)
-
-
-_CONTINUESUBSCRIBEAFTEREXPIREREQUEST = _descriptor.Descriptor(
-  name='ContinueSubscribeAfterExpireRequest',
-  full_name='com.common.msg.ContinueSubscribeAfterExpireRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='areaId', full_name='com.common.msg.ContinueSubscribeAfterExpireRequest.areaId', index=0,
-      number=1, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='isContinue', full_name='com.common.msg.ContinueSubscribeAfterExpireRequest.isContinue', index=1,
-      number=2, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=5365,
-  serialized_end=5438,
-)
-
-
-_CONTINUESUBSCRIBEAFTEREXPIRERESPONSE = _descriptor.Descriptor(
-  name='ContinueSubscribeAfterExpireResponse',
-  full_name='com.common.msg.ContinueSubscribeAfterExpireResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=5440,
-  serialized_end=5478,
-)
-
-
-_SUBSCRIBEPRODUCTINFOSREQUEST = _descriptor.Descriptor(
-  name='SubscribeProductInfosRequest',
-  full_name='com.common.msg.SubscribeProductInfosRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=5480,
-  serialized_end=5510,
-)
-
-
-_SUBSCRIBEPRODUCTINFOSRESPONSE = _descriptor.Descriptor(
-  name='SubscribeProductInfosResponse',
-  full_name='com.common.msg.SubscribeProductInfosResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='productInfos', full_name='com.common.msg.SubscribeProductInfosResponse.productInfos', index=0,
-      number=1, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=5512,
-  serialized_end=5603,
-)
-
-
-_SUBSCRIBECDOTCNTFINISHREQUEST = _descriptor.Descriptor(
-  name='SubscribeCdotcntFinishRequest',
-  full_name='com.common.msg.SubscribeCdotcntFinishRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='productIds', full_name='com.common.msg.SubscribeCdotcntFinishRequest.productIds', index=0,
-      number=1, type=9, cpp_type=9, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=5605,
-  serialized_end=5656,
-)
-
-
-_SUBSCRIBECDOTCNTFINISHRESPONSE = _descriptor.Descriptor(
-  name='SubscribeCdotcntFinishResponse',
-  full_name='com.common.msg.SubscribeCdotcntFinishResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=5658,
-  serialized_end=5690,
-)
-
-
-_SUBSCRIBECANCELRECORDREQUEST = _descriptor.Descriptor(
-  name='SubscribeCancelRecordRequest',
-  full_name='com.common.msg.SubscribeCancelRecordRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='productId', full_name='com.common.msg.SubscribeCancelRecordRequest.productId', index=0,
-      number=1, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=5692,
-  serialized_end=5741,
-)
-
-
-_SUBSCRIBECANCELRECORDRESPONSE = _descriptor.Descriptor(
-  name='SubscribeCancelRecordResponse',
-  full_name='com.common.msg.SubscribeCancelRecordResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=5743,
-  serialized_end=5774,
+  serialized_start=3331,
+  serialized_end=3379,
 )
 
 
@@ -2393,8 +1523,8 @@ _FACEBOOKFOLLOWREWARDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5776,
-  serialized_end=5805,
+  serialized_start=3381,
+  serialized_end=3410,
 )
 
 
@@ -2418,8 +1548,8 @@ _FACEBOOKFOLLOWREWARDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5807,
-  serialized_end=5837,
+  serialized_start=3412,
+  serialized_end=3442,
 )
 
 
@@ -2450,8 +1580,8 @@ _DIAMONDPURCHASEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5839,
-  serialized_end=5879,
+  serialized_start=3444,
+  serialized_end=3484,
 )
 
 
@@ -2475,8 +1605,8 @@ _DIAMONDPURCHASERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5881,
-  serialized_end=5906,
+  serialized_start=3486,
+  serialized_end=3511,
 )
 
 
@@ -2500,8 +1630,8 @@ _HEARTBEATREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5908,
-  serialized_end=5926,
+  serialized_start=3513,
+  serialized_end=3531,
 )
 
 
@@ -2539,8 +1669,8 @@ _HEARTBEATRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5928,
-  serialized_end=5982,
+  serialized_start=3533,
+  serialized_end=3587,
 )
 
 
@@ -2571,8 +1701,8 @@ _SYSTEMOPENREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5984,
-  serialized_end=6021,
+  serialized_start=3589,
+  serialized_end=3626,
 )
 
 
@@ -2596,8 +1726,79 @@ _SYSTEMOPENRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6023,
-  serialized_end=6043,
+  serialized_start=3628,
+  serialized_end=3648,
+)
+
+
+_ENERGYREQUEST = _descriptor.Descriptor(
+  name='EnergyRequest',
+  full_name='com.common.msg.EnergyRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3650,
+  serialized_end=3665,
+)
+
+
+_ENERGYRESPONSE = _descriptor.Descriptor(
+  name='EnergyResponse',
+  full_name='com.common.msg.EnergyResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='cur', full_name='com.common.msg.EnergyResponse.cur', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='limit', full_name='com.common.msg.EnergyResponse.limit', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='energyValueTime', full_name='com.common.msg.EnergyResponse.energyValueTime', index=2,
+      number=3, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3667,
+  serialized_end=3736,
 )
 
 _LOGINRESPONSE.fields_by_name['selectPlayerInfos'].message_type = _SELECTPLAYERINFO
@@ -2606,53 +1807,29 @@ _ENTERGAMERESPONSE.fields_by_name['itemList'].message_type = ItemModuleMsg__pb2.
 _ENTERGAMERESPONSE.fields_by_name['taskList'].message_type = TaskModuleMsg__pb2._TASKLISTRESPONSE
 _ENTERGAMERESPONSE.fields_by_name['buffList'].message_type = BuffModuleMsg__pb2._BUFFLISTRESPONSE
 _ENTERGAMERESPONSE.fields_by_name['dayRewardInfo'].message_type = DayRewardModuleMsg__pb2._DAYREWARDINFORESPONSE
-_ENTERGAMERESPONSE.fields_by_name['boxInfo'].message_type = BoxModuleMsg__pb2._BOXINFORESPONSE
-_ENTERGAMERESPONSE.fields_by_name['friendList'].message_type = FriendsModuleMsg__pb2._FRIENDSLISTRESPONSE
 _ENTERGAMERESPONSE.fields_by_name['guideIds'].message_type = _GUIDECOMPLETEIDSRESPONSE
-_ENTERGAMERESPONSE.fields_by_name['activities'].message_type = ActivityModuleMsg__pb2._ACTIVITYLISTRESPONSE
-_ENTERGAMERESPONSE.fields_by_name['ads'].message_type = AdsModuleMsg__pb2._ADSINFORESPONSE
 _ENTERGAMERESPONSE.fields_by_name['adsIncentive'].message_type = AdsModuleMsg__pb2._ADSINCENTIVEINFORESPONSE
-_ENTERGAMERESPONSE.fields_by_name['firstRecharge'].message_type = _FIRSTRECHARGEINFO
-_ENTERGAMERESPONSE.fields_by_name['giftBox'].message_type = GiftBoxModuleMsg__pb2._GIFTBOXINFORESPONSE
-_ENTERGAMERESPONSE.fields_by_name['piggyBank'].message_type = ActivityModuleMsg__pb2._PIGGYBANKINFORESPONSE
 _ENTERGAMERESPONSE.fields_by_name['shopMsg'].message_type = _SHOPINFOMSG
 _ENTERGAMERESPONSE.fields_by_name['expireMailRewards'].message_type = ItemModuleMsg__pb2._ITEMMSG
-_ENTERGAMERESPONSE.fields_by_name['luckyRunes'].message_type = _LUCKYRUNESINFO
-_ENTERGAMERESPONSE.fields_by_name['productInfos'].message_type = _SUBSCRIBEPRODUCTINFO
-_ENTERGAMERESPONSE.fields_by_name['subscribeDayItemInfos'].message_type = _SUBSCRIBEDAYITEMINFO
-_ENTERGAMERESPONSE.fields_by_name['randomShopItemResponse'].message_type = RandomShopModuleMsg__pb2._RANDOMSHOPITEMRESPONSE
-_ENTERGAMERESPONSE.fields_by_name['specialRechargeInfo'].message_type = _SPECIALRECHARGEINFO
-_ENTERGAMERESPONSE.fields_by_name['richManInfoResponse'].message_type = RichManModuleMsg__pb2._RICHMANINFORESPONSE
-_ENTERGAMERESPONSE.fields_by_name['blackFridayGiftInfo'].message_type = _BLACKFRIDAYGIFTINFO
 _ENTERGAMERESPONSE.fields_by_name['magicalCreatureBuys'].message_type = MagicalCreatureModuleMsg__pb2._MAGICALCREATUREBUYMSG
 _ENTERGAMERESPONSE.fields_by_name['magicalCreatures'].message_type = ItemModuleMsg__pb2._MAGICALCREATUREMSG
 _ENTERGAMERESPONSE.fields_by_name['systemOpenInfo'].message_type = _SYSTEMOPENINFO
-_ENTERGAMERESPONSE.fields_by_name['gashaponTicketReward'].message_type = _GASHAPONTICKETREWARD
 _ENTERGAMERESPONSE.fields_by_name['factorys'].message_type = FactoryModuleMsg__pb2._FACTORYMSG
 _ENTERGAMERESPONSE.fields_by_name['orderTaskProgress'].message_type = OrderTaskModuleMsg__pb2._ORDERTASKPROGRESSMSG
 _ENTERGAMERESPONSE.fields_by_name['orderTasks'].message_type = OrderTaskModuleMsg__pb2._ORDERTASKMSG
 _ENTERGAMERESPONSE.fields_by_name['magicalNests'].message_type = MagicalCreatureModuleMsg__pb2._MAGICALNESTMSG
 _ENTERGAMERESPONSE.fields_by_name['timeOrder'].message_type = OrderTaskModuleMsg__pb2._TIMEORDERMSG
-_RECHARGERESPONSE.fields_by_name['piggyReward'].message_type = ItemModuleMsg__pb2._ITEMMSG
-_RECHARGERESPONSE.fields_by_name['luckyRunesReward'].message_type = ItemModuleMsg__pb2._ITEMMSG
-_RECHARGERESPONSE.fields_by_name['subscribeProductInfo'].message_type = _SUBSCRIBEPRODUCTINFO
-_SUBSCRIBEPRODUCTINFOSRESPONSE.fields_by_name['productInfos'].message_type = _SUBSCRIBEPRODUCTINFO
+_ENTERGAMERESPONSE.fields_by_name['sceneCloseTimeResp'].message_type = SceneModuleMsg__pb2._SCENECLOSETIMERESPONSE
+_ENTERGAMERESPONSE.fields_by_name['commissions'].message_type = MagicalCreatureModuleMsg__pb2._COMMISSIONMSG
 DESCRIPTOR.message_types_by_name['ResourceMsg'] = _RESOURCEMSG
-DESCRIPTOR.message_types_by_name['LuckyRunesInfo'] = _LUCKYRUNESINFO
-DESCRIPTOR.message_types_by_name['FirstRechargeInfo'] = _FIRSTRECHARGEINFO
 DESCRIPTOR.message_types_by_name['ShopInfoMsg'] = _SHOPINFOMSG
-DESCRIPTOR.message_types_by_name['SpecialRechargeInfo'] = _SPECIALRECHARGEINFO
-DESCRIPTOR.message_types_by_name['BlackFridayGiftInfo'] = _BLACKFRIDAYGIFTINFO
 DESCRIPTOR.message_types_by_name['LoginRequest'] = _LOGINREQUEST
 DESCRIPTOR.message_types_by_name['SelectPlayerInfo'] = _SELECTPLAYERINFO
 DESCRIPTOR.message_types_by_name['LoginResponse'] = _LOGINRESPONSE
 DESCRIPTOR.message_types_by_name['GuideCompleteIdsRequest'] = _GUIDECOMPLETEIDSREQUEST
 DESCRIPTOR.message_types_by_name['GuideCompleteIdsResponse'] = _GUIDECOMPLETEIDSRESPONSE
 DESCRIPTOR.message_types_by_name['EnterGameRequest'] = _ENTERGAMEREQUEST
-DESCRIPTOR.message_types_by_name['SubscribeProductInfo'] = _SUBSCRIBEPRODUCTINFO
-DESCRIPTOR.message_types_by_name['SubscribeDayItemInfo'] = _SUBSCRIBEDAYITEMINFO
 DESCRIPTOR.message_types_by_name['SystemOpenInfo'] = _SYSTEMOPENINFO
-DESCRIPTOR.message_types_by_name['GashaponTicketReward'] = _GASHAPONTICKETREWARD
 DESCRIPTOR.message_types_by_name['EnterGameResponse'] = _ENTERGAMERESPONSE
 DESCRIPTOR.message_types_by_name['RechargeRequest'] = _RECHARGEREQUEST
 DESCRIPTOR.message_types_by_name['RechargeResponse'] = _RECHARGERESPONSE
@@ -2672,18 +1849,6 @@ DESCRIPTOR.message_types_by_name['VersionRewardsInfoRequest'] = _VERSIONREWARDSI
 DESCRIPTOR.message_types_by_name['VersionRewardsInfoResponse'] = _VERSIONREWARDSINFORESPONSE
 DESCRIPTOR.message_types_by_name['GetVersionRewardsRequest'] = _GETVERSIONREWARDSREQUEST
 DESCRIPTOR.message_types_by_name['GetVersionRewardsResponse'] = _GETVERSIONREWARDSRESPONSE
-DESCRIPTOR.message_types_by_name['RecieveCompensateRequest'] = _RECIEVECOMPENSATEREQUEST
-DESCRIPTOR.message_types_by_name['RecieveCompensateResponse'] = _RECIEVECOMPENSATERESPONSE
-DESCRIPTOR.message_types_by_name['AuthLedouLoginRequest'] = _AUTHLEDOULOGINREQUEST
-DESCRIPTOR.message_types_by_name['AuthLedouLoginResponse'] = _AUTHLEDOULOGINRESPONSE
-DESCRIPTOR.message_types_by_name['ContinueSubscribeAfterExpireRequest'] = _CONTINUESUBSCRIBEAFTEREXPIREREQUEST
-DESCRIPTOR.message_types_by_name['ContinueSubscribeAfterExpireResponse'] = _CONTINUESUBSCRIBEAFTEREXPIRERESPONSE
-DESCRIPTOR.message_types_by_name['SubscribeProductInfosRequest'] = _SUBSCRIBEPRODUCTINFOSREQUEST
-DESCRIPTOR.message_types_by_name['SubscribeProductInfosResponse'] = _SUBSCRIBEPRODUCTINFOSRESPONSE
-DESCRIPTOR.message_types_by_name['SubscribeCdotcntFinishRequest'] = _SUBSCRIBECDOTCNTFINISHREQUEST
-DESCRIPTOR.message_types_by_name['SubscribeCdotcntFinishResponse'] = _SUBSCRIBECDOTCNTFINISHRESPONSE
-DESCRIPTOR.message_types_by_name['SubscribeCancelRecordRequest'] = _SUBSCRIBECANCELRECORDREQUEST
-DESCRIPTOR.message_types_by_name['SubscribeCancelRecordResponse'] = _SUBSCRIBECANCELRECORDRESPONSE
 DESCRIPTOR.message_types_by_name['FacebookFollowRewardRequest'] = _FACEBOOKFOLLOWREWARDREQUEST
 DESCRIPTOR.message_types_by_name['FacebookFollowRewardResponse'] = _FACEBOOKFOLLOWREWARDRESPONSE
 DESCRIPTOR.message_types_by_name['DiamondPurchaseRequest'] = _DIAMONDPURCHASEREQUEST
@@ -2692,6 +1857,8 @@ DESCRIPTOR.message_types_by_name['HeartBeatRequest'] = _HEARTBEATREQUEST
 DESCRIPTOR.message_types_by_name['HeartBeatResponse'] = _HEARTBEATRESPONSE
 DESCRIPTOR.message_types_by_name['SystemOpenRequest'] = _SYSTEMOPENREQUEST
 DESCRIPTOR.message_types_by_name['SystemOpenResponse'] = _SYSTEMOPENRESPONSE
+DESCRIPTOR.message_types_by_name['EnergyRequest'] = _ENERGYREQUEST
+DESCRIPTOR.message_types_by_name['EnergyResponse'] = _ENERGYRESPONSE
 DESCRIPTOR.enum_types_by_name['CoreModuleMsgSubCommand'] = _COREMODULEMSGSUBCOMMAND
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -2702,40 +1869,12 @@ ResourceMsg = _reflection.GeneratedProtocolMessageType('ResourceMsg', (_message.
   })
 _sym_db.RegisterMessage(ResourceMsg)
 
-LuckyRunesInfo = _reflection.GeneratedProtocolMessageType('LuckyRunesInfo', (_message.Message,), {
-  'DESCRIPTOR' : _LUCKYRUNESINFO,
-  '__module__' : 'CoreModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.LuckyRunesInfo)
-  })
-_sym_db.RegisterMessage(LuckyRunesInfo)
-
-FirstRechargeInfo = _reflection.GeneratedProtocolMessageType('FirstRechargeInfo', (_message.Message,), {
-  'DESCRIPTOR' : _FIRSTRECHARGEINFO,
-  '__module__' : 'CoreModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.FirstRechargeInfo)
-  })
-_sym_db.RegisterMessage(FirstRechargeInfo)
-
 ShopInfoMsg = _reflection.GeneratedProtocolMessageType('ShopInfoMsg', (_message.Message,), {
   'DESCRIPTOR' : _SHOPINFOMSG,
   '__module__' : 'CoreModuleMsg_pb2'
   # @@protoc_insertion_point(class_scope:com.common.msg.ShopInfoMsg)
   })
 _sym_db.RegisterMessage(ShopInfoMsg)
-
-SpecialRechargeInfo = _reflection.GeneratedProtocolMessageType('SpecialRechargeInfo', (_message.Message,), {
-  'DESCRIPTOR' : _SPECIALRECHARGEINFO,
-  '__module__' : 'CoreModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.SpecialRechargeInfo)
-  })
-_sym_db.RegisterMessage(SpecialRechargeInfo)
-
-BlackFridayGiftInfo = _reflection.GeneratedProtocolMessageType('BlackFridayGiftInfo', (_message.Message,), {
-  'DESCRIPTOR' : _BLACKFRIDAYGIFTINFO,
-  '__module__' : 'CoreModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.BlackFridayGiftInfo)
-  })
-_sym_db.RegisterMessage(BlackFridayGiftInfo)
 
 LoginRequest = _reflection.GeneratedProtocolMessageType('LoginRequest', (_message.Message,), {
   'DESCRIPTOR' : _LOGINREQUEST,
@@ -2779,33 +1918,12 @@ EnterGameRequest = _reflection.GeneratedProtocolMessageType('EnterGameRequest', 
   })
 _sym_db.RegisterMessage(EnterGameRequest)
 
-SubscribeProductInfo = _reflection.GeneratedProtocolMessageType('SubscribeProductInfo', (_message.Message,), {
-  'DESCRIPTOR' : _SUBSCRIBEPRODUCTINFO,
-  '__module__' : 'CoreModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.SubscribeProductInfo)
-  })
-_sym_db.RegisterMessage(SubscribeProductInfo)
-
-SubscribeDayItemInfo = _reflection.GeneratedProtocolMessageType('SubscribeDayItemInfo', (_message.Message,), {
-  'DESCRIPTOR' : _SUBSCRIBEDAYITEMINFO,
-  '__module__' : 'CoreModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.SubscribeDayItemInfo)
-  })
-_sym_db.RegisterMessage(SubscribeDayItemInfo)
-
 SystemOpenInfo = _reflection.GeneratedProtocolMessageType('SystemOpenInfo', (_message.Message,), {
   'DESCRIPTOR' : _SYSTEMOPENINFO,
   '__module__' : 'CoreModuleMsg_pb2'
   # @@protoc_insertion_point(class_scope:com.common.msg.SystemOpenInfo)
   })
 _sym_db.RegisterMessage(SystemOpenInfo)
-
-GashaponTicketReward = _reflection.GeneratedProtocolMessageType('GashaponTicketReward', (_message.Message,), {
-  'DESCRIPTOR' : _GASHAPONTICKETREWARD,
-  '__module__' : 'CoreModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.GashaponTicketReward)
-  })
-_sym_db.RegisterMessage(GashaponTicketReward)
 
 EnterGameResponse = _reflection.GeneratedProtocolMessageType('EnterGameResponse', (_message.Message,), {
   'DESCRIPTOR' : _ENTERGAMERESPONSE,
@@ -2940,90 +2058,6 @@ GetVersionRewardsResponse = _reflection.GeneratedProtocolMessageType('GetVersion
   })
 _sym_db.RegisterMessage(GetVersionRewardsResponse)
 
-RecieveCompensateRequest = _reflection.GeneratedProtocolMessageType('RecieveCompensateRequest', (_message.Message,), {
-  'DESCRIPTOR' : _RECIEVECOMPENSATEREQUEST,
-  '__module__' : 'CoreModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.RecieveCompensateRequest)
-  })
-_sym_db.RegisterMessage(RecieveCompensateRequest)
-
-RecieveCompensateResponse = _reflection.GeneratedProtocolMessageType('RecieveCompensateResponse', (_message.Message,), {
-  'DESCRIPTOR' : _RECIEVECOMPENSATERESPONSE,
-  '__module__' : 'CoreModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.RecieveCompensateResponse)
-  })
-_sym_db.RegisterMessage(RecieveCompensateResponse)
-
-AuthLedouLoginRequest = _reflection.GeneratedProtocolMessageType('AuthLedouLoginRequest', (_message.Message,), {
-  'DESCRIPTOR' : _AUTHLEDOULOGINREQUEST,
-  '__module__' : 'CoreModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.AuthLedouLoginRequest)
-  })
-_sym_db.RegisterMessage(AuthLedouLoginRequest)
-
-AuthLedouLoginResponse = _reflection.GeneratedProtocolMessageType('AuthLedouLoginResponse', (_message.Message,), {
-  'DESCRIPTOR' : _AUTHLEDOULOGINRESPONSE,
-  '__module__' : 'CoreModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.AuthLedouLoginResponse)
-  })
-_sym_db.RegisterMessage(AuthLedouLoginResponse)
-
-ContinueSubscribeAfterExpireRequest = _reflection.GeneratedProtocolMessageType('ContinueSubscribeAfterExpireRequest', (_message.Message,), {
-  'DESCRIPTOR' : _CONTINUESUBSCRIBEAFTEREXPIREREQUEST,
-  '__module__' : 'CoreModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.ContinueSubscribeAfterExpireRequest)
-  })
-_sym_db.RegisterMessage(ContinueSubscribeAfterExpireRequest)
-
-ContinueSubscribeAfterExpireResponse = _reflection.GeneratedProtocolMessageType('ContinueSubscribeAfterExpireResponse', (_message.Message,), {
-  'DESCRIPTOR' : _CONTINUESUBSCRIBEAFTEREXPIRERESPONSE,
-  '__module__' : 'CoreModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.ContinueSubscribeAfterExpireResponse)
-  })
-_sym_db.RegisterMessage(ContinueSubscribeAfterExpireResponse)
-
-SubscribeProductInfosRequest = _reflection.GeneratedProtocolMessageType('SubscribeProductInfosRequest', (_message.Message,), {
-  'DESCRIPTOR' : _SUBSCRIBEPRODUCTINFOSREQUEST,
-  '__module__' : 'CoreModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.SubscribeProductInfosRequest)
-  })
-_sym_db.RegisterMessage(SubscribeProductInfosRequest)
-
-SubscribeProductInfosResponse = _reflection.GeneratedProtocolMessageType('SubscribeProductInfosResponse', (_message.Message,), {
-  'DESCRIPTOR' : _SUBSCRIBEPRODUCTINFOSRESPONSE,
-  '__module__' : 'CoreModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.SubscribeProductInfosResponse)
-  })
-_sym_db.RegisterMessage(SubscribeProductInfosResponse)
-
-SubscribeCdotcntFinishRequest = _reflection.GeneratedProtocolMessageType('SubscribeCdotcntFinishRequest', (_message.Message,), {
-  'DESCRIPTOR' : _SUBSCRIBECDOTCNTFINISHREQUEST,
-  '__module__' : 'CoreModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.SubscribeCdotcntFinishRequest)
-  })
-_sym_db.RegisterMessage(SubscribeCdotcntFinishRequest)
-
-SubscribeCdotcntFinishResponse = _reflection.GeneratedProtocolMessageType('SubscribeCdotcntFinishResponse', (_message.Message,), {
-  'DESCRIPTOR' : _SUBSCRIBECDOTCNTFINISHRESPONSE,
-  '__module__' : 'CoreModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.SubscribeCdotcntFinishResponse)
-  })
-_sym_db.RegisterMessage(SubscribeCdotcntFinishResponse)
-
-SubscribeCancelRecordRequest = _reflection.GeneratedProtocolMessageType('SubscribeCancelRecordRequest', (_message.Message,), {
-  'DESCRIPTOR' : _SUBSCRIBECANCELRECORDREQUEST,
-  '__module__' : 'CoreModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.SubscribeCancelRecordRequest)
-  })
-_sym_db.RegisterMessage(SubscribeCancelRecordRequest)
-
-SubscribeCancelRecordResponse = _reflection.GeneratedProtocolMessageType('SubscribeCancelRecordResponse', (_message.Message,), {
-  'DESCRIPTOR' : _SUBSCRIBECANCELRECORDRESPONSE,
-  '__module__' : 'CoreModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.SubscribeCancelRecordResponse)
-  })
-_sym_db.RegisterMessage(SubscribeCancelRecordResponse)
-
 FacebookFollowRewardRequest = _reflection.GeneratedProtocolMessageType('FacebookFollowRewardRequest', (_message.Message,), {
   'DESCRIPTOR' : _FACEBOOKFOLLOWREWARDREQUEST,
   '__module__' : 'CoreModuleMsg_pb2'
@@ -3079,6 +2113,20 @@ SystemOpenResponse = _reflection.GeneratedProtocolMessageType('SystemOpenRespons
   # @@protoc_insertion_point(class_scope:com.common.msg.SystemOpenResponse)
   })
 _sym_db.RegisterMessage(SystemOpenResponse)
+
+EnergyRequest = _reflection.GeneratedProtocolMessageType('EnergyRequest', (_message.Message,), {
+  'DESCRIPTOR' : _ENERGYREQUEST,
+  '__module__' : 'CoreModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.EnergyRequest)
+  })
+_sym_db.RegisterMessage(EnergyRequest)
+
+EnergyResponse = _reflection.GeneratedProtocolMessageType('EnergyResponse', (_message.Message,), {
+  'DESCRIPTOR' : _ENERGYRESPONSE,
+  '__module__' : 'CoreModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.EnergyResponse)
+  })
+_sym_db.RegisterMessage(EnergyResponse)
 
 
 # @@protoc_insertion_point(module_scope)

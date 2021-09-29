@@ -47,13 +47,27 @@ enum MagicalCreatureModuleMsgSubCommand {
 	MAGICALCREATUREMODULEMSG_SUB_GETCONSUMEENERGY = 24020;
 	// 选择探索龙
 	MAGICALCREATUREMODULEMSG_SUB_SELECTEXPLORE = 24021;
+	// 释放技能
+	MAGICALCREATUREMODULEMSG_SUB_DOSKILL = 24022;
+	// 开始委托
+	MAGICALCREATUREMODULEMSG_SUB_COMMISSION = 24023;
+	// 加速委托
+	MAGICALCREATUREMODULEMSG_SUB_ACCELERATECOMMISSION = 24024;
+	// 领取委托奖励
+	MAGICALCREATUREMODULEMSG_SUB_COMMISSIONREWARD = 24025;
+	// 解锁层
+	MAGICALCREATUREMODULEMSG_SUB_COMMISSIONUNLOCK = 24026;
+	// 出售龙
+	MAGICALCREATUREMODULEMSG_SUB_SELLCREATURE = 24027;
 }
 
 message MagicalCreatureBuyMsg {
-  // 龙或蛋模板id
+  // 龙或蛋或龙繁育模板id
   required string templateId = 1;
   // 购买次数
   required int32 buyCnt = 2;
+  // 模板类型(0龙、1繁育)
+  optional int32 type = 3;
 }
 
 message MagicalNestMsg {
@@ -61,6 +75,20 @@ message MagicalNestMsg {
   required int32 nestType = 1;
   // 巢等级
   required int32 nestLevel = 2;
+}
+
+// 家园委托数据
+message CommissionMsg {
+	// 洞穴Id
+	optional string commissionId = 1;
+	// 开始时间
+	optional int64 startTime = 2;
+	// 是否完成
+	optional bool finished = 3;
+	// 龙列表
+	repeated int64 creatures = 4;
+	// 已解锁最大层洞穴Id
+	optional string unlockMaxId = 5;
 }
 
 // 购买蛋 请求
@@ -108,16 +136,24 @@ message BreedResponse {
 	optional MagicalCreatureMsg creature = 1;
 	// 同步道具
 	repeated ItemMsg items = 2;
+	// 培育产出道具
+	repeated ItemMsg productItems = 3;
 }
 
-//魔法生物数据和碎片数据请求
+//魔法生物数据请求
 message GetCreatureDataRequest {
 }
 
-//魔法生物数据和碎片数据响应
+//魔法生物数据响应
 message GetCreatureDataResponse {
+	//购买信息
 	repeated MagicalCreatureBuyMsg buys = 1;
+	//龙信息
 	repeated MagicalCreatureMsg creatures = 2;
+	//技能释放次数
+	optional int32 skillCnt = 3;
+	//技能释放次数刷新时间
+	optional int64 refreshTime = 4;
 }
 
 message OpenNestRequest {
@@ -155,6 +191,8 @@ message CollectAllHangupRewardResponse {
 	// 同步道具
 	repeated ItemMsg items = 1;
 	repeated MagicalCreatureMsg creatures = 2;
+	//道具数量变化
+	repeated int32 itemChangeNum = 3;
 }
 
 message MoveToNestRequest {
@@ -179,6 +217,8 @@ message CollectRequest {
 message CollectResponse {
 	required MagicalCreatureMsg creature = 1;
 	optional PlantMsg plant = 2;
+	// version>=4.1 收集障碍物成就奖励
+	optional ObstacleAchievementRewardMsg achievementReward = 3;
 }
 
 // 领取障碍物龙采集奖励请求
@@ -293,4 +333,91 @@ message SelectExploreRequest {
 message SelectExploreResponse {
 	// 取消探索的龙会重新计算挂机开始时间
 	repeated MagicalCreatureMsg creatures = 1;
+}
+
+message DoSkillRequest {
+	// 龙ID
+	required int32 creatureId = 1;
+	// 释放技能ID
+	optional string skillId = 2;
+	// 场景ID
+	optional string sceneId = 3;
+	// 释放位置x
+	optional int32 x = 4;
+	// 释放位置y
+	optional int32 y = 5;
+	// 目标
+	repeated string plantIds = 6;
+}
+
+message DoSkillResponse {
+	// 技能清除障碍效果
+	repeated ClearPlantResponse effects = 1;
+	// 技能奖励道具
+	repeated ItemMsg items = 2;	
+}
+
+// 委托请求
+message CommissionRequest {
+	// 洞穴Id
+	optional string commissionId = 1;
+	// 选择龙列表
+	repeated int64 creatureIds = 2;
+}
+
+// 委托响应
+message CommissionResponse {
+	// 道具同步
+	repeated ItemMsg items = 1;
+}
+
+// 加速委托请求
+message AccelerateCommissionRequest {
+	// 洞穴Id
+	optional string commissionId = 1;
+	// 道具id
+	optional string itemId = 2;
+}
+
+// 加速委托响应
+message AccelerateCommissionResponse {
+	// 道具同步
+	repeated ItemMsg items = 1;
+	// 加速结果
+	optional CommissionMsg commission = 2;
+}
+
+// 领取委托奖励请求
+message CommissionRewardRequest {
+	// 洞穴Id
+	optional string commissionId = 1;
+}
+
+// 领取委托奖励响应
+message CommissionRewardResponse {
+	// 龙信息同步
+	repeated MagicalCreatureMsg creatures = 1;
+	// 奖励道具同步
+	repeated ItemMsg items = 2;
+}
+
+// 解锁层请求
+message CommissionUnlockRequest {
+	// 洞穴Id
+	optional string commissionId = 1;
+}
+
+// 解锁层响应
+message CommissionUnlockResponse {
+}
+
+// 出售龙请求
+message SellCreatureRequest {
+	// 龙id
+	optional int64 creatureId = 2;
+}
+
+// 出售龙返回
+message SellCreatureResponse {
+	repeated ItemMsg items = 1;
 }

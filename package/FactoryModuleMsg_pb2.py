@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x16\x46\x61\x63toryModuleMsg.proto\x12\x0e\x63om.common.msg\x1a\x13ItemModuleMsg.proto\"X\n\nFactoryMsg\x12\x11\n\tfactoryId\x18\x01 \x02(\t\x12\x13\n\x0bopenSlotCnt\x18\x02 \x02(\x05\x12\x11\n\tstartTime\x18\x03 \x02(\x03\x12\x0f\n\x07itemIds\x18\x04 \x03(\t\"7\n\x11\x46\x61\x63toryProduceMsg\x12\x11\n\tfactoryId\x18\x01 \x02(\t\x12\x0f\n\x07itemIds\x18\x04 \x03(\t\"$\n\x0fOpenSlotRequest\x12\x11\n\tfactoryId\x18\x01 \x02(\t\"\x12\n\x10OpenSlotResponse\"=\n\x18\x41\x64\x64\x46\x61\x63toryProduceRequest\x12\x11\n\tfactoryId\x18\x01 \x02(\t\x12\x0e\n\x06itemId\x18\x02 \x02(\t\"C\n\x19\x41\x64\x64\x46\x61\x63toryProduceResponse\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"S\n\x1cReceiveFactoryProduceRequest\x12\x33\n\x08produces\x18\x01 \x03(\x0b\x32!.com.common.msg.FactoryProduceMsg\"G\n\x1dReceiveFactoryProduceResponse\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"<\n\x18\x41\x63\x63\x65lerateProduceRequest\x12\x11\n\tfactoryId\x18\x01 \x02(\t\x12\r\n\x05price\x18\x02 \x02(\x05\"C\n\x19\x41\x63\x63\x65lerateProduceResponse\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"\x1d\n\x1b\x46\x61\x63toryCenterUpLevelRequest\"F\n\x1c\x46\x61\x63toryCenterUpLevelResponse\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg*\x80\x02\n\x1a\x46\x61\x63toryModuleMsgSubCommand\x12#\n\x1d\x46\x41\x43TORYMODULEMSG_SUB_OPENSLOT\x10\x8d\xc4\x01\x12,\n&FACTORYMODULEMSG_SUB_ADDFACTORYPRODUCE\x10\x8e\xc4\x01\x12\x30\n*FACTORYMODULEMSG_SUB_RECEIVEFACTORYPRODUCE\x10\x8f\xc4\x01\x12,\n&FACTORYMODULEMSG_SUB_ACCELERATEPRODUCE\x10\x90\xc4\x01\x12/\n)FACTORYMODULEMSG_SUB_FACTORYCENTERUPLEVEL\x10\x91\xc4\x01'
+  serialized_pb=b'\n\x16\x46\x61\x63toryModuleMsg.proto\x12\x0e\x63om.common.msg\x1a\x13ItemModuleMsg.proto\"X\n\nFactoryMsg\x12\x11\n\tfactoryId\x18\x01 \x02(\t\x12\x13\n\x0bopenSlotCnt\x18\x02 \x02(\x05\x12\x11\n\tstartTime\x18\x03 \x02(\x03\x12\x0f\n\x07itemIds\x18\x04 \x03(\t\"7\n\x11\x46\x61\x63toryProduceMsg\x12\x11\n\tfactoryId\x18\x01 \x02(\t\x12\x0f\n\x07itemIds\x18\x04 \x03(\t\"$\n\x0fOpenSlotRequest\x12\x11\n\tfactoryId\x18\x01 \x02(\t\"@\n\x10OpenSlotResponse\x12,\n\x08\x66\x61\x63torys\x18\x01 \x03(\x0b\x32\x1a.com.common.msg.FactoryMsg\"=\n\x18\x41\x64\x64\x46\x61\x63toryProduceRequest\x12\x11\n\tfactoryId\x18\x01 \x02(\t\x12\x0e\n\x06itemId\x18\x02 \x02(\t\"q\n\x19\x41\x64\x64\x46\x61\x63toryProduceResponse\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12,\n\x08\x66\x61\x63torys\x18\x02 \x03(\x0b\x32\x1a.com.common.msg.FactoryMsg\"S\n\x1cReceiveFactoryProduceRequest\x12\x33\n\x08produces\x18\x01 \x03(\x0b\x32!.com.common.msg.FactoryProduceMsg\"u\n\x1dReceiveFactoryProduceResponse\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12,\n\x08\x66\x61\x63torys\x18\x02 \x03(\x0b\x32\x1a.com.common.msg.FactoryMsg\"<\n\x18\x41\x63\x63\x65lerateProduceRequest\x12\x11\n\tfactoryId\x18\x01 \x02(\t\x12\r\n\x05price\x18\x02 \x02(\x05\"q\n\x19\x41\x63\x63\x65lerateProduceResponse\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12,\n\x08\x66\x61\x63torys\x18\x02 \x03(\x0b\x32\x1a.com.common.msg.FactoryMsg\"\x1d\n\x1b\x46\x61\x63toryCenterUpLevelRequest\"F\n\x1c\x46\x61\x63toryCenterUpLevelResponse\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg*\x80\x02\n\x1a\x46\x61\x63toryModuleMsgSubCommand\x12#\n\x1d\x46\x41\x43TORYMODULEMSG_SUB_OPENSLOT\x10\x8d\xc4\x01\x12,\n&FACTORYMODULEMSG_SUB_ADDFACTORYPRODUCE\x10\x8e\xc4\x01\x12\x30\n*FACTORYMODULEMSG_SUB_RECEIVEFACTORYPRODUCE\x10\x8f\xc4\x01\x12,\n&FACTORYMODULEMSG_SUB_ACCELERATEPRODUCE\x10\x90\xc4\x01\x12/\n)FACTORYMODULEMSG_SUB_FACTORYCENTERUPLEVEL\x10\x91\xc4\x01'
   ,
   dependencies=[ItemModuleMsg__pb2.DESCRIPTOR,])
 
@@ -60,8 +60,8 @@ _FACTORYMODULEMSGSUBCOMMAND = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=793,
-  serialized_end=1049,
+  serialized_start=977,
+  serialized_end=1233,
 )
 _sym_db.RegisterEnumDescriptor(_FACTORYMODULEMSGSUBCOMMAND)
 
@@ -206,6 +206,13 @@ _OPENSLOTRESPONSE = _descriptor.Descriptor(
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='factorys', full_name='com.common.msg.OpenSlotResponse.factorys', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -219,7 +226,7 @@ _OPENSLOTRESPONSE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=248,
-  serialized_end=266,
+  serialized_end=312,
 )
 
 
@@ -257,8 +264,8 @@ _ADDFACTORYPRODUCEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=268,
-  serialized_end=329,
+  serialized_start=314,
+  serialized_end=375,
 )
 
 
@@ -277,6 +284,13 @@ _ADDFACTORYPRODUCERESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='factorys', full_name='com.common.msg.AddFactoryProduceResponse.factorys', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -289,8 +303,8 @@ _ADDFACTORYPRODUCERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=331,
-  serialized_end=398,
+  serialized_start=377,
+  serialized_end=490,
 )
 
 
@@ -321,8 +335,8 @@ _RECEIVEFACTORYPRODUCEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=400,
-  serialized_end=483,
+  serialized_start=492,
+  serialized_end=575,
 )
 
 
@@ -341,6 +355,13 @@ _RECEIVEFACTORYPRODUCERESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='factorys', full_name='com.common.msg.ReceiveFactoryProduceResponse.factorys', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -353,8 +374,8 @@ _RECEIVEFACTORYPRODUCERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=485,
-  serialized_end=556,
+  serialized_start=577,
+  serialized_end=694,
 )
 
 
@@ -392,8 +413,8 @@ _ACCELERATEPRODUCEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=558,
-  serialized_end=618,
+  serialized_start=696,
+  serialized_end=756,
 )
 
 
@@ -412,6 +433,13 @@ _ACCELERATEPRODUCERESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='factorys', full_name='com.common.msg.AccelerateProduceResponse.factorys', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -424,8 +452,8 @@ _ACCELERATEPRODUCERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=620,
-  serialized_end=687,
+  serialized_start=758,
+  serialized_end=871,
 )
 
 
@@ -449,8 +477,8 @@ _FACTORYCENTERUPLEVELREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=689,
-  serialized_end=718,
+  serialized_start=873,
+  serialized_end=902,
 )
 
 
@@ -481,14 +509,18 @@ _FACTORYCENTERUPLEVELRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=720,
-  serialized_end=790,
+  serialized_start=904,
+  serialized_end=974,
 )
 
+_OPENSLOTRESPONSE.fields_by_name['factorys'].message_type = _FACTORYMSG
 _ADDFACTORYPRODUCERESPONSE.fields_by_name['items'].message_type = ItemModuleMsg__pb2._ITEMMSG
+_ADDFACTORYPRODUCERESPONSE.fields_by_name['factorys'].message_type = _FACTORYMSG
 _RECEIVEFACTORYPRODUCEREQUEST.fields_by_name['produces'].message_type = _FACTORYPRODUCEMSG
 _RECEIVEFACTORYPRODUCERESPONSE.fields_by_name['items'].message_type = ItemModuleMsg__pb2._ITEMMSG
+_RECEIVEFACTORYPRODUCERESPONSE.fields_by_name['factorys'].message_type = _FACTORYMSG
 _ACCELERATEPRODUCERESPONSE.fields_by_name['items'].message_type = ItemModuleMsg__pb2._ITEMMSG
+_ACCELERATEPRODUCERESPONSE.fields_by_name['factorys'].message_type = _FACTORYMSG
 _FACTORYCENTERUPLEVELRESPONSE.fields_by_name['items'].message_type = ItemModuleMsg__pb2._ITEMMSG
 DESCRIPTOR.message_types_by_name['FactoryMsg'] = _FACTORYMSG
 DESCRIPTOR.message_types_by_name['FactoryProduceMsg'] = _FACTORYPRODUCEMSG

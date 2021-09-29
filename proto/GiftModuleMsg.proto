@@ -1,0 +1,40 @@
+syntax = "proto2";
+package com.common.msg;
+enum GiftModuleMsgSubCommand {
+	//礼包信息同步
+	GIFTMODULEMSG_SUB_GIFTINFO= 25801;
+	//触发弹窗礼包
+	GIFTMODULEMSG_SUB_TRIGGERGIFT= 25802;
+}
+
+
+//礼包信息同步
+message GiftInfoRequest {
+}
+
+//礼包信息
+message GiftInfoMsg{
+	//礼包配置id
+	required string id = 1;
+	//礼包最近一次开启时间(毫秒)
+	required int64 triggerTime = 2;
+	//礼包最近一次购买时间(毫秒 重新开启之后不重置 默认值为0)
+	required int64 lastBoughtTime = 3;
+}
+
+//礼包信息同步响应
+message GiftInfoResponse {
+	repeated GiftInfoMsg giftInfos = 1;
+}
+
+
+//触发弹窗礼包
+message TriggerGiftRequest {
+	//礼包配置id
+	required string id = 1;
+}
+
+//触发弹窗礼包响应
+message TriggerGiftResponse {
+
+}

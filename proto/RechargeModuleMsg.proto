@@ -1,0 +1,17 @@
+syntax = "proto2";
+package com.common.msg;
+
+enum RechargeModuleMsgSubCommand {
+	//充值
+	RECHARGEMODULEMSG_SUB_RECHARGE = 3001;
+}
+
+//充值请求
+message RechargeRequest {
+	optional string orderInfo = 1;	//订单信息
+}
+
+//充值响应
+message RechargeResponse {
+
+}

@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x18\x44\x61yRewardModuleMsg.proto\x12\x0e\x63om.common.msg\"$\n\x14\x44\x61yRewardInfoRequest\x12\x0c\n\x04\x66lag\x18\x01 \x02(\x08\"\x88\x01\n\x15\x44\x61yRewardInfoResponse\x12\x1c\n\x14\x63ontinueEnterGameNum\x18\x01 \x02(\x05\x12\x10\n\x08\x62\x61tchNum\x18\x02 \x02(\x05\x12\x12\n\nisRewarded\x18\x03 \x02(\x08\x12\x14\n\x0crdBuildingId\x18\x04 \x02(\t\x12\x15\n\risAdsRewarded\x18\x05 \x01(\x08\"4\n\x13GetDayRewardRequest\x12\x0c\n\x04\x66lag\x18\x01 \x02(\x08\x12\x0f\n\x07\x61\x64sFlag\x18\x02 \x01(\x08\"\\\n\x14GetDayRewardResponse\x12\x10\n\x08\x62\x61tchNum\x18\x01 \x02(\x05\x12\x1c\n\x14\x63ontinueEnterGameNum\x18\x02 \x02(\x05\x12\x14\n\x0crdBuildingId\x18\x03 \x01(\t*s\n\x1c\x44\x61yRewardModuleMsgSubCommand\x12)\n$DAYREWARDMODULEMSG_SUB_DAYREWARDINFO\x10\xa9\x46\x12(\n#DAYREWARDMODULEMSG_SUB_GETDAYREWARD\x10\xaa\x46'
+  serialized_pb=b'\n\x18\x44\x61yRewardModuleMsg.proto\x12\x0e\x63om.common.msg\"\x16\n\x14\x44\x61yRewardInfoRequest\"[\n\x15\x44\x61yRewardInfoResponse\x12\x1c\n\x14\x63ontinueEnterGameNum\x18\x01 \x01(\x05\x12\x10\n\x08\x62\x61tchNum\x18\x02 \x01(\x05\x12\x12\n\nisRewarded\x18\x03 \x01(\x08\"#\n\x13GetDayRewardRequest\x12\x0c\n\x04\x66lag\x18\x01 \x01(\x05\"\x16\n\x14GetDayRewardResponse*s\n\x1c\x44\x61yRewardModuleMsgSubCommand\x12)\n$DAYREWARDMODULEMSG_SUB_DAYREWARDINFO\x10\xa9\x46\x12(\n#DAYREWARDMODULEMSG_SUB_GETDAYREWARD\x10\xaa\x46'
 )
 
 _DAYREWARDMODULEMSGSUBCOMMAND = _descriptor.EnumDescriptor(
@@ -43,8 +43,8 @@ _DAYREWARDMODULEMSGSUBCOMMAND = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=369,
-  serialized_end=484,
+  serialized_start=222,
+  serialized_end=337,
 )
 _sym_db.RegisterEnumDescriptor(_DAYREWARDMODULEMSGSUBCOMMAND)
 
@@ -62,13 +62,6 @@ _DAYREWARDINFOREQUEST = _descriptor.Descriptor(
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
-    _descriptor.FieldDescriptor(
-      name='flag', full_name='com.common.msg.DayRewardInfoRequest.flag', index=0,
-      number=1, type=8, cpp_type=7, label=2,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -82,7 +75,7 @@ _DAYREWARDINFOREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=44,
-  serialized_end=80,
+  serialized_end=66,
 )
 
 
@@ -96,35 +89,21 @@ _DAYREWARDINFORESPONSE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='continueEnterGameNum', full_name='com.common.msg.DayRewardInfoResponse.continueEnterGameNum', index=0,
-      number=1, type=5, cpp_type=1, label=2,
+      number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='batchNum', full_name='com.common.msg.DayRewardInfoResponse.batchNum', index=1,
-      number=2, type=5, cpp_type=1, label=2,
+      number=2, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='isRewarded', full_name='com.common.msg.DayRewardInfoResponse.isRewarded', index=2,
-      number=3, type=8, cpp_type=7, label=2,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='rdBuildingId', full_name='com.common.msg.DayRewardInfoResponse.rdBuildingId', index=3,
-      number=4, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='isAdsRewarded', full_name='com.common.msg.DayRewardInfoResponse.isAdsRewarded', index=4,
-      number=5, type=8, cpp_type=7, label=1,
+      number=3, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -141,8 +120,8 @@ _DAYREWARDINFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=83,
-  serialized_end=219,
+  serialized_start=68,
+  serialized_end=159,
 )
 
 
@@ -156,15 +135,8 @@ _GETDAYREWARDREQUEST = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='flag', full_name='com.common.msg.GetDayRewardRequest.flag', index=0,
-      number=1, type=8, cpp_type=7, label=2,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='adsFlag', full_name='com.common.msg.GetDayRewardRequest.adsFlag', index=1,
-      number=2, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
@@ -180,8 +152,8 @@ _GETDAYREWARDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=221,
-  serialized_end=273,
+  serialized_start=161,
+  serialized_end=196,
 )
 
 
@@ -193,27 +165,6 @@ _GETDAYREWARDRESPONSE = _descriptor.Descriptor(
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
-    _descriptor.FieldDescriptor(
-      name='batchNum', full_name='com.common.msg.GetDayRewardResponse.batchNum', index=0,
-      number=1, type=5, cpp_type=1, label=2,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='continueEnterGameNum', full_name='com.common.msg.GetDayRewardResponse.continueEnterGameNum', index=1,
-      number=2, type=5, cpp_type=1, label=2,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='rdBuildingId', full_name='com.common.msg.GetDayRewardResponse.rdBuildingId', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -226,8 +177,8 @@ _GETDAYREWARDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=275,
-  serialized_end=367,
+  serialized_start=198,
+  serialized_end=220,
 )
 
 DESCRIPTOR.message_types_by_name['DayRewardInfoRequest'] = _DAYREWARDINFOREQUEST

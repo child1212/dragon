@@ -23,7 +23,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x14SceneModuleMsg.proto\x12\x0e\x63om.common.msg\x1a\x13ItemModuleMsg.proto\x1a\x17\x46\x61rmlandModuleMsg.proto\x1a\x1d\x43onvertFactoryModuleMsg.proto\"w\n\x08PlantMsg\x12\x0f\n\x07plantId\x18\x01 \x01(\t\x12)\n\x08\x63onsumed\x18\x02 \x01(\x0b\x32\x17.com.common.msg.ItemMsg\x12/\n\x0e\x63ollectRewards\x18\x03 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"#\n\x10SceneInfoRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\";\n\x0b\x42uildingMsg\x12\x0f\n\x07plantId\x18\x01 \x02(\t\x12\r\n\x05level\x18\x02 \x02(\x05\x12\x0c\n\x04\x64rop\x18\x03 \x01(\x08\"\x1c\n\tTraderMsg\x12\x0f\n\x07plantId\x18\x01 \x02(\t\")\n\nMonsterMsg\x12\x0f\n\x07plantId\x18\x01 \x02(\t\x12\n\n\x02hp\x18\x02 \x02(\x05\"\xd7\x03\n\x11SceneInfoResponse\x12(\n\x06plants\x18\x01 \x03(\x0b\x32\x18.com.common.msg.PlantMsg\x12\x0f\n\x07\x63leared\x18\x02 \x03(\t\x12;\n\x1a\x61utoReceivedCollectRewards\x18\x03 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12\x31\n\x0c\x62uildingMsgs\x18\x04 \x03(\x0b\x32\x1b.com.common.msg.BuildingMsg\x12\x31\n\x0c\x66\x61rmlandMsgs\x18\x05 \x03(\x0b\x32\x1b.com.common.msg.FarmlandMsg\x12-\n\ntraderMsgs\x18\x06 \x03(\x0b\x32\x19.com.common.msg.TraderMsg\x12:\n\x0f\x63onvertFactorys\x18\x07 \x03(\x0b\x32!.com.common.msg.ConvertFactoryMsg\x12/\n\x0bmonsterMsgs\x18\x08 \x03(\x0b\x32\x1a.com.common.msg.MonsterMsg\x12\x11\n\tcloseTime\x18\t \x01(\x03\x12\x35\n\tcreatures\x18\n \x03(\x0b\x32\".com.common.msg.MagicalCreatureMsg\"\x91\x01\n\x1cObstacleAchievementRewardMsg\x12\x15\n\rachievementId\x18\x01 \x01(\t\x12(\n\x07rewards\x18\x02 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12\x30\n\x0f\x63ompleteRewards\x18\x03 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"5\n\x11\x43learPlantRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\x0f\n\x07plantId\x18\x02 \x01(\t\"\xfb\x01\n\x12\x43learPlantResponse\x12\x0f\n\x07\x63leared\x18\x01 \x01(\x08\x12)\n\x08produced\x18\x02 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12\'\n\x05plant\x18\x03 \x01(\x0b\x32\x18.com.common.msg.PlantMsg\x12&\n\x05items\x18\x04 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12G\n\x11\x61\x63hievementReward\x18\x05 \x01(\x0b\x32,.com.common.msg.ObstacleAchievementRewardMsg\x12\x0f\n\x07plantId\x18\x06 \x01(\t\";\n\x16\x46indScenePlantsRequest\x12\x0f\n\x07sceneId\x18\x01 \x02(\t\x12\x10\n\x08plantIds\x18\x02 \x03(\t\"[\n\x17\x46indScenePlantsResponse\x12\x10\n\x08plantIds\x18\x01 \x03(\t\x12.\n\tbuildings\x18\x02 \x03(\x0b\x32\x1b.com.common.msg.BuildingMsg\"6\n\x12PlantAppearRequest\x12\x0f\n\x07sceneId\x18\x01 \x02(\t\x12\x0f\n\x07plantId\x18\x02 \x02(\t\"\x15\n\x13PlantAppearResponse\":\n\x16\x42uildingLevelUpRequest\x12\x0f\n\x07sceneId\x18\x01 \x02(\t\x12\x0f\n\x07plantId\x18\x02 \x02(\t\"\x19\n\x17\x42uildingLevelUpResponse\"6\n\x11TraderInfoRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\x10\n\x08traderId\x18\x02 \x01(\t\"\x9a\x01\n\x10TradeExchangeMsg\x12\x0c\n\x04\x64one\x18\x01 \x01(\x08\x12\'\n\x06reward\x18\x02 \x01(\x0b\x32\x17.com.common.msg.ItemMsg\x12)\n\x08\x65xchange\x18\x03 \x01(\x0b\x32\x17.com.common.msg.ItemMsg\x12$\n\x03\x62\x61g\x18\x04 \x01(\x0b\x32\x17.com.common.msg.ItemMsg\"e\n\x19TradeTimeLimitExchangeMsg\x12\x10\n\x08leftTime\x18\x01 \x01(\x03\x12\x36\n\x0c\x65xchangeInfo\x18\x02 \x01(\x0b\x32 .com.common.msg.TradeExchangeMsg\"\xc5\x01\n\x12TraderInfoResponse\x12\x0c\n\x04\x64one\x18\x01 \x01(\x08\x12\x31\n\x07normals\x18\x02 \x03(\x0b\x32 .com.common.msg.TradeExchangeMsg\x12<\n\ttimeLimit\x18\x03 \x01(\x0b\x32).com.common.msg.TradeTimeLimitExchangeMsg\x12\x30\n\x0f\x63ompleteRewards\x18\x04 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"T\n\x1aTradeNormalExchangeRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\x10\n\x08traderId\x18\x02 \x01(\t\x12\x13\n\x0bnormalIndex\x18\x03 \x01(\x05\"\xb1\x01\n\x1bTradeNormalExchangeResponse\x12(\n\x07rewards\x18\x01 \x01(\x0b\x32\x17.com.common.msg.ItemMsg\x12\x36\n\x0c\x65xchangeInfo\x18\x02 \x01(\x0b\x32 .com.common.msg.TradeExchangeMsg\x12\x30\n\x0f\x63ompleteRewards\x18\x03 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"B\n\x1dTradeTimeLimitExchangeRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\x10\n\x08traderId\x18\x02 \x01(\t\"\xea\x01\n\x1eTradeTimeLimitExchangeResponse\x12(\n\x07rewards\x18\x01 \x01(\x0b\x32\x17.com.common.msg.ItemMsg\x12+\n\nboxRewards\x18\x02 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12?\n\x0c\x65xchangeInfo\x18\x03 \x01(\x0b\x32).com.common.msg.TradeTimeLimitExchangeMsg\x12\x30\n\x0f\x63ompleteRewards\x18\x04 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\";\n\x17MonsterWheelInfoRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\x0f\n\x07plantId\x18\x02 \x01(\t\"U\n\x18MonsterWheelInfoResponse\x12\n\n\x02hp\x18\x01 \x01(\x05\x12\x0f\n\x07hpLimit\x18\x02 \x01(\x05\x12\r\n\x05round\x18\x03 \x01(\x05\x12\r\n\x05wheel\x18\x04 \x03(\x05\";\n\x17MonsterWheelTurnRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\x0f\n\x07plantId\x18\x02 \x01(\t\"E\n\x18MonsterWheelTurnResponse\x12\r\n\x05index\x18\x01 \x01(\x05\x12\n\n\x02hp\x18\x02 \x01(\x05\x12\x0e\n\x06\x65nergy\x18\x03 \x01(\x05\"1\n\x1eObstacleAchievementInfoRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\"m\n\x16ObstacleAchievementMsg\x12\x10\n\x08\x63omplete\x18\x01 \x01(\x08\x12\x15\n\rachievementId\x18\x02 \x01(\t\x12\x0c\n\x04type\x18\x03 \x01(\x05\x12\r\n\x05\x63ount\x18\x04 \x01(\x05\x12\r\n\x05limit\x18\x05 \x01(\x05\"q\n\x1fObstacleAchievementInfoResponse\x12\x10\n\x08\x63omplete\x18\x01 \x01(\x08\x12<\n\x0c\x61\x63hievements\x18\x02 \x03(\x0b\x32&.com.common.msg.ObstacleAchievementMsg\"Z\n\x0f\x46ireBombRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\t\n\x01x\x18\x02 \x01(\x05\x12\t\n\x01y\x18\x03 \x01(\x05\x12\x0e\n\x06\x62ombId\x18\x04 \x01(\t\x12\x10\n\x08plantIds\x18\x05 \x03(\t\"G\n\x10\x46ireBombResponse\x12\x33\n\x07\x65\x66\x66\x65\x63ts\x18\x01 \x03(\x0b\x32\".com.common.msg.ClearPlantResponse\"\x17\n\x15SceneCloseTimeRequest\"5\n\x0fSceneCloseEntry\x12\x0f\n\x07sceneId\x18\x01 \x02(\t\x12\x11\n\tcloseTime\x18\x02 \x02(\x03\"O\n\x16SceneCloseTimeResponse\x12\x35\n\x0c\x63loseEntries\x18\x01 \x03(\x0b\x32\x1f.com.common.msg.SceneCloseEntry\"=\n\x19\x42uildingDropRewardRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\x0f\n\x07plantId\x18\x02 \x01(\t\"F\n\x1a\x42uildingDropRewardResponse\x12(\n\x07rewards\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg*\xe2\x04\n\x18SceneModuleMsgSubCommand\x12\"\n\x1cSCENEMODULEMSG_SUB_SCENEINFO\x10\xd5\xc5\x01\x12#\n\x1dSCENEMODULEMSG_SUB_CLEARPLANT\x10\xd6\xc5\x01\x12(\n\"SCENEMODULEMSG_SUB_FINDSCENEPLANTS\x10\xd7\xc5\x01\x12(\n\"SCENEMODULEMSG_SUB_BUILDINGLEVELUP\x10\xd8\xc5\x01\x12#\n\x1dSCENEMODULEMSG_SUB_TRADERINFO\x10\xd9\xc5\x01\x12,\n&SCENEMODULEMSG_SUB_TRADENORMALEXCHANGE\x10\xda\xc5\x01\x12/\n)SCENEMODULEMSG_SUB_TRADETIMELIMITEXCHANGE\x10\xdb\xc5\x01\x12)\n#SCENEMODULEMSG_SUB_MONSTERWHEELINFO\x10\xdc\xc5\x01\x12)\n#SCENEMODULEMSG_SUB_MONSTERWHEELTURN\x10\xdd\xc5\x01\x12\x30\n*SCENEMODULEMSG_SUB_OBSTACLEACHIEVEMENTINFO\x10\xde\xc5\x01\x12$\n\x1eSCENEMODULEMSG_SUB_PLANTAPPEAR\x10\xdf\xc5\x01\x12!\n\x1bSCENEMODULEMSG_SUB_FIREBOMB\x10\xe0\xc5\x01\x12\'\n!SCENEMODULEMSG_SUB_SCENECLOSETIME\x10\xe1\xc5\x01\x12+\n%SCENEMODULEMSG_SUB_BUILDINGDROPREWARD\x10\xe2\xc5\x01'
+  serialized_pb=b'\n\x14SceneModuleMsg.proto\x12\x0e\x63om.common.msg\x1a\x13ItemModuleMsg.proto\x1a\x17\x46\x61rmlandModuleMsg.proto\x1a\x1d\x43onvertFactoryModuleMsg.proto\"w\n\x08PlantMsg\x12\x0f\n\x07plantId\x18\x01 \x01(\t\x12)\n\x08\x63onsumed\x18\x02 \x01(\x0b\x32\x17.com.common.msg.ItemMsg\x12/\n\x0e\x63ollectRewards\x18\x03 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"#\n\x10SceneInfoRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\"M\n\x0b\x42uildingMsg\x12\x0f\n\x07plantId\x18\x01 \x02(\t\x12\r\n\x05level\x18\x02 \x02(\x05\x12\x0c\n\x04\x64rop\x18\x03 \x01(\x08\x12\x10\n\x08progress\x18\x04 \x01(\x05\"\x1c\n\tTraderMsg\x12\x0f\n\x07plantId\x18\x01 \x02(\t\")\n\nMonsterMsg\x12\x0f\n\x07plantId\x18\x01 \x02(\t\x12\n\n\x02hp\x18\x02 \x02(\x05\"\xb1\x03\n\x11SceneInfoResponse\x12(\n\x06plants\x18\x01 \x03(\x0b\x32\x18.com.common.msg.PlantMsg\x12\x0f\n\x07\x63leared\x18\x02 \x03(\t\x12;\n\x1a\x61utoReceivedCollectRewards\x18\x03 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12\x31\n\x0c\x62uildingMsgs\x18\x04 \x03(\x0b\x32\x1b.com.common.msg.BuildingMsg\x12\x31\n\x0c\x66\x61rmlandMsgs\x18\x05 \x03(\x0b\x32\x1b.com.common.msg.FarmlandMsg\x12-\n\ntraderMsgs\x18\x06 \x03(\x0b\x32\x19.com.common.msg.TraderMsg\x12:\n\x0f\x63onvertFactorys\x18\x07 \x03(\x0b\x32!.com.common.msg.ConvertFactoryMsg\x12/\n\x0bmonsterMsgs\x18\x08 \x03(\x0b\x32\x1a.com.common.msg.MonsterMsg\x12\x11\n\tcloseTime\x18\t \x01(\x03\x12\x0f\n\x07\x61ppears\x18\n \x03(\t\"\x91\x01\n\x1cObstacleAchievementRewardMsg\x12\x15\n\rachievementId\x18\x01 \x01(\t\x12(\n\x07rewards\x18\x02 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12\x30\n\x0f\x63ompleteRewards\x18\x03 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"5\n\x11\x43learPlantRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\x0f\n\x07plantId\x18\x02 \x01(\t\"\xfb\x01\n\x12\x43learPlantResponse\x12\x0f\n\x07\x63leared\x18\x01 \x01(\x08\x12)\n\x08produced\x18\x02 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12\'\n\x05plant\x18\x03 \x01(\x0b\x32\x18.com.common.msg.PlantMsg\x12&\n\x05items\x18\x04 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12G\n\x11\x61\x63hievementReward\x18\x05 \x01(\x0b\x32,.com.common.msg.ObstacleAchievementRewardMsg\x12\x0f\n\x07plantId\x18\x06 \x01(\t\";\n\x16\x46indScenePlantsRequest\x12\x0f\n\x07sceneId\x18\x01 \x02(\t\x12\x10\n\x08plantIds\x18\x02 \x03(\t\"[\n\x17\x46indScenePlantsResponse\x12\x10\n\x08plantIds\x18\x01 \x03(\t\x12.\n\tbuildings\x18\x02 \x03(\x0b\x32\x1b.com.common.msg.BuildingMsg\"6\n\x12PlantAppearRequest\x12\x0f\n\x07sceneId\x18\x01 \x02(\t\x12\x0f\n\x07plantId\x18\x02 \x02(\t\"\x15\n\x13PlantAppearResponse\":\n\x16\x42uildingLevelUpRequest\x12\x0f\n\x07sceneId\x18\x01 \x02(\t\x12\x0f\n\x07plantId\x18\x02 \x02(\t\"\x19\n\x17\x42uildingLevelUpResponse\"6\n\x11TraderInfoRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\x10\n\x08traderId\x18\x02 \x01(\t\"\x9a\x01\n\x10TradeExchangeMsg\x12\x0c\n\x04\x64one\x18\x01 \x01(\x08\x12\'\n\x06reward\x18\x02 \x01(\x0b\x32\x17.com.common.msg.ItemMsg\x12)\n\x08\x65xchange\x18\x03 \x01(\x0b\x32\x17.com.common.msg.ItemMsg\x12$\n\x03\x62\x61g\x18\x04 \x01(\x0b\x32\x17.com.common.msg.ItemMsg\"e\n\x19TradeTimeLimitExchangeMsg\x12\x10\n\x08leftTime\x18\x01 \x01(\x03\x12\x36\n\x0c\x65xchangeInfo\x18\x02 \x01(\x0b\x32 .com.common.msg.TradeExchangeMsg\"\xc5\x01\n\x12TraderInfoResponse\x12\x0c\n\x04\x64one\x18\x01 \x01(\x08\x12\x31\n\x07normals\x18\x02 \x03(\x0b\x32 .com.common.msg.TradeExchangeMsg\x12<\n\ttimeLimit\x18\x03 \x01(\x0b\x32).com.common.msg.TradeTimeLimitExchangeMsg\x12\x30\n\x0f\x63ompleteRewards\x18\x04 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"T\n\x1aTradeNormalExchangeRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\x10\n\x08traderId\x18\x02 \x01(\t\x12\x13\n\x0bnormalIndex\x18\x03 \x01(\x05\"\xb1\x01\n\x1bTradeNormalExchangeResponse\x12(\n\x07rewards\x18\x01 \x01(\x0b\x32\x17.com.common.msg.ItemMsg\x12\x36\n\x0c\x65xchangeInfo\x18\x02 \x01(\x0b\x32 .com.common.msg.TradeExchangeMsg\x12\x30\n\x0f\x63ompleteRewards\x18\x03 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"B\n\x1dTradeTimeLimitExchangeRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\x10\n\x08traderId\x18\x02 \x01(\t\"\xea\x01\n\x1eTradeTimeLimitExchangeResponse\x12(\n\x07rewards\x18\x01 \x01(\x0b\x32\x17.com.common.msg.ItemMsg\x12+\n\nboxRewards\x18\x02 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12?\n\x0c\x65xchangeInfo\x18\x03 \x01(\x0b\x32).com.common.msg.TradeTimeLimitExchangeMsg\x12\x30\n\x0f\x63ompleteRewards\x18\x04 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\";\n\x17MonsterWheelInfoRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\x0f\n\x07plantId\x18\x02 \x01(\t\"f\n\x18MonsterWheelInfoResponse\x12\n\n\x02hp\x18\x01 \x01(\x05\x12\x0f\n\x07hpLimit\x18\x02 \x01(\x05\x12\r\n\x05round\x18\x03 \x01(\x05\x12\r\n\x05wheel\x18\x04 \x03(\x05\x12\x0f\n\x07roundId\x18\x05 \x01(\t\";\n\x17MonsterWheelTurnRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\x0f\n\x07plantId\x18\x02 \x01(\t\"E\n\x18MonsterWheelTurnResponse\x12\r\n\x05index\x18\x01 \x01(\x05\x12\n\n\x02hp\x18\x02 \x01(\x05\x12\x0e\n\x06\x65nergy\x18\x03 \x01(\x05\"1\n\x1eObstacleAchievementInfoRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\"m\n\x16ObstacleAchievementMsg\x12\x10\n\x08\x63omplete\x18\x01 \x01(\x08\x12\x15\n\rachievementId\x18\x02 \x01(\t\x12\x0c\n\x04type\x18\x03 \x01(\x05\x12\r\n\x05\x63ount\x18\x04 \x01(\x05\x12\r\n\x05limit\x18\x05 \x01(\x05\"q\n\x1fObstacleAchievementInfoResponse\x12\x10\n\x08\x63omplete\x18\x01 \x01(\x08\x12<\n\x0c\x61\x63hievements\x18\x02 \x03(\x0b\x32&.com.common.msg.ObstacleAchievementMsg\"Z\n\x0f\x46ireBombRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\t\n\x01x\x18\x02 \x01(\x05\x12\t\n\x01y\x18\x03 \x01(\x05\x12\x0e\n\x06\x62ombId\x18\x04 \x01(\t\x12\x10\n\x08plantIds\x18\x05 \x03(\t\"G\n\x10\x46ireBombResponse\x12\x33\n\x07\x65\x66\x66\x65\x63ts\x18\x01 \x03(\x0b\x32\".com.common.msg.ClearPlantResponse\"\x17\n\x15SceneCloseTimeRequest\"5\n\x0fSceneCloseEntry\x12\x0f\n\x07sceneId\x18\x01 \x02(\t\x12\x11\n\tcloseTime\x18\x02 \x02(\x03\"O\n\x16SceneCloseTimeResponse\x12\x35\n\x0c\x63loseEntries\x18\x01 \x03(\x0b\x32\x1f.com.common.msg.SceneCloseEntry\"=\n\x19\x42uildingDropRewardRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\x0f\n\x07plantId\x18\x02 \x01(\t\"F\n\x1a\x42uildingDropRewardResponse\x12(\n\x07rewards\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\";\n\x16\x46indPlantAppearRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\x10\n\x08plantIds\x18\x02 \x03(\t\"+\n\x17\x46indPlantAppearResponse\x12\x10\n\x08plantIds\x18\x01 \x03(\t*\x8c\x05\n\x18SceneModuleMsgSubCommand\x12\"\n\x1cSCENEMODULEMSG_SUB_SCENEINFO\x10\xd5\xc5\x01\x12#\n\x1dSCENEMODULEMSG_SUB_CLEARPLANT\x10\xd6\xc5\x01\x12(\n\"SCENEMODULEMSG_SUB_FINDSCENEPLANTS\x10\xd7\xc5\x01\x12(\n\"SCENEMODULEMSG_SUB_BUILDINGLEVELUP\x10\xd8\xc5\x01\x12#\n\x1dSCENEMODULEMSG_SUB_TRADERINFO\x10\xd9\xc5\x01\x12,\n&SCENEMODULEMSG_SUB_TRADENORMALEXCHANGE\x10\xda\xc5\x01\x12/\n)SCENEMODULEMSG_SUB_TRADETIMELIMITEXCHANGE\x10\xdb\xc5\x01\x12)\n#SCENEMODULEMSG_SUB_MONSTERWHEELINFO\x10\xdc\xc5\x01\x12)\n#SCENEMODULEMSG_SUB_MONSTERWHEELTURN\x10\xdd\xc5\x01\x12\x30\n*SCENEMODULEMSG_SUB_OBSTACLEACHIEVEMENTINFO\x10\xde\xc5\x01\x12$\n\x1eSCENEMODULEMSG_SUB_PLANTAPPEAR\x10\xdf\xc5\x01\x12!\n\x1bSCENEMODULEMSG_SUB_FIREBOMB\x10\xe0\xc5\x01\x12\'\n!SCENEMODULEMSG_SUB_SCENECLOSETIME\x10\xe1\xc5\x01\x12+\n%SCENEMODULEMSG_SUB_BUILDINGDROPREWARD\x10\xe2\xc5\x01\x12(\n\"SCENEMODULEMSG_SUB_FINDPLANTAPPEAR\x10\xe3\xc5\x01'
   ,
   dependencies=[ItemModuleMsg__pb2.DESCRIPTOR,FarmlandModuleMsg__pb2.DESCRIPTOR,ConvertFactoryModuleMsg__pb2.DESCRIPTOR,])
 
@@ -104,11 +104,16 @@ _SCENEMODULEMSGSUBCOMMAND = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SCENEMODULEMSG_SUB_FINDPLANTAPPEAR', index=14, number=25315,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=3766,
-  serialized_end=4376,
+  serialized_start=3869,
+  serialized_end=4521,
 )
 _sym_db.RegisterEnumDescriptor(_SCENEMODULEMSGSUBCOMMAND)
 
@@ -127,6 +132,7 @@ SCENEMODULEMSG_SUB_PLANTAPPEAR = 25311
 SCENEMODULEMSG_SUB_FIREBOMB = 25312
 SCENEMODULEMSG_SUB_SCENECLOSETIME = 25313
 SCENEMODULEMSG_SUB_BUILDINGDROPREWARD = 25314
+SCENEMODULEMSG_SUB_FINDPLANTAPPEAR = 25315
 
 
 
@@ -237,6 +243,13 @@ _BUILDINGMSG = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='progress', full_name='com.common.msg.BuildingMsg.progress', index=3,
+      number=4, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -250,7 +263,7 @@ _BUILDINGMSG = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=275,
-  serialized_end=334,
+  serialized_end=352,
 )
 
 
@@ -281,8 +294,8 @@ _TRADERMSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=336,
-  serialized_end=364,
+  serialized_start=354,
+  serialized_end=382,
 )
 
 
@@ -320,8 +333,8 @@ _MONSTERMSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=366,
-  serialized_end=407,
+  serialized_start=384,
+  serialized_end=425,
 )
 
 
@@ -397,8 +410,8 @@ _SCENEINFORESPONSE = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='creatures', full_name='com.common.msg.SceneInfoResponse.creatures', index=9,
-      number=10, type=11, cpp_type=10, label=3,
+      name='appears', full_name='com.common.msg.SceneInfoResponse.appears', index=9,
+      number=10, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -415,8 +428,8 @@ _SCENEINFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=410,
-  serialized_end=881,
+  serialized_start=428,
+  serialized_end=861,
 )
 
 
@@ -461,8 +474,8 @@ _OBSTACLEACHIEVEMENTREWARDMSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=884,
-  serialized_end=1029,
+  serialized_start=864,
+  serialized_end=1009,
 )
 
 
@@ -500,8 +513,8 @@ _CLEARPLANTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1031,
-  serialized_end=1084,
+  serialized_start=1011,
+  serialized_end=1064,
 )
 
 
@@ -567,8 +580,8 @@ _CLEARPLANTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1087,
-  serialized_end=1338,
+  serialized_start=1067,
+  serialized_end=1318,
 )
 
 
@@ -606,8 +619,8 @@ _FINDSCENEPLANTSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1340,
-  serialized_end=1399,
+  serialized_start=1320,
+  serialized_end=1379,
 )
 
 
@@ -645,8 +658,8 @@ _FINDSCENEPLANTSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1401,
-  serialized_end=1492,
+  serialized_start=1381,
+  serialized_end=1472,
 )
 
 
@@ -684,8 +697,8 @@ _PLANTAPPEARREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1494,
-  serialized_end=1548,
+  serialized_start=1474,
+  serialized_end=1528,
 )
 
 
@@ -709,8 +722,8 @@ _PLANTAPPEARRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1550,
-  serialized_end=1571,
+  serialized_start=1530,
+  serialized_end=1551,
 )
 
 
@@ -748,8 +761,8 @@ _BUILDINGLEVELUPREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1573,
-  serialized_end=1631,
+  serialized_start=1553,
+  serialized_end=1611,
 )
 
 
@@ -773,8 +786,8 @@ _BUILDINGLEVELUPRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1633,
-  serialized_end=1658,
+  serialized_start=1613,
+  serialized_end=1638,
 )
 
 
@@ -812,8 +825,8 @@ _TRADERINFOREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1660,
-  serialized_end=1714,
+  serialized_start=1640,
+  serialized_end=1694,
 )
 
 
@@ -865,8 +878,8 @@ _TRADEEXCHANGEMSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1717,
-  serialized_end=1871,
+  serialized_start=1697,
+  serialized_end=1851,
 )
 
 
@@ -904,8 +917,8 @@ _TRADETIMELIMITEXCHANGEMSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1873,
-  serialized_end=1974,
+  serialized_start=1853,
+  serialized_end=1954,
 )
 
 
@@ -957,8 +970,8 @@ _TRADERINFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1977,
-  serialized_end=2174,
+  serialized_start=1957,
+  serialized_end=2154,
 )
 
 
@@ -1003,8 +1016,8 @@ _TRADENORMALEXCHANGEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2176,
-  serialized_end=2260,
+  serialized_start=2156,
+  serialized_end=2240,
 )
 
 
@@ -1049,8 +1062,8 @@ _TRADENORMALEXCHANGERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2263,
-  serialized_end=2440,
+  serialized_start=2243,
+  serialized_end=2420,
 )
 
 
@@ -1088,8 +1101,8 @@ _TRADETIMELIMITEXCHANGEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2442,
-  serialized_end=2508,
+  serialized_start=2422,
+  serialized_end=2488,
 )
 
 
@@ -1141,8 +1154,8 @@ _TRADETIMELIMITEXCHANGERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2511,
-  serialized_end=2745,
+  serialized_start=2491,
+  serialized_end=2725,
 )
 
 
@@ -1180,8 +1193,8 @@ _MONSTERWHEELINFOREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2747,
-  serialized_end=2806,
+  serialized_start=2727,
+  serialized_end=2786,
 )
 
 
@@ -1221,6 +1234,13 @@ _MONSTERWHEELINFORESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='roundId', full_name='com.common.msg.MonsterWheelInfoResponse.roundId', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1233,8 +1253,8 @@ _MONSTERWHEELINFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2808,
-  serialized_end=2893,
+  serialized_start=2788,
+  serialized_end=2890,
 )
 
 
@@ -1272,8 +1292,8 @@ _MONSTERWHEELTURNREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2895,
-  serialized_end=2954,
+  serialized_start=2892,
+  serialized_end=2951,
 )
 
 
@@ -1318,8 +1338,8 @@ _MONSTERWHEELTURNRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2956,
-  serialized_end=3025,
+  serialized_start=2953,
+  serialized_end=3022,
 )
 
 
@@ -1350,8 +1370,8 @@ _OBSTACLEACHIEVEMENTINFOREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3027,
-  serialized_end=3076,
+  serialized_start=3024,
+  serialized_end=3073,
 )
 
 
@@ -1410,8 +1430,8 @@ _OBSTACLEACHIEVEMENTMSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3078,
-  serialized_end=3187,
+  serialized_start=3075,
+  serialized_end=3184,
 )
 
 
@@ -1449,8 +1469,8 @@ _OBSTACLEACHIEVEMENTINFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3189,
-  serialized_end=3302,
+  serialized_start=3186,
+  serialized_end=3299,
 )
 
 
@@ -1509,8 +1529,8 @@ _FIREBOMBREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3304,
-  serialized_end=3394,
+  serialized_start=3301,
+  serialized_end=3391,
 )
 
 
@@ -1541,8 +1561,8 @@ _FIREBOMBRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3396,
-  serialized_end=3467,
+  serialized_start=3393,
+  serialized_end=3464,
 )
 
 
@@ -1566,8 +1586,8 @@ _SCENECLOSETIMEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3469,
-  serialized_end=3492,
+  serialized_start=3466,
+  serialized_end=3489,
 )
 
 
@@ -1605,8 +1625,8 @@ _SCENECLOSEENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3494,
-  serialized_end=3547,
+  serialized_start=3491,
+  serialized_end=3544,
 )
 
 
@@ -1637,8 +1657,8 @@ _SCENECLOSETIMERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3549,
-  serialized_end=3628,
+  serialized_start=3546,
+  serialized_end=3625,
 )
 
 
@@ -1676,8 +1696,8 @@ _BUILDINGDROPREWARDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3630,
-  serialized_end=3691,
+  serialized_start=3627,
+  serialized_end=3688,
 )
 
 
@@ -1708,8 +1728,79 @@ _BUILDINGDROPREWARDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3693,
-  serialized_end=3763,
+  serialized_start=3690,
+  serialized_end=3760,
+)
+
+
+_FINDPLANTAPPEARREQUEST = _descriptor.Descriptor(
+  name='FindPlantAppearRequest',
+  full_name='com.common.msg.FindPlantAppearRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='sceneId', full_name='com.common.msg.FindPlantAppearRequest.sceneId', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='plantIds', full_name='com.common.msg.FindPlantAppearRequest.plantIds', index=1,
+      number=2, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3762,
+  serialized_end=3821,
+)
+
+
+_FINDPLANTAPPEARRESPONSE = _descriptor.Descriptor(
+  name='FindPlantAppearResponse',
+  full_name='com.common.msg.FindPlantAppearResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='plantIds', full_name='com.common.msg.FindPlantAppearResponse.plantIds', index=0,
+      number=1, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3823,
+  serialized_end=3866,
 )
 
 _PLANTMSG.fields_by_name['consumed'].message_type = ItemModuleMsg__pb2._ITEMMSG
@@ -1721,7 +1812,6 @@ _SCENEINFORESPONSE.fields_by_name['farmlandMsgs'].message_type = FarmlandModuleM
 _SCENEINFORESPONSE.fields_by_name['traderMsgs'].message_type = _TRADERMSG
 _SCENEINFORESPONSE.fields_by_name['convertFactorys'].message_type = ConvertFactoryModuleMsg__pb2._CONVERTFACTORYMSG
 _SCENEINFORESPONSE.fields_by_name['monsterMsgs'].message_type = _MONSTERMSG
-_SCENEINFORESPONSE.fields_by_name['creatures'].message_type = ItemModuleMsg__pb2._MAGICALCREATUREMSG
 _OBSTACLEACHIEVEMENTREWARDMSG.fields_by_name['rewards'].message_type = ItemModuleMsg__pb2._ITEMMSG
 _OBSTACLEACHIEVEMENTREWARDMSG.fields_by_name['completeRewards'].message_type = ItemModuleMsg__pb2._ITEMMSG
 _CLEARPLANTRESPONSE.fields_by_name['produced'].message_type = ItemModuleMsg__pb2._ITEMMSG
@@ -1784,6 +1874,8 @@ DESCRIPTOR.message_types_by_name['SceneCloseEntry'] = _SCENECLOSEENTRY
 DESCRIPTOR.message_types_by_name['SceneCloseTimeResponse'] = _SCENECLOSETIMERESPONSE
 DESCRIPTOR.message_types_by_name['BuildingDropRewardRequest'] = _BUILDINGDROPREWARDREQUEST
 DESCRIPTOR.message_types_by_name['BuildingDropRewardResponse'] = _BUILDINGDROPREWARDRESPONSE
+DESCRIPTOR.message_types_by_name['FindPlantAppearRequest'] = _FINDPLANTAPPEARREQUEST
+DESCRIPTOR.message_types_by_name['FindPlantAppearResponse'] = _FINDPLANTAPPEARRESPONSE
 DESCRIPTOR.enum_types_by_name['SceneModuleMsgSubCommand'] = _SCENEMODULEMSGSUBCOMMAND
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -2045,6 +2137,20 @@ BuildingDropRewardResponse = _reflection.GeneratedProtocolMessageType('BuildingD
   # @@protoc_insertion_point(class_scope:com.common.msg.BuildingDropRewardResponse)
   })
 _sym_db.RegisterMessage(BuildingDropRewardResponse)
+
+FindPlantAppearRequest = _reflection.GeneratedProtocolMessageType('FindPlantAppearRequest', (_message.Message,), {
+  'DESCRIPTOR' : _FINDPLANTAPPEARREQUEST,
+  '__module__' : 'SceneModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.FindPlantAppearRequest)
+  })
+_sym_db.RegisterMessage(FindPlantAppearRequest)
+
+FindPlantAppearResponse = _reflection.GeneratedProtocolMessageType('FindPlantAppearResponse', (_message.Message,), {
+  'DESCRIPTOR' : _FINDPLANTAPPEARRESPONSE,
+  '__module__' : 'SceneModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.FindPlantAppearResponse)
+  })
+_sym_db.RegisterMessage(FindPlantAppearResponse)
 
 
 # @@protoc_insertion_point(module_scope)

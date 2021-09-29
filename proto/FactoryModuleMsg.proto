@@ -41,7 +41,7 @@ message OpenSlotRequest {
 
 // 开启工厂槽位 响应
 message OpenSlotResponse {
-
+	repeated FactoryMsg factorys = 1;
 }
 
 // 添加生产物资队列 请求
@@ -54,6 +54,7 @@ message AddFactoryProduceRequest {
 message AddFactoryProduceResponse {
 	// 同步道具
 	repeated ItemMsg items = 1;
+	repeated FactoryMsg factorys = 2;
 }
 
 // 领取生产物资 请求
@@ -65,6 +66,7 @@ message ReceiveFactoryProduceRequest {
 message ReceiveFactoryProduceResponse {
 	// 同步道具
 	repeated ItemMsg items = 1;
+	repeated FactoryMsg factorys = 2;
 }
 
 // 加速生产 请求
@@ -77,6 +79,7 @@ message AccelerateProduceRequest {
 message AccelerateProduceResponse {
 	// 同步道具
 	repeated ItemMsg items = 1;
+	repeated FactoryMsg factorys = 2;
 }
 
 // 生产基地升级 请求
