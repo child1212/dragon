@@ -1,6 +1,8 @@
 #%%
 import sys
-sys.path.append('D:\\pyprogram\\PyTestTools\\senditems\\package')
+sys.path.append('D:\\pyprogram\\PyTestTools\\dragon\\package')
+sys.path.append('D:\\pyprogram\\PyTestTools\\dragon\\function')
+from func_dragon import *
 import GatewayModuleMsg_pb2
 import CoreModuleMsg_pb2
 import GMModuleMsg_pb2
@@ -98,12 +100,21 @@ def GM_cmd(login_res,server,version,cmd):
         print("Server Disconnected ！！!")
         return 0
 
-account = "dragon706"
+account = "798"
 server = "http://dtest.gameyici.com" 
 version = "7.1.0"
-cmd = "gmSubmitTask 2 Mission1_002Closeathand"
+cmd = "gmSubmitTask 3 Mission2_012Themyteriousentrance"
+
+
 log = login(account,server,version)
 entergame(log,server,version)
 GM = GM_cmd(log,server,version,cmd)
+
+#发沙石龙
+log_res = login_gm(server) 
+info = get_playerid(account, log_res,server)    #��ȡplayerId
+player = info['playerid']
+session = info['sessionid']
+send_gift(14052, 1, player,session, account, log_res,server)
 
 # %%

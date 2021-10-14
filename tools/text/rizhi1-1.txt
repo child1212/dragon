@@ -1,117 +1,42 @@
-info-2021-08-23-15-1.log:2021-08-23 15:31:21:426 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 4 领取后的startTime: 1629677187000 productItemId:3015
-info-2021-08-23-15-1.log:2021-08-23 15:31:21:428 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 4 领取后的startTime: 1629677487000 productItemId:3015
-info-2021-08-23-15-1.log:2021-08-23 15:31:21:430 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 4 领取后的startTime: 1629677787000 productItemId:3015
-info-2021-08-23-15-1.log:2021-08-23 15:31:21:432 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 4 领取后的startTime: 1629678087000 productItemId:3015
-info-2021-08-23-15-1.log:2021-08-23 15:31:21:434 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 4 领取后的startTime: 1629678387000 productItemId:3015
-info-2021-08-23-15-1.log:2021-08-23 15:31:21:436 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 1 领取后的startTime: 1629677130000 productItemId:3004
-info-2021-08-23-15-1.log:2021-08-23 15:31:21:439 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 1 领取后的startTime: 1629677310000 productItemId:3004
-info-2021-08-23-15-1.log:2021-08-23 15:31:21:441 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 1 领取后的startTime: 1629677490000 productItemId:3004
-info-2021-08-23-15-1.log:2021-08-23 15:31:21:443 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 1 领取后的startTime: 1629677670000 productItemId:3004
-info-2021-08-23-15-1.log:2021-08-23 15:31:21:445 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 1 领取后的startTime: 1629677850000 productItemId:3004
-info-2021-08-23-15-1.log:2021-08-23 15:31:44:153 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：4 - 3015
-info-2021-08-23-15-1.log:2021-08-23 15:31:48:691 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：4 - 3001
-info-2021-08-23-15-1.log:2021-08-23 15:31:50:249 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：4 - 3001
-info-2021-08-23-15-1.log:2021-08-23 15:31:53:255 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：4 - 3001
-info-2021-08-23-15-1.log:2021-08-23 15:31:57:731 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：4 - 3001
-info-2021-08-23-15-1.log:2021-08-23 15:47:41:966 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 4 领取后的startTime: 1629704199000 productItemId:3015
-info-2021-08-23-15-1.log:2021-08-23 15:47:41:968 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 4 领取后的startTime: 1629704379000 productItemId:3001
-info-2021-08-23-15-1.log:2021-08-23 15:47:41:971 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 4 领取后的startTime: 1629704559000 productItemId:3001
-info-2021-08-23-15-1.log:2021-08-23 15:47:41:973 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 4 领取后的startTime: 1629704739000 productItemId:3001
-info-2021-08-23-15-1.log:2021-08-23 15:47:47:341 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：4 - 3015
-info-2021-08-23-15-1.log:2021-08-23 15:47:49:433 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：4 - 3015
-info-2021-08-23-15-1.log:2021-08-23 15:47:52:486 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：4 - 3015
-info-2021-08-23-15-1.log:2021-08-23 15:47:56:798 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：4 - 3001
-info-2021-08-23-15-1.log:2021-08-23 15:48:08:017 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：1 - 3016
-info-2021-08-23-15-1.log:2021-08-23 15:48:43:845 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 4 领取后的startTime: 1629704919000 productItemId:3001
-info-2021-08-23-15-1.log:2021-08-23 15:50:38:735 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：1 - 3016
-info-2021-08-23-15-1.log:2021-08-23 15:51:07:568 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：1 - 3016
-info-2021-08-23-15-1.log:2021-08-23 15:51:38:101 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：1 - 3004
-info-2021-08-23-15-1.log:2021-08-23 15:51:47:097 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：1 - 3004
-info-2021-08-23-15-1.log:2021-08-23 15:58:28:584 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 1 领取后的startTime: 1629705478000 productItemId:3016
-info-2021-08-23-15-1.log:2021-08-23 15:58:28:587 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 4 领取后的startTime: 1629705219000 productItemId:3015
-info-2021-08-23-16-1.log:2021-08-23 16:12:05:341 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 4 领取后的startTime: 1629705519000 productItemId:3015
-info-2021-08-23-16-1.log:2021-08-23 16:12:05:344 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 4 领取后的startTime: 1629705819000 productItemId:3015
-info-2021-08-23-16-1.log:2021-08-23 16:12:05:346 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 4 领取后的startTime: 1629705999000 productItemId:3001
-info-2021-08-23-16-1.log:2021-08-23 16:12:05:348 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 1 领取后的startTime: 1629706078000 productItemId:3016
-info-2021-08-23-16-1.log:2021-08-23 16:23:20:035 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：4 - 3015
-info-2021-08-23-16-1.log:2021-08-23 16:23:20:310 ERROR - 生产 玩家：[kcskgn] version:4.1 领取生产物资：领取物资不是生产队列第一个 factoryId：1 Server ItemId：3016 clientItemId: 3004 生产队列：[FactoryProduce{itemId=3016}, FactoryProduce{itemId=3004}, FactoryProduce{itemId=3004}] 领取：[factoryId: "1"
-info-2021-08-23-16-1.log:2021-08-23 16:24:16:411 ERROR - 生产 玩家：[kcskgn] version:4.1 领取生产物资：领取物资不是生产队列第一个 factoryId：1 Server ItemId：3016 clientItemId: 3004 生产队列：[FactoryProduce{itemId=3016}, FactoryProduce{itemId=3004}, FactoryProduce{itemId=3004}] 领取：[factoryId: "1"
-info-2021-08-23-16-1.log:2021-08-23 16:24:22:896 ERROR - 生产 玩家：[kcskgn] version:4.1 领取生产物资：领取物资不是生产队列第一个 factoryId：1 Server ItemId：3016 clientItemId: 3004 生产队列：[FactoryProduce{itemId=3016}, FactoryProduce{itemId=3004}, FactoryProduce{itemId=3004}] 领取：[factoryId: "1"
-info-2021-08-23-16-1.log:2021-08-23 16:25:59:905 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 1 领取后的startTime: 1629706678000 productItemId:3016
-info-2021-08-23-16-1.log:2021-08-23 16:25:59:907 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 1 领取后的startTime: 1629706858000 productItemId:3004
-info-2021-08-23-16-1.log:2021-08-23 16:25:59:909 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 1 领取后的startTime: 1629707038000 productItemId:3004
-info-2021-08-23-16-1.log:2021-08-23 16:25:59:911 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 4 领取后的startTime: 1629707130000 productItemId:3015
-info-2021-08-23-16-1.log:2021-08-23 16:26:06:613 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：1 - 3016
-info-2021-08-23-16-1.log:2021-08-23 16:26:08:450 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：1 - 3016
-info-2021-08-23-16-1.log:2021-08-23 16:26:12:065 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：4 - 3015
-info-2021-08-23-16-1.log:2021-08-23 16:26:15:061 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：4 - 3001
-info-2021-08-23-16-1.log:2021-08-23 16:26:16:889 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：4 - 3001
-info-2021-08-23-16-1.log:2021-08-23 16:26:18:919 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：4 - 3001
-info-2021-08-23-16-1.log:2021-08-23 16:26:23:428 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：4 - 3001
-info-2021-08-23-16-1.log:2021-08-23 16:26:37:636 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：1 - 3004
-info-2021-08-23-16-1.log:2021-08-23 16:26:43:379 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：1 - 3004
-info-2021-08-23-16-1.log:2021-08-23 16:26:44:901 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：1 - 3004
-info-2021-08-23-16-1.log:2021-08-23 16:32:46:934 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 4 领取后的startTime: 1629707471000 productItemId:3015
-info-2021-08-23-16-1.log:2021-08-23 16:45:51:565 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 1 领取后的startTime: 1629707765000 productItemId:3016
-info-2021-08-23-16-1.log:2021-08-23 16:45:51:568 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 4 领取后的startTime: 1629707651000 productItemId:3001
-info-2021-08-23-16-1.log:2021-08-23 16:45:51:570 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 4 领取后的startTime: 1629707831000 productItemId:3001
-info-2021-08-23-16-1.log:2021-08-23 16:45:51:572 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 4 领取后的startTime: 1629708011000 productItemId:3001
-info-2021-08-23-16-1.log:2021-08-23 16:45:51:574 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 4 领取后的startTime: 1629708191000 productItemId:3001
-info-2021-08-23-16-1.log:2021-08-23 16:45:56:977 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：4 - 3015
-info-2021-08-23-16-1.log:2021-08-23 16:46:00:490 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：4 - 3015
-info-2021-08-23-16-1.log:2021-08-23 16:46:03:066 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：4 - 3015
-info-2021-08-23-16-1.log:2021-08-23 16:46:05:645 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：4 - 3015
-info-2021-08-23-16-1.log:2021-08-23 16:46:06:027 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 1 领取后的startTime: 1629708365000 productItemId:3016
-info-2021-08-23-16-1.log:2021-08-23 16:46:08:424 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：4 - 3001
-info-2021-08-23-17-1.log:2021-08-23 17:12:43:183 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 4 领取后的startTime: 1629708654000 productItemId:3015
-info-2021-08-23-17-1.log:2021-08-23 17:12:43:186 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 4 领取后的startTime: 1629708954000 productItemId:3015
-info-2021-08-23-17-1.log:2021-08-23 17:12:43:188 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 4 领取后的startTime: 1629709254000 productItemId:3015
-info-2021-08-23-17-1.log:2021-08-23 17:12:43:190 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 4 领取后的startTime: 1629709554000 productItemId:3015
-info-2021-08-23-17-1.log:2021-08-23 17:12:43:192 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 4 领取后的startTime: 1629709734000 productItemId:3001
-info-2021-08-23-17-1.log:2021-08-23 17:12:43:194 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 1 领取后的startTime: 1629708545000 productItemId:3004
-info-2021-08-23-17-1.log:2021-08-23 17:12:43:196 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 1 领取后的startTime: 1629708725000 productItemId:3004
-info-2021-08-23-17-1.log:2021-08-23 17:12:43:198 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 1 领取后的startTime: 1629708905000 productItemId:3004
-info-2021-08-23-17-1.log:2021-08-23 17:13:28:614 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：2 - 3007
-info-2021-08-23-17-1.log:2021-08-23 17:18:52:816 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：2 - 3007
-info-2021-08-23-17-1.log:2021-08-23 17:18:53:215 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 2 领取后的startTime: 1629710266000 productItemId:3007
-info-2021-08-23-17-1.log:2021-08-23 17:18:59:216 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：4 - 3015
-info-2021-08-23-17-1.log:2021-08-23 17:20:02:424 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：1 - 3005
-info-2021-08-23-17-1.log:2021-08-23 17:20:06:435 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：1 - 3005
-info-2021-08-23-17-1.log:2021-08-23 17:24:01:725 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 4 领取后的startTime: 1629710637000 productItemId:3015
-info-2021-08-23-17-1.log:2021-08-23 17:24:05:574 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：4 - 3001
-info-2021-08-23-17-1.log:2021-08-23 17:24:06:965 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：4 - 3001
-info-2021-08-23-17-1.log:2021-08-23 17:24:09:871 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：4 - 3001
-info-2021-08-23-17-1.log:2021-08-23 17:24:11:707 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：4 - 3001
-info-2021-08-23-17-1.log:2021-08-23 17:24:13:423 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：4 - 3001
-info-2021-08-23-17-1.log:2021-08-23 17:28:40:221 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 4 领取后的startTime: 1629710824000 productItemId:3001
-info-2021-08-23-17-1.log:2021-08-23 17:28:40:223 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 1 领取后的startTime: 1629710672000 productItemId:3005
-info-2021-08-23-17-1.log:2021-08-23 17:28:44:604 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：1 - 3005
-info-2021-08-23-17-1.log:2021-08-23 17:29:49:062 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 1 领取后的startTime: 1629710972000 productItemId:3005
-info-2021-08-23-17-1.log:2021-08-23 17:29:52:446 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：1 - 3017
-info-2021-08-23-17-1.log:2021-08-23 17:30:13:276 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 4 领取后的startTime: 1629711004000 productItemId:3001
-info-2021-08-23-17-1.log:2021-08-23 17:30:16:591 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：4 - 3015
-info-2021-08-23-17-1.log:2021-08-23 17:30:18:175 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：4 - 3015
-info-2021-08-23-17-1.log:2021-08-23 17:34:19:967 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 4 领取后的startTime: 1629711184000 productItemId:3001
-info-2021-08-23-17-1.log:2021-08-23 17:34:33:801 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 1 领取后的startTime: 1629711272000 productItemId:3005
-info-2021-08-23-17-1.log:2021-08-23 17:36:27:251 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 4 领取后的startTime: 1629711364000 productItemId:3001
-info-2021-08-23-17-1.log:2021-08-23 17:37:35:817 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：2 - 3007
-info-2021-08-23-17-1.log:2021-08-23 17:37:37:757 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：2 - 3007
-info-2021-08-23-17-1.log:2021-08-23 17:37:39:178 ERROR - 生产 玩家：[kcskgn] version:4.1 添加生产任务：槽位已满 factoryId: 2 开启槽数量：1 生产队列：[FactoryProduce{itemId=3007}, FactoryProduce{itemId=3007}, FactoryProduce{itemId=3007}]
-info-2021-08-23-17-1.log:2021-08-23 17:37:48:234 ERROR - 生产 玩家：[kcskgn] version:4.1 添加生产任务：槽位已满 factoryId: 2 开启槽数量：1 生产队列：[FactoryProduce{itemId=3007}, FactoryProduce{itemId=3007}, FactoryProduce{itemId=3007}]
-info-2021-08-23-17-1.log:2021-08-23 17:38:36:288 ERROR - 生产 玩家：[kcskgn] version:4.1 添加生产任务：槽位已满 factoryId: 2 开启槽数量：1 生产队列：[FactoryProduce{itemId=3007}, FactoryProduce{itemId=3007}, FactoryProduce{itemId=3007}]
-info-2021-08-23-17-1.log:2021-08-23 17:45:26:510 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 4 领取后的startTime: 1629711544000 productItemId:3001
-info-2021-08-23-17-1.log:2021-08-23 17:45:26:512 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 4 领取后的startTime: 1629711844000 productItemId:3015
-info-2021-08-23-17-1.log:2021-08-23 17:45:26:515 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 2 领取后的startTime: 1629710566000 productItemId:3007
-info-2021-08-23-17-1.log:2021-08-23 17:45:40:008 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：2 - 3008
-info-2021-08-23-17-1.log:2021-08-23 17:45:42:739 ERROR - 生产 玩家：[kcskgn] version:4.1 添加生产任务：槽位已满 factoryId: 2 开启槽数量：1 生产队列：[FactoryProduce{itemId=3007}, FactoryProduce{itemId=3007}, FactoryProduce{itemId=3008}]
-info-2021-08-23-17-1.log:2021-08-23 17:47:40:368 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 2 领取后的startTime: 1629710866000 productItemId:3007
-info-2021-08-23-17-1.log:2021-08-23 17:48:03:075 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：4 - 3015
-info-2021-08-23-17-1.log:2021-08-23 17:48:04:678 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：4 - 3015
-info-2021-08-23-17-1.log:2021-08-23 17:48:05:816 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：4 - 3015
-info-2021-08-23-17-1.log:2021-08-23 17:48:07:699 INFO - 生产 玩家：[kcskgn] 添加生产任务成功：4 - 3001
-info-2021-08-23-17-1.log:2021-08-23 17:53:28:479 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 4 领取后的startTime: 1629712144000 productItemId:3015
-info-2021-08-23-17-1.log:2021-08-23 17:53:28:482 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 1 领取后的startTime: 1629712172000 productItemId:3017
-info-2021-08-23-17-1.log:2021-08-23 17:57:23:342 INFO - 生产 玩家：[kcskgn] 领取生产物资成功 factoryId: 4 领取后的startTime: 1629712444000 productItemId:3015
-info-2021-08-23-17-1.log:2021-08-23 17:58:13:471 ERROR - 生产 玩家：[kcskgn] version:4.1 领取生产物资：领取物资不是生产队列第一个 factoryId：2 Server ItemId：3007 clientItemId: 3008 生产队列：[FactoryProduce{itemId=3007}, FactoryProduce{itemId=3008}] 领取：[factoryId: "2"
-info-2021-08-23-17-1.log:2021-08-23 17:58:16:983 ERROR - 生产 玩家：[kcskgn] version:4.1 领取生产物资：领取物资不是生产队列第一个 factoryId：2 Server ItemId：3007 clientItemId: 3008 生产队列：[FactoryProduce{itemId=3007}, FactoryProduce{itemId=3008}] 领取：[factoryId: "2"
-info-2021-08-23-17-1.log:2021-08-23 17:59:04:316 ERROR - 生产 玩家：[kcskgn] version:4.1 领取生产物资：领取物资不是生产队列第一个 factoryId：2 Server ItemId：3007 clientItemId: 3008 生产队列：[FactoryProduce{itemId=3007}, FactoryProduce{itemId=3008}] 领取：[factoryId: "2"
+2021-10-02 04:41:53:096 INFO - Item 玩家：e3ihbs 执行方法：addPlayer 获得道具：1001 数量：30
+2021-10-02 04:41:53:097 INFO - Item 玩家：e3ihbs 执行方法：setItem 道具：1001 数量：30 key:1001_ANDROID
+2021-10-02 04:41:53:097 INFO - Item 玩家：e3ihbs 道具：1001 数量：30 ，cd数量：0
+2021-10-02 04:41:53:097 INFO - Item 玩家：e3ihbs 执行方法：addPlayer 获得道具：11001 数量：1
+2021-10-02 04:41:53:097 INFO - Item 玩家：e3ihbs 执行方法：setItem 道具：11001 数量：1 key:11001
+2021-10-02 04:41:53:097 INFO - Item 玩家：e3ihbs 道具：11001 数量：1 ，cd数量：0
+2021-10-02 04:43:03:312 INFO - 玩家：e3ihbs 版本：6.1 场景：city 消除障碍物：MapPlant [scene=city, id=17018, tid=100130]
+2021-10-02 04:43:03:335 INFO - 玩家：e3ihbs 版本：6.1 场景：city 障碍物：17018 tid：100130 领取清除奖励：{} method：clearObstacle
+2021-10-02 04:43:03:336 INFO - Scene 玩家：e3ihbs 版本：6.1 场景：city 障碍物：MapPlant [scene=city, id=17018, tid=100130] 完全被清除
+2021-10-02 04:43:03:342 INFO - 玩家：e3ihbs 版本：6.1 场景：city 消除障碍物 ：MapPlant [scene=city, id=17018, tid=100130] resp：cleared: true produced { itemTemplateId: "2003" count: 5 } items { itemTemplateId: "1003" count: 127 } items { itemTemplateId: "2003" count: 5 } plantId: "17018"
+2021-10-02 04:46:49:581 INFO - Item 玩家：e3ihbs 执行方法：speedUpDragonProduct 扣除道具：1001 数量：1，剩余：29
+2021-10-02 04:46:49:581 INFO - Item 玩家：e3ihbs 执行方法：setItem 道具：1001 数量：29 key:1001_ANDROID
+2021-10-02 04:46:50:525 INFO - Item 玩家：e3ihbs 执行方法：speedUpDragonProduct 扣除道具：1001 数量：1，剩余：28
+2021-10-02 04:46:50:525 INFO - Item 玩家：e3ihbs 执行方法：setItem 道具：1001 数量：28 key:1001_ANDROID
+2021-10-02 04:46:50:899 INFO - Item 玩家：e3ihbs 执行方法：speedUpDragonProduct 扣除道具：1001 数量：1，剩余：27
+2021-10-02 04:46:50:899 INFO - Item 玩家：e3ihbs 执行方法：setItem 道具：1001 数量：27 key:1001_ANDROID
+2021-10-02 04:47:01:628 INFO - Item 玩家：e3ihbs 执行方法：speedUpDragonProduct 扣除道具：1001 数量：1，剩余：26
+2021-10-02 04:47:01:628 INFO - Item 玩家：e3ihbs 执行方法：setItem 道具：1001 数量：26 key:1001_ANDROID
+2021-10-02 04:47:01:860 INFO - Item 玩家：e3ihbs 执行方法：speedUpDragonProduct 扣除道具：1001 数量：1，剩余：25
+2021-10-02 04:47:01:860 INFO - Item 玩家：e3ihbs 执行方法：setItem 道具：1001 数量：25 key:1001_ANDROID
+2021-10-02 04:47:02:098 INFO - Item 玩家：e3ihbs 执行方法：speedUpDragonProduct 扣除道具：1001 数量：1，剩余：24
+2021-10-02 04:47:02:098 INFO - Item 玩家：e3ihbs 执行方法：setItem 道具：1001 数量：24 key:1001_ANDROID
+2021-10-02 04:47:17:198 INFO - Item 玩家：e3ihbs 执行方法：levelReward 获得道具：1001 数量：3
+2021-10-02 04:47:17:198 INFO - Item 玩家：e3ihbs 执行方法：setItem 道具：1001 数量：27 key:1001_ANDROID
+2021-10-02 04:47:17:198 INFO - Item 玩家：e3ihbs 道具：1001 数量：27 ，cd数量：0
+2021-10-02 04:50:34:990 INFO - Item 玩家：e3ihbs 执行方法：supplementOrder 扣除道具：1001 数量：2，剩余：25
+2021-10-02 04:50:34:990 INFO - Item 玩家：e3ihbs 执行方法：setItem 道具：1001 数量：25 key:1001_ANDROID
+2021-10-02 04:50:57:004 INFO - Item 玩家：e3ihbs 执行方法：supplement100Energy 扣除道具：1001 数量：25，剩余：0
+2021-10-02 04:50:57:004 INFO - Item removeItem... pid:e3ihbs, key:1001_ANDROID, itemId:1001
+2021-10-02 04:53:37:121 INFO - Item 玩家：e3ihbs 执行方法：missionReward 获得道具：1001 数量：2
+2021-10-02 04:53:37:121 INFO - Item 玩家：e3ihbs 执行方法：setItem 道具：1001 数量：2 key:1001_ANDROID
+2021-10-02 04:53:37:121 INFO - Item 玩家：e3ihbs 道具：1001 数量：2 ，cd数量：0
+2021-10-02 04:53:38:645 INFO - Item 玩家：e3ihbs 执行方法：levelReward 获得道具：1001 数量：3
+2021-10-02 04:53:38:648 INFO - Item 玩家：e3ihbs 执行方法：setItem 道具：1001 数量：5 key:1001_ANDROID
+2021-10-02 04:53:38:648 INFO - Item 玩家：e3ihbs 道具：1001 数量：5 ，cd数量：0
+2021-10-02 04:53:38:663 INFO - Item 玩家：e3ihbs 执行方法：missionReward 获得道具：1001 数量：3
+2021-10-02 04:53:38:663 INFO - Item 玩家：e3ihbs 执行方法：setItem 道具：1001 数量：8 key:1001_ANDROID
+2021-10-02 04:53:38:663 INFO - Item 玩家：e3ihbs 道具：1001 数量：8 ，cd数量：0
+2021-10-02 04:58:49:627 INFO - Item 玩家：e3ihbs 执行方法：supplementOrder 扣除道具：1001 数量：1，剩余：7
+2021-10-02 04:58:49:627 INFO - Item 玩家：e3ihbs 执行方法：setItem 道具：1001 数量：7 key:1001_ANDROID
+2021-10-02 04:58:54:660 INFO - Item 玩家：e3ihbs 执行方法：supplementOrder 扣除道具：1001 数量：3，剩余：4
+2021-10-02 04:58:54:660 INFO - Item 玩家：e3ihbs 执行方法：setItem 道具：1001 数量：4 key:1001_ANDROID

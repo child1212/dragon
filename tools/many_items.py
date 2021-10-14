@@ -7,9 +7,9 @@ from func_dragon import *
 import os
 
 print("start time:",time.asctime(time.localtime()))
-account = "A2A90680-DAF1-4C12-8DAE-F814635F1839"
-num = 500
-server = "https://dqa.gameyici.com"                           
+account = "703"
+num = 2
+server = "http://dtest.gameyici.com"                           
 # item = items()
 pat = os.getcwd()
 table = open("{pat}\\ItemTemplate.csv".format(pat=pat),'r')
@@ -37,4 +37,11 @@ print("playerid:-{player}\nMission Completed!".format(player=player))
 
 
 
+# %%
+x = 0.5
+for i in range(1000):
+    x /= 0.8
+    if x > 1:
+        print(i)
+        break
 # %%
