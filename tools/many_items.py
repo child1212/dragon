@@ -7,8 +7,8 @@ from func_dragon import *
 import os
 
 print("start time:",time.asctime(time.localtime()))
-account = "703"
-num = 2
+account = "801"
+num = 1000
 server = "http://dtest.gameyici.com"                           
 # item = items()
 pat = os.getcwd()

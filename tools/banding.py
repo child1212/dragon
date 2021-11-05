@@ -7,7 +7,7 @@ import os
 
 print("start time:",time.asctime(time.localtime()))
 account = "A2A90680-DAF1-4C12-8DAE-F814635F1839"
-player = 'qfqudq'
+player = "k1eiaa"
 server = "https://dqa.gameyici.com"      
 log_res = login_gm(server)     
 

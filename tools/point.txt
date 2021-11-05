@@ -1,9 +1,10 @@
-sceneId
-buildingId
-diamondCost
+enterid
+energy
+goldCount
 diamondCount
-item
+itemId
 type
+count
 level
 platform
 playerid
