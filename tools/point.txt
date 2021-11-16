@@ -1,10 +1,9 @@
-enterid
-energy
-goldCount
-diamondCount
-itemId
-type
-count
+scene
+dragonId
+skillId
+clearDurable
+obstacleID
+obstacleDrop
 level
 platform
 playerid

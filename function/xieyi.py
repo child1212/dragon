@@ -103,3 +103,31 @@ def GM_cmd(login_res,server,version,cmd):
         print("Server Disconnected ！！!")
         return 0
 
+
+#跳引导
+def skip_guide(login_res,server,version,guideId):
+    request = GatewayModuleMsg_pb2.GatewayPackageRequest()
+    msgbody = CoreModuleMsg_pb2.GuideCompleteRequest()
+    resa = GatewayModuleMsg_pb2.GatewayPackageResponse()
+    res_100 = CoreModuleMsg_pb2.GuideCompleteResponse()
+    request.senderId = login_res.playerId
+    request.sessionId = login_res.sessionId
+    msgbody.guideId = guideId
+    msg = msgbody.SerializeToString()
+    struct = request.bodys.add()
+    struct.code = 0
+    struct.msgId =1005
+    struct.msgBody = msg
+    struct.genTime = int(time.time()*1000)
+    struct.sequenceId = 0
+    struct.version = version
+    url = "{server}/{version}?id=100&uid=VISITOR&ver={version}".format(server=server, version=version)
+    response = requests.put(url,data=request.SerializeToString())
+    if response.status_code==200 : 
+        resa.ParseFromString(response.content)
+        res_100.ParseFromString(resa.bodys[0].msgBody)
+        print(resa)
+        return resa
+    else:
+        print("Server Disconnected ！！!")
+        return 0
