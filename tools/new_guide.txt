@@ -10,10 +10,6 @@ GuideFeed
 GuideTask
 GuideOrder
 GuideMap
-GuideUnlockBombIcon
-GuideBomb
-GuideDragonMerge
-GuideUnlockDragonShop
 GuideDragonAssist
 GuideDragonHelpSearch
 GuideHolyWaterVehicle
@@ -25,3 +21,8 @@ GuideGoldOrder
 GuideDragonSkill
 GuideTemporaryNest
 GuideGoldPass
+GuideBreedActivity
+GuideActiveEgg
+GuideUnlockSceneIcon
+GuideDragonMerge
+GuideGoldPass_10_1_2

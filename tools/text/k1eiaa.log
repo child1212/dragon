@@ -1,0 +1,886 @@
+info-2021-11-24-10-2.log:2021-11-24 10:48:45:530 INFO - Login 绑定账号无角色或与自身账号相同,玩家直接使用自己账号登录：755CD3A7-9D54-4E06-B30D-6DE38AF9EDCA，登录，角色id:k1eiaa v:9.1.255,visitorAccount:755CD3A7-9D54-4E06-B30D-6DE38AF9EDCA
+info-2021-11-24-10-2.log:2021-11-24 10:48:45:532 INFO - Login session new:{REMOTE_ADDR=129.226.189.243, VERSION=8.1.249, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2142278273}
+info-2021-11-24-10-2.log:2021-11-24 10:48:45:539 INFO - Ads 玩家：k1eiaa 用户分层解析成功，af_status：Organic 返回分组：2
+info-2021-11-24-10-2.log:2021-11-24 10:48:45:905 WARN - Gateway开始: 玩家:k1eiaa, sId:2142278273, curSeq:13588, msgId:[EnterGameRequest-1002], seqId:[13589]
+info-2021-11-24-10-2.log:2021-11-24 10:48:45:906 WARN - ActionOn:1002 cache msg excuting. pid:k1eiaa, curSeqId:13588, reqSeqId:13589 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=8.1.249, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2142278273}
+info-2021-11-24-10-2.log:2021-11-24 10:48:45:911 INFO - TaskManager.onVersionUpdate@before update version|pid=k1eiaa|preversion=8.1|version=9.1|saveGraphs={city:PlayerGraphContext{taskGraph=PlayerTaskGraph{state=0}, tasks=[PlayerTask{taskId='MIssion1_002FindSendmap', finishConditions=null, state=3}]},branch_29:PlayerGraphContext{taskGraph=PlayerTaskGraph{state=0}, tasks=[PlayerTask{taskId='Submission_Line9_4b', finishConditions=null, state=3}]},branch_28:PlayerGraphContext{taskGraph=PlayerTaskGraph{state=0}, tasks=[PlayerTask{taskId='Submission_Line9_2b', finishConditions={1=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=9}]}}}, state=3}]},branch_11:PlayerGraphContext{taskGraph=PlayerTaskGraph{state=0}, tasks=[PlayerTask{taskId='Submission_Line10_4', finishConditions={0=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1}]}}, 1=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=6}]}}}, state=3}]},branch_33:PlayerGraphContext{taskGraph=PlayerTaskGraph{state=0}, tasks=[PlayerTask{taskId='Submission_Line13_3', finishConditions={1=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=18}]}}}, state=3}]},branch_10:PlayerGraphContext{taskGraph=PlayerTaskGraph{state=0}, tasks=[PlayerTask{taskId='Submission_Line10_3', finishConditions=null, state=3}]},branch_32:PlayerGraphContext{taskGraph=PlayerTaskGraph{state=0}, tasks=[PlayerTask{taskId='Submission_Line12_GoldOrder', finishConditions={0=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1}]}}, 1=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1}]}}}, state=3}]},branch_13:PlayerGraphContext{taskGraph=PlayerTaskGraph{state=0}, tasks=[PlayerTask{taskId='Submission_Line11_3', finishConditions={0=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=2}]}}, 1=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=2}]}}, 2=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=2}]}}}, state=3}]},branch_12:PlayerGraphContext{taskGraph=PlayerTaskGraph{state=0}, tasks=[PlayerTask{taskId='Submission_Line11_2', finishConditions=null, state=3}]},branch_34:PlayerGraphContext{taskGraph=PlayerTaskGraph{state=0}, tasks=[PlayerTask{taskId='Submission_Line15_2', finishConditions={1=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=9}]}}, 2=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=3}]}}}, state=3}]},branch_31:PlayerGraphContext{taskGraph=PlayerTaskGraph{state=0}, tasks=[PlayerTask{taskId='Submission_Line11_4b', finishConditions={1=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=6}]}}}, state=3}]},branch_9:PlayerGraphContext{taskGraph=PlayerTaskGraph{state=0}, tasks=[PlayerTask{taskId='Submission_Line10_1', finishConditions={2=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1}]}}}, state=3}]},branch_5:PlayerGraphContext{taskGraph=PlayerTaskGraph{state=0}, tasks=[PlayerTask{taskId='Submission_Line8_4', finishConditions={0=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1}]}}, 2=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=9}]}}}, state=3}]},branch_6:PlayerGraphContext{taskGraph=PlayerTaskGraph{state=0}, tasks=[PlayerTask{taskId='Mission3_subDragonbreeding', finishConditions={0=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1}]}}, 1=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1}]}}}, state=3}]},branch_7:PlayerGraphContext{taskGraph=PlayerTaskGraph{state=0}, tasks=[PlayerTask{taskId='Submission_Line9_2', finishConditions={0=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=6}]}}, 1=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=6}]}}, 2=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=2}]}}}, state=3}]},branch_8:PlayerGraphContext{taskGraph=PlayerTaskGraph{state=0}, tasks=[PlayerTask{taskId='Submission_Line9_4', finishConditions={0=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=6}]}}, 1=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=6}]}}, 2=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=2}]}}}, state=3}]},branch_1:PlayerGraphContext{taskGraph=PlayerTaskGraph{state=0}, tasks=[PlayerTask{taskId='Submission_Line6_4', finishConditions=null, state=3}]},branch_2:PlayerGraphContext{taskGraph=PlayerTaskGraph{state=0}, tasks=[PlayerTask{taskId='Submission_Line7_2', finishConditions={0=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=2}]}}, 1=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=2}]}}, 2=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=2}]}}}, state=3}]},branch_18:PlayerGraphContext{taskGraph=PlayerTaskGraph{state=0}, tasks=[PlayerTask{taskId='Submission_Line14_1', finishConditions={0=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1}]}}, 1=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=3}]}}}, state=3}]},branch_3:PlayerGraphContext{taskGraph=PlayerTaskGraph{state=0}, tasks=[PlayerTask{taskId='Submission_Line7_4', finishConditions={0=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1}]}}, 1=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=2}]}}}, state=3}]},branch_4:PlayerGraphContext{taskGraph=PlayerTaskGraph{state=0}, tasks=[PlayerTask{taskId='Submission_Line8_1', finishConditions={0=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1}]}}, 1=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1}]}}, 2=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=2}]}}}, state=3}]},branch_15:PlayerGraphContext{taskGraph=PlayerTaskGraph{state=0}, tasks=[PlayerTask{taskId='Submission_Line12_3', finishConditions={0=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1}]}}, 1=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=3}]}}}, state=3}]},branch_37:PlayerGraphContext{taskGraph=PlayerTaskGraph{state=0}, tasks=[PlayerTask{taskId='Mission3_011Arrangedragon', finishConditions={0=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=3}]}}, 1=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=2}]}}}, state=3}]},branch_14:PlayerGraphContext{taskGraph=PlayerTaskGraph{state=0}, tasks=[PlayerTask{taskId='Submission_Line12_1', finishConditions=null, state=3}]},branch_36:PlayerGraphContext{taskGraph=PlayerTaskGraph{state=0}, tasks=[PlayerTask{taskId='Mission3_subunlockfanyu', finishConditions={0=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1}]}}}, state=3}]},branch_17:PlayerGraphContext{taskGraph=PlayerTaskGraph{state=0}, tasks=[PlayerTask{taskId='Submission_Line13_2', finishConditions={1=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=6}]}}}, state=3}]},branch_0:PlayerGraphContext{taskGraph=PlayerTaskGraph{state=0}, tasks=[PlayerTask{taskId='Submission_Line6_3', finishConditions={0=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=2}]}}, 1=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=2}]}}, 2=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=2}]}}}, state=3}]},branch_16:PlayerGraphContext{taskGraph=PlayerTaskGraph{state=0}, tasks=[PlayerTask{taskId='Submission_Line13_1', finishConditions={1=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1}]}}, 2=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=3}]}}}, state=3}]},branch_22:PlayerGraphContext{taskGraph=PlayerTaskGraph{state=0}, tasks=[PlayerTask{taskId='Submission_Line12_2', finishConditions={1=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=6}]}}, 2=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=2}]}}}, state=3}]},branch_21:PlayerGraphContext{taskGraph=PlayerTaskGraph{state=0}, tasks=[PlayerTask{taskId='Submission_Line14_2', finishConditions={0=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1}]}}, 1=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=3}]}}}, state=3}]},2:PlayerGraphContext{taskGraph=PlayerTaskGraph{state=1}, tasks=[PlayerTask{taskId='Mission1_013Outofcontroldragon', finishConditions=null, state=3}]},branch_24:PlayerGraphContext{taskGraph=PlayerTaskGraph{state=0}, tasks=[PlayerTask{taskId='Submission_Line15_3c', finishConditions={0=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=2}]}}, 2=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=2}]}}}, state=1}]},3:PlayerGraphContext{taskGraph=PlayerTaskGraph{state=1}, tasks=[PlayerTask{taskId='Mission2_012Themyteriousentrance', finishConditions=null, state=3}]},branch_23:PlayerGraphContext{taskGraph=PlayerTaskGraph{state=0}, tasks=[PlayerTask{taskId='Submission_Line15_1', finishConditions={0=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1}]}}}, state=3}]},4:PlayerGraphContext{taskGraph=PlayerTaskGraph{state=1}, tasks=[PlayerTask{taskId='Mission3_0010Theotherdragonnest', finishConditions=null, state=3}]},5:PlayerGraphContext{taskGraph=PlayerTaskGraph{state=1}, tasks=[PlayerTask{taskId='Mission4_013Newdiscovery', finishConditions={0=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1}]}}}, state=3}]},6:PlayerGraphContext{taskGraph=PlayerTaskGraph{state=1}, tasks=[PlayerTask{taskId='Mission6_017LockedDoor', finishConditions=null, state=3}]},branch_20:PlayerGraphContext{taskGraph=PlayerTaskGraph{state=0}, tasks=[PlayerTask{taskId='Submission_Line15_1a', finishConditions={0=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1}]}}, 1=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1}]}}, 2=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=9}]}}}, state=3}]},7:PlayerGraphContext{taskGraph=PlayerTaskGraph{state=1}, tasks=[PlayerTask{taskId='Mission7_014Findthecanyon', finishConditions=null, state=3}]},8:PlayerGraphContext{taskGraph=PlayerTaskGraph{state=0}, tasks=[PlayerTask{taskId='Mission8_013TheDock', finishConditions={1=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1}]}}}, state=3}]},9:PlayerGraphContext{taskGraph=PlayerTaskGraph{state=0}, tasks=[PlayerTask{taskId='Mission9_004SunLightHouse', finishConditions={0=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1}]}}}, state=2}, PlayerTask{taskId='Mission9_005CrumblingBridge', finishConditions=null, state=1}]}}
+info-2021-11-24-10-2.log:2021-11-24 10:48:45:911 INFO - 玩家：[k1eiaa] 获得经验：300 当前 level: 15 exp: 15036 method:update_task_version
+info-2021-11-24-10-2.log:2021-11-24 10:48:45:911 INFO - Item 玩家：k1eiaa 执行方法：update_task_version 获得道具：1002 数量：100
+info-2021-11-24-10-2.log:2021-11-24 10:48:45:912 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1002 数量：5575 key:1002
+info-2021-11-24-10-2.log:2021-11-24 10:48:45:912 INFO - Item 玩家：k1eiaa 道具：1002 数量：5575 ，cd数量：0
+info-2021-11-24-10-2.log:2021-11-24 10:48:45:912 INFO - Item 玩家：k1eiaa 执行方法：update_task_version 获得道具：1001 数量：2
+info-2021-11-24-10-2.log:2021-11-24 10:48:45:912 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1001 数量：2797 key:1001
+info-2021-11-24-10-2.log:2021-11-24 10:48:45:912 INFO - Item 玩家：k1eiaa 道具：1001 数量：2797 ，cd数量：0
+info-2021-11-24-10-2.log:2021-11-24 10:48:45:913 INFO - TaskManager.onVersionUpdate@after update version|pid=k1eiaa|preversion=8.1|version=9.1|saveGraphs={city:[PlayerTask{taskId='MIssion1_002FindSendmap', finishConditions=null, state=3}],branch_29:[PlayerTask{taskId='Submission_Line9_4b', finishConditions=null, state=3}],branch_28:[PlayerTask{taskId='Submission_Line9_2b', finishConditions={1=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=9}]}}}, state=3}],branch_11:[PlayerTask{taskId='Submission_Line10_4', finishConditions={0=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1}]}}, 1=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=6}]}}}, state=3}],branch_33:[PlayerTask{taskId='Submission_Line13_3', finishConditions={1=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=18}]}}}, state=3}],branch_10:[PlayerTask{taskId='Submission_Line10_3', finishConditions=null, state=3}],branch_32:[PlayerTask{taskId='Submission_Line12_GoldOrder', finishConditions={0=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1}]}}, 1=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1}]}}}, state=3}],branch_13:[PlayerTask{taskId='Submission_Line11_3', finishConditions={0=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=2}]}}, 1=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=2}]}}, 2=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=2}]}}}, state=3}],branch_12:[PlayerTask{taskId='Submission_Line11_2', finishConditions=null, state=3}],branch_34:[PlayerTask{taskId='Submission_Line15_2', finishConditions={1=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=9}]}}, 2=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=3}]}}}, state=3}],branch_31:[PlayerTask{taskId='Submission_Line11_4b', finishConditions={1=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=6}]}}}, state=3}],branch_9:[PlayerTask{taskId='Submission_Line10_1', finishConditions={2=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1}]}}}, state=3}],branch_5:[PlayerTask{taskId='Submission_Line8_4', finishConditions={0=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1}]}}, 2=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=9}]}}}, state=3}],branch_6:[PlayerTask{taskId='Mission3_subDragonbreeding', finishConditions={0=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1}]}}, 1=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1}]}}}, state=3}],branch_7:[PlayerTask{taskId='Submission_Line9_2', finishConditions={0=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=6}]}}, 1=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=6}]}}, 2=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=2}]}}}, state=3}],branch_8:[PlayerTask{taskId='Submission_Line9_4', finishConditions={0=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=6}]}}, 1=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=6}]}}, 2=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=2}]}}}, state=3}],branch_1:[PlayerTask{taskId='Submission_Line6_4', finishConditions=null, state=3}],branch_2:[PlayerTask{taskId='Submission_Line7_2', finishConditions={0=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=2}]}}, 1=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=2}]}}, 2=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=2}]}}}, state=3}],branch_18:[PlayerTask{taskId='Submission_Line14_1', finishConditions={0=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1}]}}, 1=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=3}]}}}, state=3}],branch_3:[PlayerTask{taskId='Submission_Line7_4', finishConditions={0=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1}]}}, 1=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=2}]}}}, state=3}],branch_4:[PlayerTask{taskId='Submission_Line8_1', finishConditions={0=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1}]}}, 1=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1}]}}, 2=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=2}]}}}, state=3}],branch_15:[PlayerTask{taskId='Submission_Line12_3', finishConditions={0=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1}]}}, 1=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=3}]}}}, state=3}],branch_37:[PlayerTask{taskId='Mission3_011Arrangedragon', finishConditions={0=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=3}]}}, 1=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=2}]}}}, state=3}],branch_14:[PlayerTask{taskId='Submission_Line12_1', finishConditions=null, state=3}],branch_36:[PlayerTask{taskId='Mission3_subunlockfanyu', finishConditions={0=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1}]}}}, state=3}],branch_17:[PlayerTask{taskId='Submission_Line13_2', finishConditions={1=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=6}]}}}, state=3}],branch_0:[PlayerTask{taskId='Submission_Line6_3', finishConditions={0=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=2}]}}, 1=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=2}]}}, 2=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=2}]}}}, state=3}],branch_16:[PlayerTask{taskId='Submission_Line13_1', finishConditions={1=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1}]}}, 2=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=3}]}}}, state=3}],branch_22:[PlayerTask{taskId='Submission_Line12_2', finishConditions={1=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=6}]}}, 2=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=2}]}}}, state=3}],branch_21:[PlayerTask{taskId='Submission_Line14_2', finishConditions={0=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1}]}}, 1=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=3}]}}}, state=3}],2:[PlayerTask{taskId='Mission1_013Outofcontroldragon', finishConditions=null, state=3}],branch_24:[PlayerTask{taskId='Submission_Line15_3c', finishConditions={0=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=2}]}}, 2=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=2}]}}}, state=1}],3:[PlayerTask{taskId='Mission2_012Themyteriousentrance', finishConditions=null, state=3}],branch_23:[PlayerTask{taskId='Submission_Line15_1', finishConditions={0=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1}]}}}, state=3}],4:[PlayerTask{taskId='Mission3_0010Theotherdragonnest', finishConditions=null, state=3}],5:[PlayerTask{taskId='Mission4_013Newdiscovery', finishConditions={0=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1}]}}}, state=3}],6:[PlayerTask{taskId='Mission6_017LockedDoor', finishConditions=null, state=3}],branch_20:[PlayerTask{taskId='Submission_Line15_1a', finishConditions={0=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1}]}}, 1=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1}]}}, 2=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=9}]}}}, state=3}],7:[PlayerTask{taskId='Mission7_014Findthecanyon', finishConditions=null, state=3}],8:[PlayerTask{taskId='Mission8_013TheDock', finishConditions={1=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1}]}}}, state=3}],9:[PlayerTask{taskId='Mission9_005CrumblingBridge', finishConditions=null, state=1}]}
+info-2021-11-24-10-2.log:2021-11-24 10:48:45:920 INFO - TaskManager.checkAndModifyTask@task updated|pid=k1eiaa|version=9.1|graphId=branch_39|taskId=Submission_factoryunlock_2|state=1
+info-2021-11-24-10-2.log:2021-11-24 10:48:45:921 INFO - TaskManager.checkAndModifyTask@task updated|pid=k1eiaa|version=9.1|graphId=branch_38|taskId=Submission_factoryunlock_1|state=1
+info-2021-11-24-10-2.log:2021-11-24 10:48:45:922 INFO - TaskManager.checkAndModifyTask@task updated|pid=k1eiaa|version=9.1|graphId=branch_45|taskId=Submission_orderunlock_8|state=1
+info-2021-11-24-10-2.log:2021-11-24 10:48:45:923 INFO - TaskManager.checkAndModifyTask@task updated|pid=k1eiaa|version=9.1|graphId=branch_40|taskId=Submission_factoryunlock_3|state=1
+info-2021-11-24-10-2.log:2021-11-24 10:48:45:924 INFO - TaskManager.checkAndModifyTask@task updated|pid=k1eiaa|version=9.1|graphId=branch_42|taskId=Submission_factoryunlock_5|state=1
+info-2021-11-24-10-2.log:2021-11-24 10:48:45:925 INFO - TaskManager.checkAndModifyTask@task updated|pid=k1eiaa|version=9.1|graphId=branch_41|taskId=Submission_factoryunlock_4|state=1
+info-2021-11-24-10-2.log:2021-11-24 10:48:45:926 INFO - DayReward 玩家：k1eiaa 上次登录时间：1636973035371，本次登录时间:1637722125926, 是否连续登录？false, 昨天是否领过奖?true 
+info-2021-11-24-10-2.log:2021-11-24 10:48:45:927 INFO - Ads 玩家：k1eiaa 变更广告用户分层：5 原：4
+info-2021-11-24-10-2.log:2021-11-24 10:48:45:928 INFO - Player-- 玩家：k1eiaa enterGame resouseMsg--> nickName: "k1eiaa" sex: false diamonds: 2797 material: 0 energyValue: 97 energyValueTime: 1636973318000 icon: "2" energyLimit: 74 createTime: 1626278962621 alterNameCnt: 0 payPlayer: 2 registVersion: "2.1.59" previousEnterTime: 1636973035358 totalRecharge: 9498 exp: 15036 consumeEnergyCnt: 75 level: 15 lastRechargeTime: 1636699291000
+info-2021-11-24-10-2.log:2021-11-24 10:48:45:932 INFO - Buff 玩家：k1eiaa buff：200001 消失 开始时间：1636973261687 持续时间：600000
+info-2021-11-24-10-2.log:2021-11-24 10:48:45:932 INFO - 签到-- 玩家：[k1eiaa] 请求签到信息：[continueEnterGameNum: 1 batchNum: 1 isRewarded: false]
+info-2021-11-24-10-2.log:2021-11-24 10:48:45:933 INFO - Ads 玩家:k1eiaa,nowTime:1637722125933,dayRefreshTime:1636943370142,广告刷新每天数据
+info-2021-11-24-10-2.log:2021-11-24 10:48:45:933 INFO - Ads激励广告 玩家：k1eiaa 版本：9.1 广告分层：5
+info-2021-11-24-10-2.log:2021-11-24 10:48:45:934 INFO - 邮件 玩家：k1eiaa 过期：PlayerMail [id=70002, type=2, bi=330, label={   "localize": true,   "content": "UI_update_mail_title_8.1" }, attachment={}, picture=null, read=true, reward=false, createTime=1636621356593, expireTime=1637596800000]
+info-2021-11-24-10-2.log:2021-11-24 10:48:45:940 INFO - Player 玩家：k1eiaa 个人信息 resp：pid: "k1eiaa" nickname: "k1eiaa" avatar: "2" unlockAvatars: "1" unlockAvatars: "2" unlockAvatars: "3" unlockAvatars: "4" unlockAvatars: "5" unlockAvatars: "6" unlockAvatars: "7" unlockAvatars: "8" frame: "24000" unlockFrames: "24000" inuseSkins: "27100" inuseSkins: "27200" unlockSkins: "27100" unlockSkins: "27200"
+info-2021-11-24-10-2.log:2021-11-24 10:48:45:952 WARN - Gateway结束: 玩家:k1eiaa, sId:2142278273, curSeq:13589, msgId:[EnterGameRequest-1002], seqId:[13589]
+info-2021-11-24-10-2.log:2021-11-24 10:48:46:427 WARN - Gateway开始: 玩家:k1eiaa, sId:2142278273, curSeq:13589, msgId:[GuideCompleteRequest-1004], seqId:[13590]
+info-2021-11-24-10-2.log:2021-11-24 10:48:46:428 WARN - ActionOn:1004 cache msg excuting. pid:k1eiaa, curSeqId:13589, reqSeqId:13590 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2142278273}
+info-2021-11-24-10-2.log:2021-11-24 10:48:46:429 WARN - Gateway结束: 玩家:k1eiaa, sId:2142278273, curSeq:13590, msgId:[GuideCompleteRequest-1004], seqId:[13590]
+info-2021-11-24-10-2.log:2021-11-24 10:48:47:253 WARN - Gateway开始: 玩家:k1eiaa, sId:2142278273, curSeq:13590, msgId:[GiftInfoRequest-25801], seqId:[13591]
+info-2021-11-24-10-2.log:2021-11-24 10:48:47:254 WARN - ActionOn:25801 cache msg excuting. pid:k1eiaa, curSeqId:13590, reqSeqId:13591 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2142278273}
+info-2021-11-24-10-2.log:2021-11-24 10:48:47:255 WARN - Gateway结束: 玩家:k1eiaa, sId:2142278273, curSeq:13591, msgId:[GiftInfoRequest-25801], seqId:[13591]
+info-2021-11-24-10-2.log:2021-11-24 10:48:47:650 WARN - Gateway开始: 玩家:k1eiaa, sId:2142278273, curSeq:13591, msgId:[EnergyRequest-1023], seqId:[13592]
+info-2021-11-24-10-2.log:2021-11-24 10:48:47:651 WARN - ActionOn:1023 cache msg excuting. pid:k1eiaa, curSeqId:13591, reqSeqId:13592 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2142278273}
+info-2021-11-24-10-2.log:2021-11-24 10:48:47:656 WARN - Gateway结束: 玩家:k1eiaa, sId:2142278273, curSeq:13592, msgId:[EnergyRequest-1023], seqId:[13592]
+info-2021-11-24-10-2.log:2021-11-24 10:48:48:030 WARN - Gateway开始: 玩家:k1eiaa, sId:2142278273, curSeq:13592, msgId:[AlchemyRequest-26001], seqId:[13593]
+info-2021-11-24-10-2.log:2021-11-24 10:48:48:031 WARN - ActionOn:26001 cache msg excuting. pid:k1eiaa, curSeqId:13592, reqSeqId:13593 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2142278273}
+info-2021-11-24-10-2.log:2021-11-24 10:48:48:033 INFO - AlchemyFurnaceManager.refreshAndGetAlchemyFurnaceInfo@refresh info now|pid=k1eiaa|version=9.1|genTime=1637722125000|infos=PlayerAlchemyFurnace{, cdEndMill=0, cumulativeAwardEndMill=1638156581000, item='5012', cumulativeAwards=[AlchemyCumulativeAward{items=[ItemEntry{itemId='1002', count=1000}]}, AlchemyCumulativeAward{items=[ItemEntry{itemId='16000', count=10}]}, AlchemyCumulativeAward{items=[ItemEntry{itemId='11001', count=1}]}], cumuV='9.1', cumulativeNum=0}
+info-2021-11-24-10-2.log:2021-11-24 10:48:48:033 WARN - Gateway结束: 玩家:k1eiaa, sId:2142278273, curSeq:13593, msgId:[AlchemyRequest-26001], seqId:[13593]
+info-2021-11-24-10-2.log:2021-11-24 10:48:48:414 WARN - Gateway开始: 玩家:k1eiaa, sId:2142278273, curSeq:13593, msgId:[VersionRewardsInfoRequest-1011], seqId:[13594]
+info-2021-11-24-10-2.log:2021-11-24 10:48:48:415 WARN - ActionOn:1011 cache msg excuting. pid:k1eiaa, curSeqId:13593, reqSeqId:13594 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2142278273}
+info-2021-11-24-10-2.log:2021-11-24 10:48:48:418 INFO - Player:k1eiaa Remote versionRewards:null of version:9.1
+info-2021-11-24-10-2.log:2021-11-24 10:48:48:418 INFO - VersionRewardsInfo pid:k1eiaa v:v9_1, vrState:1
+info-2021-11-24-10-2.log:2021-11-24 10:48:48:419 WARN - Gateway结束: 玩家:k1eiaa, sId:2142278273, curSeq:13594, msgId:[VersionRewardsInfoRequest-1011], seqId:[13594]
+info-2021-11-24-10-2.log:2021-11-24 10:48:48:782 WARN - Gateway开始: 玩家:k1eiaa, sId:2142278273, curSeq:13594, msgId:[SceneInfoRequest-25301], seqId:[13595]
+info-2021-11-24-10-2.log:2021-11-24 10:48:48:783 WARN - ActionOn:25301 cache msg excuting. pid:k1eiaa, curSeqId:13594, reqSeqId:13595 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2142278273}
+info-2021-11-24-10-2.log:2021-11-24 10:48:48:794 INFO - Item 玩家：k1eiaa 执行方法：dragonAutoReceiveCollectReward 获得道具：2004 数量：7
+info-2021-11-24-10-2.log:2021-11-24 10:48:48:798 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：2004 数量：483 key:2004
+info-2021-11-24-10-2.log:2021-11-24 10:48:48:799 INFO - Item 玩家：k1eiaa 道具：2004 数量：483 ，cd数量：0
+info-2021-11-24-10-2.log:2021-11-24 10:48:48:799 INFO - Item 玩家：k1eiaa 执行方法：dragonAutoReceiveCollectReward 获得道具：15001 数量：2
+info-2021-11-24-10-2.log:2021-11-24 10:48:48:804 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：15001 数量：32 key:15001
+info-2021-11-24-10-2.log:2021-11-24 10:48:48:804 INFO - Item 玩家：k1eiaa 道具：15001 数量：32 ，cd数量：0
+info-2021-11-24-10-2.log:2021-11-24 10:48:48:804 INFO - 玩家：k1eiaa 版本：9.1 场景：8 障碍物：43736 method：dragonAutoReceiveCollectReward 发放基础奖励 precent：1.0 collect：false
+info-2021-11-24-10-2.log:2021-11-24 10:48:48:804 INFO - Item 玩家：k1eiaa 执行方法：dragonAutoReceiveCollectReward 获得道具：2001 数量：1
+info-2021-11-24-10-2.log:2021-11-24 10:48:48:809 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：2001 数量：2975 key:2001
+info-2021-11-24-10-2.log:2021-11-24 10:48:48:809 INFO - Item 玩家：k1eiaa 道具：2001 数量：2975 ，cd数量：0
+info-2021-11-24-10-2.log:2021-11-24 10:48:48:809 INFO - 玩家：k1eiaa 版本：9.1 场景：8 障碍物：43736 tid：1300703 领取清除奖励：{2001=1} method：dragonAutoReceiveCollectReward
+info-2021-11-24-10-2.log:2021-11-24 10:48:48:814 INFO - Scene 玩家：k1eiaa 版本：9.1 场景：8 障碍物：MapPlant [scene=8, id=43736, tid=1300703] 完全被清除
+info-2021-11-24-10-2.log:2021-11-24 10:48:48:814 INFO - Item 玩家：k1eiaa 执行方法：dragonAutoReceiveCollectReward 获得道具：2004 数量：0
+info-2021-11-24-10-2.log:2021-11-24 10:48:48:821 INFO - Item 玩家：k1eiaa 执行方法：dragonAutoReceiveCollectReward 道具：2004 数量加成超上限，不增加！
+info-2021-11-24-10-2.log:2021-11-24 10:48:48:821 INFO - Item 玩家：k1eiaa 执行方法：dragonAutoReceiveCollectReward 获得道具：15001 数量：6
+info-2021-11-24-10-2.log:2021-11-24 10:48:48:827 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：15001 数量：38 key:15001
+info-2021-11-24-10-2.log:2021-11-24 10:48:48:827 INFO - Item 玩家：k1eiaa 道具：15001 数量：38 ，cd数量：0
+info-2021-11-24-10-2.log:2021-11-24 10:48:48:836 INFO - 玩家:k1eiaa 重置龙之力(最大值)， 龙：2047 龙之力：6 save: false
+info-2021-11-24-10-2.log:2021-11-24 10:48:48:837 INFO - 玩家:k1eiaa 重置龙之力(最大值)， 龙：2108 龙之力：6 save: false
+info-2021-11-24-10-2.log:2021-11-24 10:48:48:837 INFO - 玩家:k1eiaa 重置龙之力(最大值)， 龙：2123 龙之力：6 save: false
+info-2021-11-24-10-2.log:2021-11-24 10:48:48:840 INFO - 玩家:k1eiaa 重置龙之力(最大值)， 龙：2168 龙之力：6 save: false
+info-2021-11-24-10-2.log:2021-11-24 10:48:48:865 WARN - Gateway结束: 玩家:k1eiaa, sId:2142278273, curSeq:13595, msgId:[SceneInfoRequest-25301], seqId:[13595]
+info-2021-11-24-10-2.log:2021-11-24 10:48:49:477 WARN - Gateway开始: 玩家:k1eiaa, sId:2142278273, curSeq:13595, msgId:[FloatObjectInfoRequest-25701], seqId:[13596]
+info-2021-11-24-10-2.log:2021-11-24 10:48:49:478 WARN - ActionOn:25701 cache msg excuting. pid:k1eiaa, curSeqId:13595, reqSeqId:13596 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2142278273}
+info-2021-11-24-10-2.log:2021-11-24 10:48:49:479 WARN - Gateway结束: 玩家:k1eiaa, sId:2142278273, curSeq:13596, msgId:[FloatObjectInfoRequest-25701], seqId:[13596]
+info-2021-11-24-10-2.log:2021-11-24 10:48:50:029 WARN - Gateway开始: 玩家:k1eiaa, sId:2142278273, curSeq:13596, msgId:[SystemOpenRequest-1022], seqId:[13597]
+info-2021-11-24-10-2.log:2021-11-24 10:48:50:030 WARN - ActionOn:1022 cache msg excuting. pid:k1eiaa, curSeqId:13596, reqSeqId:13597 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2142278273}
+info-2021-11-24-10-2.log:2021-11-24 10:48:50:032 INFO - SysteOpen 玩家：[k1eiaa] 版本：9.1 系统开启：activeEgg
+info-2021-11-24-10-2.log:2021-11-24 10:48:50:033 WARN - Gateway结束: 玩家:k1eiaa, sId:2142278273, curSeq:13597, msgId:[SystemOpenRequest-1022], seqId:[13597]
+info-2021-11-24-10-2.log:2021-11-24 10:48:50:397 WARN - Gateway开始: 玩家:k1eiaa, sId:2142278273, curSeq:13597, msgId:[GetCreatureDataRequest-24005], seqId:[13598]
+info-2021-11-24-10-2.log:2021-11-24 10:48:50:398 WARN - ActionOn:24005 cache msg excuting. pid:k1eiaa, curSeqId:13597, reqSeqId:13598 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2142278273}
+info-2021-11-24-10-2.log:2021-11-24 10:48:50:401 WARN - Gateway结束: 玩家:k1eiaa, sId:2142278273, curSeq:13598, msgId:[GetCreatureDataRequest-24005], seqId:[13598]
+info-2021-11-24-10-2.log:2021-11-24 10:48:50:769 WARN - Gateway开始: 玩家:k1eiaa, sId:2142278273, curSeq:13598, msgId:[FloatObjectStartRequest-25702], seqId:[13599]
+info-2021-11-24-10-2.log:2021-11-24 10:48:50:770 WARN - ActionOn:25702 cache msg excuting. pid:k1eiaa, curSeqId:13598, reqSeqId:13599 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2142278273}
+info-2021-11-24-10-2.log:2021-11-24 10:48:50:771 INFO - FloatObjectManager.floatObjectStart@started|pid=k1eiaa|version=9.1|time=1637722129000|times=9
+info-2021-11-24-10-2.log:2021-11-24 10:48:50:772 WARN - Gateway结束: 玩家:k1eiaa, sId:2142278273, curSeq:13599, msgId:[FloatObjectStartRequest-25702], seqId:[13599]
+info-2021-11-24-10-2.log:2021-11-24 10:48:51:162 WARN - Gateway开始: 玩家:k1eiaa, sId:2142278273, curSeq:13599, msgId:[ActiveEggInfoRequest-26201], seqId:[13600]
+info-2021-11-24-10-2.log:2021-11-24 10:48:51:163 WARN - ActionOn:26201 cache msg excuting. pid:k1eiaa, curSeqId:13599, reqSeqId:13600 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2142278273}
+info-2021-11-24-10-2.log:2021-11-24 10:48:51:165 INFO - ActiveEgg 玩家：k1eiaa 第一次刷新固定彩蛋类型：[eBlueEgg, eWhiteEgg, eWhiteEgg, ePurpleEgg]
+info-2021-11-24-10-2.log:2021-11-24 10:48:51:168 INFO - ActiveEgg 玩家：k1eiaa 活跃彩蛋信息：eggs { eggId: 1 type: 2 status: 0 cur: 20 max: 20 } eggs { eggId: 2 type: 1 status: 1 cur: 0 max: 20 } eggs { eggId: 3 type: 1 status: 1 cur: 0 max: 20 } eggs { eggId: 4 type: 3 status: 1 cur: 0 max: 20 } cumulativeEnergy: 0
+info-2021-11-24-10-2.log:2021-11-24 10:48:51:168 WARN - Gateway结束: 玩家:k1eiaa, sId:2142278273, curSeq:13600, msgId:[ActiveEggInfoRequest-26201], seqId:[13600]
+info-2021-11-24-10-2.log:2021-11-24 10:48:52:934 WARN - Gateway开始: 玩家:k1eiaa, sId:2142278273, curSeq:13600, msgId:[MailListRequest-16001], seqId:[13601]
+info-2021-11-24-10-2.log:2021-11-24 10:48:52:936 WARN - ActionOn:16001 cache msg excuting. pid:k1eiaa, curSeqId:13600, reqSeqId:13601 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2142278273}
+info-2021-11-24-10-2.log:2021-11-24 10:48:52:937 WARN - Gateway结束: 玩家:k1eiaa, sId:2142278273, curSeq:13601, msgId:[MailListRequest-16001], seqId:[13601]
+info-2021-11-24-10-2.log:2021-11-24 10:48:54:630 WARN - Gateway开始: 玩家:k1eiaa, sId:2142278273, curSeq:13601, msgId:[GetDayRewardRequest-9002], seqId:[13602]
+info-2021-11-24-10-2.log:2021-11-24 10:48:54:632 WARN - ActionOn:9002 cache msg excuting. pid:k1eiaa, curSeqId:13601, reqSeqId:13602 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2142278273}
+info-2021-11-24-10-2.log:2021-11-24 10:48:54:635 INFO - Item 玩家：k1eiaa 执行方法：daily_reward 获得道具：1003 数量：20
+info-2021-11-24-10-2.log:2021-11-24 10:48:54:647 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1003 数量：117 key:1003
+info-2021-11-24-10-2.log:2021-11-24 10:48:54:648 INFO - Item 玩家：k1eiaa 道具：1003 数量：117 ，cd数量：0
+info-2021-11-24-10-2.log:2021-11-24 10:48:54:648 INFO - Dayreward 玩家：k1eiaa 奖励倍数 1 领取签到奖励 , 奖励配置:DayRewardTemplate:批次号 :1; 签到天数 :1; 物资数 : 0; 精力值 :0; 钻石数 :0; 道具id:[[1003,20]]
+info-2021-11-24-10-2.log:2021-11-24 10:48:54:657 WARN - Gateway结束: 玩家:k1eiaa, sId:2142278273, curSeq:13602, msgId:[GetDayRewardRequest-9002], seqId:[13602]
+info-2021-11-24-10-2.log:2021-11-24 10:48:58:678 WARN - Gateway开始: 玩家:k1eiaa, sId:2142278273, curSeq:13602, msgId:[FindScenePlantsRequest-25303], seqId:[13603]
+info-2021-11-24-10-2.log:2021-11-24 10:48:58:679 WARN - ActionOn:25303 cache msg excuting. pid:k1eiaa, curSeqId:13602, reqSeqId:13603 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2142278273}
+info-2021-11-24-10-2.log:2021-11-24 10:48:58:680 WARN - Gateway结束: 玩家:k1eiaa, sId:2142278273, curSeq:13603, msgId:[FindScenePlantsRequest-25303], seqId:[13603]
+info-2021-11-24-10-2.log:2021-11-24 10:48:59:068 WARN - Gateway开始: 玩家:k1eiaa, sId:2142278273, curSeq:13603, msgId:[FindScenePlantsRequest-25303], seqId:[13604]
+info-2021-11-24-10-2.log:2021-11-24 10:48:59:069 WARN - ActionOn:25303 cache msg excuting. pid:k1eiaa, curSeqId:13603, reqSeqId:13604 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2142278273}
+info-2021-11-24-10-2.log:2021-11-24 10:48:59:070 WARN - Gateway结束: 玩家:k1eiaa, sId:2142278273, curSeq:13604, msgId:[FindScenePlantsRequest-25303], seqId:[13604]
+info-2021-11-24-10-2.log:2021-11-24 10:48:59:451 WARN - Gateway开始: 玩家:k1eiaa, sId:2142278273, curSeq:13604, msgId:[FindPlantAppearRequest-25315], seqId:[13605]
+info-2021-11-24-10-2.log:2021-11-24 10:48:59:452 WARN - ActionOn:25315 cache msg excuting. pid:k1eiaa, curSeqId:13604, reqSeqId:13605 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2142278273}
+info-2021-11-24-10-2.log:2021-11-24 10:48:59:453 WARN - Gateway结束: 玩家:k1eiaa, sId:2142278273, curSeq:13605, msgId:[FindPlantAppearRequest-25315], seqId:[13605]
+info-2021-11-24-10-2.log:2021-11-24 10:48:59:821 WARN - Gateway开始: 玩家:k1eiaa, sId:2142278273, curSeq:13605, msgId:[ActivityListRequest-12001], seqId:[13606]
+info-2021-11-24-10-2.log:2021-11-24 10:48:59:822 WARN - ActionOn:12001 cache msg excuting. pid:k1eiaa, curSeqId:13605, reqSeqId:13606 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2142278273}
+info-2021-11-24-10-2.log:2021-11-24 10:48:59:822 INFO - Activity 玩家：k1eiaa 获取活动列表resp：activities { activityId: "1" startTime: 1636628400000 endTime: 1639047600000 }
+info-2021-11-24-10-2.log:2021-11-24 10:48:59:823 WARN - Gateway结束: 玩家:k1eiaa, sId:2142278273, curSeq:13606, msgId:[ActivityListRequest-12001], seqId:[13606]
+info-2021-11-24-10-2.log:2021-11-24 10:49:00:183 WARN - Gateway开始: 玩家:k1eiaa, sId:2142278273, curSeq:13606, msgId:[GoldPassInfoRequest-25901], seqId:[13607]
+info-2021-11-24-10-2.log:2021-11-24 10:49:00:185 WARN - ActionOn:25901 cache msg excuting. pid:k1eiaa, curSeqId:13606, reqSeqId:13607 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2142278273}
+info-2021-11-24-10-2.log:2021-11-24 10:49:00:188 INFO - Activity 玩家:k1eiaa 活动：1 上次进入活动时间:1636973040369(2021-11-15 18:44:00), 本次活动start:1636628400000(2021-11-11 19:00:00), end:1639047600000(2021-12-09 19:00:00)
+info-2021-11-24-10-2.log:2021-11-24 10:49:00:188 INFO - GoldPass 玩家：k1eiaa 跨天重置 重置每日免费体力 通行证奖励 level:0
+info-2021-11-24-10-2.log:2021-11-24 10:49:00:189 INFO - GoldPass 玩家：k1eiaa 跨天重置 PlayerGoldPass：PlayerGoldPass [version=8.1, activityId=1, startTime=1636628400000, dailyTime=1636887600000, weekTime=[GoldPassTask [taskId=2001, tplId=10027, finishConfition=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1300}]}}, status=2], GoldPassTask [taskId=2002, tplId=10030, finishConfition=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=3}]}}, status=2], GoldPassTask [taskId=2003, tplId=10019, finishConfition=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1}]}}, status=0], GoldPassTask [taskId=2004, tplId=10014, finishConfition=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=8}]}}, status=0], GoldPassTask [taskId=2005, tplId=10006, finishConfition=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=41}]}}, status=0], GoldPassTask [taskId=2006, tplId=10002, finishConfition=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=100}]}}, status=1], GoldPassTask [taskId=2007, tplId=10028, finishConfition=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=10}]}}, status=2], GoldPassTask [taskId=2008, tplId=10025, finishConfition=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=120}]}}, status=0]], exp=70, level=10, unlockPass=true, dailyTasks=[GoldPassTask [taskId=1001, tplId=10001, finishConfition=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=250}]}}, status=2], GoldPassTask [taskId=1002, tplId=10009, finishConfition=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[]}}, status=0], GoldPassTask [taskId=1003, tplId=10005, finishConfition=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=10}]}}, status=2], GoldPassTask [taskId=1004, tplId=10024, finishConfition=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=30}]}}, status=2]], weeklyTasks=[GoldPassTask [taskId=2001, tplId=10027, finishConfition=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1300}]}}, status=2], GoldPassTask [taskId=2002, tplId=10030, finishConfition=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=3}]}}, status=2], GoldPassTask [taskId=2003, tplId=10019, finishConfition=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1}]}}, status=0], GoldPassTask [taskId=2004, tplId=10014, finishConfition=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=8}]}}, status=0], GoldPassTask [taskId=2005, tplId=10006, finishConfition=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=41}]}}, status=0], GoldPassTask [taskId=2006, tplId=10002, finishConfition=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=100}]}}, status=1], GoldPassTask [taskId=2007, tplId=10028, finishConfition=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=10}]}}, status=2], GoldPassTask [taskId=2008, tplId=10025, finishConfition=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=120}]}}, status=0]], baseRewards=[0, 2, 1, 3, 4, 5, 8, 7, 6, 9, 10], passRewards=[2, 1, 3, 4, 5, 8, 7, 6, 9, 10]]
+info-2021-11-24-10-2.log:2021-11-24 10:49:00:190 INFO - GoldPass 玩家：k1eiaa 刷新每日任务 time：1637665200000
+info-2021-11-24-10-2.log:2021-11-24 10:49:00:190 INFO - GoldPass 玩家：k1eiaa 刷新每周日任务 time：1637233200000
+info-2021-11-24-10-2.log:2021-11-24 10:49:00:191 INFO - GoldPass 玩家：k1eiaa resp：activityMsg { activityId: "1" startTime: 1636628400000 endTime: 1639047600000 } dailyTaskRefreshTime: 1637665200000 weeklyTaskRefreshTime: 1637233200000 exp: 70 level: 10 unlockPass: true dailyTasks { status: 0 taskId: "1001" tplId: "10001" } dailyTasks { status: 0 taskId: "1002" tplId: "10016" } dailyTasks { status: 0 taskId: "1003" tplId: "10005" } dailyTasks { status: 0 taskId: "1004" tplId: "10021" } weeklyTasks { status: 0 taskId: "2001" tplId: "10027" } weeklyTasks { status: 0 taskId: "2002" tplId: "10030" } weeklyTasks { status: 0 taskId: "2003" tplId: "10017" } weeklyTasks { status: 0 taskId: "2004" tplId: "10018" } weeklyTasks { status: 0 taskId: "2005" tplId: "10006" } weeklyTasks { status: 0 taskId: "2006" tplId: "10002" } weeklyTasks { status: 0 taskId: "2007" tplId: "10028" } weeklyTasks { status: 0 taskId: "2008" tplId: "10025" } baseRewards: 0 baseRewards: 2 baseRewards: 1 baseRewards: 3 baseRewards: 4 baseRewards: 5 baseRewards: 8 baseRewards: 7 baseRewards: 6 baseRewards: 9 baseRewards: 10 passRewards: 2 passRewards: 1 passRewards: 3 passRewards: 4 passRewards: 5 passRewards: 8 passRewards: 7 passRewards: 6 passRewards: 9 passRewards: 10
+info-2021-11-24-10-2.log:2021-11-24 10:49:00:192 WARN - Gateway结束: 玩家:k1eiaa, sId:2142278273, curSeq:13607, msgId:[GoldPassInfoRequest-25901], seqId:[13607]
+info-2021-11-24-10-2.log:2021-11-24 10:49:00:574 WARN - Gateway开始: 玩家:k1eiaa, sId:2142278273, curSeq:13607, msgId:[SceneCloseTimeRequest-25313], seqId:[13608]
+info-2021-11-24-10-2.log:2021-11-24 10:49:00:575 WARN - ActionOn:25313 cache msg excuting. pid:k1eiaa, curSeqId:13607, reqSeqId:13608 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2142278273}
+info-2021-11-24-10-2.log:2021-11-24 10:49:00:576 WARN - Gateway结束: 玩家:k1eiaa, sId:2142278273, curSeq:13608, msgId:[SceneCloseTimeRequest-25313], seqId:[13608]
+info-2021-11-24-10-2.log:2021-11-24 10:49:00:950 WARN - Gateway开始: 玩家:k1eiaa, sId:2142278273, curSeq:13608, msgId:[ConvertSceneCloseItemRequest-25317], seqId:[13609]
+info-2021-11-24-10-2.log:2021-11-24 10:49:00:951 WARN - ActionOn:25317 cache msg excuting. pid:k1eiaa, curSeqId:13608, reqSeqId:13609 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2142278273}
+info-2021-11-24-10-2.log:2021-11-24 10:49:00:952 INFO - Item 玩家：k1eiaa 执行方法：closeScene 扣除道具：4096 数量：1，剩余：0
+info-2021-11-24-10-2.log:2021-11-24 10:49:00:952 INFO - Item removeItem... pid:k1eiaa, key:4096, itemId:4096
+info-2021-11-24-10-2.log:2021-11-24 10:49:00:953 INFO - 玩家：[k1eiaa] 获得经验：10 当前 level: 15 exp: 15046 method:closeSceneConvert
+info-2021-11-24-10-2.log:2021-11-24 10:49:00:956 WARN - Gateway结束: 玩家:k1eiaa, sId:2142278273, curSeq:13609, msgId:[ConvertSceneCloseItemRequest-25317], seqId:[13609]
+info-2021-11-24-10-2.log:2021-11-24 10:51:12:518 WARN - Gateway开始: 玩家:k1eiaa, sId:2142278273, curSeq:13609, msgId:[CollectAllHangupRewardRequest-24009], seqId:[13610]
+info-2021-11-24-10-2.log:2021-11-24 10:51:12:520 WARN - ActionOn:24009 cache msg excuting. pid:k1eiaa, curSeqId:13609, reqSeqId:13610 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2142278273}
+info-2021-11-24-10-2.log:2021-11-24 10:51:12:522 INFO - 魔法生物 玩家：[k1eiaa] 领取全部挂机奖励，龙2081的收益 5012: 18 上次收集挂机收益时间：1636975022000
+info-2021-11-24-10-2.log:2021-11-24 10:51:12:523 INFO - 魔法生物 玩家：[k1eiaa] 领取全部挂机奖励，龙2142的收益 5001: 3 上次收集挂机收益时间：1637722271000
+info-2021-11-24-10-2.log:2021-11-24 10:51:12:523 INFO - 魔法生物 玩家：[k1eiaa] 领取全部挂机奖励，龙2140的收益 5008: 6 上次收集挂机收益时间：1636972555000
+info-2021-11-24-10-2.log:2021-11-24 10:51:12:523 INFO - 魔法生物 玩家：[k1eiaa] 领取全部挂机奖励，龙2141的收益 5008: 2 上次收集挂机收益时间：1636972555000
+info-2021-11-24-10-2.log:2021-11-24 10:51:12:523 INFO - 魔法生物 玩家：[k1eiaa] 领取全部挂机奖励，龙2096的收益 5006: 18 上次收集挂机收益时间：1636975238130
+info-2021-11-24-10-2.log:2021-11-24 10:51:12:523 INFO - 魔法生物 玩家：[k1eiaa] 领取全部挂机奖励，龙2040的收益 5016: 27 上次收集挂机收益时间：1637722271000
+info-2021-11-24-10-2.log:2021-11-24 10:51:12:523 INFO - 魔法生物 玩家：[k1eiaa] 领取全部挂机奖励，龙2168的收益 5009: 27 上次收集挂机收益时间：1637722271000
+info-2021-11-24-10-2.log:2021-11-24 10:51:12:523 INFO - 魔法生物 玩家：[k1eiaa] 领取全部挂机奖励，龙2035的收益 5018: 27 上次收集挂机收益时间：1637722271000
+info-2021-11-24-10-2.log:2021-11-24 10:51:12:523 INFO - 魔法生物 玩家：[k1eiaa] 领取全部挂机奖励，龙2112的收益 5001: 9 上次收集挂机收益时间：1637722271000
+info-2021-11-24-10-2.log:2021-11-24 10:51:12:523 INFO - 魔法生物 玩家：[k1eiaa] 领取全部挂机奖励，龙2174的收益 5011: 3 上次收集挂机收益时间：1636972555000
+info-2021-11-24-10-2.log:2021-11-24 10:51:12:523 INFO - Item 玩家：k1eiaa 执行方法：shake 获得道具：5011 数量：3
+info-2021-11-24-10-2.log:2021-11-24 10:51:12:524 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：5011 数量：612 key:5011
+info-2021-11-24-10-2.log:2021-11-24 10:51:12:524 INFO - Item 玩家：k1eiaa 道具：5011 数量：612 ，cd数量：0
+info-2021-11-24-10-2.log:2021-11-24 10:51:12:524 INFO - Item 玩家：k1eiaa 执行方法：shake 获得道具：5012 数量：18
+info-2021-11-24-10-2.log:2021-11-24 10:51:12:524 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：5012 数量：639 key:5012
+info-2021-11-24-10-2.log:2021-11-24 10:51:12:524 INFO - Item 玩家：k1eiaa 道具：5012 数量：639 ，cd数量：0
+info-2021-11-24-10-2.log:2021-11-24 10:51:12:524 INFO - Item 玩家：k1eiaa 执行方法：shake 获得道具：5001 数量：12
+info-2021-11-24-10-2.log:2021-11-24 10:51:12:524 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：5001 数量：5251 key:5001
+info-2021-11-24-10-2.log:2021-11-24 10:51:12:524 INFO - Item 玩家：k1eiaa 道具：5001 数量：5251 ，cd数量：0
+info-2021-11-24-10-2.log:2021-11-24 10:51:12:524 INFO - Item 玩家：k1eiaa 执行方法：shake 获得道具：5016 数量：27
+info-2021-11-24-10-2.log:2021-11-24 10:51:12:524 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：5016 数量：402 key:5016
+info-2021-11-24-10-2.log:2021-11-24 10:51:12:524 INFO - Item 玩家：k1eiaa 道具：5016 数量：402 ，cd数量：0
+info-2021-11-24-10-2.log:2021-11-24 10:51:12:524 INFO - Item 玩家：k1eiaa 执行方法：shake 获得道具：5006 数量：18
+info-2021-11-24-10-2.log:2021-11-24 10:51:12:524 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：5006 数量：818 key:5006
+info-2021-11-24-10-2.log:2021-11-24 10:51:12:524 INFO - Item 玩家：k1eiaa 道具：5006 数量：818 ，cd数量：0
+info-2021-11-24-10-2.log:2021-11-24 10:51:12:524 INFO - Item 玩家：k1eiaa 执行方法：shake 获得道具：5018 数量：27
+info-2021-11-24-10-2.log:2021-11-24 10:51:12:524 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：5018 数量：543 key:5018
+info-2021-11-24-10-2.log:2021-11-24 10:51:12:524 INFO - Item 玩家：k1eiaa 道具：5018 数量：543 ，cd数量：0
+info-2021-11-24-10-2.log:2021-11-24 10:51:12:524 INFO - Item 玩家：k1eiaa 执行方法：shake 获得道具：5008 数量：8
+info-2021-11-24-10-2.log:2021-11-24 10:51:12:524 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：5008 数量：308 key:5008
+info-2021-11-24-10-2.log:2021-11-24 10:51:12:524 INFO - Item 玩家：k1eiaa 道具：5008 数量：308 ，cd数量：0
+info-2021-11-24-10-2.log:2021-11-24 10:51:12:524 INFO - Item 玩家：k1eiaa 执行方法：shake 获得道具：5009 数量：27
+info-2021-11-24-10-2.log:2021-11-24 10:51:12:524 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：5009 数量：2058 key:5009
+info-2021-11-24-10-2.log:2021-11-24 10:51:12:524 INFO - Item 玩家：k1eiaa 道具：5009 数量：2058 ，cd数量：0
+info-2021-11-24-10-2.log:2021-11-24 10:51:12:540 WARN - Gateway结束: 玩家:k1eiaa, sId:2142278273, curSeq:13610, msgId:[CollectAllHangupRewardRequest-24009], seqId:[13610]
+info-2021-11-24-10-2.log:2021-11-24 10:51:19:041 WARN - Gateway开始: 玩家:k1eiaa, sId:2142278273, curSeq:13610, msgId:[1005], seqId:[13611]
+info-2021-11-24-10-2.log:2021-11-24 10:51:19:042 WARN - ActionOn:1005 cache msg excuting. pid:k1eiaa, curSeqId:13610, reqSeqId:13611 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2142278273}
+info-2021-11-24-10-2.log:2021-11-24 10:51:19:043 INFO - Guide 玩家：k1eiaa 版本：9.1 完成引导：GuideRuins
+info-2021-11-24-10-2.log:2021-11-24 10:51:19:043 WARN - Gateway结束: 玩家:k1eiaa, sId:2142278273, curSeq:13611, msgId:[1005], seqId:[13611]
+info-2021-11-24-10-2.log:2021-11-24 10:51:19:408 WARN - Gateway开始: 玩家:k1eiaa, sId:2142278273, curSeq:13611, msgId:[ActiveEggOpenRequest-26203], seqId:[13612]
+info-2021-11-24-10-2.log:2021-11-24 10:51:19:409 WARN - ActionOn:26203 cache msg excuting. pid:k1eiaa, curSeqId:13611, reqSeqId:13612 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2142278273}
+info-2021-11-24-10-2.log:2021-11-24 10:51:19:409 INFO - Item 玩家：k1eiaa 执行方法：OpenActiveEgg 获得道具：1003 数量：50
+info-2021-11-24-10-2.log:2021-11-24 10:51:19:414 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1003 数量：167 key:1003
+info-2021-11-24-10-2.log:2021-11-24 10:51:19:414 INFO - Item 玩家：k1eiaa 道具：1003 数量：167 ，cd数量：0
+info-2021-11-24-10-2.log:2021-11-24 10:51:19:414 INFO - Item 玩家：k1eiaa 执行方法：OpenActiveEgg 获得道具：1002 数量：300
+info-2021-11-24-10-2.log:2021-11-24 10:51:19:414 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1002 数量：5875 key:1002
+info-2021-11-24-10-2.log:2021-11-24 10:51:19:414 INFO - Item 玩家：k1eiaa 道具：1002 数量：5875 ，cd数量：0
+info-2021-11-24-10-2.log:2021-11-24 10:51:19:414 INFO - ActiveEgg 玩家：k1eiaa 彩蛋：ActiveEgg [eggId=1, type=2, activeCnt=20, activeMax=20, startCdTime=0, status=0] 开启成功
+info-2021-11-24-10-2.log:2021-11-24 10:51:19:414 INFO - ActiveEgg 玩家：k1eiaa 随机彩蛋：1
+info-2021-11-24-10-2.log:2021-11-24 10:51:19:414 INFO - ActiveEgg 玩家：k1eiaa 活跃彩蛋：ActiveEgg [eggId=5, type=1, activeCnt=0, activeMax=20, startCdTime=1637722279414, status=2] 开始冷却
+info-2021-11-24-10-2.log:2021-11-24 10:51:19:415 INFO - ActiveEgg 玩家：k1eiaa 开启彩蛋：[1]完成 resp：rewards { itemTemplateId: "1003" count: 50 } rewards { itemTemplateId: "1002" count: 300 } eggs { eggId: 2 type: 1 status: 1 cur: 0 max: 20 } eggs { eggId: 3 type: 1 status: 1 cur: 0 max: 20 } eggs { eggId: 4 type: 3 status: 1 cur: 0 max: 20 } eggs { eggId: 5 type: 1 status: 2 cur: 0 max: 20 cd: 7199999 }
+info-2021-11-24-10-2.log:2021-11-24 10:51:19:423 WARN - Gateway结束: 玩家:k1eiaa, sId:2142278273, curSeq:13612, msgId:[ActiveEggOpenRequest-26203], seqId:[13612]
+info-2021-11-24-10-2.log:2021-11-24 10:51:30:125 WARN - Gateway开始: 玩家:k1eiaa, sId:2142278273, curSeq:13612, msgId:[TakeFloatObjectAwardRequest-25703], seqId:[13613]
+info-2021-11-24-10-2.log:2021-11-24 10:51:30:126 WARN - ActionOn:25703 cache msg excuting. pid:k1eiaa, curSeqId:13612, reqSeqId:13613 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2142278273}
+info-2021-11-24-10-2.log:2021-11-24 10:51:30:127 INFO - Item 玩家：k1eiaa 执行方法：floaterReward 获得道具：1002 数量：15
+info-2021-11-24-10-2.log:2021-11-24 10:51:30:129 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1002 数量：5890 key:1002
+info-2021-11-24-10-2.log:2021-11-24 10:51:30:129 INFO - Item 玩家：k1eiaa 道具：1002 数量：5890 ，cd数量：0
+info-2021-11-24-10-2.log:2021-11-24 10:51:30:130 INFO - FloatObjectManager.taskFloatObjectAward@success|pid=k1eiaa|version=9.1|awardTimes=1
+info-2021-11-24-10-2.log:2021-11-24 10:51:30:138 WARN - Gateway结束: 玩家:k1eiaa, sId:2142278273, curSeq:13613, msgId:[TakeFloatObjectAwardRequest-25703], seqId:[13613]
+info-2021-11-24-10-2.log:2021-11-24 10:51:33:868 WARN - Gateway开始: 玩家:k1eiaa, sId:2142278273, curSeq:13613, msgId:[CollectAllHangupRewardRequest-24009], seqId:[13614]
+info-2021-11-24-10-2.log:2021-11-24 10:51:33:869 WARN - ActionOn:24009 cache msg excuting. pid:k1eiaa, curSeqId:13613, reqSeqId:13614 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2142278273}
+info-2021-11-24-10-2.log:2021-11-24 10:51:33:871 INFO - 魔法生物 玩家：[k1eiaa] 领取全部挂机奖励，龙2047的收益 5009: 18 上次收集挂机收益时间：1636974038133
+info-2021-11-24-10-2.log:2021-11-24 10:51:33:873 INFO - 魔法生物 玩家：[k1eiaa] 领取全部挂机奖励，龙2175的收益 5002: 3 上次收集挂机收益时间：1637722293000
+info-2021-11-24-10-2.log:2021-11-24 10:51:33:873 INFO - 魔法生物 玩家：[k1eiaa] 领取全部挂机奖励，龙2108的收益 5001: 27 上次收集挂机收益时间：1637722293000
+info-2021-11-24-10-2.log:2021-11-24 10:51:33:873 INFO - 魔法生物 玩家：[k1eiaa] 领取全部挂机奖励，龙2170的收益 3002: 3 上次收集挂机收益时间：1636971986000
+info-2021-11-24-10-2.log:2021-11-24 10:51:33:873 INFO - 魔法生物 玩家：[k1eiaa] 领取全部挂机奖励，龙2118的收益 5001: 9 上次收集挂机收益时间：1637722293000
+info-2021-11-24-10-2.log:2021-11-24 10:51:33:873 INFO - 魔法生物 玩家：[k1eiaa] 领取全部挂机奖励，龙2055的收益 5001: 27 上次收集挂机收益时间：1637722293000
+info-2021-11-24-10-2.log:2021-11-24 10:51:33:873 INFO - 魔法生物 玩家：[k1eiaa] 领取全部挂机奖励，龙2180的收益 5013: 3 上次收集挂机收益时间：1636971583000
+info-2021-11-24-10-2.log:2021-11-24 10:51:33:873 INFO - 魔法生物 玩家：[k1eiaa] 领取全部挂机奖励，龙2192的收益 5016: 3 上次收集挂机收益时间：1637722293000
+info-2021-11-24-10-2.log:2021-11-24 10:51:33:873 INFO - 魔法生物 玩家：[k1eiaa] 领取全部挂机奖励，龙2193的收益 3001: 2 上次收集挂机收益时间：1636979206000
+info-2021-11-24-10-2.log:2021-11-24 10:51:33:873 INFO - 魔法生物 玩家：[k1eiaa] 领取全部挂机奖励，龙2191的收益 5009: 9 上次收集挂机收益时间：1637722293000
+info-2021-11-24-10-2.log:2021-11-24 10:51:33:873 INFO - Item 玩家：k1eiaa 执行方法：shake 获得道具：5001 数量：63
+info-2021-11-24-10-2.log:2021-11-24 10:51:33:874 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：5001 数量：5314 key:5001
+info-2021-11-24-10-2.log:2021-11-24 10:51:33:874 INFO - Item 玩家：k1eiaa 道具：5001 数量：5314 ，cd数量：0
+info-2021-11-24-10-2.log:2021-11-24 10:51:33:874 INFO - Item 玩家：k1eiaa 执行方法：shake 获得道具：5002 数量：3
+info-2021-11-24-10-2.log:2021-11-24 10:51:33:874 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：5002 数量：1280 key:5002
+info-2021-11-24-10-2.log:2021-11-24 10:51:33:874 INFO - Item 玩家：k1eiaa 道具：5002 数量：1280 ，cd数量：0
+info-2021-11-24-10-2.log:2021-11-24 10:51:33:874 INFO - Item 玩家：k1eiaa 执行方法：shake 获得道具：5013 数量：3
+info-2021-11-24-10-2.log:2021-11-24 10:51:33:874 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：5013 数量：30 key:5013
+info-2021-11-24-10-2.log:2021-11-24 10:51:33:874 INFO - Item 玩家：k1eiaa 道具：5013 数量：30 ，cd数量：0
+info-2021-11-24-10-2.log:2021-11-24 10:51:33:874 INFO - Item 玩家：k1eiaa 执行方法：shake 获得道具：3002 数量：3
+info-2021-11-24-10-2.log:2021-11-24 10:51:33:874 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：3002 数量：6 key:3002
+info-2021-11-24-10-2.log:2021-11-24 10:51:33:874 INFO - Item 玩家：k1eiaa 道具：3002 数量：6 ，cd数量：0
+info-2021-11-24-10-2.log:2021-11-24 10:51:33:874 INFO - Item 玩家：k1eiaa 执行方法：shake 获得道具：5016 数量：3
+info-2021-11-24-10-2.log:2021-11-24 10:51:33:874 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：5016 数量：405 key:5016
+info-2021-11-24-10-2.log:2021-11-24 10:51:33:874 INFO - Item 玩家：k1eiaa 道具：5016 数量：405 ，cd数量：0
+info-2021-11-24-10-2.log:2021-11-24 10:51:33:874 INFO - Item 玩家：k1eiaa 执行方法：shake 获得道具：3001 数量：2
+info-2021-11-24-10-2.log:2021-11-24 10:51:33:874 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：3001 数量：57 key:3001
+info-2021-11-24-10-2.log:2021-11-24 10:51:33:874 INFO - Item 玩家：k1eiaa 道具：3001 数量：57 ，cd数量：0
+info-2021-11-24-10-2.log:2021-11-24 10:51:33:874 INFO - Item 玩家：k1eiaa 执行方法：shake 获得道具：5009 数量：27
+info-2021-11-24-10-2.log:2021-11-24 10:51:33:874 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：5009 数量：2085 key:5009
+info-2021-11-24-10-2.log:2021-11-24 10:51:33:874 INFO - Item 玩家：k1eiaa 道具：5009 数量：2085 ，cd数量：0
+info-2021-11-24-10-2.log:2021-11-24 10:51:33:890 WARN - Gateway结束: 玩家:k1eiaa, sId:2142278273, curSeq:13614, msgId:[CollectAllHangupRewardRequest-24009], seqId:[13614]
+info-2021-11-24-10-2.log:2021-11-24 10:51:34:317 WARN - Gateway开始: 玩家:k1eiaa, sId:2142278273, curSeq:13614, msgId:[CollectAllHangupRewardRequest-24009], seqId:[13615]
+info-2021-11-24-10-2.log:2021-11-24 10:51:34:319 WARN - ActionOn:24009 cache msg excuting. pid:k1eiaa, curSeqId:13614, reqSeqId:13615 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2142278273}
+info-2021-11-24-10-2.log:2021-11-24 10:51:34:322 INFO - 魔法生物 玩家：[k1eiaa] 领取全部挂机奖励，龙2124的收益 5001: 3 上次收集挂机收益时间：1637722293000
+info-2021-11-24-10-2.log:2021-11-24 10:51:34:323 INFO - 魔法生物 玩家：[k1eiaa] 领取全部挂机奖励，龙2136的收益 5002: 27 上次收集挂机收益时间：1637722293000
+info-2021-11-24-10-2.log:2021-11-24 10:51:34:323 INFO - 魔法生物 玩家：[k1eiaa] 领取全部挂机奖励，龙2194的收益 5016: 3 上次收集挂机收益时间：1637722293000
+info-2021-11-24-10-2.log:2021-11-24 10:51:34:323 INFO - 魔法生物 玩家：[k1eiaa] 领取全部挂机奖励，龙2195的收益 5016: 3 上次收集挂机收益时间：1637722293000
+info-2021-11-24-10-2.log:2021-11-24 10:51:34:323 INFO - Item 玩家：k1eiaa 执行方法：shake 获得道具：5001 数量：3
+info-2021-11-24-10-2.log:2021-11-24 10:51:34:324 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：5001 数量：5317 key:5001
+info-2021-11-24-10-2.log:2021-11-24 10:51:34:324 INFO - Item 玩家：k1eiaa 道具：5001 数量：5317 ，cd数量：0
+info-2021-11-24-10-2.log:2021-11-24 10:51:34:324 INFO - Item 玩家：k1eiaa 执行方法：shake 获得道具：5002 数量：27
+info-2021-11-24-10-2.log:2021-11-24 10:51:34:324 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：5002 数量：1307 key:5002
+info-2021-11-24-10-2.log:2021-11-24 10:51:34:324 INFO - Item 玩家：k1eiaa 道具：5002 数量：1307 ，cd数量：0
+info-2021-11-24-10-2.log:2021-11-24 10:51:34:324 INFO - Item 玩家：k1eiaa 执行方法：shake 获得道具：5016 数量：6
+info-2021-11-24-10-2.log:2021-11-24 10:51:34:324 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：5016 数量：411 key:5016
+info-2021-11-24-10-2.log:2021-11-24 10:51:34:324 INFO - Item 玩家：k1eiaa 道具：5016 数量：411 ，cd数量：0
+info-2021-11-24-10-2.log:2021-11-24 10:51:34:336 WARN - Gateway结束: 玩家:k1eiaa, sId:2142278273, curSeq:13615, msgId:[CollectAllHangupRewardRequest-24009], seqId:[13615]
+info-2021-11-24-10-2.log:2021-11-24 10:57:06:300 INFO - 关闭session, {REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2142278273}
+info-2021-11-24-10-2.log:2021-11-24 10:57:06:313 INFO - CLOSE SESSION pid: k1eiaa,sid:2142278273,seqId: 13615, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2142278273}
+info-2021-11-24-10-2.log:2021-11-24 10:57:22:960 INFO - 创建session, {REMOTE_ADDR=129.226.189.243, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, SESSION_ID=2645970369}
+info-2021-11-24-10-2.log:2021-11-24 10:57:22:960 WARN - Gateway开始: 玩家:k1eiaa, sId:2645970369, curSeq:13615, msgId:[ReceiveFactoryProduceRequest-25103], seqId:[13616]
+info-2021-11-24-10-2.log:2021-11-24 10:57:22:961 WARN - ActionOut:25103 player:k1eiaa not online. version:9.1.255 session:{REMOTE_ADDR=129.226.189.243, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, SESSION_ID=2645970369}
+info-2021-11-24-10-2.log:2021-11-24 10:57:22:961 WARN - Gateway结束: 玩家:k1eiaa, sId:2645970369, curSeq:13615, msgId:[ReceiveFactoryProduceRequest-25103], seqId:[13616]
+info-2021-11-24-10-2.log:2021-11-24 10:57:23:252 INFO - Login 绑定账号无角色或与自身账号相同,玩家直接使用自己账号登录：755CD3A7-9D54-4E06-B30D-6DE38AF9EDCA，登录，角色id:k1eiaa v:9.1.255,visitorAccount:755CD3A7-9D54-4E06-B30D-6DE38AF9EDCA
+info-2021-11-24-10-2.log:2021-11-24 10:57:23:254 INFO - Login session new:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=529255008}
+info-2021-11-24-10-2.log:2021-11-24 10:57:23:257 INFO - Ads 玩家：k1eiaa 用户分层解析成功，af_status：Organic 返回分组：2
+info-2021-11-24-10-2.log:2021-11-24 10:57:23:533 WARN - Gateway开始: 玩家:k1eiaa, sId:529255008, curSeq:13615, msgId:[ReceiveFactoryProduceRequest-25103], seqId:[13616]
+info-2021-11-24-10-2.log:2021-11-24 10:57:23:534 WARN - ActionOn:25103 cache msg excuting. pid:k1eiaa, curSeqId:13615, reqSeqId:13616 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=529255008}
+info-2021-11-24-10-2.log:2021-11-24 10:57:23:536 INFO - Item 玩家：k1eiaa 执行方法：factoryProduct 获得道具：3032 数量：1
+info-2021-11-24-10-2.log:2021-11-24 10:57:23:537 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：3032 数量：1 key:3032
+info-2021-11-24-10-2.log:2021-11-24 10:57:23:537 INFO - Item 玩家：k1eiaa 道具：3032 数量：1 ，cd数量：0
+info-2021-11-24-10-2.log:2021-11-24 10:57:23:539 INFO - 生产 玩家：[k1eiaa] 领取生产物资成功 factoryId: 1 领取后的startTime: 1636973233000 productItemId:3032
+info-2021-11-24-10-2.log:2021-11-24 10:57:23:539 INFO - Item 玩家：k1eiaa 执行方法：factoryProduct 获得道具：3032 数量：1
+info-2021-11-24-10-2.log:2021-11-24 10:57:23:539 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：3032 数量：2 key:3032
+info-2021-11-24-10-2.log:2021-11-24 10:57:23:539 INFO - Item 玩家：k1eiaa 道具：3032 数量：2 ，cd数量：0
+info-2021-11-24-10-2.log:2021-11-24 10:57:23:540 INFO - 生产 玩家：[k1eiaa] 领取生产物资成功 factoryId: 1 领取后的startTime: 1636975033000 productItemId:3032
+info-2021-11-24-10-2.log:2021-11-24 10:57:23:542 INFO - TaskManager.checkAndUpdateTaskCondition@condition updated|pid=k1eiaa|version=9.1|graphId=branch_24|taskId=Submission_Line15_3c|conIndex=1|save=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=2}]}}|conName=TakeItemFromFactoryCondition
+info-2021-11-24-10-2.log:2021-11-24 10:57:23:542 INFO - TaskManager.checkAndUpdateTaskCondition@task finished|pid=k1eiaa|version=9.1|graphId=branch_24|taskId=Submission_Line15_3c
+info-2021-11-24-10-2.log:2021-11-24 10:57:23:549 INFO - ActivityGoldPassManager.updateTaskCondition@condition updated|pid=k1eiaa|version=9.1|taskId=2004|taskTpl=10018|save=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=2}]}}|conName=TakeItemFromFactoryCondition
+info-2021-11-24-10-2.log:2021-11-24 10:57:23:551 WARN - Gateway结束: 玩家:k1eiaa, sId:529255008, curSeq:13616, msgId:[ReceiveFactoryProduceRequest-25103], seqId:[13616]
+info-2021-11-24-11-1.log:2021-11-24 11:03:07:874 INFO - 关闭session, {REMOTE_ADDR=129.226.189.243, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, SESSION_ID=2645970369}
+info-2021-11-24-11-1.log:2021-11-24 11:03:07:874 WARN - CLOSE SESSION player session changed s:{REMOTE_ADDR=129.226.189.243, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, SESSION_ID=2645970369}
+info-2021-11-24-11-1.log:2021-11-24 11:03:07:888 INFO - 关闭session, {REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=529255008}
+info-2021-11-24-11-1.log:2021-11-24 11:03:07:901 INFO - CLOSE SESSION pid: k1eiaa,sid:529255008,seqId: 13616, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=529255008}
+info-2021-11-24-11-1.log:2021-11-24 11:10:09:382 INFO - 创建session, {REMOTE_ADDR=129.226.189.243, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, SESSION_ID=1128829034}
+info-2021-11-24-11-1.log:2021-11-24 11:10:09:383 WARN - Gateway开始: 玩家:k1eiaa, sId:1128829034, curSeq:13616, msgId:[SceneCloseTimeRequest-25313], seqId:[13617]
+info-2021-11-24-11-1.log:2021-11-24 11:10:09:384 WARN - ActionOut:25313 player:k1eiaa not online. version:9.1.255 session:{REMOTE_ADDR=129.226.189.243, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, SESSION_ID=1128829034}
+info-2021-11-24-11-1.log:2021-11-24 11:10:09:384 WARN - Gateway结束: 玩家:k1eiaa, sId:1128829034, curSeq:13616, msgId:[SceneCloseTimeRequest-25313], seqId:[13617]
+info-2021-11-24-11-1.log:2021-11-24 11:10:09:751 INFO - Login 绑定账号无角色或与自身账号相同,玩家直接使用自己账号登录：755CD3A7-9D54-4E06-B30D-6DE38AF9EDCA，登录，角色id:k1eiaa v:9.1.255,visitorAccount:755CD3A7-9D54-4E06-B30D-6DE38AF9EDCA
+info-2021-11-24-11-1.log:2021-11-24 11:10:09:756 INFO - Login session new:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:10:09:760 INFO - Ads 玩家：k1eiaa 用户分层解析成功，af_status：Organic 返回分组：2
+info-2021-11-24-11-1.log:2021-11-24 11:10:10:178 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13616, msgId:[SceneCloseTimeRequest-25313], seqId:[13617]
+info-2021-11-24-11-1.log:2021-11-24 11:10:10:179 WARN - ActionOn:25313 cache msg excuting. pid:k1eiaa, curSeqId:13616, reqSeqId:13617 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:10:10:180 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13617, msgId:[SceneCloseTimeRequest-25313], seqId:[13617]
+info-2021-11-24-11-1.log:2021-11-24 11:10:46:662 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13617, msgId:[SceneCloseTimeRequest-25313], seqId:[13618]
+info-2021-11-24-11-1.log:2021-11-24 11:10:46:663 WARN - ActionOn:25313 cache msg excuting. pid:k1eiaa, curSeqId:13617, reqSeqId:13618 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:10:46:664 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13618, msgId:[SceneCloseTimeRequest-25313], seqId:[13618]
+info-2021-11-24-11-1.log:2021-11-24 11:11:31:463 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13618, msgId:[SceneCloseTimeRequest-25313], seqId:[13619]
+info-2021-11-24-11-1.log:2021-11-24 11:11:31:464 WARN - ActionOn:25313 cache msg excuting. pid:k1eiaa, curSeqId:13618, reqSeqId:13619 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:11:31:465 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13619, msgId:[SceneCloseTimeRequest-25313], seqId:[13619]
+info-2021-11-24-11-1.log:2021-11-24 11:11:35:084 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13619, msgId:[SceneCloseTimeRequest-25313], seqId:[13620]
+info-2021-11-24-11-1.log:2021-11-24 11:11:35:086 WARN - ActionOn:25313 cache msg excuting. pid:k1eiaa, curSeqId:13619, reqSeqId:13620 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:11:35:087 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13620, msgId:[SceneCloseTimeRequest-25313], seqId:[13620]
+info-2021-11-24-11-1.log:2021-11-24 11:11:38:261 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13620, msgId:[SceneInfoRequest-25301], seqId:[13621]
+info-2021-11-24-11-1.log:2021-11-24 11:11:38:262 WARN - ActionOn:25301 cache msg excuting. pid:k1eiaa, curSeqId:13620, reqSeqId:13621 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:11:38:267 INFO - 玩家:k1eiaa 重置龙之力(最大值)， 龙：2047 龙之力：6 save: false
+info-2021-11-24-11-1.log:2021-11-24 11:11:38:270 INFO - 玩家:k1eiaa 重置龙之力(最大值)， 龙：2108 龙之力：6 save: false
+info-2021-11-24-11-1.log:2021-11-24 11:11:38:273 INFO - 玩家:k1eiaa 重置龙之力(最大值)， 龙：2123 龙之力：6 save: false
+info-2021-11-24-11-1.log:2021-11-24 11:11:38:278 INFO - 玩家:k1eiaa 重置龙之力(最大值)， 龙：2168 龙之力：6 save: false
+info-2021-11-24-11-1.log:2021-11-24 11:11:38:298 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13621, msgId:[SceneInfoRequest-25301], seqId:[13621]
+info-2021-11-24-11-1.log:2021-11-24 11:11:40:503 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13621, msgId:[ObstacleAchievementInfoRequest-25310], seqId:[13622]
+info-2021-11-24-11-1.log:2021-11-24 11:11:40:504 WARN - ActionOn:25310 cache msg excuting. pid:k1eiaa, curSeqId:13621, reqSeqId:13622 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:11:40:504 INFO - 障碍采集成就 玩家：k1eiaa 场景：9 resp：complete: false achievements { complete: false achievementId: "9007" type: 1 count: 1 limit: 25 } achievements { complete: false achievementId: "9008" type: 2 count: 0 limit: 8 } achievements { complete: false achievementId: "9009" type: 3 count: 0 limit: 20 } achievements { complete: false achievementId: "9010" type: 4 count: 0 limit: 5 }
+info-2021-11-24-11-1.log:2021-11-24 11:11:40:505 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13622, msgId:[ObstacleAchievementInfoRequest-25310], seqId:[13622]
+info-2021-11-24-11-1.log:2021-11-24 11:11:40:867 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13622, msgId:[GetCreatureDataRequest-24005], seqId:[13623]
+info-2021-11-24-11-1.log:2021-11-24 11:11:40:868 WARN - ActionOn:24005 cache msg excuting. pid:k1eiaa, curSeqId:13622, reqSeqId:13623 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:11:40:871 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13623, msgId:[GetCreatureDataRequest-24005], seqId:[13623]
+info-2021-11-24-11-1.log:2021-11-24 11:11:41:293 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13623, msgId:[MailListRequest-16001], seqId:[13624]
+info-2021-11-24-11-1.log:2021-11-24 11:11:41:295 WARN - ActionOn:16001 cache msg excuting. pid:k1eiaa, curSeqId:13623, reqSeqId:13624 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:11:41:296 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13624, msgId:[MailListRequest-16001], seqId:[13624]
+info-2021-11-24-11-1.log:2021-11-24 11:11:41:659 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13624, msgId:[ActivityListRequest-12001], seqId:[13625]
+info-2021-11-24-11-1.log:2021-11-24 11:11:41:660 WARN - ActionOn:12001 cache msg excuting. pid:k1eiaa, curSeqId:13624, reqSeqId:13625 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:11:41:661 INFO - Activity 玩家：k1eiaa 获取活动列表resp：activities { activityId: "1" startTime: 1636628400000 endTime: 1639047600000 }
+info-2021-11-24-11-1.log:2021-11-24 11:11:41:661 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13625, msgId:[ActivityListRequest-12001], seqId:[13625]
+info-2021-11-24-11-1.log:2021-11-24 11:11:54:068 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13625, msgId:[SceneInfoRequest-25301], seqId:[13626]
+info-2021-11-24-11-1.log:2021-11-24 11:11:54:069 WARN - ActionOn:25301 cache msg excuting. pid:k1eiaa, curSeqId:13625, reqSeqId:13626 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:11:54:103 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13626, msgId:[SceneInfoRequest-25301], seqId:[13626]
+info-2021-11-24-11-1.log:2021-11-24 11:11:56:046 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13626, msgId:[ObstacleAchievementInfoRequest-25310], seqId:[13627]
+info-2021-11-24-11-1.log:2021-11-24 11:11:56:047 WARN - ActionOn:25310 cache msg excuting. pid:k1eiaa, curSeqId:13626, reqSeqId:13627 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:11:56:048 INFO - 障碍采集成就 玩家：k1eiaa 场景：901 resp：complete: false achievements { complete: false achievementId: "90101" type: 1 count: 0 limit: 25 } achievements { complete: false achievementId: "90103" type: 6 count: 0 limit: 10 } achievements { complete: false achievementId: "90102" type: 5 count: 0 limit: 5 } achievements { complete: false achievementId: "90104" type: 7 count: 0 limit: 1 }
+info-2021-11-24-11-1.log:2021-11-24 11:11:56:048 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13627, msgId:[ObstacleAchievementInfoRequest-25310], seqId:[13627]
+info-2021-11-24-11-1.log:2021-11-24 11:11:56:400 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13627, msgId:[GetCreatureDataRequest-24005], seqId:[13628]
+info-2021-11-24-11-1.log:2021-11-24 11:11:56:401 WARN - ActionOn:24005 cache msg excuting. pid:k1eiaa, curSeqId:13627, reqSeqId:13628 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:11:56:403 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13628, msgId:[GetCreatureDataRequest-24005], seqId:[13628]
+info-2021-11-24-11-1.log:2021-11-24 11:11:56:772 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13628, msgId:[SelectExploreRelicRequest-24028], seqId:[13629]
+info-2021-11-24-11-1.log:2021-11-24 11:11:56:773 WARN - ActionOn:24028 cache msg excuting. pid:k1eiaa, curSeqId:13628, reqSeqId:13629 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:11:56:777 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13629, msgId:[SelectExploreRelicRequest-24028], seqId:[13629]
+info-2021-11-24-11-1.log:2021-11-24 11:11:57:151 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13629, msgId:[MailListRequest-16001], seqId:[13630]
+info-2021-11-24-11-1.log:2021-11-24 11:11:57:152 WARN - ActionOn:16001 cache msg excuting. pid:k1eiaa, curSeqId:13629, reqSeqId:13630 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:11:57:153 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13630, msgId:[MailListRequest-16001], seqId:[13630]
+info-2021-11-24-11-1.log:2021-11-24 11:11:57:504 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13630, msgId:[FindScenePlantsRequest-25303], seqId:[13631]
+info-2021-11-24-11-1.log:2021-11-24 11:11:57:505 WARN - ActionOn:25303 cache msg excuting. pid:k1eiaa, curSeqId:13630, reqSeqId:13631 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:11:57:506 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13631, msgId:[FindScenePlantsRequest-25303], seqId:[13631]
+info-2021-11-24-11-1.log:2021-11-24 11:11:57:866 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13631, msgId:[ActivityListRequest-12001], seqId:[13632]
+info-2021-11-24-11-1.log:2021-11-24 11:11:57:868 WARN - ActionOn:12001 cache msg excuting. pid:k1eiaa, curSeqId:13631, reqSeqId:13632 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:11:57:868 INFO - Activity 玩家：k1eiaa 获取活动列表resp：activities { activityId: "1" startTime: 1636628400000 endTime: 1639047600000 }
+info-2021-11-24-11-1.log:2021-11-24 11:11:57:869 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13632, msgId:[ActivityListRequest-12001], seqId:[13632]
+info-2021-11-24-11-1.log:2021-11-24 11:11:58:545 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13632, msgId:[SceneInfoRequest-25301], seqId:[13633]
+info-2021-11-24-11-1.log:2021-11-24 11:11:58:546 WARN - ActionOn:25301 cache msg excuting. pid:k1eiaa, curSeqId:13632, reqSeqId:13633 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:11:58:578 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13633, msgId:[SceneInfoRequest-25301], seqId:[13633]
+info-2021-11-24-11-1.log:2021-11-24 11:12:00:653 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13633, msgId:[ObstacleAchievementInfoRequest-25310], seqId:[13634]
+info-2021-11-24-11-1.log:2021-11-24 11:12:00:654 WARN - ActionOn:25310 cache msg excuting. pid:k1eiaa, curSeqId:13633, reqSeqId:13634 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:12:00:655 INFO - 障碍采集成就 玩家：k1eiaa 场景：9 resp：complete: false achievements { complete: false achievementId: "9007" type: 1 count: 1 limit: 25 } achievements { complete: false achievementId: "9008" type: 2 count: 0 limit: 8 } achievements { complete: false achievementId: "9009" type: 3 count: 0 limit: 20 } achievements { complete: false achievementId: "9010" type: 4 count: 0 limit: 5 }
+info-2021-11-24-11-1.log:2021-11-24 11:12:00:655 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13634, msgId:[ObstacleAchievementInfoRequest-25310], seqId:[13634]
+info-2021-11-24-11-1.log:2021-11-24 11:12:01:027 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13634, msgId:[GetCreatureDataRequest-24005], seqId:[13635]
+info-2021-11-24-11-1.log:2021-11-24 11:12:01:028 WARN - ActionOn:24005 cache msg excuting. pid:k1eiaa, curSeqId:13634, reqSeqId:13635 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:12:01:031 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13635, msgId:[GetCreatureDataRequest-24005], seqId:[13635]
+info-2021-11-24-11-1.log:2021-11-24 11:12:01:432 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13635, msgId:[MailListRequest-16001], seqId:[13636]
+info-2021-11-24-11-1.log:2021-11-24 11:12:01:434 WARN - ActionOn:16001 cache msg excuting. pid:k1eiaa, curSeqId:13635, reqSeqId:13636 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:12:01:435 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13636, msgId:[MailListRequest-16001], seqId:[13636]
+info-2021-11-24-11-1.log:2021-11-24 11:12:01:809 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13636, msgId:[ActivityListRequest-12001], seqId:[13637]
+info-2021-11-24-11-1.log:2021-11-24 11:12:01:810 WARN - ActionOn:12001 cache msg excuting. pid:k1eiaa, curSeqId:13636, reqSeqId:13637 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:12:01:811 INFO - Activity 玩家：k1eiaa 获取活动列表resp：activities { activityId: "1" startTime: 1636628400000 endTime: 1639047600000 }
+info-2021-11-24-11-1.log:2021-11-24 11:12:01:811 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13637, msgId:[ActivityListRequest-12001], seqId:[13637]
+info-2021-11-24-11-1.log:2021-11-24 11:12:02:768 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13637, msgId:[SceneCloseTimeRequest-25313], seqId:[13638]
+info-2021-11-24-11-1.log:2021-11-24 11:12:02:769 WARN - ActionOn:25313 cache msg excuting. pid:k1eiaa, curSeqId:13637, reqSeqId:13638 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:12:02:770 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13638, msgId:[SceneCloseTimeRequest-25313], seqId:[13638]
+info-2021-11-24-11-1.log:2021-11-24 11:12:04:618 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13638, msgId:[SceneInfoRequest-25301], seqId:[13639]
+info-2021-11-24-11-1.log:2021-11-24 11:12:04:620 WARN - ActionOn:25301 cache msg excuting. pid:k1eiaa, curSeqId:13638, reqSeqId:13639 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:12:04:641 INFO - 魔法生物 玩家：[k1eiaa] version: 9.1 离开探索场景|下线|取消选择探索 更新龙挂机信息 lastCollectHangUpRewardTime: 1636974064506 repletionEndTime: 1636974287325
+info-2021-11-24-11-1.log:2021-11-24 11:12:04:643 INFO - 魔法生物 玩家：[k1eiaa] version: 9.1 离开探索场景|下线|取消选择探索 更新龙挂机信息 lastCollectHangUpRewardTime: 1636975264503 repletionEndTime: 1636975802140
+info-2021-11-24-11-1.log:2021-11-24 11:12:04:644 INFO - 魔法生物 玩家：[k1eiaa] version: 9.1 离开探索场景|下线|取消选择探索 更新龙挂机信息 lastCollectHangUpRewardTime: 1637722319373 repletionEndTime: 1636975801136
+info-2021-11-24-11-1.log:2021-11-24 11:12:04:646 INFO - 魔法生物 玩家：[k1eiaa] version: 9.1 离开探索场景|下线|取消选择探索 更新龙挂机信息 lastCollectHangUpRewardTime: 1636973464499 repletionEndTime: 1636974289316
+info-2021-11-24-11-1.log:2021-11-24 11:12:04:648 INFO - 魔法生物 玩家：[k1eiaa] version: 9.1 离开探索场景|下线|取消选择探索 更新龙挂机信息 lastCollectHangUpRewardTime: 1637722319373 repletionEndTime: 1636975801127
+info-2021-11-24-11-1.log:2021-11-24 11:12:04:652 INFO - 魔法生物 玩家：[k1eiaa] version: 9.1 离开探索场景|下线|取消选择探索 更新龙挂机信息 lastCollectHangUpRewardTime: 1637722297373 repletionEndTime: 1636975896308
+info-2021-11-24-11-1.log:2021-11-24 11:12:04:670 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13639, msgId:[SceneInfoRequest-25301], seqId:[13639]
+info-2021-11-24-11-1.log:2021-11-24 11:12:06:795 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13639, msgId:[GetCreatureDataRequest-24005], seqId:[13640]
+info-2021-11-24-11-1.log:2021-11-24 11:12:06:796 WARN - ActionOn:24005 cache msg excuting. pid:k1eiaa, curSeqId:13639, reqSeqId:13640 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:12:06:798 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13640, msgId:[GetCreatureDataRequest-24005], seqId:[13640]
+info-2021-11-24-11-1.log:2021-11-24 11:12:07:187 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13640, msgId:[MailListRequest-16001], seqId:[13641]
+info-2021-11-24-11-1.log:2021-11-24 11:12:07:188 WARN - ActionOn:16001 cache msg excuting. pid:k1eiaa, curSeqId:13640, reqSeqId:13641 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:12:07:189 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13641, msgId:[MailListRequest-16001], seqId:[13641]
+info-2021-11-24-11-1.log:2021-11-24 11:12:07:634 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13641, msgId:[FindScenePlantsRequest-25303], seqId:[13642]
+info-2021-11-24-11-1.log:2021-11-24 11:12:07:635 WARN - ActionOn:25303 cache msg excuting. pid:k1eiaa, curSeqId:13641, reqSeqId:13642 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:12:07:636 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13642, msgId:[FindScenePlantsRequest-25303], seqId:[13642]
+info-2021-11-24-11-1.log:2021-11-24 11:12:08:018 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13642, msgId:[ActivityListRequest-12001], seqId:[13643]
+info-2021-11-24-11-1.log:2021-11-24 11:12:08:019 WARN - ActionOn:12001 cache msg excuting. pid:k1eiaa, curSeqId:13642, reqSeqId:13643 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:12:08:020 INFO - Activity 玩家：k1eiaa 获取活动列表resp：activities { activityId: "1" startTime: 1636628400000 endTime: 1639047600000 }
+info-2021-11-24-11-1.log:2021-11-24 11:12:08:020 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13643, msgId:[ActivityListRequest-12001], seqId:[13643]
+info-2021-11-24-11-1.log:2021-11-24 11:12:08:384 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13643, msgId:[SceneCloseTimeRequest-25313], seqId:[13644]
+info-2021-11-24-11-1.log:2021-11-24 11:12:08:385 WARN - ActionOn:25313 cache msg excuting. pid:k1eiaa, curSeqId:13643, reqSeqId:13644 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:12:08:387 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13644, msgId:[SceneCloseTimeRequest-25313], seqId:[13644]
+info-2021-11-24-11-1.log:2021-11-24 11:12:48:269 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13644, msgId:[SceneCloseTimeRequest-25313], seqId:[13645]
+info-2021-11-24-11-1.log:2021-11-24 11:12:48:270 WARN - ActionOn:25313 cache msg excuting. pid:k1eiaa, curSeqId:13644, reqSeqId:13645 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:12:48:271 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13645, msgId:[SceneCloseTimeRequest-25313], seqId:[13645]
+info-2021-11-24-11-1.log:2021-11-24 11:12:56:114 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13645, msgId:[SceneCloseTimeRequest-25313], seqId:[13646]
+info-2021-11-24-11-1.log:2021-11-24 11:12:56:115 WARN - ActionOn:25313 cache msg excuting. pid:k1eiaa, curSeqId:13645, reqSeqId:13646 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:12:56:116 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13646, msgId:[SceneCloseTimeRequest-25313], seqId:[13646]
+info-2021-11-24-11-1.log:2021-11-24 11:13:00:586 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13646, msgId:[SubmitTaskRequest-10001], seqId:[13647]
+info-2021-11-24-11-1.log:2021-11-24 11:13:00:588 WARN - ActionOn:10001 cache msg excuting. pid:k1eiaa, curSeqId:13646, reqSeqId:13647 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:13:00:591 INFO - 玩家：[k1eiaa] 获得经验：80 当前 level: 15 exp: 15126 method:missionReward
+info-2021-11-24-11-1.log:2021-11-24 11:13:00:591 INFO - Item 玩家：k1eiaa 执行方法：missionReward 获得道具：1002 数量：100
+info-2021-11-24-11-1.log:2021-11-24 11:13:00:591 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1002 数量：5990 key:1002
+info-2021-11-24-11-1.log:2021-11-24 11:13:00:591 INFO - Item 玩家：k1eiaa 道具：1002 数量：5990 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:13:00:591 INFO - TaskManager.submitTaskReq@successed|pid=k1eiaa|version=9.1|graphId=branch_24|taskId=Submission_Line15_3c
+info-2021-11-24-11-1.log:2021-11-24 11:13:00:601 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13647, msgId:[SubmitTaskRequest-10001], seqId:[13647]
+info-2021-11-24-11-1.log:2021-11-24 11:14:30:885 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13647, msgId:[SceneCloseTimeRequest-25313], seqId:[13648]
+info-2021-11-24-11-1.log:2021-11-24 11:14:30:886 WARN - ActionOn:25313 cache msg excuting. pid:k1eiaa, curSeqId:13647, reqSeqId:13648 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:14:30:887 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13648, msgId:[SceneCloseTimeRequest-25313], seqId:[13648]
+info-2021-11-24-11-1.log:2021-11-24 11:14:34:697 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13648, msgId:[SceneCloseTimeRequest-25313], seqId:[13649]
+info-2021-11-24-11-1.log:2021-11-24 11:14:34:698 WARN - ActionOn:25313 cache msg excuting. pid:k1eiaa, curSeqId:13648, reqSeqId:13649 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:14:34:700 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13649, msgId:[SceneCloseTimeRequest-25313], seqId:[13649]
+info-2021-11-24-11-1.log:2021-11-24 11:15:01:008 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13649, msgId:[SceneCloseTimeRequest-25313], seqId:[13650]
+info-2021-11-24-11-1.log:2021-11-24 11:15:01:009 WARN - ActionOn:25313 cache msg excuting. pid:k1eiaa, curSeqId:13649, reqSeqId:13650 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:15:01:011 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13650, msgId:[SceneCloseTimeRequest-25313], seqId:[13650]
+info-2021-11-24-11-1.log:2021-11-24 11:15:04:763 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13650, msgId:[SceneCloseTimeRequest-25313], seqId:[13651]
+info-2021-11-24-11-1.log:2021-11-24 11:15:04:764 WARN - ActionOn:25313 cache msg excuting. pid:k1eiaa, curSeqId:13650, reqSeqId:13651 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:15:04:765 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13651, msgId:[SceneCloseTimeRequest-25313], seqId:[13651]
+info-2021-11-24-11-1.log:2021-11-24 11:15:11:434 INFO - 关闭session, {REMOTE_ADDR=129.226.189.243, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, SESSION_ID=1128829034}
+info-2021-11-24-11-1.log:2021-11-24 11:15:11:434 WARN - CLOSE SESSION player session changed s:{REMOTE_ADDR=129.226.189.243, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, SESSION_ID=1128829034}
+info-2021-11-24-11-1.log:2021-11-24 11:15:27:062 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13651, msgId:[GoldPassFinishTaskRequest-25902], seqId:[13652]
+info-2021-11-24-11-1.log:2021-11-24 11:15:27:063 WARN - ActionOn:25902 cache msg excuting. pid:k1eiaa, curSeqId:13651, reqSeqId:13652 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:15:27:067 INFO - GoldPass 玩家：k1eiaa 升级 当前等级：11 经验：130
+info-2021-11-24-11-1.log:2021-11-24 11:15:27:067 INFO - GoldPass 玩家：k1eiaa 完成任务：GoldPassTask [taskId=2004, tplId=10018, finishConfition=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=2}]}}, status=2]
+info-2021-11-24-11-1.log:2021-11-24 11:15:27:069 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13652, msgId:[GoldPassFinishTaskRequest-25902], seqId:[13652]
+info-2021-11-24-11-1.log:2021-11-24 11:15:34:863 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13652, msgId:[GoldPassRewardRequest-25904], seqId:[13653]
+info-2021-11-24-11-1.log:2021-11-24 11:15:34:864 WARN - ActionOn:25904 cache msg excuting. pid:k1eiaa, curSeqId:13652, reqSeqId:13653 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:15:34:868 INFO - Item 玩家：k1eiaa 执行方法：goldPass 获得道具：1001 数量：10
+info-2021-11-24-11-1.log:2021-11-24 11:15:34:868 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1001 数量：2807 key:1001
+info-2021-11-24-11-1.log:2021-11-24 11:15:34:868 INFO - Item 玩家：k1eiaa 道具：1001 数量：2807 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:15:34:877 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13653, msgId:[GoldPassRewardRequest-25904], seqId:[13653]
+info-2021-11-24-11-1.log:2021-11-24 11:15:35:241 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13653, msgId:[EnergyRequest-1023], seqId:[13654]
+info-2021-11-24-11-1.log:2021-11-24 11:15:35:242 WARN - ActionOn:1023 cache msg excuting. pid:k1eiaa, curSeqId:13653, reqSeqId:13654 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:15:35:247 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13654, msgId:[EnergyRequest-1023], seqId:[13654]
+info-2021-11-24-11-1.log:2021-11-24 11:15:36:956 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13654, msgId:[GoldPassRewardRequest-25904], seqId:[13655]
+info-2021-11-24-11-1.log:2021-11-24 11:15:36:958 WARN - ActionOn:25904 cache msg excuting. pid:k1eiaa, curSeqId:13654, reqSeqId:13655 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:15:36:961 INFO - Item 玩家：k1eiaa 执行方法：goldPass 获得道具：1001 数量：30
+info-2021-11-24-11-1.log:2021-11-24 11:15:36:961 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1001 数量：2837 key:1001
+info-2021-11-24-11-1.log:2021-11-24 11:15:36:961 INFO - Item 玩家：k1eiaa 道具：1001 数量：2837 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:15:36:971 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13655, msgId:[GoldPassRewardRequest-25904], seqId:[13655]
+info-2021-11-24-11-1.log:2021-11-24 11:15:37:329 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13655, msgId:[EnergyRequest-1023], seqId:[13656]
+info-2021-11-24-11-1.log:2021-11-24 11:15:37:330 WARN - ActionOn:1023 cache msg excuting. pid:k1eiaa, curSeqId:13655, reqSeqId:13656 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:15:37:334 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13656, msgId:[EnergyRequest-1023], seqId:[13656]
+info-2021-11-24-11-1.log:2021-11-24 11:15:41:898 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13656, msgId:[SceneCloseTimeRequest-25313], seqId:[13657]
+info-2021-11-24-11-1.log:2021-11-24 11:15:41:902 WARN - ActionOn:25313 cache msg excuting. pid:k1eiaa, curSeqId:13656, reqSeqId:13657 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:15:41:903 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13657, msgId:[SceneCloseTimeRequest-25313], seqId:[13657]
+info-2021-11-24-11-1.log:2021-11-24 11:15:49:178 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13657, msgId:[SceneInfoRequest-25301], seqId:[13658]
+info-2021-11-24-11-1.log:2021-11-24 11:15:49:180 WARN - ActionOn:25301 cache msg excuting. pid:k1eiaa, curSeqId:13657, reqSeqId:13658 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:15:49:218 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13658, msgId:[SceneInfoRequest-25301], seqId:[13658]
+info-2021-11-24-11-1.log:2021-11-24 11:15:51:804 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13658, msgId:[ObstacleAchievementInfoRequest-25310], seqId:[13659]
+info-2021-11-24-11-1.log:2021-11-24 11:15:51:805 WARN - ActionOn:25310 cache msg excuting. pid:k1eiaa, curSeqId:13658, reqSeqId:13659 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:15:51:806 INFO - 障碍采集成就 玩家：k1eiaa 场景：9 resp：complete: false achievements { complete: false achievementId: "9007" type: 1 count: 1 limit: 25 } achievements { complete: false achievementId: "9008" type: 2 count: 0 limit: 8 } achievements { complete: false achievementId: "9009" type: 3 count: 0 limit: 20 } achievements { complete: false achievementId: "9010" type: 4 count: 0 limit: 5 }
+info-2021-11-24-11-1.log:2021-11-24 11:15:51:806 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13659, msgId:[ObstacleAchievementInfoRequest-25310], seqId:[13659]
+info-2021-11-24-11-1.log:2021-11-24 11:15:52:190 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13659, msgId:[GetCreatureDataRequest-24005], seqId:[13660]
+info-2021-11-24-11-1.log:2021-11-24 11:15:52:191 WARN - ActionOn:24005 cache msg excuting. pid:k1eiaa, curSeqId:13659, reqSeqId:13660 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:15:52:194 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13660, msgId:[GetCreatureDataRequest-24005], seqId:[13660]
+info-2021-11-24-11-1.log:2021-11-24 11:15:52:554 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13660, msgId:[MailListRequest-16001], seqId:[13661]
+info-2021-11-24-11-1.log:2021-11-24 11:15:52:555 WARN - ActionOn:16001 cache msg excuting. pid:k1eiaa, curSeqId:13660, reqSeqId:13661 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:15:52:556 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13661, msgId:[MailListRequest-16001], seqId:[13661]
+info-2021-11-24-11-1.log:2021-11-24 11:15:52:949 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13661, msgId:[ActivityListRequest-12001], seqId:[13662]
+info-2021-11-24-11-1.log:2021-11-24 11:15:52:950 WARN - ActionOn:12001 cache msg excuting. pid:k1eiaa, curSeqId:13661, reqSeqId:13662 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:15:52:951 INFO - Activity 玩家：k1eiaa 获取活动列表resp：activities { activityId: "1" startTime: 1636628400000 endTime: 1639047600000 }
+info-2021-11-24-11-1.log:2021-11-24 11:15:52:951 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13662, msgId:[ActivityListRequest-12001], seqId:[13662]
+info-2021-11-24-11-1.log:2021-11-24 11:16:13:578 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13662, msgId:[SceneCloseTimeRequest-25313], seqId:[13663]
+info-2021-11-24-11-1.log:2021-11-24 11:16:13:579 WARN - ActionOn:25313 cache msg excuting. pid:k1eiaa, curSeqId:13662, reqSeqId:13663 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:16:13:580 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13663, msgId:[SceneCloseTimeRequest-25313], seqId:[13663]
+info-2021-11-24-11-1.log:2021-11-24 11:16:14:933 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13663, msgId:[SceneInfoRequest-25301], seqId:[13664]
+info-2021-11-24-11-1.log:2021-11-24 11:16:14:934 WARN - ActionOn:25301 cache msg excuting. pid:k1eiaa, curSeqId:13663, reqSeqId:13664 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:16:14:955 INFO - 魔法生物 玩家：[k1eiaa] version: 9.1 离开探索场景|下线|取消选择探索 更新龙挂机信息 lastCollectHangUpRewardTime: 1636974090275 repletionEndTime: 1636974313094
+info-2021-11-24-11-1.log:2021-11-24 11:16:14:957 INFO - 魔法生物 玩家：[k1eiaa] version: 9.1 离开探索场景|下线|取消选择探索 更新龙挂机信息 lastCollectHangUpRewardTime: 1636975290272 repletionEndTime: 1636975827909
+info-2021-11-24-11-1.log:2021-11-24 11:16:14:958 INFO - 魔法生物 玩家：[k1eiaa] version: 9.1 离开探索场景|下线|取消选择探索 更新龙挂机信息 lastCollectHangUpRewardTime: 1637722345142 repletionEndTime: 1636975826905
+info-2021-11-24-11-1.log:2021-11-24 11:16:14:960 INFO - 魔法生物 玩家：[k1eiaa] version: 9.1 离开探索场景|下线|取消选择探索 更新龙挂机信息 lastCollectHangUpRewardTime: 1636973490268 repletionEndTime: 1636974315085
+info-2021-11-24-11-1.log:2021-11-24 11:16:14:962 INFO - 魔法生物 玩家：[k1eiaa] version: 9.1 离开探索场景|下线|取消选择探索 更新龙挂机信息 lastCollectHangUpRewardTime: 1637722345141 repletionEndTime: 1636975826895
+info-2021-11-24-11-1.log:2021-11-24 11:16:14:965 INFO - 魔法生物 玩家：[k1eiaa] version: 9.1 离开探索场景|下线|取消选择探索 更新龙挂机信息 lastCollectHangUpRewardTime: 1637722323141 repletionEndTime: 1636975922076
+info-2021-11-24-11-1.log:2021-11-24 11:16:14:986 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13664, msgId:[SceneInfoRequest-25301], seqId:[13664]
+info-2021-11-24-11-1.log:2021-11-24 11:16:17:145 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13664, msgId:[GetCreatureDataRequest-24005], seqId:[13665]
+info-2021-11-24-11-1.log:2021-11-24 11:16:17:146 WARN - ActionOn:24005 cache msg excuting. pid:k1eiaa, curSeqId:13664, reqSeqId:13665 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:16:17:149 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13665, msgId:[GetCreatureDataRequest-24005], seqId:[13665]
+info-2021-11-24-11-1.log:2021-11-24 11:16:17:541 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13665, msgId:[MailListRequest-16001], seqId:[13666]
+info-2021-11-24-11-1.log:2021-11-24 11:16:17:542 WARN - ActionOn:16001 cache msg excuting. pid:k1eiaa, curSeqId:13665, reqSeqId:13666 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:16:17:543 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13666, msgId:[MailListRequest-16001], seqId:[13666]
+info-2021-11-24-11-1.log:2021-11-24 11:16:17:987 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13666, msgId:[FindScenePlantsRequest-25303], seqId:[13667]
+info-2021-11-24-11-1.log:2021-11-24 11:16:17:988 WARN - ActionOn:25303 cache msg excuting. pid:k1eiaa, curSeqId:13666, reqSeqId:13667 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:16:17:989 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13667, msgId:[FindScenePlantsRequest-25303], seqId:[13667]
+info-2021-11-24-11-1.log:2021-11-24 11:16:18:342 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13667, msgId:[ActivityListRequest-12001], seqId:[13668]
+info-2021-11-24-11-1.log:2021-11-24 11:16:18:343 WARN - ActionOn:12001 cache msg excuting. pid:k1eiaa, curSeqId:13667, reqSeqId:13668 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:16:18:344 INFO - Activity 玩家：k1eiaa 获取活动列表resp：activities { activityId: "1" startTime: 1636628400000 endTime: 1639047600000 }
+info-2021-11-24-11-1.log:2021-11-24 11:16:18:344 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13668, msgId:[ActivityListRequest-12001], seqId:[13668]
+info-2021-11-24-11-1.log:2021-11-24 11:16:18:689 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13668, msgId:[SceneCloseTimeRequest-25313], seqId:[13669]
+info-2021-11-24-11-1.log:2021-11-24 11:16:18:690 WARN - ActionOn:25313 cache msg excuting. pid:k1eiaa, curSeqId:13668, reqSeqId:13669 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:16:18:691 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13669, msgId:[SceneCloseTimeRequest-25313], seqId:[13669]
+info-2021-11-24-11-1.log:2021-11-24 11:16:22:756 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13669, msgId:[26002], seqId:[13670]
+info-2021-11-24-11-1.log:2021-11-24 11:16:22:757 WARN - ActionOn:26002 cache msg excuting. pid:k1eiaa, curSeqId:13669, reqSeqId:13670 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:16:22:759 INFO - Item 玩家：k1eiaa 执行方法：goldOrderCost 扣除道具：5012 数量：100，剩余：539
+info-2021-11-24-11-1.log:2021-11-24 11:16:22:759 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：5012 数量：539 key:5012
+info-2021-11-24-11-1.log:2021-11-24 11:16:22:767 INFO - AlchemyFurnaceManager.randomAndSaveItems@random new item|pid=k1eiaa|version=9.1|item=5016
+info-2021-11-24-11-1.log:2021-11-24 11:16:22:767 INFO - Item 玩家：k1eiaa 执行方法：goldOrderReward 获得道具：1002 数量：227
+info-2021-11-24-11-1.log:2021-11-24 11:16:22:777 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1002 数量：6217 key:1002
+info-2021-11-24-11-1.log:2021-11-24 11:16:22:777 INFO - Item 玩家：k1eiaa 道具：1002 数量：6217 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:16:22:777 INFO - Item 玩家：k1eiaa 执行方法：goldOrderReward 获得道具：1002 数量：204
+info-2021-11-24-11-1.log:2021-11-24 11:16:22:788 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1002 数量：6421 key:1002
+info-2021-11-24-11-1.log:2021-11-24 11:16:22:788 INFO - Item 玩家：k1eiaa 道具：1002 数量：6421 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:16:22:788 INFO - Item 玩家：k1eiaa 执行方法：goldOrderReward 获得道具：1002 数量：234
+info-2021-11-24-11-1.log:2021-11-24 11:16:22:799 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1002 数量：6655 key:1002
+info-2021-11-24-11-1.log:2021-11-24 11:16:22:799 INFO - Item 玩家：k1eiaa 道具：1002 数量：6655 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:16:22:804 INFO - AlchemyFurnaceManager.alchemyReq@finished|pid=k1eiaa|version=9.1|genTime=1637723782000|infos=PlayerAlchemyFurnace{, cdEndMill=1637738182000, cumulativeAwardEndMill=1638156581000, item='5016', cumulativeAwards=[AlchemyCumulativeAward{items=[ItemEntry{itemId='1002', count=1000}]}, AlchemyCumulativeAward{items=[ItemEntry{itemId='16000', count=10}]}, AlchemyCumulativeAward{items=[ItemEntry{itemId='11001', count=1}]}], cumuV='9.1', cumulativeNum=1}
+info-2021-11-24-11-1.log:2021-11-24 11:16:22:813 INFO - ActiveEgg 玩家：k1eiaa 彩蛋：2 增加活跃值：5 增加前：0 增加后：5 method：6
+info-2021-11-24-11-1.log:2021-11-24 11:16:22:814 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13670, msgId:[26002], seqId:[13670]
+info-2021-11-24-11-1.log:2021-11-24 11:16:59:010 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13670, msgId:[AddFactoryProduceRequest-25102], seqId:[13671]
+info-2021-11-24-11-1.log:2021-11-24 11:16:59:012 WARN - ActionOn:25102 cache msg excuting. pid:k1eiaa, curSeqId:13670, reqSeqId:13671 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:16:59:018 INFO - Item 玩家：k1eiaa 执行方法：factoryProduct 扣除道具：5005 数量：5，剩余：894
+info-2021-11-24-11-1.log:2021-11-24 11:16:59:018 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：5005 数量：894 key:5005
+info-2021-11-24-11-1.log:2021-11-24 11:16:59:018 INFO - Item 玩家：k1eiaa 执行方法：factoryProduct 扣除道具：5018 数量：1，剩余：542
+info-2021-11-24-11-1.log:2021-11-24 11:16:59:018 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：5018 数量：542 key:5018
+info-2021-11-24-11-1.log:2021-11-24 11:16:59:020 INFO - 生产 玩家：[k1eiaa] 添加生产任务成功：4 - 3003
+info-2021-11-24-11-1.log:2021-11-24 11:16:59:028 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13671, msgId:[AddFactoryProduceRequest-25102], seqId:[13671]
+info-2021-11-24-11-1.log:2021-11-24 11:17:00:037 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13671, msgId:[AddFactoryProduceRequest-25102], seqId:[13672]
+info-2021-11-24-11-1.log:2021-11-24 11:17:00:038 WARN - ActionOn:25102 cache msg excuting. pid:k1eiaa, curSeqId:13671, reqSeqId:13672 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:17:00:043 INFO - Item 玩家：k1eiaa 执行方法：factoryProduct 扣除道具：5005 数量：5，剩余：889
+info-2021-11-24-11-1.log:2021-11-24 11:17:00:043 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：5005 数量：889 key:5005
+info-2021-11-24-11-1.log:2021-11-24 11:17:00:043 INFO - Item 玩家：k1eiaa 执行方法：factoryProduct 扣除道具：5018 数量：1，剩余：541
+info-2021-11-24-11-1.log:2021-11-24 11:17:00:043 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：5018 数量：541 key:5018
+info-2021-11-24-11-1.log:2021-11-24 11:17:00:044 INFO - 生产 玩家：[k1eiaa] 添加生产任务成功：4 - 3003
+info-2021-11-24-11-1.log:2021-11-24 11:17:00:052 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13672, msgId:[AddFactoryProduceRequest-25102], seqId:[13672]
+info-2021-11-24-11-1.log:2021-11-24 11:17:01:419 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13672, msgId:[AddFactoryProduceRequest-25102], seqId:[13673]
+info-2021-11-24-11-1.log:2021-11-24 11:17:01:421 WARN - ActionOn:25102 cache msg excuting. pid:k1eiaa, curSeqId:13672, reqSeqId:13673 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:17:01:426 INFO - Item 玩家：k1eiaa 执行方法：factoryProduct 扣除道具：5005 数量：5，剩余：884
+info-2021-11-24-11-1.log:2021-11-24 11:17:01:426 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：5005 数量：884 key:5005
+info-2021-11-24-11-1.log:2021-11-24 11:17:01:426 INFO - Item 玩家：k1eiaa 执行方法：factoryProduct 扣除道具：5018 数量：1，剩余：540
+info-2021-11-24-11-1.log:2021-11-24 11:17:01:426 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：5018 数量：540 key:5018
+info-2021-11-24-11-1.log:2021-11-24 11:17:01:427 INFO - 生产 玩家：[k1eiaa] 添加生产任务成功：4 - 3003
+info-2021-11-24-11-1.log:2021-11-24 11:17:01:436 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13673, msgId:[AddFactoryProduceRequest-25102], seqId:[13673]
+info-2021-11-24-11-1.log:2021-11-24 11:17:10:206 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13673, msgId:[TimeOrderDeliverRequest-25207], seqId:[13674]
+info-2021-11-24-11-1.log:2021-11-24 11:17:10:208 WARN - ActionOn:25207 cache msg excuting. pid:k1eiaa, curSeqId:13673, reqSeqId:13674 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:17:10:225 INFO - 航海订单 玩家：[k1eiaa] 支付订单 完成0层任务
+info-2021-11-24-11-1.log:2021-11-24 11:17:10:226 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13674, msgId:[TimeOrderDeliverRequest-25207], seqId:[13674]
+info-2021-11-24-11-1.log:2021-11-24 11:17:13:651 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13674, msgId:[TimeOrderShipmentRequest-25206], seqId:[13675]
+info-2021-11-24-11-1.log:2021-11-24 11:17:13:652 WARN - ActionOn:25206 cache msg excuting. pid:k1eiaa, curSeqId:13674, reqSeqId:13675 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:17:13:655 INFO - Item 玩家：k1eiaa 执行方法：timeOrder 扣除道具：3002 数量：6，剩余：0
+info-2021-11-24-11-1.log:2021-11-24 11:17:13:655 INFO - Item removeItem... pid:k1eiaa, key:3002, itemId:3002
+info-2021-11-24-11-1.log:2021-11-24 11:17:13:667 INFO - 玩家：[k1eiaa] 获得经验：495 当前 level: 15 exp: 15621 method:timeOrderReward
+info-2021-11-24-11-1.log:2021-11-24 11:17:13:667 INFO - Item 玩家：k1eiaa 执行方法：timeOrderReward 获得道具：1002 数量：660
+info-2021-11-24-11-1.log:2021-11-24 11:17:13:676 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1002 数量：7315 key:1002
+info-2021-11-24-11-1.log:2021-11-24 11:17:13:676 INFO - Item 玩家：k1eiaa 道具：1002 数量：7315 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:17:13:682 INFO - 航海订单 玩家：[k1eiaa] 装载订单:2
+info-2021-11-24-11-1.log:2021-11-24 11:17:13:690 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13675, msgId:[TimeOrderShipmentRequest-25206], seqId:[13675]
+info-2021-11-24-11-1.log:2021-11-24 11:17:19:478 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13675, msgId:[TimeOrderDeliverRequest-25207], seqId:[13676]
+info-2021-11-24-11-1.log:2021-11-24 11:17:19:479 WARN - ActionOn:25207 cache msg excuting. pid:k1eiaa, curSeqId:13675, reqSeqId:13676 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:17:19:495 INFO - 航海订单 玩家：[k1eiaa] 支付订单 完成0层任务
+info-2021-11-24-11-1.log:2021-11-24 11:17:19:495 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13676, msgId:[TimeOrderDeliverRequest-25207], seqId:[13676]
+info-2021-11-24-11-1.log:2021-11-24 11:17:35:771 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13676, msgId:[BreedRequest-24004], seqId:[13677]
+info-2021-11-24-11-1.log:2021-11-24 11:17:35:773 WARN - ActionOn:24004 cache msg excuting. pid:k1eiaa, curSeqId:13676, reqSeqId:13677 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:17:35:776 INFO - Item 玩家：k1eiaa 执行方法：breedingDragon 扣除道具：2100 数量：10，剩余：11
+info-2021-11-24-11-1.log:2021-11-24 11:17:35:776 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：2100 数量：11 key:2100
+info-2021-11-24-11-1.log:2021-11-24 11:17:35:782 INFO - 魔法生物 玩家：[k1eiaa] 培育成功14013+14033=19001数量:200
+info-2021-11-24-11-1.log:2021-11-24 11:17:35:790 INFO - ActiveEgg 玩家：k1eiaa 彩蛋：2 增加活跃值：3 增加前：5 增加后：8 method：3
+info-2021-11-24-11-1.log:2021-11-24 11:17:35:791 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13677, msgId:[BreedRequest-24004], seqId:[13677]
+info-2021-11-24-11-1.log:2021-11-24 11:17:58:853 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13677, msgId:[AccelerateProduceRequest-25104], seqId:[13678]
+info-2021-11-24-11-1.log:2021-11-24 11:17:58:854 WARN - ActionOn:25104 cache msg excuting. pid:k1eiaa, curSeqId:13677, reqSeqId:13678 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:17:58:858 INFO - Item 玩家：k1eiaa 执行方法：speedUpFactoryProduct 扣除道具：1001 数量：2，剩余：2835
+info-2021-11-24-11-1.log:2021-11-24 11:17:58:858 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1001 数量：2835 key:1001
+info-2021-11-24-11-1.log:2021-11-24 11:17:58:868 INFO - Player-- 玩家：k1eiaa 版本号：9.1 执行方法：speedUpFactoryProduct 扣除钻石: 2, 现在拥有：2835
+info-2021-11-24-11-1.log:2021-11-24 11:17:58:868 INFO - Item 玩家：k1eiaa 执行方法：factoryProduct 获得道具：3003 数量：1
+info-2021-11-24-11-1.log:2021-11-24 11:17:58:873 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：3003 数量：3 key:3003
+info-2021-11-24-11-1.log:2021-11-24 11:17:58:874 INFO - Item 玩家：k1eiaa 道具：3003 数量：3 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:17:58:875 INFO - 生产 玩家：[k1eiaa] 生产加速：生产物资自动领取 4 - 3003
+info-2021-11-24-11-1.log:2021-11-24 11:17:58:888 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13678, msgId:[AccelerateProduceRequest-25104], seqId:[13678]
+info-2021-11-24-11-1.log:2021-11-24 11:18:01:950 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13678, msgId:[AddFactoryProduceRequest-25102], seqId:[13679]
+info-2021-11-24-11-1.log:2021-11-24 11:18:01:951 WARN - ActionOn:25102 cache msg excuting. pid:k1eiaa, curSeqId:13678, reqSeqId:13679 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:18:01:957 INFO - Item 玩家：k1eiaa 执行方法：factoryProduct 扣除道具：3001 数量：1，剩余：56
+info-2021-11-24-11-1.log:2021-11-24 11:18:01:957 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：3001 数量：56 key:3001
+info-2021-11-24-11-1.log:2021-11-24 11:18:01:957 INFO - Item 玩家：k1eiaa 执行方法：factoryProduct 扣除道具：5008 数量：6，剩余：302
+info-2021-11-24-11-1.log:2021-11-24 11:18:01:957 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：5008 数量：302 key:5008
+info-2021-11-24-11-1.log:2021-11-24 11:18:01:957 INFO - 生产 玩家：[k1eiaa] 添加生产任务成功：4 - 3015
+info-2021-11-24-11-1.log:2021-11-24 11:18:01:967 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13679, msgId:[AddFactoryProduceRequest-25102], seqId:[13679]
+info-2021-11-24-11-1.log:2021-11-24 11:18:26:003 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13679, msgId:[FeedRequest-24014], seqId:[13680]
+info-2021-11-24-11-1.log:2021-11-24 11:18:26:004 WARN - ActionOn:24014 cache msg excuting. pid:k1eiaa, curSeqId:13679, reqSeqId:13680 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:18:26:007 INFO - Item 玩家：k1eiaa 执行方法：feedingDragon 扣除道具：2006 数量：1，剩余：8
+info-2021-11-24-11-1.log:2021-11-24 11:18:26:007 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：2006 数量：8 key:2006
+info-2021-11-24-11-1.log:2021-11-24 11:18:26:013 INFO - 魔法生物 玩家：[k1eiaa] 喂食 itemId：2006 feedTime：1637723905000 creature:Creature{creatureId='2108', templateId=14003, physicalStrength=6, getPhysicalStrengthTime=1637723498266, lastCollectHangUpRewardTime=1637723905000, repletionEndTime=1637724505000, rewardCnt=0, firstRewardTime=0, explore=true, exploreTime=0, exploreRelicTime=0, skill=null}
+info-2021-11-24-11-1.log:2021-11-24 11:18:26:019 INFO - ActivityGoldPassManager.updateTaskCondition@condition updated|pid=k1eiaa|version=9.1|taskId=1004|taskTpl=10021|save=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1}]}}|conName=FeedDragonCondition
+info-2021-11-24-11-1.log:2021-11-24 11:18:26:021 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13680, msgId:[FeedRequest-24014], seqId:[13680]
+info-2021-11-24-11-1.log:2021-11-24 11:18:26:382 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13680, msgId:[FeedRequest-24014], seqId:[13681]
+info-2021-11-24-11-1.log:2021-11-24 11:18:26:383 WARN - ActionOn:24014 cache msg excuting. pid:k1eiaa, curSeqId:13680, reqSeqId:13681 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:18:26:385 INFO - Item 玩家：k1eiaa 执行方法：feedingDragon 扣除道具：2006 数量：1，剩余：7
+info-2021-11-24-11-1.log:2021-11-24 11:18:26:385 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：2006 数量：7 key:2006
+info-2021-11-24-11-1.log:2021-11-24 11:18:26:390 INFO - 魔法生物 玩家：[k1eiaa] 喂食 itemId：2006 feedTime：1637723905000 creature:Creature{creatureId='2055', templateId=14003, physicalStrength=0, getPhysicalStrengthTime=1636968304465, lastCollectHangUpRewardTime=1637723905000, repletionEndTime=1637724505000, rewardCnt=0, firstRewardTime=0, explore=false, exploreTime=0, exploreRelicTime=0, skill=null}
+info-2021-11-24-11-1.log:2021-11-24 11:18:26:397 INFO - ActivityGoldPassManager.updateTaskCondition@condition updated|pid=k1eiaa|version=9.1|taskId=1004|taskTpl=10021|save=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=2}]}}|conName=FeedDragonCondition
+info-2021-11-24-11-1.log:2021-11-24 11:18:26:399 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13681, msgId:[FeedRequest-24014], seqId:[13681]
+info-2021-11-24-11-1.log:2021-11-24 11:18:26:748 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13681, msgId:[FeedRequest-24014], seqId:[13682]
+info-2021-11-24-11-1.log:2021-11-24 11:18:26:749 WARN - ActionOn:24014 cache msg excuting. pid:k1eiaa, curSeqId:13681, reqSeqId:13682 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:18:26:752 INFO - Item 玩家：k1eiaa 执行方法：feedingDragon 扣除道具：2006 数量：1，剩余：6
+info-2021-11-24-11-1.log:2021-11-24 11:18:26:752 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：2006 数量：6 key:2006
+info-2021-11-24-11-1.log:2021-11-24 11:18:26:757 INFO - 魔法生物 玩家：[k1eiaa] 喂食 itemId：2006 feedTime：1637723905000 creature:Creature{creatureId='2035', templateId=14033, physicalStrength=1, getPhysicalStrengthTime=1630338672721, lastCollectHangUpRewardTime=1637723905000, repletionEndTime=1637724505000, rewardCnt=0, firstRewardTime=0, explore=false, exploreTime=0, exploreRelicTime=0, skill=null}
+info-2021-11-24-11-1.log:2021-11-24 11:18:26:764 INFO - ActivityGoldPassManager.updateTaskCondition@condition updated|pid=k1eiaa|version=9.1|taskId=1004|taskTpl=10021|save=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=3}]}}|conName=FeedDragonCondition
+info-2021-11-24-11-1.log:2021-11-24 11:18:26:765 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13682, msgId:[FeedRequest-24014], seqId:[13682]
+info-2021-11-24-11-1.log:2021-11-24 11:18:27:114 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13682, msgId:[FeedRequest-24014], seqId:[13683]
+info-2021-11-24-11-1.log:2021-11-24 11:18:27:115 WARN - ActionOn:24014 cache msg excuting. pid:k1eiaa, curSeqId:13682, reqSeqId:13683 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:18:27:118 INFO - Item 玩家：k1eiaa 执行方法：feedingDragon 扣除道具：2006 数量：1，剩余：5
+info-2021-11-24-11-1.log:2021-11-24 11:18:27:118 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：2006 数量：5 key:2006
+info-2021-11-24-11-1.log:2021-11-24 11:18:27:124 INFO - 魔法生物 玩家：[k1eiaa] 喂食 itemId：2006 feedTime：1637723906000 creature:Creature{creatureId='2136', templateId=14063, physicalStrength=4, getPhysicalStrengthTime=1636535997414, lastCollectHangUpRewardTime=1637723906000, repletionEndTime=1637724506000, rewardCnt=0, firstRewardTime=0, explore=true, exploreTime=0, exploreRelicTime=0, skill=null}
+info-2021-11-24-11-1.log:2021-11-24 11:18:27:132 INFO - ActivityGoldPassManager.updateTaskCondition@condition updated|pid=k1eiaa|version=9.1|taskId=1004|taskTpl=10021|save=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=4}]}}|conName=FeedDragonCondition
+info-2021-11-24-11-1.log:2021-11-24 11:18:27:134 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13683, msgId:[FeedRequest-24014], seqId:[13683]
+info-2021-11-24-11-1.log:2021-11-24 11:18:27:517 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13683, msgId:[FeedRequest-24014], seqId:[13684]
+info-2021-11-24-11-1.log:2021-11-24 11:18:27:518 WARN - ActionOn:24014 cache msg excuting. pid:k1eiaa, curSeqId:13683, reqSeqId:13684 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:18:27:520 INFO - Item 玩家：k1eiaa 执行方法：feedingDragon 扣除道具：2006 数量：1，剩余：4
+info-2021-11-24-11-1.log:2021-11-24 11:18:27:520 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：2006 数量：4 key:2006
+info-2021-11-24-11-1.log:2021-11-24 11:18:27:527 INFO - 魔法生物 玩家：[k1eiaa] 喂食 itemId：2006 feedTime：1637723906000 creature:Creature{creatureId='2047', templateId=14053, physicalStrength=6, getPhysicalStrengthTime=1637723498266, lastCollectHangUpRewardTime=1637723683181, repletionEndTime=1637724506000, rewardCnt=0, firstRewardTime=0, explore=true, exploreTime=0, exploreRelicTime=0, skill=null}
+info-2021-11-24-11-1.log:2021-11-24 11:18:27:535 INFO - ActivityGoldPassManager.updateTaskCondition@condition updated|pid=k1eiaa|version=9.1|taskId=1004|taskTpl=10021|save=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=5}]}}|conName=FeedDragonCondition
+info-2021-11-24-11-1.log:2021-11-24 11:18:27:537 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13684, msgId:[FeedRequest-24014], seqId:[13684]
+info-2021-11-24-11-1.log:2021-11-24 11:18:27:882 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13684, msgId:[FeedRequest-24014], seqId:[13685]
+info-2021-11-24-11-1.log:2021-11-24 11:18:27:883 WARN - ActionOn:24014 cache msg excuting. pid:k1eiaa, curSeqId:13684, reqSeqId:13685 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:18:27:886 INFO - Item 玩家：k1eiaa 执行方法：feedingDragon 扣除道具：2006 数量：1，剩余：3
+info-2021-11-24-11-1.log:2021-11-24 11:18:27:886 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：2006 数量：3 key:2006
+info-2021-11-24-11-1.log:2021-11-24 11:18:27:891 INFO - 魔法生物 玩家：[k1eiaa] 喂食 itemId：2006 feedTime：1637723906000 creature:Creature{creatureId='2081', templateId=14013, physicalStrength=0, getPhysicalStrengthTime=1636968489390, lastCollectHangUpRewardTime=1637723906000, repletionEndTime=1637724506000, rewardCnt=0, firstRewardTime=0, explore=false, exploreTime=0, exploreRelicTime=0, skill=null}
+info-2021-11-24-11-1.log:2021-11-24 11:18:27:899 INFO - ActivityGoldPassManager.updateTaskCondition@condition updated|pid=k1eiaa|version=9.1|taskId=1004|taskTpl=10021|save=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=6}]}}|conName=FeedDragonCondition
+info-2021-11-24-11-1.log:2021-11-24 11:18:27:901 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13685, msgId:[FeedRequest-24014], seqId:[13685]
+info-2021-11-24-11-1.log:2021-11-24 11:18:28:250 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13685, msgId:[FeedRequest-24014], seqId:[13686]
+info-2021-11-24-11-1.log:2021-11-24 11:18:28:251 WARN - ActionOn:24014 cache msg excuting. pid:k1eiaa, curSeqId:13685, reqSeqId:13686 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:18:28:253 INFO - Item 玩家：k1eiaa 执行方法：feedingDragon 扣除道具：2006 数量：1，剩余：2
+info-2021-11-24-11-1.log:2021-11-24 11:18:28:253 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：2006 数量：2 key:2006
+info-2021-11-24-11-1.log:2021-11-24 11:18:28:260 INFO - 魔法生物 玩家：[k1eiaa] 喂食 itemId：2006 feedTime：1637723906000 creature:Creature{creatureId='2096', templateId=14073, physicalStrength=6, getPhysicalStrengthTime=1636535997414, lastCollectHangUpRewardTime=1637723368363, repletionEndTime=1637724506000, rewardCnt=0, firstRewardTime=0, explore=true, exploreTime=0, exploreRelicTime=0, skill=null}
+info-2021-11-24-11-1.log:2021-11-24 11:18:28:267 INFO - ActivityGoldPassManager.updateTaskCondition@condition updated|pid=k1eiaa|version=9.1|taskId=1004|taskTpl=10021|save=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=7}]}}|conName=FeedDragonCondition
+info-2021-11-24-11-1.log:2021-11-24 11:18:28:269 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13686, msgId:[FeedRequest-24014], seqId:[13686]
+info-2021-11-24-11-1.log:2021-11-24 11:18:28:631 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13686, msgId:[FeedRequest-24014], seqId:[13687]
+info-2021-11-24-11-1.log:2021-11-24 11:18:28:632 WARN - ActionOn:24014 cache msg excuting. pid:k1eiaa, curSeqId:13686, reqSeqId:13687 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:18:28:634 INFO - Item 玩家：k1eiaa 执行方法：feedingDragon 扣除道具：2006 数量：1，剩余：1
+info-2021-11-24-11-1.log:2021-11-24 11:18:28:634 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：2006 数量：1 key:2006
+info-2021-11-24-11-1.log:2021-11-24 11:18:28:640 INFO - 魔法生物 玩家：[k1eiaa] 喂食 itemId：2006 feedTime：1637723907000 creature:Creature{creatureId='2040', templateId=14043, physicalStrength=0, getPhysicalStrengthTime=1636708087914, lastCollectHangUpRewardTime=1637723907000, repletionEndTime=1637724507000, rewardCnt=0, firstRewardTime=0, explore=false, exploreTime=0, exploreRelicTime=0, skill=null}
+info-2021-11-24-11-1.log:2021-11-24 11:18:28:647 INFO - ActivityGoldPassManager.updateTaskCondition@condition updated|pid=k1eiaa|version=9.1|taskId=1004|taskTpl=10021|save=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=8}]}}|conName=FeedDragonCondition
+info-2021-11-24-11-1.log:2021-11-24 11:18:28:649 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13687, msgId:[FeedRequest-24014], seqId:[13687]
+info-2021-11-24-11-1.log:2021-11-24 11:18:29:069 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13687, msgId:[FeedRequest-24014], seqId:[13688]
+info-2021-11-24-11-1.log:2021-11-24 11:18:29:070 WARN - ActionOn:24014 cache msg excuting. pid:k1eiaa, curSeqId:13687, reqSeqId:13688 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:18:29:073 INFO - Item 玩家：k1eiaa 执行方法：feedingDragon 扣除道具：2006 数量：1，剩余：0
+info-2021-11-24-11-1.log:2021-11-24 11:18:29:073 INFO - Item removeItem... pid:k1eiaa, key:2006, itemId:2006
+info-2021-11-24-11-1.log:2021-11-24 11:18:29:078 INFO - 魔法生物 玩家：[k1eiaa] 喂食 itemId：2006 feedTime：1637723907000 creature:Creature{creatureId='2123', templateId=14083, physicalStrength=6, getPhysicalStrengthTime=1637723498266, lastCollectHangUpRewardTime=1637723082183, repletionEndTime=1637724507000, rewardCnt=0, firstRewardTime=0, explore=true, exploreTime=0, exploreRelicTime=0, skill=null}
+info-2021-11-24-11-1.log:2021-11-24 11:18:29:085 INFO - ActivityGoldPassManager.updateTaskCondition@condition updated|pid=k1eiaa|version=9.1|taskId=1004|taskTpl=10021|save=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=9}]}}|conName=FeedDragonCondition
+info-2021-11-24-11-1.log:2021-11-24 11:18:29:087 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13688, msgId:[FeedRequest-24014], seqId:[13688]
+info-2021-11-24-11-1.log:2021-11-24 11:18:32:898 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13688, msgId:[ReceiveCropRequest-25403], seqId:[13689]
+info-2021-11-24-11-1.log:2021-11-24 11:18:32:899 WARN - ActionOn:25403 cache msg excuting. pid:k1eiaa, curSeqId:13688, reqSeqId:13689 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:18:32:900 INFO - 种植 玩家：[k1eiaa] 收取成功：city - 16619
+info-2021-11-24-11-1.log:2021-11-24 11:18:32:901 INFO - 种植 玩家：[k1eiaa] 收取成功：city - 15915
+info-2021-11-24-11-1.log:2021-11-24 11:18:32:902 INFO - 种植 玩家：[k1eiaa] 收取成功：city - 15912
+info-2021-11-24-11-1.log:2021-11-24 11:18:32:902 INFO - 种植 玩家：[k1eiaa] 收取成功：city - 15909
+info-2021-11-24-11-1.log:2021-11-24 11:18:32:903 INFO - 种植 玩家：[k1eiaa] 收取成功：city - 16617
+info-2021-11-24-11-1.log:2021-11-24 11:18:32:903 INFO - 种植 玩家：[k1eiaa] 收取成功：city - 15911
+info-2021-11-24-11-1.log:2021-11-24 11:18:32:904 INFO - 种植 玩家：[k1eiaa] 收取成功：city - 15914
+info-2021-11-24-11-1.log:2021-11-24 11:18:32:904 INFO - 种植 玩家：[k1eiaa] 收取成功：city - 16615
+info-2021-11-24-11-1.log:2021-11-24 11:18:32:905 INFO - 种植 玩家：[k1eiaa] 收取成功：city - 16616
+info-2021-11-24-11-1.log:2021-11-24 11:18:32:906 INFO - 种植 玩家：[k1eiaa] 收取成功：city - 15908
+info-2021-11-24-11-1.log:2021-11-24 11:18:32:906 INFO - Item 玩家：k1eiaa 执行方法：harvestCrops 获得道具：2008 数量：10
+info-2021-11-24-11-1.log:2021-11-24 11:18:32:911 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：2008 数量：17 key:2008
+info-2021-11-24-11-1.log:2021-11-24 11:18:32:912 INFO - Item 玩家：k1eiaa 道具：2008 数量：17 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:18:32:918 INFO - ActivityGoldPassManager.updateTaskCondition@condition updated|pid=k1eiaa|version=9.1|taskId=2008|taskTpl=10025|save=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=10}]}}|conName=TakeItemFromCropCountCondition
+info-2021-11-24-11-1.log:2021-11-24 11:18:32:921 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13689, msgId:[ReceiveCropRequest-25403], seqId:[13689]
+info-2021-11-24-11-1.log:2021-11-24 11:18:38:982 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13689, msgId:[PlantCropRequest-25402], seqId:[13690]
+info-2021-11-24-11-1.log:2021-11-24 11:18:38:984 WARN - ActionOn:25402 cache msg excuting. pid:k1eiaa, curSeqId:13689, reqSeqId:13690 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:18:38:989 INFO - Item 玩家：k1eiaa 执行方法：plantingCrops 扣除道具：1002 数量：3000，剩余：4315
+info-2021-11-24-11-1.log:2021-11-24 11:18:38:989 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1002 数量：4315 key:1002
+info-2021-11-24-11-1.log:2021-11-24 11:18:38:998 INFO - 种植 玩家：[k1eiaa] 种植成功：city - 15909 - 2008
+info-2021-11-24-11-1.log:2021-11-24 11:18:38:998 INFO - 种植 玩家：[k1eiaa] 种植成功：city - 15912 - 2008
+info-2021-11-24-11-1.log:2021-11-24 11:18:38:999 INFO - 种植 玩家：[k1eiaa] 种植成功：city - 16619 - 2008
+info-2021-11-24-11-1.log:2021-11-24 11:18:39:000 INFO - 种植 玩家：[k1eiaa] 种植成功：city - 16617 - 2008
+info-2021-11-24-11-1.log:2021-11-24 11:18:39:000 INFO - 种植 玩家：[k1eiaa] 种植成功：city - 15908 - 2008
+info-2021-11-24-11-1.log:2021-11-24 11:18:39:001 INFO - 种植 玩家：[k1eiaa] 种植成功：city - 15911 - 2008
+info-2021-11-24-11-1.log:2021-11-24 11:18:39:001 INFO - 种植 玩家：[k1eiaa] 种植成功：city - 15914 - 2008
+info-2021-11-24-11-1.log:2021-11-24 11:18:39:002 INFO - 种植 玩家：[k1eiaa] 种植成功：city - 16615 - 2008
+info-2021-11-24-11-1.log:2021-11-24 11:18:39:002 INFO - 种植 玩家：[k1eiaa] 种植成功：city - 16616 - 2008
+info-2021-11-24-11-1.log:2021-11-24 11:18:39:003 INFO - 种植 玩家：[k1eiaa] 种植成功：city - 15915 - 2008
+info-2021-11-24-11-1.log:2021-11-24 11:18:39:014 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13690, msgId:[PlantCropRequest-25402], seqId:[13690]
+info-2021-11-24-11-1.log:2021-11-24 11:18:47:449 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13690, msgId:[SceneCloseTimeRequest-25313], seqId:[13691]
+info-2021-11-24-11-1.log:2021-11-24 11:18:47:450 WARN - ActionOn:25313 cache msg excuting. pid:k1eiaa, curSeqId:13690, reqSeqId:13691 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:18:47:451 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13691, msgId:[SceneCloseTimeRequest-25313], seqId:[13691]
+info-2021-11-24-11-1.log:2021-11-24 11:18:57:332 WARN - Gateway开始: 玩家:k1eiaa, sId:1561302884, curSeq:13691, msgId:[SceneCloseTimeRequest-25313], seqId:[13692]
+info-2021-11-24-11-1.log:2021-11-24 11:18:57:335 WARN - ActionOn:25313 cache msg excuting. pid:k1eiaa, curSeqId:13691, reqSeqId:13692 version:9.1.255, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:18:57:340 WARN - Gateway结束: 玩家:k1eiaa, sId:1561302884, curSeq:13692, msgId:[SceneCloseTimeRequest-25313], seqId:[13692]
+info-2021-11-24-11-1.log:2021-11-24 11:24:13:768 INFO - 关闭session, {REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:24:13:780 INFO - CLOSE SESSION pid: k1eiaa,sid:1561302884,seqId: 13692, s:{REMOTE_ADDR=129.226.189.243, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=1561302884}
+info-2021-11-24-11-1.log:2021-11-24 11:33:23:246 INFO - 创建session, {REMOTE_ADDR=49.51.197.144, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, SESSION_ID=2015382405}
+info-2021-11-24-11-1.log:2021-11-24 11:33:23:247 WARN - Gateway开始: 玩家:k1eiaa, sId:2015382405, curSeq:13692, msgId:[ReceiveFactoryProduceRequest-25103], seqId:[13693]
+info-2021-11-24-11-1.log:2021-11-24 11:33:23:247 WARN - ActionOut:25103 player:k1eiaa not online. version:9.1.255 session:{REMOTE_ADDR=49.51.197.144, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, SESSION_ID=2015382405}
+info-2021-11-24-11-1.log:2021-11-24 11:33:23:247 WARN - Gateway结束: 玩家:k1eiaa, sId:2015382405, curSeq:13692, msgId:[ReceiveFactoryProduceRequest-25103], seqId:[13693]
+info-2021-11-24-11-1.log:2021-11-24 11:33:23:589 INFO - Login 绑定账号无角色或与自身账号相同,玩家直接使用自己账号登录：755CD3A7-9D54-4E06-B30D-6DE38AF9EDCA，登录，角色id:k1eiaa v:9.1.255,visitorAccount:755CD3A7-9D54-4E06-B30D-6DE38AF9EDCA
+info-2021-11-24-11-1.log:2021-11-24 11:33:23:591 INFO - Login session new:{REMOTE_ADDR=49.51.197.144, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2432397637}
+info-2021-11-24-11-1.log:2021-11-24 11:33:23:594 INFO - Ads 玩家：k1eiaa 用户分层解析成功，af_status：Organic 返回分组：2
+info-2021-11-24-11-1.log:2021-11-24 11:33:23:946 WARN - Gateway开始: 玩家:k1eiaa, sId:2432397637, curSeq:13692, msgId:[ReceiveFactoryProduceRequest-25103], seqId:[13693]
+info-2021-11-24-11-1.log:2021-11-24 11:33:23:948 WARN - ActionOn:25103 cache msg excuting. pid:k1eiaa, curSeqId:13692, reqSeqId:13693 version:9.1.255, s:{REMOTE_ADDR=49.51.197.144, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2432397637}
+info-2021-11-24-11-1.log:2021-11-24 11:33:23:950 INFO - Item 玩家：k1eiaa 执行方法：factoryProduct 获得道具：3003 数量：1
+info-2021-11-24-11-1.log:2021-11-24 11:33:23:951 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：3003 数量：4 key:3003
+info-2021-11-24-11-1.log:2021-11-24 11:33:23:951 INFO - Item 玩家：k1eiaa 道具：3003 数量：4 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:33:23:953 INFO - 生产 玩家：[k1eiaa] 领取生产物资成功 factoryId: 4 领取后的startTime: 1637724178000 productItemId:3003
+info-2021-11-24-11-1.log:2021-11-24 11:33:23:953 INFO - Item 玩家：k1eiaa 执行方法：factoryProduct 获得道具：3003 数量：1
+info-2021-11-24-11-1.log:2021-11-24 11:33:23:953 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：3003 数量：5 key:3003
+info-2021-11-24-11-1.log:2021-11-24 11:33:23:953 INFO - Item 玩家：k1eiaa 道具：3003 数量：5 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:33:23:954 INFO - 生产 玩家：[k1eiaa] 领取生产物资成功 factoryId: 4 领取后的startTime: 1637724478000 productItemId:3003
+info-2021-11-24-11-1.log:2021-11-24 11:33:23:955 INFO - Item 玩家：k1eiaa 执行方法：factoryProduct 获得道具：3015 数量：1
+info-2021-11-24-11-1.log:2021-11-24 11:33:23:955 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：3015 数量：2 key:3015
+info-2021-11-24-11-1.log:2021-11-24 11:33:23:955 INFO - Item 玩家：k1eiaa 道具：3015 数量：2 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:33:23:956 INFO - 生产 玩家：[k1eiaa] 领取生产物资成功 factoryId: 4 领取后的startTime: 1637724778000 productItemId:3015
+info-2021-11-24-11-1.log:2021-11-24 11:33:23:964 WARN - Gateway结束: 玩家:k1eiaa, sId:2432397637, curSeq:13693, msgId:[ReceiveFactoryProduceRequest-25103], seqId:[13693]
+info-2021-11-24-11-1.log:2021-11-24 11:33:31:678 WARN - Gateway开始: 玩家:k1eiaa, sId:2432397637, curSeq:13693, msgId:[SceneCloseTimeRequest-25313], seqId:[13694]
+info-2021-11-24-11-1.log:2021-11-24 11:33:31:679 WARN - ActionOn:25313 cache msg excuting. pid:k1eiaa, curSeqId:13693, reqSeqId:13694 version:9.1.255, s:{REMOTE_ADDR=49.51.197.144, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2432397637}
+info-2021-11-24-11-1.log:2021-11-24 11:33:31:681 WARN - Gateway结束: 玩家:k1eiaa, sId:2432397637, curSeq:13694, msgId:[SceneCloseTimeRequest-25313], seqId:[13694]
+info-2021-11-24-11-1.log:2021-11-24 11:36:01:962 WARN - Gateway开始: 玩家:k1eiaa, sId:2432397637, curSeq:13694, msgId:[SceneCloseTimeRequest-25313], seqId:[13695]
+info-2021-11-24-11-1.log:2021-11-24 11:36:01:963 WARN - ActionOn:25313 cache msg excuting. pid:k1eiaa, curSeqId:13694, reqSeqId:13695 version:9.1.255, s:{REMOTE_ADDR=49.51.197.144, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2432397637}
+info-2021-11-24-11-1.log:2021-11-24 11:36:01:965 WARN - Gateway结束: 玩家:k1eiaa, sId:2432397637, curSeq:13695, msgId:[SceneCloseTimeRequest-25313], seqId:[13695]
+info-2021-11-24-11-1.log:2021-11-24 11:36:13:261 WARN - Gateway开始: 玩家:k1eiaa, sId:2432397637, curSeq:13695, msgId:[CollectAllHangupRewardRequest-24009], seqId:[13696]
+info-2021-11-24-11-1.log:2021-11-24 11:36:13:262 WARN - ActionOn:24009 cache msg excuting. pid:k1eiaa, curSeqId:13695, reqSeqId:13696 version:9.1.255, s:{REMOTE_ADDR=49.51.197.144, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2432397637}
+info-2021-11-24-11-1.log:2021-11-24 11:36:13:264 INFO - 魔法生物 玩家：[k1eiaa] 领取全部挂机奖励，龙2096的收益 5006: 9 上次收集挂机收益时间：1637724268363
+info-2021-11-24-11-1.log:2021-11-24 11:36:13:265 INFO - 魔法生物 玩家：[k1eiaa] 领取全部挂机奖励，龙2040的收益 5016: 27 上次收集挂机收益时间：1637724972000
+info-2021-11-24-11-1.log:2021-11-24 11:36:13:265 INFO - 魔法生物 玩家：[k1eiaa] 领取全部挂机奖励，龙2035的收益 5018: 27 上次收集挂机收益时间：1637724972000
+info-2021-11-24-11-1.log:2021-11-24 11:36:13:265 INFO - 魔法生物 玩家：[k1eiaa] 领取全部挂机奖励，龙2047的收益 5009: 18 上次收集挂机收益时间：1637724283181
+info-2021-11-24-11-1.log:2021-11-24 11:36:13:265 INFO - 魔法生物 玩家：[k1eiaa] 领取全部挂机奖励，龙2108的收益 5001: 27 上次收集挂机收益时间：1637724972000
+info-2021-11-24-11-1.log:2021-11-24 11:36:13:266 INFO - 魔法生物 玩家：[k1eiaa] 领取全部挂机奖励，龙2055的收益 5001: 27 上次收集挂机收益时间：1637724972000
+info-2021-11-24-11-1.log:2021-11-24 11:36:13:266 INFO - 魔法生物 玩家：[k1eiaa] 领取全部挂机奖励，龙2123的收益 5011: 9 上次收集挂机收益时间：1637724282183
+info-2021-11-24-11-1.log:2021-11-24 11:36:13:266 INFO - 魔法生物 玩家：[k1eiaa] 领取全部挂机奖励，龙2136的收益 5002: 18 上次收集挂机收益时间：1637724506000
+info-2021-11-24-11-1.log:2021-11-24 11:36:13:266 INFO - Item 玩家：k1eiaa 执行方法：shake 获得道具：5011 数量：9
+info-2021-11-24-11-1.log:2021-11-24 11:36:13:266 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：5011 数量：621 key:5011
+info-2021-11-24-11-1.log:2021-11-24 11:36:13:266 INFO - Item 玩家：k1eiaa 道具：5011 数量：621 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:36:13:266 INFO - Item 玩家：k1eiaa 执行方法：shake 获得道具：5001 数量：54
+info-2021-11-24-11-1.log:2021-11-24 11:36:13:266 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：5001 数量：5371 key:5001
+info-2021-11-24-11-1.log:2021-11-24 11:36:13:266 INFO - Item 玩家：k1eiaa 道具：5001 数量：5371 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:36:13:266 INFO - Item 玩家：k1eiaa 执行方法：shake 获得道具：5002 数量：18
+info-2021-11-24-11-1.log:2021-11-24 11:36:13:266 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：5002 数量：1325 key:5002
+info-2021-11-24-11-1.log:2021-11-24 11:36:13:266 INFO - Item 玩家：k1eiaa 道具：5002 数量：1325 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:36:13:266 INFO - Item 玩家：k1eiaa 执行方法：shake 获得道具：5016 数量：27
+info-2021-11-24-11-1.log:2021-11-24 11:36:13:266 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：5016 数量：438 key:5016
+info-2021-11-24-11-1.log:2021-11-24 11:36:13:266 INFO - Item 玩家：k1eiaa 道具：5016 数量：438 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:36:13:266 INFO - Item 玩家：k1eiaa 执行方法：shake 获得道具：5006 数量：9
+info-2021-11-24-11-1.log:2021-11-24 11:36:13:266 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：5006 数量：827 key:5006
+info-2021-11-24-11-1.log:2021-11-24 11:36:13:266 INFO - Item 玩家：k1eiaa 道具：5006 数量：827 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:36:13:266 INFO - Item 玩家：k1eiaa 执行方法：shake 获得道具：5018 数量：27
+info-2021-11-24-11-1.log:2021-11-24 11:36:13:266 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：5018 数量：567 key:5018
+info-2021-11-24-11-1.log:2021-11-24 11:36:13:266 INFO - Item 玩家：k1eiaa 道具：5018 数量：567 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:36:13:266 INFO - Item 玩家：k1eiaa 执行方法：shake 获得道具：5009 数量：18
+info-2021-11-24-11-1.log:2021-11-24 11:36:13:266 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：5009 数量：2103 key:5009
+info-2021-11-24-11-1.log:2021-11-24 11:36:13:266 INFO - Item 玩家：k1eiaa 道具：5009 数量：2103 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:36:13:280 WARN - Gateway结束: 玩家:k1eiaa, sId:2432397637, curSeq:13696, msgId:[CollectAllHangupRewardRequest-24009], seqId:[13696]
+info-2021-11-24-11-1.log:2021-11-24 11:36:42:050 WARN - Gateway开始: 玩家:k1eiaa, sId:2432397637, curSeq:13696, msgId:[BreedRewardRequest-24029], seqId:[13697]
+info-2021-11-24-11-1.log:2021-11-24 11:36:42:051 WARN - ActionOn:24029 cache msg excuting. pid:k1eiaa, curSeqId:13696, reqSeqId:13697 version:9.1.255, s:{REMOTE_ADDR=49.51.197.144, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2432397637}
+info-2021-11-24-11-1.log:2021-11-24 11:36:42:054 INFO - Item 玩家：k1eiaa 执行方法：breedingDragon 获得道具：19001 数量：200
+info-2021-11-24-11-1.log:2021-11-24 11:36:42:060 INFO - Item 玩家：k1eiaa 执行方法：breedingDragon 获得道具：1002 数量：200
+info-2021-11-24-11-1.log:2021-11-24 11:36:42:071 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1002 数量：4515 key:1002
+info-2021-11-24-11-1.log:2021-11-24 11:36:42:071 INFO - Item 玩家：k1eiaa 道具：1002 数量：4515 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:36:42:076 INFO - 魔法生物 玩家：[k1eiaa] 领取培育奖励breedId:2_4 productId:19001 cnt: 200
+info-2021-11-24-11-1.log:2021-11-24 11:36:42:087 WARN - Gateway结束: 玩家:k1eiaa, sId:2432397637, curSeq:13697, msgId:[BreedRewardRequest-24029], seqId:[13697]
+info-2021-11-24-11-1.log:2021-11-24 11:38:07:185 WARN - Gateway开始: 玩家:k1eiaa, sId:2432397637, curSeq:13697, msgId:[SceneCloseTimeRequest-25313], seqId:[13698]
+info-2021-11-24-11-1.log:2021-11-24 11:38:07:187 WARN - ActionOn:25313 cache msg excuting. pid:k1eiaa, curSeqId:13697, reqSeqId:13698 version:9.1.255, s:{REMOTE_ADDR=49.51.197.144, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2432397637}
+info-2021-11-24-11-1.log:2021-11-24 11:38:07:188 WARN - Gateway结束: 玩家:k1eiaa, sId:2432397637, curSeq:13698, msgId:[SceneCloseTimeRequest-25313], seqId:[13698]
+info-2021-11-24-11-1.log:2021-11-24 11:38:09:289 WARN - Gateway开始: 玩家:k1eiaa, sId:2432397637, curSeq:13698, msgId:[SceneCloseTimeRequest-25313], seqId:[13699]
+info-2021-11-24-11-1.log:2021-11-24 11:38:09:290 WARN - ActionOn:25313 cache msg excuting. pid:k1eiaa, curSeqId:13698, reqSeqId:13699 version:9.1.255, s:{REMOTE_ADDR=49.51.197.144, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2432397637}
+info-2021-11-24-11-1.log:2021-11-24 11:38:09:291 WARN - Gateway结束: 玩家:k1eiaa, sId:2432397637, curSeq:13699, msgId:[SceneCloseTimeRequest-25313], seqId:[13699]
+info-2021-11-24-11-1.log:2021-11-24 11:38:19:714 WARN - Gateway开始: 玩家:k1eiaa, sId:2432397637, curSeq:13699, msgId:[GoldPassRewardRequest-25904], seqId:[13700]
+info-2021-11-24-11-1.log:2021-11-24 11:38:19:715 WARN - ActionOn:25904 cache msg excuting. pid:k1eiaa, curSeqId:13699, reqSeqId:13700 version:9.1.255, s:{REMOTE_ADDR=49.51.197.144, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2432397637}
+info-2021-11-24-11-1.log:2021-11-24 11:38:19:719 INFO - Item 玩家：k1eiaa 执行方法：goldPass 获得道具：1003 数量：30
+info-2021-11-24-11-1.log:2021-11-24 11:38:19:720 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1003 数量：197 key:1003
+info-2021-11-24-11-1.log:2021-11-24 11:38:19:720 INFO - Item 玩家：k1eiaa 道具：1003 数量：197 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:38:19:730 WARN - Gateway结束: 玩家:k1eiaa, sId:2432397637, curSeq:13700, msgId:[GoldPassRewardRequest-25904], seqId:[13700]
+info-2021-11-24-11-1.log:2021-11-24 11:38:19:984 WARN - Gateway开始: 玩家:k1eiaa, sId:2432397637, curSeq:13700, msgId:[EnergyRequest-1023], seqId:[13701]
+info-2021-11-24-11-1.log:2021-11-24 11:38:19:985 WARN - ActionOn:1023 cache msg excuting. pid:k1eiaa, curSeqId:13700, reqSeqId:13701 version:9.1.255, s:{REMOTE_ADDR=49.51.197.144, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2432397637}
+info-2021-11-24-11-1.log:2021-11-24 11:38:19:989 WARN - Gateway结束: 玩家:k1eiaa, sId:2432397637, curSeq:13701, msgId:[EnergyRequest-1023], seqId:[13701]
+info-2021-11-24-11-1.log:2021-11-24 11:38:40:550 WARN - Gateway开始: 玩家:k1eiaa, sId:2432397637, curSeq:13701, msgId:[SceneCloseTimeRequest-25313], seqId:[13702]
+info-2021-11-24-11-1.log:2021-11-24 11:38:40:551 WARN - ActionOn:25313 cache msg excuting. pid:k1eiaa, curSeqId:13701, reqSeqId:13702 version:9.1.255, s:{REMOTE_ADDR=49.51.197.144, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2432397637}
+info-2021-11-24-11-1.log:2021-11-24 11:38:40:552 WARN - Gateway结束: 玩家:k1eiaa, sId:2432397637, curSeq:13702, msgId:[SceneCloseTimeRequest-25313], seqId:[13702]
+info-2021-11-24-11-1.log:2021-11-24 11:38:56:432 WARN - Gateway开始: 玩家:k1eiaa, sId:2432397637, curSeq:13702, msgId:[ActiveEggSystemInfoRequest-26204], seqId:[13703]
+info-2021-11-24-11-1.log:2021-11-24 11:38:56:433 WARN - ActionOn:26204 cache msg excuting. pid:k1eiaa, curSeqId:13702, reqSeqId:13703 version:9.1.255, s:{REMOTE_ADDR=49.51.197.144, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2432397637}
+info-2021-11-24-11-1.log:2021-11-24 11:38:56:434 INFO - ActiveEgg 玩家：k1eiaa 系统彩蛋信息：
+info-2021-11-24-11-1.log:2021-11-24 11:38:56:435 WARN - Gateway结束: 玩家:k1eiaa, sId:2432397637, curSeq:13703, msgId:[ActiveEggSystemInfoRequest-26204], seqId:[13703]
+info-2021-11-24-11-1.log:2021-11-24 11:39:05:227 WARN - Gateway开始: 玩家:k1eiaa, sId:2432397637, curSeq:13703, msgId:[ActiveEggSystemReceiveRequest-26205], seqId:[13704]
+info-2021-11-24-11-1.log:2021-11-24 11:39:05:228 WARN - ActionOn:26205 cache msg excuting. pid:k1eiaa, curSeqId:13703, reqSeqId:13704 version:9.1.255, s:{REMOTE_ADDR=49.51.197.144, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2432397637}
+info-2021-11-24-11-1.log:2021-11-24 11:39:05:234 INFO - ActiveEgg 玩家：k1eiaa 领取系统：systemEggs { eggId: 6 type: 1 status: 0 cur: 20 max: 20 } systemEggs { eggId: 7 type: 2 status: 0 cur: 20 max: 20 } systemEggs { eggId: 8 type: 1 status: 0 cur: 20 max: 20 } systemEggs { eggId: 9 type: 1 status: 0 cur: 20 max: 20 } systemEggs { eggId: 10 type: 2 status: 0 cur: 20 max: 20 }彩蛋 resp：{}
+info-2021-11-24-11-1.log:2021-11-24 11:39:05:235 WARN - Gateway结束: 玩家:k1eiaa, sId:2432397637, curSeq:13704, msgId:[ActiveEggSystemReceiveRequest-26205], seqId:[13704]
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:505 WARN - Gateway开始: 玩家:k1eiaa, sId:2432397637, curSeq:13704, msgId:[ActiveEggSystemOpenRequest-26206], seqId:[13705]
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:506 WARN - ActionOn:26206 cache msg excuting. pid:k1eiaa, curSeqId:13704, reqSeqId:13705 version:9.1.255, s:{REMOTE_ADDR=49.51.197.144, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2432397637}
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:507 INFO - Item 玩家：k1eiaa 执行方法：OpenSystemEgg 获得道具：1003 数量：20
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:520 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1003 数量：217 key:1003
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:520 INFO - Item 玩家：k1eiaa 道具：1003 数量：217 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:521 INFO - Item 玩家：k1eiaa 执行方法：OpenSystemEgg 获得道具：1002 数量：100
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:530 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1002 数量：4615 key:1002
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:530 INFO - Item 玩家：k1eiaa 道具：1002 数量：4615 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:534 INFO - Item 玩家：k1eiaa 执行方法：OpenSystemEgg 获得道具：1002 数量：300
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:543 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1002 数量：4915 key:1002
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:543 INFO - Item 玩家：k1eiaa 道具：1002 数量：4915 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:543 INFO - Item 玩家：k1eiaa 执行方法：OpenSystemEgg 获得道具：22000 数量：2
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:549 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：22000 数量：15 key:22000
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:550 INFO - Item 玩家：k1eiaa 道具：22000 数量：15 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:554 INFO - Item 玩家：k1eiaa 执行方法：OpenSystemEgg 获得道具：1003 数量：20
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:568 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1003 数量：237 key:1003
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:568 INFO - Item 玩家：k1eiaa 道具：1003 数量：237 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:568 INFO - Item 玩家：k1eiaa 执行方法：OpenSystemEgg 获得道具：2002 数量：3
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:575 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：2002 数量：81 key:2002
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:575 INFO - Item 玩家：k1eiaa 道具：2002 数量：81 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:580 INFO - Item 玩家：k1eiaa 执行方法：OpenSystemEgg 获得道具：1003 数量：20
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:593 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1003 数量：257 key:1003
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:593 INFO - Item 玩家：k1eiaa 道具：1003 数量：257 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:593 INFO - Item 玩家：k1eiaa 执行方法：OpenSystemEgg 获得道具：2003 数量：3
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:599 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：2003 数量：127 key:2003
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:599 INFO - Item 玩家：k1eiaa 道具：2003 数量：127 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:602 INFO - Item 玩家：k1eiaa 执行方法：OpenSystemEgg 获得道具：1003 数量：50
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:613 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1003 数量：307 key:1003
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:613 INFO - Item 玩家：k1eiaa 道具：1003 数量：307 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:613 INFO - Item 玩家：k1eiaa 执行方法：OpenSystemEgg 获得道具：1002 数量：300
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:621 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1002 数量：5215 key:1002
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:621 INFO - Item 玩家：k1eiaa 道具：1002 数量：5215 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:626 INFO - ActiveEgg 玩家：k1eiaa 开启系统彩蛋：[6, 7, 8, 9, 10]完成 resp：eggRewards { eggId: 6 rewards { itemTemplateId: "1003" count: 20 } rewards { itemTemplateId: "1002" count: 100 } } eggRewards { eggId: 7 rewards { itemTemplateId: "1002" count: 300 } rewards { itemTemplateId: "22000" count: 2 } } eggRewards { eggId: 8 rewards { itemTemplateId: "1003" count: 20 } rewards { itemTemplateId: "2002" count: 3 } } eggRewards { eggId: 9 rewards { itemTemplateId: "1003" count: 20 } rewards { itemTemplateId: "2003" count: 3 } } eggRewards { eggId: 10 rewards { itemTemplateId: "1003" count: 50 } rewards { itemTemplateId: "1002" count: 300 } }
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:632 INFO - ActivityGoldPassManager.updateTaskCondition@condition updated|pid=k1eiaa|version=9.1|taskId=2006|taskTpl=10002|save=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=3}]}}|conName=TakeItemCondition
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:634 WARN - Gateway结束: 玩家:k1eiaa, sId:2432397637, curSeq:13705, msgId:[ActiveEggSystemOpenRequest-26206], seqId:[13705]
+info-2021-11-24-11-1.log:2021-11-24 11:39:09:514 WARN - Gateway开始: 玩家:k1eiaa, sId:2432397637, curSeq:13705, msgId:[ActiveEggSystemReceiveRequest-26205], seqId:[13706]
+info-2021-11-24-11-1.log:2021-11-24 11:39:09:516 WARN - ActionOn:26205 cache msg excuting. pid:k1eiaa, curSeqId:13705, reqSeqId:13706 version:9.1.255, s:{REMOTE_ADDR=49.51.197.144, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2432397637}
+info-2021-11-24-11-1.log:2021-11-24 11:39:09:522 INFO - ActiveEgg 玩家：k1eiaa 领取系统：systemEggs { eggId: 11 type: 1 status: 0 cur: 20 max: 20 } systemEggs { eggId: 12 type: 2 status: 0 cur: 20 max: 20 } systemEggs { eggId: 13 type: 1 status: 0 cur: 20 max: 20 } systemEggs { eggId: 14 type: 1 status: 0 cur: 20 max: 20 } systemEggs { eggId: 15 type: 2 status: 0 cur: 20 max: 20 }彩蛋 resp：{}
+info-2021-11-24-11-1.log:2021-11-24 11:39:09:522 WARN - Gateway结束: 玩家:k1eiaa, sId:2432397637, curSeq:13706, msgId:[ActiveEggSystemReceiveRequest-26205], seqId:[13706]
+info-2021-11-24-11-1.log:2021-11-24 11:39:10:447 WARN - Gateway开始: 玩家:k1eiaa, sId:2432397637, curSeq:13706, msgId:[ActiveEggSystemOpenRequest-26206], seqId:[13707]
+info-2021-11-24-11-1.log:2021-11-24 11:39:10:448 WARN - ActionOn:26206 cache msg excuting. pid:k1eiaa, curSeqId:13706, reqSeqId:13707 version:9.1.255, s:{REMOTE_ADDR=49.51.197.144, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2432397637}
+info-2021-11-24-11-1.log:2021-11-24 11:39:10:449 INFO - Item 玩家：k1eiaa 执行方法：OpenSystemEgg 获得道具：1003 数量：20
+info-2021-11-24-11-1.log:2021-11-24 11:39:10:462 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1003 数量：327 key:1003
+info-2021-11-24-11-1.log:2021-11-24 11:39:10:463 INFO - Item 玩家：k1eiaa 道具：1003 数量：327 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:39:10:463 INFO - Item 玩家：k1eiaa 执行方法：OpenSystemEgg 获得道具：15000 数量：1
+info-2021-11-24-11-1.log:2021-11-24 11:39:10:468 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：15000 数量：97 key:15000
+info-2021-11-24-11-1.log:2021-11-24 11:39:10:469 INFO - Item 玩家：k1eiaa 道具：15000 数量：97 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:39:10:473 INFO - Item 玩家：k1eiaa 执行方法：OpenSystemEgg 获得道具：1002 数量：300
+info-2021-11-24-11-1.log:2021-11-24 11:39:10:483 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1002 数量：5515 key:1002
+info-2021-11-24-11-1.log:2021-11-24 11:39:10:484 INFO - Item 玩家：k1eiaa 道具：1002 数量：5515 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:39:10:484 INFO - Item 玩家：k1eiaa 执行方法：OpenSystemEgg 获得道具：3004 数量：2
+info-2021-11-24-11-1.log:2021-11-24 11:39:10:490 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：3004 数量：3 key:3004
+info-2021-11-24-11-1.log:2021-11-24 11:39:10:490 INFO - Item 玩家：k1eiaa 道具：3004 数量：3 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:39:10:495 INFO - Item 玩家：k1eiaa 执行方法：OpenSystemEgg 获得道具：2005 数量：3
+info-2021-11-24-11-1.log:2021-11-24 11:39:10:502 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：2005 数量：24 key:2005
+info-2021-11-24-11-1.log:2021-11-24 11:39:10:502 INFO - Item 玩家：k1eiaa 道具：2005 数量：24 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:39:10:502 INFO - Item 玩家：k1eiaa 执行方法：OpenSystemEgg 获得道具：1003 数量：20
+info-2021-11-24-11-1.log:2021-11-24 11:39:10:514 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1003 数量：347 key:1003
+info-2021-11-24-11-1.log:2021-11-24 11:39:10:515 INFO - Item 玩家：k1eiaa 道具：1003 数量：347 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:39:10:518 INFO - Item 玩家：k1eiaa 执行方法：OpenSystemEgg 获得道具：1003 数量：20
+info-2021-11-24-11-1.log:2021-11-24 11:39:10:530 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1003 数量：367 key:1003
+info-2021-11-24-11-1.log:2021-11-24 11:39:10:530 INFO - Item 玩家：k1eiaa 道具：1003 数量：367 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:39:10:530 INFO - Item 玩家：k1eiaa 执行方法：OpenSystemEgg 获得道具：2003 数量：3
+info-2021-11-24-11-1.log:2021-11-24 11:39:10:536 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：2003 数量：130 key:2003
+info-2021-11-24-11-1.log:2021-11-24 11:39:10:536 INFO - Item 玩家：k1eiaa 道具：2003 数量：130 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:39:10:540 INFO - Item 玩家：k1eiaa 执行方法：OpenSystemEgg 获得道具：1002 数量：300
+info-2021-11-24-11-1.log:2021-11-24 11:39:10:548 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1002 数量：5815 key:1002
+info-2021-11-24-11-1.log:2021-11-24 11:39:10:548 INFO - Item 玩家：k1eiaa 道具：1002 数量：5815 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:39:10:548 INFO - Item 玩家：k1eiaa 执行方法：OpenSystemEgg 获得道具：3004 数量：2
+info-2021-11-24-11-1.log:2021-11-24 11:39:10:554 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：3004 数量：5 key:3004
+info-2021-11-24-11-1.log:2021-11-24 11:39:10:555 INFO - Item 玩家：k1eiaa 道具：3004 数量：5 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:39:10:560 INFO - ActiveEgg 玩家：k1eiaa 开启系统彩蛋：[11, 12, 13, 14, 15]完成 resp：eggRewards { eggId: 11 rewards { itemTemplateId: "1003" count: 20 } rewards { itemTemplateId: "15000" count: 1 } } eggRewards { eggId: 12 rewards { itemTemplateId: "1002" count: 300 } rewards { itemTemplateId: "3004" count: 2 } } eggRewards { eggId: 13 rewards { itemTemplateId: "2005" count: 3 } rewards { itemTemplateId: "1003" count: 20 } } eggRewards { eggId: 14 rewards { itemTemplateId: "1003" count: 20 } rewards { itemTemplateId: "2003" count: 3 } } eggRewards { eggId: 15 rewards { itemTemplateId: "1002" count: 300 } rewards { itemTemplateId: "3004" count: 2 } }
+info-2021-11-24-11-1.log:2021-11-24 11:39:10:568 WARN - Gateway结束: 玩家:k1eiaa, sId:2432397637, curSeq:13707, msgId:[ActiveEggSystemOpenRequest-26206], seqId:[13707]
+info-2021-11-24-11-1.log:2021-11-24 11:39:14:868 WARN - Gateway开始: 玩家:k1eiaa, sId:2432397637, curSeq:13707, msgId:[ActiveEggSystemReceiveRequest-26205], seqId:[13708]
+info-2021-11-24-11-1.log:2021-11-24 11:39:14:869 WARN - ActionOn:26205 cache msg excuting. pid:k1eiaa, curSeqId:13707, reqSeqId:13708 version:9.1.255, s:{REMOTE_ADDR=49.51.197.144, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2432397637}
+info-2021-11-24-11-1.log:2021-11-24 11:39:14:876 INFO - ActiveEgg 玩家：k1eiaa 领取系统：systemEggs { eggId: 16 type: 1 status: 0 cur: 20 max: 20 } systemEggs { eggId: 17 type: 2 status: 0 cur: 20 max: 20 } systemEggs { eggId: 18 type: 1 status: 0 cur: 20 max: 20 } systemEggs { eggId: 19 type: 1 status: 0 cur: 20 max: 20 } systemEggs { eggId: 20 type: 2 status: 0 cur: 20 max: 20 }彩蛋 resp：{}
+info-2021-11-24-11-1.log:2021-11-24 11:39:14:876 WARN - Gateway结束: 玩家:k1eiaa, sId:2432397637, curSeq:13708, msgId:[ActiveEggSystemReceiveRequest-26205], seqId:[13708]
+info-2021-11-24-11-1.log:2021-11-24 11:39:15:832 WARN - Gateway开始: 玩家:k1eiaa, sId:2432397637, curSeq:13708, msgId:[ActiveEggSystemOpenRequest-26206], seqId:[13709]
+info-2021-11-24-11-1.log:2021-11-24 11:39:15:833 WARN - ActionOn:26206 cache msg excuting. pid:k1eiaa, curSeqId:13708, reqSeqId:13709 version:9.1.255, s:{REMOTE_ADDR=49.51.197.144, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2432397637}
+info-2021-11-24-11-1.log:2021-11-24 11:39:15:833 INFO - Item 玩家：k1eiaa 执行方法：OpenSystemEgg 获得道具：1003 数量：20
+info-2021-11-24-11-1.log:2021-11-24 11:39:15:844 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1003 数量：387 key:1003
+info-2021-11-24-11-1.log:2021-11-24 11:39:15:845 INFO - Item 玩家：k1eiaa 道具：1003 数量：387 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:39:15:845 INFO - Item 玩家：k1eiaa 执行方法：OpenSystemEgg 获得道具：1002 数量：100
+info-2021-11-24-11-1.log:2021-11-24 11:39:15:852 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1002 数量：5915 key:1002
+info-2021-11-24-11-1.log:2021-11-24 11:39:15:853 INFO - Item 玩家：k1eiaa 道具：1002 数量：5915 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:39:15:856 INFO - Item 玩家：k1eiaa 执行方法：OpenSystemEgg 获得道具：3009 数量：2
+info-2021-11-24-11-1.log:2021-11-24 11:39:15:860 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：3009 数量：4 key:3009
+info-2021-11-24-11-1.log:2021-11-24 11:39:15:861 INFO - Item 玩家：k1eiaa 道具：3009 数量：4 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:39:15:861 INFO - Item 玩家：k1eiaa 执行方法：OpenSystemEgg 获得道具：1002 数量：300
+info-2021-11-24-11-1.log:2021-11-24 11:39:15:868 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1002 数量：6215 key:1002
+info-2021-11-24-11-1.log:2021-11-24 11:39:15:869 INFO - Item 玩家：k1eiaa 道具：1002 数量：6215 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:39:15:872 INFO - Item 玩家：k1eiaa 执行方法：OpenSystemEgg 获得道具：1003 数量：20
+info-2021-11-24-11-1.log:2021-11-24 11:39:15:882 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1003 数量：407 key:1003
+info-2021-11-24-11-1.log:2021-11-24 11:39:15:883 INFO - Item 玩家：k1eiaa 道具：1003 数量：407 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:39:15:883 INFO - Item 玩家：k1eiaa 执行方法：OpenSystemEgg 获得道具：1002 数量：100
+info-2021-11-24-11-1.log:2021-11-24 11:39:15:892 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1002 数量：6315 key:1002
+info-2021-11-24-11-1.log:2021-11-24 11:39:15:892 INFO - Item 玩家：k1eiaa 道具：1002 数量：6315 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:39:15:896 INFO - Item 玩家：k1eiaa 执行方法：OpenSystemEgg 获得道具：1003 数量：20
+info-2021-11-24-11-1.log:2021-11-24 11:39:15:908 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1003 数量：427 key:1003
+info-2021-11-24-11-1.log:2021-11-24 11:39:15:909 INFO - Item 玩家：k1eiaa 道具：1003 数量：427 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:39:15:909 INFO - Item 玩家：k1eiaa 执行方法：OpenSystemEgg 获得道具：15000 数量：1
+info-2021-11-24-11-1.log:2021-11-24 11:39:15:914 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：15000 数量：98 key:15000
+info-2021-11-24-11-1.log:2021-11-24 11:39:15:915 INFO - Item 玩家：k1eiaa 道具：15000 数量：98 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:39:15:919 INFO - Item 玩家：k1eiaa 执行方法：OpenSystemEgg 获得道具：1002 数量：300
+info-2021-11-24-11-1.log:2021-11-24 11:39:15:929 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1002 数量：6615 key:1002
+info-2021-11-24-11-1.log:2021-11-24 11:39:15:930 INFO - Item 玩家：k1eiaa 道具：1002 数量：6615 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:39:15:930 INFO - Item 玩家：k1eiaa 执行方法：OpenSystemEgg 获得道具：3004 数量：2
+info-2021-11-24-11-1.log:2021-11-24 11:39:15:935 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：3004 数量：7 key:3004
+info-2021-11-24-11-1.log:2021-11-24 11:39:15:935 INFO - Item 玩家：k1eiaa 道具：3004 数量：7 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:39:15:939 INFO - ActiveEgg 玩家：k1eiaa 开启系统彩蛋：[16, 17, 18, 19, 20]完成 resp：eggRewards { eggId: 16 rewards { itemTemplateId: "1003" count: 20 } rewards { itemTemplateId: "1002" count: 100 } } eggRewards { eggId: 17 rewards { itemTemplateId: "3009" count: 2 } rewards { itemTemplateId: "1002" count: 300 } } eggRewards { eggId: 18 rewards { itemTemplateId: "1003" count: 20 } rewards { itemTemplateId: "1002" count: 100 } } eggRewards { eggId: 19 rewards { itemTemplateId: "1003" count: 20 } rewards { itemTemplateId: "15000" count: 1 } } eggRewards { eggId: 20 rewards { itemTemplateId: "1002" count: 300 } rewards { itemTemplateId: "3004" count: 2 } }
+info-2021-11-24-11-1.log:2021-11-24 11:39:15:947 WARN - Gateway结束: 玩家:k1eiaa, sId:2432397637, curSeq:13709, msgId:[ActiveEggSystemOpenRequest-26206], seqId:[13709]
+info-2021-11-24-11-1.log:2021-11-24 11:39:17:950 INFO - 关闭session, {REMOTE_ADDR=49.51.197.144, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, SESSION_ID=2015382405}
+info-2021-11-24-11-1.log:2021-11-24 11:39:17:950 WARN - CLOSE SESSION player session changed s:{REMOTE_ADDR=49.51.197.144, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, SESSION_ID=2015382405}
+info-2021-11-24-11-1.log:2021-11-24 11:40:50:664 WARN - Gateway开始: 玩家:k1eiaa, sId:2432397637, curSeq:13709, msgId:[AdsIncentiveRewardRequest-13002], seqId:[13710]
+info-2021-11-24-11-1.log:2021-11-24 11:40:50:665 WARN - ActionOn:13002 cache msg excuting. pid:k1eiaa, curSeqId:13709, reqSeqId:13710 version:9.1.255, s:{REMOTE_ADDR=49.51.197.144, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2432397637}
+info-2021-11-24-11-1.log:2021-11-24 11:40:50:667 INFO - Ads激励广告 玩家：k1eiaa Group：5 ads：33
+info-2021-11-24-11-1.log:2021-11-24 11:40:50:667 INFO - Item 玩家：k1eiaa 执行方法：video_ads 获得道具：1002 数量：100
+info-2021-11-24-11-1.log:2021-11-24 11:40:50:675 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1002 数量：6715 key:1002
+info-2021-11-24-11-1.log:2021-11-24 11:40:50:676 INFO - Item 玩家：k1eiaa 道具：1002 数量：6715 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:40:50:676 INFO - Ads激励广告 玩家：k1eiaa Group：5 ads：33 领取黄金银行转盘奖励：[1002, 400, 100]
+info-2021-11-24-11-1.log:2021-11-24 11:40:50:684 WARN - Gateway结束: 玩家:k1eiaa, sId:2432397637, curSeq:13710, msgId:[AdsIncentiveRewardRequest-13002], seqId:[13710]
+info-2021-11-24-11-1.log:2021-11-24 11:41:00:801 WARN - Gateway开始: 玩家:k1eiaa, sId:2432397637, curSeq:13710, msgId:[TriggerGiftRequest-25802], seqId:[13711]
+info-2021-11-24-11-1.log:2021-11-24 11:41:00:802 WARN - ActionOn:25802 cache msg excuting. pid:k1eiaa, curSeqId:13710, reqSeqId:13711 version:9.1.255, s:{REMOTE_ADDR=49.51.197.144, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2432397637}
+info-2021-11-24-11-1.log:2021-11-24 11:41:00:804 INFO - GiftManager.triggerGiftReq@triggered gift|pid=k1eiaa|version=9.1|giftId=33|time=1637725260000
+info-2021-11-24-11-1.log:2021-11-24 11:41:00:805 WARN - Gateway结束: 玩家:k1eiaa, sId:2432397637, curSeq:13711, msgId:[TriggerGiftRequest-25802], seqId:[13711]
+info-2021-11-24-11-1.log:2021-11-24 11:41:10:606 WARN - Gateway开始: 玩家:k1eiaa, sId:2432397637, curSeq:13711, msgId:[SceneCloseTimeRequest-25313], seqId:[13712]
+info-2021-11-24-11-1.log:2021-11-24 11:41:10:608 WARN - ActionOn:25313 cache msg excuting. pid:k1eiaa, curSeqId:13711, reqSeqId:13712 version:9.1.255, s:{REMOTE_ADDR=49.51.197.144, VERSION=9.1.255, SESSION_TYPE=NettyHttpIOSession, USER_ID=k1eiaa, USER_STATE=1, SESSION_ID=2432397637}
+info-2021-11-24-11-1.log:2021-11-24 11:41:10:609 WARN - Gateway结束: 玩家:k1eiaa, sId:2432397637, curSeq:13712, msgId:[SceneCloseTimeRequest-25313], seqId:[13712]

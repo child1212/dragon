@@ -11,4 +11,3 @@ for line in txt:
 j = json.dumps(dic)
 txt.close()
 print('a:',j)
-# %%

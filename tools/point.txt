@@ -1,9 +1,3 @@
-scene
-dragonId
-skillId
-clearDurable
-obstacleID
-obstacleDrop
 level
 platform
 playerid

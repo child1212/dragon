@@ -6,11 +6,18 @@ from func_dragon import *
 import os
 
 print("start time:",time.asctime(time.localtime()))
-account = "16dfe5819d850f195c79d3db04f4bbfa"
-player = "ojeha8"
-server = "https://dqa.gameyici.com"      
-log_res = login_gm(server)     
+account = "3fd3616289c03b6df77b85dae95dabfc"
+player = "53ij9m"
+server = "qa"      
 
+
+
+
+if server == "38":
+    server = "http://dtest.gameyici.com"
+elif server == "qa":
+    server = "https://dqa.hphorse.net"
+log_res = login_gm(server)    
 fin = banding(account,player,server,log_res)
 
 print(account,player,fin)

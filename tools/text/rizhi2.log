@@ -1,103 +1,46 @@
-info-2021-11-12-06-1.log:2021-11-12 06:33:09:734 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 2 领取后的startTime: 1636570333000 productItemId:3006
-info-2021-11-12-06-1.log:2021-11-12 06:33:09:736 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 1 领取后的startTime: 1636570610000 productItemId:3017
-info-2021-11-12-06-1.log:2021-11-12 06:33:09:738 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 1 领取后的startTime: 1636570910000 productItemId:3005
-info-2021-11-12-06-1.log:2021-11-12 06:34:51:493 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：2 - 3007
-info-2021-11-12-06-1.log:2021-11-12 06:35:41:619 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：1 - 3005
-info-2021-11-12-06-1.log:2021-11-12 06:35:46:659 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：1 - 3005
-info-2021-11-12-06-1.log:2021-11-12 06:40:11:355 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 2 领取后的startTime: 1636670391000 productItemId:3007
-info-2021-11-12-06-1.log:2021-11-12 06:40:25:159 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：2 - 3007
-info-2021-11-12-06-1.log:2021-11-12 06:41:40:717 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 1 领取后的startTime: 1636670441000 productItemId:3005
-info-2021-11-12-06-1.log:2021-11-12 06:45:40:106 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 2 领取后的startTime: 1636670725000 productItemId:3007
-info-2021-11-12-06-1.log:2021-11-12 06:45:44:390 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 1 领取后的startTime: 1636670741000 productItemId:3005
-info-2021-11-12-06-1.log:2021-11-12 06:45:56:954 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：1 - 3005
-info-2021-11-12-06-1.log:2021-11-12 06:45:59:820 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：1 - 3005
-info-2021-11-12-06-1.log:2021-11-12 06:49:29:461 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：2 - 3007
-info-2021-11-12-06-1.log:2021-11-12 06:49:31:140 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：2 - 3006
-info-2021-11-12-06-1.log:2021-11-12 06:51:26:009 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 1 领取后的startTime: 1636671056000 productItemId:3005
-info-2021-11-12-06-1.log:2021-11-12 06:56:14:774 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 2 领取后的startTime: 1636671269000 productItemId:3007
-info-2021-11-12-06-1.log:2021-11-12 06:56:14:776 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 1 领取后的startTime: 1636671356000 productItemId:3005
-info-2021-11-12-06-1.log:2021-11-12 06:56:27:818 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：2 - 3006
-info-2021-11-12-06-1.log:2021-11-12 06:56:54:608 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：1 - 3004
-info-2021-11-12-06-1.log:2021-11-12 06:56:59:037 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：1 - 3004
-info-2021-11-12-06-2.log:2021-11-12 06:59:34:308 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 2 领取后的startTime: 1636671569000 productItemId:3006
-info-2021-11-12-06-2.log:2021-11-12 06:59:54:559 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 1 领取后的startTime: 1636671594000 productItemId:3004
-info-2021-11-12-07-1.log:2021-11-12 07:00:00:064 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：1 - 3005
-info-2021-11-12-07-1.log:2021-11-12 07:04:40:321 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 2 领取后的startTime: 1636671869000 productItemId:3006
-info-2021-11-12-07-1.log:2021-11-12 07:04:40:323 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 1 领取后的startTime: 1636671774000 productItemId:3004
-info-2021-11-12-07-1.log:2021-11-12 07:04:58:023 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：2 - 3006
-info-2021-11-12-07-1.log:2021-11-12 07:05:26:679 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：1 - 3016
-info-2021-11-12-07-1.log:2021-11-12 07:08:14:412 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 1 领取后的startTime: 1636672074000 productItemId:3005
-info-2021-11-12-07-1.log:2021-11-12 07:08:21:462 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：1 - 3017
-info-2021-11-12-07-1.log:2021-11-12 07:08:52:950 INFO - 生产 玩家：[k6gr84] 开启槽 工厂Id：1, 当前开启槽个数 1
-info-2021-11-12-07-1.log:2021-11-12 07:08:58:515 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：1 - 3016
-info-2021-11-12-07-1.log:2021-11-12 07:12:30:193 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 2 领取后的startTime: 1636672197000 productItemId:3006
-info-2021-11-12-07-1.log:2021-11-12 07:17:55:010 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 1 领取后的startTime: 1636672674000 productItemId:3016
-info-2021-11-12-07-1.log:2021-11-12 07:18:01:211 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：1 - 3005
-info-2021-11-12-07-1.log:2021-11-12 07:52:53:466 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 1 领取后的startTime: 1636673574000 productItemId:3017
-info-2021-11-12-07-1.log:2021-11-12 07:52:53:467 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 1 领取后的startTime: 1636674174000 productItemId:3016
-info-2021-11-12-07-1.log:2021-11-12 07:52:53:469 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 1 领取后的startTime: 1636674474000 productItemId:3005
-info-2021-11-12-07-1.log:2021-11-12 07:53:01:545 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：1 - 3005
-info-2021-11-12-08-2.log:2021-11-12 08:59:36:110 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 1 领取后的startTime: 1636675080000 productItemId:3005
-info-2021-11-12-08-2.log:2021-11-12 08:59:43:061 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：1 - 3017
-info-2021-11-12-09-1.log:2021-11-12 09:00:00:634 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：1 - 3004
-info-2021-11-12-09-1.log:2021-11-12 09:10:50:322 INFO - 生产 玩家：[k6gr84] 添加生产任务 服务端初始化工厂数据 4
-info-2021-11-12-09-1.log:2021-11-12 09:10:50:326 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：4 - 3001
-info-2021-11-12-09-1.log:2021-11-12 09:10:56:485 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：4 - 3001
-info-2021-11-12-09-1.log:2021-11-12 09:15:46:510 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 1 领取后的startTime: 1636679682000 productItemId:3017
-info-2021-11-12-09-1.log:2021-11-12 09:15:46:512 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 4 领取后的startTime: 1636679628000 productItemId:3001
-info-2021-11-12-09-1.log:2021-11-12 09:16:51:517 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 4 领取后的startTime: 1636679808000 productItemId:3001
-info-2021-11-12-09-1.log:2021-11-12 09:17:46:392 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 1 领取后的startTime: 1636679862000 productItemId:3004
-info-2021-11-12-09-1.log:2021-11-12 09:17:54:094 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：1 - 3004
-info-2021-11-12-09-1.log:2021-11-12 09:17:57:102 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：1 - 3004
-info-2021-11-12-09-1.log:2021-11-12 09:20:40:752 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：4 - 3001
-info-2021-11-12-09-1.log:2021-11-12 09:20:43:890 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：4 - 3001
-info-2021-11-12-09-1.log:2021-11-12 09:20:44:850 INFO - 生产 玩家：[k6gr84] 开启槽 工厂Id：4, 当前开启槽个数 1
-info-2021-11-12-09-1.log:2021-11-12 09:20:49:636 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：4 - 3001
-info-2021-11-12-09-1.log:2021-11-12 09:21:44:172 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 1 领取后的startTime: 1636680053000 productItemId:3004
-info-2021-11-12-09-1.log:2021-11-12 09:21:59:138 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：1 - 3004
-info-2021-11-12-09-1.log:2021-11-12 09:22:01:001 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：1 - 3005
-info-2021-11-12-09-1.log:2021-11-12 09:23:48:754 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 4 领取后的startTime: 1636680219000 productItemId:3001
-info-2021-11-12-09-1.log:2021-11-12 09:26:17:927 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 1 领取后的startTime: 1636680233000 productItemId:3004
-info-2021-11-12-09-1.log:2021-11-12 09:26:32:982 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：1 - 3005
-info-2021-11-12-09-1.log:2021-11-12 09:26:40:376 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 4 领取后的startTime: 1636680399000 productItemId:3001
-info-2021-11-12-09-1.log:2021-11-12 09:26:45:451 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：4 - 3001
-info-2021-11-12-09-1.log:2021-11-12 09:26:48:769 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：4 - 3001
-info-2021-11-12-09-1.log:2021-11-12 09:27:43:043 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 1 领取后的startTime: 1636680413000 productItemId:3004
-info-2021-11-12-09-1.log:2021-11-12 09:28:33:154 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：1 - 3005
-info-2021-11-12-09-1.log:2021-11-12 09:29:43:106 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 4 领取后的startTime: 1636680579000 productItemId:3001
-info-2021-11-12-09-1.log:2021-11-12 09:29:49:864 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：4 - 3001
-info-2021-11-12-09-1.log:2021-11-12 09:32:47:378 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 1 领取后的startTime: 1636680713000 productItemId:3005
-info-2021-11-12-09-1.log:2021-11-12 09:32:47:381 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 4 领取后的startTime: 1636680759000 productItemId:3001
-info-2021-11-12-09-1.log:2021-11-12 09:32:53:063 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：1 - 3005
-info-2021-11-12-09-1.log:2021-11-12 09:32:57:219 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：4 - 3001
-info-2021-11-12-09-1.log:2021-11-12 09:33:52:118 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：2 - 3007
-info-2021-11-12-09-1.log:2021-11-12 09:33:56:032 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：2 - 3007
-info-2021-11-12-09-1.log:2021-11-12 09:34:00:200 INFO - 生产 玩家：[k6gr84] 开启槽 工厂Id：2, 当前开启槽个数 1
-info-2021-11-12-09-1.log:2021-11-12 09:34:05:028 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：2 - 3007
-info-2021-11-12-09-1.log:2021-11-12 09:37:52:086 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 1 领取后的startTime: 1636681013000 productItemId:3005
-info-2021-11-12-09-1.log:2021-11-12 09:37:52:088 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 4 领取后的startTime: 1636680939000 productItemId:3001
-info-2021-11-12-09-1.log:2021-11-12 09:37:58:476 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：1 - 3005
-info-2021-11-12-09-1.log:2021-11-12 09:38:03:548 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：4 - 3001
-info-2021-11-12-09-1.log:2021-11-12 09:38:53:965 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 2 领取后的startTime: 1636681131000 productItemId:3007
-info-2021-11-12-09-1.log:2021-11-12 09:38:53:967 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 4 领取后的startTime: 1636681119000 productItemId:3001
-info-2021-11-12-09-1.log:2021-11-12 09:42:13:347 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 1 领取后的startTime: 1636681313000 productItemId:3005
-info-2021-11-12-09-1.log:2021-11-12 09:42:13:349 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 4 领取后的startTime: 1636681299000 productItemId:3001
-info-2021-11-12-09-1.log:2021-11-12 09:42:43:074 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：4 - 3001
-info-2021-11-12-09-1.log:2021-11-12 09:42:45:012 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：4 - 3001
-info-2021-11-12-09-1.log:2021-11-12 09:42:51:264 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：1 - 3005
-info-2021-11-12-09-1.log:2021-11-12 09:44:38:263 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 2 领取后的startTime: 1636681431000 productItemId:3007
-info-2021-11-12-09-1.log:2021-11-12 09:44:42:986 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 4 领取后的startTime: 1636681479000 productItemId:3001
-info-2021-11-12-09-1.log:2021-11-12 09:44:52:861 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：4 - 3001
-info-2021-11-12-09-1.log:2021-11-12 09:47:07:178 ERROR - 生产 玩家：[k6gr84] version:8.1 添加生产任务：槽位已满 factoryId: 1 槽总个数：1 已开启槽个数：1 生产队列：[FactoryProduce{itemId=3005}, FactoryProduce{itemId=3005}, FactoryProduce{itemId=3005}]
-info-2021-11-12-09-1.log:2021-11-12 09:47:13:815 ERROR - 生产 玩家：[k6gr84] version:8.1 添加生产任务：槽位已满 factoryId: 1 槽总个数：1 已开启槽个数：1 生产队列：[FactoryProduce{itemId=3005}, FactoryProduce{itemId=3005}, FactoryProduce{itemId=3005}]
-info-2021-11-12-09-1.log:2021-11-12 09:47:20:071 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 1 领取后的startTime: 1636681613000 productItemId:3005
-info-2021-11-12-09-1.log:2021-11-12 09:47:24:968 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：1 - 3005
-info-2021-11-12-09-1.log:2021-11-12 09:47:59:850 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 4 领取后的startTime: 1636681659000 productItemId:3001
-info-2021-11-12-09-1.log:2021-11-12 09:50:00:763 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 2 领取后的startTime: 1636681731000 productItemId:3007
-info-2021-11-12-09-1.log:2021-11-12 09:50:29:644 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：2 - 3007
-info-2021-11-12-09-1.log:2021-11-12 09:50:35:007 INFO - 生产 玩家：[k6gr84] 添加生产任务成功：2 - 3007
-info-2021-11-12-09-1.log:2021-11-12 09:50:40:767 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 4 领取后的startTime: 1636681839000 productItemId:3001
-info-2021-11-12-09-1.log:2021-11-12 09:54:00:852 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 1 领取后的startTime: 1636681913000 productItemId:3005
-info-2021-11-12-09-1.log:2021-11-12 09:54:00:854 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 4 领取后的startTime: 1636682019000 productItemId:3001
-info-2021-11-12-09-1.log:2021-11-12 09:55:32:430 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 2 领取后的startTime: 1636682128000 productItemId:3007
-info-2021-11-12-09-1.log:2021-11-12 09:56:57:979 INFO - 生产 玩家：[k6gr84] 领取生产物资成功 factoryId: 1 领取后的startTime: 1636682213000 productItemId:3005
+info-2021-11-24-10-2.log:2021-11-24 10:48:54:635 INFO - Item 玩家：k1eiaa 执行方法：daily_reward 获得道具：1003 数量：20
+info-2021-11-24-10-2.log:2021-11-24 10:48:54:647 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1003 数量：117 key:1003
+info-2021-11-24-10-2.log:2021-11-24 10:48:54:648 INFO - Item 玩家：k1eiaa 道具：1003 数量：117 ，cd数量：0
+info-2021-11-24-10-2.log:2021-11-24 10:48:54:648 INFO - Dayreward 玩家：k1eiaa 奖励倍数 1 领取签到奖励 , 奖励配置:DayRewardTemplate:批次号 :1; 签到天数 :1; 物资数 : 0; 精力值 :0; 钻石数 :0; 道具id:[[1003,20]]
+info-2021-11-24-10-2.log:2021-11-24 10:49:00:189 INFO - GoldPass 玩家：k1eiaa 跨天重置 PlayerGoldPass：PlayerGoldPass [version=8.1, activityId=1, startTime=1636628400000, dailyTime=1636887600000, weekTime=[GoldPassTask [taskId=2001, tplId=10027, finishConfition=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1300}]}}, status=2], GoldPassTask [taskId=2002, tplId=10030, finishConfition=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=3}]}}, status=2], GoldPassTask [taskId=2003, tplId=10019, finishConfition=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1}]}}, status=0], GoldPassTask [taskId=2004, tplId=10014, finishConfition=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=8}]}}, status=0], GoldPassTask [taskId=2005, tplId=10006, finishConfition=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=41}]}}, status=0], GoldPassTask [taskId=2006, tplId=10002, finishConfition=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=100}]}}, status=1], GoldPassTask [taskId=2007, tplId=10028, finishConfition=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=10}]}}, status=2], GoldPassTask [taskId=2008, tplId=10025, finishConfition=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=120}]}}, status=0]], exp=70, level=10, unlockPass=true, dailyTasks=[GoldPassTask [taskId=1001, tplId=10001, finishConfition=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=250}]}}, status=2], GoldPassTask [taskId=1002, tplId=10009, finishConfition=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[]}}, status=0], GoldPassTask [taskId=1003, tplId=10005, finishConfition=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=10}]}}, status=2], GoldPassTask [taskId=1004, tplId=10024, finishConfition=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=30}]}}, status=2]], weeklyTasks=[GoldPassTask [taskId=2001, tplId=10027, finishConfition=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1300}]}}, status=2], GoldPassTask [taskId=2002, tplId=10030, finishConfition=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=3}]}}, status=2], GoldPassTask [taskId=2003, tplId=10019, finishConfition=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=1}]}}, status=0], GoldPassTask [taskId=2004, tplId=10014, finishConfition=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=8}]}}, status=0], GoldPassTask [taskId=2005, tplId=10006, finishConfition=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=41}]}}, status=0], GoldPassTask [taskId=2006, tplId=10002, finishConfition=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=100}]}}, status=1], GoldPassTask [taskId=2007, tplId=10028, finishConfition=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=10}]}}, status=2], GoldPassTask [taskId=2008, tplId=10025, finishConfition=PlayerTaskCondition{diamonds=0, params=BsonArray{values=[BsonInt32{value=120}]}}, status=0]], baseRewards=[0, 2, 1, 3, 4, 5, 8, 7, 6, 9, 10], passRewards=[2, 1, 3, 4, 5, 8, 7, 6, 9, 10]]
+info-2021-11-24-10-2.log:2021-11-24 10:49:00:191 INFO - GoldPass 玩家：k1eiaa resp：activityMsg { activityId: "1" startTime: 1636628400000 endTime: 1639047600000 } dailyTaskRefreshTime: 1637665200000 weeklyTaskRefreshTime: 1637233200000 exp: 70 level: 10 unlockPass: true dailyTasks { status: 0 taskId: "1001" tplId: "10001" } dailyTasks { status: 0 taskId: "1002" tplId: "10016" } dailyTasks { status: 0 taskId: "1003" tplId: "10005" } dailyTasks { status: 0 taskId: "1004" tplId: "10021" } weeklyTasks { status: 0 taskId: "2001" tplId: "10027" } weeklyTasks { status: 0 taskId: "2002" tplId: "10030" } weeklyTasks { status: 0 taskId: "2003" tplId: "10017" } weeklyTasks { status: 0 taskId: "2004" tplId: "10018" } weeklyTasks { status: 0 taskId: "2005" tplId: "10006" } weeklyTasks { status: 0 taskId: "2006" tplId: "10002" } weeklyTasks { status: 0 taskId: "2007" tplId: "10028" } weeklyTasks { status: 0 taskId: "2008" tplId: "10025" } baseRewards: 0 baseRewards: 2 baseRewards: 1 baseRewards: 3 baseRewards: 4 baseRewards: 5 baseRewards: 8 baseRewards: 7 baseRewards: 6 baseRewards: 9 baseRewards: 10 passRewards: 2 passRewards: 1 passRewards: 3 passRewards: 4 passRewards: 5 passRewards: 8 passRewards: 7 passRewards: 6 passRewards: 9 passRewards: 10
+info-2021-11-24-10-2.log:2021-11-24 10:51:19:409 INFO - Item 玩家：k1eiaa 执行方法：OpenActiveEgg 获得道具：1003 数量：50
+info-2021-11-24-10-2.log:2021-11-24 10:51:19:414 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1003 数量：167 key:1003
+info-2021-11-24-10-2.log:2021-11-24 10:51:19:414 INFO - Item 玩家：k1eiaa 道具：1003 数量：167 ，cd数量：0
+info-2021-11-24-10-2.log:2021-11-24 10:51:19:415 INFO - ActiveEgg 玩家：k1eiaa 开启彩蛋：[1]完成 resp：rewards { itemTemplateId: "1003" count: 50 } rewards { itemTemplateId: "1002" count: 300 } eggs { eggId: 2 type: 1 status: 1 cur: 0 max: 20 } eggs { eggId: 3 type: 1 status: 1 cur: 0 max: 20 } eggs { eggId: 4 type: 3 status: 1 cur: 0 max: 20 } eggs { eggId: 5 type: 1 status: 2 cur: 0 max: 20 cd: 7199999 }
+info-2021-11-24-11-1.log:2021-11-24 11:38:19:719 INFO - Item 玩家：k1eiaa 执行方法：goldPass 获得道具：1003 数量：30
+info-2021-11-24-11-1.log:2021-11-24 11:38:19:720 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1003 数量：197 key:1003
+info-2021-11-24-11-1.log:2021-11-24 11:38:19:720 INFO - Item 玩家：k1eiaa 道具：1003 数量：197 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:507 INFO - Item 玩家：k1eiaa 执行方法：OpenSystemEgg 获得道具：1003 数量：20
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:520 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1003 数量：217 key:1003
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:520 INFO - Item 玩家：k1eiaa 道具：1003 数量：217 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:554 INFO - Item 玩家：k1eiaa 执行方法：OpenSystemEgg 获得道具：1003 数量：20
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:568 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1003 数量：237 key:1003
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:568 INFO - Item 玩家：k1eiaa 道具：1003 数量：237 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:580 INFO - Item 玩家：k1eiaa 执行方法：OpenSystemEgg 获得道具：1003 数量：20
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:593 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1003 数量：257 key:1003
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:593 INFO - Item 玩家：k1eiaa 道具：1003 数量：257 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:602 INFO - Item 玩家：k1eiaa 执行方法：OpenSystemEgg 获得道具：1003 数量：50
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:613 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1003 数量：307 key:1003
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:613 INFO - Item 玩家：k1eiaa 道具：1003 数量：307 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:39:06:626 INFO - ActiveEgg 玩家：k1eiaa 开启系统彩蛋：[6, 7, 8, 9, 10]完成 resp：eggRewards { eggId: 6 rewards { itemTemplateId: "1003" count: 20 } rewards { itemTemplateId: "1002" count: 100 } } eggRewards { eggId: 7 rewards { itemTemplateId: "1002" count: 300 } rewards { itemTemplateId: "22000" count: 2 } } eggRewards { eggId: 8 rewards { itemTemplateId: "1003" count: 20 } rewards { itemTemplateId: "2002" count: 3 } } eggRewards { eggId: 9 rewards { itemTemplateId: "1003" count: 20 } rewards { itemTemplateId: "2003" count: 3 } } eggRewards { eggId: 10 rewards { itemTemplateId: "1003" count: 50 } rewards { itemTemplateId: "1002" count: 300 } }
+info-2021-11-24-11-1.log:2021-11-24 11:39:10:449 INFO - Item 玩家：k1eiaa 执行方法：OpenSystemEgg 获得道具：1003 数量：20
+info-2021-11-24-11-1.log:2021-11-24 11:39:10:462 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1003 数量：327 key:1003
+info-2021-11-24-11-1.log:2021-11-24 11:39:10:463 INFO - Item 玩家：k1eiaa 道具：1003 数量：327 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:39:10:502 INFO - Item 玩家：k1eiaa 执行方法：OpenSystemEgg 获得道具：1003 数量：20
+info-2021-11-24-11-1.log:2021-11-24 11:39:10:514 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1003 数量：347 key:1003
+info-2021-11-24-11-1.log:2021-11-24 11:39:10:515 INFO - Item 玩家：k1eiaa 道具：1003 数量：347 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:39:10:518 INFO - Item 玩家：k1eiaa 执行方法：OpenSystemEgg 获得道具：1003 数量：20
+info-2021-11-24-11-1.log:2021-11-24 11:39:10:530 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1003 数量：367 key:1003
+info-2021-11-24-11-1.log:2021-11-24 11:39:10:530 INFO - Item 玩家：k1eiaa 道具：1003 数量：367 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:39:10:560 INFO - ActiveEgg 玩家：k1eiaa 开启系统彩蛋：[11, 12, 13, 14, 15]完成 resp：eggRewards { eggId: 11 rewards { itemTemplateId: "1003" count: 20 } rewards { itemTemplateId: "15000" count: 1 } } eggRewards { eggId: 12 rewards { itemTemplateId: "1002" count: 300 } rewards { itemTemplateId: "3004" count: 2 } } eggRewards { eggId: 13 rewards { itemTemplateId: "2005" count: 3 } rewards { itemTemplateId: "1003" count: 20 } } eggRewards { eggId: 14 rewards { itemTemplateId: "1003" count: 20 } rewards { itemTemplateId: "2003" count: 3 } } eggRewards { eggId: 15 rewards { itemTemplateId: "1002" count: 300 } rewards { itemTemplateId: "3004" count: 2 } }
+info-2021-11-24-11-1.log:2021-11-24 11:39:15:833 INFO - Item 玩家：k1eiaa 执行方法：OpenSystemEgg 获得道具：1003 数量：20
+info-2021-11-24-11-1.log:2021-11-24 11:39:15:844 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1003 数量：387 key:1003
+info-2021-11-24-11-1.log:2021-11-24 11:39:15:845 INFO - Item 玩家：k1eiaa 道具：1003 数量：387 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:39:15:872 INFO - Item 玩家：k1eiaa 执行方法：OpenSystemEgg 获得道具：1003 数量：20
+info-2021-11-24-11-1.log:2021-11-24 11:39:15:882 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1003 数量：407 key:1003
+info-2021-11-24-11-1.log:2021-11-24 11:39:15:883 INFO - Item 玩家：k1eiaa 道具：1003 数量：407 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:39:15:896 INFO - Item 玩家：k1eiaa 执行方法：OpenSystemEgg 获得道具：1003 数量：20
+info-2021-11-24-11-1.log:2021-11-24 11:39:15:908 INFO - Item 玩家：k1eiaa 执行方法：setItem 道具：1003 数量：427 key:1003
+info-2021-11-24-11-1.log:2021-11-24 11:39:15:909 INFO - Item 玩家：k1eiaa 道具：1003 数量：427 ，cd数量：0
+info-2021-11-24-11-1.log:2021-11-24 11:39:15:939 INFO - ActiveEgg 玩家：k1eiaa 开启系统彩蛋：[16, 17, 18, 19, 20]完成 resp：eggRewards { eggId: 16 rewards { itemTemplateId: "1003" count: 20 } rewards { itemTemplateId: "1002" count: 100 } } eggRewards { eggId: 17 rewards { itemTemplateId: "3009" count: 2 } rewards { itemTemplateId: "1002" count: 300 } } eggRewards { eggId: 18 rewards { itemTemplateId: "1003" count: 20 } rewards { itemTemplateId: "1002" count: 100 } } eggRewards { eggId: 19 rewards { itemTemplateId: "1003" count: 20 } rewards { itemTemplateId: "15000" count: 1 } } eggRewards { eggId: 20 rewards { itemTemplateId: "1002" count: 300 } rewards { itemTemplateId: "3004" count: 2 } }
