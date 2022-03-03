@@ -10,10 +10,10 @@ import os
 
 
 print("start time:",time.asctime(time.localtime()))
-account = "1102"
-level = "1"
+account = "y p p"
+level = ""
 num = 1
-server = '38'
+server = 'qa'
 
 
 
@@ -27,7 +27,7 @@ if server == "38":
     server = "http://dtest.gameyici.com"   
 elif server == "qa":
     server = "https://dqa.hphorse.net"
-table = open("{pat}\\MagicalCreaturesTemplate.csv".format(pat=pat),'r')
+table = open("{pat}\\MagicalCreaturesTemplate.csv".format(pat=pat),'r',encoding="utf-8")
 log_res = login_gm(server)                      #��¼GMƽ̨
 info = get_playerid(account, log_res,server)    #��ȡplayerId
 player = info['playerid']
@@ -40,10 +40,11 @@ for line in table:
     if "{level}".format(level=level) in line_l[3]:
         result = send_gift(line_l[0], num, player,session, account, log_res,server)
         print(line_l[0],line_l[3], num,result)
-send_gift(1001, 10000, player,session, account, log_res,server)
+# send_gift(14001, 1, player,session, account, log_res,server)
 send_gift(2100, 1000, player,session, account, log_res,server)
 send_gift(2008, 1000, player,session, account, log_res,server)
 send_gift(7005, 1000, player,session, account, log_res,server)
+send_gift(27500, 1, player,session, account, log_res,server)
 table.close()
 print("playerid:-{player}\nMission Completed!".format(player=player))
 

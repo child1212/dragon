@@ -6,8 +6,8 @@ from func_dragon import *
 import os
 
 print("start time:",time.asctime(time.localtime()))
-account = "3fd3616289c03b6df77b85dae95dabfc"
-player = "53ij9m"
+account = "1"
+player = "dgqcvr"
 server = "qa"      
 
 

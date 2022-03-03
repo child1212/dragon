@@ -26,3 +26,4 @@ GuideActiveEgg
 GuideUnlockSceneIcon
 GuideDragonMerge
 GuideGoldPass_10_1_2
+GuideGoldPass_12_1

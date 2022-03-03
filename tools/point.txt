@@ -1,6 +1,9 @@
+sceneId
+obstacleId
+activityId
 level
 platform
-playerid
+deviceId
 deviceId
 ts
 version
