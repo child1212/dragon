@@ -1,9 +1,11 @@
-sceneId
-obstacleId
-activityId
+dragonEnergy
+type
+dragonId
+score
+result
 level
 platform
-deviceId
+playerid
 deviceId
 ts
 version

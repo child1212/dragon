@@ -1,0 +1,6 @@
+{
+    "pid":["player1","player2"],
+    "title" : "title",
+    "content" : "text",
+    "reward" : [["itemid1",10],["itemid2",10]]
+}

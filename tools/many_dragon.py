@@ -10,8 +10,8 @@ import os
 
 
 print("start time:",time.asctime(time.localtime()))
-account = "y p p"
-level = ""
+account = "dcxo4c"
+level = "1"
 num = 1
 server = 'qa'
 
@@ -44,7 +44,8 @@ for line in table:
 send_gift(2100, 1000, player,session, account, log_res,server)
 send_gift(2008, 1000, player,session, account, log_res,server)
 send_gift(7005, 1000, player,session, account, log_res,server)
-send_gift(27500, 1, player,session, account, log_res,server)
+# send_gift(27500, 1, player,session, account, log_res,server)
+send_gift(1001, 10000, player,session, account, log_res,server)
 table.close()
 print("playerid:-{player}\nMission Completed!".format(player=player))
 

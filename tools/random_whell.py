@@ -26,3 +26,32 @@ print(sum(ans)/times)
     
 
 # %%
+import random
+times = 1000
+data = {1:25,0:65}
+value_list = []
+for key,value in data.items():
+    value_list += value*[key]
+
+ans = 0
+x = 0
+q = 0
+for i in range(times):
+    reward = 0
+    if q == 3:
+        reward = 1
+        q = 0
+        x += 1
+    else:
+        reward = random.choice(value_list)
+        if reward == 1:
+            q = 0
+        else:
+            q += 1
+        
+    ans += reward
+print(ans)
+
+
+
+# %%
