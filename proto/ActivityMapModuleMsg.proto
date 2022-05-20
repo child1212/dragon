@@ -1,0 +1,83 @@
+syntax = "proto2";
+
+package com.common.msg;
+
+import "CommonTaskModuleMsg.proto";
+import "ItemModuleMsg.proto";
+import "ActivityModuleMsg.proto";
+
+enum ActivityMapModuleMsgSubCommand {
+	//获取地图活动信息
+	ACTIVITYMAPMODULEMSG_SUB_ACTIVITYMAPINFO = 26301;
+	//领取活动积分进度奖励(一次性领取完所有能领的奖励)
+	ACTIVITYMAPMODULEMSG_SUB_TAKEACTIVITYMAPAWARD = 26302;
+	//圣诞树抽奖
+	ACTIVITYMAPMODULEMSG_SUB_CHRISTMASTURNABLEDRAW = 26303;
+	//排行榜奖励
+	ACTIVITYMAPMODULEMSG_SUB_MAPRANKREWARD = 26304;
+}
+
+
+//获取地图活动信息请求
+message ActivityMapInfoRequest {
+	//活动id
+	required string activityId = 1;
+}
+
+//获取地图活动信息响应
+message ActivityMapInfoResponse {
+	//所有存储信息的任务信息
+	repeated CommonTask tasks = 1;
+	//已获取积分
+	required int32 score = 2;
+	//已经奖励的index(有效值从0开始 如果为-1 说明没有奖励过)
+	required int32 awardIndex = 3;
+}
+
+//领取活动积分进度奖励请求
+message TakeActivityMapAwardRequest {
+	//活动id
+	required string activityId = 1;
+}
+
+//领取活动积分进度奖励响应
+message TakeActivityMapAwardResponse {
+	//奖励的道具集合
+	repeated ItemMsg items = 1;
+}
+
+// 圣诞树抽奖请求
+message ChristmasTurnableDrawRequest {
+	// 场景ID
+	optional string sceneId = 1;
+	// 障碍物ID
+	optional string plantId = 2;
+	// 抽奖类型 1.单抽 2.十连 3.五连(情人节)
+	optional int32 drawtype = 3;
+}
+
+// 圣诞树抽奖奖励
+message ChristmasDrawReward {
+	// 道具
+	repeated ItemMsg items = 1;
+}
+
+// 圣诞树抽奖响应
+message ChristmasTurnableDrawResponse {
+	// 圣诞树抽奖奖励
+	repeated ChristmasDrawReward drawRewards = 1;
+	// 再抽N次
+	optional int32 n = 2;
+}
+
+// 排行榜奖励请求
+message MapRankRewardRequest {
+	// 活动ID
+	optional string activityId = 1;
+}
+
+// 排行榜奖励响应
+message MapRankRewardResponse {
+	// 奖励
+	repeated RankRewardMsg rankRewards = 1;
+}

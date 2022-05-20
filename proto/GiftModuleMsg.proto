@@ -5,6 +5,12 @@ enum GiftModuleMsgSubCommand {
 	GIFTMODULEMSG_SUB_GIFTINFO= 25801;
 	//触发弹窗礼包
 	GIFTMODULEMSG_SUB_TRIGGERGIFT= 25802;
+	//领取月卡礼包奖励
+	GIFTMODULEMSG_SUB_TAKEMONTHGIFTAWARD = 25803;
+	//周限定礼包信息同步
+	GIFTMODULEMSG_SUB_WEEKGIFTINFO = 25804;
+	//周限定礼包刷新
+	GIFTMODULEMSG_SUB_WEEKGIFTREFRESH = 25805;
 }
 
 
@@ -37,4 +43,54 @@ message TriggerGiftRequest {
 //触发弹窗礼包响应
 message TriggerGiftResponse {
 
+}
+
+//领取月卡礼包奖励
+message TakeMonthGiftAwardRequest {
+	
+}
+
+//领取月卡礼包奖励响应
+message TakeMonthGiftAwardResponse {
+}
+
+message MonthGiftInfo {
+	//最近一次奖励时间
+	required int64 lastAwardTime = 1;
+	//当日工厂已使用免费加速次数
+	optional int32  factoryFreeUsed= 2;
+	
+}
+
+message WeekGiftMsg {
+	//礼包配置id
+	required string id = 1;
+	//购买次数
+	required int32 boughtCount = 2;
+}
+
+
+//周限定礼包信息同步
+message WeekGiftInfoRequest {
+	
+}
+
+//周限定礼包信息同步响应
+message WeekGiftInfoResponse {
+	//周限定礼包购买信息
+	repeated WeekGiftMsg weekGifts = 1;
+	//周限定礼包下次刷新时间(毫秒)
+	optional int64 refreshTime = 2;
+	//上周是否购买过周礼包
+	optional bool lastWeedBought = 3;
+	//广告用户分层
+	optional string weekGiftAdsGroup = 4;
+}
+
+//周限定礼包刷新
+message WeekGiftRefreshRequest {
+}
+
+//周限定礼包刷新响应
+message WeekGiftRefreshResponse {
 }

@@ -10,6 +10,12 @@ import "MagicalCreatureModuleMsg.proto";
 import "FactoryModuleMsg.proto";
 import "OrderTaskModuleMsg.proto";
 import "SceneModuleMsg.proto";
+import "RechargeModuleMsg.proto";
+import "GiftModuleMsg.proto";
+import "AnimalModuleMsg.proto";
+import "DragonBubbleModuleMsg.proto";
+import "GrowthFundModuleMsg.proto";
+import "PiggyBankModuleMsg.proto";
 
 enum CoreModuleMsgSubCommand {
 	//登录游戏
@@ -17,7 +23,7 @@ enum CoreModuleMsgSubCommand {
 	//进入游戏请求
     COREMODULEMSG_SUB_ENTERGAME = 1002;
     //充值请求
-    COREMODULEMSG_SUB_RECHARGE = 1003;
+    COREMODULEMSG_SUB_RECHARGEOLD = 1003;
 	//新手引导已通过步骤
 	COREMODULEMSG_SUB_GUIDECOMPLETEIDS = 1004;
 	//新手引导通过步骤
@@ -36,10 +42,6 @@ enum CoreModuleMsgSubCommand {
 	COREMODULEMSG_SUB_VERSIONREWARDSINFO = 1011;
 	//领取更新奖励
 	COREMODULEMSG_SUB_GETVERSIONREWARDS = 1012;
-	//领取补偿奖励
-	COREMODULEMSG_SUB_RECIEVECOMPENSATE = 1013;
-	//校验乐逗登录
-	COREMODULEMSG_SUB_AUTHLEDOULOGIN = 1014;
 	//Facebook关注奖励
 	COREMODULEMSG_SUB_FACEBOOKFOLLOWREWARD = 1019;
 	//钻石商店购买
@@ -50,6 +52,29 @@ enum CoreModuleMsgSubCommand {
 	COREMODULEMSG_SUB_SYSTEMOPEN = 1022;
 	// 精力同步
 	COREMODULEMSG_SUB_ENERGY = 1023;
+	// 个人信息
+	COREMODULEMSG_SUB_PLAYERINFO = 1024;
+	// 更改个人信息
+	COREMODULEMSG_SUB_PLAYERINFOMODIFY = 1025;
+	// 领取回归奖励
+	COREMODULEMSG_SUB_BACKREWARD = 1026;
+}
+
+// 个人信息请求
+message PlayerInfoRequest {
+	
+}
+
+// 个人信息响应
+message PlayerInfoResponse {
+	optional string pid = 1;			// 编号pid
+	optional string nickname = 2;		// 昵称
+	optional string avatar = 3;			// 头像
+	repeated string unlockAvatars = 4;	// 已解锁头像
+	optional string frame = 5;			// 头像框
+	repeated string unlockFrames = 6;	// 已解锁头像框
+	repeated string inuseSkins = 7;		// 正在使用的皮肤
+	repeated string unlockSkins = 8;	// 已解锁的皮肤
 }
 
 //玩家资源信息
@@ -92,13 +117,10 @@ message ResourceMsg {
 	optional int32 level = 27;
 	//最近一次消费时间
 	optional int64 lastRechargeTime = 28;
-}
-
-
-// 商店信息
-message ShopInfoMsg {
-	required string shopId = 1;	// 商品ID
-	optional bool first = 2; // 是否首冲
+	//玩家队伍id
+	optional string teamId = 29;
+	//玩家再次加入队伍cd计时起始时间
+	optional int64 joinTeamCdStart = 30;
 }
 
 //登录请求
@@ -131,6 +153,8 @@ message LoginRequest {
 	optional string ledouPlayerId = 13;
 	//idfv
 	optional string idfv = 14;
+	//时区
+	optional int32 timeZone = 15;
 }
 
 // 待选择的玩家信息 8.1.0修改
@@ -175,6 +199,8 @@ message LoginResponse {
 	optional int32 fbFollow = 12;
 	//FB绑定状态(0.未绑定 1.已绑定)
 	optional int32 fbBind = 13;
+	//时区
+	optional int32 timeZone = 14;
 }
 
 // 新手引导已通过步骤请求
@@ -215,8 +241,6 @@ message EnterGameResponse {
 	optional GuideCompleteIdsResponse guideIds = 9;
 	//激励广告信息
 	optional AdsIncentiveInfoResponse adsIncentive = 12;
-	//商店信息
-	repeated ShopInfoMsg shopMsg = 17;
 	// 过期邮件奖励
 	repeated ItemMsg expireMailRewards = 19;
 	// 魔法生物购买次数
@@ -239,10 +263,28 @@ message EnterGameResponse {
 	optional SceneCloseTimeResponse sceneCloseTimeResp = 39;
 	//家园委托信息
 	repeated CommissionMsg commissions = 40;
+	// 玩家个人信息：头像、框、皮肤等
+	optional PlayerInfoResponse playerInfoResp = 41;
+	// 工厂加速次数
+	optional int32 factoryAccelerateCnt = 42;
+	// 是否有回归奖励
+	optional bool backReward = 43;
+	//限时商品信息
+	repeated LimitedTimeProduct limitedTimeProducts = 44;
+	//月卡礼包信息
+	optional MonthGiftInfo monthGiftInfo = 45;
+	//小动物活动信息
+	optional AnimalInfoResponse animalInfo = 46;
+	//龙气泡信息
+	optional DragonBubbleMsg dragonBubble = 47;
+	//成长礼包
+	optional GrowthFundMsg growthFund = 48;
+	//小猪存钱罐
+	optional PiggyBankInfoMsg piggyBankInfo = 49;
 }
 
 //充值请求
-message RechargeRequest {
+message RechargeOldRequest {
 	//订单信息
 	required string orderInfo = 1;
 	//平台类型 0.google 1.ios
@@ -255,7 +297,7 @@ message RechargeRequest {
 	optional string dcInfo = 6;
 }
 
-message RechargeResponse {
+message RechargeOldResponse {
 	//是否是沙箱的订单(这个值有且为true时为沙箱订单)
 	optional bool sandbox = 1;
 }
@@ -398,7 +440,33 @@ message EnergyRequest {
 
 // 精力信息响应
 message EnergyResponse {
-	optional int32 cur = 1;				//当前精力数
+	optional int32 cur = 1;			//当前精力数
 	optional int32 limit = 2;			//精力上限
 	optional int64 energyValueTime = 3;	//上一次领取精力时间(毫秒)
+	optional int64 energyExtraTime= 4;	//上一次计算的剩余未使用时间(毫秒)
+	optional int32 speed= 5;			//精力恢复速度
+}
+
+// 更改个人信息请求
+message PlayerInfoModifyRequest {
+	optional string nicnname = 1;		// 昵称
+	optional string avatar = 2;			// 头像
+	optional string frame = 3;			// 头像框
+	repeated string skin = 4;			// 皮肤
+	
+}
+
+// 更改个人信息响应
+message PlayerInfoModifyResponse {
+	
+}
+
+// 领取回归奖励请求
+message BackRewardRequest {
+	
+}
+
+// 领取回归奖励响应
+message BackRewardResponse {
+	repeated ItemMsg rewards = 1;
 }

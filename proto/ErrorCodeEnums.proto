@@ -80,6 +80,9 @@ enum ErrorCodeEnums {
 	//建筑未到最大等级不能清除
 	BUILDING_CAN_NOT_CLEAN_ON_LEVEL = 3005;
 	
+	//障碍未清理,建筑不能升级
+	OBSTACLE_NOT_BE_CLEARED = 3006;
+	
 	/***************************************签到模块***************************************/
 	//奖励已经领取过
 	DAYREWARD_NOT_REPEATEDGETREWARD = 9001;
@@ -137,6 +140,8 @@ enum ErrorCodeEnums {
 	COMMON_VERSION_ERROR = 13008;
 	// 功能重复开启
 	COMMON_SYSTEM_REPEAT_OPEN = 13009;
+	// 没有回流奖励
+	COMMON_NO_BACK_REWAARD = 13010;
 	/***********************************广告*******************************************/
 	// 广告未开启
 	ADS_CLOSED = 15001;
@@ -154,6 +159,13 @@ enum ErrorCodeEnums {
 	ADS_DIAMOND_COUNT_NOT_ENOUGH = 15007;
 	// 购买气球礼包次数不足
 	ADS_NEW_GIFT_COUNT_NOT_ENOUGH = 15008;
+	/***********************************场景*******************************************/
+	// 场景未关闭
+	SCENE_NOT_CLOSE = 16001;
+	// 场景关闭奖励已领取
+	SCENE_COMPLETE_REWARDED = 16002;
+	// 场景关闭奖励未满足天津
+	SCENE_COMPLETE_REWARD_UNMET = 16003;
 	/***************************************魔法生物******************************************/
 	// 魔法生物数据异常
 	MAGICALCREATURE_DATA_ERROR = 25001;
@@ -167,7 +179,7 @@ enum ErrorCodeEnums {
 	MAGICALCREATURE_CARESS_ERROR = 25005;
 	// 宠物龙奖励时消耗体力不足
 	MAGICALCREATURE_PET_CONSUME_NOENOUGH = 25006;
-	// 挂机产出数量不一致
+	// 神龙没有产出挂机奖励
 	MAGICALCREATURE_HANGUP_PRODUCT = 25007;
 	// 龙数量已达上限
 	MAGICALCREATURE_DRAGON_LIMIT = 25008;
@@ -197,6 +209,22 @@ enum ErrorCodeEnums {
 	MAGICALCREATURE_COMMISSION_NOSELL = 25020;
 	// 家园委托进行中不能重复委托
 	MAGICALCREATURE_COMMISSION_REPEATE = 25021;
+	// 家园委托解锁失败
+	MAGICALCREATURE_COMMISSION_UNLOCK = 25022;
+	// 龙巢没有空间或工作区域未解锁
+	MAGICALCREATURE_NESTFULL_UNLOCK = 25023;
+	// 家园委托重复解锁
+	MAGICALCREATURE_COMMISSION_UNLOCK_REPEATE = 25024;
+	// 当前没有家园委托
+	MAGICALCREATURE_COMMISSION_NOT_EXIST = 25025;
+	//合成龙中有迷宫龙
+	MAGICALCREATURE_HAVE_MAZE_DRAGON = 25026;
+	//当前龙绑定迷宫,无法出售
+	MAGICALCREATURE_MAZE_NOSELL = 25027;
+	//今日挂机产出次数已满
+	MAGICALCREATURE_HANGUP_TODAY_LIMIT = 25028;
+	//总挂机产出次数已满
+	MAGICALCREATURE_HANGUP_TOTAL_LIMIT = 25029;
 	/****************************************工厂******************************************/
 	// 工厂数据异常
 	FACTORY_DATA_ERROR = 25101;
@@ -223,6 +251,10 @@ enum ErrorCodeEnums {
 	TIMEORDERTASK_DATA_ERROR = 25206;
 	// 订单进度奖励未满足完成订单数要求
 	ORDERTASK_PROGRESS_CNTNOENOUGH = 25207;
+	// 海航订单数据错误
+	TIMEORDERTASK_CD_ERROR = 25208;
+	// 生成订单需求物资为空
+	ORDERTASK_NEEDITEM_ORDER = 25209;
 	/****************************************种植******************************************/
 	FARMLAND_DATA_ERROR = 25301;
 	// 未解锁
@@ -253,4 +285,272 @@ enum ErrorCodeEnums {
 	//清除Cd消耗数量错误
 	ALCHEMY_FURNACE_MONEY_COST_ERROR = 26004;
 	/************************************炼金炉结束********************************************************/
+
+	/************************************活动开始********************************************************/
+	//活动未开启
+	ACTIVITY_NOT_OPEN_ERROR = 27001;
+	//活动倒计时尚未结束
+	ACTIVITY_COUNTDOWN_NOT_OVER_ERROR = 27002;
+	//繁育季任务未完成,不能领奖
+	ACTIVITY_BREED_TASK_NOT_FINISH_ERROR = 27003;
+	//繁育季任务数据不存在，不能领奖
+	ACTIVITY_BREED_DATA_NOT_EXIST_ERROR = 27004;
+	//繁育季任务已经领取过奖励
+	ACTIVITY_BREED_ALREADY_TAKE_AWARD_ERROR = 27005;
+	/************************************活动结束********************************************************/
+
+	/************************************活跃彩蛋开始********************************************************/
+	// 彩蛋不存在
+	ACTIVE_EGG_NOT_EXIST = 28001;
+
+	/************************************活跃彩蛋结束********************************************************/
+	
+	/************************************月卡礼包开始 [28101 - 28200] ********************************************************/
+	// 未开通过月卡
+	MONTH_GIFT_NOT_EXIST = 28101;
+	//月卡已经过期
+	MONTH_GIFT_EXPIRED = 28102;
+	//奖励已经领取过了
+	MONTH_GIFT_ALREADY_TAKEN = 28103;
+	/************************************月卡礼包结束********************************************************/
+
+	/************************************稻草人开始[28201-28300]*************************************************************/
+	//稻草人活动已经开启了
+	SCARECROW_ALREADY_OPEN = 28201;
+	//稻草人活动配置不存在
+	SCARECROW_CFG_NOT_EXIST = 28202;
+	//稻草人活动还未开启
+	SCARECROW_NOT_OPEN = 28203;
+	//稻草人活动已经关闭了
+	SCARECROW_ALREADY_CLOSED = 28204;
+	//稻草人累计奖励已经领取过了
+	SCARECROW_AWARD_WAS_TOOK = 28205;
+	//领取累计奖励的顺序错误
+	SCARECROW_AWARD_INDEX_ERROR = 28206;
+	//累计的稻草人数量不足，不能领奖
+	SCARECROW_NOT_ENOUGH_ERROR = 28207;
+	//稻草人已经被清理了
+	SCARECROW_ALREADY_CLEANED = 28208;
+	/************************************稻草人结束[28201-28300]*************************************************************/
+
+	/************************************小动物开始[28301-28400]*************************************************************/
+	//小动物配置不存在
+	ANIMAL_ACTIVITY_ANIMAL_CFG_NOT_FIND = 28301;
+	//小动物活动还未结束
+	ANIMAL_ACTIVITY_LAST_NOT_END = 28302;
+	//小动物活动没有符合条件的配置
+	ANIMAL_ACTIVITY_RANDOM_CFG_NOT_FIND = 28303;
+	//小动物活动未开启
+	ANIMAL_ACTIVITY_NOT_OPEN = 28304;
+	//当前活动遇到小动物数量已达上限
+	ANIMAL_ACTIVITY_DIFFICULTY = 28305;
+	//小动物任务已经结束
+	ANIMAL_TASK_ALREADY_END = 28306;
+	//小动物任务已经提交了
+	ANIMAL_ANIMAL_TASK_ALREADY_SUBMIT = 28307;
+	//小动物任务道具不足
+	ANIMAL_ANIMAL_TASK_ITEM_NOT_ENOUGH = 28308;
+	//已经领取过累计奖励了
+	ANIMAL_ALREADY_TOKEN_INDEX_AWARD = 28309;
+	//要领取的累计奖励不存在
+	ANIMAL_INDEX_AWARD_NOT_EXIST = 28310;
+	//累计完成数量不足，不能领取累计奖励
+	ANIMAL_INDEX_AWARD_FINISHED_NOT_ENOUGH = 28311;
+	//未找到该动物
+	ANIMAL_ANIMAL_NOT_FIND = 28312;
+	//小动物已经出现过了
+	ANIMAL_ANIMAL_ALREADY_APPEARED = 28313;
+	//小动物活动在CD中
+	ANIMAL_ANIMAL_IN_CD_NOW = 28314;
+	/************************************小动物结束[28301-28400]*************************************************************/
+
+	/************************************龙气泡[28401-28500]*************************************************************/
+	//气泡配置不存在
+	DRAGON_BUBBLE_CFG_NOT_FIND = 28401;
+	//气泡生成cd中
+	DRAGON_BUBBLE_CD = 28402;
+	//今日气泡次数已达上限
+	DRAGON_BUBBLE_TODAY_LIMIT = 28403;
+	//气泡未开启 不能补足
+	DRAGON_BUBBLE_NOT_OPEN = 28404;
+	//本轮生成气泡次数已满
+	DRAGON_BUBBLE_SINGLE_LIMIT = 28405;
+	//场上气泡数已达上限
+	DRAGON_BUBBLE_HAVE_LIMIT = 28406;
+	//气泡数剧未找到
+	DRAGON_BUBBLE_DATA_NOT_EXIST = 28407;
+	//没有可以生产气泡的龙
+	DRAGON_BUBBLE_NOT_EXIST_DRAGON = 28408;
+	/************************************龙气泡[28401-28500]*************************************************************/
+
+	/************************************皮肤[28501-28600]*************************************************************/
+	//打造重复解锁
+	SKIN_PRODUCE_REPEATE_UNLOCK = 28501;
+	//皮肤配置不存在
+	SKIN_PRODUCE_CFG_NOT_FIND = 28502;
+	//龙皮肤未解锁
+	SKIN_PRODUCE_DRAGONSKIN_UNLOCK = 28503;
+	//解锁失败还未获得图纸
+	SKIN_PRODUCE_NOOBTAIN_DESIGN = 28504;
+	//皮肤属性和龙属性不匹配
+	SKIN_ATTRIBUTE_NOT_MATCH = 28505;
+	//皮肤已经装备给龙
+	SKIN_HAVE_EQUIP = 28506;
+	//不能在相同位置上装扮多个皮肤
+	SKIN_CAN_NOT_EQUIP_MANY = 28507;
+	/************************************皮肤[28501-28600]*************************************************************/
+
+	/************************************龙迷宫[28601-28700]*************************************************************/
+	//龙迷宫层数配置不存在
+	DRAGON_MAZE_LEVEL_NOT_EXIST = 28601;
+	//龙迷宫数据不存在
+	DRAGON_MAZE_DATA_NOT_EXIST = 28602;
+	//龙迷宫进入层数
+	DRAGON_MAZE_ENTER_LEVEL_ERROR = 28603;
+	//龙迷宫携带有相同的龙
+	DRAGON_MAZE_SAME_DRAGON_ERROR = 28604;
+	//龙迷宫携带龙数量错误
+	DRAGON_MAZE_DRAGON_NUM_ERROR = 28605;
+	//龙迷宫携带的龙不存在
+	DRAGON_MAZE_DRAGON_NOT_EXIST_ERROR = 28606;
+	//龙迷宫购买次数错误
+	DRAGON_MAZE_BUY_COUNT_NOT_ENOUGH = 28607;
+	//龙迷宫购买次数花费钻石数量错误
+	DRAGON_MAZE_BUY_DIAMOND_ERROR = 28608;
+	//龙迷宫道具不足错误
+	DRAGON_MAZE_ITEM_NOT_ENOUGH_ERROR = 28609;
+	//龙迷宫已经结束了
+	DRAGON_MAZE_ALREADY_END = 28610;
+	//龙迷宫商店商品配置不存在
+	DRAGON_MAZE_SHOP_TEMPLATE_NOT_EXIST = 28611;
+	//龙迷宫商店商品未解锁
+	DRAGON_MAZE_SHOP_PRODUCT_NOT_EXIST = 28612;
+	//龙迷宫商品交换次数错误
+	DRAGON_MAZE_PRODUCT_BUY_COUNT_ERROR = 28613;
+	/************************************龙迷宫[28601-28700]*************************************************************/
+
+	
+	/************************************神龙部落[28701-28800]******************************************************** **/
+	//部落人数已满
+	TEAM_FULL_ERROR = 28701;
+	//部落当前不允许加入
+	TEAM_JOIN_NOT_ALLOW_ERROR = 28702;
+	//您等级不符合要求
+	TEAM_LEVEL_NOT_ENOUGH_ERROR = 28703;
+	//部落已解散
+	TEAM_NOT_EXIST_ERROR = 28704;
+	//权限不够
+	TEAM_AUTH_ERROR = 28705;
+	//您当前已有部落
+	TEAM_ALREADY_HAS_ERROR = 28706;
+	// 金钱不足
+	TEAM_MONEY_NOT_ENOUGH_ERROR = 28707;
+	//名字不合法
+	TEAM_NAME_ILLEGAL_ERROR = 28708;
+	//描述不合法
+	TEAM_DESC_ILLEGAL_ERROR = 28709;
+	//等级设置不合法
+	TEAM_LEVEL_ILLEGAL_ERROR = 28710;
+	//icon不合法
+	TEAM_ICON_ILLEGAL_ERROR = 28711;
+	// 请求帮助已达最大次数
+	TEAM_NEED_HELP_MAX_ERROR = 28712;
+	//帮助他人信息已经不存在
+	TEAM_HELP_OTHER_INFO_NOT_EXIST_ERROR = 28713;
+	//帮助他人信息已经被帮助过了
+	TEAM_HELP_OTHER_INFO_ALREADY_HELPED_ERROR = 28714;
+	//帮助他人已达最大次数
+	TEAM_HELP_OTHER_INFO_TO_MAX_ERROR = 28715;
+	//您已不再当前部落了
+	TEAM_NOT_IN_TEAM_ERROR = 28716;
+	// 好友已经有部落了
+	TEAM_PLAYER_ALREADY_HAS_TEAM_ERROR = 28717;
+	//没有帮助的道具
+	TEAM_HELP_OTHER_ITEM_NOT_EXIST_ERROR = 28718;
+	//创建部落消耗金钱数错误
+	TEAM_CREATE_MONEY_COST_ERROR = 28719;
+	//部落名称已存在
+	TEAM_CREATE_NAME_ALREADY_EXIST_ERROR = 28720;
+	//当前在cd中，不能加入队伍
+	TEAM_JOIN_TEAM_IN_CD_ERROR = 28721;
+	//不能帮助自己
+	TEAM_HELP_OTHER_CAN_NOT_HELP_SELF_ERROR = 28722;
+	//部落活动中不能踢出玩家
+	TEAM_KICK_IN_ACTIVITY_ERROR = 28723;
+	//部落活动中不能退出
+	TEAM_QUIT_IN_ACTIVITY_ERROR = 28724;
+	//红包数据不存在
+	REDENVELOPE_DATA_NOT_EXIST_ERROR = 28725;
+	//红包已经领取完成了
+	REDENVELOPE_ALREADY_FINISHED_ERROR = 28726;
+	//已经领取了红包
+	REDENVELOPE_ALREADY_TOKEN_ERROR = 28727;
+	/************************************神龙部落[28701-28800]****************************************************************/
+
+	/************************************周限定礼包开始 [28801 - 28900] *****************************************/
+	// 未激活周卡礼包
+	WEEK_GIFT_NOT_EXIST = 28801;
+	//周卡礼包未到刷新时间
+	WEEK_GIFT_NOT_REFRESHTIME = 28802;
+	//周卡礼包未达到开启条件
+	WEEK_GIFT_NOT_OPENCONDITION = 28803;
+	//周卡礼包超过购买次数
+	WEEK_GIFT_BUY_LIMIT = 28804;
+	/************************************周限定礼包结束**********************************************************/
+	/************************************跑酷活动开始 [28901 - 29000] *****************************************/
+	//没有生命了
+	PARKOUR_NO_LIFE = 28901;
+	//没有可领取的奖励
+	PARKOUR_NO_REWARD = 28902;
+	//购买生命消耗错误
+	PARKOUR_CONSUME_ERROR = 28903;
+	//不在跑酷游戏中不能结束关卡
+	PARKOUR_NOT_INGAME = 28904;
+	//活动已结束不记奖励
+	PARKOUR_IS_END = 28905;
+	//跑酷获得道具超出上限
+	PARKOUR_UPPER_LIMIT = 28906;
+	//排行奖励已领取
+	PARKOUR_RANK_REWARDED = 28907;
+	/************************************跑酷活动结束**********************************************************/
+	/************************************成长基金开始 [29001- 29100] *****************************************/
+	//未购买成长基金
+	GROWTHFUND_NO_DATA = 29001;
+	//重复领取奖励
+	GROWTHFUND_REPEATED_REWARD = 29002;
+	/************************************成长基金结束**********************************************************/
+
+	/************************************聊天开始 [29101- 29200] *****************************************/
+	//聊天字符过长
+	CHAT_CONTENT_TOO_LENGTH = 29101;
+	/************************************聊天结束 [29101- 29200] *****************************************/
+
+	/************************************公会活动开始 [29201- 29300] *****************************************/
+	// 玩家版本小于最低活动版本
+	PLAYER_VERSION_BEFORE_LOWEST_VERSION = 29201;
+	// 已有玩家在冒险中
+	TEAM_MAP_ADV_ING = 29202;
+	//有正在进行中的任务
+	TEAM_MAP_HAS_TASK = 29203;
+	//玩家冒险已结束
+	TEAM_MAP_ADV_END = 29204;
+	//没有正在进行的任务
+	TEAM_MAP_NO_TASK = 29205;
+	// 加入公会时间超过领奖时间
+	TEAM_MAP_JOIN_TEAM_AFTER_REWARD_TIME = 29206;
+	//未完成所有任务,不能切花地图
+	TEAM_MAP_NOT_FINISH_ALL_TASK = 29207;
+	/************************************公会活动结束 [29201- 29300] *****************************************/
+
+	/************************************小猪存钱罐开始 [29301- 29400] *****************************************/
+	//小猪存钱罐重复开启
+	PIGGYBANK_REPEATED_START = 29301;
+	//小猪存钱罐未购买不能升档
+	PIGGYBANK_UPDATE_NORECHARGE = 29302;
+	//小猪存钱罐已是最后一档不能升档
+	PIGGYBANK_UPDATE_MAX = 29303;
+	//小猪存钱罐已经过期不能升档
+	PIGGYBANK_UPDATE_END = 29304;
+	/************************************小猪存钱罐结束 [29301- 29400] *****************************************/
+
 }

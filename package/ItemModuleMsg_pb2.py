@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x13ItemModuleMsg.proto\x12\x0e\x63om.common.msg\"A\n\x07ItemMsg\x12\x16\n\x0eitemTemplateId\x18\x01 \x01(\t\x12\r\n\x05\x63ount\x18\x02 \x01(\x05\x12\x0f\n\x07\x63\x64Times\x18\x03 \x03(\x03\"\x1f\n\x0fItemListRequest\x12\x0c\n\x04\x66lag\x18\x01 \x01(\x05\":\n\x10ItemListResponse\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"I\n\x10ItemChangeNotify\x12\x0e\n\x06isAdds\x18\x01 \x03(\x08\x12%\n\x04msgs\x18\x02 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"=\n\x0eSubItemRequest\x12\x17\n\x0fitemTemplateIds\x18\x01 \x03(\t\x12\x12\n\nitemCounts\x18\x02 \x03(\x05\"$\n\x0fSubItemResponse\x12\x11\n\tisSuccess\x18\x01 \x01(\x08\"j\n\x0eUseItemRequest\x12\x16\n\x0eitemTemplateId\x18\x01 \x01(\t\x12\r\n\x05\x63ount\x18\x02 \x01(\x05\x12\r\n\x05param\x18\x03 \x01(\t\x12\x11\n\tlevelType\x18\x04 \x01(\x05\x12\x0f\n\x07useType\x18\x05 \x01(\x05\"w\n\x0fUseItemResponse\x12\x16\n\x0eitemTemplateId\x18\x01 \x01(\t\x12\x10\n\x08\x65ntityId\x18\x02 \x01(\t\x12\x12\n\ncreatureId\x18\x03 \x01(\x03\x12&\n\x05items\x18\x04 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"n\n\x13\x45xchangeItemRequest\x12\x16\n\x0eitemTemplateId\x18\x01 \x01(\t\x12\r\n\x05\x63ount\x18\x02 \x01(\x05\x12\r\n\x05isUse\x18\x03 \x01(\x08\x12\x11\n\tlevelType\x18\x04 \x01(\x05\x12\x0e\n\x06source\x18\x05 \x01(\x05\"\x16\n\x14\x45xchangeItemResponse\"\'\n\x10\x46indItemsRequest\x12\x13\n\x0btemplateIds\x18\x01 \x03(\t\">\n\x11\x46indItemsResponse\x12)\n\x08itemMsgs\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"!\n\x13\x43ollectItemsRequest\x12\n\n\x02id\x18\x01 \x02(\t\"\x16\n\x14\x43ollectItemsResponse\"K\n\x17SupplementEnergyRequest\x12\x0c\n\x04mark\x18\x01 \x02(\x05\x12\x10\n\x08\x64iamonds\x18\x02 \x02(\x05\x12\x10\n\x08\x65nergies\x18\x03 \x02(\x05\"L\n\x18SupplementEnergyResponse\x12\x0c\n\x04mark\x18\x01 \x02(\x05\x12\x10\n\x08\x64iamonds\x18\x02 \x02(\x05\x12\x10\n\x08\x65nergies\x18\x03 \x02(\x05\"4\n\x0e\x44ragonSkillMsg\x12\x0f\n\x07skillId\x18\x01 \x01(\t\x12\x11\n\tskillTime\x18\x02 \x01(\x03\"\xb5\x02\n\x12MagicalCreatureMsg\x12\x12\n\ncreatureId\x18\x01 \x02(\x03\x12\x12\n\ntemplateId\x18\x02 \x02(\t\x12\x18\n\x10physicalStrength\x18\x03 \x01(\x05\x12\x1f\n\x17getPhysicalStrengthTime\x18\x04 \x01(\x03\x12\x10\n\x08nestType\x18\x05 \x01(\x05\x12#\n\x1blastCollectHangUpRewardTime\x18\x06 \x01(\x03\x12\x18\n\x10repletionEndTime\x18\x07 \x01(\x03\x12\x11\n\trewardCnt\x18\x08 \x01(\x05\x12\x17\n\x0f\x66irstRewardTime\x18\t \x01(\x03\x12\x0f\n\x07\x65xplore\x18\n \x01(\x08\x12.\n\x06skills\x18\x0b \x03(\x0b\x32\x1e.com.common.msg.DragonSkillMsg\"G\n\x0eSupplementItem\x12\x16\n\x0eitemTemplateId\x18\x01 \x01(\t\x12\r\n\x05\x63ount\x18\x02 \x01(\x05\x12\x0e\n\x06source\x18\x03 \x01(\x05\"F\n\x15SupplementItemRequest\x12-\n\x05items\x18\x01 \x03(\x0b\x32\x1e.com.common.msg.SupplementItem\"\x18\n\x16SupplementItemResponse*\xd9\x02\n\x17ItemModuleMsgSubCommand\x12\x1f\n\x1aITEMMODULEMSG_SUB_ITEMLIST\x10\xd1\x0f\x12\x1e\n\x19ITEMMODULEMSG_SUB_USEITEM\x10\xd2\x0f\x12\x1e\n\x19ITEMMODULEMSG_SUB_SUBITEM\x10\xd3\x0f\x12!\n\x1cITEMMODULEMSG_SUB_ITEMCHANGE\x10\xd4\x0f\x12#\n\x1eITEMMODULEMSG_SUB_EXCHANGEITEM\x10\xd5\x0f\x12 \n\x1bITEMMODULEMSG_SUB_FINDITEMS\x10\xd7\x0f\x12#\n\x1eITEMMODULEMSG_SUB_COLLECTITEMS\x10\xd8\x0f\x12\'\n\"ITEMMODULEMSG_SUB_SUPPLEMENTENERGY\x10\xd9\x0f\x12%\n ITEMMODULEMSG_SUB_SUPPLEMENTITEM\x10\xda\x0f'
+  serialized_pb=b'\n\x13ItemModuleMsg.proto\x12\x0e\x63om.common.msg\"A\n\x07ItemMsg\x12\x16\n\x0eitemTemplateId\x18\x01 \x01(\t\x12\r\n\x05\x63ount\x18\x02 \x01(\x05\x12\x0f\n\x07\x63\x64Times\x18\x03 \x03(\x03\"\x1f\n\x0fItemListRequest\x12\x0c\n\x04\x66lag\x18\x01 \x01(\x05\":\n\x10ItemListResponse\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"I\n\x10ItemChangeNotify\x12\x0e\n\x06isAdds\x18\x01 \x03(\x08\x12%\n\x04msgs\x18\x02 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"=\n\x0eSubItemRequest\x12\x17\n\x0fitemTemplateIds\x18\x01 \x03(\t\x12\x12\n\nitemCounts\x18\x02 \x03(\x05\"$\n\x0fSubItemResponse\x12\x11\n\tisSuccess\x18\x01 \x01(\x08\"j\n\x0eUseItemRequest\x12\x16\n\x0eitemTemplateId\x18\x01 \x01(\t\x12\r\n\x05\x63ount\x18\x02 \x01(\x05\x12\r\n\x05param\x18\x03 \x01(\t\x12\x11\n\tlevelType\x18\x04 \x01(\x05\x12\x0f\n\x07useType\x18\x05 \x01(\x05\"w\n\x0fUseItemResponse\x12\x16\n\x0eitemTemplateId\x18\x01 \x01(\t\x12\x10\n\x08\x65ntityId\x18\x02 \x01(\t\x12\x12\n\ncreatureId\x18\x03 \x01(\x03\x12&\n\x05items\x18\x04 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"n\n\x13\x45xchangeItemRequest\x12\x16\n\x0eitemTemplateId\x18\x01 \x01(\t\x12\r\n\x05\x63ount\x18\x02 \x01(\x05\x12\r\n\x05isUse\x18\x03 \x01(\x08\x12\x11\n\tlevelType\x18\x04 \x01(\x05\x12\x0e\n\x06source\x18\x05 \x01(\x05\"\x16\n\x14\x45xchangeItemResponse\"\'\n\x10\x46indItemsRequest\x12\x13\n\x0btemplateIds\x18\x01 \x03(\t\">\n\x11\x46indItemsResponse\x12)\n\x08itemMsgs\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"!\n\x13\x43ollectItemsRequest\x12\n\n\x02id\x18\x01 \x02(\t\"\x16\n\x14\x43ollectItemsResponse\"K\n\x17SupplementEnergyRequest\x12\x0c\n\x04mark\x18\x01 \x02(\x05\x12\x10\n\x08\x64iamonds\x18\x02 \x02(\x05\x12\x10\n\x08\x65nergies\x18\x03 \x02(\x05\"L\n\x18SupplementEnergyResponse\x12\x0c\n\x04mark\x18\x01 \x02(\x05\x12\x10\n\x08\x64iamonds\x18\x02 \x02(\x05\x12\x10\n\x08\x65nergies\x18\x03 \x02(\x05\"4\n\x0e\x44ragonSkillMsg\x12\x0f\n\x07skillId\x18\x01 \x01(\t\x12\x11\n\tskillTime\x18\x02 \x01(\x03\"j\n\rDragonSkinMsg\x12\x0e\n\x06skinId\x18\x01 \x01(\x03\x12\r\n\x05tplId\x18\x02 \x01(\t\x12\x12\n\ncreatureId\x18\x03 \x01(\x03\x12\x13\n\x0b\x65nergyLimit\x18\x04 \x01(\x05\x12\x11\n\tequipTime\x18\x05 \x01(\x03\"\xd7\x03\n\x12MagicalCreatureMsg\x12\x12\n\ncreatureId\x18\x01 \x02(\x03\x12\x12\n\ntemplateId\x18\x02 \x02(\t\x12\x18\n\x10physicalStrength\x18\x03 \x01(\x05\x12\x1f\n\x17getPhysicalStrengthTime\x18\x04 \x01(\x03\x12\x10\n\x08nestType\x18\x05 \x01(\x05\x12#\n\x1blastCollectHangUpRewardTime\x18\x06 \x01(\x03\x12\x18\n\x10repletionEndTime\x18\x07 \x01(\x03\x12\x11\n\trewardCnt\x18\x08 \x01(\x05\x12\x17\n\x0f\x66irstRewardTime\x18\t \x01(\x03\x12\x0f\n\x07\x65xplore\x18\n \x01(\x08\x12.\n\x06skills\x18\x0b \x03(\x0b\x32\x1e.com.common.msg.DragonSkillMsg\x12!\n\x19lastCrownHangUpRewardTime\x18\x0c \x01(\x03\x12,\n\x05skins\x18\r \x03(\x0b\x32\x1d.com.common.msg.DragonSkinMsg\x12\x13\n\x0bmazeEndTime\x18\x0e \x01(\x03\x12\x1c\n\x14todayHangUpRewardCnt\x18\x0f \x01(\x05\x12\x1c\n\x14totalHangUpRewardCnt\x18\x10 \x01(\x05\"G\n\x0eSupplementItem\x12\x16\n\x0eitemTemplateId\x18\x01 \x01(\t\x12\r\n\x05\x63ount\x18\x02 \x01(\x05\x12\x0e\n\x06source\x18\x03 \x01(\x05\"F\n\x15SupplementItemRequest\x12-\n\x05items\x18\x01 \x03(\x0b\x32\x1e.com.common.msg.SupplementItem\"\x18\n\x16SupplementItemResponse*\xd9\x02\n\x17ItemModuleMsgSubCommand\x12\x1f\n\x1aITEMMODULEMSG_SUB_ITEMLIST\x10\xd1\x0f\x12\x1e\n\x19ITEMMODULEMSG_SUB_USEITEM\x10\xd2\x0f\x12\x1e\n\x19ITEMMODULEMSG_SUB_SUBITEM\x10\xd3\x0f\x12!\n\x1cITEMMODULEMSG_SUB_ITEMCHANGE\x10\xd4\x0f\x12#\n\x1eITEMMODULEMSG_SUB_EXCHANGEITEM\x10\xd5\x0f\x12 \n\x1bITEMMODULEMSG_SUB_FINDITEMS\x10\xd7\x0f\x12#\n\x1eITEMMODULEMSG_SUB_COLLECTITEMS\x10\xd8\x0f\x12\'\n\"ITEMMODULEMSG_SUB_SUPPLEMENTENERGY\x10\xd9\x0f\x12%\n ITEMMODULEMSG_SUB_SUPPLEMENTITEM\x10\xda\x0f'
 )
 
 _ITEMMODULEMSGSUBCOMMAND = _descriptor.EnumDescriptor(
@@ -78,8 +78,8 @@ _ITEMMODULEMSGSUBCOMMAND = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1597,
-  serialized_end=1942,
+  serialized_start=1867,
+  serialized_end=2212,
 )
 _sym_db.RegisterEnumDescriptor(_ITEMMODULEMSGSUBCOMMAND)
 
@@ -766,6 +766,66 @@ _DRAGONSKILLMSG = _descriptor.Descriptor(
 )
 
 
+_DRAGONSKINMSG = _descriptor.Descriptor(
+  name='DragonSkinMsg',
+  full_name='com.common.msg.DragonSkinMsg',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='skinId', full_name='com.common.msg.DragonSkinMsg.skinId', index=0,
+      number=1, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='tplId', full_name='com.common.msg.DragonSkinMsg.tplId', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='creatureId', full_name='com.common.msg.DragonSkinMsg.creatureId', index=2,
+      number=3, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='energyLimit', full_name='com.common.msg.DragonSkinMsg.energyLimit', index=3,
+      number=4, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='equipTime', full_name='com.common.msg.DragonSkinMsg.equipTime', index=4,
+      number=5, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1113,
+  serialized_end=1219,
+)
+
+
 _MAGICALCREATUREMSG = _descriptor.Descriptor(
   name='MagicalCreatureMsg',
   full_name='com.common.msg.MagicalCreatureMsg',
@@ -851,6 +911,41 @@ _MAGICALCREATUREMSG = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='lastCrownHangUpRewardTime', full_name='com.common.msg.MagicalCreatureMsg.lastCrownHangUpRewardTime', index=11,
+      number=12, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='skins', full_name='com.common.msg.MagicalCreatureMsg.skins', index=12,
+      number=13, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='mazeEndTime', full_name='com.common.msg.MagicalCreatureMsg.mazeEndTime', index=13,
+      number=14, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='todayHangUpRewardCnt', full_name='com.common.msg.MagicalCreatureMsg.todayHangUpRewardCnt', index=14,
+      number=15, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='totalHangUpRewardCnt', full_name='com.common.msg.MagicalCreatureMsg.totalHangUpRewardCnt', index=15,
+      number=16, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -863,8 +958,8 @@ _MAGICALCREATUREMSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1114,
-  serialized_end=1423,
+  serialized_start=1222,
+  serialized_end=1693,
 )
 
 
@@ -909,8 +1004,8 @@ _SUPPLEMENTITEM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1425,
-  serialized_end=1496,
+  serialized_start=1695,
+  serialized_end=1766,
 )
 
 
@@ -941,8 +1036,8 @@ _SUPPLEMENTITEMREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1498,
-  serialized_end=1568,
+  serialized_start=1768,
+  serialized_end=1838,
 )
 
 
@@ -966,8 +1061,8 @@ _SUPPLEMENTITEMRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1570,
-  serialized_end=1594,
+  serialized_start=1840,
+  serialized_end=1864,
 )
 
 _ITEMLISTRESPONSE.fields_by_name['items'].message_type = _ITEMMSG
@@ -975,6 +1070,7 @@ _ITEMCHANGENOTIFY.fields_by_name['msgs'].message_type = _ITEMMSG
 _USEITEMRESPONSE.fields_by_name['items'].message_type = _ITEMMSG
 _FINDITEMSRESPONSE.fields_by_name['itemMsgs'].message_type = _ITEMMSG
 _MAGICALCREATUREMSG.fields_by_name['skills'].message_type = _DRAGONSKILLMSG
+_MAGICALCREATUREMSG.fields_by_name['skins'].message_type = _DRAGONSKINMSG
 _SUPPLEMENTITEMREQUEST.fields_by_name['items'].message_type = _SUPPLEMENTITEM
 DESCRIPTOR.message_types_by_name['ItemMsg'] = _ITEMMSG
 DESCRIPTOR.message_types_by_name['ItemListRequest'] = _ITEMLISTREQUEST
@@ -993,6 +1089,7 @@ DESCRIPTOR.message_types_by_name['CollectItemsResponse'] = _COLLECTITEMSRESPONSE
 DESCRIPTOR.message_types_by_name['SupplementEnergyRequest'] = _SUPPLEMENTENERGYREQUEST
 DESCRIPTOR.message_types_by_name['SupplementEnergyResponse'] = _SUPPLEMENTENERGYRESPONSE
 DESCRIPTOR.message_types_by_name['DragonSkillMsg'] = _DRAGONSKILLMSG
+DESCRIPTOR.message_types_by_name['DragonSkinMsg'] = _DRAGONSKINMSG
 DESCRIPTOR.message_types_by_name['MagicalCreatureMsg'] = _MAGICALCREATUREMSG
 DESCRIPTOR.message_types_by_name['SupplementItem'] = _SUPPLEMENTITEM
 DESCRIPTOR.message_types_by_name['SupplementItemRequest'] = _SUPPLEMENTITEMREQUEST
@@ -1118,6 +1215,13 @@ DragonSkillMsg = _reflection.GeneratedProtocolMessageType('DragonSkillMsg', (_me
   # @@protoc_insertion_point(class_scope:com.common.msg.DragonSkillMsg)
   })
 _sym_db.RegisterMessage(DragonSkillMsg)
+
+DragonSkinMsg = _reflection.GeneratedProtocolMessageType('DragonSkinMsg', (_message.Message,), {
+  'DESCRIPTOR' : _DRAGONSKINMSG,
+  '__module__' : 'ItemModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.DragonSkinMsg)
+  })
+_sym_db.RegisterMessage(DragonSkinMsg)
 
 MagicalCreatureMsg = _reflection.GeneratedProtocolMessageType('MagicalCreatureMsg', (_message.Message,), {
   'DESCRIPTOR' : _MAGICALCREATUREMSG,

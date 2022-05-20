@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x17RechargeModuleMsg.proto\x12\x0e\x63om.common.msg\"$\n\x0fRechargeRequest\x12\x11\n\torderInfo\x18\x01 \x01(\t\"\x12\n\x10RechargeResponse*B\n\x1bRechargeModuleMsgSubCommand\x12#\n\x1eRECHARGEMODULEMSG_SUB_RECHARGE\x10\xb9\x17'
+  serialized_pb=b'\n\x17RechargeModuleMsg.proto\x12\x0e\x63om.common.msg\"$\n\x0fRechargeRequest\x12\x11\n\torderInfo\x18\x01 \x01(\t\"\x12\n\x10RechargeResponse\"/\n\tSubscribe\x12\x11\n\tproductId\x18\x01 \x02(\t\x12\x0f\n\x07\x65xpired\x18\x02 \x02(\x03\"E\n\x14SubscribeInfoRequest\x12-\n\nsubscribes\x18\x01 \x03(\x0b\x32\x19.com.common.msg.Subscribe\"a\n\x15SubscribeInfoResponse\x12\x19\n\x11\x65xpiredSubscribes\x18\x01 \x03(\t\x12-\n\nsubscribes\x18\x02 \x03(\x0b\x32\x19.com.common.msg.Subscribe\",\n\x17SubscribeExpiredRequest\x12\x11\n\tproductId\x18\x01 \x02(\t\"\x1a\n\x18SubscribeExpiredResponse\"N\n\x12LimitedTimeProduct\x12\x13\n\x0bproductType\x18\x01 \x02(\x05\x12\x12\n\nexpiryTime\x18\x02 \x02(\x03\x12\x0f\n\x07process\x18\x03 \x01(\x05\"7\n ProcessLimitedTimeProductRequest\x12\x13\n\x0bproductType\x18\x01 \x02(\x05\"#\n!ProcessLimitedTimeProductResponse\"\x15\n\x13\x41\x46ReportListRequest\"*\n\x14\x41\x46ReportListResponse\x12\x12\n\neventnames\x18\x01 \x03(\t\",\n\x16\x41\x46ReportConfirmRequest\x12\x12\n\neventnames\x18\x01 \x03(\t\"\x19\n\x17\x41\x46ReportConfirmResponse*\xa4\x02\n\x1bRechargeModuleMsgSubCommand\x12#\n\x1eRECHARGEMODULEMSG_SUB_RECHARGE\x10\xb9\x17\x12(\n#RECHARGEMODULEMSG_SUB_SUBSCRIBEINFO\x10\xba\x17\x12+\n&RECHARGEMODULEMSG_SUB_SUBSCRIBEEXPIRED\x10\xbb\x17\x12\x34\n/RECHARGEMODULEMSG_SUB_PROCESSLIMITEDTIMEPRODUCT\x10\xbc\x17\x12\'\n\"RECHARGEMODULEMSG_SUB_AFREPORTLIST\x10\xbd\x17\x12*\n%RECHARGEMODULEMSG_SUB_AFREPORTCONFIRM\x10\xbe\x17'
 )
 
 _RECHARGEMODULEMSGSUBCOMMAND = _descriptor.EnumDescriptor(
@@ -35,16 +35,46 @@ _RECHARGEMODULEMSGSUBCOMMAND = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='RECHARGEMODULEMSG_SUB_SUBSCRIBEINFO', index=1, number=3002,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='RECHARGEMODULEMSG_SUB_SUBSCRIBEEXPIRED', index=2, number=3003,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='RECHARGEMODULEMSG_SUB_PROCESSLIMITEDTIMEPRODUCT', index=3, number=3004,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='RECHARGEMODULEMSG_SUB_AFREPORTLIST', index=4, number=3005,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='RECHARGEMODULEMSG_SUB_AFREPORTCONFIRM', index=5, number=3006,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=101,
-  serialized_end=167,
+  serialized_start=709,
+  serialized_end=1001,
 )
 _sym_db.RegisterEnumDescriptor(_RECHARGEMODULEMSGSUBCOMMAND)
 
 RechargeModuleMsgSubCommand = enum_type_wrapper.EnumTypeWrapper(_RECHARGEMODULEMSGSUBCOMMAND)
 RECHARGEMODULEMSG_SUB_RECHARGE = 3001
+RECHARGEMODULEMSG_SUB_SUBSCRIBEINFO = 3002
+RECHARGEMODULEMSG_SUB_SUBSCRIBEEXPIRED = 3003
+RECHARGEMODULEMSG_SUB_PROCESSLIMITEDTIMEPRODUCT = 3004
+RECHARGEMODULEMSG_SUB_AFREPORTLIST = 3005
+RECHARGEMODULEMSG_SUB_AFREPORTCONFIRM = 3006
 
 
 
@@ -104,8 +134,406 @@ _RECHARGERESPONSE = _descriptor.Descriptor(
   serialized_end=99,
 )
 
+
+_SUBSCRIBE = _descriptor.Descriptor(
+  name='Subscribe',
+  full_name='com.common.msg.Subscribe',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='productId', full_name='com.common.msg.Subscribe.productId', index=0,
+      number=1, type=9, cpp_type=9, label=2,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='expired', full_name='com.common.msg.Subscribe.expired', index=1,
+      number=2, type=3, cpp_type=2, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=101,
+  serialized_end=148,
+)
+
+
+_SUBSCRIBEINFOREQUEST = _descriptor.Descriptor(
+  name='SubscribeInfoRequest',
+  full_name='com.common.msg.SubscribeInfoRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='subscribes', full_name='com.common.msg.SubscribeInfoRequest.subscribes', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=150,
+  serialized_end=219,
+)
+
+
+_SUBSCRIBEINFORESPONSE = _descriptor.Descriptor(
+  name='SubscribeInfoResponse',
+  full_name='com.common.msg.SubscribeInfoResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='expiredSubscribes', full_name='com.common.msg.SubscribeInfoResponse.expiredSubscribes', index=0,
+      number=1, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='subscribes', full_name='com.common.msg.SubscribeInfoResponse.subscribes', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=221,
+  serialized_end=318,
+)
+
+
+_SUBSCRIBEEXPIREDREQUEST = _descriptor.Descriptor(
+  name='SubscribeExpiredRequest',
+  full_name='com.common.msg.SubscribeExpiredRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='productId', full_name='com.common.msg.SubscribeExpiredRequest.productId', index=0,
+      number=1, type=9, cpp_type=9, label=2,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=320,
+  serialized_end=364,
+)
+
+
+_SUBSCRIBEEXPIREDRESPONSE = _descriptor.Descriptor(
+  name='SubscribeExpiredResponse',
+  full_name='com.common.msg.SubscribeExpiredResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=366,
+  serialized_end=392,
+)
+
+
+_LIMITEDTIMEPRODUCT = _descriptor.Descriptor(
+  name='LimitedTimeProduct',
+  full_name='com.common.msg.LimitedTimeProduct',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='productType', full_name='com.common.msg.LimitedTimeProduct.productType', index=0,
+      number=1, type=5, cpp_type=1, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='expiryTime', full_name='com.common.msg.LimitedTimeProduct.expiryTime', index=1,
+      number=2, type=3, cpp_type=2, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='process', full_name='com.common.msg.LimitedTimeProduct.process', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=394,
+  serialized_end=472,
+)
+
+
+_PROCESSLIMITEDTIMEPRODUCTREQUEST = _descriptor.Descriptor(
+  name='ProcessLimitedTimeProductRequest',
+  full_name='com.common.msg.ProcessLimitedTimeProductRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='productType', full_name='com.common.msg.ProcessLimitedTimeProductRequest.productType', index=0,
+      number=1, type=5, cpp_type=1, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=474,
+  serialized_end=529,
+)
+
+
+_PROCESSLIMITEDTIMEPRODUCTRESPONSE = _descriptor.Descriptor(
+  name='ProcessLimitedTimeProductResponse',
+  full_name='com.common.msg.ProcessLimitedTimeProductResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=531,
+  serialized_end=566,
+)
+
+
+_AFREPORTLISTREQUEST = _descriptor.Descriptor(
+  name='AFReportListRequest',
+  full_name='com.common.msg.AFReportListRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=568,
+  serialized_end=589,
+)
+
+
+_AFREPORTLISTRESPONSE = _descriptor.Descriptor(
+  name='AFReportListResponse',
+  full_name='com.common.msg.AFReportListResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='eventnames', full_name='com.common.msg.AFReportListResponse.eventnames', index=0,
+      number=1, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=591,
+  serialized_end=633,
+)
+
+
+_AFREPORTCONFIRMREQUEST = _descriptor.Descriptor(
+  name='AFReportConfirmRequest',
+  full_name='com.common.msg.AFReportConfirmRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='eventnames', full_name='com.common.msg.AFReportConfirmRequest.eventnames', index=0,
+      number=1, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=635,
+  serialized_end=679,
+)
+
+
+_AFREPORTCONFIRMRESPONSE = _descriptor.Descriptor(
+  name='AFReportConfirmResponse',
+  full_name='com.common.msg.AFReportConfirmResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=681,
+  serialized_end=706,
+)
+
+_SUBSCRIBEINFOREQUEST.fields_by_name['subscribes'].message_type = _SUBSCRIBE
+_SUBSCRIBEINFORESPONSE.fields_by_name['subscribes'].message_type = _SUBSCRIBE
 DESCRIPTOR.message_types_by_name['RechargeRequest'] = _RECHARGEREQUEST
 DESCRIPTOR.message_types_by_name['RechargeResponse'] = _RECHARGERESPONSE
+DESCRIPTOR.message_types_by_name['Subscribe'] = _SUBSCRIBE
+DESCRIPTOR.message_types_by_name['SubscribeInfoRequest'] = _SUBSCRIBEINFOREQUEST
+DESCRIPTOR.message_types_by_name['SubscribeInfoResponse'] = _SUBSCRIBEINFORESPONSE
+DESCRIPTOR.message_types_by_name['SubscribeExpiredRequest'] = _SUBSCRIBEEXPIREDREQUEST
+DESCRIPTOR.message_types_by_name['SubscribeExpiredResponse'] = _SUBSCRIBEEXPIREDRESPONSE
+DESCRIPTOR.message_types_by_name['LimitedTimeProduct'] = _LIMITEDTIMEPRODUCT
+DESCRIPTOR.message_types_by_name['ProcessLimitedTimeProductRequest'] = _PROCESSLIMITEDTIMEPRODUCTREQUEST
+DESCRIPTOR.message_types_by_name['ProcessLimitedTimeProductResponse'] = _PROCESSLIMITEDTIMEPRODUCTRESPONSE
+DESCRIPTOR.message_types_by_name['AFReportListRequest'] = _AFREPORTLISTREQUEST
+DESCRIPTOR.message_types_by_name['AFReportListResponse'] = _AFREPORTLISTRESPONSE
+DESCRIPTOR.message_types_by_name['AFReportConfirmRequest'] = _AFREPORTCONFIRMREQUEST
+DESCRIPTOR.message_types_by_name['AFReportConfirmResponse'] = _AFREPORTCONFIRMRESPONSE
 DESCRIPTOR.enum_types_by_name['RechargeModuleMsgSubCommand'] = _RECHARGEMODULEMSGSUBCOMMAND
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -122,6 +550,90 @@ RechargeResponse = _reflection.GeneratedProtocolMessageType('RechargeResponse', 
   # @@protoc_insertion_point(class_scope:com.common.msg.RechargeResponse)
   })
 _sym_db.RegisterMessage(RechargeResponse)
+
+Subscribe = _reflection.GeneratedProtocolMessageType('Subscribe', (_message.Message,), {
+  'DESCRIPTOR' : _SUBSCRIBE,
+  '__module__' : 'RechargeModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.Subscribe)
+  })
+_sym_db.RegisterMessage(Subscribe)
+
+SubscribeInfoRequest = _reflection.GeneratedProtocolMessageType('SubscribeInfoRequest', (_message.Message,), {
+  'DESCRIPTOR' : _SUBSCRIBEINFOREQUEST,
+  '__module__' : 'RechargeModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.SubscribeInfoRequest)
+  })
+_sym_db.RegisterMessage(SubscribeInfoRequest)
+
+SubscribeInfoResponse = _reflection.GeneratedProtocolMessageType('SubscribeInfoResponse', (_message.Message,), {
+  'DESCRIPTOR' : _SUBSCRIBEINFORESPONSE,
+  '__module__' : 'RechargeModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.SubscribeInfoResponse)
+  })
+_sym_db.RegisterMessage(SubscribeInfoResponse)
+
+SubscribeExpiredRequest = _reflection.GeneratedProtocolMessageType('SubscribeExpiredRequest', (_message.Message,), {
+  'DESCRIPTOR' : _SUBSCRIBEEXPIREDREQUEST,
+  '__module__' : 'RechargeModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.SubscribeExpiredRequest)
+  })
+_sym_db.RegisterMessage(SubscribeExpiredRequest)
+
+SubscribeExpiredResponse = _reflection.GeneratedProtocolMessageType('SubscribeExpiredResponse', (_message.Message,), {
+  'DESCRIPTOR' : _SUBSCRIBEEXPIREDRESPONSE,
+  '__module__' : 'RechargeModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.SubscribeExpiredResponse)
+  })
+_sym_db.RegisterMessage(SubscribeExpiredResponse)
+
+LimitedTimeProduct = _reflection.GeneratedProtocolMessageType('LimitedTimeProduct', (_message.Message,), {
+  'DESCRIPTOR' : _LIMITEDTIMEPRODUCT,
+  '__module__' : 'RechargeModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.LimitedTimeProduct)
+  })
+_sym_db.RegisterMessage(LimitedTimeProduct)
+
+ProcessLimitedTimeProductRequest = _reflection.GeneratedProtocolMessageType('ProcessLimitedTimeProductRequest', (_message.Message,), {
+  'DESCRIPTOR' : _PROCESSLIMITEDTIMEPRODUCTREQUEST,
+  '__module__' : 'RechargeModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.ProcessLimitedTimeProductRequest)
+  })
+_sym_db.RegisterMessage(ProcessLimitedTimeProductRequest)
+
+ProcessLimitedTimeProductResponse = _reflection.GeneratedProtocolMessageType('ProcessLimitedTimeProductResponse', (_message.Message,), {
+  'DESCRIPTOR' : _PROCESSLIMITEDTIMEPRODUCTRESPONSE,
+  '__module__' : 'RechargeModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.ProcessLimitedTimeProductResponse)
+  })
+_sym_db.RegisterMessage(ProcessLimitedTimeProductResponse)
+
+AFReportListRequest = _reflection.GeneratedProtocolMessageType('AFReportListRequest', (_message.Message,), {
+  'DESCRIPTOR' : _AFREPORTLISTREQUEST,
+  '__module__' : 'RechargeModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.AFReportListRequest)
+  })
+_sym_db.RegisterMessage(AFReportListRequest)
+
+AFReportListResponse = _reflection.GeneratedProtocolMessageType('AFReportListResponse', (_message.Message,), {
+  'DESCRIPTOR' : _AFREPORTLISTRESPONSE,
+  '__module__' : 'RechargeModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.AFReportListResponse)
+  })
+_sym_db.RegisterMessage(AFReportListResponse)
+
+AFReportConfirmRequest = _reflection.GeneratedProtocolMessageType('AFReportConfirmRequest', (_message.Message,), {
+  'DESCRIPTOR' : _AFREPORTCONFIRMREQUEST,
+  '__module__' : 'RechargeModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.AFReportConfirmRequest)
+  })
+_sym_db.RegisterMessage(AFReportConfirmRequest)
+
+AFReportConfirmResponse = _reflection.GeneratedProtocolMessageType('AFReportConfirmResponse', (_message.Message,), {
+  'DESCRIPTOR' : _AFREPORTCONFIRMRESPONSE,
+  '__module__' : 'RechargeModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.AFReportConfirmResponse)
+  })
+_sym_db.RegisterMessage(AFReportConfirmResponse)
 
 
 # @@protoc_insertion_point(module_scope)

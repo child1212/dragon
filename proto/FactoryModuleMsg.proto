@@ -73,6 +73,8 @@ message ReceiveFactoryProduceResponse {
 message AccelerateProduceRequest {
 	required string factoryId = 1;
 	required int32 price = 2;
+	// 看广告加速
+	optional bool ads = 3;
 }
 
 // 加速生产 响应

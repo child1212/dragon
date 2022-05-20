@@ -1,0 +1,25 @@
+syntax = "proto2";
+package com.common.msg;
+
+enum GrowthFundModuleMsgSubCommand {
+	// 领取奖励
+	GROWTHFUNDMODULEMSG_SUB_RECEIVEREWARD = 27201;
+}
+
+message GrowthFundMsg {
+	// 商品id
+	optional string shopId = 1;
+	// 已领取Id
+	repeated string rewardIds = 2;
+}
+
+// 领取奖励 请求
+message ReceiveRewardRequest {
+	// -1全部领取; 其他配置id单独领取
+	required string rewardId = 1;
+}
+
+// 领取奖励 响应
+message ReceiveRewardResponse {
+
+}

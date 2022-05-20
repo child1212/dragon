@@ -1,192 +1,156 @@
 syntax = "proto2";
 package com.common.msg;
-import "FriendsModuleMsg.proto";
-enum TeamErrorCodeEnum{
-	//公会人数已满
-	TEAM_FULL_ERROR = 20001;
-	//公会当前不允许加入
-	TEAM_JOIN_NOT_ALLOW_ERROR = 20002;
-	//您等级不符合要求
-	TEAM_LEVEL_NOT_ENOUGH_ERROR = 20003;
-	//公会已解散
-	TEAM_NOT_EXIST_ERROR = 20004;
-	//权限不够
-	TEAM_AUTH_ERROR = 20005;
-	//您当前已有公会
-	TEAM_ALREADY_HAS_ERROR = 20006;
-	// 金钱不足
-	TEAM_MONEY_NOT_ENOUGH_ERROR = 20007;
-	//名字不合法
-	TEAM_NAME_ILLEGAL_ERROR = 20008;
-	//描述不合法
-	TEAM_DESC_ILLEGAL_ERROR = 20009;
-	//等级设置不合法
-	TEAM_LEVEL_ILLEGAL_ERROR = 20010;
-	//icon不合法
-	TEAM_ICON_ILLEGAL_ERROR = 20011;
-	// 请求帮助已达最大次数
-	TEAM_NEED_HELP_MAX_ERROR = 20012;
-	//帮助他人信息已经不存在
-	TEAM_HELP_OTHER_INFO_NOT_EXIST_ERROR = 20013;
-	//帮助他人信息已经被帮助过了
-	TEAM_HELP_OTHER_INFO_ALREADY_HELPED_ERROR = 20014;
-	//帮助他人已达最大次数
-	TEAM_HELP_OTHER_INFO_TO_MAX_ERROR = 20015;
-	//您已不再当前公会了
-	TEAM_NOT_IN_TEAM_ERROR = 20016;
-	// 好友已经有公会了
-	TEAM_PLAYER_ALREADY_HAS_TEAM_ERROR = 20017;
-	//没有帮助的道具
-	TEAM_HELP_OTHER_ITEM_NOT_EXIST_ERROR = 20018;
-	//创建公会消耗金钱数错误
-	TEAM_CREATE_MONEY_COST_ERROR = 20019;
-}
+
 enum TeamModuleMsgSubCommand {
-	// 创建公会
-	TEAMMODULEMSG_SUB_CREATETEAM = 20001;
-	// 加入公会
-	TEAMMODULEMSG_SUB_JOINTEAM = 20002;
-	// 离开公会
-	TEAMMODULEMSG_SUB_QUITTEAM = 20003;
-	// 公会踢人
-	TEAMMODULEMSG_SUB_KICKPLAYER = 20004;
-	// 公会排行
-	TEAMMODULEMSG_SUB_TEAMRANK= 20005;
-	// 获取公会信息
-	TEAMMODULEMSG_SUB_TEAMINFO= 20006;
-	// 获取公会成员
-	TEAMMODULEMSG_SUB_TEAMLISTMEMBER= 20007;
-	// 更新公会信息
-	TEAMMODULEMSG_SUB_UPDATETEAM= 20008;
-	// 请求公会推荐列表
-	TEAMMODULEMSG_SUB_TEAMRECOMMENDLIST= 20009;
-	//公会中好友列表请求
-	TEAMMODULEMSG_SUB_TEAMFRIENDLIST= 20010;
-	//请求公会帮助请求(请求别人帮助)
-	TEAMMODULEMSG_SUB_TEAMNEEDHELP= 20011;
-	//帮助公会其他玩家请求
-	TEAMMODULEMSG_SUB_TEAMHELPOTHER= 20012;
-	//请求公会帮助列表信息
-	TEAMMODULEMSG_SUB_TEAMNEEDHELPLIST= 20013;
-	//邀请别人加入公会请求
-	TEAMMODULEMSG_SUB_TEAMINVITEOTHER= 20014;
+	// 创建部落
+	TEAMMODULEMSG_SUB_CREATETEAM = 27001;
+	// 加入部落
+	TEAMMODULEMSG_SUB_JOINTEAM = 27002;
+	// 离开部落
+	TEAMMODULEMSG_SUB_QUITTEAM = 27003;
+	// 部落踢人
+	TEAMMODULEMSG_SUB_KICKPLAYER = 27004;
+	// 部落排行
+	TEAMMODULEMSG_SUB_TEAMRANK= 27005;
+	// 获取部落信息
+	TEAMMODULEMSG_SUB_TEAMINFO= 27006;
+	// 获取部落成员
+	TEAMMODULEMSG_SUB_TEAMLISTMEMBER= 27007;
+	// 更新部落信息
+	TEAMMODULEMSG_SUB_UPDATETEAM= 27008;
+	// 请求部落推荐列表
+	TEAMMODULEMSG_SUB_TEAMRECOMMENDLIST= 27009;
+	//部落中好友列表请求
+	//TEAMMODULEMSG_SUB_TEAMFRIENDLIST= 27010;
+	//请求部落帮助请求(请求别人帮助)
+	TEAMMODULEMSG_SUB_TEAMNEEDHELP= 27011;
+	//帮助部落其他玩家请求
+	TEAMMODULEMSG_SUB_TEAMHELPOTHER= 27012;
+	//请求部落帮助列表信息
+	TEAMMODULEMSG_SUB_TEAMNEEDHELPLIST= 27013;
+	//邀请别人加入部落请求
+	//TEAMMODULEMSG_SUB_TEAMINVITEOTHER= 27014;
 	//删除被邀请列表请求
-	TEAMMODULEMSG_SUB_TEAMCLEARBEINVITED= 20015;
+	//TEAMMODULEMSG_SUB_TEAMCLEARBEINVITED= 27015;
 	//请求其他玩家赠与物品通知（切场景请求一次 然后每隔一段时间请求一次 暂定10分钟）
-	TEAMMODULEMSG_SUB_TEAMOTHERHELPNOTIFY= 20016;
+	TEAMMODULEMSG_SUB_TEAMOTHERHELPNOTIFY= 27016;
+	//请求搜索部落
+	TEAMMODULEMSG_SUB_SEARCHTEAM= 27017;
+	//请求查询别人帮助物品
+	TEAMMODULEMSG_SUB_SEARCHOTHERHELPITEM= 27018;
+	//领取红包消息
+	TEAMMODULEMSG_SUB_TAKEREDENVELOPE = 27019;
 }
 
-// 创建公会消息
+// 创建部落消息
 message CreateTeamRequest {
-	// 公会名称不能大于15字符
+	// 部落名称不能大于15字符
 	optional string name = 1;
-	// 公会描述不能大于100字符
+	// 部落描述不能大于100字符
 	optional string desc = 2;
-	// 公会状态 0:关闭  1:打开
+	// 部落状态 0:关闭  1:打开
 	optional int32 state = 3;
-	// 公会需求等级
+	// 部落需求等级
 	optional int32 needLv = 4;
-	// 公会icon
+	// 部落icon
 	optional string icon = 5;
 	//花费钻石数
 	optional int32 cost = 6;
 }
 
-// 创建公会消息响应
+// 创建部落消息响应
 message CreateTeamResponse {
-	// 公会id
+	// 部落id
 	required string id = 1;
-	// 花费钻石数
-	optional int32 cost = 2;
 }
 
-// 加入公会消息
+// 加入部落消息
 message JoinTeamRequest {
-	// 公会id
+	// 部落id
 	required string id = 1;
 	// 是否有邀请的玩家(删除邀请列表中的邀请)
-	optional string invitePid = 2;
+	//optional string invitePid = 2;
 }
 
-// 加入公会消息响应
+// 加入部落消息响应
 message JoinTeamResponse {
-	//0 成功 其他为错误码  20001:公会人数已满  20002:公会当前不允许加入 20003:您等级不符合要求  20004:公会已解散
+	//0 成功 其他为错误码  26901:部落人数已满  26902:部落当前不允许加入 26903:您等级不符合要求  26904:部落已解散
 	required int32 result = 1;
 }
 
-// 退出公会消息
+// 退出部落消息
 message QuitTeamRequest {
-	// 公会id
+	// 部落id
 	required string id = 1;
 }
 
-// 退出公会消息响应
+// 退出部落消息响应
 message QuitTeamResponse {
 }
 
-// 公会踢人消息
+// 部落踢人消息
 message KickPlayerRequest {
 	required string pid = 1;
-	//公会id
+	//部落id
 	required string id = 2;
 }
 
-// 公会踢人消息响应
+// 部落踢人消息响应
 message KickPlayerResponse {
-	// 0 成功 其他为错误码  20005:权限不够
+	// 0 成功 其他为错误码  26905:权限不够
 	required int32 result = 1;
 }
 
-// 公会排行消息
+// 部落排行消息
 message TeamRankRequest {
 }
 
 message TeamRankUnit {
-	// 公会id
+	// 部落id
 	required string id = 1;
-	// 公会名称
+	// 部落名称
 	optional string name = 2;
-	// 公会人数
+	// 部落人数
 	optional int32 count = 3;
-	// 公会图标
+	// 部落图标
 	optional string icon = 4;
-	// 公会score
+	// 部落score
 	optional int64 score = 5;
 }
 
-// 公会排行消息响应
+// 部落排行消息响应
 message TeamRankResponse {
-	// 公会排行信息
+	// 部落排行信息
 	repeated  TeamRankUnit teamRankUnits = 1;
 }
 
 
-// 公会信息请求
+// 部落信息请求
 message TeamInfoRequest {
-	// 公会id
+	// 部落id
 	required string id = 1;
-	// 是否查看自己公会 
+	// 是否查看自己部落 
 	optional bool selfFlag = 2;
 }
 
 message TeamBaseInfo {
-	// 公会id
+	// 部落id
 	required string id = 1;
-	// 公会名称
+	// 部落名称
 	optional string name = 2;
-	// 公会人数
+	// 部落人数
 	optional int32 count = 3;
-	// 公会图标
+	// 部落图标
 	optional string icon = 4;
-	// 公会score
+	// 部落score
 	optional int64 score = 5;
-	// 公会拥有者
+	// 部落拥有者
 	optional string ownerId = 6;
-	//公会需求等级
+	//部落需求等级
 	optional int32 needLv= 7;
-	//公会desc
+	//部落desc
 	optional string desc = 8;
-	// 公会状态
+	// 部落状态
 	optional int32 state = 9;
 }
 
@@ -202,169 +166,161 @@ message TeamMemberInfo {
 	optional int32 status = 6;
 	//离线时间戳（玩家不在线并且此值 > 0 有效）
 	optional int64 offlineTime = 7;
-	//繁荣度等级
-	optional int32 prosperityLevel = 8;
-	//是否为vip
-	optional bool isVip = 9;
+	//玩家所有龙力上限之和
+	optional int32 maxDragonStrength = 8;
+	//头像框
+	optional string frame = 9;
 }
 
-// 公会信息请求响应 
+// 部落信息请求响应 
 message TeamInfoResponse {
-	// 公会信息  公会不存在不返回此值
+	// 部落信息  部落不存在不返回此值
 	optional  TeamBaseInfo teamBaseInfo = 1;
-	// 公会成员信息
+	// 部落成员信息
 	repeated TeamMemberInfo teamMemberInfos = 2;
+	// 加入部落时间
+	optional int64 joinTime = 3;
 }
 
 
-// 公会成员请求(保留这个请求 以防以后 TeamBaseInfo和 TeamMemberInfos 要分开用)
+// 部落成员请求(保留这个请求 以防以后 TeamBaseInfo和 TeamMemberInfos 要分开用)
 message TeamListMemberRequest {
-	// 公会id
+	// 部落id
 	required string id = 1;
 }
 
-// 公会成员请求响应 
+// 部落成员请求响应 
 message TeamListMemberResponse {
-	// 公会信息  公会不存在不返回此值
+	// 部落信息  部落不存在不返回此值
 	repeated  TeamMemberInfo  teamMemberInfos= 1;
 }
 
 
-// 更新公会请求
+// 更新部落请求
 message UpdateTeamRequest {
-	// 公会id
+	// 部落id
 	required string id = 1;
-	// 公会描述不能大于100字符
+	// 部落描述不能大于100字符
 	optional string desc = 2;
-	// 公会状态 0:关闭  1:打开
+	// 部落状态 0:关闭  1:打开
 	optional int32 state = 3;
-	// 公会需求等级
+	// 部落需求等级
 	optional int32 needLv = 4;
-	// 公会icon
+	// 部落icon
 	optional string icon = 5;
 }
 
-//  更新公会请求响应 
+//  更新部落请求响应 
 message UpdateTeamResponse {
 }
 
-// 请求公会推荐列表
+// 请求部落推荐列表
 message TeamRecommendListRequest {
 }
 
 message TeamRecommendUnit {
-	// 公会id
+	// 部落id
 	required string id = 1;
-	// 公会名称
+	// 部落名称
 	optional string name = 2;
-	// 公会人数
+	// 部落人数
 	optional int32 count = 3;
-	// 公会图标
+	// 部落图标
 	optional string icon = 4;
-	//公会积分
+	//部落积分
 	optional int32 score = 5;
 }
 
-// 请求公会推荐列表响应
+// 请求部落推荐列表响应
 message TeamRecommendListResponse {
-	//公会推荐信息
+	//部落推荐信息
 	repeated TeamRecommendUnit teamRecommendUnits = 1;
 }
 
-//邀请别人加入公会请求
-message TeamInviteOtherRequest{
+//邀请别人加入部落请求
+//message TeamInviteOtherRequest{
 	//其他玩家id
-	required string otherId =1;
-	//邀请加入的公会Id
-	required string teamId =2;
-}
+	//required string otherId =1;
+	//邀请加入的部落Id
+	//required string teamId =2;
+//}
 
-//邀请别人加入公会响应
-message TeamInviteOtherResponse {
-}
+//邀请别人加入部落响应
+//message TeamInviteOtherResponse {
+//}
 
 //删除被邀请列表请求
-message TeamClearBeInvitedRequest {
-	//其他邀请我人公会玩家id 不传递将清空列表
-	optional string otherId =1;
-}
+//message TeamClearBeInvitedRequest {
+	//其他邀请我人部落玩家id 不传递将清空列表
+//	optional string otherId =1;
+//}
 
 //删除被邀请列表响应
-message TeamClearBeInvitedResponse {
-}
+//message TeamClearBeInvitedResponse {
+//}
 
 
-// 请求公会好友列表请求 （最好能缓存10分钟,缓存过期后或者有玩家操作后(如同意好友申请，删除好友等对列表有明显影响的操作)删除缓存再请求）
-message TeamFriendListRequest {
-}
+// 请求部落好友列表请求 （最好能缓存10分钟,缓存过期后或者有玩家操作后(如同意好友申请，删除好友等对列表有明显影响的操作)删除缓存再请求）
+//message TeamFriendListRequest {
+//}
 
-//公会好友单元
-message TeamFriendUnit {
+//部落好友单元
+//message TeamFriendUnit {
 	//玩家简单数据
-	optional PlayerSimpleInfoMsg playerSimpleInfo = 1;
-	//公会Id
-	optional string teamId = 2;
-	//公会名字
-	optional string teamName = 3;
-	//公会icon
-	optional string teamIcon = 4;
-}
+//	optional PlayerSimpleInfoMsg playerSimpleInfo = 1;
+	//部落Id
+//	optional string teamId = 2;
+	//部落名字
+//	optional string teamName = 3;
+	//部落icon
+//	optional string teamIcon = 4;
+//}
 
 //被邀请单元
-message BeInvitedUnit {
+//message BeInvitedUnit {
 	//邀请者id
-	optional string pId = 1;
+//	optional string pId = 1;
 	//邀请的teamId
-	optional string teamId = 2;
-	//公会名称
-	optional string teamName = 3;
-	//公会icon
-	optional string teamIcon = 4;
-}
+//	optional string teamId = 2;
+	//部落名称
+//	optional string teamName = 3;
+	//部落icon
+//	optional string teamIcon = 4;
+//}
 
-// 请求公会好友列表响应
-message TeamFriendListResponse {
-	//公会好友列表
-	repeated TeamFriendUnit teamFriendUnits = 1;
-	//公会邀请其他人列表(自己有公会)
-	repeated string inviteOtherLists = 2;
-	//被邀请列表(没有公会)
-	repeated BeInvitedUnit beInvitedUnits = 3;
-}
+// 请求部落好友列表响应
+//message TeamFriendListResponse {
+	//部落好友列表
+//	repeated TeamFriendUnit teamFriendUnits = 1;
+	//部落邀请其他人列表(自己有部落)
+//	repeated string inviteOtherLists = 2;
+	//被邀请列表(没有部落)
+//	repeated BeInvitedUnit beInvitedUnits = 3;
+//}
 
 
-// 请求公会帮助请求(请求别人帮助)
+// 请求部落帮助请求(请求别人帮助)
 message TeamNeedHelpRequest{
-	//公会id
+	//部落id
 	required string teamId =1;
-	//具体建筑配置id(必须为一级建筑)
+	//具体道具配置id
 	required string templateId = 2;
 }
 
-// 请求公会帮助响应
+// 请求部落帮助响应
 message TeamNeedHelpResponse{
+	required int32 indexId = 1;
 }
 
-// 帮助公会其他玩家请求
+// 帮助部落其他玩家请求
 message TeamHelpOtherRequest {
-	//公会id
+	//部落id
 	required string teamId =1;
 	//具体某条的索引id
 	required int32 indexId = 2;
 }
 
-// 帮助公会其他玩家响应
-message TeamHelpOtherResponse {
-}
-
-
-// 请求公会帮助列表信息
-message TeamNeedHelpListRequest{
-	//公会id
-	required string teamId =1;
-}
-
-message HelpPlayerInfo {
+message PlayerInfo {
 	//玩家id
 	required string pid = 1;
 	//玩家名字
@@ -375,19 +331,41 @@ message HelpPlayerInfo {
 	optional string account = 4;
 	//等级
 	optional int32 level = 5;
-	//是否为vip
-	optional bool isVip = 6;
+	//头像框
+	optional string frame = 6;
+}
+
+message HelpPlayerInfo {
+	//玩家id
+	required PlayerInfo playerInfo = 1;
+	//帮助总数量
+	optional int32 count = 2;
+}
+
+// 帮助部落其他玩家响应
+message TeamHelpOtherResponse {
+	//返回结果 0 成功 其他值:失败原因的错误码
+	optional int32 ret = 1;
+	//失败时同步当前已经帮过此条的玩家集合
+	repeated HelpPlayerInfo helpers = 2;
+}
+
+
+// 请求部落帮助列表信息
+message TeamNeedHelpListRequest{
+	//部落id
+	required string teamId =1;
 }
 
 message TeamHelpInfo {
 	//需要帮助的玩家信息
-	required HelpPlayerInfo needHelpPlayer = 1;
+	required PlayerInfo needHelpPlayer = 1;
 	//需要帮助的道具id
 	required string templateId = 2;
 	//需要帮助请求的时间
 	required int64 reqTime = 3;
 	//给予帮助的玩家信息(可能没有)
-	optional HelpPlayerInfo helper = 4;
+	repeated HelpPlayerInfo helpers = 4;
 	//标识此条的索引id
 	optional int32 indexId = 5;
 }
@@ -401,17 +379,17 @@ message TeamMemberRecordInfo {
 	required int64 reqTime = 3;
 }
 
-// 请求公会帮助列表信息响应
+// 请求部落帮助列表信息响应
 message TeamNeedHelpListResponse {
-	//公会帮助列表
+	//部落帮助列表
 	repeated TeamHelpInfo teamHelpInfos =1;
-	//帮助他人次数
+	//当前可以使用的帮助他人次数(修改为和玩家体力恢复一样的逻辑)
 	required  int32 helpOtherCount = 2;
-	//今日首次帮助他人时间
+	//上一次恢复帮助的时间戳
 	required int64 helpOtherTime = 3;
-	//寻求帮助次数
+	//当前可以使用的寻求帮助次数(修改为和玩家体力恢复一样的逻辑)
 	required int32 needHelpCount = 4;
-	//寻求帮助时间
+	//上一次恢复寻求帮助时间戳
 	required int64 needHelpTime = 5;
 	//队伍玩家记录
 	repeated TeamMemberRecordInfo recordInfos = 6;
@@ -421,24 +399,62 @@ message TeamNeedHelpListResponse {
 message TeamOtherHelpNotifyRequest {
 }
 
+message HelpItem{
+	optional string templateId = 1;
+	optional int32 count = 2;
+	optional int32 indexId = 3;
+}
+
 message HelpNotifyInfo {
 	//玩家id
 	required string pId = 1;
 	//玩家名字
 	required string name = 2;
 	//赠与的物品id
-	repeated string templateIds= 3;
+	repeated HelpItem helpItems= 3;
 	//头像图标
 	optional string icon = 4;
 	//头像图标辅助(fb头像)
 	optional string account = 5;
-	//服务器是否增加了道具 0:未增加 1:增加
-	optional int32 addItem = 6;
-	//是否为vip
-	optional bool isVip = 7;
+	//头像框
+	optional string frame = 6;
 }
 
 //请求其他玩家赠与物品通知返回
 message TeamOtherHelpNotifyResponse {
 	repeated HelpNotifyInfo helpNotifyInfos = 1;
+}
+
+//请求搜索部落
+message SearchTeamRequest {
+	//部落id或名称
+	required string idOrName = 1;
+}
+
+//请求搜索部落返回
+message SearchTeamResponse {
+	//部落搜索信息
+	repeated TeamRecommendUnit teams = 1;
+}
+
+//请求查询别人帮助物品
+message SearchOtherHelpItemRequest{
+} 
+//返回查询别人帮助物品
+message SearchOtherHelpItemResponse{
+	//ret:0 没有待领取的别人帮助物品    1:有
+	optional int32 ret = 1;
+}
+
+//请求领取红包
+message TakeRedEnvelopeRequest {
+	//红包唯一id
+	optional string uuid = 1;
+}
+
+message TakeRedEnvelopeResponse {
+	//获得的道具
+	optional string itemId = 1;
+	//道具的数量
+	optional int32 count = 2;
 }

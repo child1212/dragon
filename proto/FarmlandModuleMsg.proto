@@ -72,6 +72,7 @@ message ReceiveCropResponse {
 message AccelerateGrowMsg {
 	required string sceneId = 1;
 	required string plantId = 2;
+	optional int64 accTime = 3;
 }
 
 //加速 请求

@@ -12,7 +12,6 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-import FriendsModuleMsg_pb2 as FriendsModuleMsg__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -21,121 +20,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x13TeamModuleMsg.proto\x12\x0e\x63om.common.msg\x1a\x16\x46riendsModuleMsg.proto\"j\n\x11\x43reateTeamRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04\x64\x65sc\x18\x02 \x01(\t\x12\r\n\x05state\x18\x03 \x01(\x05\x12\x0e\n\x06needLv\x18\x04 \x01(\x05\x12\x0c\n\x04icon\x18\x05 \x01(\t\x12\x0c\n\x04\x63ost\x18\x06 \x01(\x05\".\n\x12\x43reateTeamResponse\x12\n\n\x02id\x18\x01 \x02(\t\x12\x0c\n\x04\x63ost\x18\x02 \x01(\x05\"0\n\x0fJoinTeamRequest\x12\n\n\x02id\x18\x01 \x02(\t\x12\x11\n\tinvitePid\x18\x02 \x01(\t\"\"\n\x10JoinTeamResponse\x12\x0e\n\x06result\x18\x01 \x02(\x05\"\x1d\n\x0fQuitTeamRequest\x12\n\n\x02id\x18\x01 \x02(\t\"\x12\n\x10QuitTeamResponse\",\n\x11KickPlayerRequest\x12\x0b\n\x03pid\x18\x01 \x02(\t\x12\n\n\x02id\x18\x02 \x02(\t\"$\n\x12KickPlayerResponse\x12\x0e\n\x06result\x18\x01 \x02(\x05\"\x11\n\x0fTeamRankRequest\"T\n\x0cTeamRankUnit\x12\n\n\x02id\x18\x01 \x02(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\r\n\x05\x63ount\x18\x03 \x01(\x05\x12\x0c\n\x04icon\x18\x04 \x01(\t\x12\r\n\x05score\x18\x05 \x01(\x03\"G\n\x10TeamRankResponse\x12\x33\n\rteamRankUnits\x18\x01 \x03(\x0b\x32\x1c.com.common.msg.TeamRankUnit\"/\n\x0fTeamInfoRequest\x12\n\n\x02id\x18\x01 \x02(\t\x12\x10\n\x08selfFlag\x18\x02 \x01(\x08\"\x92\x01\n\x0cTeamBaseInfo\x12\n\n\x02id\x18\x01 \x02(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\r\n\x05\x63ount\x18\x03 \x01(\x05\x12\x0c\n\x04icon\x18\x04 \x01(\t\x12\r\n\x05score\x18\x05 \x01(\x03\x12\x0f\n\x07ownerId\x18\x06 \x01(\t\x12\x0e\n\x06needLv\x18\x07 \x01(\x05\x12\x0c\n\x04\x64\x65sc\x18\x08 \x01(\t\x12\r\n\x05state\x18\t \x01(\x05\"\xa7\x01\n\x0eTeamMemberInfo\x12\x0b\n\x03pId\x18\x01 \x02(\t\x12\r\n\x05pName\x18\x02 \x02(\t\x12\x0b\n\x03pLv\x18\x03 \x02(\x05\x12\x0c\n\x04icon\x18\x04 \x02(\t\x12\x11\n\tfbAccount\x18\x05 \x01(\t\x12\x0e\n\x06status\x18\x06 \x01(\x05\x12\x13\n\x0bofflineTime\x18\x07 \x01(\x03\x12\x17\n\x0fprosperityLevel\x18\x08 \x01(\x05\x12\r\n\x05isVip\x18\t \x01(\x08\"\x7f\n\x10TeamInfoResponse\x12\x32\n\x0cteamBaseInfo\x18\x01 \x01(\x0b\x32\x1c.com.common.msg.TeamBaseInfo\x12\x37\n\x0fteamMemberInfos\x18\x02 \x03(\x0b\x32\x1e.com.common.msg.TeamMemberInfo\"#\n\x15TeamListMemberRequest\x12\n\n\x02id\x18\x01 \x02(\t\"Q\n\x16TeamListMemberResponse\x12\x37\n\x0fteamMemberInfos\x18\x01 \x03(\x0b\x32\x1e.com.common.msg.TeamMemberInfo\"Z\n\x11UpdateTeamRequest\x12\n\n\x02id\x18\x01 \x02(\t\x12\x0c\n\x04\x64\x65sc\x18\x02 \x01(\t\x12\r\n\x05state\x18\x03 \x01(\x05\x12\x0e\n\x06needLv\x18\x04 \x01(\x05\x12\x0c\n\x04icon\x18\x05 \x01(\t\"\x14\n\x12UpdateTeamResponse\"\x1a\n\x18TeamRecommendListRequest\"Y\n\x11TeamRecommendUnit\x12\n\n\x02id\x18\x01 \x02(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\r\n\x05\x63ount\x18\x03 \x01(\x05\x12\x0c\n\x04icon\x18\x04 \x01(\t\x12\r\n\x05score\x18\x05 \x01(\x05\"Z\n\x19TeamRecommendListResponse\x12=\n\x12teamRecommendUnits\x18\x01 \x03(\x0b\x32!.com.common.msg.TeamRecommendUnit\"9\n\x16TeamInviteOtherRequest\x12\x0f\n\x07otherId\x18\x01 \x02(\t\x12\x0e\n\x06teamId\x18\x02 \x02(\t\"\x19\n\x17TeamInviteOtherResponse\",\n\x19TeamClearBeInvitedRequest\x12\x0f\n\x07otherId\x18\x01 \x01(\t\"\x1c\n\x1aTeamClearBeInvitedResponse\"\x17\n\x15TeamFriendListRequest\"\x83\x01\n\x0eTeamFriendUnit\x12=\n\x10playerSimpleInfo\x18\x01 \x01(\x0b\x32#.com.common.msg.PlayerSimpleInfoMsg\x12\x0e\n\x06teamId\x18\x02 \x01(\t\x12\x10\n\x08teamName\x18\x03 \x01(\t\x12\x10\n\x08teamIcon\x18\x04 \x01(\t\"P\n\rBeInvitedUnit\x12\x0b\n\x03pId\x18\x01 \x01(\t\x12\x0e\n\x06teamId\x18\x02 \x01(\t\x12\x10\n\x08teamName\x18\x03 \x01(\t\x12\x10\n\x08teamIcon\x18\x04 \x01(\t\"\xa2\x01\n\x16TeamFriendListResponse\x12\x37\n\x0fteamFriendUnits\x18\x01 \x03(\x0b\x32\x1e.com.common.msg.TeamFriendUnit\x12\x18\n\x10inviteOtherLists\x18\x02 \x03(\t\x12\x35\n\x0e\x62\x65InvitedUnits\x18\x03 \x03(\x0b\x32\x1d.com.common.msg.BeInvitedUnit\"9\n\x13TeamNeedHelpRequest\x12\x0e\n\x06teamId\x18\x01 \x02(\t\x12\x12\n\ntemplateId\x18\x02 \x02(\t\"\x16\n\x14TeamNeedHelpResponse\"7\n\x14TeamHelpOtherRequest\x12\x0e\n\x06teamId\x18\x01 \x02(\t\x12\x0f\n\x07indexId\x18\x02 \x02(\x05\"\x17\n\x15TeamHelpOtherResponse\")\n\x17TeamNeedHelpListRequest\x12\x0e\n\x06teamId\x18\x01 \x02(\t\"h\n\x0eHelpPlayerInfo\x12\x0b\n\x03pid\x18\x01 \x02(\t\x12\x0c\n\x04name\x18\x02 \x02(\t\x12\x0c\n\x04icon\x18\x03 \x02(\t\x12\x0f\n\x07\x61\x63\x63ount\x18\x04 \x01(\t\x12\r\n\x05level\x18\x05 \x01(\x05\x12\r\n\x05isVip\x18\x06 \x01(\x08\"\xac\x01\n\x0cTeamHelpInfo\x12\x36\n\x0eneedHelpPlayer\x18\x01 \x02(\x0b\x32\x1e.com.common.msg.HelpPlayerInfo\x12\x12\n\ntemplateId\x18\x02 \x02(\t\x12\x0f\n\x07reqTime\x18\x03 \x02(\x03\x12.\n\x06helper\x18\x04 \x01(\x0b\x32\x1e.com.common.msg.HelpPlayerInfo\x12\x0f\n\x07indexId\x18\x05 \x01(\x05\"F\n\x14TeamMemberRecordInfo\x12\r\n\x05pName\x18\x01 \x02(\t\x12\x0e\n\x06opType\x18\x02 \x02(\x05\x12\x0f\n\x07reqTime\x18\x03 \x02(\x03\"\xe6\x01\n\x18TeamNeedHelpListResponse\x12\x33\n\rteamHelpInfos\x18\x01 \x03(\x0b\x32\x1c.com.common.msg.TeamHelpInfo\x12\x16\n\x0ehelpOtherCount\x18\x02 \x02(\x05\x12\x15\n\rhelpOtherTime\x18\x03 \x02(\x03\x12\x15\n\rneedHelpCount\x18\x04 \x02(\x05\x12\x14\n\x0cneedHelpTime\x18\x05 \x02(\x03\x12\x39\n\x0brecordInfos\x18\x06 \x03(\x0b\x32$.com.common.msg.TeamMemberRecordInfo\"\x1c\n\x1aTeamOtherHelpNotifyRequest\"\x7f\n\x0eHelpNotifyInfo\x12\x0b\n\x03pId\x18\x01 \x02(\t\x12\x0c\n\x04name\x18\x02 \x02(\t\x12\x13\n\x0btemplateIds\x18\x03 \x03(\t\x12\x0c\n\x04icon\x18\x04 \x01(\t\x12\x0f\n\x07\x61\x63\x63ount\x18\x05 \x01(\t\x12\x0f\n\x07\x61\x64\x64Item\x18\x06 \x01(\x05\x12\r\n\x05isVip\x18\x07 \x01(\x08\"V\n\x1bTeamOtherHelpNotifyResponse\x12\x37\n\x0fhelpNotifyInfos\x18\x01 \x03(\x0b\x32\x1e.com.common.msg.HelpNotifyInfo*\x9d\x05\n\x11TeamErrorCodeEnum\x12\x15\n\x0fTEAM_FULL_ERROR\x10\xa1\x9c\x01\x12\x1f\n\x19TEAM_JOIN_NOT_ALLOW_ERROR\x10\xa2\x9c\x01\x12!\n\x1bTEAM_LEVEL_NOT_ENOUGH_ERROR\x10\xa3\x9c\x01\x12\x1a\n\x14TEAM_NOT_EXIST_ERROR\x10\xa4\x9c\x01\x12\x15\n\x0fTEAM_AUTH_ERROR\x10\xa5\x9c\x01\x12\x1c\n\x16TEAM_ALREADY_HAS_ERROR\x10\xa6\x9c\x01\x12!\n\x1bTEAM_MONEY_NOT_ENOUGH_ERROR\x10\xa7\x9c\x01\x12\x1d\n\x17TEAM_NAME_ILLEGAL_ERROR\x10\xa8\x9c\x01\x12\x1d\n\x17TEAM_DESC_ILLEGAL_ERROR\x10\xa9\x9c\x01\x12\x1e\n\x18TEAM_LEVEL_ILLEGAL_ERROR\x10\xaa\x9c\x01\x12\x1d\n\x17TEAM_ICON_ILLEGAL_ERROR\x10\xab\x9c\x01\x12\x1e\n\x18TEAM_NEED_HELP_MAX_ERROR\x10\xac\x9c\x01\x12*\n$TEAM_HELP_OTHER_INFO_NOT_EXIST_ERROR\x10\xad\x9c\x01\x12/\n)TEAM_HELP_OTHER_INFO_ALREADY_HELPED_ERROR\x10\xae\x9c\x01\x12\'\n!TEAM_HELP_OTHER_INFO_TO_MAX_ERROR\x10\xaf\x9c\x01\x12\x1c\n\x16TEAM_NOT_IN_TEAM_ERROR\x10\xb0\x9c\x01\x12(\n\"TEAM_PLAYER_ALREADY_HAS_TEAM_ERROR\x10\xb1\x9c\x01\x12*\n$TEAM_HELP_OTHER_ITEM_NOT_EXIST_ERROR\x10\xb2\x9c\x01\x12\"\n\x1cTEAM_CREATE_MONEY_COST_ERROR\x10\xb3\x9c\x01*\x81\x05\n\x17TeamModuleMsgSubCommand\x12\"\n\x1cTEAMMODULEMSG_SUB_CREATETEAM\x10\xa1\x9c\x01\x12 \n\x1aTEAMMODULEMSG_SUB_JOINTEAM\x10\xa2\x9c\x01\x12 \n\x1aTEAMMODULEMSG_SUB_QUITTEAM\x10\xa3\x9c\x01\x12\"\n\x1cTEAMMODULEMSG_SUB_KICKPLAYER\x10\xa4\x9c\x01\x12 \n\x1aTEAMMODULEMSG_SUB_TEAMRANK\x10\xa5\x9c\x01\x12 \n\x1aTEAMMODULEMSG_SUB_TEAMINFO\x10\xa6\x9c\x01\x12&\n TEAMMODULEMSG_SUB_TEAMLISTMEMBER\x10\xa7\x9c\x01\x12\"\n\x1cTEAMMODULEMSG_SUB_UPDATETEAM\x10\xa8\x9c\x01\x12)\n#TEAMMODULEMSG_SUB_TEAMRECOMMENDLIST\x10\xa9\x9c\x01\x12&\n TEAMMODULEMSG_SUB_TEAMFRIENDLIST\x10\xaa\x9c\x01\x12$\n\x1eTEAMMODULEMSG_SUB_TEAMNEEDHELP\x10\xab\x9c\x01\x12%\n\x1fTEAMMODULEMSG_SUB_TEAMHELPOTHER\x10\xac\x9c\x01\x12(\n\"TEAMMODULEMSG_SUB_TEAMNEEDHELPLIST\x10\xad\x9c\x01\x12\'\n!TEAMMODULEMSG_SUB_TEAMINVITEOTHER\x10\xae\x9c\x01\x12*\n$TEAMMODULEMSG_SUB_TEAMCLEARBEINVITED\x10\xaf\x9c\x01\x12+\n%TEAMMODULEMSG_SUB_TEAMOTHERHELPNOTIFY\x10\xb0\x9c\x01'
-  ,
-  dependencies=[FriendsModuleMsg__pb2.DESCRIPTOR,])
-
-_TEAMERRORCODEENUM = _descriptor.EnumDescriptor(
-  name='TeamErrorCodeEnum',
-  full_name='com.common.msg.TeamErrorCodeEnum',
-  filename=None,
-  file=DESCRIPTOR,
-  create_key=_descriptor._internal_create_key,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='TEAM_FULL_ERROR', index=0, number=20001,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='TEAM_JOIN_NOT_ALLOW_ERROR', index=1, number=20002,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='TEAM_LEVEL_NOT_ENOUGH_ERROR', index=2, number=20003,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='TEAM_NOT_EXIST_ERROR', index=3, number=20004,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='TEAM_AUTH_ERROR', index=4, number=20005,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='TEAM_ALREADY_HAS_ERROR', index=5, number=20006,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='TEAM_MONEY_NOT_ENOUGH_ERROR', index=6, number=20007,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='TEAM_NAME_ILLEGAL_ERROR', index=7, number=20008,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='TEAM_DESC_ILLEGAL_ERROR', index=8, number=20009,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='TEAM_LEVEL_ILLEGAL_ERROR', index=9, number=20010,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='TEAM_ICON_ILLEGAL_ERROR', index=10, number=20011,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='TEAM_NEED_HELP_MAX_ERROR', index=11, number=20012,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='TEAM_HELP_OTHER_INFO_NOT_EXIST_ERROR', index=12, number=20013,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='TEAM_HELP_OTHER_INFO_ALREADY_HELPED_ERROR', index=13, number=20014,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='TEAM_HELP_OTHER_INFO_TO_MAX_ERROR', index=14, number=20015,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='TEAM_NOT_IN_TEAM_ERROR', index=15, number=20016,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='TEAM_PLAYER_ALREADY_HAS_TEAM_ERROR', index=16, number=20017,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='TEAM_HELP_OTHER_ITEM_NOT_EXIST_ERROR', index=17, number=20018,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='TEAM_CREATE_MONEY_COST_ERROR', index=18, number=20019,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-  ],
-  containing_type=None,
-  serialized_options=None,
-  serialized_start=3170,
-  serialized_end=3839,
+  serialized_pb=b'\n\x13TeamModuleMsg.proto\x12\x0e\x63om.common.msg\"j\n\x11\x43reateTeamRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04\x64\x65sc\x18\x02 \x01(\t\x12\r\n\x05state\x18\x03 \x01(\x05\x12\x0e\n\x06needLv\x18\x04 \x01(\x05\x12\x0c\n\x04icon\x18\x05 \x01(\t\x12\x0c\n\x04\x63ost\x18\x06 \x01(\x05\" \n\x12\x43reateTeamResponse\x12\n\n\x02id\x18\x01 \x02(\t\"\x1d\n\x0fJoinTeamRequest\x12\n\n\x02id\x18\x01 \x02(\t\"\"\n\x10JoinTeamResponse\x12\x0e\n\x06result\x18\x01 \x02(\x05\"\x1d\n\x0fQuitTeamRequest\x12\n\n\x02id\x18\x01 \x02(\t\"\x12\n\x10QuitTeamResponse\",\n\x11KickPlayerRequest\x12\x0b\n\x03pid\x18\x01 \x02(\t\x12\n\n\x02id\x18\x02 \x02(\t\"$\n\x12KickPlayerResponse\x12\x0e\n\x06result\x18\x01 \x02(\x05\"\x11\n\x0fTeamRankRequest\"T\n\x0cTeamRankUnit\x12\n\n\x02id\x18\x01 \x02(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\r\n\x05\x63ount\x18\x03 \x01(\x05\x12\x0c\n\x04icon\x18\x04 \x01(\t\x12\r\n\x05score\x18\x05 \x01(\x03\"G\n\x10TeamRankResponse\x12\x33\n\rteamRankUnits\x18\x01 \x03(\x0b\x32\x1c.com.common.msg.TeamRankUnit\"/\n\x0fTeamInfoRequest\x12\n\n\x02id\x18\x01 \x02(\t\x12\x10\n\x08selfFlag\x18\x02 \x01(\x08\"\x92\x01\n\x0cTeamBaseInfo\x12\n\n\x02id\x18\x01 \x02(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\r\n\x05\x63ount\x18\x03 \x01(\x05\x12\x0c\n\x04icon\x18\x04 \x01(\t\x12\r\n\x05score\x18\x05 \x01(\x03\x12\x0f\n\x07ownerId\x18\x06 \x01(\t\x12\x0e\n\x06needLv\x18\x07 \x01(\x05\x12\x0c\n\x04\x64\x65sc\x18\x08 \x01(\t\x12\r\n\x05state\x18\t \x01(\x05\"\xa9\x01\n\x0eTeamMemberInfo\x12\x0b\n\x03pId\x18\x01 \x02(\t\x12\r\n\x05pName\x18\x02 \x02(\t\x12\x0b\n\x03pLv\x18\x03 \x02(\x05\x12\x0c\n\x04icon\x18\x04 \x02(\t\x12\x11\n\tfbAccount\x18\x05 \x01(\t\x12\x0e\n\x06status\x18\x06 \x01(\x05\x12\x13\n\x0bofflineTime\x18\x07 \x01(\x03\x12\x19\n\x11maxDragonStrength\x18\x08 \x01(\x05\x12\r\n\x05\x66rame\x18\t \x01(\t\"\x91\x01\n\x10TeamInfoResponse\x12\x32\n\x0cteamBaseInfo\x18\x01 \x01(\x0b\x32\x1c.com.common.msg.TeamBaseInfo\x12\x37\n\x0fteamMemberInfos\x18\x02 \x03(\x0b\x32\x1e.com.common.msg.TeamMemberInfo\x12\x10\n\x08joinTime\x18\x03 \x01(\x03\"#\n\x15TeamListMemberRequest\x12\n\n\x02id\x18\x01 \x02(\t\"Q\n\x16TeamListMemberResponse\x12\x37\n\x0fteamMemberInfos\x18\x01 \x03(\x0b\x32\x1e.com.common.msg.TeamMemberInfo\"Z\n\x11UpdateTeamRequest\x12\n\n\x02id\x18\x01 \x02(\t\x12\x0c\n\x04\x64\x65sc\x18\x02 \x01(\t\x12\r\n\x05state\x18\x03 \x01(\x05\x12\x0e\n\x06needLv\x18\x04 \x01(\x05\x12\x0c\n\x04icon\x18\x05 \x01(\t\"\x14\n\x12UpdateTeamResponse\"\x1a\n\x18TeamRecommendListRequest\"Y\n\x11TeamRecommendUnit\x12\n\n\x02id\x18\x01 \x02(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\r\n\x05\x63ount\x18\x03 \x01(\x05\x12\x0c\n\x04icon\x18\x04 \x01(\t\x12\r\n\x05score\x18\x05 \x01(\x05\"Z\n\x19TeamRecommendListResponse\x12=\n\x12teamRecommendUnits\x18\x01 \x03(\x0b\x32!.com.common.msg.TeamRecommendUnit\"9\n\x13TeamNeedHelpRequest\x12\x0e\n\x06teamId\x18\x01 \x02(\t\x12\x12\n\ntemplateId\x18\x02 \x02(\t\"\'\n\x14TeamNeedHelpResponse\x12\x0f\n\x07indexId\x18\x01 \x02(\x05\"7\n\x14TeamHelpOtherRequest\x12\x0e\n\x06teamId\x18\x01 \x02(\t\x12\x0f\n\x07indexId\x18\x02 \x02(\x05\"d\n\nPlayerInfo\x12\x0b\n\x03pid\x18\x01 \x02(\t\x12\x0c\n\x04name\x18\x02 \x02(\t\x12\x0c\n\x04icon\x18\x03 \x02(\t\x12\x0f\n\x07\x61\x63\x63ount\x18\x04 \x01(\t\x12\r\n\x05level\x18\x05 \x01(\x05\x12\r\n\x05\x66rame\x18\x06 \x01(\t\"O\n\x0eHelpPlayerInfo\x12.\n\nplayerInfo\x18\x01 \x02(\x0b\x32\x1a.com.common.msg.PlayerInfo\x12\r\n\x05\x63ount\x18\x02 \x01(\x05\"U\n\x15TeamHelpOtherResponse\x12\x0b\n\x03ret\x18\x01 \x01(\x05\x12/\n\x07helpers\x18\x02 \x03(\x0b\x32\x1e.com.common.msg.HelpPlayerInfo\")\n\x17TeamNeedHelpListRequest\x12\x0e\n\x06teamId\x18\x01 \x02(\t\"\xa9\x01\n\x0cTeamHelpInfo\x12\x32\n\x0eneedHelpPlayer\x18\x01 \x02(\x0b\x32\x1a.com.common.msg.PlayerInfo\x12\x12\n\ntemplateId\x18\x02 \x02(\t\x12\x0f\n\x07reqTime\x18\x03 \x02(\x03\x12/\n\x07helpers\x18\x04 \x03(\x0b\x32\x1e.com.common.msg.HelpPlayerInfo\x12\x0f\n\x07indexId\x18\x05 \x01(\x05\"F\n\x14TeamMemberRecordInfo\x12\r\n\x05pName\x18\x01 \x02(\t\x12\x0e\n\x06opType\x18\x02 \x02(\x05\x12\x0f\n\x07reqTime\x18\x03 \x02(\x03\"\xe6\x01\n\x18TeamNeedHelpListResponse\x12\x33\n\rteamHelpInfos\x18\x01 \x03(\x0b\x32\x1c.com.common.msg.TeamHelpInfo\x12\x16\n\x0ehelpOtherCount\x18\x02 \x02(\x05\x12\x15\n\rhelpOtherTime\x18\x03 \x02(\x03\x12\x15\n\rneedHelpCount\x18\x04 \x02(\x05\x12\x14\n\x0cneedHelpTime\x18\x05 \x02(\x03\x12\x39\n\x0brecordInfos\x18\x06 \x03(\x0b\x32$.com.common.msg.TeamMemberRecordInfo\"\x1c\n\x1aTeamOtherHelpNotifyRequest\">\n\x08HelpItem\x12\x12\n\ntemplateId\x18\x01 \x01(\t\x12\r\n\x05\x63ount\x18\x02 \x01(\x05\x12\x0f\n\x07indexId\x18\x03 \x01(\x05\"\x86\x01\n\x0eHelpNotifyInfo\x12\x0b\n\x03pId\x18\x01 \x02(\t\x12\x0c\n\x04name\x18\x02 \x02(\t\x12+\n\thelpItems\x18\x03 \x03(\x0b\x32\x18.com.common.msg.HelpItem\x12\x0c\n\x04icon\x18\x04 \x01(\t\x12\x0f\n\x07\x61\x63\x63ount\x18\x05 \x01(\t\x12\r\n\x05\x66rame\x18\x06 \x01(\t\"V\n\x1bTeamOtherHelpNotifyResponse\x12\x37\n\x0fhelpNotifyInfos\x18\x01 \x03(\x0b\x32\x1e.com.common.msg.HelpNotifyInfo\"%\n\x11SearchTeamRequest\x12\x10\n\x08idOrName\x18\x01 \x02(\t\"F\n\x12SearchTeamResponse\x12\x30\n\x05teams\x18\x01 \x03(\x0b\x32!.com.common.msg.TeamRecommendUnit\"\x1c\n\x1aSearchOtherHelpItemRequest\"*\n\x1bSearchOtherHelpItemResponse\x12\x0b\n\x03ret\x18\x01 \x01(\x05\"&\n\x16TakeRedEnvelopeRequest\x12\x0c\n\x04uuid\x18\x01 \x01(\t\"8\n\x17TakeRedEnvelopeResponse\x12\x0e\n\x06itemId\x18\x01 \x01(\t\x12\r\n\x05\x63ount\x18\x02 \x01(\x05*\xfe\x04\n\x17TeamModuleMsgSubCommand\x12\"\n\x1cTEAMMODULEMSG_SUB_CREATETEAM\x10\xf9\xd2\x01\x12 \n\x1aTEAMMODULEMSG_SUB_JOINTEAM\x10\xfa\xd2\x01\x12 \n\x1aTEAMMODULEMSG_SUB_QUITTEAM\x10\xfb\xd2\x01\x12\"\n\x1cTEAMMODULEMSG_SUB_KICKPLAYER\x10\xfc\xd2\x01\x12 \n\x1aTEAMMODULEMSG_SUB_TEAMRANK\x10\xfd\xd2\x01\x12 \n\x1aTEAMMODULEMSG_SUB_TEAMINFO\x10\xfe\xd2\x01\x12&\n TEAMMODULEMSG_SUB_TEAMLISTMEMBER\x10\xff\xd2\x01\x12\"\n\x1cTEAMMODULEMSG_SUB_UPDATETEAM\x10\x80\xd3\x01\x12)\n#TEAMMODULEMSG_SUB_TEAMRECOMMENDLIST\x10\x81\xd3\x01\x12$\n\x1eTEAMMODULEMSG_SUB_TEAMNEEDHELP\x10\x83\xd3\x01\x12%\n\x1fTEAMMODULEMSG_SUB_TEAMHELPOTHER\x10\x84\xd3\x01\x12(\n\"TEAMMODULEMSG_SUB_TEAMNEEDHELPLIST\x10\x85\xd3\x01\x12+\n%TEAMMODULEMSG_SUB_TEAMOTHERHELPNOTIFY\x10\x88\xd3\x01\x12\"\n\x1cTEAMMODULEMSG_SUB_SEARCHTEAM\x10\x89\xd3\x01\x12+\n%TEAMMODULEMSG_SUB_SEARCHOTHERHELPITEM\x10\x8a\xd3\x01\x12\'\n!TEAMMODULEMSG_SUB_TAKEREDENVELOPE\x10\x8b\xd3\x01'
 )
-_sym_db.RegisterEnumDescriptor(_TEAMERRORCODEENUM)
 
-TeamErrorCodeEnum = enum_type_wrapper.EnumTypeWrapper(_TEAMERRORCODEENUM)
 _TEAMMODULEMSGSUBCOMMAND = _descriptor.EnumDescriptor(
   name='TeamModuleMsgSubCommand',
   full_name='com.common.msg.TeamModuleMsgSubCommand',
@@ -144,129 +31,110 @@ _TEAMMODULEMSGSUBCOMMAND = _descriptor.EnumDescriptor(
   create_key=_descriptor._internal_create_key,
   values=[
     _descriptor.EnumValueDescriptor(
-      name='TEAMMODULEMSG_SUB_CREATETEAM', index=0, number=20001,
+      name='TEAMMODULEMSG_SUB_CREATETEAM', index=0, number=27001,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='TEAMMODULEMSG_SUB_JOINTEAM', index=1, number=20002,
+      name='TEAMMODULEMSG_SUB_JOINTEAM', index=1, number=27002,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='TEAMMODULEMSG_SUB_QUITTEAM', index=2, number=20003,
+      name='TEAMMODULEMSG_SUB_QUITTEAM', index=2, number=27003,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='TEAMMODULEMSG_SUB_KICKPLAYER', index=3, number=20004,
+      name='TEAMMODULEMSG_SUB_KICKPLAYER', index=3, number=27004,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='TEAMMODULEMSG_SUB_TEAMRANK', index=4, number=20005,
+      name='TEAMMODULEMSG_SUB_TEAMRANK', index=4, number=27005,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='TEAMMODULEMSG_SUB_TEAMINFO', index=5, number=20006,
+      name='TEAMMODULEMSG_SUB_TEAMINFO', index=5, number=27006,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='TEAMMODULEMSG_SUB_TEAMLISTMEMBER', index=6, number=20007,
+      name='TEAMMODULEMSG_SUB_TEAMLISTMEMBER', index=6, number=27007,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='TEAMMODULEMSG_SUB_UPDATETEAM', index=7, number=20008,
+      name='TEAMMODULEMSG_SUB_UPDATETEAM', index=7, number=27008,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='TEAMMODULEMSG_SUB_TEAMRECOMMENDLIST', index=8, number=20009,
+      name='TEAMMODULEMSG_SUB_TEAMRECOMMENDLIST', index=8, number=27009,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='TEAMMODULEMSG_SUB_TEAMFRIENDLIST', index=9, number=20010,
+      name='TEAMMODULEMSG_SUB_TEAMNEEDHELP', index=9, number=27011,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='TEAMMODULEMSG_SUB_TEAMNEEDHELP', index=10, number=20011,
+      name='TEAMMODULEMSG_SUB_TEAMHELPOTHER', index=10, number=27012,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='TEAMMODULEMSG_SUB_TEAMHELPOTHER', index=11, number=20012,
+      name='TEAMMODULEMSG_SUB_TEAMNEEDHELPLIST', index=11, number=27013,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='TEAMMODULEMSG_SUB_TEAMNEEDHELPLIST', index=12, number=20013,
+      name='TEAMMODULEMSG_SUB_TEAMOTHERHELPNOTIFY', index=12, number=27016,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='TEAMMODULEMSG_SUB_TEAMINVITEOTHER', index=13, number=20014,
+      name='TEAMMODULEMSG_SUB_SEARCHTEAM', index=13, number=27017,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='TEAMMODULEMSG_SUB_TEAMCLEARBEINVITED', index=14, number=20015,
+      name='TEAMMODULEMSG_SUB_SEARCHOTHERHELPITEM', index=14, number=27018,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='TEAMMODULEMSG_SUB_TEAMOTHERHELPNOTIFY', index=15, number=20016,
+      name='TEAMMODULEMSG_SUB_TAKEREDENVELOPE', index=15, number=27019,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=3842,
-  serialized_end=4483,
+  serialized_start=3074,
+  serialized_end=3712,
 )
 _sym_db.RegisterEnumDescriptor(_TEAMMODULEMSGSUBCOMMAND)
 
 TeamModuleMsgSubCommand = enum_type_wrapper.EnumTypeWrapper(_TEAMMODULEMSGSUBCOMMAND)
-TEAM_FULL_ERROR = 20001
-TEAM_JOIN_NOT_ALLOW_ERROR = 20002
-TEAM_LEVEL_NOT_ENOUGH_ERROR = 20003
-TEAM_NOT_EXIST_ERROR = 20004
-TEAM_AUTH_ERROR = 20005
-TEAM_ALREADY_HAS_ERROR = 20006
-TEAM_MONEY_NOT_ENOUGH_ERROR = 20007
-TEAM_NAME_ILLEGAL_ERROR = 20008
-TEAM_DESC_ILLEGAL_ERROR = 20009
-TEAM_LEVEL_ILLEGAL_ERROR = 20010
-TEAM_ICON_ILLEGAL_ERROR = 20011
-TEAM_NEED_HELP_MAX_ERROR = 20012
-TEAM_HELP_OTHER_INFO_NOT_EXIST_ERROR = 20013
-TEAM_HELP_OTHER_INFO_ALREADY_HELPED_ERROR = 20014
-TEAM_HELP_OTHER_INFO_TO_MAX_ERROR = 20015
-TEAM_NOT_IN_TEAM_ERROR = 20016
-TEAM_PLAYER_ALREADY_HAS_TEAM_ERROR = 20017
-TEAM_HELP_OTHER_ITEM_NOT_EXIST_ERROR = 20018
-TEAM_CREATE_MONEY_COST_ERROR = 20019
-TEAMMODULEMSG_SUB_CREATETEAM = 20001
-TEAMMODULEMSG_SUB_JOINTEAM = 20002
-TEAMMODULEMSG_SUB_QUITTEAM = 20003
-TEAMMODULEMSG_SUB_KICKPLAYER = 20004
-TEAMMODULEMSG_SUB_TEAMRANK = 20005
-TEAMMODULEMSG_SUB_TEAMINFO = 20006
-TEAMMODULEMSG_SUB_TEAMLISTMEMBER = 20007
-TEAMMODULEMSG_SUB_UPDATETEAM = 20008
-TEAMMODULEMSG_SUB_TEAMRECOMMENDLIST = 20009
-TEAMMODULEMSG_SUB_TEAMFRIENDLIST = 20010
-TEAMMODULEMSG_SUB_TEAMNEEDHELP = 20011
-TEAMMODULEMSG_SUB_TEAMHELPOTHER = 20012
-TEAMMODULEMSG_SUB_TEAMNEEDHELPLIST = 20013
-TEAMMODULEMSG_SUB_TEAMINVITEOTHER = 20014
-TEAMMODULEMSG_SUB_TEAMCLEARBEINVITED = 20015
-TEAMMODULEMSG_SUB_TEAMOTHERHELPNOTIFY = 20016
+TEAMMODULEMSG_SUB_CREATETEAM = 27001
+TEAMMODULEMSG_SUB_JOINTEAM = 27002
+TEAMMODULEMSG_SUB_QUITTEAM = 27003
+TEAMMODULEMSG_SUB_KICKPLAYER = 27004
+TEAMMODULEMSG_SUB_TEAMRANK = 27005
+TEAMMODULEMSG_SUB_TEAMINFO = 27006
+TEAMMODULEMSG_SUB_TEAMLISTMEMBER = 27007
+TEAMMODULEMSG_SUB_UPDATETEAM = 27008
+TEAMMODULEMSG_SUB_TEAMRECOMMENDLIST = 27009
+TEAMMODULEMSG_SUB_TEAMNEEDHELP = 27011
+TEAMMODULEMSG_SUB_TEAMHELPOTHER = 27012
+TEAMMODULEMSG_SUB_TEAMNEEDHELPLIST = 27013
+TEAMMODULEMSG_SUB_TEAMOTHERHELPNOTIFY = 27016
+TEAMMODULEMSG_SUB_SEARCHTEAM = 27017
+TEAMMODULEMSG_SUB_SEARCHOTHERHELPITEM = 27018
+TEAMMODULEMSG_SUB_TAKEREDENVELOPE = 27019
 
 
 
@@ -332,8 +200,8 @@ _CREATETEAMREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=63,
-  serialized_end=169,
+  serialized_start=39,
+  serialized_end=145,
 )
 
 
@@ -352,13 +220,6 @@ _CREATETEAMRESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='cost', full_name='com.common.msg.CreateTeamResponse.cost', index=1,
-      number=2, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -371,8 +232,8 @@ _CREATETEAMRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=171,
-  serialized_end=217,
+  serialized_start=147,
+  serialized_end=179,
 )
 
 
@@ -391,13 +252,6 @@ _JOINTEAMREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='invitePid', full_name='com.common.msg.JoinTeamRequest.invitePid', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -410,8 +264,8 @@ _JOINTEAMREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=219,
-  serialized_end=267,
+  serialized_start=181,
+  serialized_end=210,
 )
 
 
@@ -442,8 +296,8 @@ _JOINTEAMRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=269,
-  serialized_end=303,
+  serialized_start=212,
+  serialized_end=246,
 )
 
 
@@ -474,8 +328,8 @@ _QUITTEAMREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=305,
-  serialized_end=334,
+  serialized_start=248,
+  serialized_end=277,
 )
 
 
@@ -499,8 +353,8 @@ _QUITTEAMRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=336,
-  serialized_end=354,
+  serialized_start=279,
+  serialized_end=297,
 )
 
 
@@ -538,8 +392,8 @@ _KICKPLAYERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=356,
-  serialized_end=400,
+  serialized_start=299,
+  serialized_end=343,
 )
 
 
@@ -570,8 +424,8 @@ _KICKPLAYERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=402,
-  serialized_end=438,
+  serialized_start=345,
+  serialized_end=381,
 )
 
 
@@ -595,8 +449,8 @@ _TEAMRANKREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=440,
-  serialized_end=457,
+  serialized_start=383,
+  serialized_end=400,
 )
 
 
@@ -655,8 +509,8 @@ _TEAMRANKUNIT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=459,
-  serialized_end=543,
+  serialized_start=402,
+  serialized_end=486,
 )
 
 
@@ -687,8 +541,8 @@ _TEAMRANKRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=545,
-  serialized_end=616,
+  serialized_start=488,
+  serialized_end=559,
 )
 
 
@@ -726,8 +580,8 @@ _TEAMINFOREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=618,
-  serialized_end=665,
+  serialized_start=561,
+  serialized_end=608,
 )
 
 
@@ -814,8 +668,8 @@ _TEAMBASEINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=668,
-  serialized_end=814,
+  serialized_start=611,
+  serialized_end=757,
 )
 
 
@@ -877,16 +731,16 @@ _TEAMMEMBERINFO = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='prosperityLevel', full_name='com.common.msg.TeamMemberInfo.prosperityLevel', index=7,
+      name='maxDragonStrength', full_name='com.common.msg.TeamMemberInfo.maxDragonStrength', index=7,
       number=8, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='isVip', full_name='com.common.msg.TeamMemberInfo.isVip', index=8,
-      number=9, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      name='frame', full_name='com.common.msg.TeamMemberInfo.frame', index=8,
+      number=9, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
@@ -902,8 +756,8 @@ _TEAMMEMBERINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=817,
-  serialized_end=984,
+  serialized_start=760,
+  serialized_end=929,
 )
 
 
@@ -929,6 +783,13 @@ _TEAMINFORESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='joinTime', full_name='com.common.msg.TeamInfoResponse.joinTime', index=2,
+      number=3, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -941,8 +802,8 @@ _TEAMINFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=986,
-  serialized_end=1113,
+  serialized_start=932,
+  serialized_end=1077,
 )
 
 
@@ -973,8 +834,8 @@ _TEAMLISTMEMBERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1115,
-  serialized_end=1150,
+  serialized_start=1079,
+  serialized_end=1114,
 )
 
 
@@ -1005,8 +866,8 @@ _TEAMLISTMEMBERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1152,
-  serialized_end=1233,
+  serialized_start=1116,
+  serialized_end=1197,
 )
 
 
@@ -1065,8 +926,8 @@ _UPDATETEAMREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1235,
-  serialized_end=1325,
+  serialized_start=1199,
+  serialized_end=1289,
 )
 
 
@@ -1090,8 +951,8 @@ _UPDATETEAMRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1327,
-  serialized_end=1347,
+  serialized_start=1291,
+  serialized_end=1311,
 )
 
 
@@ -1115,8 +976,8 @@ _TEAMRECOMMENDLISTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1349,
-  serialized_end=1375,
+  serialized_start=1313,
+  serialized_end=1339,
 )
 
 
@@ -1175,8 +1036,8 @@ _TEAMRECOMMENDUNIT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1377,
-  serialized_end=1466,
+  serialized_start=1341,
+  serialized_end=1430,
 )
 
 
@@ -1207,306 +1068,8 @@ _TEAMRECOMMENDLISTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1468,
-  serialized_end=1558,
-)
-
-
-_TEAMINVITEOTHERREQUEST = _descriptor.Descriptor(
-  name='TeamInviteOtherRequest',
-  full_name='com.common.msg.TeamInviteOtherRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='otherId', full_name='com.common.msg.TeamInviteOtherRequest.otherId', index=0,
-      number=1, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='teamId', full_name='com.common.msg.TeamInviteOtherRequest.teamId', index=1,
-      number=2, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1560,
-  serialized_end=1617,
-)
-
-
-_TEAMINVITEOTHERRESPONSE = _descriptor.Descriptor(
-  name='TeamInviteOtherResponse',
-  full_name='com.common.msg.TeamInviteOtherResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1619,
-  serialized_end=1644,
-)
-
-
-_TEAMCLEARBEINVITEDREQUEST = _descriptor.Descriptor(
-  name='TeamClearBeInvitedRequest',
-  full_name='com.common.msg.TeamClearBeInvitedRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='otherId', full_name='com.common.msg.TeamClearBeInvitedRequest.otherId', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1646,
-  serialized_end=1690,
-)
-
-
-_TEAMCLEARBEINVITEDRESPONSE = _descriptor.Descriptor(
-  name='TeamClearBeInvitedResponse',
-  full_name='com.common.msg.TeamClearBeInvitedResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1692,
-  serialized_end=1720,
-)
-
-
-_TEAMFRIENDLISTREQUEST = _descriptor.Descriptor(
-  name='TeamFriendListRequest',
-  full_name='com.common.msg.TeamFriendListRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1722,
-  serialized_end=1745,
-)
-
-
-_TEAMFRIENDUNIT = _descriptor.Descriptor(
-  name='TeamFriendUnit',
-  full_name='com.common.msg.TeamFriendUnit',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='playerSimpleInfo', full_name='com.common.msg.TeamFriendUnit.playerSimpleInfo', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='teamId', full_name='com.common.msg.TeamFriendUnit.teamId', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='teamName', full_name='com.common.msg.TeamFriendUnit.teamName', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='teamIcon', full_name='com.common.msg.TeamFriendUnit.teamIcon', index=3,
-      number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1748,
-  serialized_end=1879,
-)
-
-
-_BEINVITEDUNIT = _descriptor.Descriptor(
-  name='BeInvitedUnit',
-  full_name='com.common.msg.BeInvitedUnit',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='pId', full_name='com.common.msg.BeInvitedUnit.pId', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='teamId', full_name='com.common.msg.BeInvitedUnit.teamId', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='teamName', full_name='com.common.msg.BeInvitedUnit.teamName', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='teamIcon', full_name='com.common.msg.BeInvitedUnit.teamIcon', index=3,
-      number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1881,
-  serialized_end=1961,
-)
-
-
-_TEAMFRIENDLISTRESPONSE = _descriptor.Descriptor(
-  name='TeamFriendListResponse',
-  full_name='com.common.msg.TeamFriendListResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='teamFriendUnits', full_name='com.common.msg.TeamFriendListResponse.teamFriendUnits', index=0,
-      number=1, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='inviteOtherLists', full_name='com.common.msg.TeamFriendListResponse.inviteOtherLists', index=1,
-      number=2, type=9, cpp_type=9, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='beInvitedUnits', full_name='com.common.msg.TeamFriendListResponse.beInvitedUnits', index=2,
-      number=3, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1964,
-  serialized_end=2126,
+  serialized_start=1432,
+  serialized_end=1522,
 )
 
 
@@ -1544,8 +1107,8 @@ _TEAMNEEDHELPREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2128,
-  serialized_end=2185,
+  serialized_start=1524,
+  serialized_end=1581,
 )
 
 
@@ -1557,6 +1120,13 @@ _TEAMNEEDHELPRESPONSE = _descriptor.Descriptor(
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='indexId', full_name='com.common.msg.TeamNeedHelpResponse.indexId', index=0,
+      number=1, type=5, cpp_type=1, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1569,8 +1139,8 @@ _TEAMNEEDHELPRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2187,
-  serialized_end=2209,
+  serialized_start=1583,
+  serialized_end=1622,
 )
 
 
@@ -1608,19 +1178,61 @@ _TEAMHELPOTHERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2211,
-  serialized_end=2266,
+  serialized_start=1624,
+  serialized_end=1679,
 )
 
 
-_TEAMHELPOTHERRESPONSE = _descriptor.Descriptor(
-  name='TeamHelpOtherResponse',
-  full_name='com.common.msg.TeamHelpOtherResponse',
+_PLAYERINFO = _descriptor.Descriptor(
+  name='PlayerInfo',
+  full_name='com.common.msg.PlayerInfo',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='pid', full_name='com.common.msg.PlayerInfo.pid', index=0,
+      number=1, type=9, cpp_type=9, label=2,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='name', full_name='com.common.msg.PlayerInfo.name', index=1,
+      number=2, type=9, cpp_type=9, label=2,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='icon', full_name='com.common.msg.PlayerInfo.icon', index=2,
+      number=3, type=9, cpp_type=9, label=2,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='account', full_name='com.common.msg.PlayerInfo.account', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='level', full_name='com.common.msg.PlayerInfo.level', index=4,
+      number=5, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='frame', full_name='com.common.msg.PlayerInfo.frame', index=5,
+      number=6, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1633,8 +1245,86 @@ _TEAMHELPOTHERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2268,
-  serialized_end=2291,
+  serialized_start=1681,
+  serialized_end=1781,
+)
+
+
+_HELPPLAYERINFO = _descriptor.Descriptor(
+  name='HelpPlayerInfo',
+  full_name='com.common.msg.HelpPlayerInfo',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='playerInfo', full_name='com.common.msg.HelpPlayerInfo.playerInfo', index=0,
+      number=1, type=11, cpp_type=10, label=2,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='count', full_name='com.common.msg.HelpPlayerInfo.count', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1783,
+  serialized_end=1862,
+)
+
+
+_TEAMHELPOTHERRESPONSE = _descriptor.Descriptor(
+  name='TeamHelpOtherResponse',
+  full_name='com.common.msg.TeamHelpOtherResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='ret', full_name='com.common.msg.TeamHelpOtherResponse.ret', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='helpers', full_name='com.common.msg.TeamHelpOtherResponse.helpers', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1864,
+  serialized_end=1949,
 )
 
 
@@ -1665,75 +1355,8 @@ _TEAMNEEDHELPLISTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2293,
-  serialized_end=2334,
-)
-
-
-_HELPPLAYERINFO = _descriptor.Descriptor(
-  name='HelpPlayerInfo',
-  full_name='com.common.msg.HelpPlayerInfo',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='pid', full_name='com.common.msg.HelpPlayerInfo.pid', index=0,
-      number=1, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='name', full_name='com.common.msg.HelpPlayerInfo.name', index=1,
-      number=2, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='icon', full_name='com.common.msg.HelpPlayerInfo.icon', index=2,
-      number=3, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='account', full_name='com.common.msg.HelpPlayerInfo.account', index=3,
-      number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='level', full_name='com.common.msg.HelpPlayerInfo.level', index=4,
-      number=5, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='isVip', full_name='com.common.msg.HelpPlayerInfo.isVip', index=5,
-      number=6, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=2336,
-  serialized_end=2440,
+  serialized_start=1951,
+  serialized_end=1992,
 )
 
 
@@ -1767,9 +1390,9 @@ _TEAMHELPINFO = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='helper', full_name='com.common.msg.TeamHelpInfo.helper', index=3,
-      number=4, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      name='helpers', full_name='com.common.msg.TeamHelpInfo.helpers', index=3,
+      number=4, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
@@ -1792,8 +1415,8 @@ _TEAMHELPINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2443,
-  serialized_end=2615,
+  serialized_start=1995,
+  serialized_end=2164,
 )
 
 
@@ -1838,8 +1461,8 @@ _TEAMMEMBERRECORDINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2617,
-  serialized_end=2687,
+  serialized_start=2166,
+  serialized_end=2236,
 )
 
 
@@ -1905,8 +1528,8 @@ _TEAMNEEDHELPLISTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2690,
-  serialized_end=2920,
+  serialized_start=2239,
+  serialized_end=2469,
 )
 
 
@@ -1930,8 +1553,54 @@ _TEAMOTHERHELPNOTIFYREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2922,
-  serialized_end=2950,
+  serialized_start=2471,
+  serialized_end=2499,
+)
+
+
+_HELPITEM = _descriptor.Descriptor(
+  name='HelpItem',
+  full_name='com.common.msg.HelpItem',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='templateId', full_name='com.common.msg.HelpItem.templateId', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='count', full_name='com.common.msg.HelpItem.count', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='indexId', full_name='com.common.msg.HelpItem.indexId', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2501,
+  serialized_end=2563,
 )
 
 
@@ -1958,8 +1627,8 @@ _HELPNOTIFYINFO = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='templateIds', full_name='com.common.msg.HelpNotifyInfo.templateIds', index=2,
-      number=3, type=9, cpp_type=9, label=3,
+      name='helpItems', full_name='com.common.msg.HelpNotifyInfo.helpItems', index=2,
+      number=3, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -1979,16 +1648,9 @@ _HELPNOTIFYINFO = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='addItem', full_name='com.common.msg.HelpNotifyInfo.addItem', index=5,
-      number=6, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='isVip', full_name='com.common.msg.HelpNotifyInfo.isVip', index=6,
-      number=7, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      name='frame', full_name='com.common.msg.HelpNotifyInfo.frame', index=5,
+      number=6, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
@@ -2004,8 +1666,8 @@ _HELPNOTIFYINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2952,
-  serialized_end=3079,
+  serialized_start=2566,
+  serialized_end=2700,
 )
 
 
@@ -2036,8 +1698,200 @@ _TEAMOTHERHELPNOTIFYRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3081,
-  serialized_end=3167,
+  serialized_start=2702,
+  serialized_end=2788,
+)
+
+
+_SEARCHTEAMREQUEST = _descriptor.Descriptor(
+  name='SearchTeamRequest',
+  full_name='com.common.msg.SearchTeamRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='idOrName', full_name='com.common.msg.SearchTeamRequest.idOrName', index=0,
+      number=1, type=9, cpp_type=9, label=2,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2790,
+  serialized_end=2827,
+)
+
+
+_SEARCHTEAMRESPONSE = _descriptor.Descriptor(
+  name='SearchTeamResponse',
+  full_name='com.common.msg.SearchTeamResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='teams', full_name='com.common.msg.SearchTeamResponse.teams', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2829,
+  serialized_end=2899,
+)
+
+
+_SEARCHOTHERHELPITEMREQUEST = _descriptor.Descriptor(
+  name='SearchOtherHelpItemRequest',
+  full_name='com.common.msg.SearchOtherHelpItemRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2901,
+  serialized_end=2929,
+)
+
+
+_SEARCHOTHERHELPITEMRESPONSE = _descriptor.Descriptor(
+  name='SearchOtherHelpItemResponse',
+  full_name='com.common.msg.SearchOtherHelpItemResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='ret', full_name='com.common.msg.SearchOtherHelpItemResponse.ret', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2931,
+  serialized_end=2973,
+)
+
+
+_TAKEREDENVELOPEREQUEST = _descriptor.Descriptor(
+  name='TakeRedEnvelopeRequest',
+  full_name='com.common.msg.TakeRedEnvelopeRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='uuid', full_name='com.common.msg.TakeRedEnvelopeRequest.uuid', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2975,
+  serialized_end=3013,
+)
+
+
+_TAKEREDENVELOPERESPONSE = _descriptor.Descriptor(
+  name='TakeRedEnvelopeResponse',
+  full_name='com.common.msg.TakeRedEnvelopeResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='itemId', full_name='com.common.msg.TakeRedEnvelopeResponse.itemId', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='count', full_name='com.common.msg.TakeRedEnvelopeResponse.count', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3015,
+  serialized_end=3071,
 )
 
 _TEAMRANKRESPONSE.fields_by_name['teamRankUnits'].message_type = _TEAMRANKUNIT
@@ -2045,14 +1899,15 @@ _TEAMINFORESPONSE.fields_by_name['teamBaseInfo'].message_type = _TEAMBASEINFO
 _TEAMINFORESPONSE.fields_by_name['teamMemberInfos'].message_type = _TEAMMEMBERINFO
 _TEAMLISTMEMBERRESPONSE.fields_by_name['teamMemberInfos'].message_type = _TEAMMEMBERINFO
 _TEAMRECOMMENDLISTRESPONSE.fields_by_name['teamRecommendUnits'].message_type = _TEAMRECOMMENDUNIT
-_TEAMFRIENDUNIT.fields_by_name['playerSimpleInfo'].message_type = FriendsModuleMsg__pb2._PLAYERSIMPLEINFOMSG
-_TEAMFRIENDLISTRESPONSE.fields_by_name['teamFriendUnits'].message_type = _TEAMFRIENDUNIT
-_TEAMFRIENDLISTRESPONSE.fields_by_name['beInvitedUnits'].message_type = _BEINVITEDUNIT
-_TEAMHELPINFO.fields_by_name['needHelpPlayer'].message_type = _HELPPLAYERINFO
-_TEAMHELPINFO.fields_by_name['helper'].message_type = _HELPPLAYERINFO
+_HELPPLAYERINFO.fields_by_name['playerInfo'].message_type = _PLAYERINFO
+_TEAMHELPOTHERRESPONSE.fields_by_name['helpers'].message_type = _HELPPLAYERINFO
+_TEAMHELPINFO.fields_by_name['needHelpPlayer'].message_type = _PLAYERINFO
+_TEAMHELPINFO.fields_by_name['helpers'].message_type = _HELPPLAYERINFO
 _TEAMNEEDHELPLISTRESPONSE.fields_by_name['teamHelpInfos'].message_type = _TEAMHELPINFO
 _TEAMNEEDHELPLISTRESPONSE.fields_by_name['recordInfos'].message_type = _TEAMMEMBERRECORDINFO
+_HELPNOTIFYINFO.fields_by_name['helpItems'].message_type = _HELPITEM
 _TEAMOTHERHELPNOTIFYRESPONSE.fields_by_name['helpNotifyInfos'].message_type = _HELPNOTIFYINFO
+_SEARCHTEAMRESPONSE.fields_by_name['teams'].message_type = _TEAMRECOMMENDUNIT
 DESCRIPTOR.message_types_by_name['CreateTeamRequest'] = _CREATETEAMREQUEST
 DESCRIPTOR.message_types_by_name['CreateTeamResponse'] = _CREATETEAMRESPONSE
 DESCRIPTOR.message_types_by_name['JoinTeamRequest'] = _JOINTEAMREQUEST
@@ -2075,27 +1930,26 @@ DESCRIPTOR.message_types_by_name['UpdateTeamResponse'] = _UPDATETEAMRESPONSE
 DESCRIPTOR.message_types_by_name['TeamRecommendListRequest'] = _TEAMRECOMMENDLISTREQUEST
 DESCRIPTOR.message_types_by_name['TeamRecommendUnit'] = _TEAMRECOMMENDUNIT
 DESCRIPTOR.message_types_by_name['TeamRecommendListResponse'] = _TEAMRECOMMENDLISTRESPONSE
-DESCRIPTOR.message_types_by_name['TeamInviteOtherRequest'] = _TEAMINVITEOTHERREQUEST
-DESCRIPTOR.message_types_by_name['TeamInviteOtherResponse'] = _TEAMINVITEOTHERRESPONSE
-DESCRIPTOR.message_types_by_name['TeamClearBeInvitedRequest'] = _TEAMCLEARBEINVITEDREQUEST
-DESCRIPTOR.message_types_by_name['TeamClearBeInvitedResponse'] = _TEAMCLEARBEINVITEDRESPONSE
-DESCRIPTOR.message_types_by_name['TeamFriendListRequest'] = _TEAMFRIENDLISTREQUEST
-DESCRIPTOR.message_types_by_name['TeamFriendUnit'] = _TEAMFRIENDUNIT
-DESCRIPTOR.message_types_by_name['BeInvitedUnit'] = _BEINVITEDUNIT
-DESCRIPTOR.message_types_by_name['TeamFriendListResponse'] = _TEAMFRIENDLISTRESPONSE
 DESCRIPTOR.message_types_by_name['TeamNeedHelpRequest'] = _TEAMNEEDHELPREQUEST
 DESCRIPTOR.message_types_by_name['TeamNeedHelpResponse'] = _TEAMNEEDHELPRESPONSE
 DESCRIPTOR.message_types_by_name['TeamHelpOtherRequest'] = _TEAMHELPOTHERREQUEST
+DESCRIPTOR.message_types_by_name['PlayerInfo'] = _PLAYERINFO
+DESCRIPTOR.message_types_by_name['HelpPlayerInfo'] = _HELPPLAYERINFO
 DESCRIPTOR.message_types_by_name['TeamHelpOtherResponse'] = _TEAMHELPOTHERRESPONSE
 DESCRIPTOR.message_types_by_name['TeamNeedHelpListRequest'] = _TEAMNEEDHELPLISTREQUEST
-DESCRIPTOR.message_types_by_name['HelpPlayerInfo'] = _HELPPLAYERINFO
 DESCRIPTOR.message_types_by_name['TeamHelpInfo'] = _TEAMHELPINFO
 DESCRIPTOR.message_types_by_name['TeamMemberRecordInfo'] = _TEAMMEMBERRECORDINFO
 DESCRIPTOR.message_types_by_name['TeamNeedHelpListResponse'] = _TEAMNEEDHELPLISTRESPONSE
 DESCRIPTOR.message_types_by_name['TeamOtherHelpNotifyRequest'] = _TEAMOTHERHELPNOTIFYREQUEST
+DESCRIPTOR.message_types_by_name['HelpItem'] = _HELPITEM
 DESCRIPTOR.message_types_by_name['HelpNotifyInfo'] = _HELPNOTIFYINFO
 DESCRIPTOR.message_types_by_name['TeamOtherHelpNotifyResponse'] = _TEAMOTHERHELPNOTIFYRESPONSE
-DESCRIPTOR.enum_types_by_name['TeamErrorCodeEnum'] = _TEAMERRORCODEENUM
+DESCRIPTOR.message_types_by_name['SearchTeamRequest'] = _SEARCHTEAMREQUEST
+DESCRIPTOR.message_types_by_name['SearchTeamResponse'] = _SEARCHTEAMRESPONSE
+DESCRIPTOR.message_types_by_name['SearchOtherHelpItemRequest'] = _SEARCHOTHERHELPITEMREQUEST
+DESCRIPTOR.message_types_by_name['SearchOtherHelpItemResponse'] = _SEARCHOTHERHELPITEMRESPONSE
+DESCRIPTOR.message_types_by_name['TakeRedEnvelopeRequest'] = _TAKEREDENVELOPEREQUEST
+DESCRIPTOR.message_types_by_name['TakeRedEnvelopeResponse'] = _TAKEREDENVELOPERESPONSE
 DESCRIPTOR.enum_types_by_name['TeamModuleMsgSubCommand'] = _TEAMMODULEMSGSUBCOMMAND
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -2253,62 +2107,6 @@ TeamRecommendListResponse = _reflection.GeneratedProtocolMessageType('TeamRecomm
   })
 _sym_db.RegisterMessage(TeamRecommendListResponse)
 
-TeamInviteOtherRequest = _reflection.GeneratedProtocolMessageType('TeamInviteOtherRequest', (_message.Message,), {
-  'DESCRIPTOR' : _TEAMINVITEOTHERREQUEST,
-  '__module__' : 'TeamModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.TeamInviteOtherRequest)
-  })
-_sym_db.RegisterMessage(TeamInviteOtherRequest)
-
-TeamInviteOtherResponse = _reflection.GeneratedProtocolMessageType('TeamInviteOtherResponse', (_message.Message,), {
-  'DESCRIPTOR' : _TEAMINVITEOTHERRESPONSE,
-  '__module__' : 'TeamModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.TeamInviteOtherResponse)
-  })
-_sym_db.RegisterMessage(TeamInviteOtherResponse)
-
-TeamClearBeInvitedRequest = _reflection.GeneratedProtocolMessageType('TeamClearBeInvitedRequest', (_message.Message,), {
-  'DESCRIPTOR' : _TEAMCLEARBEINVITEDREQUEST,
-  '__module__' : 'TeamModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.TeamClearBeInvitedRequest)
-  })
-_sym_db.RegisterMessage(TeamClearBeInvitedRequest)
-
-TeamClearBeInvitedResponse = _reflection.GeneratedProtocolMessageType('TeamClearBeInvitedResponse', (_message.Message,), {
-  'DESCRIPTOR' : _TEAMCLEARBEINVITEDRESPONSE,
-  '__module__' : 'TeamModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.TeamClearBeInvitedResponse)
-  })
-_sym_db.RegisterMessage(TeamClearBeInvitedResponse)
-
-TeamFriendListRequest = _reflection.GeneratedProtocolMessageType('TeamFriendListRequest', (_message.Message,), {
-  'DESCRIPTOR' : _TEAMFRIENDLISTREQUEST,
-  '__module__' : 'TeamModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.TeamFriendListRequest)
-  })
-_sym_db.RegisterMessage(TeamFriendListRequest)
-
-TeamFriendUnit = _reflection.GeneratedProtocolMessageType('TeamFriendUnit', (_message.Message,), {
-  'DESCRIPTOR' : _TEAMFRIENDUNIT,
-  '__module__' : 'TeamModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.TeamFriendUnit)
-  })
-_sym_db.RegisterMessage(TeamFriendUnit)
-
-BeInvitedUnit = _reflection.GeneratedProtocolMessageType('BeInvitedUnit', (_message.Message,), {
-  'DESCRIPTOR' : _BEINVITEDUNIT,
-  '__module__' : 'TeamModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.BeInvitedUnit)
-  })
-_sym_db.RegisterMessage(BeInvitedUnit)
-
-TeamFriendListResponse = _reflection.GeneratedProtocolMessageType('TeamFriendListResponse', (_message.Message,), {
-  'DESCRIPTOR' : _TEAMFRIENDLISTRESPONSE,
-  '__module__' : 'TeamModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.TeamFriendListResponse)
-  })
-_sym_db.RegisterMessage(TeamFriendListResponse)
-
 TeamNeedHelpRequest = _reflection.GeneratedProtocolMessageType('TeamNeedHelpRequest', (_message.Message,), {
   'DESCRIPTOR' : _TEAMNEEDHELPREQUEST,
   '__module__' : 'TeamModuleMsg_pb2'
@@ -2330,6 +2128,20 @@ TeamHelpOtherRequest = _reflection.GeneratedProtocolMessageType('TeamHelpOtherRe
   })
 _sym_db.RegisterMessage(TeamHelpOtherRequest)
 
+PlayerInfo = _reflection.GeneratedProtocolMessageType('PlayerInfo', (_message.Message,), {
+  'DESCRIPTOR' : _PLAYERINFO,
+  '__module__' : 'TeamModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.PlayerInfo)
+  })
+_sym_db.RegisterMessage(PlayerInfo)
+
+HelpPlayerInfo = _reflection.GeneratedProtocolMessageType('HelpPlayerInfo', (_message.Message,), {
+  'DESCRIPTOR' : _HELPPLAYERINFO,
+  '__module__' : 'TeamModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.HelpPlayerInfo)
+  })
+_sym_db.RegisterMessage(HelpPlayerInfo)
+
 TeamHelpOtherResponse = _reflection.GeneratedProtocolMessageType('TeamHelpOtherResponse', (_message.Message,), {
   'DESCRIPTOR' : _TEAMHELPOTHERRESPONSE,
   '__module__' : 'TeamModuleMsg_pb2'
@@ -2343,13 +2155,6 @@ TeamNeedHelpListRequest = _reflection.GeneratedProtocolMessageType('TeamNeedHelp
   # @@protoc_insertion_point(class_scope:com.common.msg.TeamNeedHelpListRequest)
   })
 _sym_db.RegisterMessage(TeamNeedHelpListRequest)
-
-HelpPlayerInfo = _reflection.GeneratedProtocolMessageType('HelpPlayerInfo', (_message.Message,), {
-  'DESCRIPTOR' : _HELPPLAYERINFO,
-  '__module__' : 'TeamModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.HelpPlayerInfo)
-  })
-_sym_db.RegisterMessage(HelpPlayerInfo)
 
 TeamHelpInfo = _reflection.GeneratedProtocolMessageType('TeamHelpInfo', (_message.Message,), {
   'DESCRIPTOR' : _TEAMHELPINFO,
@@ -2379,6 +2184,13 @@ TeamOtherHelpNotifyRequest = _reflection.GeneratedProtocolMessageType('TeamOther
   })
 _sym_db.RegisterMessage(TeamOtherHelpNotifyRequest)
 
+HelpItem = _reflection.GeneratedProtocolMessageType('HelpItem', (_message.Message,), {
+  'DESCRIPTOR' : _HELPITEM,
+  '__module__' : 'TeamModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.HelpItem)
+  })
+_sym_db.RegisterMessage(HelpItem)
+
 HelpNotifyInfo = _reflection.GeneratedProtocolMessageType('HelpNotifyInfo', (_message.Message,), {
   'DESCRIPTOR' : _HELPNOTIFYINFO,
   '__module__' : 'TeamModuleMsg_pb2'
@@ -2392,6 +2204,48 @@ TeamOtherHelpNotifyResponse = _reflection.GeneratedProtocolMessageType('TeamOthe
   # @@protoc_insertion_point(class_scope:com.common.msg.TeamOtherHelpNotifyResponse)
   })
 _sym_db.RegisterMessage(TeamOtherHelpNotifyResponse)
+
+SearchTeamRequest = _reflection.GeneratedProtocolMessageType('SearchTeamRequest', (_message.Message,), {
+  'DESCRIPTOR' : _SEARCHTEAMREQUEST,
+  '__module__' : 'TeamModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.SearchTeamRequest)
+  })
+_sym_db.RegisterMessage(SearchTeamRequest)
+
+SearchTeamResponse = _reflection.GeneratedProtocolMessageType('SearchTeamResponse', (_message.Message,), {
+  'DESCRIPTOR' : _SEARCHTEAMRESPONSE,
+  '__module__' : 'TeamModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.SearchTeamResponse)
+  })
+_sym_db.RegisterMessage(SearchTeamResponse)
+
+SearchOtherHelpItemRequest = _reflection.GeneratedProtocolMessageType('SearchOtherHelpItemRequest', (_message.Message,), {
+  'DESCRIPTOR' : _SEARCHOTHERHELPITEMREQUEST,
+  '__module__' : 'TeamModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.SearchOtherHelpItemRequest)
+  })
+_sym_db.RegisterMessage(SearchOtherHelpItemRequest)
+
+SearchOtherHelpItemResponse = _reflection.GeneratedProtocolMessageType('SearchOtherHelpItemResponse', (_message.Message,), {
+  'DESCRIPTOR' : _SEARCHOTHERHELPITEMRESPONSE,
+  '__module__' : 'TeamModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.SearchOtherHelpItemResponse)
+  })
+_sym_db.RegisterMessage(SearchOtherHelpItemResponse)
+
+TakeRedEnvelopeRequest = _reflection.GeneratedProtocolMessageType('TakeRedEnvelopeRequest', (_message.Message,), {
+  'DESCRIPTOR' : _TAKEREDENVELOPEREQUEST,
+  '__module__' : 'TeamModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.TakeRedEnvelopeRequest)
+  })
+_sym_db.RegisterMessage(TakeRedEnvelopeRequest)
+
+TakeRedEnvelopeResponse = _reflection.GeneratedProtocolMessageType('TakeRedEnvelopeResponse', (_message.Message,), {
+  'DESCRIPTOR' : _TAKEREDENVELOPERESPONSE,
+  '__module__' : 'TeamModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.TakeRedEnvelopeResponse)
+  })
+_sym_db.RegisterMessage(TakeRedEnvelopeResponse)
 
 
 # @@protoc_insertion_point(module_scope)

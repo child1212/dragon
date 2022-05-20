@@ -6,8 +6,10 @@ enum AlchemyFurnaceModuleMsgSubCommand {
 	ALCHEMYFURNACEMODULEMSG_SUB_ALCHEMYFURNACEINFO = 26001;
 	//炼金请求
 	ALCHEMYFURNACEMODULEMSG_SUB_ALCHEMY = 26002;
-	//结束炼金炉CD请求
+	//结束或者减少炼金炉CD请求
 	ALCHEMYFURNACEMODULEMSG_SUB_FINISHALCHEMYFURNACECD = 26003;
+	//请求跳过炼金
+	ALCHEMYFURNACEMODULEMSG_SUB_SKIPALCHEMY = 26004;
 }
 
 
@@ -15,11 +17,13 @@ enum AlchemyFurnaceModuleMsgSubCommand {
 message AlchemyFurnaceInfoRequest {
 }
 
+message CumulateAward {
+	repeated ItemMsg items = 1;
+}
+
 //获取炼金炉信息响应
 message AlchemyFurnaceInfoResponse {
 	//炼金炉结束时间和CD结束时间不同时有效 可能都是无效值(炼金炉功能未开启)
-	//当前炼金炉结束时间0为无效值
-	required int64 endMill = 1;
 	//当前炼金炉的CD结束时间0为无效值
 	required int64 cdEndMill = 2;
 	//当前炼金炉累计奖励结束时间0为无效值
@@ -27,9 +31,11 @@ message AlchemyFurnaceInfoResponse {
 	//当前需要的道具	功能未开启时为空字符串
 	required string itemId = 4;
 	//累计奖励道具列表
-	repeated ItemMsg cumulativeAwards = 5;
+	repeated CumulateAward cumulativeAwards = 5;
 	//周期内累计次数
 	required int32 cumulativeNum = 6;
+	//累计奖励道具的次数 与累计奖励道具列表一一对应 客户端无需读取配置
+	repeated int32 cumulativeCfgNums = 7;
 }
 
 //炼金请求
@@ -44,18 +50,27 @@ message AlchemyResponse {
 	required int64 cdEndTime = 2;
 	//炼金炉需要的道具
 	required string itemId = 3;
-	//累计奖励 达到累计奖励发送正常值  未达到服务器不发送 客户端应该是lua中的默认值
-	optional ItemMsg cumulativeReward = 4;
 }
 
-//结束炼金炉CD请求
+//结束或者减少炼金炉CD请求
 message FinishAlchemyFurnaceCDRequest {
 	//服务器做检验用  如果消耗值比服务器少 服务器会返回错误码 其他情况仅做记录
+	//对于看广告的情况传递0
 	required int32  needNum = 1;
+	//是否观看了广告
+	optional bool ads = 2;
 }
 
 //结束炼金炉CD响应
 message FinishAlchemyFurnaceCDResponse {
 	//服务器扣除的钻石数量
 	required int32 num = 1;
+}
+
+//请求跳过炼金
+message SkipAlchemyRequest {
+}
+
+//请求跳过炼金相应
+message SkipAlchemyResponse {
 }

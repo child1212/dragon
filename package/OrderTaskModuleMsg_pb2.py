@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x18OrderTaskModuleMsg.proto\x12\x0e\x63om.common.msg\x1a\x13ItemModuleMsg.proto\"\xde\x01\n\x14OrderTaskProgressMsg\x12\x13\n\x0bplayerLevel\x18\x01 \x02(\x05\x12\x11\n\tfinishCnt\x18\x02 \x02(\x05\x12\x13\n\x0brewardIndex\x18\x03 \x02(\x03\x12!\n\x19\x66inishCntBeforeDifficulty\x18\x04 \x02(\x05\x12\x1a\n\x12orderTaskCreateCnt\x18\x05 \x01(\x03\x12\x1f\n\x17todayDragonOrderTaskCnt\x18\x06 \x01(\x05\x12\x13\n\x0brefreshTime\x18\x07 \x01(\x03\x12\x14\n\x0crewardCdTime\x18\x08 \x01(\x03\"9\n\x10OrderTaskItemMsg\x12\x16\n\x0eitemTemplateId\x18\x01 \x02(\t\x12\r\n\x05\x63ount\x18\x02 \x02(\x05\"\xf6\x01\n\x0cOrderTaskMsg\x12\x10\n\x08position\x18\x01 \x02(\x05\x12\x11\n\torderType\x18\x02 \x02(\x05\x12\x12\n\norderLevel\x18\x03 \x02(\x05\x12\x13\n\x0b\x63\x64StartTime\x18\x04 \x02(\x03\x12\x11\n\tvalueTime\x18\x05 \x02(\x03\x12\x33\n\ttaskItems\x18\x06 \x03(\x0b\x32 .com.common.msg.OrderTaskItemMsg\x12\x0f\n\x07orderId\x18\x07 \x01(\x03\x12\x11\n\torderIcon\x18\x08 \x01(\x05\x12,\n\x0brewardItems\x18\t \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"n\n\x10TimeOrderTaskMsg\x12\x10\n\x08position\x18\x01 \x02(\x05\x12\x16\n\x0eitemTemplateId\x18\x02 \x02(\t\x12\r\n\x05\x63ount\x18\x03 \x02(\x05\x12\x0e\n\x06\x66inish\x18\x04 \x01(\x08\x12\x11\n\tvalueTime\x18\x05 \x01(\x03\"T\n\x12TimeOrderRewardMsg\x12\x10\n\x08position\x18\x01 \x02(\x05\x12,\n\x0brewardItems\x18\x02 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"\x99\x01\n\x0cTimeOrderMsg\x12\x11\n\tstartTime\x18\x01 \x02(\x03\x12\x38\n\x0etimeOrderTasks\x18\x02 \x03(\x0b\x32 .com.common.msg.TimeOrderTaskMsg\x12<\n\x10timeOrderRewards\x18\x03 \x03(\x0b\x32\".com.common.msg.TimeOrderRewardMsg\"\xe2\x01\n\x0f\x41\x64\x64OrderTaskMsg\x12\x10\n\x08position\x18\x01 \x02(\x05\x12\x11\n\torderType\x18\x02 \x02(\x05\x12\x12\n\norderLevel\x18\x03 \x02(\x05\x12\x11\n\tvalueTime\x18\x04 \x02(\x05\x12\x33\n\ttaskItems\x18\x05 \x03(\x0b\x32 .com.common.msg.OrderTaskItemMsg\x12\r\n\x05price\x18\x06 \x01(\x05\x12\x11\n\torderIcon\x18\x07 \x01(\x05\x12,\n\x0brewardItems\x18\x08 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"J\n\x13\x41\x64\x64OrderTaskRequest\x12\x33\n\norderTasks\x18\x01 \x03(\x0b\x32\x1f.com.common.msg.AddOrderTaskMsg\"\x89\x01\n\x14\x41\x64\x64OrderTaskResponse\x12\x30\n\norderTasks\x18\x01 \x03(\x0b\x32\x1c.com.common.msg.OrderTaskMsg\x12?\n\x11orderTaskProgress\x18\x02 \x01(\x0b\x32$.com.common.msg.OrderTaskProgressMsg\"\xeb\x01\n\x16\x46inishOrderTaskRequest\x12\x10\n\x08position\x18\x01 \x02(\x05\x12\x11\n\torderType\x18\x02 \x02(\x05\x12\x12\n\norderLevel\x18\x03 \x02(\x05\x12\x11\n\tvalueTime\x18\x04 \x02(\x05\x12\x33\n\ttaskItems\x18\x05 \x03(\x0b\x32 .com.common.msg.OrderTaskItemMsg\x12\x0f\n\x07orderId\x18\x06 \x01(\x03\x12\x11\n\torderIcon\x18\x07 \x01(\x05\x12,\n\x0brewardItems\x18\x08 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"\xe3\x01\n\x17\x46inishOrderTaskResponse\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12\x30\n\norderTasks\x18\x02 \x01(\x0b\x32\x1c.com.common.msg.OrderTaskMsg\x12?\n\x11orderTaskProgress\x18\x03 \x01(\x0b\x32$.com.common.msg.OrderTaskProgressMsg\x12\r\n\x05level\x18\x04 \x01(\x05\x12\x0b\n\x03\x65xp\x18\x05 \x01(\x05\x12\x11\n\tfinishCnt\x18\x06 \x01(\x05\"[\n\x13\x44\x65lOrderTaskRequest\x12\x10\n\x08position\x18\x01 \x02(\x05\x12\x32\n\torderTask\x18\x02 \x01(\x0b\x32\x1f.com.common.msg.AddOrderTaskMsg\"\x16\n\x14\x44\x65lOrderTaskResponse\"/\n\x1eOrderTaskProgressRewardRequest\x12\r\n\x05index\x18\x01 \x02(\x05\"!\n\x1fOrderTaskProgressRewardResponse\"F\n\x13TimeOrderSetRequest\x12/\n\ttimeOrder\x18\x01 \x02(\x0b\x32\x1c.com.common.msg.TimeOrderMsg\"\x16\n\x14TimeOrderSetResponse\",\n\x18TimeOrderShipmentRequest\x12\x10\n\x08position\x18\x01 \x02(\x05\"\x1b\n\x19TimeOrderShipmentResponse\"J\n\x17TimeOrderDeliverRequest\x12/\n\ttimeOrder\x18\x01 \x02(\x0b\x32\x1c.com.common.msg.TimeOrderMsg\"\x1a\n\x18TimeOrderDeliverResponse\"(\n\x17TimeOrderClearCdRequest\x12\r\n\x05price\x18\x01 \x02(\x05\"\x1a\n\x18TimeOrderClearCdResponse\"\x1f\n\x1dOrderTaskProgressCdEndRequest\" \n\x1eOrderTaskProgressCdEndResponse*\xc6\x03\n\x1cOrderTaskModuleMsgSubCommand\x12)\n#ORDERTASKMODULEMSG_SUB_ADDORDERTASK\x10\xf1\xc4\x01\x12,\n&ORDERTASKMODULEMSG_SUB_FINISHORDERTASK\x10\xf2\xc4\x01\x12)\n#ORDERTASKMODULEMSG_SUB_DELORDERTASK\x10\xf3\xc4\x01\x12\x34\n.ORDERTASKMODULEMSG_SUB_ORDERTASKPROGRESSREWARD\x10\xf4\xc4\x01\x12)\n#ORDERTASKMODULEMSG_SUB_TIMEORDERSET\x10\xf5\xc4\x01\x12.\n(ORDERTASKMODULEMSG_SUB_TIMEORDERSHIPMENT\x10\xf6\xc4\x01\x12-\n\'ORDERTASKMODULEMSG_SUB_TIMEORDERDELIVER\x10\xf7\xc4\x01\x12-\n\'ORDERTASKMODULEMSG_SUB_TIMEORDERCLEARCD\x10\xf8\xc4\x01\x12\x33\n-ORDERTASKMODULEMSG_SUB_ORDERTASKPROGRESSCDEND\x10\xf9\xc4\x01'
+  serialized_pb=b'\n\x18OrderTaskModuleMsg.proto\x12\x0e\x63om.common.msg\x1a\x13ItemModuleMsg.proto\"\xfb\x01\n\x14OrderTaskProgressMsg\x12\x13\n\x0bplayerLevel\x18\x01 \x02(\x05\x12\x11\n\tfinishCnt\x18\x02 \x02(\x05\x12\x13\n\x0brewardIndex\x18\x03 \x02(\x03\x12!\n\x19\x66inishCntBeforeDifficulty\x18\x04 \x02(\x05\x12\x1a\n\x12orderTaskCreateCnt\x18\x05 \x01(\x03\x12\x1f\n\x17todayDragonOrderTaskCnt\x18\x06 \x01(\x05\x12\x13\n\x0brefreshTime\x18\x07 \x01(\x03\x12\x14\n\x0crewardCdTime\x18\x08 \x01(\x03\x12\x1b\n\x13todayNormalOrderCnt\x18\t \x01(\x05\"P\n\x10OrderTaskItemMsg\x12\x16\n\x0eitemTemplateId\x18\x01 \x02(\t\x12\r\n\x05\x63ount\x18\x02 \x02(\x05\x12\x15\n\roriginalCount\x18\x03 \x01(\x05\"\xf6\x01\n\x0cOrderTaskMsg\x12\x10\n\x08position\x18\x01 \x02(\x05\x12\x11\n\torderType\x18\x02 \x02(\x05\x12\x12\n\norderLevel\x18\x03 \x02(\x05\x12\x13\n\x0b\x63\x64StartTime\x18\x04 \x02(\x03\x12\x11\n\tvalueTime\x18\x05 \x02(\x03\x12\x33\n\ttaskItems\x18\x06 \x03(\x0b\x32 .com.common.msg.OrderTaskItemMsg\x12\x0f\n\x07orderId\x18\x07 \x01(\x03\x12\x11\n\torderIcon\x18\x08 \x01(\x05\x12,\n\x0brewardItems\x18\t \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"n\n\x10TimeOrderTaskMsg\x12\x10\n\x08position\x18\x01 \x02(\x05\x12\x16\n\x0eitemTemplateId\x18\x02 \x02(\t\x12\r\n\x05\x63ount\x18\x03 \x02(\x05\x12\x0e\n\x06\x66inish\x18\x04 \x01(\x08\x12\x11\n\tvalueTime\x18\x05 \x01(\x03\"T\n\x12TimeOrderRewardMsg\x12\x10\n\x08position\x18\x01 \x02(\x05\x12,\n\x0brewardItems\x18\x02 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"\xb3\x01\n\x0cTimeOrderMsg\x12\x11\n\tstartTime\x18\x01 \x02(\x03\x12\x38\n\x0etimeOrderTasks\x18\x02 \x03(\x0b\x32 .com.common.msg.TimeOrderTaskMsg\x12<\n\x10timeOrderRewards\x18\x03 \x03(\x0b\x32\".com.common.msg.TimeOrderRewardMsg\x12\x18\n\x10timeOrderTaskCnt\x18\x04 \x01(\x05\"\xf7\x01\n\x0f\x41\x64\x64OrderTaskMsg\x12\x10\n\x08position\x18\x01 \x02(\x05\x12\x11\n\torderType\x18\x02 \x02(\x05\x12\x12\n\norderLevel\x18\x03 \x02(\x05\x12\x11\n\tvalueTime\x18\x04 \x02(\x05\x12\x33\n\ttaskItems\x18\x05 \x03(\x0b\x32 .com.common.msg.OrderTaskItemMsg\x12\r\n\x05price\x18\x06 \x01(\x05\x12\x11\n\torderIcon\x18\x07 \x01(\x05\x12,\n\x0brewardItems\x18\x08 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12\x13\n\x0bplayerLevel\x18\t \x01(\x05\"J\n\x13\x41\x64\x64OrderTaskRequest\x12\x33\n\norderTasks\x18\x01 \x03(\x0b\x32\x1f.com.common.msg.AddOrderTaskMsg\"\xbe\x01\n\x14\x41\x64\x64OrderTaskResponse\x12\x30\n\norderTasks\x18\x01 \x03(\x0b\x32\x1c.com.common.msg.OrderTaskMsg\x12?\n\x11orderTaskProgress\x18\x02 \x01(\x0b\x32$.com.common.msg.OrderTaskProgressMsg\x12\x33\n\rnewOrderTasks\x18\x03 \x03(\x0b\x32\x1c.com.common.msg.OrderTaskMsg\"\x8d\x02\n\x16\x46inishOrderTaskRequest\x12\x10\n\x08position\x18\x01 \x02(\x05\x12\x11\n\torderType\x18\x02 \x02(\x05\x12\x12\n\norderLevel\x18\x03 \x02(\x05\x12\x11\n\tvalueTime\x18\x04 \x02(\x05\x12\x33\n\ttaskItems\x18\x05 \x03(\x0b\x32 .com.common.msg.OrderTaskItemMsg\x12\x0f\n\x07orderId\x18\x06 \x01(\x03\x12\x11\n\torderIcon\x18\x07 \x01(\x05\x12,\n\x0brewardItems\x18\x08 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12\x13\n\x0bplayerLevel\x18\t \x01(\x05\x12\x0b\n\x03\x61\x64s\x18\n \x01(\x08\"\xc1\x02\n\x17\x46inishOrderTaskResponse\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12\x30\n\norderTasks\x18\x02 \x01(\x0b\x32\x1c.com.common.msg.OrderTaskMsg\x12?\n\x11orderTaskProgress\x18\x03 \x01(\x0b\x32$.com.common.msg.OrderTaskProgressMsg\x12\r\n\x05level\x18\x04 \x01(\x05\x12\x0b\n\x03\x65xp\x18\x05 \x01(\x05\x12\x11\n\tfinishCnt\x18\x06 \x01(\x05\x12\x32\n\x0cnewOrderTask\x18\x07 \x01(\x0b\x32\x1c.com.common.msg.OrderTaskMsg\x12(\n\x07rewards\x18\x08 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"[\n\x13\x44\x65lOrderTaskRequest\x12\x10\n\x08position\x18\x01 \x02(\x05\x12\x32\n\torderTask\x18\x02 \x01(\x0b\x32\x1f.com.common.msg.AddOrderTaskMsg\"J\n\x14\x44\x65lOrderTaskResponse\x12\x32\n\x0cnewOrderTask\x18\x01 \x01(\x0b\x32\x1c.com.common.msg.OrderTaskMsg\"/\n\x1eOrderTaskProgressRewardRequest\x12\r\n\x05index\x18\x01 \x02(\x05\"!\n\x1fOrderTaskProgressRewardResponse\"F\n\x13TimeOrderSetRequest\x12/\n\ttimeOrder\x18\x01 \x02(\x0b\x32\x1c.com.common.msg.TimeOrderMsg\"\x16\n\x14TimeOrderSetResponse\"K\n\x18TimeOrderShipmentRequest\x12\x10\n\x08position\x18\x01 \x02(\x05\x12\x10\n\x08ticketId\x18\x02 \x01(\t\x12\x0b\n\x03\x61\x64s\x18\x03 \x01(\x08\"\x1b\n\x19TimeOrderShipmentResponse\"J\n\x17TimeOrderDeliverRequest\x12/\n\ttimeOrder\x18\x01 \x02(\x0b\x32\x1c.com.common.msg.TimeOrderMsg\"\x1a\n\x18TimeOrderDeliverResponse\"(\n\x17TimeOrderClearCdRequest\x12\r\n\x05price\x18\x01 \x02(\x05\"\x1a\n\x18TimeOrderClearCdResponse\"\x1f\n\x1dOrderTaskProgressCdEndRequest\" \n\x1eOrderTaskProgressCdEndResponse\"[\n\x12UpdateOrderTaskMsg\x12\x10\n\x08position\x18\x01 \x02(\x05\x12\x33\n\ttaskItems\x18\x06 \x03(\x0b\x32 .com.common.msg.OrderTaskItemMsg\"V\n\x16UpdateOrderTaskRequest\x12<\n\x10updateOrderTasks\x18\x01 \x03(\x0b\x32\".com.common.msg.UpdateOrderTaskMsg\"K\n\x17UpdateOrderTaskResponse\x12\x30\n\norderTasks\x18\x01 \x03(\x0b\x32\x1c.com.common.msg.OrderTaskMsg*\xf4\x03\n\x1cOrderTaskModuleMsgSubCommand\x12)\n#ORDERTASKMODULEMSG_SUB_ADDORDERTASK\x10\xf1\xc4\x01\x12,\n&ORDERTASKMODULEMSG_SUB_FINISHORDERTASK\x10\xf2\xc4\x01\x12)\n#ORDERTASKMODULEMSG_SUB_DELORDERTASK\x10\xf3\xc4\x01\x12\x34\n.ORDERTASKMODULEMSG_SUB_ORDERTASKPROGRESSREWARD\x10\xf4\xc4\x01\x12)\n#ORDERTASKMODULEMSG_SUB_TIMEORDERSET\x10\xf5\xc4\x01\x12.\n(ORDERTASKMODULEMSG_SUB_TIMEORDERSHIPMENT\x10\xf6\xc4\x01\x12-\n\'ORDERTASKMODULEMSG_SUB_TIMEORDERDELIVER\x10\xf7\xc4\x01\x12-\n\'ORDERTASKMODULEMSG_SUB_TIMEORDERCLEARCD\x10\xf8\xc4\x01\x12\x33\n-ORDERTASKMODULEMSG_SUB_ORDERTASKPROGRESSCDEND\x10\xf9\xc4\x01\x12,\n&ORDERTASKMODULEMSG_SUB_UPDATEORDERTASK\x10\xfa\xc4\x01'
   ,
   dependencies=[ItemModuleMsg__pb2.DESCRIPTOR,])
 
@@ -77,11 +77,16 @@ _ORDERTASKMODULEMSGSUBCOMMAND = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ORDERTASKMODULEMSG_SUB_UPDATEORDERTASK', index=9, number=25210,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2479,
-  serialized_end=2933,
+  serialized_start=3100,
+  serialized_end=3600,
 )
 _sym_db.RegisterEnumDescriptor(_ORDERTASKMODULEMSGSUBCOMMAND)
 
@@ -95,6 +100,7 @@ ORDERTASKMODULEMSG_SUB_TIMEORDERSHIPMENT = 25206
 ORDERTASKMODULEMSG_SUB_TIMEORDERDELIVER = 25207
 ORDERTASKMODULEMSG_SUB_TIMEORDERCLEARCD = 25208
 ORDERTASKMODULEMSG_SUB_ORDERTASKPROGRESSCDEND = 25209
+ORDERTASKMODULEMSG_SUB_UPDATEORDERTASK = 25210
 
 
 
@@ -162,6 +168,13 @@ _ORDERTASKPROGRESSMSG = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='todayNormalOrderCnt', full_name='com.common.msg.OrderTaskProgressMsg.todayNormalOrderCnt', index=8,
+      number=9, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -175,7 +188,7 @@ _ORDERTASKPROGRESSMSG = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=66,
-  serialized_end=288,
+  serialized_end=317,
 )
 
 
@@ -201,6 +214,13 @@ _ORDERTASKITEMMSG = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='originalCount', full_name='com.common.msg.OrderTaskItemMsg.originalCount', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -213,8 +233,8 @@ _ORDERTASKITEMMSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=290,
-  serialized_end=347,
+  serialized_start=319,
+  serialized_end=399,
 )
 
 
@@ -301,8 +321,8 @@ _ORDERTASKMSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=350,
-  serialized_end=596,
+  serialized_start=402,
+  serialized_end=648,
 )
 
 
@@ -361,8 +381,8 @@ _TIMEORDERTASKMSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=598,
-  serialized_end=708,
+  serialized_start=650,
+  serialized_end=760,
 )
 
 
@@ -400,8 +420,8 @@ _TIMEORDERREWARDMSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=710,
-  serialized_end=794,
+  serialized_start=762,
+  serialized_end=846,
 )
 
 
@@ -434,6 +454,13 @@ _TIMEORDERMSG = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='timeOrderTaskCnt', full_name='com.common.msg.TimeOrderMsg.timeOrderTaskCnt', index=3,
+      number=4, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -446,8 +473,8 @@ _TIMEORDERMSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=797,
-  serialized_end=950,
+  serialized_start=849,
+  serialized_end=1028,
 )
 
 
@@ -515,6 +542,13 @@ _ADDORDERTASKMSG = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='playerLevel', full_name='com.common.msg.AddOrderTaskMsg.playerLevel', index=8,
+      number=9, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -527,8 +561,8 @@ _ADDORDERTASKMSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=953,
-  serialized_end=1179,
+  serialized_start=1031,
+  serialized_end=1278,
 )
 
 
@@ -559,8 +593,8 @@ _ADDORDERTASKREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1181,
-  serialized_end=1255,
+  serialized_start=1280,
+  serialized_end=1354,
 )
 
 
@@ -586,6 +620,13 @@ _ADDORDERTASKRESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='newOrderTasks', full_name='com.common.msg.AddOrderTaskResponse.newOrderTasks', index=2,
+      number=3, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -598,8 +639,8 @@ _ADDORDERTASKRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1258,
-  serialized_end=1395,
+  serialized_start=1357,
+  serialized_end=1547,
 )
 
 
@@ -667,6 +708,20 @@ _FINISHORDERTASKREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='playerLevel', full_name='com.common.msg.FinishOrderTaskRequest.playerLevel', index=8,
+      number=9, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='ads', full_name='com.common.msg.FinishOrderTaskRequest.ads', index=9,
+      number=10, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -679,8 +734,8 @@ _FINISHORDERTASKREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1398,
-  serialized_end=1633,
+  serialized_start=1550,
+  serialized_end=1819,
 )
 
 
@@ -734,6 +789,20 @@ _FINISHORDERTASKRESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='newOrderTask', full_name='com.common.msg.FinishOrderTaskResponse.newOrderTask', index=6,
+      number=7, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='rewards', full_name='com.common.msg.FinishOrderTaskResponse.rewards', index=7,
+      number=8, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -746,8 +815,8 @@ _FINISHORDERTASKRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1636,
-  serialized_end=1863,
+  serialized_start=1822,
+  serialized_end=2143,
 )
 
 
@@ -785,8 +854,8 @@ _DELORDERTASKREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1865,
-  serialized_end=1956,
+  serialized_start=2145,
+  serialized_end=2236,
 )
 
 
@@ -798,6 +867,13 @@ _DELORDERTASKRESPONSE = _descriptor.Descriptor(
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='newOrderTask', full_name='com.common.msg.DelOrderTaskResponse.newOrderTask', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -810,8 +886,8 @@ _DELORDERTASKRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1958,
-  serialized_end=1980,
+  serialized_start=2238,
+  serialized_end=2312,
 )
 
 
@@ -842,8 +918,8 @@ _ORDERTASKPROGRESSREWARDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1982,
-  serialized_end=2029,
+  serialized_start=2314,
+  serialized_end=2361,
 )
 
 
@@ -867,8 +943,8 @@ _ORDERTASKPROGRESSREWARDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2031,
-  serialized_end=2064,
+  serialized_start=2363,
+  serialized_end=2396,
 )
 
 
@@ -899,8 +975,8 @@ _TIMEORDERSETREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2066,
-  serialized_end=2136,
+  serialized_start=2398,
+  serialized_end=2468,
 )
 
 
@@ -924,8 +1000,8 @@ _TIMEORDERSETRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2138,
-  serialized_end=2160,
+  serialized_start=2470,
+  serialized_end=2492,
 )
 
 
@@ -944,6 +1020,20 @@ _TIMEORDERSHIPMENTREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='ticketId', full_name='com.common.msg.TimeOrderShipmentRequest.ticketId', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='ads', full_name='com.common.msg.TimeOrderShipmentRequest.ads', index=2,
+      number=3, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -956,8 +1046,8 @@ _TIMEORDERSHIPMENTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2162,
-  serialized_end=2206,
+  serialized_start=2494,
+  serialized_end=2569,
 )
 
 
@@ -981,8 +1071,8 @@ _TIMEORDERSHIPMENTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2208,
-  serialized_end=2235,
+  serialized_start=2571,
+  serialized_end=2598,
 )
 
 
@@ -1013,8 +1103,8 @@ _TIMEORDERDELIVERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2237,
-  serialized_end=2311,
+  serialized_start=2600,
+  serialized_end=2674,
 )
 
 
@@ -1038,8 +1128,8 @@ _TIMEORDERDELIVERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2313,
-  serialized_end=2339,
+  serialized_start=2676,
+  serialized_end=2702,
 )
 
 
@@ -1070,8 +1160,8 @@ _TIMEORDERCLEARCDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2341,
-  serialized_end=2381,
+  serialized_start=2704,
+  serialized_end=2744,
 )
 
 
@@ -1095,8 +1185,8 @@ _TIMEORDERCLEARCDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2383,
-  serialized_end=2409,
+  serialized_start=2746,
+  serialized_end=2772,
 )
 
 
@@ -1120,8 +1210,8 @@ _ORDERTASKPROGRESSCDENDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2411,
-  serialized_end=2442,
+  serialized_start=2774,
+  serialized_end=2805,
 )
 
 
@@ -1145,8 +1235,111 @@ _ORDERTASKPROGRESSCDENDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2444,
-  serialized_end=2476,
+  serialized_start=2807,
+  serialized_end=2839,
+)
+
+
+_UPDATEORDERTASKMSG = _descriptor.Descriptor(
+  name='UpdateOrderTaskMsg',
+  full_name='com.common.msg.UpdateOrderTaskMsg',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='position', full_name='com.common.msg.UpdateOrderTaskMsg.position', index=0,
+      number=1, type=5, cpp_type=1, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='taskItems', full_name='com.common.msg.UpdateOrderTaskMsg.taskItems', index=1,
+      number=6, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2841,
+  serialized_end=2932,
+)
+
+
+_UPDATEORDERTASKREQUEST = _descriptor.Descriptor(
+  name='UpdateOrderTaskRequest',
+  full_name='com.common.msg.UpdateOrderTaskRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='updateOrderTasks', full_name='com.common.msg.UpdateOrderTaskRequest.updateOrderTasks', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2934,
+  serialized_end=3020,
+)
+
+
+_UPDATEORDERTASKRESPONSE = _descriptor.Descriptor(
+  name='UpdateOrderTaskResponse',
+  full_name='com.common.msg.UpdateOrderTaskResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='orderTasks', full_name='com.common.msg.UpdateOrderTaskResponse.orderTasks', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3022,
+  serialized_end=3097,
 )
 
 _ORDERTASKMSG.fields_by_name['taskItems'].message_type = _ORDERTASKITEMMSG
@@ -1159,14 +1352,21 @@ _ADDORDERTASKMSG.fields_by_name['rewardItems'].message_type = ItemModuleMsg__pb2
 _ADDORDERTASKREQUEST.fields_by_name['orderTasks'].message_type = _ADDORDERTASKMSG
 _ADDORDERTASKRESPONSE.fields_by_name['orderTasks'].message_type = _ORDERTASKMSG
 _ADDORDERTASKRESPONSE.fields_by_name['orderTaskProgress'].message_type = _ORDERTASKPROGRESSMSG
+_ADDORDERTASKRESPONSE.fields_by_name['newOrderTasks'].message_type = _ORDERTASKMSG
 _FINISHORDERTASKREQUEST.fields_by_name['taskItems'].message_type = _ORDERTASKITEMMSG
 _FINISHORDERTASKREQUEST.fields_by_name['rewardItems'].message_type = ItemModuleMsg__pb2._ITEMMSG
 _FINISHORDERTASKRESPONSE.fields_by_name['items'].message_type = ItemModuleMsg__pb2._ITEMMSG
 _FINISHORDERTASKRESPONSE.fields_by_name['orderTasks'].message_type = _ORDERTASKMSG
 _FINISHORDERTASKRESPONSE.fields_by_name['orderTaskProgress'].message_type = _ORDERTASKPROGRESSMSG
+_FINISHORDERTASKRESPONSE.fields_by_name['newOrderTask'].message_type = _ORDERTASKMSG
+_FINISHORDERTASKRESPONSE.fields_by_name['rewards'].message_type = ItemModuleMsg__pb2._ITEMMSG
 _DELORDERTASKREQUEST.fields_by_name['orderTask'].message_type = _ADDORDERTASKMSG
+_DELORDERTASKRESPONSE.fields_by_name['newOrderTask'].message_type = _ORDERTASKMSG
 _TIMEORDERSETREQUEST.fields_by_name['timeOrder'].message_type = _TIMEORDERMSG
 _TIMEORDERDELIVERREQUEST.fields_by_name['timeOrder'].message_type = _TIMEORDERMSG
+_UPDATEORDERTASKMSG.fields_by_name['taskItems'].message_type = _ORDERTASKITEMMSG
+_UPDATEORDERTASKREQUEST.fields_by_name['updateOrderTasks'].message_type = _UPDATEORDERTASKMSG
+_UPDATEORDERTASKRESPONSE.fields_by_name['orderTasks'].message_type = _ORDERTASKMSG
 DESCRIPTOR.message_types_by_name['OrderTaskProgressMsg'] = _ORDERTASKPROGRESSMSG
 DESCRIPTOR.message_types_by_name['OrderTaskItemMsg'] = _ORDERTASKITEMMSG
 DESCRIPTOR.message_types_by_name['OrderTaskMsg'] = _ORDERTASKMSG
@@ -1192,6 +1392,9 @@ DESCRIPTOR.message_types_by_name['TimeOrderClearCdRequest'] = _TIMEORDERCLEARCDR
 DESCRIPTOR.message_types_by_name['TimeOrderClearCdResponse'] = _TIMEORDERCLEARCDRESPONSE
 DESCRIPTOR.message_types_by_name['OrderTaskProgressCdEndRequest'] = _ORDERTASKPROGRESSCDENDREQUEST
 DESCRIPTOR.message_types_by_name['OrderTaskProgressCdEndResponse'] = _ORDERTASKPROGRESSCDENDRESPONSE
+DESCRIPTOR.message_types_by_name['UpdateOrderTaskMsg'] = _UPDATEORDERTASKMSG
+DESCRIPTOR.message_types_by_name['UpdateOrderTaskRequest'] = _UPDATEORDERTASKREQUEST
+DESCRIPTOR.message_types_by_name['UpdateOrderTaskResponse'] = _UPDATEORDERTASKRESPONSE
 DESCRIPTOR.enum_types_by_name['OrderTaskModuleMsgSubCommand'] = _ORDERTASKMODULEMSGSUBCOMMAND
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -1369,6 +1572,27 @@ OrderTaskProgressCdEndResponse = _reflection.GeneratedProtocolMessageType('Order
   # @@protoc_insertion_point(class_scope:com.common.msg.OrderTaskProgressCdEndResponse)
   })
 _sym_db.RegisterMessage(OrderTaskProgressCdEndResponse)
+
+UpdateOrderTaskMsg = _reflection.GeneratedProtocolMessageType('UpdateOrderTaskMsg', (_message.Message,), {
+  'DESCRIPTOR' : _UPDATEORDERTASKMSG,
+  '__module__' : 'OrderTaskModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.UpdateOrderTaskMsg)
+  })
+_sym_db.RegisterMessage(UpdateOrderTaskMsg)
+
+UpdateOrderTaskRequest = _reflection.GeneratedProtocolMessageType('UpdateOrderTaskRequest', (_message.Message,), {
+  'DESCRIPTOR' : _UPDATEORDERTASKREQUEST,
+  '__module__' : 'OrderTaskModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.UpdateOrderTaskRequest)
+  })
+_sym_db.RegisterMessage(UpdateOrderTaskRequest)
+
+UpdateOrderTaskResponse = _reflection.GeneratedProtocolMessageType('UpdateOrderTaskResponse', (_message.Message,), {
+  'DESCRIPTOR' : _UPDATEORDERTASKRESPONSE,
+  '__module__' : 'OrderTaskModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.UpdateOrderTaskResponse)
+  })
+_sym_db.RegisterMessage(UpdateOrderTaskResponse)
 
 
 # @@protoc_insertion_point(module_scope)

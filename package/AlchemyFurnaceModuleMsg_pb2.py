@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1d\x41lchemyFurnaceModuleMsg.proto\x12\x0e\x63om.common.msg\x1a\x13ItemModuleMsg.proto\"\x1b\n\x19\x41lchemyFurnaceInfoRequest\"\xba\x01\n\x1a\x41lchemyFurnaceInfoResponse\x12\x0f\n\x07\x65ndMill\x18\x01 \x02(\x03\x12\x11\n\tcdEndMill\x18\x02 \x02(\x03\x12\x1e\n\x16\x63umulativeAwardEndMill\x18\x03 \x02(\x03\x12\x0e\n\x06itemId\x18\x04 \x02(\t\x12\x31\n\x10\x63umulativeAwards\x18\x05 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12\x15\n\rcumulativeNum\x18\x06 \x02(\x05\"\x10\n\x0e\x41lchemyRequest\"\x95\x01\n\x0f\x41lchemyResponse\x12,\n\x0brewardItems\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12\x11\n\tcdEndTime\x18\x02 \x02(\x03\x12\x0e\n\x06itemId\x18\x03 \x02(\t\x12\x31\n\x10\x63umulativeReward\x18\x04 \x01(\x0b\x32\x17.com.common.msg.ItemMsg\"0\n\x1d\x46inishAlchemyFurnaceCDRequest\x12\x0f\n\x07needNum\x18\x01 \x02(\x05\"-\n\x1e\x46inishAlchemyFurnaceCDResponse\x12\x0b\n\x03num\x18\x01 \x02(\x05*\xbe\x01\n!AlchemyFurnaceModuleMsgSubCommand\x12\x34\n.ALCHEMYFURNACEMODULEMSG_SUB_ALCHEMYFURNACEINFO\x10\x91\xcb\x01\x12)\n#ALCHEMYFURNACEMODULEMSG_SUB_ALCHEMY\x10\x92\xcb\x01\x12\x38\n2ALCHEMYFURNACEMODULEMSG_SUB_FINISHALCHEMYFURNACECD\x10\x93\xcb\x01'
+  serialized_pb=b'\n\x1d\x41lchemyFurnaceModuleMsg.proto\x12\x0e\x63om.common.msg\x1a\x13ItemModuleMsg.proto\"\x1b\n\x19\x41lchemyFurnaceInfoRequest\"7\n\rCumulateAward\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"\xca\x01\n\x1a\x41lchemyFurnaceInfoResponse\x12\x11\n\tcdEndMill\x18\x02 \x02(\x03\x12\x1e\n\x16\x63umulativeAwardEndMill\x18\x03 \x02(\x03\x12\x0e\n\x06itemId\x18\x04 \x02(\t\x12\x37\n\x10\x63umulativeAwards\x18\x05 \x03(\x0b\x32\x1d.com.common.msg.CumulateAward\x12\x15\n\rcumulativeNum\x18\x06 \x02(\x05\x12\x19\n\x11\x63umulativeCfgNums\x18\x07 \x03(\x05\"\x10\n\x0e\x41lchemyRequest\"b\n\x0f\x41lchemyResponse\x12,\n\x0brewardItems\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12\x11\n\tcdEndTime\x18\x02 \x02(\x03\x12\x0e\n\x06itemId\x18\x03 \x02(\t\"=\n\x1d\x46inishAlchemyFurnaceCDRequest\x12\x0f\n\x07needNum\x18\x01 \x02(\x05\x12\x0b\n\x03\x61\x64s\x18\x02 \x01(\x08\"-\n\x1e\x46inishAlchemyFurnaceCDResponse\x12\x0b\n\x03num\x18\x01 \x02(\x05\"\x14\n\x12SkipAlchemyRequest\"\x15\n\x13SkipAlchemyResponse*\xed\x01\n!AlchemyFurnaceModuleMsgSubCommand\x12\x34\n.ALCHEMYFURNACEMODULEMSG_SUB_ALCHEMYFURNACEINFO\x10\x91\xcb\x01\x12)\n#ALCHEMYFURNACEMODULEMSG_SUB_ALCHEMY\x10\x92\xcb\x01\x12\x38\n2ALCHEMYFURNACEMODULEMSG_SUB_FINISHALCHEMYFURNACECD\x10\x93\xcb\x01\x12-\n\'ALCHEMYFURNACEMODULEMSG_SUB_SKIPALCHEMY\x10\x94\xcb\x01'
   ,
   dependencies=[ItemModuleMsg__pb2.DESCRIPTOR,])
 
@@ -47,11 +47,16 @@ _ALCHEMYFURNACEMODULEMSGSUBCOMMAND = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ALCHEMYFURNACEMODULEMSG_SUB_SKIPALCHEMY', index=3, number=26004,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=556,
-  serialized_end=746,
+  serialized_start=635,
+  serialized_end=872,
 )
 _sym_db.RegisterEnumDescriptor(_ALCHEMYFURNACEMODULEMSGSUBCOMMAND)
 
@@ -59,6 +64,7 @@ AlchemyFurnaceModuleMsgSubCommand = enum_type_wrapper.EnumTypeWrapper(_ALCHEMYFU
 ALCHEMYFURNACEMODULEMSG_SUB_ALCHEMYFURNACEINFO = 26001
 ALCHEMYFURNACEMODULEMSG_SUB_ALCHEMY = 26002
 ALCHEMYFURNACEMODULEMSG_SUB_FINISHALCHEMYFURNACECD = 26003
+ALCHEMYFURNACEMODULEMSG_SUB_SKIPALCHEMY = 26004
 
 
 
@@ -87,53 +93,18 @@ _ALCHEMYFURNACEINFOREQUEST = _descriptor.Descriptor(
 )
 
 
-_ALCHEMYFURNACEINFORESPONSE = _descriptor.Descriptor(
-  name='AlchemyFurnaceInfoResponse',
-  full_name='com.common.msg.AlchemyFurnaceInfoResponse',
+_CUMULATEAWARD = _descriptor.Descriptor(
+  name='CumulateAward',
+  full_name='com.common.msg.CumulateAward',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='endMill', full_name='com.common.msg.AlchemyFurnaceInfoResponse.endMill', index=0,
-      number=1, type=3, cpp_type=2, label=2,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='cdEndMill', full_name='com.common.msg.AlchemyFurnaceInfoResponse.cdEndMill', index=1,
-      number=2, type=3, cpp_type=2, label=2,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='cumulativeAwardEndMill', full_name='com.common.msg.AlchemyFurnaceInfoResponse.cumulativeAwardEndMill', index=2,
-      number=3, type=3, cpp_type=2, label=2,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='itemId', full_name='com.common.msg.AlchemyFurnaceInfoResponse.itemId', index=3,
-      number=4, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='cumulativeAwards', full_name='com.common.msg.AlchemyFurnaceInfoResponse.cumulativeAwards', index=4,
-      number=5, type=11, cpp_type=10, label=3,
+      name='items', full_name='com.common.msg.CumulateAward.items', index=0,
+      number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='cumulativeNum', full_name='com.common.msg.AlchemyFurnaceInfoResponse.cumulativeNum', index=5,
-      number=6, type=5, cpp_type=1, label=2,
-      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
@@ -149,8 +120,75 @@ _ALCHEMYFURNACEINFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=100,
-  serialized_end=286,
+  serialized_start=99,
+  serialized_end=154,
+)
+
+
+_ALCHEMYFURNACEINFORESPONSE = _descriptor.Descriptor(
+  name='AlchemyFurnaceInfoResponse',
+  full_name='com.common.msg.AlchemyFurnaceInfoResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='cdEndMill', full_name='com.common.msg.AlchemyFurnaceInfoResponse.cdEndMill', index=0,
+      number=2, type=3, cpp_type=2, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='cumulativeAwardEndMill', full_name='com.common.msg.AlchemyFurnaceInfoResponse.cumulativeAwardEndMill', index=1,
+      number=3, type=3, cpp_type=2, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='itemId', full_name='com.common.msg.AlchemyFurnaceInfoResponse.itemId', index=2,
+      number=4, type=9, cpp_type=9, label=2,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='cumulativeAwards', full_name='com.common.msg.AlchemyFurnaceInfoResponse.cumulativeAwards', index=3,
+      number=5, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='cumulativeNum', full_name='com.common.msg.AlchemyFurnaceInfoResponse.cumulativeNum', index=4,
+      number=6, type=5, cpp_type=1, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='cumulativeCfgNums', full_name='com.common.msg.AlchemyFurnaceInfoResponse.cumulativeCfgNums', index=5,
+      number=7, type=5, cpp_type=1, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=157,
+  serialized_end=359,
 )
 
 
@@ -174,8 +212,8 @@ _ALCHEMYREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=288,
-  serialized_end=304,
+  serialized_start=361,
+  serialized_end=377,
 )
 
 
@@ -208,13 +246,6 @@ _ALCHEMYRESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='cumulativeReward', full_name='com.common.msg.AlchemyResponse.cumulativeReward', index=3,
-      number=4, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -227,8 +258,8 @@ _ALCHEMYRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=307,
-  serialized_end=456,
+  serialized_start=379,
+  serialized_end=477,
 )
 
 
@@ -247,6 +278,13 @@ _FINISHALCHEMYFURNACECDREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='ads', full_name='com.common.msg.FinishAlchemyFurnaceCDRequest.ads', index=1,
+      number=2, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -259,8 +297,8 @@ _FINISHALCHEMYFURNACECDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=458,
-  serialized_end=506,
+  serialized_start=479,
+  serialized_end=540,
 )
 
 
@@ -291,19 +329,72 @@ _FINISHALCHEMYFURNACECDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=508,
-  serialized_end=553,
+  serialized_start=542,
+  serialized_end=587,
 )
 
-_ALCHEMYFURNACEINFORESPONSE.fields_by_name['cumulativeAwards'].message_type = ItemModuleMsg__pb2._ITEMMSG
+
+_SKIPALCHEMYREQUEST = _descriptor.Descriptor(
+  name='SkipAlchemyRequest',
+  full_name='com.common.msg.SkipAlchemyRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=589,
+  serialized_end=609,
+)
+
+
+_SKIPALCHEMYRESPONSE = _descriptor.Descriptor(
+  name='SkipAlchemyResponse',
+  full_name='com.common.msg.SkipAlchemyResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=611,
+  serialized_end=632,
+)
+
+_CUMULATEAWARD.fields_by_name['items'].message_type = ItemModuleMsg__pb2._ITEMMSG
+_ALCHEMYFURNACEINFORESPONSE.fields_by_name['cumulativeAwards'].message_type = _CUMULATEAWARD
 _ALCHEMYRESPONSE.fields_by_name['rewardItems'].message_type = ItemModuleMsg__pb2._ITEMMSG
-_ALCHEMYRESPONSE.fields_by_name['cumulativeReward'].message_type = ItemModuleMsg__pb2._ITEMMSG
 DESCRIPTOR.message_types_by_name['AlchemyFurnaceInfoRequest'] = _ALCHEMYFURNACEINFOREQUEST
+DESCRIPTOR.message_types_by_name['CumulateAward'] = _CUMULATEAWARD
 DESCRIPTOR.message_types_by_name['AlchemyFurnaceInfoResponse'] = _ALCHEMYFURNACEINFORESPONSE
 DESCRIPTOR.message_types_by_name['AlchemyRequest'] = _ALCHEMYREQUEST
 DESCRIPTOR.message_types_by_name['AlchemyResponse'] = _ALCHEMYRESPONSE
 DESCRIPTOR.message_types_by_name['FinishAlchemyFurnaceCDRequest'] = _FINISHALCHEMYFURNACECDREQUEST
 DESCRIPTOR.message_types_by_name['FinishAlchemyFurnaceCDResponse'] = _FINISHALCHEMYFURNACECDRESPONSE
+DESCRIPTOR.message_types_by_name['SkipAlchemyRequest'] = _SKIPALCHEMYREQUEST
+DESCRIPTOR.message_types_by_name['SkipAlchemyResponse'] = _SKIPALCHEMYRESPONSE
 DESCRIPTOR.enum_types_by_name['AlchemyFurnaceModuleMsgSubCommand'] = _ALCHEMYFURNACEMODULEMSGSUBCOMMAND
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -313,6 +404,13 @@ AlchemyFurnaceInfoRequest = _reflection.GeneratedProtocolMessageType('AlchemyFur
   # @@protoc_insertion_point(class_scope:com.common.msg.AlchemyFurnaceInfoRequest)
   })
 _sym_db.RegisterMessage(AlchemyFurnaceInfoRequest)
+
+CumulateAward = _reflection.GeneratedProtocolMessageType('CumulateAward', (_message.Message,), {
+  'DESCRIPTOR' : _CUMULATEAWARD,
+  '__module__' : 'AlchemyFurnaceModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.CumulateAward)
+  })
+_sym_db.RegisterMessage(CumulateAward)
 
 AlchemyFurnaceInfoResponse = _reflection.GeneratedProtocolMessageType('AlchemyFurnaceInfoResponse', (_message.Message,), {
   'DESCRIPTOR' : _ALCHEMYFURNACEINFORESPONSE,
@@ -348,6 +446,20 @@ FinishAlchemyFurnaceCDResponse = _reflection.GeneratedProtocolMessageType('Finis
   # @@protoc_insertion_point(class_scope:com.common.msg.FinishAlchemyFurnaceCDResponse)
   })
 _sym_db.RegisterMessage(FinishAlchemyFurnaceCDResponse)
+
+SkipAlchemyRequest = _reflection.GeneratedProtocolMessageType('SkipAlchemyRequest', (_message.Message,), {
+  'DESCRIPTOR' : _SKIPALCHEMYREQUEST,
+  '__module__' : 'AlchemyFurnaceModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.SkipAlchemyRequest)
+  })
+_sym_db.RegisterMessage(SkipAlchemyRequest)
+
+SkipAlchemyResponse = _reflection.GeneratedProtocolMessageType('SkipAlchemyResponse', (_message.Message,), {
+  'DESCRIPTOR' : _SKIPALCHEMYRESPONSE,
+  '__module__' : 'AlchemyFurnaceModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.SkipAlchemyResponse)
+  })
+_sym_db.RegisterMessage(SkipAlchemyResponse)
 
 
 # @@protoc_insertion_point(module_scope)

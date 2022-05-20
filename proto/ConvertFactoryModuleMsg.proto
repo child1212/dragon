@@ -41,6 +41,8 @@ message ConvertRequest {
 	required string plantId = 2;
 	required string factoryId = 3;
 	repeated ConvertMsg convertMsgs = 4;
+	// 当前槽数量(通行证等添加槽位总和已前端为准)
+	optional int32 slotCnt = 5;
 }
 
 // 转换 响应
@@ -57,6 +59,8 @@ message ClearCdRequest {
 	required string plantId = 2;
 	required int32 slotId = 3;
 	required string factoryId = 4;
+	// 当前槽数量(通行证等添加槽位总和已前端为准)
+	optional int32 slotCnt = 5;
 }
 
 // 清除cd 响应
@@ -71,6 +75,8 @@ message OverflowDealRequest {
 	required string sceneId = 1;
 	required string plantId = 2;
 	required string factoryId = 3;
+	// 当前槽数量(通行证等添加槽位总和已前端为准)
+	optional int32 slotCnt = 4;
 }
 
 message OverflowDealResponse {

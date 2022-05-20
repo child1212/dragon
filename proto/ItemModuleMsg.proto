@@ -101,7 +101,7 @@ message ExchangeItemRequest {
 	optional bool isUse = 3;
 	//关卡类型 不是关卡兑换不用传递
 	optional int32 levelType = 4;
-	//兑换来源(0默认1工厂2订单3航海4任务)
+	//兑换来源(0默认1工厂2订单3航海4任务5炼金炉)
 	optional int32 source = 5;
 }
 
@@ -160,6 +160,20 @@ message DragonSkillMsg {
 	optional int64 skillTime = 2;
 }
 
+// 龙装扮
+message DragonSkinMsg {
+	// 装扮实例ID
+	optional int64 skinId = 1;
+	// 装扮配置ID
+	optional string tplId = 2;
+	// 龙ID
+	optional int64 creatureId = 3;
+	// 增加的体力上限
+	optional int32 energyLimit = 4;
+	// 装备的时间 
+	optional int64 equipTime = 5;
+}
+
 //龙信息
 message MagicalCreatureMsg {
 	// 实例id
@@ -184,6 +198,16 @@ message MagicalCreatureMsg {
 	optional bool explore = 10;
 	// 龙技能
 	repeated DragonSkillMsg skills = 11;
+	//上一次皇冠龙挂机奖励时间
+	optional int64 lastCrownHangUpRewardTime = 12;
+	// 装扮
+	repeated DragonSkinMsg skins = 13;
+	//龙迷宫状态结束时间
+	optional int64 mazeEndTime = 14;
+	// 每日领取挂机奖励次数
+	optional int32 todayHangUpRewardCnt = 15;
+	// 总领取挂机奖励次数
+	optional int32 totalHangUpRewardCnt = 16;
 }
 
 message SupplementItem {
@@ -191,7 +215,7 @@ message SupplementItem {
 	optional string itemTemplateId = 1;
 	//兑换道具数量
 	optional int32 count = 2;
-	//兑换来源(0默认1工厂2订单3航海4任务)
+	//兑换来源(0默认1工厂2订单3航海4任务5炼金炉)
 	optional int32 source = 3;
 }
 

@@ -1,11 +1,14 @@
 syntax = "proto2";
 package com.common.msg;
+import "ItemModuleMsg.proto";
 
 enum AdsModuleMsgSubCommand {
 	// 请求激励广告信息
 	ADSMODULEMSG_SUB_ADSINCENTIVEINFO = 13001;
 	// 领取激励广告奖励
 	ADSMODULEMSG_SUB_ADSINCENTIVEREWARD = 13002;
+	// 气球炸弹结束奖励
+	ADSMODULEMSG_SUB_BALLOONBOMBENDREWARD = 13003;
 }
 
 // 广告观看信息
@@ -35,9 +38,23 @@ message AdsIncentiveInfoResponse {
 message AdsIncentiveRewardRequest {
 	optional string adsId = 1;	// 广告ID
 	optional int32 energyRewardIndex = 2; // 体力广告档位
+	optional int32 prizeWheelIndex = 3;	// 转盘奖励索引,从1开始
+	optional int32 adsBoxIndex = 4;	// v15.1 广告宝箱索引,从1开始
 }
 
 // 激励广告奖励响应
 message AdsIncentiveRewardResponse {
+	// v15.1 目前是广告宝箱奖励
+	repeated ItemMsg rewards = 1;
+}
+
+// 气球炸弹结束奖励领取请求
+message BalloonBombEndRewardRequest {
 	
+}
+
+// 气球炸弹结束奖励领取响应
+message BalloonBombEndRewardResponse {
+	// 奖励
+	repeated ItemMsg rewards = 1;
 }

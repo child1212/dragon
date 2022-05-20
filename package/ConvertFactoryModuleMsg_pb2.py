@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1d\x43onvertFactoryModuleMsg.proto\x12\x0e\x63om.common.msg\x1a\x13ItemModuleMsg.proto\"I\n\x0e\x43onvertSlotMsg\x12\x0e\n\x06slotId\x18\x01 \x02(\x05\x12\x12\n\nstoreValue\x18\x02 \x02(\x05\x12\x13\n\x0b\x63\x64StartTime\x18\x03 \x01(\x03\"q\n\x11\x43onvertFactoryMsg\x12\x0f\n\x07plantId\x18\x01 \x02(\t\x12\x15\n\roverflowValue\x18\x02 \x02(\x05\x12\x34\n\x0c\x63onvertSlots\x18\x03 \x03(\x0b\x32\x1e.com.common.msg.ConvertSlotMsg\"1\n\nConvertMsg\x12\x0e\n\x06itemId\x18\x01 \x02(\t\x12\x13\n\x0b\x63onvertTime\x18\x02 \x02(\x03\"v\n\x0e\x43onvertRequest\x12\x0f\n\x07sceneId\x18\x01 \x02(\t\x12\x0f\n\x07plantId\x18\x02 \x02(\t\x12\x11\n\tfactoryId\x18\x03 \x02(\t\x12/\n\x0b\x63onvertMsgs\x18\x04 \x03(\x0b\x32\x1a.com.common.msg.ConvertMsg\"u\n\x0f\x43onvertResponse\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12:\n\x0f\x63onvertFactorys\x18\x02 \x02(\x0b\x32!.com.common.msg.ConvertFactoryMsg\"U\n\x0e\x43learCdRequest\x12\x0f\n\x07sceneId\x18\x01 \x02(\t\x12\x0f\n\x07plantId\x18\x02 \x02(\t\x12\x0e\n\x06slotId\x18\x03 \x02(\x05\x12\x11\n\tfactoryId\x18\x04 \x02(\t\"u\n\x0f\x43learCdResponse\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12:\n\x0f\x63onvertFactorys\x18\x02 \x02(\x0b\x32!.com.common.msg.ConvertFactoryMsg\"J\n\x13OverflowDealRequest\x12\x0f\n\x07sceneId\x18\x01 \x02(\t\x12\x0f\n\x07plantId\x18\x02 \x02(\t\x12\x11\n\tfactoryId\x18\x03 \x02(\t\"z\n\x14OverflowDealResponse\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12:\n\x0f\x63onvertFactorys\x18\x02 \x02(\x0b\x32!.com.common.msg.ConvertFactoryMsg*\xa9\x01\n!ConvertFactoryModuleMsgSubCommand\x12)\n#CONVERTFACTORYMODULEMSG_SUB_CONVERT\x10\x9d\xc7\x01\x12)\n#CONVERTFACTORYMODULEMSG_SUB_CLEARCD\x10\x9e\xc7\x01\x12.\n(CONVERTFACTORYMODULEMSG_SUB_OVERFLOWDEAL\x10\x9f\xc7\x01'
+  serialized_pb=b'\n\x1d\x43onvertFactoryModuleMsg.proto\x12\x0e\x63om.common.msg\x1a\x13ItemModuleMsg.proto\"I\n\x0e\x43onvertSlotMsg\x12\x0e\n\x06slotId\x18\x01 \x02(\x05\x12\x12\n\nstoreValue\x18\x02 \x02(\x05\x12\x13\n\x0b\x63\x64StartTime\x18\x03 \x01(\x03\"q\n\x11\x43onvertFactoryMsg\x12\x0f\n\x07plantId\x18\x01 \x02(\t\x12\x15\n\roverflowValue\x18\x02 \x02(\x05\x12\x34\n\x0c\x63onvertSlots\x18\x03 \x03(\x0b\x32\x1e.com.common.msg.ConvertSlotMsg\"1\n\nConvertMsg\x12\x0e\n\x06itemId\x18\x01 \x02(\t\x12\x13\n\x0b\x63onvertTime\x18\x02 \x02(\x03\"\x87\x01\n\x0e\x43onvertRequest\x12\x0f\n\x07sceneId\x18\x01 \x02(\t\x12\x0f\n\x07plantId\x18\x02 \x02(\t\x12\x11\n\tfactoryId\x18\x03 \x02(\t\x12/\n\x0b\x63onvertMsgs\x18\x04 \x03(\x0b\x32\x1a.com.common.msg.ConvertMsg\x12\x0f\n\x07slotCnt\x18\x05 \x01(\x05\"u\n\x0f\x43onvertResponse\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12:\n\x0f\x63onvertFactorys\x18\x02 \x02(\x0b\x32!.com.common.msg.ConvertFactoryMsg\"f\n\x0e\x43learCdRequest\x12\x0f\n\x07sceneId\x18\x01 \x02(\t\x12\x0f\n\x07plantId\x18\x02 \x02(\t\x12\x0e\n\x06slotId\x18\x03 \x02(\x05\x12\x11\n\tfactoryId\x18\x04 \x02(\t\x12\x0f\n\x07slotCnt\x18\x05 \x01(\x05\"u\n\x0f\x43learCdResponse\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12:\n\x0f\x63onvertFactorys\x18\x02 \x02(\x0b\x32!.com.common.msg.ConvertFactoryMsg\"[\n\x13OverflowDealRequest\x12\x0f\n\x07sceneId\x18\x01 \x02(\t\x12\x0f\n\x07plantId\x18\x02 \x02(\t\x12\x11\n\tfactoryId\x18\x03 \x02(\t\x12\x0f\n\x07slotCnt\x18\x04 \x01(\x05\"z\n\x14OverflowDealResponse\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12:\n\x0f\x63onvertFactorys\x18\x02 \x02(\x0b\x32!.com.common.msg.ConvertFactoryMsg*\xa9\x01\n!ConvertFactoryModuleMsgSubCommand\x12)\n#CONVERTFACTORYMODULEMSG_SUB_CONVERT\x10\x9d\xc7\x01\x12)\n#CONVERTFACTORYMODULEMSG_SUB_CLEARCD\x10\x9e\xc7\x01\x12.\n(CONVERTFACTORYMODULEMSG_SUB_OVERFLOWDEAL\x10\x9f\xc7\x01'
   ,
   dependencies=[ItemModuleMsg__pb2.DESCRIPTOR,])
 
@@ -50,8 +50,8 @@ _CONVERTFACTORYMODULEMSGSUBCOMMAND = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=957,
-  serialized_end=1126,
+  serialized_start=1009,
+  serialized_end=1178,
 )
 _sym_db.RegisterEnumDescriptor(_CONVERTFACTORYMODULEMSGSUBCOMMAND)
 
@@ -229,6 +229,13 @@ _CONVERTREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='slotCnt', full_name='com.common.msg.ConvertRequest.slotCnt', index=4,
+      number=5, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -241,8 +248,8 @@ _CONVERTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=311,
-  serialized_end=429,
+  serialized_start=312,
+  serialized_end=447,
 )
 
 
@@ -280,8 +287,8 @@ _CONVERTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=431,
-  serialized_end=548,
+  serialized_start=449,
+  serialized_end=566,
 )
 
 
@@ -321,6 +328,13 @@ _CLEARCDREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='slotCnt', full_name='com.common.msg.ClearCdRequest.slotCnt', index=4,
+      number=5, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -333,8 +347,8 @@ _CLEARCDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=550,
-  serialized_end=635,
+  serialized_start=568,
+  serialized_end=670,
 )
 
 
@@ -372,8 +386,8 @@ _CLEARCDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=637,
-  serialized_end=754,
+  serialized_start=672,
+  serialized_end=789,
 )
 
 
@@ -406,6 +420,13 @@ _OVERFLOWDEALREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='slotCnt', full_name='com.common.msg.OverflowDealRequest.slotCnt', index=3,
+      number=4, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -418,8 +439,8 @@ _OVERFLOWDEALREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=756,
-  serialized_end=830,
+  serialized_start=791,
+  serialized_end=882,
 )
 
 
@@ -457,8 +478,8 @@ _OVERFLOWDEALRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=832,
-  serialized_end=954,
+  serialized_start=884,
+  serialized_end=1006,
 )
 
 _CONVERTFACTORYMSG.fields_by_name['convertSlots'].message_type = _CONVERTSLOTMSG

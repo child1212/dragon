@@ -76,11 +76,11 @@ def many_mails(mail_title, mail_content, reward, server, pid_file_path, res_file
     res_file.close()
 
 #########################################
-mail_title = "test_mail"
-mail_content = "吾皇万岁万岁万万岁"
-reward = [["1003",10],["1002",20]]
-server = "38" 
-group_num = 5
+mail_title = "System Compensation"
+mail_content = "Dear adventurer, we are deeply sorry for the issue with Dragon Parkour. Here are your compensation. Thank you for your understanding.The event will be available again on 5/20/2022 4 AM PST. You are welcome to join."
+reward = [["1001",10],["1003",50]]
+server = "dragon" 
+group_num = 10
 pid_file_path = "pid_list.txt"
 res_file_path = "result_list.txt"
 
@@ -90,6 +90,8 @@ if server == "38":
     server = "http://dtest.gameyici.com"
 elif server == "qa":
     server = "https://dqa.hphorse.net"
+elif server == "dragon":
+    server = "https://dragon.hphorse.net"
 
 
 many_mails(mail_title, mail_content, reward, server, pid_file_path, res_file_path, group_num)

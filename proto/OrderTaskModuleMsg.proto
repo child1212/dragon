@@ -22,6 +22,8 @@ enum OrderTaskModuleMsgSubCommand {
   ORDERTASKMODULEMSG_SUB_TIMEORDERCLEARCD = 25208;
   // 订单进度CD结束
   ORDERTASKMODULEMSG_SUB_ORDERTASKPROGRESSCDEND = 25209;
+  // 更新订单需求物资
+  ORDERTASKMODULEMSG_SUB_UPDATEORDERTASK = 25210;
 }
 
 message OrderTaskProgressMsg {
@@ -41,11 +43,15 @@ message OrderTaskProgressMsg {
   optional int64 refreshTime = 7;
   //订单进度奖励cd开始时间
   optional int64 rewardCdTime = 8;
+  // 今日普通订单完成数量(非龙, 非广告)
+  optional int32 todayNormalOrderCnt = 9;
 }
 
 message OrderTaskItemMsg {
   required string itemTemplateId = 1;
   required int32 count = 2;
+  //浮动前的数量
+  optional int32 originalCount = 3;
 }
 
 message OrderTaskMsg {
@@ -96,6 +102,8 @@ message TimeOrderMsg {
   repeated TimeOrderTaskMsg timeOrderTasks = 2;
   // 奖励详情
   repeated TimeOrderRewardMsg timeOrderRewards = 3;
+  // 航海次数
+  optional int32 timeOrderTaskCnt = 4;
 }
 
 message AddOrderTaskMsg {
@@ -115,6 +123,8 @@ message AddOrderTaskMsg {
   optional int32 orderIcon = 7;
   // 奖励
   repeated ItemMsg rewardItems = 8;
+  // 前端等级
+  optional int32 playerLevel = 9;
 }
 
 // 添加订单 请求
@@ -124,8 +134,12 @@ message AddOrderTaskRequest {
 
 // 添加订单 响应
 message AddOrderTaskResponse {
+  //V8.1之后无用
   repeated OrderTaskMsg orderTasks = 1;
+  //V8.1之后无用
   optional OrderTaskProgressMsg orderTaskProgress = 2;
+  //同步新订单数据
+  repeated OrderTaskMsg newOrderTasks = 3;
 }
 
 // 完成并刷新订单 请求
@@ -146,16 +160,30 @@ message FinishOrderTaskRequest {
   optional int32 orderIcon = 7;
   // 奖励
   repeated ItemMsg rewardItems = 8;
+  // 前端等级
+  optional int32 playerLevel = 9;
+  // 看广告双倍奖励
+  optional bool ads = 10;
 }
 
 // 完成并刷新订单 响应
 message FinishOrderTaskResponse {
+  // 困难奖励道具
   repeated ItemMsg items = 1;
+  // 提交订单查找不到时同步订单数据 V8.1之后无用
   optional OrderTaskMsg orderTasks = 2;
+  // 进度(几种订单完成数前端需要同步)
   optional OrderTaskProgressMsg orderTaskProgress = 3;
+  // 提交订单查找不到时同步订单数据 V8.1之后无用
   optional int32 level = 4;
+  // 提交订单查找不到时同步订单数据 V8.1之后无用
   optional int32 exp = 5;
+  // 有效完成订单数 V8.1之后无用
   optional int32 finishCnt = 6;
+  // 同步新订单数据
+  optional OrderTaskMsg newOrderTask = 7;
+  // 除困难其他奖励道具
+  repeated ItemMsg rewards = 8;
 }
 
 // 删除订单 请求
@@ -166,7 +194,8 @@ message DelOrderTaskRequest {
 
 // 删除订单 响应
 message DelOrderTaskResponse {
-
+  //同步新订单数据
+  optional OrderTaskMsg newOrderTask = 1;
 }
 
 // 领取订单进度奖励 请求
@@ -191,6 +220,9 @@ message TimeOrderSetResponse {
 // 装载航海订单 请求
 message TimeOrderShipmentRequest {
   required int32 position = 1;
+  optional string ticketId = 2;
+  // 看广告装载
+  optional bool ads = 3;
 }
 
 // 装载航海订单 响应
@@ -224,4 +256,22 @@ message OrderTaskProgressCdEndRequest {
 
 // 领取订单进度奖励 响应
 message OrderTaskProgressCdEndResponse {
+}
+
+message UpdateOrderTaskMsg {
+  // 位置
+  required int32 position = 1;
+  // 任务需求物品列表
+  repeated OrderTaskItemMsg taskItems = 6;
+}
+
+// 更新订单需求物资 请求
+message UpdateOrderTaskRequest {
+  repeated UpdateOrderTaskMsg updateOrderTasks = 1;
+}
+
+// 更新订单需求物资 响应
+message UpdateOrderTaskResponse {
+  // 同步订单数据
+  repeated OrderTaskMsg orderTasks = 1;
 }

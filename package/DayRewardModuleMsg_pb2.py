@@ -12,6 +12,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+import ItemModuleMsg_pb2 as ItemModuleMsg__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -20,8 +21,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x18\x44\x61yRewardModuleMsg.proto\x12\x0e\x63om.common.msg\"\x16\n\x14\x44\x61yRewardInfoRequest\"[\n\x15\x44\x61yRewardInfoResponse\x12\x1c\n\x14\x63ontinueEnterGameNum\x18\x01 \x01(\x05\x12\x10\n\x08\x62\x61tchNum\x18\x02 \x01(\x05\x12\x12\n\nisRewarded\x18\x03 \x01(\x08\"#\n\x13GetDayRewardRequest\x12\x0c\n\x04\x66lag\x18\x01 \x01(\x05\"\x16\n\x14GetDayRewardResponse*s\n\x1c\x44\x61yRewardModuleMsgSubCommand\x12)\n$DAYREWARDMODULEMSG_SUB_DAYREWARDINFO\x10\xa9\x46\x12(\n#DAYREWARDMODULEMSG_SUB_GETDAYREWARD\x10\xaa\x46'
-)
+  serialized_pb=b'\n\x18\x44\x61yRewardModuleMsg.proto\x12\x0e\x63om.common.msg\x1a\x13ItemModuleMsg.proto\"6\n\x12\x44\x61yRandomRewardMsg\x12\x0b\n\x03\x64\x61y\x18\x01 \x01(\x05\x12\x13\n\x0brewardIndex\x18\x02 \x01(\x05\"\x16\n\x14\x44\x61yRewardInfoRequest\"\xa7\x01\n\x15\x44\x61yRewardInfoResponse\x12\x1c\n\x14\x63ontinueEnterGameNum\x18\x01 \x01(\x05\x12\x10\n\x08\x62\x61tchNum\x18\x02 \x01(\x05\x12\x12\n\nisRewarded\x18\x03 \x01(\x08\x12\x33\n\x07rewards\x18\x04 \x03(\x0b\x32\".com.common.msg.DayRandomRewardMsg\x12\x15\n\risAdsRewarded\x18\x05 \x01(\x08\"#\n\x13GetDayRewardRequest\x12\x0c\n\x04\x66lag\x18\x01 \x01(\x05\"\x16\n\x14GetDayRewardResponse*s\n\x1c\x44\x61yRewardModuleMsgSubCommand\x12)\n$DAYREWARDMODULEMSG_SUB_DAYREWARDINFO\x10\xa9\x46\x12(\n#DAYREWARDMODULEMSG_SUB_GETDAYREWARD\x10\xaa\x46'
+  ,
+  dependencies=[ItemModuleMsg__pb2.DESCRIPTOR,])
 
 _DAYREWARDMODULEMSGSUBCOMMAND = _descriptor.EnumDescriptor(
   name='DayRewardModuleMsgSubCommand',
@@ -43,8 +45,8 @@ _DAYREWARDMODULEMSGSUBCOMMAND = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=222,
-  serialized_end=337,
+  serialized_start=376,
+  serialized_end=491,
 )
 _sym_db.RegisterEnumDescriptor(_DAYREWARDMODULEMSGSUBCOMMAND)
 
@@ -52,6 +54,45 @@ DayRewardModuleMsgSubCommand = enum_type_wrapper.EnumTypeWrapper(_DAYREWARDMODUL
 DAYREWARDMODULEMSG_SUB_DAYREWARDINFO = 9001
 DAYREWARDMODULEMSG_SUB_GETDAYREWARD = 9002
 
+
+
+_DAYRANDOMREWARDMSG = _descriptor.Descriptor(
+  name='DayRandomRewardMsg',
+  full_name='com.common.msg.DayRandomRewardMsg',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='day', full_name='com.common.msg.DayRandomRewardMsg.day', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='rewardIndex', full_name='com.common.msg.DayRandomRewardMsg.rewardIndex', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=65,
+  serialized_end=119,
+)
 
 
 _DAYREWARDINFOREQUEST = _descriptor.Descriptor(
@@ -74,8 +115,8 @@ _DAYREWARDINFOREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=44,
-  serialized_end=66,
+  serialized_start=121,
+  serialized_end=143,
 )
 
 
@@ -108,6 +149,20 @@ _DAYREWARDINFORESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='rewards', full_name='com.common.msg.DayRewardInfoResponse.rewards', index=3,
+      number=4, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='isAdsRewarded', full_name='com.common.msg.DayRewardInfoResponse.isAdsRewarded', index=4,
+      number=5, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -120,8 +175,8 @@ _DAYREWARDINFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=68,
-  serialized_end=159,
+  serialized_start=146,
+  serialized_end=313,
 )
 
 
@@ -152,8 +207,8 @@ _GETDAYREWARDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=161,
-  serialized_end=196,
+  serialized_start=315,
+  serialized_end=350,
 )
 
 
@@ -177,16 +232,25 @@ _GETDAYREWARDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=198,
-  serialized_end=220,
+  serialized_start=352,
+  serialized_end=374,
 )
 
+_DAYREWARDINFORESPONSE.fields_by_name['rewards'].message_type = _DAYRANDOMREWARDMSG
+DESCRIPTOR.message_types_by_name['DayRandomRewardMsg'] = _DAYRANDOMREWARDMSG
 DESCRIPTOR.message_types_by_name['DayRewardInfoRequest'] = _DAYREWARDINFOREQUEST
 DESCRIPTOR.message_types_by_name['DayRewardInfoResponse'] = _DAYREWARDINFORESPONSE
 DESCRIPTOR.message_types_by_name['GetDayRewardRequest'] = _GETDAYREWARDREQUEST
 DESCRIPTOR.message_types_by_name['GetDayRewardResponse'] = _GETDAYREWARDRESPONSE
 DESCRIPTOR.enum_types_by_name['DayRewardModuleMsgSubCommand'] = _DAYREWARDMODULEMSGSUBCOMMAND
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
+
+DayRandomRewardMsg = _reflection.GeneratedProtocolMessageType('DayRandomRewardMsg', (_message.Message,), {
+  'DESCRIPTOR' : _DAYRANDOMREWARDMSG,
+  '__module__' : 'DayRewardModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.DayRandomRewardMsg)
+  })
+_sym_db.RegisterMessage(DayRandomRewardMsg)
 
 DayRewardInfoRequest = _reflection.GeneratedProtocolMessageType('DayRewardInfoRequest', (_message.Message,), {
   'DESCRIPTOR' : _DAYREWARDINFOREQUEST,

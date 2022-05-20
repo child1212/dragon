@@ -10,10 +10,10 @@ import os
 
 
 print("start time:",time.asctime(time.localtime()))
-account = "dcxo4c"
-level = "1"
+account = "aaaa80"
+level = "细沙"
 num = 1
-server = 'qa'
+server = '38'
 
 
 

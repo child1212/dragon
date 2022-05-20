@@ -4,6 +4,16 @@ package com.common.msg;
 enum RechargeModuleMsgSubCommand {
 	//充值
 	RECHARGEMODULEMSG_SUB_RECHARGE = 3001;
+	//同步玩家订阅信息
+	RECHARGEMODULEMSG_SUB_SUBSCRIBEINFO = 3002;
+	//请求订阅过期后处理(删除存储订阅信息 相应功能收回订阅权限)
+	RECHARGEMODULEMSG_SUB_SUBSCRIBEEXPIRED = 3003;
+	//请求处理过期的限时产品
+	RECHARGEMODULEMSG_SUB_PROCESSLIMITEDTIMEPRODUCT = 3004;
+	// 17.1 AF可打点列表
+	RECHARGEMODULEMSG_SUB_AFREPORTLIST = 3005;
+	// 17.1 AF打点确认
+	RECHARGEMODULEMSG_SUB_AFREPORTCONFIRM = 3006;
 }
 
 //充值请求
@@ -13,5 +23,76 @@ message RechargeRequest {
 
 //充值响应
 message RechargeResponse {
+	
+}
 
+message Subscribe {
+	//商品id
+	required string productId =1;
+	//过期时间(单位:秒)
+	required int64 expired =2;
+}
+
+//同步玩家订阅信息
+message SubscribeInfoRequest {
+	//同步玩家订阅信息
+	repeated Subscribe subscribes = 1;
+}
+
+//同步玩家订阅信息响应
+message SubscribeInfoResponse {
+	//服务器返回未在同步列表中的已经过期的订阅商品id集合
+	repeated string  expiredSubscribes = 1;
+	//客户端未同步 但在服务器有存储的有效数据集合(应该为pc测试  如果为ios 和 android 要查一下问题)
+	repeated Subscribe subscribes = 2;
+}
+
+//请求订阅过期后处理
+message SubscribeExpiredRequest {
+	//商品id
+	required string productId =1;
+}
+
+//请求订阅过期后处理响应
+message SubscribeExpiredResponse {
+}
+
+//限时产品信息
+message LimitedTimeProduct {
+	//限时产品类型
+	required int32 productType =1;
+	//限时产品过期时间
+	required int64 expiryTime =2;
+	//过期后是否处理过  0: 没有 1：处理过
+	optional int32 process = 3;
+}
+
+//请求处理过期的限时产品
+message ProcessLimitedTimeProductRequest  {
+	//限时产品类型
+	required int32 productType =1;
+}
+
+//请求处理过期的限时产品返回
+message ProcessLimitedTimeProductResponse  {
+}
+
+// 17.1 AF可打点列表请求
+message AFReportListRequest {
+	
+}
+
+// 17.1 AF可打点列表返回
+message AFReportListResponse {
+	repeated string eventnames = 1;
+}
+
+// 17.1 AF打点确认请求
+message AFReportConfirmRequest {
+	repeated string eventnames = 1;
+}
+
+// 17.1 AF打点确认返回
+message AFReportConfirmResponse {
+	
 }

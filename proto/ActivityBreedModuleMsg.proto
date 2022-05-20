@@ -1,0 +1,61 @@
+syntax = "proto2";
+package com.common.msg;
+import "TaskModuleMsg.proto";
+enum ActivityBreedModuleMsgSubCommand {
+	//获取繁育季活动信息
+	ACTIVITYBREEDMODULEMSG_SUB_ACTIVITYBREEDINFO = 26101;
+	//领取活动任务奖励请求
+	ACTIVITYBREEDMODULEMSG_SUB_TAKETASKAWARD = 26102;
+	//记录解锁进度请求
+	ACTIVITYBREEDMODULEMSG_SUB_UNLOCKPROGRESS = 26103;
+}
+
+
+//获取繁育季活动信息
+message ActivityBreedInfoRequest {
+	//活动id
+	required string activityId = 1;
+}
+
+message BreedTask{
+	//0：未完成  1：已完成  2：已经提交领奖
+	required int32 state = 1;
+	//任务所需参数
+	repeated ProtoTypes  params = 2;
+	//任务配置
+	required string  taskId = 3;
+}
+
+//获取繁育季活动信息响应
+message ActivityBreedInfoResponse {
+	//所有存储信息的任务信息
+	repeated BreedTask breedTasks = 1;
+	//累计的繁育次数
+	optional int32 breedCount = 2;
+	//解锁进度
+	optional int32 progress = 3;
+}
+
+//领取活动任务奖励请求
+message TakeTaskAwardRequest {
+	//活动id
+	required string activityId = 1;
+	//任务id
+	required string taskId = 2;
+}
+
+//领取活动任务奖励响应
+message TakeTaskAwardResponse {
+}
+
+//记录解锁进度请求
+message UnlockProgressRequest {
+	//活动id
+	required string activityId = 1;
+	//进度id
+	required int32 progress = 2;
+}
+
+//记录解锁进度请求响应
+message UnlockProgressResponse {
+}

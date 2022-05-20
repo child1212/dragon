@@ -12,6 +12,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+import ItemModuleMsg_pb2 as ItemModuleMsg__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -20,8 +21,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x12\x41\x64sModuleMsg.proto\x12\x0e\x63om.common.msg\"G\n\x0b\x41\x64sViewInfo\x12\n\n\x02id\x18\x01 \x01(\t\x12\x14\n\x0clastViewTime\x18\x02 \x01(\x03\x12\x16\n\x0etodayViewCount\x18\x03 \x01(\x05\"\x19\n\x17\x41\x64sIncentiveInfoRequest\"\\\n\x18\x41\x64sIncentiveInfoResponse\x12\x10\n\x08\x61\x64sGroup\x18\x01 \x01(\t\x12.\n\tviewInfos\x18\x02 \x03(\x0b\x32\x1b.com.common.msg.AdsViewInfo\"E\n\x19\x41\x64sIncentiveRewardRequest\x12\r\n\x05\x61\x64sId\x18\x01 \x01(\t\x12\x19\n\x11\x65nergyRewardIndex\x18\x02 \x01(\x05\"\x1c\n\x1a\x41\x64sIncentiveRewardResponse*j\n\x16\x41\x64sModuleMsgSubCommand\x12&\n!ADSMODULEMSG_SUB_ADSINCENTIVEINFO\x10\xc9\x65\x12(\n#ADSMODULEMSG_SUB_ADSINCENTIVEREWARD\x10\xca\x65'
-)
+  serialized_pb=b'\n\x12\x41\x64sModuleMsg.proto\x12\x0e\x63om.common.msg\x1a\x13ItemModuleMsg.proto\"G\n\x0b\x41\x64sViewInfo\x12\n\n\x02id\x18\x01 \x01(\t\x12\x14\n\x0clastViewTime\x18\x02 \x01(\x03\x12\x16\n\x0etodayViewCount\x18\x03 \x01(\x05\"\x19\n\x17\x41\x64sIncentiveInfoRequest\"\\\n\x18\x41\x64sIncentiveInfoResponse\x12\x10\n\x08\x61\x64sGroup\x18\x01 \x01(\t\x12.\n\tviewInfos\x18\x02 \x03(\x0b\x32\x1b.com.common.msg.AdsViewInfo\"s\n\x19\x41\x64sIncentiveRewardRequest\x12\r\n\x05\x61\x64sId\x18\x01 \x01(\t\x12\x19\n\x11\x65nergyRewardIndex\x18\x02 \x01(\x05\x12\x17\n\x0fprizeWheelIndex\x18\x03 \x01(\x05\x12\x13\n\x0b\x61\x64sBoxIndex\x18\x04 \x01(\x05\"F\n\x1a\x41\x64sIncentiveRewardResponse\x12(\n\x07rewards\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"\x1d\n\x1b\x42\x61lloonBombEndRewardRequest\"H\n\x1c\x42\x61lloonBombEndRewardResponse\x12(\n\x07rewards\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg*\x96\x01\n\x16\x41\x64sModuleMsgSubCommand\x12&\n!ADSMODULEMSG_SUB_ADSINCENTIVEINFO\x10\xc9\x65\x12(\n#ADSMODULEMSG_SUB_ADSINCENTIVEREWARD\x10\xca\x65\x12*\n%ADSMODULEMSG_SUB_BALLOONBOMBENDREWARD\x10\xcb\x65'
+  ,
+  dependencies=[ItemModuleMsg__pb2.DESCRIPTOR,])
 
 _ADSMODULEMSGSUBCOMMAND = _descriptor.EnumDescriptor(
   name='AdsModuleMsgSubCommand',
@@ -40,17 +42,23 @@ _ADSMODULEMSGSUBCOMMAND = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ADSMODULEMSG_SUB_BALLOONBOMBENDREWARD', index=2, number=13003,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=333,
-  serialized_end=439,
+  serialized_start=548,
+  serialized_end=698,
 )
 _sym_db.RegisterEnumDescriptor(_ADSMODULEMSGSUBCOMMAND)
 
 AdsModuleMsgSubCommand = enum_type_wrapper.EnumTypeWrapper(_ADSMODULEMSGSUBCOMMAND)
 ADSMODULEMSG_SUB_ADSINCENTIVEINFO = 13001
 ADSMODULEMSG_SUB_ADSINCENTIVEREWARD = 13002
+ADSMODULEMSG_SUB_BALLOONBOMBENDREWARD = 13003
 
 
 
@@ -95,8 +103,8 @@ _ADSVIEWINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=38,
-  serialized_end=109,
+  serialized_start=59,
+  serialized_end=130,
 )
 
 
@@ -120,8 +128,8 @@ _ADSINCENTIVEINFOREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=111,
-  serialized_end=136,
+  serialized_start=132,
+  serialized_end=157,
 )
 
 
@@ -159,8 +167,8 @@ _ADSINCENTIVEINFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=138,
-  serialized_end=230,
+  serialized_start=159,
+  serialized_end=251,
 )
 
 
@@ -186,6 +194,20 @@ _ADSINCENTIVEREWARDREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='prizeWheelIndex', full_name='com.common.msg.AdsIncentiveRewardRequest.prizeWheelIndex', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='adsBoxIndex', full_name='com.common.msg.AdsIncentiveRewardRequest.adsBoxIndex', index=3,
+      number=4, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -198,14 +220,46 @@ _ADSINCENTIVEREWARDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=232,
-  serialized_end=301,
+  serialized_start=253,
+  serialized_end=368,
 )
 
 
 _ADSINCENTIVEREWARDRESPONSE = _descriptor.Descriptor(
   name='AdsIncentiveRewardResponse',
   full_name='com.common.msg.AdsIncentiveRewardResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='rewards', full_name='com.common.msg.AdsIncentiveRewardResponse.rewards', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=370,
+  serialized_end=440,
+)
+
+
+_BALLOONBOMBENDREWARDREQUEST = _descriptor.Descriptor(
+  name='BalloonBombEndRewardRequest',
+  full_name='com.common.msg.BalloonBombEndRewardRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -223,16 +277,52 @@ _ADSINCENTIVEREWARDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=303,
-  serialized_end=331,
+  serialized_start=442,
+  serialized_end=471,
+)
+
+
+_BALLOONBOMBENDREWARDRESPONSE = _descriptor.Descriptor(
+  name='BalloonBombEndRewardResponse',
+  full_name='com.common.msg.BalloonBombEndRewardResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='rewards', full_name='com.common.msg.BalloonBombEndRewardResponse.rewards', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=473,
+  serialized_end=545,
 )
 
 _ADSINCENTIVEINFORESPONSE.fields_by_name['viewInfos'].message_type = _ADSVIEWINFO
+_ADSINCENTIVEREWARDRESPONSE.fields_by_name['rewards'].message_type = ItemModuleMsg__pb2._ITEMMSG
+_BALLOONBOMBENDREWARDRESPONSE.fields_by_name['rewards'].message_type = ItemModuleMsg__pb2._ITEMMSG
 DESCRIPTOR.message_types_by_name['AdsViewInfo'] = _ADSVIEWINFO
 DESCRIPTOR.message_types_by_name['AdsIncentiveInfoRequest'] = _ADSINCENTIVEINFOREQUEST
 DESCRIPTOR.message_types_by_name['AdsIncentiveInfoResponse'] = _ADSINCENTIVEINFORESPONSE
 DESCRIPTOR.message_types_by_name['AdsIncentiveRewardRequest'] = _ADSINCENTIVEREWARDREQUEST
 DESCRIPTOR.message_types_by_name['AdsIncentiveRewardResponse'] = _ADSINCENTIVEREWARDRESPONSE
+DESCRIPTOR.message_types_by_name['BalloonBombEndRewardRequest'] = _BALLOONBOMBENDREWARDREQUEST
+DESCRIPTOR.message_types_by_name['BalloonBombEndRewardResponse'] = _BALLOONBOMBENDREWARDRESPONSE
 DESCRIPTOR.enum_types_by_name['AdsModuleMsgSubCommand'] = _ADSMODULEMSGSUBCOMMAND
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -270,6 +360,20 @@ AdsIncentiveRewardResponse = _reflection.GeneratedProtocolMessageType('AdsIncent
   # @@protoc_insertion_point(class_scope:com.common.msg.AdsIncentiveRewardResponse)
   })
 _sym_db.RegisterMessage(AdsIncentiveRewardResponse)
+
+BalloonBombEndRewardRequest = _reflection.GeneratedProtocolMessageType('BalloonBombEndRewardRequest', (_message.Message,), {
+  'DESCRIPTOR' : _BALLOONBOMBENDREWARDREQUEST,
+  '__module__' : 'AdsModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.BalloonBombEndRewardRequest)
+  })
+_sym_db.RegisterMessage(BalloonBombEndRewardRequest)
+
+BalloonBombEndRewardResponse = _reflection.GeneratedProtocolMessageType('BalloonBombEndRewardResponse', (_message.Message,), {
+  'DESCRIPTOR' : _BALLOONBOMBENDREWARDRESPONSE,
+  '__module__' : 'AdsModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.BalloonBombEndRewardResponse)
+  })
+_sym_db.RegisterMessage(BalloonBombEndRewardResponse)
 
 
 # @@protoc_insertion_point(module_scope)

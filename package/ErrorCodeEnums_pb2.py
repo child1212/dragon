@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x14\x45rrorCodeEnums.proto\x12\x0e\x63om.common.msg*\xa7\x19\n\x0e\x45rrorCodeEnums\x12\x0b\n\x07SUCCESS\x10\x00\x12\x0e\n\nERRORBREAK\x10\x01\x12\x12\n\rREPEATEDLOGIN\x10\xea\x07\x12\x0e\n\tMSGISNULL\x10\xeb\x07\x12\x0f\n\nNULLPLAYER\x10\xec\x07\x12\n\n\x05\x45RROR\x10\xed\x07\x12\x0f\n\nLOGINFAILD\x10\xee\x07\x12\x15\n\x10REPEATEDCACHEMSG\x10\xef\x07\x12\x11\n\x0cSERVER_ERROR\x10\xf0\x07\x12\x12\n\rVERSION_ERROR\x10\xf1\x07\x12\x18\n\x13PLAYER_STATUS_ERROR\x10\xf2\x07\x12\x19\n\x14\x41\x43\x43OUNT_ALREADY_BIND\x10\xf3\x07\x12#\n\x1eVISITOR_ACCOUNT_NOT_HAS_PLAYER\x10\xf4\x07\x12\x13\n\x0eITEM_NOTENOUGH\x10\xd1\x0f\x12\x11\n\x0cITEM_TIMEOUT\x10\xd2\x0f\x12\x13\n\x0eITEM_NOTCANUSE\x10\xd3\x0f\x12\x1d\n\x18ITEM_EXCHANGE_ENERGYFULL\x10\xd4\x0f\x12!\n\x1cITEM_EXCHANGE_DIAMONDSENOUGH\x10\xd5\x0f\x12(\n#ITEM_EXCHANGE_NOEXITSITEMTEMPLATEID\x10\xd6\x0f\x12(\n#ITEM_EXCHANGE_RECHARGEDIAMONDSFAILD\x10\xd7\x0f\x12\x1c\n\x17ITEM_NOT_SUBSCRIBE_ITEM\x10\xd8\x0f\x12 \n\x1bITEM_SUBSCRIBE_ITEM_EXPIRED\x10\xd9\x0f\x12\x19\n\x14\x42UIDING_TO_MAX_LEVEL\x10\xb9\x17\x12\x1d\n\x18\x42UILDING_ITEM_NOT_ENOUGH\x10\xba\x17\x12\x17\n\x12\x42UILDING_NOT_EXIST\x10\xbb\x17\x12\x1b\n\x16\x42UILDING_CAN_NOT_CLEAN\x10\xbc\x17\x12$\n\x1f\x42UILDING_CAN_NOT_CLEAN_ON_LEVEL\x10\xbd\x17\x12$\n\x1f\x44\x41YREWARD_NOT_REPEATEDGETREWARD\x10\xa9\x46\x12\x17\n\x12\x44\x41YREWARD_NOT_OPEN\x10\xaa\x46\x12\x17\n\x12TASK_NOT_FIND_TASK\x10\x91N\x12\x14\n\x0fTASK_NOT_FINISH\x10\x92N\x12\x16\n\x11TASK_GRAPH_CLOSED\x10\x93N\x12\x18\n\x13TASK_ALREADY_SUBMIT\x10\x94N\x12\x15\n\x10\x42UFF_NOT_TIMEOUT\x10\xf9U\x12\x16\n\x11\x42UFF_NOT_REPEATED\x10\xfaU\x12\x18\n\x13\x42UFF_NOT_BUFFENOUGH\x10\xfbU\x12\x1b\n\x16RECHARGE_REPEATE_ORDER\x10\xe1]\x12\x1d\n\x18RECHARGE_ORDER_NOT_EXIST\x10\xe2]\x12\x1c\n\x17RECHARGE_ORDER_ID_ERROR\x10\xe3]\x12\x17\n\x12RECHARGE_CANNOT_OP\x10\xe4]\x12\x1a\n\x15RECHARGE_VERIFY_ERROR\x10\xe5]\x12\x1e\n\x19RECHARGE_TEMPLATE_NO_INFO\x10\xe6]\x12 \n\x1bRECHARGE_FIRST_RECHARGE_END\x10\xe7]\x12\x1b\n\x16\x43OMMON_SYSTEM_NOT_OPEN\x10\xc9\x65\x12\x1c\n\x17\x43OMMON_CONFIG_NOT_EXIST\x10\xca\x65\x12$\n\x1f\x43OMMON_PLAYER_NAME_CAN_NOT_NULL\x10\xcb\x65\x12 \n\x1b\x43OMMON_PLAYER_NAME_TOO_LONG\x10\xcc\x65\x12$\n\x1f\x43OMMON_PLAYER_ICON_CAN_NOT_NULL\x10\xcd\x65\x12\x1d\n\x18\x43OMMON_PLAYER_ICON_ERROR\x10\xce\x65\x12\x17\n\x12\x43OMMON_PARAM_ERROR\x10\xcf\x65\x12\x19\n\x14\x43OMMON_VERSION_ERROR\x10\xd0\x65\x12\x1e\n\x19\x43OMMON_SYSTEM_REPEAT_OPEN\x10\xd1\x65\x12\x0f\n\nADS_CLOSED\x10\x99u\x12\x1e\n\x19\x41\x44S_OPEN_LEVEL_NOT_ENOUGH\x10\x9au\x12\x0b\n\x06\x41\x44S_CD\x10\x9bu\x12\x14\n\x0f\x41\x44S_DAILY_LIMIT\x10\x9cu\x12\x18\n\x13\x41\x44S_GROUP_NOT_EXIST\x10\x9du\x12!\n\x1c\x41\x44S_DIAMOND_LEVEL_NOT_ENOUGH\x10\x9eu\x12!\n\x1c\x41\x44S_DIAMOND_COUNT_NOT_ENOUGH\x10\x9fu\x12\"\n\x1d\x41\x44S_NEW_GIFT_COUNT_NOT_ENOUGH\x10\xa0u\x12 \n\x1aMAGICALCREATURE_DATA_ERROR\x10\xa9\xc3\x01\x12 \n\x1aMAGICALCREATURE_ITEMENOUGH\x10\xaa\xc3\x01\x12\x1d\n\x17MAGICALCREATURE_NO_DATA\x10\xab\xc3\x01\x12&\n MAGICALCREATURE_COLLECT_NO_PLANT\x10\xac\xc3\x01\x12\"\n\x1cMAGICALCREATURE_CARESS_ERROR\x10\xad\xc3\x01\x12*\n$MAGICALCREATURE_PET_CONSUME_NOENOUGH\x10\xae\xc3\x01\x12$\n\x1eMAGICALCREATURE_HANGUP_PRODUCT\x10\xaf\xc3\x01\x12\"\n\x1cMAGICALCREATURE_DRAGON_LIMIT\x10\xb0\xc3\x01\x12#\n\x1dMAGICALCREATURE_UPLEVEL_ERROR\x10\xb1\xc3\x01\x12!\n\x1bMAGICALCREATURE_BREED_ERROR\x10\xb2\xc3\x01\x12#\n\x1dMAGICALCREATURE_COLLECT_ERROR\x10\xb3\xc3\x01\x12 \n\x1aMAGICALCREATURE_FEED_ERROR\x10\xb4\xc3\x01\x12#\n\x1dMAGICALCREATURE_SKILLID_ERROR\x10\xb5\xc3\x01\x12 \n\x1aMAGICALCREATURE_SKILL_INCD\x10\xb6\xc3\x01\x12&\n MAGICALCREATURE_COMMISSION_ERROR\x10\xb7\xc3\x01\x12*\n$MAGICALCREATURE_COMMISSION_NO_FINISH\x10\xb8\xc3\x01\x12*\n$MAGICALCREATURE_COMMISSION_NOTENOUGH\x10\xb9\xc3\x01\x12,\n&MAGICALCREATURE_HAVE_COMMISSION_DRAGON\x10\xba\xc3\x01\x12$\n\x1eMAGICALCREATURE_EXPLORE_NOSELL\x10\xbb\xc3\x01\x12\'\n!MAGICALCREATURE_COMMISSION_NOSELL\x10\xbc\xc3\x01\x12(\n\"MAGICALCREATURE_COMMISSION_REPEATE\x10\xbd\xc3\x01\x12\x18\n\x12\x46\x41\x43TORY_DATA_ERROR\x10\x8d\xc4\x01\x12\x1c\n\x16\x46\x41\x43TORY_OPENSLOT_LIMIT\x10\x8e\xc4\x01\x12\x1b\n\x15\x46\x41\x43TORY_ADD_SLOT_FULL\x10\x8f\xc4\x01\x12\x1f\n\x19\x46\x41\x43TORY_PRODUCT_NOTFINISH\x10\x90\xc4\x01\x12\x1e\n\x18\x46\x41\x43TORY_PRODUCT_NOTFIRST\x10\x91\xc4\x01\x12\x1a\n\x14ORDERTASK_DATA_ERROR\x10\xf1\xc4\x01\x12!\n\x1bORDERTASK_POSITION_HAVATASK\x10\xf2\xc4\x01\x12\x18\n\x12ORDERTASK_CD_ERROR\x10\xf3\xc4\x01\x12 \n\x1aORDERTASK_DIFFICULTY_ORDER\x10\xf4\xc4\x01\x12&\n ORDERTASK_FINISH_ITEM_NOT_ENOUGH\x10\xf5\xc4\x01\x12\x1e\n\x18TIMEORDERTASK_DATA_ERROR\x10\xf6\xc4\x01\x12$\n\x1eORDERTASK_PROGRESS_CNTNOENOUGH\x10\xf7\xc4\x01\x12\x19\n\x13\x46\x41RMLAND_DATA_ERROR\x10\xd5\xc5\x01\x12\x1b\n\x15\x46\x41RMLAND_PLANT_UNLOCK\x10\xd6\xc5\x01\x12\x1b\n\x15\x46\x41RMLAND_PLANT_UNCROP\x10\xd7\xc5\x01\x12\x19\n\x13\x46\x41RMLAND_ITEMENOUGH\x10\xd8\xc5\x01\x12\x18\n\x12\x46\x41RMLAND_CROP_RIPE\x10\xd9\xc5\x01\x12\x19\n\x13\x46\x41RMLAND_PLANT_CROP\x10\xda\xc5\x01\x12\x1a\n\x14\x46\x41RMLAND_CROP_UNRIPE\x10\xdb\xc5\x01\x12\x1f\n\x19\x43ONVERTFACTORY_DATA_ERROR\x10\xb9\xc6\x01\x12\x1a\n\x14\x43ONVERTFACTORY_NO_CD\x10\xba\xc6\x01\x12 \n\x1a\x41LCHEMY_FURNACE_INIT_ERROR\x10\x91\xcb\x01\x12\'\n!ALCHEMY_FURNACE_NOT_IN_LAST_ERROR\x10\x92\xcb\x01\x12%\n\x1f\x41LCHEMY_FURNACE_NOT_IN_CD_ERROR\x10\x93\xcb\x01\x12&\n ALCHEMY_FURNACE_MONEY_COST_ERROR\x10\x94\xcb\x01'
+  serialized_pb=b'\n\x14\x45rrorCodeEnums.proto\x12\x0e\x63om.common.msg*\x8d;\n\x0e\x45rrorCodeEnums\x12\x0b\n\x07SUCCESS\x10\x00\x12\x0e\n\nERRORBREAK\x10\x01\x12\x12\n\rREPEATEDLOGIN\x10\xea\x07\x12\x0e\n\tMSGISNULL\x10\xeb\x07\x12\x0f\n\nNULLPLAYER\x10\xec\x07\x12\n\n\x05\x45RROR\x10\xed\x07\x12\x0f\n\nLOGINFAILD\x10\xee\x07\x12\x15\n\x10REPEATEDCACHEMSG\x10\xef\x07\x12\x11\n\x0cSERVER_ERROR\x10\xf0\x07\x12\x12\n\rVERSION_ERROR\x10\xf1\x07\x12\x18\n\x13PLAYER_STATUS_ERROR\x10\xf2\x07\x12\x19\n\x14\x41\x43\x43OUNT_ALREADY_BIND\x10\xf3\x07\x12#\n\x1eVISITOR_ACCOUNT_NOT_HAS_PLAYER\x10\xf4\x07\x12\x13\n\x0eITEM_NOTENOUGH\x10\xd1\x0f\x12\x11\n\x0cITEM_TIMEOUT\x10\xd2\x0f\x12\x13\n\x0eITEM_NOTCANUSE\x10\xd3\x0f\x12\x1d\n\x18ITEM_EXCHANGE_ENERGYFULL\x10\xd4\x0f\x12!\n\x1cITEM_EXCHANGE_DIAMONDSENOUGH\x10\xd5\x0f\x12(\n#ITEM_EXCHANGE_NOEXITSITEMTEMPLATEID\x10\xd6\x0f\x12(\n#ITEM_EXCHANGE_RECHARGEDIAMONDSFAILD\x10\xd7\x0f\x12\x1c\n\x17ITEM_NOT_SUBSCRIBE_ITEM\x10\xd8\x0f\x12 \n\x1bITEM_SUBSCRIBE_ITEM_EXPIRED\x10\xd9\x0f\x12\x19\n\x14\x42UIDING_TO_MAX_LEVEL\x10\xb9\x17\x12\x1d\n\x18\x42UILDING_ITEM_NOT_ENOUGH\x10\xba\x17\x12\x17\n\x12\x42UILDING_NOT_EXIST\x10\xbb\x17\x12\x1b\n\x16\x42UILDING_CAN_NOT_CLEAN\x10\xbc\x17\x12$\n\x1f\x42UILDING_CAN_NOT_CLEAN_ON_LEVEL\x10\xbd\x17\x12\x1c\n\x17OBSTACLE_NOT_BE_CLEARED\x10\xbe\x17\x12$\n\x1f\x44\x41YREWARD_NOT_REPEATEDGETREWARD\x10\xa9\x46\x12\x17\n\x12\x44\x41YREWARD_NOT_OPEN\x10\xaa\x46\x12\x17\n\x12TASK_NOT_FIND_TASK\x10\x91N\x12\x14\n\x0fTASK_NOT_FINISH\x10\x92N\x12\x16\n\x11TASK_GRAPH_CLOSED\x10\x93N\x12\x18\n\x13TASK_ALREADY_SUBMIT\x10\x94N\x12\x15\n\x10\x42UFF_NOT_TIMEOUT\x10\xf9U\x12\x16\n\x11\x42UFF_NOT_REPEATED\x10\xfaU\x12\x18\n\x13\x42UFF_NOT_BUFFENOUGH\x10\xfbU\x12\x1b\n\x16RECHARGE_REPEATE_ORDER\x10\xe1]\x12\x1d\n\x18RECHARGE_ORDER_NOT_EXIST\x10\xe2]\x12\x1c\n\x17RECHARGE_ORDER_ID_ERROR\x10\xe3]\x12\x17\n\x12RECHARGE_CANNOT_OP\x10\xe4]\x12\x1a\n\x15RECHARGE_VERIFY_ERROR\x10\xe5]\x12\x1e\n\x19RECHARGE_TEMPLATE_NO_INFO\x10\xe6]\x12 \n\x1bRECHARGE_FIRST_RECHARGE_END\x10\xe7]\x12\x1b\n\x16\x43OMMON_SYSTEM_NOT_OPEN\x10\xc9\x65\x12\x1c\n\x17\x43OMMON_CONFIG_NOT_EXIST\x10\xca\x65\x12$\n\x1f\x43OMMON_PLAYER_NAME_CAN_NOT_NULL\x10\xcb\x65\x12 \n\x1b\x43OMMON_PLAYER_NAME_TOO_LONG\x10\xcc\x65\x12$\n\x1f\x43OMMON_PLAYER_ICON_CAN_NOT_NULL\x10\xcd\x65\x12\x1d\n\x18\x43OMMON_PLAYER_ICON_ERROR\x10\xce\x65\x12\x17\n\x12\x43OMMON_PARAM_ERROR\x10\xcf\x65\x12\x19\n\x14\x43OMMON_VERSION_ERROR\x10\xd0\x65\x12\x1e\n\x19\x43OMMON_SYSTEM_REPEAT_OPEN\x10\xd1\x65\x12\x1b\n\x16\x43OMMON_NO_BACK_REWAARD\x10\xd2\x65\x12\x0f\n\nADS_CLOSED\x10\x99u\x12\x1e\n\x19\x41\x44S_OPEN_LEVEL_NOT_ENOUGH\x10\x9au\x12\x0b\n\x06\x41\x44S_CD\x10\x9bu\x12\x14\n\x0f\x41\x44S_DAILY_LIMIT\x10\x9cu\x12\x18\n\x13\x41\x44S_GROUP_NOT_EXIST\x10\x9du\x12!\n\x1c\x41\x44S_DIAMOND_LEVEL_NOT_ENOUGH\x10\x9eu\x12!\n\x1c\x41\x44S_DIAMOND_COUNT_NOT_ENOUGH\x10\x9fu\x12\"\n\x1d\x41\x44S_NEW_GIFT_COUNT_NOT_ENOUGH\x10\xa0u\x12\x14\n\x0fSCENE_NOT_CLOSE\x10\x81}\x12\x1c\n\x17SCENE_COMPLETE_REWARDED\x10\x82}\x12 \n\x1bSCENE_COMPLETE_REWARD_UNMET\x10\x83}\x12 \n\x1aMAGICALCREATURE_DATA_ERROR\x10\xa9\xc3\x01\x12 \n\x1aMAGICALCREATURE_ITEMENOUGH\x10\xaa\xc3\x01\x12\x1d\n\x17MAGICALCREATURE_NO_DATA\x10\xab\xc3\x01\x12&\n MAGICALCREATURE_COLLECT_NO_PLANT\x10\xac\xc3\x01\x12\"\n\x1cMAGICALCREATURE_CARESS_ERROR\x10\xad\xc3\x01\x12*\n$MAGICALCREATURE_PET_CONSUME_NOENOUGH\x10\xae\xc3\x01\x12$\n\x1eMAGICALCREATURE_HANGUP_PRODUCT\x10\xaf\xc3\x01\x12\"\n\x1cMAGICALCREATURE_DRAGON_LIMIT\x10\xb0\xc3\x01\x12#\n\x1dMAGICALCREATURE_UPLEVEL_ERROR\x10\xb1\xc3\x01\x12!\n\x1bMAGICALCREATURE_BREED_ERROR\x10\xb2\xc3\x01\x12#\n\x1dMAGICALCREATURE_COLLECT_ERROR\x10\xb3\xc3\x01\x12 \n\x1aMAGICALCREATURE_FEED_ERROR\x10\xb4\xc3\x01\x12#\n\x1dMAGICALCREATURE_SKILLID_ERROR\x10\xb5\xc3\x01\x12 \n\x1aMAGICALCREATURE_SKILL_INCD\x10\xb6\xc3\x01\x12&\n MAGICALCREATURE_COMMISSION_ERROR\x10\xb7\xc3\x01\x12*\n$MAGICALCREATURE_COMMISSION_NO_FINISH\x10\xb8\xc3\x01\x12*\n$MAGICALCREATURE_COMMISSION_NOTENOUGH\x10\xb9\xc3\x01\x12,\n&MAGICALCREATURE_HAVE_COMMISSION_DRAGON\x10\xba\xc3\x01\x12$\n\x1eMAGICALCREATURE_EXPLORE_NOSELL\x10\xbb\xc3\x01\x12\'\n!MAGICALCREATURE_COMMISSION_NOSELL\x10\xbc\xc3\x01\x12(\n\"MAGICALCREATURE_COMMISSION_REPEATE\x10\xbd\xc3\x01\x12\'\n!MAGICALCREATURE_COMMISSION_UNLOCK\x10\xbe\xc3\x01\x12%\n\x1fMAGICALCREATURE_NESTFULL_UNLOCK\x10\xbf\xc3\x01\x12/\n)MAGICALCREATURE_COMMISSION_UNLOCK_REPEATE\x10\xc0\xc3\x01\x12*\n$MAGICALCREATURE_COMMISSION_NOT_EXIST\x10\xc1\xc3\x01\x12&\n MAGICALCREATURE_HAVE_MAZE_DRAGON\x10\xc2\xc3\x01\x12!\n\x1bMAGICALCREATURE_MAZE_NOSELL\x10\xc3\xc3\x01\x12(\n\"MAGICALCREATURE_HANGUP_TODAY_LIMIT\x10\xc4\xc3\x01\x12(\n\"MAGICALCREATURE_HANGUP_TOTAL_LIMIT\x10\xc5\xc3\x01\x12\x18\n\x12\x46\x41\x43TORY_DATA_ERROR\x10\x8d\xc4\x01\x12\x1c\n\x16\x46\x41\x43TORY_OPENSLOT_LIMIT\x10\x8e\xc4\x01\x12\x1b\n\x15\x46\x41\x43TORY_ADD_SLOT_FULL\x10\x8f\xc4\x01\x12\x1f\n\x19\x46\x41\x43TORY_PRODUCT_NOTFINISH\x10\x90\xc4\x01\x12\x1e\n\x18\x46\x41\x43TORY_PRODUCT_NOTFIRST\x10\x91\xc4\x01\x12\x1a\n\x14ORDERTASK_DATA_ERROR\x10\xf1\xc4\x01\x12!\n\x1bORDERTASK_POSITION_HAVATASK\x10\xf2\xc4\x01\x12\x18\n\x12ORDERTASK_CD_ERROR\x10\xf3\xc4\x01\x12 \n\x1aORDERTASK_DIFFICULTY_ORDER\x10\xf4\xc4\x01\x12&\n ORDERTASK_FINISH_ITEM_NOT_ENOUGH\x10\xf5\xc4\x01\x12\x1e\n\x18TIMEORDERTASK_DATA_ERROR\x10\xf6\xc4\x01\x12$\n\x1eORDERTASK_PROGRESS_CNTNOENOUGH\x10\xf7\xc4\x01\x12\x1c\n\x16TIMEORDERTASK_CD_ERROR\x10\xf8\xc4\x01\x12\x1e\n\x18ORDERTASK_NEEDITEM_ORDER\x10\xf9\xc4\x01\x12\x19\n\x13\x46\x41RMLAND_DATA_ERROR\x10\xd5\xc5\x01\x12\x1b\n\x15\x46\x41RMLAND_PLANT_UNLOCK\x10\xd6\xc5\x01\x12\x1b\n\x15\x46\x41RMLAND_PLANT_UNCROP\x10\xd7\xc5\x01\x12\x19\n\x13\x46\x41RMLAND_ITEMENOUGH\x10\xd8\xc5\x01\x12\x18\n\x12\x46\x41RMLAND_CROP_RIPE\x10\xd9\xc5\x01\x12\x19\n\x13\x46\x41RMLAND_PLANT_CROP\x10\xda\xc5\x01\x12\x1a\n\x14\x46\x41RMLAND_CROP_UNRIPE\x10\xdb\xc5\x01\x12\x1f\n\x19\x43ONVERTFACTORY_DATA_ERROR\x10\xb9\xc6\x01\x12\x1a\n\x14\x43ONVERTFACTORY_NO_CD\x10\xba\xc6\x01\x12 \n\x1a\x41LCHEMY_FURNACE_INIT_ERROR\x10\x91\xcb\x01\x12\'\n!ALCHEMY_FURNACE_NOT_IN_LAST_ERROR\x10\x92\xcb\x01\x12%\n\x1f\x41LCHEMY_FURNACE_NOT_IN_CD_ERROR\x10\x93\xcb\x01\x12&\n ALCHEMY_FURNACE_MONEY_COST_ERROR\x10\x94\xcb\x01\x12\x1d\n\x17\x41\x43TIVITY_NOT_OPEN_ERROR\x10\xf9\xd2\x01\x12\'\n!ACTIVITY_COUNTDOWN_NOT_OVER_ERROR\x10\xfa\xd2\x01\x12*\n$ACTIVITY_BREED_TASK_NOT_FINISH_ERROR\x10\xfb\xd2\x01\x12)\n#ACTIVITY_BREED_DATA_NOT_EXIST_ERROR\x10\xfc\xd2\x01\x12-\n\'ACTIVITY_BREED_ALREADY_TAKE_AWARD_ERROR\x10\xfd\xd2\x01\x12\x1a\n\x14\x41\x43TIVE_EGG_NOT_EXIST\x10\xe1\xda\x01\x12\x1a\n\x14MONTH_GIFT_NOT_EXIST\x10\xc5\xdb\x01\x12\x18\n\x12MONTH_GIFT_EXPIRED\x10\xc6\xdb\x01\x12\x1e\n\x18MONTH_GIFT_ALREADY_TAKEN\x10\xc7\xdb\x01\x12\x1c\n\x16SCARECROW_ALREADY_OPEN\x10\xa9\xdc\x01\x12\x1d\n\x17SCARECROW_CFG_NOT_EXIST\x10\xaa\xdc\x01\x12\x18\n\x12SCARECROW_NOT_OPEN\x10\xab\xdc\x01\x12\x1e\n\x18SCARECROW_ALREADY_CLOSED\x10\xac\xdc\x01\x12\x1e\n\x18SCARECROW_AWARD_WAS_TOOK\x10\xad\xdc\x01\x12!\n\x1bSCARECROW_AWARD_INDEX_ERROR\x10\xae\xdc\x01\x12 \n\x1aSCARECROW_NOT_ENOUGH_ERROR\x10\xaf\xdc\x01\x12\x1f\n\x19SCARECROW_ALREADY_CLEANED\x10\xb0\xdc\x01\x12)\n#ANIMAL_ACTIVITY_ANIMAL_CFG_NOT_FIND\x10\x8d\xdd\x01\x12\"\n\x1c\x41NIMAL_ACTIVITY_LAST_NOT_END\x10\x8e\xdd\x01\x12)\n#ANIMAL_ACTIVITY_RANDOM_CFG_NOT_FIND\x10\x8f\xdd\x01\x12\x1e\n\x18\x41NIMAL_ACTIVITY_NOT_OPEN\x10\x90\xdd\x01\x12 \n\x1a\x41NIMAL_ACTIVITY_DIFFICULTY\x10\x91\xdd\x01\x12\x1d\n\x17\x41NIMAL_TASK_ALREADY_END\x10\x92\xdd\x01\x12\'\n!ANIMAL_ANIMAL_TASK_ALREADY_SUBMIT\x10\x93\xdd\x01\x12(\n\"ANIMAL_ANIMAL_TASK_ITEM_NOT_ENOUGH\x10\x94\xdd\x01\x12&\n ANIMAL_ALREADY_TOKEN_INDEX_AWARD\x10\x95\xdd\x01\x12\"\n\x1c\x41NIMAL_INDEX_AWARD_NOT_EXIST\x10\x96\xdd\x01\x12,\n&ANIMAL_INDEX_AWARD_FINISHED_NOT_ENOUGH\x10\x97\xdd\x01\x12\x1c\n\x16\x41NIMAL_ANIMAL_NOT_FIND\x10\x98\xdd\x01\x12$\n\x1e\x41NIMAL_ANIMAL_ALREADY_APPEARED\x10\x99\xdd\x01\x12\x1d\n\x17\x41NIMAL_ANIMAL_IN_CD_NOW\x10\x9a\xdd\x01\x12 \n\x1a\x44RAGON_BUBBLE_CFG_NOT_FIND\x10\xf1\xdd\x01\x12\x16\n\x10\x44RAGON_BUBBLE_CD\x10\xf2\xdd\x01\x12\x1f\n\x19\x44RAGON_BUBBLE_TODAY_LIMIT\x10\xf3\xdd\x01\x12\x1c\n\x16\x44RAGON_BUBBLE_NOT_OPEN\x10\xf4\xdd\x01\x12 \n\x1a\x44RAGON_BUBBLE_SINGLE_LIMIT\x10\xf5\xdd\x01\x12\x1e\n\x18\x44RAGON_BUBBLE_HAVE_LIMIT\x10\xf6\xdd\x01\x12\"\n\x1c\x44RAGON_BUBBLE_DATA_NOT_EXIST\x10\xf7\xdd\x01\x12$\n\x1e\x44RAGON_BUBBLE_NOT_EXIST_DRAGON\x10\xf8\xdd\x01\x12!\n\x1bSKIN_PRODUCE_REPEATE_UNLOCK\x10\xd5\xde\x01\x12\x1f\n\x19SKIN_PRODUCE_CFG_NOT_FIND\x10\xd6\xde\x01\x12$\n\x1eSKIN_PRODUCE_DRAGONSKIN_UNLOCK\x10\xd7\xde\x01\x12\"\n\x1cSKIN_PRODUCE_NOOBTAIN_DESIGN\x10\xd8\xde\x01\x12\x1e\n\x18SKIN_ATTRIBUTE_NOT_MATCH\x10\xd9\xde\x01\x12\x15\n\x0fSKIN_HAVE_EQUIP\x10\xda\xde\x01\x12\x1d\n\x17SKIN_CAN_NOT_EQUIP_MANY\x10\xdb\xde\x01\x12!\n\x1b\x44RAGON_MAZE_LEVEL_NOT_EXIST\x10\xb9\xdf\x01\x12 \n\x1a\x44RAGON_MAZE_DATA_NOT_EXIST\x10\xba\xdf\x01\x12#\n\x1d\x44RAGON_MAZE_ENTER_LEVEL_ERROR\x10\xbb\xdf\x01\x12#\n\x1d\x44RAGON_MAZE_SAME_DRAGON_ERROR\x10\xbc\xdf\x01\x12\"\n\x1c\x44RAGON_MAZE_DRAGON_NUM_ERROR\x10\xbd\xdf\x01\x12(\n\"DRAGON_MAZE_DRAGON_NOT_EXIST_ERROR\x10\xbe\xdf\x01\x12&\n DRAGON_MAZE_BUY_COUNT_NOT_ENOUGH\x10\xbf\xdf\x01\x12#\n\x1d\x44RAGON_MAZE_BUY_DIAMOND_ERROR\x10\xc0\xdf\x01\x12\'\n!DRAGON_MAZE_ITEM_NOT_ENOUGH_ERROR\x10\xc1\xdf\x01\x12\x1d\n\x17\x44RAGON_MAZE_ALREADY_END\x10\xc2\xdf\x01\x12)\n#DRAGON_MAZE_SHOP_TEMPLATE_NOT_EXIST\x10\xc3\xdf\x01\x12(\n\"DRAGON_MAZE_SHOP_PRODUCT_NOT_EXIST\x10\xc4\xdf\x01\x12)\n#DRAGON_MAZE_PRODUCT_BUY_COUNT_ERROR\x10\xc5\xdf\x01\x12\x15\n\x0fTEAM_FULL_ERROR\x10\x9d\xe0\x01\x12\x1f\n\x19TEAM_JOIN_NOT_ALLOW_ERROR\x10\x9e\xe0\x01\x12!\n\x1bTEAM_LEVEL_NOT_ENOUGH_ERROR\x10\x9f\xe0\x01\x12\x1a\n\x14TEAM_NOT_EXIST_ERROR\x10\xa0\xe0\x01\x12\x15\n\x0fTEAM_AUTH_ERROR\x10\xa1\xe0\x01\x12\x1c\n\x16TEAM_ALREADY_HAS_ERROR\x10\xa2\xe0\x01\x12!\n\x1bTEAM_MONEY_NOT_ENOUGH_ERROR\x10\xa3\xe0\x01\x12\x1d\n\x17TEAM_NAME_ILLEGAL_ERROR\x10\xa4\xe0\x01\x12\x1d\n\x17TEAM_DESC_ILLEGAL_ERROR\x10\xa5\xe0\x01\x12\x1e\n\x18TEAM_LEVEL_ILLEGAL_ERROR\x10\xa6\xe0\x01\x12\x1d\n\x17TEAM_ICON_ILLEGAL_ERROR\x10\xa7\xe0\x01\x12\x1e\n\x18TEAM_NEED_HELP_MAX_ERROR\x10\xa8\xe0\x01\x12*\n$TEAM_HELP_OTHER_INFO_NOT_EXIST_ERROR\x10\xa9\xe0\x01\x12/\n)TEAM_HELP_OTHER_INFO_ALREADY_HELPED_ERROR\x10\xaa\xe0\x01\x12\'\n!TEAM_HELP_OTHER_INFO_TO_MAX_ERROR\x10\xab\xe0\x01\x12\x1c\n\x16TEAM_NOT_IN_TEAM_ERROR\x10\xac\xe0\x01\x12(\n\"TEAM_PLAYER_ALREADY_HAS_TEAM_ERROR\x10\xad\xe0\x01\x12*\n$TEAM_HELP_OTHER_ITEM_NOT_EXIST_ERROR\x10\xae\xe0\x01\x12\"\n\x1cTEAM_CREATE_MONEY_COST_ERROR\x10\xaf\xe0\x01\x12*\n$TEAM_CREATE_NAME_ALREADY_EXIST_ERROR\x10\xb0\xe0\x01\x12 \n\x1aTEAM_JOIN_TEAM_IN_CD_ERROR\x10\xb1\xe0\x01\x12-\n\'TEAM_HELP_OTHER_CAN_NOT_HELP_SELF_ERROR\x10\xb2\xe0\x01\x12!\n\x1bTEAM_KICK_IN_ACTIVITY_ERROR\x10\xb3\xe0\x01\x12!\n\x1bTEAM_QUIT_IN_ACTIVITY_ERROR\x10\xb4\xe0\x01\x12&\n REDENVELOPE_DATA_NOT_EXIST_ERROR\x10\xb5\xe0\x01\x12(\n\"REDENVELOPE_ALREADY_FINISHED_ERROR\x10\xb6\xe0\x01\x12%\n\x1fREDENVELOPE_ALREADY_TOKEN_ERROR\x10\xb7\xe0\x01\x12\x19\n\x13WEEK_GIFT_NOT_EXIST\x10\x81\xe1\x01\x12\x1f\n\x19WEEK_GIFT_NOT_REFRESHTIME\x10\x82\xe1\x01\x12!\n\x1bWEEK_GIFT_NOT_OPENCONDITION\x10\x83\xe1\x01\x12\x19\n\x13WEEK_GIFT_BUY_LIMIT\x10\x84\xe1\x01\x12\x15\n\x0fPARKOUR_NO_LIFE\x10\xe5\xe1\x01\x12\x17\n\x11PARKOUR_NO_REWARD\x10\xe6\xe1\x01\x12\x1b\n\x15PARKOUR_CONSUME_ERROR\x10\xe7\xe1\x01\x12\x18\n\x12PARKOUR_NOT_INGAME\x10\xe8\xe1\x01\x12\x14\n\x0ePARKOUR_IS_END\x10\xe9\xe1\x01\x12\x19\n\x13PARKOUR_UPPER_LIMIT\x10\xea\xe1\x01\x12\x1b\n\x15PARKOUR_RANK_REWARDED\x10\xeb\xe1\x01\x12\x18\n\x12GROWTHFUND_NO_DATA\x10\xc9\xe2\x01\x12 \n\x1aGROWTHFUND_REPEATED_REWARD\x10\xca\xe2\x01\x12\x1d\n\x17\x43HAT_CONTENT_TOO_LENGTH\x10\xad\xe3\x01\x12*\n$PLAYER_VERSION_BEFORE_LOWEST_VERSION\x10\x91\xe4\x01\x12\x16\n\x10TEAM_MAP_ADV_ING\x10\x92\xe4\x01\x12\x17\n\x11TEAM_MAP_HAS_TASK\x10\x93\xe4\x01\x12\x16\n\x10TEAM_MAP_ADV_END\x10\x94\xe4\x01\x12\x16\n\x10TEAM_MAP_NO_TASK\x10\x95\xe4\x01\x12*\n$TEAM_MAP_JOIN_TEAM_AFTER_REWARD_TIME\x10\x96\xe4\x01\x12\"\n\x1cTEAM_MAP_NOT_FINISH_ALL_TASK\x10\x97\xe4\x01\x12\x1e\n\x18PIGGYBANK_REPEATED_START\x10\xf5\xe4\x01\x12!\n\x1bPIGGYBANK_UPDATE_NORECHARGE\x10\xf6\xe4\x01\x12\x1a\n\x14PIGGYBANK_UPDATE_MAX\x10\xf7\xe4\x01\x12\x1a\n\x14PIGGYBANK_UPDATE_END\x10\xf8\xe4\x01'
 )
 
 _ERRORCODEENUMS = _descriptor.EnumDescriptor(
@@ -166,397 +166,1027 @@ _ERRORCODEENUMS = _descriptor.EnumDescriptor(
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='DAYREWARD_NOT_REPEATEDGETREWARD', index=27, number=9001,
+      name='OBSTACLE_NOT_BE_CLEARED', index=27, number=3006,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='DAYREWARD_NOT_OPEN', index=28, number=9002,
+      name='DAYREWARD_NOT_REPEATEDGETREWARD', index=28, number=9001,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='TASK_NOT_FIND_TASK', index=29, number=10001,
+      name='DAYREWARD_NOT_OPEN', index=29, number=9002,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='TASK_NOT_FINISH', index=30, number=10002,
+      name='TASK_NOT_FIND_TASK', index=30, number=10001,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='TASK_GRAPH_CLOSED', index=31, number=10003,
+      name='TASK_NOT_FINISH', index=31, number=10002,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='TASK_ALREADY_SUBMIT', index=32, number=10004,
+      name='TASK_GRAPH_CLOSED', index=32, number=10003,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='BUFF_NOT_TIMEOUT', index=33, number=11001,
+      name='TASK_ALREADY_SUBMIT', index=33, number=10004,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='BUFF_NOT_REPEATED', index=34, number=11002,
+      name='BUFF_NOT_TIMEOUT', index=34, number=11001,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='BUFF_NOT_BUFFENOUGH', index=35, number=11003,
+      name='BUFF_NOT_REPEATED', index=35, number=11002,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='RECHARGE_REPEATE_ORDER', index=36, number=12001,
+      name='BUFF_NOT_BUFFENOUGH', index=36, number=11003,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='RECHARGE_ORDER_NOT_EXIST', index=37, number=12002,
+      name='RECHARGE_REPEATE_ORDER', index=37, number=12001,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='RECHARGE_ORDER_ID_ERROR', index=38, number=12003,
+      name='RECHARGE_ORDER_NOT_EXIST', index=38, number=12002,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='RECHARGE_CANNOT_OP', index=39, number=12004,
+      name='RECHARGE_ORDER_ID_ERROR', index=39, number=12003,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='RECHARGE_VERIFY_ERROR', index=40, number=12005,
+      name='RECHARGE_CANNOT_OP', index=40, number=12004,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='RECHARGE_TEMPLATE_NO_INFO', index=41, number=12006,
+      name='RECHARGE_VERIFY_ERROR', index=41, number=12005,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='RECHARGE_FIRST_RECHARGE_END', index=42, number=12007,
+      name='RECHARGE_TEMPLATE_NO_INFO', index=42, number=12006,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='COMMON_SYSTEM_NOT_OPEN', index=43, number=13001,
+      name='RECHARGE_FIRST_RECHARGE_END', index=43, number=12007,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='COMMON_CONFIG_NOT_EXIST', index=44, number=13002,
+      name='COMMON_SYSTEM_NOT_OPEN', index=44, number=13001,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='COMMON_PLAYER_NAME_CAN_NOT_NULL', index=45, number=13003,
+      name='COMMON_CONFIG_NOT_EXIST', index=45, number=13002,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='COMMON_PLAYER_NAME_TOO_LONG', index=46, number=13004,
+      name='COMMON_PLAYER_NAME_CAN_NOT_NULL', index=46, number=13003,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='COMMON_PLAYER_ICON_CAN_NOT_NULL', index=47, number=13005,
+      name='COMMON_PLAYER_NAME_TOO_LONG', index=47, number=13004,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='COMMON_PLAYER_ICON_ERROR', index=48, number=13006,
+      name='COMMON_PLAYER_ICON_CAN_NOT_NULL', index=48, number=13005,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='COMMON_PARAM_ERROR', index=49, number=13007,
+      name='COMMON_PLAYER_ICON_ERROR', index=49, number=13006,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='COMMON_VERSION_ERROR', index=50, number=13008,
+      name='COMMON_PARAM_ERROR', index=50, number=13007,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='COMMON_SYSTEM_REPEAT_OPEN', index=51, number=13009,
+      name='COMMON_VERSION_ERROR', index=51, number=13008,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='ADS_CLOSED', index=52, number=15001,
+      name='COMMON_SYSTEM_REPEAT_OPEN', index=52, number=13009,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='ADS_OPEN_LEVEL_NOT_ENOUGH', index=53, number=15002,
+      name='COMMON_NO_BACK_REWAARD', index=53, number=13010,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='ADS_CD', index=54, number=15003,
+      name='ADS_CLOSED', index=54, number=15001,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='ADS_DAILY_LIMIT', index=55, number=15004,
+      name='ADS_OPEN_LEVEL_NOT_ENOUGH', index=55, number=15002,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='ADS_GROUP_NOT_EXIST', index=56, number=15005,
+      name='ADS_CD', index=56, number=15003,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='ADS_DIAMOND_LEVEL_NOT_ENOUGH', index=57, number=15006,
+      name='ADS_DAILY_LIMIT', index=57, number=15004,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='ADS_DIAMOND_COUNT_NOT_ENOUGH', index=58, number=15007,
+      name='ADS_GROUP_NOT_EXIST', index=58, number=15005,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='ADS_NEW_GIFT_COUNT_NOT_ENOUGH', index=59, number=15008,
+      name='ADS_DIAMOND_LEVEL_NOT_ENOUGH', index=59, number=15006,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='MAGICALCREATURE_DATA_ERROR', index=60, number=25001,
+      name='ADS_DIAMOND_COUNT_NOT_ENOUGH', index=60, number=15007,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='MAGICALCREATURE_ITEMENOUGH', index=61, number=25002,
+      name='ADS_NEW_GIFT_COUNT_NOT_ENOUGH', index=61, number=15008,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='MAGICALCREATURE_NO_DATA', index=62, number=25003,
+      name='SCENE_NOT_CLOSE', index=62, number=16001,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='MAGICALCREATURE_COLLECT_NO_PLANT', index=63, number=25004,
+      name='SCENE_COMPLETE_REWARDED', index=63, number=16002,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='MAGICALCREATURE_CARESS_ERROR', index=64, number=25005,
+      name='SCENE_COMPLETE_REWARD_UNMET', index=64, number=16003,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='MAGICALCREATURE_PET_CONSUME_NOENOUGH', index=65, number=25006,
+      name='MAGICALCREATURE_DATA_ERROR', index=65, number=25001,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='MAGICALCREATURE_HANGUP_PRODUCT', index=66, number=25007,
+      name='MAGICALCREATURE_ITEMENOUGH', index=66, number=25002,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='MAGICALCREATURE_DRAGON_LIMIT', index=67, number=25008,
+      name='MAGICALCREATURE_NO_DATA', index=67, number=25003,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='MAGICALCREATURE_UPLEVEL_ERROR', index=68, number=25009,
+      name='MAGICALCREATURE_COLLECT_NO_PLANT', index=68, number=25004,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='MAGICALCREATURE_BREED_ERROR', index=69, number=25010,
+      name='MAGICALCREATURE_CARESS_ERROR', index=69, number=25005,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='MAGICALCREATURE_COLLECT_ERROR', index=70, number=25011,
+      name='MAGICALCREATURE_PET_CONSUME_NOENOUGH', index=70, number=25006,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='MAGICALCREATURE_FEED_ERROR', index=71, number=25012,
+      name='MAGICALCREATURE_HANGUP_PRODUCT', index=71, number=25007,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='MAGICALCREATURE_SKILLID_ERROR', index=72, number=25013,
+      name='MAGICALCREATURE_DRAGON_LIMIT', index=72, number=25008,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='MAGICALCREATURE_SKILL_INCD', index=73, number=25014,
+      name='MAGICALCREATURE_UPLEVEL_ERROR', index=73, number=25009,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='MAGICALCREATURE_COMMISSION_ERROR', index=74, number=25015,
+      name='MAGICALCREATURE_BREED_ERROR', index=74, number=25010,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='MAGICALCREATURE_COMMISSION_NO_FINISH', index=75, number=25016,
+      name='MAGICALCREATURE_COLLECT_ERROR', index=75, number=25011,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='MAGICALCREATURE_COMMISSION_NOTENOUGH', index=76, number=25017,
+      name='MAGICALCREATURE_FEED_ERROR', index=76, number=25012,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='MAGICALCREATURE_HAVE_COMMISSION_DRAGON', index=77, number=25018,
+      name='MAGICALCREATURE_SKILLID_ERROR', index=77, number=25013,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='MAGICALCREATURE_EXPLORE_NOSELL', index=78, number=25019,
+      name='MAGICALCREATURE_SKILL_INCD', index=78, number=25014,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='MAGICALCREATURE_COMMISSION_NOSELL', index=79, number=25020,
+      name='MAGICALCREATURE_COMMISSION_ERROR', index=79, number=25015,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='MAGICALCREATURE_COMMISSION_REPEATE', index=80, number=25021,
+      name='MAGICALCREATURE_COMMISSION_NO_FINISH', index=80, number=25016,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='FACTORY_DATA_ERROR', index=81, number=25101,
+      name='MAGICALCREATURE_COMMISSION_NOTENOUGH', index=81, number=25017,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='FACTORY_OPENSLOT_LIMIT', index=82, number=25102,
+      name='MAGICALCREATURE_HAVE_COMMISSION_DRAGON', index=82, number=25018,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='FACTORY_ADD_SLOT_FULL', index=83, number=25103,
+      name='MAGICALCREATURE_EXPLORE_NOSELL', index=83, number=25019,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='FACTORY_PRODUCT_NOTFINISH', index=84, number=25104,
+      name='MAGICALCREATURE_COMMISSION_NOSELL', index=84, number=25020,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='FACTORY_PRODUCT_NOTFIRST', index=85, number=25105,
+      name='MAGICALCREATURE_COMMISSION_REPEATE', index=85, number=25021,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='ORDERTASK_DATA_ERROR', index=86, number=25201,
+      name='MAGICALCREATURE_COMMISSION_UNLOCK', index=86, number=25022,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='ORDERTASK_POSITION_HAVATASK', index=87, number=25202,
+      name='MAGICALCREATURE_NESTFULL_UNLOCK', index=87, number=25023,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='ORDERTASK_CD_ERROR', index=88, number=25203,
+      name='MAGICALCREATURE_COMMISSION_UNLOCK_REPEATE', index=88, number=25024,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='ORDERTASK_DIFFICULTY_ORDER', index=89, number=25204,
+      name='MAGICALCREATURE_COMMISSION_NOT_EXIST', index=89, number=25025,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='ORDERTASK_FINISH_ITEM_NOT_ENOUGH', index=90, number=25205,
+      name='MAGICALCREATURE_HAVE_MAZE_DRAGON', index=90, number=25026,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='TIMEORDERTASK_DATA_ERROR', index=91, number=25206,
+      name='MAGICALCREATURE_MAZE_NOSELL', index=91, number=25027,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='ORDERTASK_PROGRESS_CNTNOENOUGH', index=92, number=25207,
+      name='MAGICALCREATURE_HANGUP_TODAY_LIMIT', index=92, number=25028,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='FARMLAND_DATA_ERROR', index=93, number=25301,
+      name='MAGICALCREATURE_HANGUP_TOTAL_LIMIT', index=93, number=25029,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='FARMLAND_PLANT_UNLOCK', index=94, number=25302,
+      name='FACTORY_DATA_ERROR', index=94, number=25101,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='FARMLAND_PLANT_UNCROP', index=95, number=25303,
+      name='FACTORY_OPENSLOT_LIMIT', index=95, number=25102,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='FARMLAND_ITEMENOUGH', index=96, number=25304,
+      name='FACTORY_ADD_SLOT_FULL', index=96, number=25103,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='FARMLAND_CROP_RIPE', index=97, number=25305,
+      name='FACTORY_PRODUCT_NOTFINISH', index=97, number=25104,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='FARMLAND_PLANT_CROP', index=98, number=25306,
+      name='FACTORY_PRODUCT_NOTFIRST', index=98, number=25105,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='FARMLAND_CROP_UNRIPE', index=99, number=25307,
+      name='ORDERTASK_DATA_ERROR', index=99, number=25201,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='CONVERTFACTORY_DATA_ERROR', index=100, number=25401,
+      name='ORDERTASK_POSITION_HAVATASK', index=100, number=25202,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='CONVERTFACTORY_NO_CD', index=101, number=25402,
+      name='ORDERTASK_CD_ERROR', index=101, number=25203,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='ALCHEMY_FURNACE_INIT_ERROR', index=102, number=26001,
+      name='ORDERTASK_DIFFICULTY_ORDER', index=102, number=25204,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='ALCHEMY_FURNACE_NOT_IN_LAST_ERROR', index=103, number=26002,
+      name='ORDERTASK_FINISH_ITEM_NOT_ENOUGH', index=103, number=25205,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='ALCHEMY_FURNACE_NOT_IN_CD_ERROR', index=104, number=26003,
+      name='TIMEORDERTASK_DATA_ERROR', index=104, number=25206,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='ALCHEMY_FURNACE_MONEY_COST_ERROR', index=105, number=26004,
+      name='ORDERTASK_PROGRESS_CNTNOENOUGH', index=105, number=25207,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='TIMEORDERTASK_CD_ERROR', index=106, number=25208,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ORDERTASK_NEEDITEM_ORDER', index=107, number=25209,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='FARMLAND_DATA_ERROR', index=108, number=25301,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='FARMLAND_PLANT_UNLOCK', index=109, number=25302,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='FARMLAND_PLANT_UNCROP', index=110, number=25303,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='FARMLAND_ITEMENOUGH', index=111, number=25304,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='FARMLAND_CROP_RIPE', index=112, number=25305,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='FARMLAND_PLANT_CROP', index=113, number=25306,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='FARMLAND_CROP_UNRIPE', index=114, number=25307,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='CONVERTFACTORY_DATA_ERROR', index=115, number=25401,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='CONVERTFACTORY_NO_CD', index=116, number=25402,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ALCHEMY_FURNACE_INIT_ERROR', index=117, number=26001,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ALCHEMY_FURNACE_NOT_IN_LAST_ERROR', index=118, number=26002,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ALCHEMY_FURNACE_NOT_IN_CD_ERROR', index=119, number=26003,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ALCHEMY_FURNACE_MONEY_COST_ERROR', index=120, number=26004,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ACTIVITY_NOT_OPEN_ERROR', index=121, number=27001,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ACTIVITY_COUNTDOWN_NOT_OVER_ERROR', index=122, number=27002,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ACTIVITY_BREED_TASK_NOT_FINISH_ERROR', index=123, number=27003,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ACTIVITY_BREED_DATA_NOT_EXIST_ERROR', index=124, number=27004,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ACTIVITY_BREED_ALREADY_TAKE_AWARD_ERROR', index=125, number=27005,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ACTIVE_EGG_NOT_EXIST', index=126, number=28001,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='MONTH_GIFT_NOT_EXIST', index=127, number=28101,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='MONTH_GIFT_EXPIRED', index=128, number=28102,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='MONTH_GIFT_ALREADY_TAKEN', index=129, number=28103,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SCARECROW_ALREADY_OPEN', index=130, number=28201,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SCARECROW_CFG_NOT_EXIST', index=131, number=28202,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SCARECROW_NOT_OPEN', index=132, number=28203,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SCARECROW_ALREADY_CLOSED', index=133, number=28204,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SCARECROW_AWARD_WAS_TOOK', index=134, number=28205,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SCARECROW_AWARD_INDEX_ERROR', index=135, number=28206,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SCARECROW_NOT_ENOUGH_ERROR', index=136, number=28207,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SCARECROW_ALREADY_CLEANED', index=137, number=28208,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ANIMAL_ACTIVITY_ANIMAL_CFG_NOT_FIND', index=138, number=28301,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ANIMAL_ACTIVITY_LAST_NOT_END', index=139, number=28302,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ANIMAL_ACTIVITY_RANDOM_CFG_NOT_FIND', index=140, number=28303,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ANIMAL_ACTIVITY_NOT_OPEN', index=141, number=28304,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ANIMAL_ACTIVITY_DIFFICULTY', index=142, number=28305,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ANIMAL_TASK_ALREADY_END', index=143, number=28306,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ANIMAL_ANIMAL_TASK_ALREADY_SUBMIT', index=144, number=28307,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ANIMAL_ANIMAL_TASK_ITEM_NOT_ENOUGH', index=145, number=28308,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ANIMAL_ALREADY_TOKEN_INDEX_AWARD', index=146, number=28309,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ANIMAL_INDEX_AWARD_NOT_EXIST', index=147, number=28310,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ANIMAL_INDEX_AWARD_FINISHED_NOT_ENOUGH', index=148, number=28311,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ANIMAL_ANIMAL_NOT_FIND', index=149, number=28312,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ANIMAL_ANIMAL_ALREADY_APPEARED', index=150, number=28313,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ANIMAL_ANIMAL_IN_CD_NOW', index=151, number=28314,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='DRAGON_BUBBLE_CFG_NOT_FIND', index=152, number=28401,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='DRAGON_BUBBLE_CD', index=153, number=28402,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='DRAGON_BUBBLE_TODAY_LIMIT', index=154, number=28403,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='DRAGON_BUBBLE_NOT_OPEN', index=155, number=28404,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='DRAGON_BUBBLE_SINGLE_LIMIT', index=156, number=28405,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='DRAGON_BUBBLE_HAVE_LIMIT', index=157, number=28406,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='DRAGON_BUBBLE_DATA_NOT_EXIST', index=158, number=28407,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='DRAGON_BUBBLE_NOT_EXIST_DRAGON', index=159, number=28408,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SKIN_PRODUCE_REPEATE_UNLOCK', index=160, number=28501,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SKIN_PRODUCE_CFG_NOT_FIND', index=161, number=28502,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SKIN_PRODUCE_DRAGONSKIN_UNLOCK', index=162, number=28503,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SKIN_PRODUCE_NOOBTAIN_DESIGN', index=163, number=28504,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SKIN_ATTRIBUTE_NOT_MATCH', index=164, number=28505,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SKIN_HAVE_EQUIP', index=165, number=28506,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SKIN_CAN_NOT_EQUIP_MANY', index=166, number=28507,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='DRAGON_MAZE_LEVEL_NOT_EXIST', index=167, number=28601,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='DRAGON_MAZE_DATA_NOT_EXIST', index=168, number=28602,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='DRAGON_MAZE_ENTER_LEVEL_ERROR', index=169, number=28603,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='DRAGON_MAZE_SAME_DRAGON_ERROR', index=170, number=28604,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='DRAGON_MAZE_DRAGON_NUM_ERROR', index=171, number=28605,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='DRAGON_MAZE_DRAGON_NOT_EXIST_ERROR', index=172, number=28606,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='DRAGON_MAZE_BUY_COUNT_NOT_ENOUGH', index=173, number=28607,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='DRAGON_MAZE_BUY_DIAMOND_ERROR', index=174, number=28608,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='DRAGON_MAZE_ITEM_NOT_ENOUGH_ERROR', index=175, number=28609,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='DRAGON_MAZE_ALREADY_END', index=176, number=28610,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='DRAGON_MAZE_SHOP_TEMPLATE_NOT_EXIST', index=177, number=28611,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='DRAGON_MAZE_SHOP_PRODUCT_NOT_EXIST', index=178, number=28612,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='DRAGON_MAZE_PRODUCT_BUY_COUNT_ERROR', index=179, number=28613,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='TEAM_FULL_ERROR', index=180, number=28701,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='TEAM_JOIN_NOT_ALLOW_ERROR', index=181, number=28702,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='TEAM_LEVEL_NOT_ENOUGH_ERROR', index=182, number=28703,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='TEAM_NOT_EXIST_ERROR', index=183, number=28704,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='TEAM_AUTH_ERROR', index=184, number=28705,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='TEAM_ALREADY_HAS_ERROR', index=185, number=28706,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='TEAM_MONEY_NOT_ENOUGH_ERROR', index=186, number=28707,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='TEAM_NAME_ILLEGAL_ERROR', index=187, number=28708,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='TEAM_DESC_ILLEGAL_ERROR', index=188, number=28709,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='TEAM_LEVEL_ILLEGAL_ERROR', index=189, number=28710,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='TEAM_ICON_ILLEGAL_ERROR', index=190, number=28711,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='TEAM_NEED_HELP_MAX_ERROR', index=191, number=28712,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='TEAM_HELP_OTHER_INFO_NOT_EXIST_ERROR', index=192, number=28713,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='TEAM_HELP_OTHER_INFO_ALREADY_HELPED_ERROR', index=193, number=28714,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='TEAM_HELP_OTHER_INFO_TO_MAX_ERROR', index=194, number=28715,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='TEAM_NOT_IN_TEAM_ERROR', index=195, number=28716,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='TEAM_PLAYER_ALREADY_HAS_TEAM_ERROR', index=196, number=28717,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='TEAM_HELP_OTHER_ITEM_NOT_EXIST_ERROR', index=197, number=28718,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='TEAM_CREATE_MONEY_COST_ERROR', index=198, number=28719,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='TEAM_CREATE_NAME_ALREADY_EXIST_ERROR', index=199, number=28720,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='TEAM_JOIN_TEAM_IN_CD_ERROR', index=200, number=28721,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='TEAM_HELP_OTHER_CAN_NOT_HELP_SELF_ERROR', index=201, number=28722,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='TEAM_KICK_IN_ACTIVITY_ERROR', index=202, number=28723,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='TEAM_QUIT_IN_ACTIVITY_ERROR', index=203, number=28724,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='REDENVELOPE_DATA_NOT_EXIST_ERROR', index=204, number=28725,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='REDENVELOPE_ALREADY_FINISHED_ERROR', index=205, number=28726,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='REDENVELOPE_ALREADY_TOKEN_ERROR', index=206, number=28727,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='WEEK_GIFT_NOT_EXIST', index=207, number=28801,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='WEEK_GIFT_NOT_REFRESHTIME', index=208, number=28802,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='WEEK_GIFT_NOT_OPENCONDITION', index=209, number=28803,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='WEEK_GIFT_BUY_LIMIT', index=210, number=28804,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='PARKOUR_NO_LIFE', index=211, number=28901,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='PARKOUR_NO_REWARD', index=212, number=28902,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='PARKOUR_CONSUME_ERROR', index=213, number=28903,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='PARKOUR_NOT_INGAME', index=214, number=28904,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='PARKOUR_IS_END', index=215, number=28905,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='PARKOUR_UPPER_LIMIT', index=216, number=28906,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='PARKOUR_RANK_REWARDED', index=217, number=28907,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='GROWTHFUND_NO_DATA', index=218, number=29001,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='GROWTHFUND_REPEATED_REWARD', index=219, number=29002,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='CHAT_CONTENT_TOO_LENGTH', index=220, number=29101,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='PLAYER_VERSION_BEFORE_LOWEST_VERSION', index=221, number=29201,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='TEAM_MAP_ADV_ING', index=222, number=29202,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='TEAM_MAP_HAS_TASK', index=223, number=29203,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='TEAM_MAP_ADV_END', index=224, number=29204,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='TEAM_MAP_NO_TASK', index=225, number=29205,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='TEAM_MAP_JOIN_TEAM_AFTER_REWARD_TIME', index=226, number=29206,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='TEAM_MAP_NOT_FINISH_ALL_TASK', index=227, number=29207,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='PIGGYBANK_REPEATED_START', index=228, number=29301,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='PIGGYBANK_UPDATE_NORECHARGE', index=229, number=29302,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='PIGGYBANK_UPDATE_MAX', index=230, number=29303,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='PIGGYBANK_UPDATE_END', index=231, number=29304,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
@@ -564,7 +1194,7 @@ _ERRORCODEENUMS = _descriptor.EnumDescriptor(
   containing_type=None,
   serialized_options=None,
   serialized_start=41,
-  serialized_end=3280,
+  serialized_end=7606,
 )
 _sym_db.RegisterEnumDescriptor(_ERRORCODEENUMS)
 
@@ -596,6 +1226,7 @@ BUILDING_ITEM_NOT_ENOUGH = 3002
 BUILDING_NOT_EXIST = 3003
 BUILDING_CAN_NOT_CLEAN = 3004
 BUILDING_CAN_NOT_CLEAN_ON_LEVEL = 3005
+OBSTACLE_NOT_BE_CLEARED = 3006
 DAYREWARD_NOT_REPEATEDGETREWARD = 9001
 DAYREWARD_NOT_OPEN = 9002
 TASK_NOT_FIND_TASK = 10001
@@ -621,6 +1252,7 @@ COMMON_PLAYER_ICON_ERROR = 13006
 COMMON_PARAM_ERROR = 13007
 COMMON_VERSION_ERROR = 13008
 COMMON_SYSTEM_REPEAT_OPEN = 13009
+COMMON_NO_BACK_REWAARD = 13010
 ADS_CLOSED = 15001
 ADS_OPEN_LEVEL_NOT_ENOUGH = 15002
 ADS_CD = 15003
@@ -629,6 +1261,9 @@ ADS_GROUP_NOT_EXIST = 15005
 ADS_DIAMOND_LEVEL_NOT_ENOUGH = 15006
 ADS_DIAMOND_COUNT_NOT_ENOUGH = 15007
 ADS_NEW_GIFT_COUNT_NOT_ENOUGH = 15008
+SCENE_NOT_CLOSE = 16001
+SCENE_COMPLETE_REWARDED = 16002
+SCENE_COMPLETE_REWARD_UNMET = 16003
 MAGICALCREATURE_DATA_ERROR = 25001
 MAGICALCREATURE_ITEMENOUGH = 25002
 MAGICALCREATURE_NO_DATA = 25003
@@ -650,6 +1285,14 @@ MAGICALCREATURE_HAVE_COMMISSION_DRAGON = 25018
 MAGICALCREATURE_EXPLORE_NOSELL = 25019
 MAGICALCREATURE_COMMISSION_NOSELL = 25020
 MAGICALCREATURE_COMMISSION_REPEATE = 25021
+MAGICALCREATURE_COMMISSION_UNLOCK = 25022
+MAGICALCREATURE_NESTFULL_UNLOCK = 25023
+MAGICALCREATURE_COMMISSION_UNLOCK_REPEATE = 25024
+MAGICALCREATURE_COMMISSION_NOT_EXIST = 25025
+MAGICALCREATURE_HAVE_MAZE_DRAGON = 25026
+MAGICALCREATURE_MAZE_NOSELL = 25027
+MAGICALCREATURE_HANGUP_TODAY_LIMIT = 25028
+MAGICALCREATURE_HANGUP_TOTAL_LIMIT = 25029
 FACTORY_DATA_ERROR = 25101
 FACTORY_OPENSLOT_LIMIT = 25102
 FACTORY_ADD_SLOT_FULL = 25103
@@ -662,6 +1305,8 @@ ORDERTASK_DIFFICULTY_ORDER = 25204
 ORDERTASK_FINISH_ITEM_NOT_ENOUGH = 25205
 TIMEORDERTASK_DATA_ERROR = 25206
 ORDERTASK_PROGRESS_CNTNOENOUGH = 25207
+TIMEORDERTASK_CD_ERROR = 25208
+ORDERTASK_NEEDITEM_ORDER = 25209
 FARMLAND_DATA_ERROR = 25301
 FARMLAND_PLANT_UNLOCK = 25302
 FARMLAND_PLANT_UNCROP = 25303
@@ -675,6 +1320,117 @@ ALCHEMY_FURNACE_INIT_ERROR = 26001
 ALCHEMY_FURNACE_NOT_IN_LAST_ERROR = 26002
 ALCHEMY_FURNACE_NOT_IN_CD_ERROR = 26003
 ALCHEMY_FURNACE_MONEY_COST_ERROR = 26004
+ACTIVITY_NOT_OPEN_ERROR = 27001
+ACTIVITY_COUNTDOWN_NOT_OVER_ERROR = 27002
+ACTIVITY_BREED_TASK_NOT_FINISH_ERROR = 27003
+ACTIVITY_BREED_DATA_NOT_EXIST_ERROR = 27004
+ACTIVITY_BREED_ALREADY_TAKE_AWARD_ERROR = 27005
+ACTIVE_EGG_NOT_EXIST = 28001
+MONTH_GIFT_NOT_EXIST = 28101
+MONTH_GIFT_EXPIRED = 28102
+MONTH_GIFT_ALREADY_TAKEN = 28103
+SCARECROW_ALREADY_OPEN = 28201
+SCARECROW_CFG_NOT_EXIST = 28202
+SCARECROW_NOT_OPEN = 28203
+SCARECROW_ALREADY_CLOSED = 28204
+SCARECROW_AWARD_WAS_TOOK = 28205
+SCARECROW_AWARD_INDEX_ERROR = 28206
+SCARECROW_NOT_ENOUGH_ERROR = 28207
+SCARECROW_ALREADY_CLEANED = 28208
+ANIMAL_ACTIVITY_ANIMAL_CFG_NOT_FIND = 28301
+ANIMAL_ACTIVITY_LAST_NOT_END = 28302
+ANIMAL_ACTIVITY_RANDOM_CFG_NOT_FIND = 28303
+ANIMAL_ACTIVITY_NOT_OPEN = 28304
+ANIMAL_ACTIVITY_DIFFICULTY = 28305
+ANIMAL_TASK_ALREADY_END = 28306
+ANIMAL_ANIMAL_TASK_ALREADY_SUBMIT = 28307
+ANIMAL_ANIMAL_TASK_ITEM_NOT_ENOUGH = 28308
+ANIMAL_ALREADY_TOKEN_INDEX_AWARD = 28309
+ANIMAL_INDEX_AWARD_NOT_EXIST = 28310
+ANIMAL_INDEX_AWARD_FINISHED_NOT_ENOUGH = 28311
+ANIMAL_ANIMAL_NOT_FIND = 28312
+ANIMAL_ANIMAL_ALREADY_APPEARED = 28313
+ANIMAL_ANIMAL_IN_CD_NOW = 28314
+DRAGON_BUBBLE_CFG_NOT_FIND = 28401
+DRAGON_BUBBLE_CD = 28402
+DRAGON_BUBBLE_TODAY_LIMIT = 28403
+DRAGON_BUBBLE_NOT_OPEN = 28404
+DRAGON_BUBBLE_SINGLE_LIMIT = 28405
+DRAGON_BUBBLE_HAVE_LIMIT = 28406
+DRAGON_BUBBLE_DATA_NOT_EXIST = 28407
+DRAGON_BUBBLE_NOT_EXIST_DRAGON = 28408
+SKIN_PRODUCE_REPEATE_UNLOCK = 28501
+SKIN_PRODUCE_CFG_NOT_FIND = 28502
+SKIN_PRODUCE_DRAGONSKIN_UNLOCK = 28503
+SKIN_PRODUCE_NOOBTAIN_DESIGN = 28504
+SKIN_ATTRIBUTE_NOT_MATCH = 28505
+SKIN_HAVE_EQUIP = 28506
+SKIN_CAN_NOT_EQUIP_MANY = 28507
+DRAGON_MAZE_LEVEL_NOT_EXIST = 28601
+DRAGON_MAZE_DATA_NOT_EXIST = 28602
+DRAGON_MAZE_ENTER_LEVEL_ERROR = 28603
+DRAGON_MAZE_SAME_DRAGON_ERROR = 28604
+DRAGON_MAZE_DRAGON_NUM_ERROR = 28605
+DRAGON_MAZE_DRAGON_NOT_EXIST_ERROR = 28606
+DRAGON_MAZE_BUY_COUNT_NOT_ENOUGH = 28607
+DRAGON_MAZE_BUY_DIAMOND_ERROR = 28608
+DRAGON_MAZE_ITEM_NOT_ENOUGH_ERROR = 28609
+DRAGON_MAZE_ALREADY_END = 28610
+DRAGON_MAZE_SHOP_TEMPLATE_NOT_EXIST = 28611
+DRAGON_MAZE_SHOP_PRODUCT_NOT_EXIST = 28612
+DRAGON_MAZE_PRODUCT_BUY_COUNT_ERROR = 28613
+TEAM_FULL_ERROR = 28701
+TEAM_JOIN_NOT_ALLOW_ERROR = 28702
+TEAM_LEVEL_NOT_ENOUGH_ERROR = 28703
+TEAM_NOT_EXIST_ERROR = 28704
+TEAM_AUTH_ERROR = 28705
+TEAM_ALREADY_HAS_ERROR = 28706
+TEAM_MONEY_NOT_ENOUGH_ERROR = 28707
+TEAM_NAME_ILLEGAL_ERROR = 28708
+TEAM_DESC_ILLEGAL_ERROR = 28709
+TEAM_LEVEL_ILLEGAL_ERROR = 28710
+TEAM_ICON_ILLEGAL_ERROR = 28711
+TEAM_NEED_HELP_MAX_ERROR = 28712
+TEAM_HELP_OTHER_INFO_NOT_EXIST_ERROR = 28713
+TEAM_HELP_OTHER_INFO_ALREADY_HELPED_ERROR = 28714
+TEAM_HELP_OTHER_INFO_TO_MAX_ERROR = 28715
+TEAM_NOT_IN_TEAM_ERROR = 28716
+TEAM_PLAYER_ALREADY_HAS_TEAM_ERROR = 28717
+TEAM_HELP_OTHER_ITEM_NOT_EXIST_ERROR = 28718
+TEAM_CREATE_MONEY_COST_ERROR = 28719
+TEAM_CREATE_NAME_ALREADY_EXIST_ERROR = 28720
+TEAM_JOIN_TEAM_IN_CD_ERROR = 28721
+TEAM_HELP_OTHER_CAN_NOT_HELP_SELF_ERROR = 28722
+TEAM_KICK_IN_ACTIVITY_ERROR = 28723
+TEAM_QUIT_IN_ACTIVITY_ERROR = 28724
+REDENVELOPE_DATA_NOT_EXIST_ERROR = 28725
+REDENVELOPE_ALREADY_FINISHED_ERROR = 28726
+REDENVELOPE_ALREADY_TOKEN_ERROR = 28727
+WEEK_GIFT_NOT_EXIST = 28801
+WEEK_GIFT_NOT_REFRESHTIME = 28802
+WEEK_GIFT_NOT_OPENCONDITION = 28803
+WEEK_GIFT_BUY_LIMIT = 28804
+PARKOUR_NO_LIFE = 28901
+PARKOUR_NO_REWARD = 28902
+PARKOUR_CONSUME_ERROR = 28903
+PARKOUR_NOT_INGAME = 28904
+PARKOUR_IS_END = 28905
+PARKOUR_UPPER_LIMIT = 28906
+PARKOUR_RANK_REWARDED = 28907
+GROWTHFUND_NO_DATA = 29001
+GROWTHFUND_REPEATED_REWARD = 29002
+CHAT_CONTENT_TOO_LENGTH = 29101
+PLAYER_VERSION_BEFORE_LOWEST_VERSION = 29201
+TEAM_MAP_ADV_ING = 29202
+TEAM_MAP_HAS_TASK = 29203
+TEAM_MAP_ADV_END = 29204
+TEAM_MAP_NO_TASK = 29205
+TEAM_MAP_JOIN_TEAM_AFTER_REWARD_TIME = 29206
+TEAM_MAP_NOT_FINISH_ALL_TASK = 29207
+PIGGYBANK_REPEATED_START = 29301
+PIGGYBANK_UPDATE_NORECHARGE = 29302
+PIGGYBANK_UPDATE_MAX = 29303
+PIGGYBANK_UPDATE_END = 29304
 
 
 DESCRIPTOR.enum_types_by_name['ErrorCodeEnums'] = _ERRORCODEENUMS

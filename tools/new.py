@@ -11,12 +11,12 @@ import time
 import requests
 
 
-account = "1850"
+account = "1855"
 
 
 server = "38"
-version = "17.1.0"
-scene = "14"#input("输入地图编号")
+version = "18.1.0"
+scene = "9"#input("输入地图编号")
 
 
 
@@ -36,6 +36,11 @@ def new(account,server,version,scene):
     task_dist["12"] = "gmSubmitTask 12 Mission12_012TeleportationPortal"
     task_dist["13"] = "gmSubmitTask 13 Mission13_014TrueHeart"
     task_dist["14"] = "gmSubmitTask 14 Mission14_015ThePortalDoor"
+    task_dist["15"] = "gmSubmitTask 15 Mission15_014WisdomFeedback"
+    task_dist["16"] = "gmSubmitTask 16 Mission16_014DragonBlessing"
+    task_dist["17"] = "gmSubmitTask 17 Mission17_012Conchchannel"
+    task_dist["18"] = "gmSubmitTask 18 Mission18_012Mysteriousmine"
+    
 
 
 

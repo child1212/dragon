@@ -3,6 +3,7 @@ package com.common.msg;
 
 import "ActivityModuleMsg.proto";
 import "TaskModuleMsg.proto";
+import "ItemModuleMsg.proto";
 
 enum GoldPassModuleMsgSubCommand {
 	// 黄金通信证信息
@@ -13,6 +14,8 @@ enum GoldPassModuleMsgSubCommand {
 	GOLDPASSMODULEMSG_SUB_GOLDPASSBUYLEVEL = 25903;
 	// 领取黄金通行证奖励
 	GOLDPASSMODULEMSG_SUB_GOLDPASSREWARD = 25904;
+	// 满级宝箱兑换
+	GOLDPASSMODULEMSG_SUB_GOLDPASSMAXLEVELBOX = 25905;
 }
 
 // 黄金通信证信息请求
@@ -40,6 +43,7 @@ message GoldPassInfoResponse {
 	repeated GoldPassTaskMsg weeklyTasks = 8;	// 每周任务
 	repeated int32 baseRewards = 9;				// 已领取level（基础奖励）
 	repeated int32 passRewards = 10;			// 已领取level（通行证奖励) 
+	optional int32 exchangeGold = 11;			// 满级兑换的金币 
 }
 
 // 黄金通行证任务完成结果
@@ -57,6 +61,7 @@ message GoldPassFinishTaskRequest {
 // 完成黄金通行证任务响应
 message GoldPassFinishTaskResponse {
 	repeated GoldPassFinishTaskRetMsg rets = 1;	// 完成结果
+	optional int32 exchangeGold = 2;			// 满级兑换的金币 
 }
 
 // 购买黄金通行证等级请求
@@ -80,4 +85,15 @@ message GoldPassRewardRequest {
 // 领取黄金通行证奖励响应
 message GoldPassRewardResponse {
 
+}
+
+// 满级宝箱兑换请求
+message GoldPassMaxLevelBoxRequest {
+	
+}
+
+// 满级宝箱兑换响应
+message GoldPassMaxLevelBoxResponse {
+	// 兑换的奖励
+	repeated ItemMsg rewards = 1;
 }

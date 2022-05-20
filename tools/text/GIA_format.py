@@ -5,7 +5,7 @@ import json
 gia = open("gia.txt","r")
 giar = open("gia_out.txt","w")
 
-custom = ("farmlandID","cropID","rss","tsl")
+custom = ("itemId","remain","method","subMethod")
 
 for line in gia:
     line_j = json.loads(line)

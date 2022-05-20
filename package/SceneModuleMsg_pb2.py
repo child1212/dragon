@@ -15,6 +15,7 @@ _sym_db = _symbol_database.Default()
 import ItemModuleMsg_pb2 as ItemModuleMsg__pb2
 import FarmlandModuleMsg_pb2 as FarmlandModuleMsg__pb2
 import ConvertFactoryModuleMsg_pb2 as ConvertFactoryModuleMsg__pb2
+import CommonTaskModuleMsg_pb2 as CommonTaskModuleMsg__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -23,9 +24,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x14SceneModuleMsg.proto\x12\x0e\x63om.common.msg\x1a\x13ItemModuleMsg.proto\x1a\x17\x46\x61rmlandModuleMsg.proto\x1a\x1d\x43onvertFactoryModuleMsg.proto\"w\n\x08PlantMsg\x12\x0f\n\x07plantId\x18\x01 \x01(\t\x12)\n\x08\x63onsumed\x18\x02 \x01(\x0b\x32\x17.com.common.msg.ItemMsg\x12/\n\x0e\x63ollectRewards\x18\x03 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"#\n\x10SceneInfoRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\"M\n\x0b\x42uildingMsg\x12\x0f\n\x07plantId\x18\x01 \x02(\t\x12\r\n\x05level\x18\x02 \x02(\x05\x12\x0c\n\x04\x64rop\x18\x03 \x01(\x08\x12\x10\n\x08progress\x18\x04 \x01(\x05\"\x1c\n\tTraderMsg\x12\x0f\n\x07plantId\x18\x01 \x02(\t\")\n\nMonsterMsg\x12\x0f\n\x07plantId\x18\x01 \x02(\t\x12\n\n\x02hp\x18\x02 \x02(\x05\"\xb1\x03\n\x11SceneInfoResponse\x12(\n\x06plants\x18\x01 \x03(\x0b\x32\x18.com.common.msg.PlantMsg\x12\x0f\n\x07\x63leared\x18\x02 \x03(\t\x12;\n\x1a\x61utoReceivedCollectRewards\x18\x03 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12\x31\n\x0c\x62uildingMsgs\x18\x04 \x03(\x0b\x32\x1b.com.common.msg.BuildingMsg\x12\x31\n\x0c\x66\x61rmlandMsgs\x18\x05 \x03(\x0b\x32\x1b.com.common.msg.FarmlandMsg\x12-\n\ntraderMsgs\x18\x06 \x03(\x0b\x32\x19.com.common.msg.TraderMsg\x12:\n\x0f\x63onvertFactorys\x18\x07 \x03(\x0b\x32!.com.common.msg.ConvertFactoryMsg\x12/\n\x0bmonsterMsgs\x18\x08 \x03(\x0b\x32\x1a.com.common.msg.MonsterMsg\x12\x11\n\tcloseTime\x18\t \x01(\x03\x12\x0f\n\x07\x61ppears\x18\n \x03(\t\"\x91\x01\n\x1cObstacleAchievementRewardMsg\x12\x15\n\rachievementId\x18\x01 \x01(\t\x12(\n\x07rewards\x18\x02 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12\x30\n\x0f\x63ompleteRewards\x18\x03 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"5\n\x11\x43learPlantRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\x0f\n\x07plantId\x18\x02 \x01(\t\"\xfb\x01\n\x12\x43learPlantResponse\x12\x0f\n\x07\x63leared\x18\x01 \x01(\x08\x12)\n\x08produced\x18\x02 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12\'\n\x05plant\x18\x03 \x01(\x0b\x32\x18.com.common.msg.PlantMsg\x12&\n\x05items\x18\x04 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12G\n\x11\x61\x63hievementReward\x18\x05 \x01(\x0b\x32,.com.common.msg.ObstacleAchievementRewardMsg\x12\x0f\n\x07plantId\x18\x06 \x01(\t\";\n\x16\x46indScenePlantsRequest\x12\x0f\n\x07sceneId\x18\x01 \x02(\t\x12\x10\n\x08plantIds\x18\x02 \x03(\t\"[\n\x17\x46indScenePlantsResponse\x12\x10\n\x08plantIds\x18\x01 \x03(\t\x12.\n\tbuildings\x18\x02 \x03(\x0b\x32\x1b.com.common.msg.BuildingMsg\"6\n\x12PlantAppearRequest\x12\x0f\n\x07sceneId\x18\x01 \x02(\t\x12\x0f\n\x07plantId\x18\x02 \x02(\t\"\x15\n\x13PlantAppearResponse\":\n\x16\x42uildingLevelUpRequest\x12\x0f\n\x07sceneId\x18\x01 \x02(\t\x12\x0f\n\x07plantId\x18\x02 \x02(\t\"\x19\n\x17\x42uildingLevelUpResponse\"6\n\x11TraderInfoRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\x10\n\x08traderId\x18\x02 \x01(\t\"\x9a\x01\n\x10TradeExchangeMsg\x12\x0c\n\x04\x64one\x18\x01 \x01(\x08\x12\'\n\x06reward\x18\x02 \x01(\x0b\x32\x17.com.common.msg.ItemMsg\x12)\n\x08\x65xchange\x18\x03 \x01(\x0b\x32\x17.com.common.msg.ItemMsg\x12$\n\x03\x62\x61g\x18\x04 \x01(\x0b\x32\x17.com.common.msg.ItemMsg\"e\n\x19TradeTimeLimitExchangeMsg\x12\x10\n\x08leftTime\x18\x01 \x01(\x03\x12\x36\n\x0c\x65xchangeInfo\x18\x02 \x01(\x0b\x32 .com.common.msg.TradeExchangeMsg\"\xc5\x01\n\x12TraderInfoResponse\x12\x0c\n\x04\x64one\x18\x01 \x01(\x08\x12\x31\n\x07normals\x18\x02 \x03(\x0b\x32 .com.common.msg.TradeExchangeMsg\x12<\n\ttimeLimit\x18\x03 \x01(\x0b\x32).com.common.msg.TradeTimeLimitExchangeMsg\x12\x30\n\x0f\x63ompleteRewards\x18\x04 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"T\n\x1aTradeNormalExchangeRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\x10\n\x08traderId\x18\x02 \x01(\t\x12\x13\n\x0bnormalIndex\x18\x03 \x01(\x05\"\xb1\x01\n\x1bTradeNormalExchangeResponse\x12(\n\x07rewards\x18\x01 \x01(\x0b\x32\x17.com.common.msg.ItemMsg\x12\x36\n\x0c\x65xchangeInfo\x18\x02 \x01(\x0b\x32 .com.common.msg.TradeExchangeMsg\x12\x30\n\x0f\x63ompleteRewards\x18\x03 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"B\n\x1dTradeTimeLimitExchangeRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\x10\n\x08traderId\x18\x02 \x01(\t\"\xea\x01\n\x1eTradeTimeLimitExchangeResponse\x12(\n\x07rewards\x18\x01 \x01(\x0b\x32\x17.com.common.msg.ItemMsg\x12+\n\nboxRewards\x18\x02 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12?\n\x0c\x65xchangeInfo\x18\x03 \x01(\x0b\x32).com.common.msg.TradeTimeLimitExchangeMsg\x12\x30\n\x0f\x63ompleteRewards\x18\x04 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\";\n\x17MonsterWheelInfoRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\x0f\n\x07plantId\x18\x02 \x01(\t\"f\n\x18MonsterWheelInfoResponse\x12\n\n\x02hp\x18\x01 \x01(\x05\x12\x0f\n\x07hpLimit\x18\x02 \x01(\x05\x12\r\n\x05round\x18\x03 \x01(\x05\x12\r\n\x05wheel\x18\x04 \x03(\x05\x12\x0f\n\x07roundId\x18\x05 \x01(\t\";\n\x17MonsterWheelTurnRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\x0f\n\x07plantId\x18\x02 \x01(\t\"E\n\x18MonsterWheelTurnResponse\x12\r\n\x05index\x18\x01 \x01(\x05\x12\n\n\x02hp\x18\x02 \x01(\x05\x12\x0e\n\x06\x65nergy\x18\x03 \x01(\x05\"1\n\x1eObstacleAchievementInfoRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\"m\n\x16ObstacleAchievementMsg\x12\x10\n\x08\x63omplete\x18\x01 \x01(\x08\x12\x15\n\rachievementId\x18\x02 \x01(\t\x12\x0c\n\x04type\x18\x03 \x01(\x05\x12\r\n\x05\x63ount\x18\x04 \x01(\x05\x12\r\n\x05limit\x18\x05 \x01(\x05\"q\n\x1fObstacleAchievementInfoResponse\x12\x10\n\x08\x63omplete\x18\x01 \x01(\x08\x12<\n\x0c\x61\x63hievements\x18\x02 \x03(\x0b\x32&.com.common.msg.ObstacleAchievementMsg\"Z\n\x0f\x46ireBombRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\t\n\x01x\x18\x02 \x01(\x05\x12\t\n\x01y\x18\x03 \x01(\x05\x12\x0e\n\x06\x62ombId\x18\x04 \x01(\t\x12\x10\n\x08plantIds\x18\x05 \x03(\t\"G\n\x10\x46ireBombResponse\x12\x33\n\x07\x65\x66\x66\x65\x63ts\x18\x01 \x03(\x0b\x32\".com.common.msg.ClearPlantResponse\"\x17\n\x15SceneCloseTimeRequest\"5\n\x0fSceneCloseEntry\x12\x0f\n\x07sceneId\x18\x01 \x02(\t\x12\x11\n\tcloseTime\x18\x02 \x02(\x03\"O\n\x16SceneCloseTimeResponse\x12\x35\n\x0c\x63loseEntries\x18\x01 \x03(\x0b\x32\x1f.com.common.msg.SceneCloseEntry\"=\n\x19\x42uildingDropRewardRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\x0f\n\x07plantId\x18\x02 \x01(\t\"F\n\x1a\x42uildingDropRewardResponse\x12(\n\x07rewards\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\";\n\x16\x46indPlantAppearRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\x10\n\x08plantIds\x18\x02 \x03(\t\"+\n\x17\x46indPlantAppearResponse\x12\x10\n\x08plantIds\x18\x01 \x03(\t*\x8c\x05\n\x18SceneModuleMsgSubCommand\x12\"\n\x1cSCENEMODULEMSG_SUB_SCENEINFO\x10\xd5\xc5\x01\x12#\n\x1dSCENEMODULEMSG_SUB_CLEARPLANT\x10\xd6\xc5\x01\x12(\n\"SCENEMODULEMSG_SUB_FINDSCENEPLANTS\x10\xd7\xc5\x01\x12(\n\"SCENEMODULEMSG_SUB_BUILDINGLEVELUP\x10\xd8\xc5\x01\x12#\n\x1dSCENEMODULEMSG_SUB_TRADERINFO\x10\xd9\xc5\x01\x12,\n&SCENEMODULEMSG_SUB_TRADENORMALEXCHANGE\x10\xda\xc5\x01\x12/\n)SCENEMODULEMSG_SUB_TRADETIMELIMITEXCHANGE\x10\xdb\xc5\x01\x12)\n#SCENEMODULEMSG_SUB_MONSTERWHEELINFO\x10\xdc\xc5\x01\x12)\n#SCENEMODULEMSG_SUB_MONSTERWHEELTURN\x10\xdd\xc5\x01\x12\x30\n*SCENEMODULEMSG_SUB_OBSTACLEACHIEVEMENTINFO\x10\xde\xc5\x01\x12$\n\x1eSCENEMODULEMSG_SUB_PLANTAPPEAR\x10\xdf\xc5\x01\x12!\n\x1bSCENEMODULEMSG_SUB_FIREBOMB\x10\xe0\xc5\x01\x12\'\n!SCENEMODULEMSG_SUB_SCENECLOSETIME\x10\xe1\xc5\x01\x12+\n%SCENEMODULEMSG_SUB_BUILDINGDROPREWARD\x10\xe2\xc5\x01\x12(\n\"SCENEMODULEMSG_SUB_FINDPLANTAPPEAR\x10\xe3\xc5\x01'
+  serialized_pb=b'\n\x14SceneModuleMsg.proto\x12\x0e\x63om.common.msg\x1a\x13ItemModuleMsg.proto\x1a\x17\x46\x61rmlandModuleMsg.proto\x1a\x1d\x43onvertFactoryModuleMsg.proto\x1a\x19\x43ommonTaskModuleMsg.proto\"w\n\x08PlantMsg\x12\x0f\n\x07plantId\x18\x01 \x01(\t\x12)\n\x08\x63onsumed\x18\x02 \x01(\x0b\x32\x17.com.common.msg.ItemMsg\x12/\n\x0e\x63ollectRewards\x18\x03 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"#\n\x10SceneInfoRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\"A\n\x11\x42uildingHangUpMsg\x12\x0b\n\x03\x63ur\x18\x01 \x01(\x05\x12\r\n\x05total\x18\x02 \x01(\x05\x12\x10\n\x08nextTime\x18\x03 \x01(\x03\"\xaf\x01\n\x0b\x42uildingMsg\x12\x0f\n\x07plantId\x18\x01 \x02(\t\x12\r\n\x05level\x18\x02 \x02(\x05\x12\x0c\n\x04\x64rop\x18\x03 \x01(\x08\x12\x10\n\x08progress\x18\x04 \x01(\x05\x12\x0e\n\x06unlock\x18\x05 \x01(\x08\x12\x34\n\thangupMsg\x18\x06 \x01(\x0b\x32!.com.common.msg.BuildingHangUpMsg\x12\x1a\n\x12\x63hristmasDrawCount\x18\x07 \x01(\x05\"\x1c\n\tTraderMsg\x12\x0f\n\x07plantId\x18\x01 \x02(\t\")\n\nMonsterMsg\x12\x0f\n\x07plantId\x18\x01 \x02(\t\x12\n\n\x02hp\x18\x02 \x02(\x05\"T\n\x07StarMsg\x12\x0e\n\x06starId\x18\x01 \x01(\x05\x12\x0e\n\x06reward\x18\x02 \x01(\x05\x12)\n\x05tasks\x18\x03 \x03(\x0b\x32\x1a.com.common.msg.CommonTask\"L\n\x10RepairStarReward\x12\x0e\n\x06starId\x18\x01 \x01(\x05\x12(\n\x07rewards\x18\x02 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"\xfe\x01\n\x0cSceneStarMsg\x12\x0c\n\x04star\x18\x01 \x01(\x05\x12\x11\n\tlimittime\x18\x02 \x01(\x03\x12\x13\n\x0blimitreward\x18\x03 \x01(\x05\x12&\n\x05stars\x18\x05 \x03(\x0b\x32\x17.com.common.msg.StarMsg\x12\x1a\n\x12repairCompleteTask\x18\x06 \x03(\t\x12;\n\x11repairStarRewards\x18\x07 \x03(\x0b\x32 .com.common.msg.RepairStarReward\x12\x37\n\x16repairTimelimitRewards\x18\x08 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"\xe0\x03\n\x11SceneInfoResponse\x12(\n\x06plants\x18\x01 \x03(\x0b\x32\x18.com.common.msg.PlantMsg\x12\x0f\n\x07\x63leared\x18\x02 \x03(\t\x12;\n\x1a\x61utoReceivedCollectRewards\x18\x03 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12\x31\n\x0c\x62uildingMsgs\x18\x04 \x03(\x0b\x32\x1b.com.common.msg.BuildingMsg\x12\x31\n\x0c\x66\x61rmlandMsgs\x18\x05 \x03(\x0b\x32\x1b.com.common.msg.FarmlandMsg\x12-\n\ntraderMsgs\x18\x06 \x03(\x0b\x32\x19.com.common.msg.TraderMsg\x12:\n\x0f\x63onvertFactorys\x18\x07 \x03(\x0b\x32!.com.common.msg.ConvertFactoryMsg\x12/\n\x0bmonsterMsgs\x18\x08 \x03(\x0b\x32\x1a.com.common.msg.MonsterMsg\x12\x11\n\tcloseTime\x18\t \x01(\x03\x12\x0f\n\x07\x61ppears\x18\n \x03(\t\x12-\n\x07starMsg\x18\x0b \x01(\x0b\x32\x1c.com.common.msg.SceneStarMsg\"\x91\x01\n\x1cObstacleAchievementRewardMsg\x12\x15\n\rachievementId\x18\x01 \x01(\t\x12(\n\x07rewards\x18\x02 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12\x30\n\x0f\x63ompleteRewards\x18\x03 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"5\n\x11\x43learPlantRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\x0f\n\x07plantId\x18\x02 \x01(\t\"\xda\x02\n\x12\x43learPlantResponse\x12\x0f\n\x07\x63leared\x18\x01 \x01(\x08\x12)\n\x08produced\x18\x02 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12\'\n\x05plant\x18\x03 \x01(\x0b\x32\x18.com.common.msg.PlantMsg\x12&\n\x05items\x18\x04 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12G\n\x11\x61\x63hievementReward\x18\x05 \x01(\x0b\x32,.com.common.msg.ObstacleAchievementRewardMsg\x12\x0f\n\x07plantId\x18\x06 \x01(\t\x12&\n\x05\x63osts\x18\x07 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12\x35\n\tcreatures\x18\x08 \x03(\x0b\x32\".com.common.msg.MagicalCreatureMsg\";\n\x16\x46indScenePlantsRequest\x12\x0f\n\x07sceneId\x18\x01 \x02(\t\x12\x10\n\x08plantIds\x18\x02 \x03(\t\"[\n\x17\x46indScenePlantsResponse\x12\x10\n\x08plantIds\x18\x01 \x03(\t\x12.\n\tbuildings\x18\x02 \x03(\x0b\x32\x1b.com.common.msg.BuildingMsg\"6\n\x12PlantAppearRequest\x12\x0f\n\x07sceneId\x18\x01 \x02(\t\x12\x0f\n\x07plantId\x18\x02 \x02(\t\"\x15\n\x13PlantAppearResponse\"h\n\x15\x42uildingRepairDrawMsg\x12\x11\n\tdrawIndex\x18\x01 \x01(\x05\x12\r\n\x05\x64raws\x18\x02 \x03(\x05\x12-\n\x0c\x66inalRewards\x18\x03 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\":\n\x16\x42uildingLevelUpRequest\x12\x0f\n\x07sceneId\x18\x01 \x02(\t\x12\x0f\n\x07plantId\x18\x02 \x02(\t\"k\n\x17\x42uildingLevelUpResponse\x12\x12\n\ncostEnergy\x18\x01 \x01(\x05\x12<\n\rrepairDrawMsg\x18\x02 \x01(\x0b\x32%.com.common.msg.BuildingRepairDrawMsg\"6\n\x11TraderInfoRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\x10\n\x08traderId\x18\x02 \x01(\t\"\x9a\x01\n\x10TradeExchangeMsg\x12\x0c\n\x04\x64one\x18\x01 \x01(\x08\x12\'\n\x06reward\x18\x02 \x01(\x0b\x32\x17.com.common.msg.ItemMsg\x12)\n\x08\x65xchange\x18\x03 \x01(\x0b\x32\x17.com.common.msg.ItemMsg\x12$\n\x03\x62\x61g\x18\x04 \x01(\x0b\x32\x17.com.common.msg.ItemMsg\"e\n\x19TradeTimeLimitExchangeMsg\x12\x10\n\x08leftTime\x18\x01 \x01(\x03\x12\x36\n\x0c\x65xchangeInfo\x18\x02 \x01(\x0b\x32 .com.common.msg.TradeExchangeMsg\"\xc5\x01\n\x12TraderInfoResponse\x12\x0c\n\x04\x64one\x18\x01 \x01(\x08\x12\x31\n\x07normals\x18\x02 \x03(\x0b\x32 .com.common.msg.TradeExchangeMsg\x12<\n\ttimeLimit\x18\x03 \x01(\x0b\x32).com.common.msg.TradeTimeLimitExchangeMsg\x12\x30\n\x0f\x63ompleteRewards\x18\x04 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"T\n\x1aTradeNormalExchangeRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\x10\n\x08traderId\x18\x02 \x01(\t\x12\x13\n\x0bnormalIndex\x18\x03 \x01(\x05\"\xb1\x01\n\x1bTradeNormalExchangeResponse\x12(\n\x07rewards\x18\x01 \x01(\x0b\x32\x17.com.common.msg.ItemMsg\x12\x36\n\x0c\x65xchangeInfo\x18\x02 \x01(\x0b\x32 .com.common.msg.TradeExchangeMsg\x12\x30\n\x0f\x63ompleteRewards\x18\x03 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"B\n\x1dTradeTimeLimitExchangeRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\x10\n\x08traderId\x18\x02 \x01(\t\"\xea\x01\n\x1eTradeTimeLimitExchangeResponse\x12(\n\x07rewards\x18\x01 \x01(\x0b\x32\x17.com.common.msg.ItemMsg\x12+\n\nboxRewards\x18\x02 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12?\n\x0c\x65xchangeInfo\x18\x03 \x01(\x0b\x32).com.common.msg.TradeTimeLimitExchangeMsg\x12\x30\n\x0f\x63ompleteRewards\x18\x04 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\";\n\x17MonsterWheelInfoRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\x0f\n\x07plantId\x18\x02 \x01(\t\"f\n\x18MonsterWheelInfoResponse\x12\n\n\x02hp\x18\x01 \x01(\x05\x12\x0f\n\x07hpLimit\x18\x02 \x01(\x05\x12\r\n\x05round\x18\x03 \x01(\x05\x12\r\n\x05wheel\x18\x04 \x03(\x05\x12\x0f\n\x07roundId\x18\x05 \x01(\t\";\n\x17MonsterWheelTurnRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\x0f\n\x07plantId\x18\x02 \x01(\t\"E\n\x18MonsterWheelTurnResponse\x12\r\n\x05index\x18\x01 \x01(\x05\x12\n\n\x02hp\x18\x02 \x01(\x05\x12\x0e\n\x06\x65nergy\x18\x03 \x01(\x05\"1\n\x1eObstacleAchievementInfoRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\"m\n\x16ObstacleAchievementMsg\x12\x10\n\x08\x63omplete\x18\x01 \x01(\x08\x12\x15\n\rachievementId\x18\x02 \x01(\t\x12\x0c\n\x04type\x18\x03 \x01(\x05\x12\r\n\x05\x63ount\x18\x04 \x01(\x05\x12\r\n\x05limit\x18\x05 \x01(\x05\"q\n\x1fObstacleAchievementInfoResponse\x12\x10\n\x08\x63omplete\x18\x01 \x01(\x08\x12<\n\x0c\x61\x63hievements\x18\x02 \x03(\x0b\x32&.com.common.msg.ObstacleAchievementMsg\"\x80\x01\n\x0f\x46ireBombRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\t\n\x01x\x18\x02 \x01(\x05\x12\t\n\x01y\x18\x03 \x01(\x05\x12\x0e\n\x06\x62ombId\x18\x04 \x01(\t\x12\x10\n\x08plantIds\x18\x05 \x03(\t\x12\x0f\n\x07\x61\x64sFlag\x18\x06 \x01(\x08\x12\x13\n\x0b\x64iamondFlag\x18\x07 \x01(\x05\"G\n\x10\x46ireBombResponse\x12\x33\n\x07\x65\x66\x66\x65\x63ts\x18\x01 \x03(\x0b\x32\".com.common.msg.ClearPlantResponse\"(\n\x15SceneCloseTimeRequest\x12\x0f\n\x07reqType\x18\x01 \x01(\x05\"I\n\x0fSceneCloseEntry\x12\x0f\n\x07sceneId\x18\x01 \x02(\t\x12\x11\n\tcloseTime\x18\x02 \x02(\x03\x12\x12\n\ncloseClear\x18\x03 \x01(\x08\"2\n\x0eSceneStarEntry\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\x0f\n\x07starIds\x18\x02 \x03(\x05\"\xba\x01\n\x16SceneCloseTimeResponse\x12\x35\n\x0c\x63loseEntries\x18\x01 \x03(\x0b\x32\x1f.com.common.msg.SceneCloseEntry\x12,\n\x04star\x18\x02 \x03(\x0b\x32\x1e.com.common.msg.SceneStarEntry\x12\x1b\n\x13unlockCommissionIds\x18\x03 \x03(\t\x12\x1e\n\x16\x63omplateRewardSceneIds\x18\x04 \x03(\t\"=\n\x19\x42uildingDropRewardRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\x0f\n\x07plantId\x18\x02 \x01(\t\"\x8f\x01\n\x1a\x42uildingDropRewardResponse\x12(\n\x07rewards\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12G\n\x11\x61\x63hievementReward\x18\x02 \x01(\x0b\x32,.com.common.msg.ObstacleAchievementRewardMsg\";\n\x16\x46indPlantAppearRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\x10\n\x08plantIds\x18\x02 \x03(\t\"+\n\x17\x46indPlantAppearResponse\x12\x10\n\x08plantIds\x18\x01 \x03(\t\"9\n\x15\x42uildingUnlockRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\x0f\n\x07plantId\x18\x02 \x01(\t\"\x18\n\x16\x42uildingUnlockResponse\"\x1e\n\x1c\x43onvertSceneCloseItemRequest\"G\n\x1d\x43onvertSceneCloseItemResponse\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"@\n\x1b\x42uildingHangUpRewardRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\x10\n\x08plantIds\x18\x02 \x03(\t\"y\n\x17\x42uildingHangUpRewardMsg\x12(\n\x07rewards\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12\x34\n\thangUpMsg\x18\x02 \x01(\x0b\x32!.com.common.msg.BuildingHangUpMsg\"X\n\x1c\x42uildingHangUpRewardResponse\x12\x38\n\x07rewards\x18\x01 \x03(\x0b\x32\'.com.common.msg.BuildingHangUpRewardMsg\"@\n\x1c\x42uildingHangUpDiamondRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\x0f\n\x07plantId\x18\x02 \x01(\t\",\n\x1d\x42uildingHangUpDiamondResponse\x12\x0b\n\x03\x63nt\x18\x01 \x01(\x05\"5\n\x12ReopenSceneRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\x0e\n\x06itemId\x18\x02 \x01(\t\"\x15\n\x13ReopenSceneResponse\"R\n\x16SceneStarRewardRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\x0e\n\x06starId\x18\x02 \x03(\x05\x12\x17\n\x0ftimelimitReward\x18\x04 \x01(\x08\"C\n\x17SceneStarRewardResponse\x12(\n\x07rewards\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"8\n%SceneObstacleAchievementRewardRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\"c\n&SceneObstacleAchievementRewardResponse\x12\x39\n\x03msg\x18\x01 \x03(\x0b\x32,.com.common.msg.ObstacleAchievementRewardMsg\"o\n\x14SceneChapterStarInfo\x12\x11\n\tchapterId\x18\x01 \x01(\x05\x12\x0c\n\x04star\x18\x02 \x01(\x05\x12\x0c\n\x04pass\x18\x03 \x01(\x08\x12\x11\n\trewardIds\x18\x04 \x03(\t\x12\x15\n\rpassRewardIds\x18\x05 \x03(\t\"\x1d\n\x1bSceneChapterStarInfoRequest\"V\n\x1cSceneChapterStarInfoResponse\x12\x36\n\x08\x63hapters\x18\x01 \x03(\x0b\x32$.com.common.msg.SceneChapterStarInfo\"2\n\x1dSceneChapterStarRewardRequest\x12\x11\n\trewardIds\x18\x01 \x03(\t\"K\n\rStarRewardMsg\x12\x10\n\x08rewardId\x18\x01 \x01(\t\x12(\n\x07rewards\x18\x02 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"T\n\x1eSceneChapterStarRewardResponse\x12\x32\n\x0bstarRewards\x18\x01 \x03(\x0b\x32\x1d.com.common.msg.StarRewardMsg\")\n\x16\x43loseRelicSceneRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\"\x19\n\x17\x43loseRelicSceneResponse\"(\n\x15\x43ompleteRewardRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\"\x18\n\x16\x43ompleteRewardResponse*\x80\t\n\x18SceneModuleMsgSubCommand\x12\"\n\x1cSCENEMODULEMSG_SUB_SCENEINFO\x10\xd5\xc5\x01\x12#\n\x1dSCENEMODULEMSG_SUB_CLEARPLANT\x10\xd6\xc5\x01\x12(\n\"SCENEMODULEMSG_SUB_FINDSCENEPLANTS\x10\xd7\xc5\x01\x12(\n\"SCENEMODULEMSG_SUB_BUILDINGLEVELUP\x10\xd8\xc5\x01\x12#\n\x1dSCENEMODULEMSG_SUB_TRADERINFO\x10\xd9\xc5\x01\x12,\n&SCENEMODULEMSG_SUB_TRADENORMALEXCHANGE\x10\xda\xc5\x01\x12/\n)SCENEMODULEMSG_SUB_TRADETIMELIMITEXCHANGE\x10\xdb\xc5\x01\x12)\n#SCENEMODULEMSG_SUB_MONSTERWHEELINFO\x10\xdc\xc5\x01\x12)\n#SCENEMODULEMSG_SUB_MONSTERWHEELTURN\x10\xdd\xc5\x01\x12\x30\n*SCENEMODULEMSG_SUB_OBSTACLEACHIEVEMENTINFO\x10\xde\xc5\x01\x12$\n\x1eSCENEMODULEMSG_SUB_PLANTAPPEAR\x10\xdf\xc5\x01\x12!\n\x1bSCENEMODULEMSG_SUB_FIREBOMB\x10\xe0\xc5\x01\x12\'\n!SCENEMODULEMSG_SUB_SCENECLOSETIME\x10\xe1\xc5\x01\x12+\n%SCENEMODULEMSG_SUB_BUILDINGDROPREWARD\x10\xe2\xc5\x01\x12(\n\"SCENEMODULEMSG_SUB_FINDPLANTAPPEAR\x10\xe3\xc5\x01\x12\'\n!SCENEMODULEMSG_SUB_BUILDINGUNLOCK\x10\xe4\xc5\x01\x12.\n(SCENEMODULEMSG_SUB_CONVERTSCENECLOSEITEM\x10\xe5\xc5\x01\x12-\n\'SCENEMODULEMSG_SUB_BUILDINGHANGUPREWARD\x10\xe6\xc5\x01\x12.\n(SCENEMODULEMSG_SUB_BUILDINGHANGUPDIAMOND\x10\xe7\xc5\x01\x12$\n\x1eSCENEMODULEMSG_SUB_REOPENSCENE\x10\xe8\xc5\x01\x12(\n\"SCENEMODULEMSG_SUB_SCENESTARREWARD\x10\xe9\xc5\x01\x12\x37\n1SCENEMODULEMSG_SUB_SCENEOBSTACLEACHIEVEMENTREWARD\x10\xea\xc5\x01\x12-\n\'SCENEMODULEMSG_SUB_SCENECHAPTERSTARINFO\x10\xeb\xc5\x01\x12/\n)SCENEMODULEMSG_SUB_SCENECHAPTERSTARREWARD\x10\xec\xc5\x01\x12(\n\"SCENEMODULEMSG_SUB_CLOSERELICSCENE\x10\xed\xc5\x01\x12\'\n!SCENEMODULEMSG_SUB_COMPLETEREWARD\x10\xee\xc5\x01'
   ,
-  dependencies=[ItemModuleMsg__pb2.DESCRIPTOR,FarmlandModuleMsg__pb2.DESCRIPTOR,ConvertFactoryModuleMsg__pb2.DESCRIPTOR,])
+  dependencies=[ItemModuleMsg__pb2.DESCRIPTOR,FarmlandModuleMsg__pb2.DESCRIPTOR,ConvertFactoryModuleMsg__pb2.DESCRIPTOR,CommonTaskModuleMsg__pb2.DESCRIPTOR,])
 
 _SCENEMODULEMSGSUBCOMMAND = _descriptor.EnumDescriptor(
   name='SceneModuleMsgSubCommand',
@@ -109,11 +110,66 @@ _SCENEMODULEMSGSUBCOMMAND = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SCENEMODULEMSG_SUB_BUILDINGUNLOCK', index=15, number=25316,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SCENEMODULEMSG_SUB_CONVERTSCENECLOSEITEM', index=16, number=25317,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SCENEMODULEMSG_SUB_BUILDINGHANGUPREWARD', index=17, number=25318,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SCENEMODULEMSG_SUB_BUILDINGHANGUPDIAMOND', index=18, number=25319,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SCENEMODULEMSG_SUB_REOPENSCENE', index=19, number=25320,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SCENEMODULEMSG_SUB_SCENESTARREWARD', index=20, number=25321,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SCENEMODULEMSG_SUB_SCENEOBSTACLEACHIEVEMENTREWARD', index=21, number=25322,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SCENEMODULEMSG_SUB_SCENECHAPTERSTARINFO', index=22, number=25323,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SCENEMODULEMSG_SUB_SCENECHAPTERSTARREWARD', index=23, number=25324,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SCENEMODULEMSG_SUB_CLOSERELICSCENE', index=24, number=25325,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SCENEMODULEMSG_SUB_COMPLETEREWARD', index=25, number=25326,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=3869,
-  serialized_end=4521,
+  serialized_start=6679,
+  serialized_end=7831,
 )
 _sym_db.RegisterEnumDescriptor(_SCENEMODULEMSGSUBCOMMAND)
 
@@ -133,6 +189,17 @@ SCENEMODULEMSG_SUB_FIREBOMB = 25312
 SCENEMODULEMSG_SUB_SCENECLOSETIME = 25313
 SCENEMODULEMSG_SUB_BUILDINGDROPREWARD = 25314
 SCENEMODULEMSG_SUB_FINDPLANTAPPEAR = 25315
+SCENEMODULEMSG_SUB_BUILDINGUNLOCK = 25316
+SCENEMODULEMSG_SUB_CONVERTSCENECLOSEITEM = 25317
+SCENEMODULEMSG_SUB_BUILDINGHANGUPREWARD = 25318
+SCENEMODULEMSG_SUB_BUILDINGHANGUPDIAMOND = 25319
+SCENEMODULEMSG_SUB_REOPENSCENE = 25320
+SCENEMODULEMSG_SUB_SCENESTARREWARD = 25321
+SCENEMODULEMSG_SUB_SCENEOBSTACLEACHIEVEMENTREWARD = 25322
+SCENEMODULEMSG_SUB_SCENECHAPTERSTARINFO = 25323
+SCENEMODULEMSG_SUB_SCENECHAPTERSTARREWARD = 25324
+SCENEMODULEMSG_SUB_CLOSERELICSCENE = 25325
+SCENEMODULEMSG_SUB_COMPLETEREWARD = 25326
 
 
 
@@ -177,8 +244,8 @@ _PLANTMSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=117,
-  serialized_end=236,
+  serialized_start=144,
+  serialized_end=263,
 )
 
 
@@ -209,8 +276,54 @@ _SCENEINFOREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=238,
-  serialized_end=273,
+  serialized_start=265,
+  serialized_end=300,
+)
+
+
+_BUILDINGHANGUPMSG = _descriptor.Descriptor(
+  name='BuildingHangUpMsg',
+  full_name='com.common.msg.BuildingHangUpMsg',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='cur', full_name='com.common.msg.BuildingHangUpMsg.cur', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='total', full_name='com.common.msg.BuildingHangUpMsg.total', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='nextTime', full_name='com.common.msg.BuildingHangUpMsg.nextTime', index=2,
+      number=3, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=302,
+  serialized_end=367,
 )
 
 
@@ -250,6 +363,27 @@ _BUILDINGMSG = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='unlock', full_name='com.common.msg.BuildingMsg.unlock', index=4,
+      number=5, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='hangupMsg', full_name='com.common.msg.BuildingMsg.hangupMsg', index=5,
+      number=6, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='christmasDrawCount', full_name='com.common.msg.BuildingMsg.christmasDrawCount', index=6,
+      number=7, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -262,8 +396,8 @@ _BUILDINGMSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=275,
-  serialized_end=352,
+  serialized_start=370,
+  serialized_end=545,
 )
 
 
@@ -294,8 +428,8 @@ _TRADERMSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=354,
-  serialized_end=382,
+  serialized_start=547,
+  serialized_end=575,
 )
 
 
@@ -333,8 +467,167 @@ _MONSTERMSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=384,
-  serialized_end=425,
+  serialized_start=577,
+  serialized_end=618,
+)
+
+
+_STARMSG = _descriptor.Descriptor(
+  name='StarMsg',
+  full_name='com.common.msg.StarMsg',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='starId', full_name='com.common.msg.StarMsg.starId', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='reward', full_name='com.common.msg.StarMsg.reward', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='tasks', full_name='com.common.msg.StarMsg.tasks', index=2,
+      number=3, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=620,
+  serialized_end=704,
+)
+
+
+_REPAIRSTARREWARD = _descriptor.Descriptor(
+  name='RepairStarReward',
+  full_name='com.common.msg.RepairStarReward',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='starId', full_name='com.common.msg.RepairStarReward.starId', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='rewards', full_name='com.common.msg.RepairStarReward.rewards', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=706,
+  serialized_end=782,
+)
+
+
+_SCENESTARMSG = _descriptor.Descriptor(
+  name='SceneStarMsg',
+  full_name='com.common.msg.SceneStarMsg',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='star', full_name='com.common.msg.SceneStarMsg.star', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='limittime', full_name='com.common.msg.SceneStarMsg.limittime', index=1,
+      number=2, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='limitreward', full_name='com.common.msg.SceneStarMsg.limitreward', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='stars', full_name='com.common.msg.SceneStarMsg.stars', index=3,
+      number=5, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='repairCompleteTask', full_name='com.common.msg.SceneStarMsg.repairCompleteTask', index=4,
+      number=6, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='repairStarRewards', full_name='com.common.msg.SceneStarMsg.repairStarRewards', index=5,
+      number=7, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='repairTimelimitRewards', full_name='com.common.msg.SceneStarMsg.repairTimelimitRewards', index=6,
+      number=8, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=785,
+  serialized_end=1039,
 )
 
 
@@ -416,6 +709,13 @@ _SCENEINFORESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='starMsg', full_name='com.common.msg.SceneInfoResponse.starMsg', index=10,
+      number=11, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -428,8 +728,8 @@ _SCENEINFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=428,
-  serialized_end=861,
+  serialized_start=1042,
+  serialized_end=1522,
 )
 
 
@@ -474,8 +774,8 @@ _OBSTACLEACHIEVEMENTREWARDMSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=864,
-  serialized_end=1009,
+  serialized_start=1525,
+  serialized_end=1670,
 )
 
 
@@ -513,8 +813,8 @@ _CLEARPLANTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1011,
-  serialized_end=1064,
+  serialized_start=1672,
+  serialized_end=1725,
 )
 
 
@@ -568,6 +868,20 @@ _CLEARPLANTRESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='costs', full_name='com.common.msg.ClearPlantResponse.costs', index=6,
+      number=7, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='creatures', full_name='com.common.msg.ClearPlantResponse.creatures', index=7,
+      number=8, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -580,8 +894,8 @@ _CLEARPLANTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1067,
-  serialized_end=1318,
+  serialized_start=1728,
+  serialized_end=2074,
 )
 
 
@@ -619,8 +933,8 @@ _FINDSCENEPLANTSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1320,
-  serialized_end=1379,
+  serialized_start=2076,
+  serialized_end=2135,
 )
 
 
@@ -658,8 +972,8 @@ _FINDSCENEPLANTSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1381,
-  serialized_end=1472,
+  serialized_start=2137,
+  serialized_end=2228,
 )
 
 
@@ -697,8 +1011,8 @@ _PLANTAPPEARREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1474,
-  serialized_end=1528,
+  serialized_start=2230,
+  serialized_end=2284,
 )
 
 
@@ -722,8 +1036,54 @@ _PLANTAPPEARRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1530,
-  serialized_end=1551,
+  serialized_start=2286,
+  serialized_end=2307,
+)
+
+
+_BUILDINGREPAIRDRAWMSG = _descriptor.Descriptor(
+  name='BuildingRepairDrawMsg',
+  full_name='com.common.msg.BuildingRepairDrawMsg',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='drawIndex', full_name='com.common.msg.BuildingRepairDrawMsg.drawIndex', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='draws', full_name='com.common.msg.BuildingRepairDrawMsg.draws', index=1,
+      number=2, type=5, cpp_type=1, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='finalRewards', full_name='com.common.msg.BuildingRepairDrawMsg.finalRewards', index=2,
+      number=3, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2309,
+  serialized_end=2413,
 )
 
 
@@ -761,8 +1121,8 @@ _BUILDINGLEVELUPREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1553,
-  serialized_end=1611,
+  serialized_start=2415,
+  serialized_end=2473,
 )
 
 
@@ -774,6 +1134,20 @@ _BUILDINGLEVELUPRESPONSE = _descriptor.Descriptor(
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='costEnergy', full_name='com.common.msg.BuildingLevelUpResponse.costEnergy', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='repairDrawMsg', full_name='com.common.msg.BuildingLevelUpResponse.repairDrawMsg', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -786,8 +1160,8 @@ _BUILDINGLEVELUPRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1613,
-  serialized_end=1638,
+  serialized_start=2475,
+  serialized_end=2582,
 )
 
 
@@ -825,8 +1199,8 @@ _TRADERINFOREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1640,
-  serialized_end=1694,
+  serialized_start=2584,
+  serialized_end=2638,
 )
 
 
@@ -878,8 +1252,8 @@ _TRADEEXCHANGEMSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1697,
-  serialized_end=1851,
+  serialized_start=2641,
+  serialized_end=2795,
 )
 
 
@@ -917,8 +1291,8 @@ _TRADETIMELIMITEXCHANGEMSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1853,
-  serialized_end=1954,
+  serialized_start=2797,
+  serialized_end=2898,
 )
 
 
@@ -970,8 +1344,8 @@ _TRADERINFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1957,
-  serialized_end=2154,
+  serialized_start=2901,
+  serialized_end=3098,
 )
 
 
@@ -1016,8 +1390,8 @@ _TRADENORMALEXCHANGEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2156,
-  serialized_end=2240,
+  serialized_start=3100,
+  serialized_end=3184,
 )
 
 
@@ -1062,8 +1436,8 @@ _TRADENORMALEXCHANGERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2243,
-  serialized_end=2420,
+  serialized_start=3187,
+  serialized_end=3364,
 )
 
 
@@ -1101,8 +1475,8 @@ _TRADETIMELIMITEXCHANGEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2422,
-  serialized_end=2488,
+  serialized_start=3366,
+  serialized_end=3432,
 )
 
 
@@ -1154,8 +1528,8 @@ _TRADETIMELIMITEXCHANGERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2491,
-  serialized_end=2725,
+  serialized_start=3435,
+  serialized_end=3669,
 )
 
 
@@ -1193,8 +1567,8 @@ _MONSTERWHEELINFOREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2727,
-  serialized_end=2786,
+  serialized_start=3671,
+  serialized_end=3730,
 )
 
 
@@ -1253,8 +1627,8 @@ _MONSTERWHEELINFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2788,
-  serialized_end=2890,
+  serialized_start=3732,
+  serialized_end=3834,
 )
 
 
@@ -1292,8 +1666,8 @@ _MONSTERWHEELTURNREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2892,
-  serialized_end=2951,
+  serialized_start=3836,
+  serialized_end=3895,
 )
 
 
@@ -1338,8 +1712,8 @@ _MONSTERWHEELTURNRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2953,
-  serialized_end=3022,
+  serialized_start=3897,
+  serialized_end=3966,
 )
 
 
@@ -1370,8 +1744,8 @@ _OBSTACLEACHIEVEMENTINFOREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3024,
-  serialized_end=3073,
+  serialized_start=3968,
+  serialized_end=4017,
 )
 
 
@@ -1430,8 +1804,8 @@ _OBSTACLEACHIEVEMENTMSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3075,
-  serialized_end=3184,
+  serialized_start=4019,
+  serialized_end=4128,
 )
 
 
@@ -1469,8 +1843,8 @@ _OBSTACLEACHIEVEMENTINFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3186,
-  serialized_end=3299,
+  serialized_start=4130,
+  serialized_end=4243,
 )
 
 
@@ -1517,6 +1891,20 @@ _FIREBOMBREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='adsFlag', full_name='com.common.msg.FireBombRequest.adsFlag', index=5,
+      number=6, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='diamondFlag', full_name='com.common.msg.FireBombRequest.diamondFlag', index=6,
+      number=7, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1529,8 +1917,8 @@ _FIREBOMBREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3301,
-  serialized_end=3391,
+  serialized_start=4246,
+  serialized_end=4374,
 )
 
 
@@ -1561,8 +1949,8 @@ _FIREBOMBRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3393,
-  serialized_end=3464,
+  serialized_start=4376,
+  serialized_end=4447,
 )
 
 
@@ -1574,6 +1962,13 @@ _SCENECLOSETIMEREQUEST = _descriptor.Descriptor(
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='reqType', full_name='com.common.msg.SceneCloseTimeRequest.reqType', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1586,8 +1981,8 @@ _SCENECLOSETIMEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3466,
-  serialized_end=3489,
+  serialized_start=4449,
+  serialized_end=4489,
 )
 
 
@@ -1613,6 +2008,13 @@ _SCENECLOSEENTRY = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='closeClear', full_name='com.common.msg.SceneCloseEntry.closeClear', index=2,
+      number=3, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1625,8 +2027,47 @@ _SCENECLOSEENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3491,
-  serialized_end=3544,
+  serialized_start=4491,
+  serialized_end=4564,
+)
+
+
+_SCENESTARENTRY = _descriptor.Descriptor(
+  name='SceneStarEntry',
+  full_name='com.common.msg.SceneStarEntry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='sceneId', full_name='com.common.msg.SceneStarEntry.sceneId', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='starIds', full_name='com.common.msg.SceneStarEntry.starIds', index=1,
+      number=2, type=5, cpp_type=1, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4566,
+  serialized_end=4616,
 )
 
 
@@ -1645,6 +2086,27 @@ _SCENECLOSETIMERESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='star', full_name='com.common.msg.SceneCloseTimeResponse.star', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='unlockCommissionIds', full_name='com.common.msg.SceneCloseTimeResponse.unlockCommissionIds', index=2,
+      number=3, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='complateRewardSceneIds', full_name='com.common.msg.SceneCloseTimeResponse.complateRewardSceneIds', index=3,
+      number=4, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1657,8 +2119,8 @@ _SCENECLOSETIMERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3546,
-  serialized_end=3625,
+  serialized_start=4619,
+  serialized_end=4805,
 )
 
 
@@ -1696,8 +2158,8 @@ _BUILDINGDROPREWARDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3627,
-  serialized_end=3688,
+  serialized_start=4807,
+  serialized_end=4868,
 )
 
 
@@ -1716,6 +2178,13 @@ _BUILDINGDROPREWARDRESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='achievementReward', full_name='com.common.msg.BuildingDropRewardResponse.achievementReward', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1728,8 +2197,8 @@ _BUILDINGDROPREWARDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3690,
-  serialized_end=3760,
+  serialized_start=4871,
+  serialized_end=5014,
 )
 
 
@@ -1767,8 +2236,8 @@ _FINDPLANTAPPEARREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3762,
-  serialized_end=3821,
+  serialized_start=5016,
+  serialized_end=5075,
 )
 
 
@@ -1799,12 +2268,860 @@ _FINDPLANTAPPEARRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3823,
-  serialized_end=3866,
+  serialized_start=5077,
+  serialized_end=5120,
+)
+
+
+_BUILDINGUNLOCKREQUEST = _descriptor.Descriptor(
+  name='BuildingUnlockRequest',
+  full_name='com.common.msg.BuildingUnlockRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='sceneId', full_name='com.common.msg.BuildingUnlockRequest.sceneId', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='plantId', full_name='com.common.msg.BuildingUnlockRequest.plantId', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5122,
+  serialized_end=5179,
+)
+
+
+_BUILDINGUNLOCKRESPONSE = _descriptor.Descriptor(
+  name='BuildingUnlockResponse',
+  full_name='com.common.msg.BuildingUnlockResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5181,
+  serialized_end=5205,
+)
+
+
+_CONVERTSCENECLOSEITEMREQUEST = _descriptor.Descriptor(
+  name='ConvertSceneCloseItemRequest',
+  full_name='com.common.msg.ConvertSceneCloseItemRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5207,
+  serialized_end=5237,
+)
+
+
+_CONVERTSCENECLOSEITEMRESPONSE = _descriptor.Descriptor(
+  name='ConvertSceneCloseItemResponse',
+  full_name='com.common.msg.ConvertSceneCloseItemResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='items', full_name='com.common.msg.ConvertSceneCloseItemResponse.items', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5239,
+  serialized_end=5310,
+)
+
+
+_BUILDINGHANGUPREWARDREQUEST = _descriptor.Descriptor(
+  name='BuildingHangUpRewardRequest',
+  full_name='com.common.msg.BuildingHangUpRewardRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='sceneId', full_name='com.common.msg.BuildingHangUpRewardRequest.sceneId', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='plantIds', full_name='com.common.msg.BuildingHangUpRewardRequest.plantIds', index=1,
+      number=2, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5312,
+  serialized_end=5376,
+)
+
+
+_BUILDINGHANGUPREWARDMSG = _descriptor.Descriptor(
+  name='BuildingHangUpRewardMsg',
+  full_name='com.common.msg.BuildingHangUpRewardMsg',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='rewards', full_name='com.common.msg.BuildingHangUpRewardMsg.rewards', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='hangUpMsg', full_name='com.common.msg.BuildingHangUpRewardMsg.hangUpMsg', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5378,
+  serialized_end=5499,
+)
+
+
+_BUILDINGHANGUPREWARDRESPONSE = _descriptor.Descriptor(
+  name='BuildingHangUpRewardResponse',
+  full_name='com.common.msg.BuildingHangUpRewardResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='rewards', full_name='com.common.msg.BuildingHangUpRewardResponse.rewards', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5501,
+  serialized_end=5589,
+)
+
+
+_BUILDINGHANGUPDIAMONDREQUEST = _descriptor.Descriptor(
+  name='BuildingHangUpDiamondRequest',
+  full_name='com.common.msg.BuildingHangUpDiamondRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='sceneId', full_name='com.common.msg.BuildingHangUpDiamondRequest.sceneId', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='plantId', full_name='com.common.msg.BuildingHangUpDiamondRequest.plantId', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5591,
+  serialized_end=5655,
+)
+
+
+_BUILDINGHANGUPDIAMONDRESPONSE = _descriptor.Descriptor(
+  name='BuildingHangUpDiamondResponse',
+  full_name='com.common.msg.BuildingHangUpDiamondResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='cnt', full_name='com.common.msg.BuildingHangUpDiamondResponse.cnt', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5657,
+  serialized_end=5701,
+)
+
+
+_REOPENSCENEREQUEST = _descriptor.Descriptor(
+  name='ReopenSceneRequest',
+  full_name='com.common.msg.ReopenSceneRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='sceneId', full_name='com.common.msg.ReopenSceneRequest.sceneId', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='itemId', full_name='com.common.msg.ReopenSceneRequest.itemId', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5703,
+  serialized_end=5756,
+)
+
+
+_REOPENSCENERESPONSE = _descriptor.Descriptor(
+  name='ReopenSceneResponse',
+  full_name='com.common.msg.ReopenSceneResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5758,
+  serialized_end=5779,
+)
+
+
+_SCENESTARREWARDREQUEST = _descriptor.Descriptor(
+  name='SceneStarRewardRequest',
+  full_name='com.common.msg.SceneStarRewardRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='sceneId', full_name='com.common.msg.SceneStarRewardRequest.sceneId', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='starId', full_name='com.common.msg.SceneStarRewardRequest.starId', index=1,
+      number=2, type=5, cpp_type=1, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='timelimitReward', full_name='com.common.msg.SceneStarRewardRequest.timelimitReward', index=2,
+      number=4, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5781,
+  serialized_end=5863,
+)
+
+
+_SCENESTARREWARDRESPONSE = _descriptor.Descriptor(
+  name='SceneStarRewardResponse',
+  full_name='com.common.msg.SceneStarRewardResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='rewards', full_name='com.common.msg.SceneStarRewardResponse.rewards', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5865,
+  serialized_end=5932,
+)
+
+
+_SCENEOBSTACLEACHIEVEMENTREWARDREQUEST = _descriptor.Descriptor(
+  name='SceneObstacleAchievementRewardRequest',
+  full_name='com.common.msg.SceneObstacleAchievementRewardRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='sceneId', full_name='com.common.msg.SceneObstacleAchievementRewardRequest.sceneId', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5934,
+  serialized_end=5990,
+)
+
+
+_SCENEOBSTACLEACHIEVEMENTREWARDRESPONSE = _descriptor.Descriptor(
+  name='SceneObstacleAchievementRewardResponse',
+  full_name='com.common.msg.SceneObstacleAchievementRewardResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='msg', full_name='com.common.msg.SceneObstacleAchievementRewardResponse.msg', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5992,
+  serialized_end=6091,
+)
+
+
+_SCENECHAPTERSTARINFO = _descriptor.Descriptor(
+  name='SceneChapterStarInfo',
+  full_name='com.common.msg.SceneChapterStarInfo',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='chapterId', full_name='com.common.msg.SceneChapterStarInfo.chapterId', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='star', full_name='com.common.msg.SceneChapterStarInfo.star', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='pass', full_name='com.common.msg.SceneChapterStarInfo.pass', index=2,
+      number=3, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='rewardIds', full_name='com.common.msg.SceneChapterStarInfo.rewardIds', index=3,
+      number=4, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='passRewardIds', full_name='com.common.msg.SceneChapterStarInfo.passRewardIds', index=4,
+      number=5, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=6093,
+  serialized_end=6204,
+)
+
+
+_SCENECHAPTERSTARINFOREQUEST = _descriptor.Descriptor(
+  name='SceneChapterStarInfoRequest',
+  full_name='com.common.msg.SceneChapterStarInfoRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=6206,
+  serialized_end=6235,
+)
+
+
+_SCENECHAPTERSTARINFORESPONSE = _descriptor.Descriptor(
+  name='SceneChapterStarInfoResponse',
+  full_name='com.common.msg.SceneChapterStarInfoResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='chapters', full_name='com.common.msg.SceneChapterStarInfoResponse.chapters', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=6237,
+  serialized_end=6323,
+)
+
+
+_SCENECHAPTERSTARREWARDREQUEST = _descriptor.Descriptor(
+  name='SceneChapterStarRewardRequest',
+  full_name='com.common.msg.SceneChapterStarRewardRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='rewardIds', full_name='com.common.msg.SceneChapterStarRewardRequest.rewardIds', index=0,
+      number=1, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=6325,
+  serialized_end=6375,
+)
+
+
+_STARREWARDMSG = _descriptor.Descriptor(
+  name='StarRewardMsg',
+  full_name='com.common.msg.StarRewardMsg',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='rewardId', full_name='com.common.msg.StarRewardMsg.rewardId', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='rewards', full_name='com.common.msg.StarRewardMsg.rewards', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=6377,
+  serialized_end=6452,
+)
+
+
+_SCENECHAPTERSTARREWARDRESPONSE = _descriptor.Descriptor(
+  name='SceneChapterStarRewardResponse',
+  full_name='com.common.msg.SceneChapterStarRewardResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='starRewards', full_name='com.common.msg.SceneChapterStarRewardResponse.starRewards', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=6454,
+  serialized_end=6538,
+)
+
+
+_CLOSERELICSCENEREQUEST = _descriptor.Descriptor(
+  name='CloseRelicSceneRequest',
+  full_name='com.common.msg.CloseRelicSceneRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='sceneId', full_name='com.common.msg.CloseRelicSceneRequest.sceneId', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=6540,
+  serialized_end=6581,
+)
+
+
+_CLOSERELICSCENERESPONSE = _descriptor.Descriptor(
+  name='CloseRelicSceneResponse',
+  full_name='com.common.msg.CloseRelicSceneResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=6583,
+  serialized_end=6608,
+)
+
+
+_COMPLETEREWARDREQUEST = _descriptor.Descriptor(
+  name='CompleteRewardRequest',
+  full_name='com.common.msg.CompleteRewardRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='sceneId', full_name='com.common.msg.CompleteRewardRequest.sceneId', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=6610,
+  serialized_end=6650,
+)
+
+
+_COMPLETEREWARDRESPONSE = _descriptor.Descriptor(
+  name='CompleteRewardResponse',
+  full_name='com.common.msg.CompleteRewardResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=6652,
+  serialized_end=6676,
 )
 
 _PLANTMSG.fields_by_name['consumed'].message_type = ItemModuleMsg__pb2._ITEMMSG
 _PLANTMSG.fields_by_name['collectRewards'].message_type = ItemModuleMsg__pb2._ITEMMSG
+_BUILDINGMSG.fields_by_name['hangupMsg'].message_type = _BUILDINGHANGUPMSG
+_STARMSG.fields_by_name['tasks'].message_type = CommonTaskModuleMsg__pb2._COMMONTASK
+_REPAIRSTARREWARD.fields_by_name['rewards'].message_type = ItemModuleMsg__pb2._ITEMMSG
+_SCENESTARMSG.fields_by_name['stars'].message_type = _STARMSG
+_SCENESTARMSG.fields_by_name['repairStarRewards'].message_type = _REPAIRSTARREWARD
+_SCENESTARMSG.fields_by_name['repairTimelimitRewards'].message_type = ItemModuleMsg__pb2._ITEMMSG
 _SCENEINFORESPONSE.fields_by_name['plants'].message_type = _PLANTMSG
 _SCENEINFORESPONSE.fields_by_name['autoReceivedCollectRewards'].message_type = ItemModuleMsg__pb2._ITEMMSG
 _SCENEINFORESPONSE.fields_by_name['buildingMsgs'].message_type = _BUILDINGMSG
@@ -1812,13 +3129,18 @@ _SCENEINFORESPONSE.fields_by_name['farmlandMsgs'].message_type = FarmlandModuleM
 _SCENEINFORESPONSE.fields_by_name['traderMsgs'].message_type = _TRADERMSG
 _SCENEINFORESPONSE.fields_by_name['convertFactorys'].message_type = ConvertFactoryModuleMsg__pb2._CONVERTFACTORYMSG
 _SCENEINFORESPONSE.fields_by_name['monsterMsgs'].message_type = _MONSTERMSG
+_SCENEINFORESPONSE.fields_by_name['starMsg'].message_type = _SCENESTARMSG
 _OBSTACLEACHIEVEMENTREWARDMSG.fields_by_name['rewards'].message_type = ItemModuleMsg__pb2._ITEMMSG
 _OBSTACLEACHIEVEMENTREWARDMSG.fields_by_name['completeRewards'].message_type = ItemModuleMsg__pb2._ITEMMSG
 _CLEARPLANTRESPONSE.fields_by_name['produced'].message_type = ItemModuleMsg__pb2._ITEMMSG
 _CLEARPLANTRESPONSE.fields_by_name['plant'].message_type = _PLANTMSG
 _CLEARPLANTRESPONSE.fields_by_name['items'].message_type = ItemModuleMsg__pb2._ITEMMSG
 _CLEARPLANTRESPONSE.fields_by_name['achievementReward'].message_type = _OBSTACLEACHIEVEMENTREWARDMSG
+_CLEARPLANTRESPONSE.fields_by_name['costs'].message_type = ItemModuleMsg__pb2._ITEMMSG
+_CLEARPLANTRESPONSE.fields_by_name['creatures'].message_type = ItemModuleMsg__pb2._MAGICALCREATUREMSG
 _FINDSCENEPLANTSRESPONSE.fields_by_name['buildings'].message_type = _BUILDINGMSG
+_BUILDINGREPAIRDRAWMSG.fields_by_name['finalRewards'].message_type = ItemModuleMsg__pb2._ITEMMSG
+_BUILDINGLEVELUPRESPONSE.fields_by_name['repairDrawMsg'].message_type = _BUILDINGREPAIRDRAWMSG
 _TRADEEXCHANGEMSG.fields_by_name['reward'].message_type = ItemModuleMsg__pb2._ITEMMSG
 _TRADEEXCHANGEMSG.fields_by_name['exchange'].message_type = ItemModuleMsg__pb2._ITEMMSG
 _TRADEEXCHANGEMSG.fields_by_name['bag'].message_type = ItemModuleMsg__pb2._ITEMMSG
@@ -1836,12 +3158,27 @@ _TRADETIMELIMITEXCHANGERESPONSE.fields_by_name['completeRewards'].message_type =
 _OBSTACLEACHIEVEMENTINFORESPONSE.fields_by_name['achievements'].message_type = _OBSTACLEACHIEVEMENTMSG
 _FIREBOMBRESPONSE.fields_by_name['effects'].message_type = _CLEARPLANTRESPONSE
 _SCENECLOSETIMERESPONSE.fields_by_name['closeEntries'].message_type = _SCENECLOSEENTRY
+_SCENECLOSETIMERESPONSE.fields_by_name['star'].message_type = _SCENESTARENTRY
 _BUILDINGDROPREWARDRESPONSE.fields_by_name['rewards'].message_type = ItemModuleMsg__pb2._ITEMMSG
+_BUILDINGDROPREWARDRESPONSE.fields_by_name['achievementReward'].message_type = _OBSTACLEACHIEVEMENTREWARDMSG
+_CONVERTSCENECLOSEITEMRESPONSE.fields_by_name['items'].message_type = ItemModuleMsg__pb2._ITEMMSG
+_BUILDINGHANGUPREWARDMSG.fields_by_name['rewards'].message_type = ItemModuleMsg__pb2._ITEMMSG
+_BUILDINGHANGUPREWARDMSG.fields_by_name['hangUpMsg'].message_type = _BUILDINGHANGUPMSG
+_BUILDINGHANGUPREWARDRESPONSE.fields_by_name['rewards'].message_type = _BUILDINGHANGUPREWARDMSG
+_SCENESTARREWARDRESPONSE.fields_by_name['rewards'].message_type = ItemModuleMsg__pb2._ITEMMSG
+_SCENEOBSTACLEACHIEVEMENTREWARDRESPONSE.fields_by_name['msg'].message_type = _OBSTACLEACHIEVEMENTREWARDMSG
+_SCENECHAPTERSTARINFORESPONSE.fields_by_name['chapters'].message_type = _SCENECHAPTERSTARINFO
+_STARREWARDMSG.fields_by_name['rewards'].message_type = ItemModuleMsg__pb2._ITEMMSG
+_SCENECHAPTERSTARREWARDRESPONSE.fields_by_name['starRewards'].message_type = _STARREWARDMSG
 DESCRIPTOR.message_types_by_name['PlantMsg'] = _PLANTMSG
 DESCRIPTOR.message_types_by_name['SceneInfoRequest'] = _SCENEINFOREQUEST
+DESCRIPTOR.message_types_by_name['BuildingHangUpMsg'] = _BUILDINGHANGUPMSG
 DESCRIPTOR.message_types_by_name['BuildingMsg'] = _BUILDINGMSG
 DESCRIPTOR.message_types_by_name['TraderMsg'] = _TRADERMSG
 DESCRIPTOR.message_types_by_name['MonsterMsg'] = _MONSTERMSG
+DESCRIPTOR.message_types_by_name['StarMsg'] = _STARMSG
+DESCRIPTOR.message_types_by_name['RepairStarReward'] = _REPAIRSTARREWARD
+DESCRIPTOR.message_types_by_name['SceneStarMsg'] = _SCENESTARMSG
 DESCRIPTOR.message_types_by_name['SceneInfoResponse'] = _SCENEINFORESPONSE
 DESCRIPTOR.message_types_by_name['ObstacleAchievementRewardMsg'] = _OBSTACLEACHIEVEMENTREWARDMSG
 DESCRIPTOR.message_types_by_name['ClearPlantRequest'] = _CLEARPLANTREQUEST
@@ -1850,6 +3187,7 @@ DESCRIPTOR.message_types_by_name['FindScenePlantsRequest'] = _FINDSCENEPLANTSREQ
 DESCRIPTOR.message_types_by_name['FindScenePlantsResponse'] = _FINDSCENEPLANTSRESPONSE
 DESCRIPTOR.message_types_by_name['PlantAppearRequest'] = _PLANTAPPEARREQUEST
 DESCRIPTOR.message_types_by_name['PlantAppearResponse'] = _PLANTAPPEARRESPONSE
+DESCRIPTOR.message_types_by_name['BuildingRepairDrawMsg'] = _BUILDINGREPAIRDRAWMSG
 DESCRIPTOR.message_types_by_name['BuildingLevelUpRequest'] = _BUILDINGLEVELUPREQUEST
 DESCRIPTOR.message_types_by_name['BuildingLevelUpResponse'] = _BUILDINGLEVELUPRESPONSE
 DESCRIPTOR.message_types_by_name['TraderInfoRequest'] = _TRADERINFOREQUEST
@@ -1871,11 +3209,37 @@ DESCRIPTOR.message_types_by_name['FireBombRequest'] = _FIREBOMBREQUEST
 DESCRIPTOR.message_types_by_name['FireBombResponse'] = _FIREBOMBRESPONSE
 DESCRIPTOR.message_types_by_name['SceneCloseTimeRequest'] = _SCENECLOSETIMEREQUEST
 DESCRIPTOR.message_types_by_name['SceneCloseEntry'] = _SCENECLOSEENTRY
+DESCRIPTOR.message_types_by_name['SceneStarEntry'] = _SCENESTARENTRY
 DESCRIPTOR.message_types_by_name['SceneCloseTimeResponse'] = _SCENECLOSETIMERESPONSE
 DESCRIPTOR.message_types_by_name['BuildingDropRewardRequest'] = _BUILDINGDROPREWARDREQUEST
 DESCRIPTOR.message_types_by_name['BuildingDropRewardResponse'] = _BUILDINGDROPREWARDRESPONSE
 DESCRIPTOR.message_types_by_name['FindPlantAppearRequest'] = _FINDPLANTAPPEARREQUEST
 DESCRIPTOR.message_types_by_name['FindPlantAppearResponse'] = _FINDPLANTAPPEARRESPONSE
+DESCRIPTOR.message_types_by_name['BuildingUnlockRequest'] = _BUILDINGUNLOCKREQUEST
+DESCRIPTOR.message_types_by_name['BuildingUnlockResponse'] = _BUILDINGUNLOCKRESPONSE
+DESCRIPTOR.message_types_by_name['ConvertSceneCloseItemRequest'] = _CONVERTSCENECLOSEITEMREQUEST
+DESCRIPTOR.message_types_by_name['ConvertSceneCloseItemResponse'] = _CONVERTSCENECLOSEITEMRESPONSE
+DESCRIPTOR.message_types_by_name['BuildingHangUpRewardRequest'] = _BUILDINGHANGUPREWARDREQUEST
+DESCRIPTOR.message_types_by_name['BuildingHangUpRewardMsg'] = _BUILDINGHANGUPREWARDMSG
+DESCRIPTOR.message_types_by_name['BuildingHangUpRewardResponse'] = _BUILDINGHANGUPREWARDRESPONSE
+DESCRIPTOR.message_types_by_name['BuildingHangUpDiamondRequest'] = _BUILDINGHANGUPDIAMONDREQUEST
+DESCRIPTOR.message_types_by_name['BuildingHangUpDiamondResponse'] = _BUILDINGHANGUPDIAMONDRESPONSE
+DESCRIPTOR.message_types_by_name['ReopenSceneRequest'] = _REOPENSCENEREQUEST
+DESCRIPTOR.message_types_by_name['ReopenSceneResponse'] = _REOPENSCENERESPONSE
+DESCRIPTOR.message_types_by_name['SceneStarRewardRequest'] = _SCENESTARREWARDREQUEST
+DESCRIPTOR.message_types_by_name['SceneStarRewardResponse'] = _SCENESTARREWARDRESPONSE
+DESCRIPTOR.message_types_by_name['SceneObstacleAchievementRewardRequest'] = _SCENEOBSTACLEACHIEVEMENTREWARDREQUEST
+DESCRIPTOR.message_types_by_name['SceneObstacleAchievementRewardResponse'] = _SCENEOBSTACLEACHIEVEMENTREWARDRESPONSE
+DESCRIPTOR.message_types_by_name['SceneChapterStarInfo'] = _SCENECHAPTERSTARINFO
+DESCRIPTOR.message_types_by_name['SceneChapterStarInfoRequest'] = _SCENECHAPTERSTARINFOREQUEST
+DESCRIPTOR.message_types_by_name['SceneChapterStarInfoResponse'] = _SCENECHAPTERSTARINFORESPONSE
+DESCRIPTOR.message_types_by_name['SceneChapterStarRewardRequest'] = _SCENECHAPTERSTARREWARDREQUEST
+DESCRIPTOR.message_types_by_name['StarRewardMsg'] = _STARREWARDMSG
+DESCRIPTOR.message_types_by_name['SceneChapterStarRewardResponse'] = _SCENECHAPTERSTARREWARDRESPONSE
+DESCRIPTOR.message_types_by_name['CloseRelicSceneRequest'] = _CLOSERELICSCENEREQUEST
+DESCRIPTOR.message_types_by_name['CloseRelicSceneResponse'] = _CLOSERELICSCENERESPONSE
+DESCRIPTOR.message_types_by_name['CompleteRewardRequest'] = _COMPLETEREWARDREQUEST
+DESCRIPTOR.message_types_by_name['CompleteRewardResponse'] = _COMPLETEREWARDRESPONSE
 DESCRIPTOR.enum_types_by_name['SceneModuleMsgSubCommand'] = _SCENEMODULEMSGSUBCOMMAND
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -1892,6 +3256,13 @@ SceneInfoRequest = _reflection.GeneratedProtocolMessageType('SceneInfoRequest', 
   # @@protoc_insertion_point(class_scope:com.common.msg.SceneInfoRequest)
   })
 _sym_db.RegisterMessage(SceneInfoRequest)
+
+BuildingHangUpMsg = _reflection.GeneratedProtocolMessageType('BuildingHangUpMsg', (_message.Message,), {
+  'DESCRIPTOR' : _BUILDINGHANGUPMSG,
+  '__module__' : 'SceneModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.BuildingHangUpMsg)
+  })
+_sym_db.RegisterMessage(BuildingHangUpMsg)
 
 BuildingMsg = _reflection.GeneratedProtocolMessageType('BuildingMsg', (_message.Message,), {
   'DESCRIPTOR' : _BUILDINGMSG,
@@ -1913,6 +3284,27 @@ MonsterMsg = _reflection.GeneratedProtocolMessageType('MonsterMsg', (_message.Me
   # @@protoc_insertion_point(class_scope:com.common.msg.MonsterMsg)
   })
 _sym_db.RegisterMessage(MonsterMsg)
+
+StarMsg = _reflection.GeneratedProtocolMessageType('StarMsg', (_message.Message,), {
+  'DESCRIPTOR' : _STARMSG,
+  '__module__' : 'SceneModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.StarMsg)
+  })
+_sym_db.RegisterMessage(StarMsg)
+
+RepairStarReward = _reflection.GeneratedProtocolMessageType('RepairStarReward', (_message.Message,), {
+  'DESCRIPTOR' : _REPAIRSTARREWARD,
+  '__module__' : 'SceneModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.RepairStarReward)
+  })
+_sym_db.RegisterMessage(RepairStarReward)
+
+SceneStarMsg = _reflection.GeneratedProtocolMessageType('SceneStarMsg', (_message.Message,), {
+  'DESCRIPTOR' : _SCENESTARMSG,
+  '__module__' : 'SceneModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.SceneStarMsg)
+  })
+_sym_db.RegisterMessage(SceneStarMsg)
 
 SceneInfoResponse = _reflection.GeneratedProtocolMessageType('SceneInfoResponse', (_message.Message,), {
   'DESCRIPTOR' : _SCENEINFORESPONSE,
@@ -1969,6 +3361,13 @@ PlantAppearResponse = _reflection.GeneratedProtocolMessageType('PlantAppearRespo
   # @@protoc_insertion_point(class_scope:com.common.msg.PlantAppearResponse)
   })
 _sym_db.RegisterMessage(PlantAppearResponse)
+
+BuildingRepairDrawMsg = _reflection.GeneratedProtocolMessageType('BuildingRepairDrawMsg', (_message.Message,), {
+  'DESCRIPTOR' : _BUILDINGREPAIRDRAWMSG,
+  '__module__' : 'SceneModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.BuildingRepairDrawMsg)
+  })
+_sym_db.RegisterMessage(BuildingRepairDrawMsg)
 
 BuildingLevelUpRequest = _reflection.GeneratedProtocolMessageType('BuildingLevelUpRequest', (_message.Message,), {
   'DESCRIPTOR' : _BUILDINGLEVELUPREQUEST,
@@ -2117,6 +3516,13 @@ SceneCloseEntry = _reflection.GeneratedProtocolMessageType('SceneCloseEntry', (_
   })
 _sym_db.RegisterMessage(SceneCloseEntry)
 
+SceneStarEntry = _reflection.GeneratedProtocolMessageType('SceneStarEntry', (_message.Message,), {
+  'DESCRIPTOR' : _SCENESTARENTRY,
+  '__module__' : 'SceneModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.SceneStarEntry)
+  })
+_sym_db.RegisterMessage(SceneStarEntry)
+
 SceneCloseTimeResponse = _reflection.GeneratedProtocolMessageType('SceneCloseTimeResponse', (_message.Message,), {
   'DESCRIPTOR' : _SCENECLOSETIMERESPONSE,
   '__module__' : 'SceneModuleMsg_pb2'
@@ -2151,6 +3557,181 @@ FindPlantAppearResponse = _reflection.GeneratedProtocolMessageType('FindPlantApp
   # @@protoc_insertion_point(class_scope:com.common.msg.FindPlantAppearResponse)
   })
 _sym_db.RegisterMessage(FindPlantAppearResponse)
+
+BuildingUnlockRequest = _reflection.GeneratedProtocolMessageType('BuildingUnlockRequest', (_message.Message,), {
+  'DESCRIPTOR' : _BUILDINGUNLOCKREQUEST,
+  '__module__' : 'SceneModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.BuildingUnlockRequest)
+  })
+_sym_db.RegisterMessage(BuildingUnlockRequest)
+
+BuildingUnlockResponse = _reflection.GeneratedProtocolMessageType('BuildingUnlockResponse', (_message.Message,), {
+  'DESCRIPTOR' : _BUILDINGUNLOCKRESPONSE,
+  '__module__' : 'SceneModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.BuildingUnlockResponse)
+  })
+_sym_db.RegisterMessage(BuildingUnlockResponse)
+
+ConvertSceneCloseItemRequest = _reflection.GeneratedProtocolMessageType('ConvertSceneCloseItemRequest', (_message.Message,), {
+  'DESCRIPTOR' : _CONVERTSCENECLOSEITEMREQUEST,
+  '__module__' : 'SceneModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.ConvertSceneCloseItemRequest)
+  })
+_sym_db.RegisterMessage(ConvertSceneCloseItemRequest)
+
+ConvertSceneCloseItemResponse = _reflection.GeneratedProtocolMessageType('ConvertSceneCloseItemResponse', (_message.Message,), {
+  'DESCRIPTOR' : _CONVERTSCENECLOSEITEMRESPONSE,
+  '__module__' : 'SceneModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.ConvertSceneCloseItemResponse)
+  })
+_sym_db.RegisterMessage(ConvertSceneCloseItemResponse)
+
+BuildingHangUpRewardRequest = _reflection.GeneratedProtocolMessageType('BuildingHangUpRewardRequest', (_message.Message,), {
+  'DESCRIPTOR' : _BUILDINGHANGUPREWARDREQUEST,
+  '__module__' : 'SceneModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.BuildingHangUpRewardRequest)
+  })
+_sym_db.RegisterMessage(BuildingHangUpRewardRequest)
+
+BuildingHangUpRewardMsg = _reflection.GeneratedProtocolMessageType('BuildingHangUpRewardMsg', (_message.Message,), {
+  'DESCRIPTOR' : _BUILDINGHANGUPREWARDMSG,
+  '__module__' : 'SceneModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.BuildingHangUpRewardMsg)
+  })
+_sym_db.RegisterMessage(BuildingHangUpRewardMsg)
+
+BuildingHangUpRewardResponse = _reflection.GeneratedProtocolMessageType('BuildingHangUpRewardResponse', (_message.Message,), {
+  'DESCRIPTOR' : _BUILDINGHANGUPREWARDRESPONSE,
+  '__module__' : 'SceneModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.BuildingHangUpRewardResponse)
+  })
+_sym_db.RegisterMessage(BuildingHangUpRewardResponse)
+
+BuildingHangUpDiamondRequest = _reflection.GeneratedProtocolMessageType('BuildingHangUpDiamondRequest', (_message.Message,), {
+  'DESCRIPTOR' : _BUILDINGHANGUPDIAMONDREQUEST,
+  '__module__' : 'SceneModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.BuildingHangUpDiamondRequest)
+  })
+_sym_db.RegisterMessage(BuildingHangUpDiamondRequest)
+
+BuildingHangUpDiamondResponse = _reflection.GeneratedProtocolMessageType('BuildingHangUpDiamondResponse', (_message.Message,), {
+  'DESCRIPTOR' : _BUILDINGHANGUPDIAMONDRESPONSE,
+  '__module__' : 'SceneModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.BuildingHangUpDiamondResponse)
+  })
+_sym_db.RegisterMessage(BuildingHangUpDiamondResponse)
+
+ReopenSceneRequest = _reflection.GeneratedProtocolMessageType('ReopenSceneRequest', (_message.Message,), {
+  'DESCRIPTOR' : _REOPENSCENEREQUEST,
+  '__module__' : 'SceneModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.ReopenSceneRequest)
+  })
+_sym_db.RegisterMessage(ReopenSceneRequest)
+
+ReopenSceneResponse = _reflection.GeneratedProtocolMessageType('ReopenSceneResponse', (_message.Message,), {
+  'DESCRIPTOR' : _REOPENSCENERESPONSE,
+  '__module__' : 'SceneModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.ReopenSceneResponse)
+  })
+_sym_db.RegisterMessage(ReopenSceneResponse)
+
+SceneStarRewardRequest = _reflection.GeneratedProtocolMessageType('SceneStarRewardRequest', (_message.Message,), {
+  'DESCRIPTOR' : _SCENESTARREWARDREQUEST,
+  '__module__' : 'SceneModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.SceneStarRewardRequest)
+  })
+_sym_db.RegisterMessage(SceneStarRewardRequest)
+
+SceneStarRewardResponse = _reflection.GeneratedProtocolMessageType('SceneStarRewardResponse', (_message.Message,), {
+  'DESCRIPTOR' : _SCENESTARREWARDRESPONSE,
+  '__module__' : 'SceneModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.SceneStarRewardResponse)
+  })
+_sym_db.RegisterMessage(SceneStarRewardResponse)
+
+SceneObstacleAchievementRewardRequest = _reflection.GeneratedProtocolMessageType('SceneObstacleAchievementRewardRequest', (_message.Message,), {
+  'DESCRIPTOR' : _SCENEOBSTACLEACHIEVEMENTREWARDREQUEST,
+  '__module__' : 'SceneModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.SceneObstacleAchievementRewardRequest)
+  })
+_sym_db.RegisterMessage(SceneObstacleAchievementRewardRequest)
+
+SceneObstacleAchievementRewardResponse = _reflection.GeneratedProtocolMessageType('SceneObstacleAchievementRewardResponse', (_message.Message,), {
+  'DESCRIPTOR' : _SCENEOBSTACLEACHIEVEMENTREWARDRESPONSE,
+  '__module__' : 'SceneModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.SceneObstacleAchievementRewardResponse)
+  })
+_sym_db.RegisterMessage(SceneObstacleAchievementRewardResponse)
+
+SceneChapterStarInfo = _reflection.GeneratedProtocolMessageType('SceneChapterStarInfo', (_message.Message,), {
+  'DESCRIPTOR' : _SCENECHAPTERSTARINFO,
+  '__module__' : 'SceneModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.SceneChapterStarInfo)
+  })
+_sym_db.RegisterMessage(SceneChapterStarInfo)
+
+SceneChapterStarInfoRequest = _reflection.GeneratedProtocolMessageType('SceneChapterStarInfoRequest', (_message.Message,), {
+  'DESCRIPTOR' : _SCENECHAPTERSTARINFOREQUEST,
+  '__module__' : 'SceneModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.SceneChapterStarInfoRequest)
+  })
+_sym_db.RegisterMessage(SceneChapterStarInfoRequest)
+
+SceneChapterStarInfoResponse = _reflection.GeneratedProtocolMessageType('SceneChapterStarInfoResponse', (_message.Message,), {
+  'DESCRIPTOR' : _SCENECHAPTERSTARINFORESPONSE,
+  '__module__' : 'SceneModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.SceneChapterStarInfoResponse)
+  })
+_sym_db.RegisterMessage(SceneChapterStarInfoResponse)
+
+SceneChapterStarRewardRequest = _reflection.GeneratedProtocolMessageType('SceneChapterStarRewardRequest', (_message.Message,), {
+  'DESCRIPTOR' : _SCENECHAPTERSTARREWARDREQUEST,
+  '__module__' : 'SceneModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.SceneChapterStarRewardRequest)
+  })
+_sym_db.RegisterMessage(SceneChapterStarRewardRequest)
+
+StarRewardMsg = _reflection.GeneratedProtocolMessageType('StarRewardMsg', (_message.Message,), {
+  'DESCRIPTOR' : _STARREWARDMSG,
+  '__module__' : 'SceneModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.StarRewardMsg)
+  })
+_sym_db.RegisterMessage(StarRewardMsg)
+
+SceneChapterStarRewardResponse = _reflection.GeneratedProtocolMessageType('SceneChapterStarRewardResponse', (_message.Message,), {
+  'DESCRIPTOR' : _SCENECHAPTERSTARREWARDRESPONSE,
+  '__module__' : 'SceneModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.SceneChapterStarRewardResponse)
+  })
+_sym_db.RegisterMessage(SceneChapterStarRewardResponse)
+
+CloseRelicSceneRequest = _reflection.GeneratedProtocolMessageType('CloseRelicSceneRequest', (_message.Message,), {
+  'DESCRIPTOR' : _CLOSERELICSCENEREQUEST,
+  '__module__' : 'SceneModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.CloseRelicSceneRequest)
+  })
+_sym_db.RegisterMessage(CloseRelicSceneRequest)
+
+CloseRelicSceneResponse = _reflection.GeneratedProtocolMessageType('CloseRelicSceneResponse', (_message.Message,), {
+  'DESCRIPTOR' : _CLOSERELICSCENERESPONSE,
+  '__module__' : 'SceneModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.CloseRelicSceneResponse)
+  })
+_sym_db.RegisterMessage(CloseRelicSceneResponse)
+
+CompleteRewardRequest = _reflection.GeneratedProtocolMessageType('CompleteRewardRequest', (_message.Message,), {
+  'DESCRIPTOR' : _COMPLETEREWARDREQUEST,
+  '__module__' : 'SceneModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.CompleteRewardRequest)
+  })
+_sym_db.RegisterMessage(CompleteRewardRequest)
+
+CompleteRewardResponse = _reflection.GeneratedProtocolMessageType('CompleteRewardResponse', (_message.Message,), {
+  'DESCRIPTOR' : _COMPLETEREWARDRESPONSE,
+  '__module__' : 'SceneModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.CompleteRewardResponse)
+  })
+_sym_db.RegisterMessage(CompleteRewardResponse)
 
 
 # @@protoc_insertion_point(module_scope)

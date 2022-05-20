@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x13GiftModuleMsg.proto\x12\x0e\x63om.common.msg\"\x11\n\x0fGiftInfoRequest\"F\n\x0bGiftInfoMsg\x12\n\n\x02id\x18\x01 \x02(\t\x12\x13\n\x0btriggerTime\x18\x02 \x02(\x03\x12\x16\n\x0elastBoughtTime\x18\x03 \x02(\x03\"B\n\x10GiftInfoResponse\x12.\n\tgiftInfos\x18\x01 \x03(\x0b\x32\x1b.com.common.msg.GiftInfoMsg\" \n\x12TriggerGiftRequest\x12\n\n\x02id\x18\x01 \x02(\t\"\x15\n\x13TriggerGiftResponse*`\n\x17GiftModuleMsgSubCommand\x12 \n\x1aGIFTMODULEMSG_SUB_GIFTINFO\x10\xc9\xc9\x01\x12#\n\x1dGIFTMODULEMSG_SUB_TRIGGERGIFT\x10\xca\xc9\x01'
+  serialized_pb=b'\n\x13GiftModuleMsg.proto\x12\x0e\x63om.common.msg\"\x11\n\x0fGiftInfoRequest\"F\n\x0bGiftInfoMsg\x12\n\n\x02id\x18\x01 \x02(\t\x12\x13\n\x0btriggerTime\x18\x02 \x02(\x03\x12\x16\n\x0elastBoughtTime\x18\x03 \x02(\x03\"B\n\x10GiftInfoResponse\x12.\n\tgiftInfos\x18\x01 \x03(\x0b\x32\x1b.com.common.msg.GiftInfoMsg\" \n\x12TriggerGiftRequest\x12\n\n\x02id\x18\x01 \x02(\t\"\x15\n\x13TriggerGiftResponse\"\x1b\n\x19TakeMonthGiftAwardRequest\"\x1c\n\x1aTakeMonthGiftAwardResponse\"?\n\rMonthGiftInfo\x12\x15\n\rlastAwardTime\x18\x01 \x02(\x03\x12\x17\n\x0f\x66\x61\x63toryFreeUsed\x18\x02 \x01(\x05\".\n\x0bWeekGiftMsg\x12\n\n\x02id\x18\x01 \x02(\t\x12\x13\n\x0b\x62oughtCount\x18\x02 \x02(\x05\"\x15\n\x13WeekGiftInfoRequest\"\x8d\x01\n\x14WeekGiftInfoResponse\x12.\n\tweekGifts\x18\x01 \x03(\x0b\x32\x1b.com.common.msg.WeekGiftMsg\x12\x13\n\x0brefreshTime\x18\x02 \x01(\x03\x12\x16\n\x0elastWeedBought\x18\x03 \x01(\x08\x12\x18\n\x10weekGiftAdsGroup\x18\x04 \x01(\t\"\x18\n\x16WeekGiftRefreshRequest\"\x19\n\x17WeekGiftRefreshResponse*\xdb\x01\n\x17GiftModuleMsgSubCommand\x12 \n\x1aGIFTMODULEMSG_SUB_GIFTINFO\x10\xc9\xc9\x01\x12#\n\x1dGIFTMODULEMSG_SUB_TRIGGERGIFT\x10\xca\xc9\x01\x12*\n$GIFTMODULEMSG_SUB_TAKEMONTHGIFTAWARD\x10\xcb\xc9\x01\x12$\n\x1eGIFTMODULEMSG_SUB_WEEKGIFTINFO\x10\xcc\xc9\x01\x12\'\n!GIFTMODULEMSG_SUB_WEEKGIFTREFRESH\x10\xcd\xc9\x01'
 )
 
 _GIFTMODULEMSGSUBCOMMAND = _descriptor.EnumDescriptor(
@@ -40,17 +40,35 @@ _GIFTMODULEMSGSUBCOMMAND = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='GIFTMODULEMSG_SUB_TAKEMONTHGIFTAWARD', index=2, number=25803,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='GIFTMODULEMSG_SUB_WEEKGIFTINFO', index=3, number=25804,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='GIFTMODULEMSG_SUB_WEEKGIFTREFRESH', index=4, number=25805,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=255,
-  serialized_end=351,
+  serialized_start=648,
+  serialized_end=867,
 )
 _sym_db.RegisterEnumDescriptor(_GIFTMODULEMSGSUBCOMMAND)
 
 GiftModuleMsgSubCommand = enum_type_wrapper.EnumTypeWrapper(_GIFTMODULEMSGSUBCOMMAND)
 GIFTMODULEMSG_SUB_GIFTINFO = 25801
 GIFTMODULEMSG_SUB_TRIGGERGIFT = 25802
+GIFTMODULEMSG_SUB_TAKEMONTHGIFTAWARD = 25803
+GIFTMODULEMSG_SUB_WEEKGIFTINFO = 25804
+GIFTMODULEMSG_SUB_WEEKGIFTREFRESH = 25805
 
 
 
@@ -213,12 +231,277 @@ _TRIGGERGIFTRESPONSE = _descriptor.Descriptor(
   serialized_end=253,
 )
 
+
+_TAKEMONTHGIFTAWARDREQUEST = _descriptor.Descriptor(
+  name='TakeMonthGiftAwardRequest',
+  full_name='com.common.msg.TakeMonthGiftAwardRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=255,
+  serialized_end=282,
+)
+
+
+_TAKEMONTHGIFTAWARDRESPONSE = _descriptor.Descriptor(
+  name='TakeMonthGiftAwardResponse',
+  full_name='com.common.msg.TakeMonthGiftAwardResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=284,
+  serialized_end=312,
+)
+
+
+_MONTHGIFTINFO = _descriptor.Descriptor(
+  name='MonthGiftInfo',
+  full_name='com.common.msg.MonthGiftInfo',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='lastAwardTime', full_name='com.common.msg.MonthGiftInfo.lastAwardTime', index=0,
+      number=1, type=3, cpp_type=2, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='factoryFreeUsed', full_name='com.common.msg.MonthGiftInfo.factoryFreeUsed', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=314,
+  serialized_end=377,
+)
+
+
+_WEEKGIFTMSG = _descriptor.Descriptor(
+  name='WeekGiftMsg',
+  full_name='com.common.msg.WeekGiftMsg',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='id', full_name='com.common.msg.WeekGiftMsg.id', index=0,
+      number=1, type=9, cpp_type=9, label=2,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='boughtCount', full_name='com.common.msg.WeekGiftMsg.boughtCount', index=1,
+      number=2, type=5, cpp_type=1, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=379,
+  serialized_end=425,
+)
+
+
+_WEEKGIFTINFOREQUEST = _descriptor.Descriptor(
+  name='WeekGiftInfoRequest',
+  full_name='com.common.msg.WeekGiftInfoRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=427,
+  serialized_end=448,
+)
+
+
+_WEEKGIFTINFORESPONSE = _descriptor.Descriptor(
+  name='WeekGiftInfoResponse',
+  full_name='com.common.msg.WeekGiftInfoResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='weekGifts', full_name='com.common.msg.WeekGiftInfoResponse.weekGifts', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='refreshTime', full_name='com.common.msg.WeekGiftInfoResponse.refreshTime', index=1,
+      number=2, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='lastWeedBought', full_name='com.common.msg.WeekGiftInfoResponse.lastWeedBought', index=2,
+      number=3, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='weekGiftAdsGroup', full_name='com.common.msg.WeekGiftInfoResponse.weekGiftAdsGroup', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=451,
+  serialized_end=592,
+)
+
+
+_WEEKGIFTREFRESHREQUEST = _descriptor.Descriptor(
+  name='WeekGiftRefreshRequest',
+  full_name='com.common.msg.WeekGiftRefreshRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=594,
+  serialized_end=618,
+)
+
+
+_WEEKGIFTREFRESHRESPONSE = _descriptor.Descriptor(
+  name='WeekGiftRefreshResponse',
+  full_name='com.common.msg.WeekGiftRefreshResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=620,
+  serialized_end=645,
+)
+
 _GIFTINFORESPONSE.fields_by_name['giftInfos'].message_type = _GIFTINFOMSG
+_WEEKGIFTINFORESPONSE.fields_by_name['weekGifts'].message_type = _WEEKGIFTMSG
 DESCRIPTOR.message_types_by_name['GiftInfoRequest'] = _GIFTINFOREQUEST
 DESCRIPTOR.message_types_by_name['GiftInfoMsg'] = _GIFTINFOMSG
 DESCRIPTOR.message_types_by_name['GiftInfoResponse'] = _GIFTINFORESPONSE
 DESCRIPTOR.message_types_by_name['TriggerGiftRequest'] = _TRIGGERGIFTREQUEST
 DESCRIPTOR.message_types_by_name['TriggerGiftResponse'] = _TRIGGERGIFTRESPONSE
+DESCRIPTOR.message_types_by_name['TakeMonthGiftAwardRequest'] = _TAKEMONTHGIFTAWARDREQUEST
+DESCRIPTOR.message_types_by_name['TakeMonthGiftAwardResponse'] = _TAKEMONTHGIFTAWARDRESPONSE
+DESCRIPTOR.message_types_by_name['MonthGiftInfo'] = _MONTHGIFTINFO
+DESCRIPTOR.message_types_by_name['WeekGiftMsg'] = _WEEKGIFTMSG
+DESCRIPTOR.message_types_by_name['WeekGiftInfoRequest'] = _WEEKGIFTINFOREQUEST
+DESCRIPTOR.message_types_by_name['WeekGiftInfoResponse'] = _WEEKGIFTINFORESPONSE
+DESCRIPTOR.message_types_by_name['WeekGiftRefreshRequest'] = _WEEKGIFTREFRESHREQUEST
+DESCRIPTOR.message_types_by_name['WeekGiftRefreshResponse'] = _WEEKGIFTREFRESHRESPONSE
 DESCRIPTOR.enum_types_by_name['GiftModuleMsgSubCommand'] = _GIFTMODULEMSGSUBCOMMAND
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -256,6 +539,62 @@ TriggerGiftResponse = _reflection.GeneratedProtocolMessageType('TriggerGiftRespo
   # @@protoc_insertion_point(class_scope:com.common.msg.TriggerGiftResponse)
   })
 _sym_db.RegisterMessage(TriggerGiftResponse)
+
+TakeMonthGiftAwardRequest = _reflection.GeneratedProtocolMessageType('TakeMonthGiftAwardRequest', (_message.Message,), {
+  'DESCRIPTOR' : _TAKEMONTHGIFTAWARDREQUEST,
+  '__module__' : 'GiftModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.TakeMonthGiftAwardRequest)
+  })
+_sym_db.RegisterMessage(TakeMonthGiftAwardRequest)
+
+TakeMonthGiftAwardResponse = _reflection.GeneratedProtocolMessageType('TakeMonthGiftAwardResponse', (_message.Message,), {
+  'DESCRIPTOR' : _TAKEMONTHGIFTAWARDRESPONSE,
+  '__module__' : 'GiftModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.TakeMonthGiftAwardResponse)
+  })
+_sym_db.RegisterMessage(TakeMonthGiftAwardResponse)
+
+MonthGiftInfo = _reflection.GeneratedProtocolMessageType('MonthGiftInfo', (_message.Message,), {
+  'DESCRIPTOR' : _MONTHGIFTINFO,
+  '__module__' : 'GiftModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.MonthGiftInfo)
+  })
+_sym_db.RegisterMessage(MonthGiftInfo)
+
+WeekGiftMsg = _reflection.GeneratedProtocolMessageType('WeekGiftMsg', (_message.Message,), {
+  'DESCRIPTOR' : _WEEKGIFTMSG,
+  '__module__' : 'GiftModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.WeekGiftMsg)
+  })
+_sym_db.RegisterMessage(WeekGiftMsg)
+
+WeekGiftInfoRequest = _reflection.GeneratedProtocolMessageType('WeekGiftInfoRequest', (_message.Message,), {
+  'DESCRIPTOR' : _WEEKGIFTINFOREQUEST,
+  '__module__' : 'GiftModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.WeekGiftInfoRequest)
+  })
+_sym_db.RegisterMessage(WeekGiftInfoRequest)
+
+WeekGiftInfoResponse = _reflection.GeneratedProtocolMessageType('WeekGiftInfoResponse', (_message.Message,), {
+  'DESCRIPTOR' : _WEEKGIFTINFORESPONSE,
+  '__module__' : 'GiftModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.WeekGiftInfoResponse)
+  })
+_sym_db.RegisterMessage(WeekGiftInfoResponse)
+
+WeekGiftRefreshRequest = _reflection.GeneratedProtocolMessageType('WeekGiftRefreshRequest', (_message.Message,), {
+  'DESCRIPTOR' : _WEEKGIFTREFRESHREQUEST,
+  '__module__' : 'GiftModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.WeekGiftRefreshRequest)
+  })
+_sym_db.RegisterMessage(WeekGiftRefreshRequest)
+
+WeekGiftRefreshResponse = _reflection.GeneratedProtocolMessageType('WeekGiftRefreshResponse', (_message.Message,), {
+  'DESCRIPTOR' : _WEEKGIFTREFRESHRESPONSE,
+  '__module__' : 'GiftModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.WeekGiftRefreshResponse)
+  })
+_sym_db.RegisterMessage(WeekGiftRefreshResponse)
 
 
 # @@protoc_insertion_point(module_scope)
