@@ -6,12 +6,8 @@ import requests
 import CoreModuleMsg_pb2  #登录、进入游戏、引导
 import GatewayModuleMsg_pb2#结构
 import GMModuleMsg_pb2
-import TaskModuleMsg_pb2    #任务跳过
-import SceneModuleMsg_pb2
-import OrderTaskModuleMsg_pb2
-import FarmlandModuleMsg_pb2
-import ItemModuleMsg_pb2
-import MagicalCreatureModuleMsg_pb2
+import ChatModuleMsg_pb2
+import TeamModuleMsg_pb2
 
 #登录#1001
 def login(account,server,version):
@@ -121,7 +117,150 @@ def skip_guide(login_res,server,version,guideId):
     struct.genTime = int(time.time()*1000)
     struct.sequenceId = 0
     struct.version = version
-    url = "{server}/{version}?id=100&uid=VISITOR&ver={version}".format(server=server, version=version)
+    url = "{server}/{version}?id=1005&uid=VISITOR&ver={version}".format(server=server, version=version)
+    response = requests.put(url,data=request.SerializeToString())
+    if response.status_code==200 : 
+        resa.ParseFromString(response.content)
+        res_100.ParseFromString(resa.bodys[0].msgBody)
+        print(resa)
+        return resa
+    else:
+        print("Server Disconnected ！！!")
+        return 0
+
+def chat_message(login_res,server,version,cid,message,data_1002):
+    '''
+    login_res:1001返回数据
+    server:服务器
+    version:版本号
+    cid:公会id
+    message:信息内容
+    data_1002:解码后的1002数据
+    '''
+    request = GatewayModuleMsg_pb2.GatewayPackageRequest()
+    msgbody = ChatModuleMsg_pb2.ChatRequest()
+    resa = GatewayModuleMsg_pb2.GatewayPackageResponse()
+    # chatinfo = ChatModuleMsg_pb2.ChatInfo()
+    res_100 = ChatModuleMsg_pb2.ChatResponse()
+    request.senderId = login_res.playerId
+    request.sessionId = login_res.sessionId
+    msgbody.chatInfo.pid = login_res.playerId
+    msgbody.chatInfo.pname = data_1002.resourceMsg.nickName
+    msgbody.chatInfo.head = data_1002.resourceMsg.icon
+    msgbody.chatInfo.frame = data_1002.playerInfoResp.frame
+    msgbody.chatInfo.timeStamp = 0
+    msgbody.chatInfo.content = message
+    msgbody.chatInfo.title = ""
+    msgbody.cid = cid
+    msg = msgbody.SerializeToString()
+    struct = request.bodys.add()
+    struct.code = 0
+    struct.msgId = 27301
+    struct.msgBody = msg
+    struct.genTime = int(time.time()*1000)
+    struct.sequenceId = 0
+    struct.version = version
+    url = "{server}/chat/{version}?id=27301_&uid={pid}".format(server=server, version=version, pid=login_res.playerId)
+    response = requests.put(url,data=request.SerializeToString())
+    if response.status_code==200 : 
+        resa.ParseFromString(response.content)
+        res_100.ParseFromString(resa.bodys[0].msgBody)
+        return resa
+    else:
+        print("Server Disconnected ！！!")
+        return 0
+
+def team_need_help(login_res,server,version,cid,itemid):
+    '''
+    login_res:1001返回数据
+    server:服务器
+    version:版本号
+    cid:公会id
+    itemid:道具id
+    '''
+    request = GatewayModuleMsg_pb2.GatewayPackageRequest()
+    msgbody = TeamModuleMsg_pb2.TeamNeedHelpRequest()
+    resa = GatewayModuleMsg_pb2.GatewayPackageResponse()
+    res_100 = TeamModuleMsg_pb2.TeamNeedHelpResponse()
+    request.senderId = login_res.playerId
+    request.sessionId = login_res.sessionId
+    msgbody.teamId = cid
+    msgbody.templateId = itemid
+    msg = msgbody.SerializeToString()
+    struct = request.bodys.add()
+    struct.code = 0
+    struct.msgId =27011
+    struct.msgBody = msg
+    struct.genTime = int(time.time()*1000)
+    struct.sequenceId = 0
+    struct.version = version
+    url = "{server}/game/{version}?id=27011&uid={pid}".format(server=server, version=version, pid=login_res.playerId)
+    response = requests.put(url,data=request.SerializeToString())
+    if response.status_code==200 : 
+        resa.ParseFromString(response.content)
+        res_100.ParseFromString(resa.bodys[0].msgBody)
+        return resa
+    else:
+        print("Server Disconnected ！！!")
+        return 0
+
+def join_team(login_res,server,version,cid):
+    '''
+    login_res:1001返回数据
+    server:服务器
+    version:版本号
+    cid:公会id
+    '''
+    request = GatewayModuleMsg_pb2.GatewayPackageRequest()
+    msgbody = TeamModuleMsg_pb2.JoinTeamRequest()
+    resa = GatewayModuleMsg_pb2.GatewayPackageResponse()
+    res_100 = TeamModuleMsg_pb2.JoinTeamResponse()
+    request.senderId = login_res.playerId
+    request.sessionId = login_res.sessionId
+    msgbody.id = cid
+    msg = msgbody.SerializeToString()
+    struct = request.bodys.add()
+    struct.code = 0
+    struct.msgId =27002
+    struct.msgBody = msg
+    struct.genTime = int(time.time()*1000)
+    struct.sequenceId = 0
+    struct.version = version
+    url = "{server}/game/{version}?id=27002&uid={pid}".format(server=server, version=version, pid=login_res.playerId)
+    response = requests.put(url,data=request.SerializeToString())
+    if response.status_code==200 : 
+        resa.ParseFromString(response.content)
+        res_100.ParseFromString(resa.bodys[0].msgBody)
+        print(resa)
+        return resa
+    else:
+        print("Server Disconnected ！！!")
+        return 0
+
+
+def leave_team(login_res,server,version,cid):
+    '''
+    login_res:1001返回数据
+    server:服务器
+    version:版本号
+    cid:公会id
+    '''
+    request = GatewayModuleMsg_pb2.GatewayPackageRequest()
+    msgbody = TeamModuleMsg_pb2.QuitTeamRequest()
+    resa = GatewayModuleMsg_pb2.GatewayPackageResponse()
+    res_100 = TeamModuleMsg_pb2.QuitTeamResponse()
+    request.senderId = login_res.playerId
+    request.sessionId = login_res.sessionId
+    msgbody.id = cid
+    msg = msgbody.SerializeToString()
+    struct = request.bodys.add()
+    struct.code = 0
+    struct.msgId =27003
+    struct.msgBody = msg
+    struct.genTime = int(time.time()*1000)
+    struct.sequenceId = 0
+    struct.version = version
+    url = "{server}/game/{version}?id=27003&uid={pid}".format(server=server, version=version, pid=login_res.playerId)
     response = requests.put(url,data=request.SerializeToString())
     if response.status_code==200 : 
         resa.ParseFromString(response.content)

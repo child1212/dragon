@@ -7,9 +7,9 @@ from func_dragon import *
 import os
 
 print("start time:",time.asctime(time.localtime()))
-account = "1855"
-num = 999
-server = "38"                           
+account = "DBFABEFD-A297-4C48-B94E-4EC185B6AEE3"
+num = 2000
+server = "qa"                           
 # item = items()
 
 
@@ -26,6 +26,9 @@ player = info['playerid']
 session = info['sessionid']
 item_type = (2,3,5,7,13,15,16,18,25,32)
 
+# for item in range(2020,2032):
+#     send_gift(item, 10, player,session, account, log_res,server)
+
 for line in table:
     line_l = line.split(",")
     if line_l[0] == '':
@@ -33,15 +36,18 @@ for line in table:
     
     if "龙" not in line_l[1] and"icon4" not in line_l[4] and "icon5" not in line_l[4]:
         if int(line_l[7]) in item_type:
+    # if "基因" in line_l[1] and "显示" not in line_l[1]:
             result = send_gift(line_l[0], num, player,session, account, log_res,server)
             print(line_l[0],line_l[1], num,result)
-            
+                
 
 
 send_gift(1001, 100000, player,session, account, log_res,server)
-send_gift(1003, -100000, player,session, account, log_res,server)
+send_gift(1003, 100000, player,session, account, log_res,server)
 table.close()
 print("playerid:-{player}\nMission Completed!".format(player=player))
 
 
 
+
+# %%

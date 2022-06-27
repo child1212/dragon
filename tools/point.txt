@@ -1,8 +1,5 @@
-dragonEnergy
 type
-dragonId
-score
-result
+tag
 level
 platform
 playerid

@@ -4,7 +4,6 @@ from time import sleep
 import requests
 import json
 import random
-import time
 
 # data_rank = []
 # for i in range(100):
@@ -38,16 +37,17 @@ def RankIns(data,host="https://dqa.hphorse.net"):
     # res = res["msg"]
     print(res)
 data = {}
-for i in range(1):
+#%%
+for i in range(200):
     data_rank = []
-    data_faker = '{"pid":"faker1","level":12,"activityId":1003,"score":10}'
+    data_faker = '{"pid":"","level":0,"activityId":0,"score":0}'
     data_faker = json.loads(data_faker)
     pid = "faker{i}".format(i=i+1)
     level = random.choice(range(12,40))
-    score = random.choice(range(20))
+    score = i+5 #random.choice(range(50,100))
     data_faker["pid"] = pid
     data_faker["level"] = level
-    data_faker["activityId"] = 1001
+    data_faker["activityId"] = 103
     data_faker["score"] = score
     data_faker = json.dumps(data_faker)
     data_rank.append(data_faker)
@@ -57,3 +57,22 @@ for i in range(1):
 
 # RankIns(str(data_rank))
 # %%
+data_rank = []
+data_faker = '{"pid":"","level":0,"activityId":0,"score":0}'
+data_faker = json.loads(data_faker)
+level = random.choice(range(12,40))
+
+
+
+data_faker["pid"] = "dtdzed"
+data_faker["level"] = level
+data_faker["activityId"] = 103
+data_faker["score"] = 250
+
+
+
+data_faker = json.dumps(data_faker)
+data_rank.append(data_faker)
+RankIns(str(data_rank))
+# time.sleep(3)
+data["faker{i}".format(i=i+1)] = (level,score)

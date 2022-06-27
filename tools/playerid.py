@@ -3,9 +3,11 @@ import sys
 sys.path.append('D:\\pyprogram\\PyTestTools\\dragon\\function')
 from xieyi import *
 
-account = "700"
-server = "https://dqa.gameyici.com" 
-version = "7.1.0"
-log = login(account,server,version)
-print("playerid:", log.playerId)
+account = "1960"
+server = "https://dqa.hphorse.net" 
+version = "19.1.0"
+for i in range(100,200):
+    account = "new{i}".format(i=i)
+    log = login(account,server,version)
+    print(account,":", log.playerId)
 # %%
