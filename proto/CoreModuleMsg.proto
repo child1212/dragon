@@ -58,6 +58,8 @@ enum CoreModuleMsgSubCommand {
 	COREMODULEMSG_SUB_PLAYERINFOMODIFY = 1025;
 	// 领取回归奖励
 	COREMODULEMSG_SUB_BACKREWARD = 1026;
+	// 注销账号
+	COREMODULEMSG_SUB_ACCOUNTCANCEL = 1027;
 }
 
 // 个人信息请求
@@ -469,4 +471,15 @@ message BackRewardRequest {
 // 领取回归奖励响应
 message BackRewardResponse {
 	repeated ItemMsg rewards = 1;
+}
+
+// 注销账号请求
+message AccountCancelRequest {
+	optional int32 cause = 1;	// 注销原因 1.不喜欢这个游戏 2.游戏bug太多 3.信息骚扰、数据泄露
+	optional string authcode = 2;
+}
+
+// 注销账号响应
+message AccountCancelResponse {
+	optional int32 ret = 1;	// 1.成功 2.Apple注销失败
 }

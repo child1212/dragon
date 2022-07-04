@@ -215,7 +215,7 @@ message SupplementItem {
 	optional string itemTemplateId = 1;
 	//兑换道具数量
 	optional int32 count = 2;
-	//兑换来源(0默认1工厂2订单3航海4任务5炼金炉)
+	//兑换来源(0默认1工厂2订单3航海4任务5炼金炉6装扮)
 	optional int32 source = 3;
 }
 

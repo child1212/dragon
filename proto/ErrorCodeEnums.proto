@@ -485,6 +485,8 @@ enum ErrorCodeEnums {
 	REDENVELOPE_ALREADY_FINISHED_ERROR = 28726;
 	//已经领取了红包
 	REDENVELOPE_ALREADY_TOKEN_ERROR = 28727;
+	//玩家已有队伍了
+	TEAM_PLAYER_HAS_TEAM_ERROR = 28728;
 	/************************************神龙部落[28701-28800]****************************************************************/
 
 	/************************************周限定礼包开始 [28801 - 28900] *****************************************/
@@ -552,5 +554,43 @@ enum ErrorCodeEnums {
 	//小猪存钱罐已经过期不能升档
 	PIGGYBANK_UPDATE_END = 29304;
 	/************************************小猪存钱罐结束 [29301- 29400] *****************************************/
+
+	/************************************龙赛季活动开始 [29401- 29500] *****************************************/
+	//龙赛季任务cd中
+	DRAGONSEASON_CD_ERROR = 29401;
+	//不能购买此位置任务
+	DRAGONSEASON_BUYTASK_ERROR = 29402;
+	//已有任务不能重复购买
+	DRAGONSEASON_BUYTASK_REPEATE_ERROR = 29403;
+	//此任务不能删除
+	DRAGONSEASON_DELTASK_CANNOT_DELETE = 29404;
+	//已是删除状态重复删除
+	DRAGONSEASON_DELTASK_REPEATE_DELETE = 29405;
+	//个人累计积分奖励领取索引错误
+	DRAGONSEASON_SCOREREWARD_INDEX_ERROR = 29406;
+	//队伍累计积分奖励已领取过
+	DRAGONSEASON_TEAM_SCOREREWARD_REWARDED = 29407;
+	//队伍累计积分不足
+	DRAGONSEASON_TEAM_SCOREREWARD_SCORE_NOT_ENOUGH = 29408;
+	//24小时内加入公会的，得不到周赛奖励
+	DRAGONSEASON_TEAM_SCOREREWARD_TIME_JOIN = 29409;
+	//因公会条件不满足不能完成次任务
+	DRAGONSEASON_TEAM_FINISHTASK_TEAM_ERROR = 29410;
+	//最后一周周赛加入工会的玩家，得不到世界排行奖励
+	DRAGONSEASON_TEAM_RANKREWARD_TIME_JOIN = 29411;
+	//个人累计积分不足
+	DRAGONSEASON_SCOREREWARD_SCORE_NOT_ENOUGH = 29412;
+	//活动信息中队伍id为空
+	DRAGONSEASON_TEAMID_ISNULL = 29413;
+	//还未参与活动
+	DRAGONSEASON_NOT_INACTIVITY = 29414;
+	/************************************龙赛季活动结束 [29401- 29500] *****************************************/
+
+	/************************************等级地图开始 [29501- 29600] *****************************************/
+	//开启的等级地图错误
+	LEVELMAP_ID_ERROR = 29501;
+	//处于cd中，不能开启
+	LEVELMAP_CD_ERROR = 29502;
+	/************************************等级地图结束 [29501- 29600] *****************************************/
 
 }

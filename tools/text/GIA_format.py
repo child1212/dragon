@@ -2,10 +2,10 @@
 
 import json
 
-gia = open("gia.txt","r")
-giar = open("gia_out.txt","w")
+gia = open("gia.txt","r",encoding="utf-8")
+giar = open("gia_out.txt","w",encoding="utf-8")
 
-custom = ("itemId","remain","method","count")
+custom = ("method","playerid","remain","version")
 
 for line in gia:
     line_j = json.loads(line)

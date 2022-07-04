@@ -63,6 +63,8 @@ message ActivityTeamMapInfoResponse {
 	optional string lastScoreReward = 6;
 	// 第几层
 	optional int32 layer = 7;
+	// 累计奖励积分
+	optional int32 score = 8;
 }
 
 // 公会地图活动开始冒险请求

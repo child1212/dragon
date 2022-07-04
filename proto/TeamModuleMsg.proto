@@ -40,6 +40,12 @@ enum TeamModuleMsgSubCommand {
 	TEAMMODULEMSG_SUB_SEARCHOTHERHELPITEM= 27018;
 	//领取红包消息
 	TEAMMODULEMSG_SUB_TAKEREDENVELOPE = 27019;
+	//审核申请
+	TEAMMODULEMSG_SUB_AUDITAPPLICATION = 27021;
+	//请求申请加入公会列表
+	TEAMMODULEMSG_SUB_APPLYLIST = 27022;
+	//请求玩家已经申请的公会列表
+	TEAMMODULEMSG_SUB_APPLYTEAMLIST = 27023;
 }
 
 // 创建部落消息
@@ -76,6 +82,8 @@ message JoinTeamRequest {
 message JoinTeamResponse {
 	//0 成功 其他为错误码  26901:部落人数已满  26902:部落当前不允许加入 26903:您等级不符合要求  26904:部落已解散
 	required int32 result = 1;
+	//在成功的情况下返回是否需要审核 0:不需要   1:需要等待审核
+	optional int32 audit = 2;
 }
 
 // 退出部落消息
@@ -116,6 +124,8 @@ message TeamRankUnit {
 	optional string icon = 4;
 	// 部落score
 	optional int64 score = 5;
+	//部落状态
+	optional int32 state = 6;
 }
 
 // 部落排行消息响应
@@ -202,7 +212,7 @@ message UpdateTeamRequest {
 	required string id = 1;
 	// 部落描述不能大于100字符
 	optional string desc = 2;
-	// 部落状态 0:关闭  1:打开
+	// 部落状态 0:关闭  1:打开 2:申请加入
 	optional int32 state = 3;
 	// 部落需求等级
 	optional int32 needLv = 4;
@@ -229,6 +239,8 @@ message TeamRecommendUnit {
 	optional string icon = 4;
 	//部落积分
 	optional int32 score = 5;
+	//部落状态
+	optional int32 state = 6;
 }
 
 // 请求部落推荐列表响应
@@ -457,4 +469,56 @@ message TakeRedEnvelopeResponse {
 	optional string itemId = 1;
 	//道具的数量
 	optional int32 count = 2;
+}
+
+//审核申请请求
+message AuditApplicationRequest {
+	optional string teamId = 1;
+	//申请人id
+	optional string applyPid = 2;
+	//操作值 0：同意  1：拒绝
+	optional int32 oper = 3;
+}
+
+//审核申请请求响应
+message AuditApplicationResponse {
+}
+
+//申请加公会列表
+message ApplyListRequest {
+	optional string teamId = 1;
+	//缓存的时间戳(根据时间戳返回大于此时间的新增申请数据)
+	optional int64 timeStamp = 2;
+}
+
+//申请玩家信息
+message ApplyInfo {
+	//玩家信息
+	optional PlayerInfo playerInfo = 1; 
+	//申请时间戳
+	optional int64 timeStamp = 2;
+	//龙力
+	optional int64 dragonStrength = 3;
+}
+
+//申请加公会列表响应
+message ApplyListResponse {
+	//申请信息集合
+	repeated ApplyInfo applyInfos = 1;
+}
+
+//玩家已经申请的公会列表集合
+message ApplyTeamListRequest {
+}
+
+message ApplyTeam {
+	//公会id
+	optional string teamId = 1;
+	//申请时间
+	optional int64 timeStamp = 2;
+}
+
+//玩家已经申请的公会列表集合响应
+message ApplyTeamListResponse {
+	repeated ApplyTeam applyTeams = 1;
 }

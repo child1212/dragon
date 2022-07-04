@@ -143,6 +143,13 @@ message SceneStarMsg {
 	repeated ItemMsg repairTimelimitRewards = 8; // BUG FIX 新领取的限时
 }
 
+message LimitTimePlant {
+	//地图障碍物生成的唯一id
+	optional string plantId = 1;
+	//限时障碍的结束时间
+	optional int64 endTime = 2;
+}
+
 // 场景数据返回
 message SceneInfoResponse {
 	// 障碍物
@@ -167,6 +174,8 @@ message SceneInfoResponse {
 	repeated string appears = 10;
 	// 场景三星信息
 	optional SceneStarMsg starMsg = 11;
+	//限时障碍信息
+	repeated LimitTimePlant limitTimePlants = 12;
 }
 
 // 收集障碍物成就奖励
@@ -231,6 +240,8 @@ message PlantAppearRequest{
 }
 //障碍物无云遮挡显现出来通知服务器返回
 message PlantAppearResponse{
+	//对于有时间限制的返回结束时间戳
+	optional int64 endTime = 1;
 }
 
 // 修复建筑抽奖信息

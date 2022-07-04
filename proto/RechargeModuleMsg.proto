@@ -14,6 +14,8 @@ enum RechargeModuleMsgSubCommand {
 	RECHARGEMODULEMSG_SUB_AFREPORTLIST = 3005;
 	// 17.1 AF打点确认
 	RECHARGEMODULEMSG_SUB_AFREPORTCONFIRM = 3006;
+	// 19.1 AF已打点列表
+	RECHARGEMODULEMSG_SUB_AFREPORTHISTORYLIST = 3007;
 }
 
 //充值请求
@@ -95,4 +97,14 @@ message AFReportConfirmRequest {
 // 17.1 AF打点确认返回
 message AFReportConfirmResponse {
 	
+}
+
+// 19.1 AF已打点列表请求
+message AFReportHistoryListRequest {
+	
+}
+
+// 19.1 AF已打点列表返回
+message AFReportHistoryListResponse {
+	repeated string eventnames = 1;	
 }

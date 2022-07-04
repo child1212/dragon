@@ -14,6 +14,8 @@ enum FactoryModuleMsgSubCommand {
 	FACTORYMODULEMSG_SUB_ACCELERATEPRODUCE = 25104;
 	// 生产基地升级
 	FACTORYMODULEMSG_SUB_FACTORYCENTERUPLEVEL = 25105;
+	// 使用道具加速生产
+	FACTORYMODULEMSG_SUB_USEITEMACCELERATEPRODUCE = 25106;
 }
 
 message FactoryMsg {
@@ -92,4 +94,18 @@ message FactoryCenterUpLevelRequest {
 message FactoryCenterUpLevelResponse {
 	// 同步道具
 	repeated ItemMsg items = 1;
+}
+
+// 使用道具加速生产 请求
+message UseItemAccelerateProduceRequest {
+	required string factoryId = 1;
+	// 使用道具加速
+	optional ItemMsg item = 2;
+}
+
+// 使用道具加速生产 响应
+message UseItemAccelerateProduceResponse {
+	// 同步道具
+	repeated ItemMsg items = 1;
+	repeated FactoryMsg factorys = 2;
 }

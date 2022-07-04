@@ -10,14 +10,14 @@ import GMModuleMsg_pb2
 import time
 import requests
 
-account ="1905"
-# account = "DBFABEFD-A297-4C48-B94E-4EC185B6AEE3"
+account ="1909"
+account = "DBFABEFD-A297-4C48-B94E-4EC185B6AEE3"
 # account = "16dfe5819d850f195c79d3db04f4bbfa"
 
 
-server = "qa"
+server = "38"
 version = "19.1.0"
-scene = "4"#input("输入地图编号")
+scene = "14"#input("输入地图编号")
 
 
 
@@ -73,13 +73,13 @@ def new(account,server,version,scene):
         skip_guide(log,server,version,guide)
         print(line)
     guides.close()
-    send_gift(1002, 10000, player,session, account, log_res,server)
-    send_gift(1003, 100000, player,session, account, log_res,server)
+    # send_gift(1002, 10000, player,session, account, log_res,server)
+    # send_gift(1003, 100000, player,session, account, log_res,server)
 
     print(player,"-finish")
 
-for i in range(200,210):
-    account = 'new{i}'.format(i=i)
-    new(account,server,version,scene)
+# for i in range(200,210):
+# account = 'new{i}'.format(i=i)
+new(account,server,version,scene)
 
 # %%

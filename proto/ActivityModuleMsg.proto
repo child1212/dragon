@@ -86,6 +86,14 @@ message RankRewardMsg {
 	repeated ItemMsg rewards = 3;
 }
 
+// 周赛活动历史积分
+message HistoryScoreMsg {
+	// ID
+	optional string activityId = 1;
+	// 分数
+	optional int32 score = 2;
+}
+
 // 活动列表请求
 message ActivityListRequest {
 
@@ -122,4 +130,6 @@ message ActivityRankRequest {
 message ActivityRankResponse {
 	// 排行榜
 	repeated RankListMsg ranks = 1;
+	// 马拉松活动 本公会历史周赛积分
+	repeated HistoryScoreMsg history = 2;
 }
