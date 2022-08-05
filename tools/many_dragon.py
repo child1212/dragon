@@ -1,5 +1,7 @@
 #%%
 import sys
+
+from PyTestTools.dragon.function.func_dragon import clear_item
 sys.path.append('D:\\pyprogram\\PyTestTools\\dragon\\function')
 import time
 from func_dragon import *
@@ -10,11 +12,11 @@ import os
 
 
 print("start time:",time.asctime(time.localtime()))
-account = "DBFABEFD-A297-4C48-B94E-4EC185B6AEE3"
-level = ""
+account = "2199"
+level = "龙4"
 p = ""
 num = 1
-server = 'qa'
+server = '38'
 
 
 
@@ -46,11 +48,14 @@ for line in table:
 # send_gift(2008, 1000, player,session, account, log_res,server)
 # send_gift(7005, 1000, player,session, account, log_res,server)
 # # send_gift(27500, 1, player,session, account, log_res,server)
-# send_gift(1001, 10000, player,session, account, log_res,server)
+send_gift(1001, 10000, player,session, account, log_res,server)
 # table.close()
-# print("playerid:-{player}\nMission Completed!".format(player=player))
+print("playerid:-{player}\nMission Completed!".format(player=player))
+
 
 
 # %%
 
+
+# 60ACB6F3-8CC3-4BDA-910E-7A56B5B5C2F9
 # 60ACB6F3-8CC3-4BDA-910E-7A56B5B5C2F9

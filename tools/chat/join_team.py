@@ -11,9 +11,9 @@ import time
 import requests
 
 account = "rank101"
-cid = "7b90mm"
+cid = "jif73z"
 server = "38"
-version = "19.1.0"
+version = "21.1.0"
 
 
 
@@ -22,8 +22,8 @@ if server == "38":
 elif server == "qa":
     server = "https://dqa.hphorse.net"
 
-for i in range(1,14):
-    account = "teamteam{i}".format(i=i)
+for i in range(1):
+    account = "youhua00{i}".format(i=i)
     log = login(account,server,version)
     res_1002 = entergame(log,server,version)
 
