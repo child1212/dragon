@@ -38,7 +38,7 @@ def RankIns(data,host="https://dqa.hphorse.net"):
     print(res)
 data = {}
 #%%
-for i in range(200):
+for i in range(50):
     data_rank = []
     data_faker = '{"pid":"","level":0,"activityId":0,"score":0}'
     data_faker = json.loads(data_faker)
@@ -47,7 +47,7 @@ for i in range(200):
     score = i+5 #random.choice(range(50,100))
     data_faker["pid"] = pid
     data_faker["level"] = level
-    data_faker["activityId"] = 103
+    data_faker["activityId"] = 10006
     data_faker["score"] = score
     data_faker = json.dumps(data_faker)
     data_rank.append(data_faker)
@@ -64,10 +64,10 @@ level = random.choice(range(12,40))
 
 
 
-data_faker["pid"] = "dtdzed"
-data_faker["level"] = level
-data_faker["activityId"] = 103
-data_faker["score"] = 250
+data_faker["pid"] = "it3tt0"
+data_faker["level"] = 16
+data_faker["activityId"] = 104
+data_faker["score"] = 800
 
 
 
@@ -76,3 +76,4 @@ data_rank.append(data_faker)
 RankIns(str(data_rank))
 # time.sleep(3)
 data["faker{i}".format(i=i+1)] = (level,score)
+# %%

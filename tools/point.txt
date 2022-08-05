@@ -1,5 +1,9 @@
-type
-tag
+ItemId
+factoryid
+sceneid
+factorytype
+buyMaterial
+consumeDiamond
 level
 platform
 playerid

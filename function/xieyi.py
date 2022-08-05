@@ -20,7 +20,7 @@ def login(account,server,version):
     msgbody.type = 0
     msgbody.account = str(account)
     msgbody.visitorAccount = "2"
-    msgbody.osType = 0
+    msgbody.osType = 1
     msgbody.platformType = 0
     # msgbody.idfa = "A91E6759-4AF3-43B7-B91D-EBCC2F2C7C07 "
     msgbody.deviceCountry = "00"

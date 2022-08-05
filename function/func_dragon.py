@@ -249,3 +249,27 @@ def level_task(playerid,sessionid,accountid,levelid,taskid,login_res,host):
     res = json.loads(res)
     res = res["msg"]
     return res
+
+
+def clear_item(playerid,login_res,host):
+    url_itemlist = "{host}/BI/bi/bieditplayerdata/update".format(host=host)
+    data_itemlist = '{"rowKey":"Pjsjk95@{jsjk95}-Item","rowValue":"{\\n\\t\\"items\\": []}","note":null,"serverId":null}'
+    data_itemlist = json.loads(data_itemlist)
+    data_itemlist["rowKey"] = 'Pplayerid@{playerid}-Item'.replace('playerid',playerid)
+    data_itemlist = json.dumps(data_itemlist)
+
+    headers = {
+    "Accept": "application/json, text/javascript, */*; q=0.01",
+    "X-Requested-With": "XMLHttpRequest",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36",
+    "Content-Type": "application/json",
+    "Origin": "{host}".format(host=host),
+    "Referer": "{host}/BI/modules/bi/biqatool.html".format(host=host),
+    "Accept-Encoding": "gzip, deflate",
+    "Accept-Language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+    }
+
+    res_item = requests.post(url_itemlist, data =data_itemlist,cookies = login_res.cookies, headers=headers)
+    res_list = res_item.text
+    res_list = json.loads(res_list)
+    return res_list

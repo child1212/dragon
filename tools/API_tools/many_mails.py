@@ -76,10 +76,10 @@ def many_mails(mail_title, mail_content, reward, server, pid_file_path, res_file
     res_file.close()
 
 #########################################
-mail_title = "System Compensation"
+mail_title = "升版本"
 mail_content = "Dear adventurer, we are deeply sorry for the issue with Dragon Parkour. Here are your compensation. Thank you for your understanding.The event will be available again on 5/20/2022 4 AM PST. You are welcome to join."
 reward = [["1001",10]]
-server = "qa" 
+server = "38" 
 group_num = 10
 pid_file_path = "pid_list.txt"
 res_file_path = "result_list.txt"
