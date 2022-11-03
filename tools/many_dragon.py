@@ -1,7 +1,6 @@
 #%%
 import sys
 
-from PyTestTools.dragon.function.func_dragon import clear_item
 sys.path.append('D:\\pyprogram\\PyTestTools\\dragon\\function')
 import time
 from func_dragon import *
@@ -12,8 +11,8 @@ import os
 
 
 print("start time:",time.asctime(time.localtime()))
-account = "2199"
-level = "龙4"
+account = "1890"
+level = "3"
 p = ""
 num = 1
 server = '38'
@@ -30,7 +29,7 @@ if server == "38":
     server = "http://dtest.gameyici.com"   
 elif server == "qa":
     server = "https://dqa.hphorse.net"
-table = open("{pat}\\MagicalCreaturesTemplate.csv".format(pat=pat),'r',encoding="utf-8")
+table = open("{pat}\\MagicalCreaturesTemplate.csv".format(pat=pat),'r',encoding="utf-8-sig")
 log_res = login_gm(server)                      #��¼GMƽ̨
 info = get_playerid(account, log_res,server)    #��ȡplayerId
 player = info['playerid']

@@ -6,8 +6,8 @@ from func_dragon import *
 import os
 
 print("start time:",time.asctime(time.localtime()))
-account = "2199"
-player = "jsjk95"
+account = "hc123"
+player = "ureyno"
 server = "38"      
 
 
@@ -17,6 +17,9 @@ if server == "38":
     server = "http://dtest.gameyici.com"
 elif server == "qa":
     server = "https://dqa.hphorse.net"
+elif server == "act":
+    server = "http://dact.gameyici.com"
+
 log_res = login_gm(server)    
 fin = banding(account,player,server,log_res)
 
@@ -32,12 +35,28 @@ import time
 from func_dragon import *
 import os
 dic = dict()
-dic["89759f09f4aacecba561cf402a05152d"] = "pvhui5"
-dic["A2A90680-DAF1-4C12-8DAE-F814635F1839"] = "hpvkq"
-dic["5AD6D528-ABEF-4D6F-ACC8-E3782EF85228"] = "ojehaq"
-server = "http://dtest.gameyici.com"      
+dic["swd20"] = "swd20"
+dic["swd21"] = "swd21"
+dic["swd22"] = "swd22"
+dic["swd23"] = "swd23"
+dic["swd24"] = "swd24"
+dic["swd25"] = "swd25"
+dic["swd26"] = "swd26"
+dic["swd27"] = "swd27"
+dic["swd28"] = "swd28"
+dic["swd29"] = "swd29"
+dic["swd30"] = "swd30"
+dic["swd31"] = "swd31"
+server = "qa"      
 
+if server == "38":
+    server = "http://dtest.gameyici.com"
+elif server == "qa":
+    server = "https://dqa.hphorse.net"
+elif server == "act":
+    server = "http://dact.gameyici.com"
 log_res = login_gm(server)  
+
 print("start time:",time.asctime(time.localtime()))
 for key in dic:
     account = key

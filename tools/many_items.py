@@ -7,7 +7,7 @@ from func_dragon import *
 import os
 
 print("start time:",time.asctime(time.localtime()))
-account = "1909"
+account = "1896"
 num = 2000
 server = "qa"                           
 # item = items()
@@ -43,7 +43,7 @@ for line in table:
 
 
 send_gift(1001, 100000, player,session, account, log_res,server)
-send_gift(1003, 100000, player,session, account, log_res,server)
+send_gift(1003, 100, player,session, account, log_res,server)
 table.close()
 print("playerid:-{player}\nMission Completed!".format(player=player))
 

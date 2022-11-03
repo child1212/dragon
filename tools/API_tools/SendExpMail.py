@@ -1,9 +1,17 @@
 
 #%%
 from time import sleep
-from py import code
 import requests
 import json
+import time
+
+expList = []
+expfile = open("D:\\pyprogram\\PyTestTools\\dragon\\tools\\API_tools\\exp.txt","r",encoding="utf-8-sig")
+for line in expfile:
+    line=line.replace("\n","")
+    a=line.split(",")
+    expList.append(a)
+expfile.close()
 
 
 def send_mail(data,host="https://dqa.hphorse.net"):
@@ -75,12 +83,10 @@ def many_mails(mail_title, mail_content, reward, server, pid_file_path, res_file
     res_file.close()
 
 #########################################
-mail_title = "升版本"
-mail_content = "2022/10/19"
-reward = [[1003,1],[30000,1],[27695,1],[2100,1]]
-server = "38"
+mail_content = time.asctime(time.localtime())
+server = "38" 
 group_num = 10
-pid_file_path = "pid_list.txt"
+pid_file_path = "PidListExp.txt"
 res_file_path = "result_list.txt"
 
 #########################################
@@ -92,7 +98,10 @@ elif server == "qa":
 elif server == "dragon":
     server = "https://dragon.hphorse.net"
 
+for data_list in expList:
+    mail_title = "等级:{level}".format(level=data_list[0])
+    reward = [[1000,int(data_list[1])]]
 
-many_mails(mail_title, mail_content, reward, server, pid_file_path, res_file_path, group_num)
+    many_mails(mail_title, mail_content, reward, server, pid_file_path, res_file_path, group_num)
 
 # %%

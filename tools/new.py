@@ -10,18 +10,20 @@ import GMModuleMsg_pb2
 import time
 import requests
 
-account ="youhua002"
+# account ="525C2D50-E9CD-47E9-B16F-1A33EF6F5FAA"
+# account = "e7f31a3db7b2446589eb37d053caba3e"
+# account = "C71519CC-15DB-44AB-BE21-757A097E0408"
 # account = "DBFABEFD-A297-4C48-B94E-4EC185B6AEE3"
-# account = "16dfe5819d850f195c79d3db04f4bbfa"
-
+account = "1968"
 
 server = "38"
-version = "20.1.0"
-scene = "6"#input("输入地图编号")
+version = "25.1.0"
+scene = "4"#input("输入地图编号")
+skip = 1
 
 
 
-def new(account,server,version,scene):
+def new(account,server,version,scene,skip):
     task_dist = {}
     task_dist["city"] = "gmSubmitTask city MIssion1_002StoreStuff"
     task_dist["2"] = "gmSubmitTask 2 Mission1_013Outofcontroldragon"
@@ -41,7 +43,9 @@ def new(account,server,version,scene):
     task_dist["16"] = "gmSubmitTask 16 Mission16_014DragonBlessing"
     task_dist["17"] = "gmSubmitTask 17 Mission17_012Conchchannel"
     task_dist["18"] = "gmSubmitTask 18 Mission18_012Mysteriousmine"
-    
+    task_dist["19"] = "gmSubmitTask 19 Mission19_012Endofthemine"
+    task_dist["20"] = "gmSubmitTask 20 Mission20_013Unknownahead"
+    task_dist["21"] = "gmSubmitTask 21 Mission21_013ShiresTreasure"
 
 
 
@@ -49,8 +53,10 @@ def new(account,server,version,scene):
         server = "http://dtest.gameyici.com"
     elif server == "qa":
         server = "https://dqa.hphorse.net"
+    elif server == "act":
+        server = "http://dact.gameyici.com"
+
     cmd = task_dist[scene]
-    dragon = "1"#input("输入任意字符发龙！") #是否发龙
 
     log = login(account,server,version)
     entergame(log,server,version)
@@ -61,25 +67,27 @@ def new(account,server,version,scene):
     info = get_playerid(account, log_res,server)    #��ȡplayerId
     player = info['playerid']
     session = info['sessionid']
-    # send_gift(14054, 1, player,session, account, log_res,server)
-    # send_gift(27201, 1, player,session, account, log_res,server)
+    # send_gift(1001, 9999, player,session, account, log_res,server)
+    # send_gift(6000, 200, player,session, account, log_res,server)
     # send_gift(27101, 1, player,session, account, log_res,server)
     # send_gift(27102, 1, player,session, account, log_res,server)
 
     guides = open("D:\\pyprogram\\PyTestTools\\dragon\\tools\\new_guide.txt","r",encoding="utf-8")
+    if skip == 1:
+        for line in guides:
+            guide = line.replace("\n","")
+            skip_guide(log,server,version,guide)
+            print(line)
+        guides.close()
 
-    for line in guides:
-        guide = line.replace("\n","")
-        skip_guide(log,server,version,guide)
-        print(line)
-    guides.close()
     # send_gift(1002, 10000, player,session, account, log_res,server)
     # send_gift(1003, 100000, player,session, account, log_res,server)
+
 
     print(player,"-finish")
 
 # for i in range(100, 200):
-#     account = 'qinqi{i}'.format(i=i)
-new(account,server,version,scene)
+#     account = 'act{i}'.format(i=i)
+new(account,server,version,scene,skip)
 
 # %%
