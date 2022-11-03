@@ -3,7 +3,7 @@
 names = ('AI','Dialog','Dragon','Guide','Obstacle','Pops','Story','SystemErrorCode','Tips','UI')
 countries = ('ar','de','en','fr','it','ja','ko','ne','po','ru','sp','tc','th','tu','vi','zh')
 for country in countries:
-    print("===================="+country+"=======================")
+    print("#===================="+country+"=======================#")
     for name in names:
         lan = open("D:\\town\\dragon\\client\\client\\Assets\\HomeLand\\Localization\\{country}\\{name}.bytes".format(country=country,name=name),"r",encoding="utf-8")
 
@@ -20,9 +20,9 @@ for country in countries:
                     try:
                         x = t.pop()
                     except:
-                        pass
+                        x = 0
                     if x == 1:
-                        pass
+                        x = 0
                     else:
                         print(line)
                 elif lett == "<":
@@ -31,9 +31,9 @@ for country in countries:
                     try:
                         x = t.pop()
                     except:
-                        pass
+                        x = 0
                     if x == 2:
-                        pass
+                        x = 0
                     else:
                         print(line)
                 else:
@@ -52,7 +52,7 @@ for country in countries:
 names = ('AI','Dialog','Dragon','Guide','Obstacle','Pops','Story','SystemErrorCode','Tips','UI')
 countries = ('ar','de','en','fr','it','ko','ne','po','ru','sp','th','tu','vi')
 for country in countries:
-    print("===================="+country+"=======================")
+    print("#===================="+country+"=======================#")
     for name in names:
         lan = open("D:\\town\\dragon\\client\\client\\Assets\\HomeLand\\Localization\\{country}\\{name}.bytes".format(country=country,name=name),"r",encoding="utf-8")
 
@@ -63,3 +63,17 @@ for country in countries:
                     break
         lan.close()
 # %%
+#检测参数首字母大写
+names = ('AI','Dialog','Dragon','Guide','Obstacle','Pops','Story','SystemErrorCode','Tips','UI')
+countries = ('ar','de','en','fr','it','ja','ko','ne','po','ru','sp','tc','th','tu','vi','zh')
+for country in countries:
+    print("#===================="+country+"=======================#")
+    for name in names:
+        lan = open("D:\\town\\dragon\\client\\client\\Assets\\HomeLand\\Localization\\{country}\\{name}.bytes".format(country=country,name=name),"r",encoding="utf-8")
+        f_l = ('{Q','{W','{E','{R','{T','{Y','{U','{I','{O','{P','{A','{S','{D','{F','{G','{H','{J','{K','{L','{Z','{X','{C','{V','{B','{N','{M')
+        for line in lan:
+            for u in f_l:
+                if u in line:
+                    print(line)
+                    break
+        lan.close()
