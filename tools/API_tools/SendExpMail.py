@@ -97,6 +97,9 @@ elif server == "qa":
     server = "https://dqa.hphorse.net"
 elif server == "dragon":
     server = "https://dragon.hphorse.net"
+elif server == "cn":
+    server = "http://dragon-pr.bettagames.com"
+    
 
 for data_list in expList:
     mail_title = "等级:{level}".format(level=data_list[0])

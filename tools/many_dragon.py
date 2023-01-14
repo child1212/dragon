@@ -11,8 +11,8 @@ import os
 
 
 print("start time:",time.asctime(time.localtime()))
-account = "1890"
-level = "3"
+account = "datui110"
+level = "2"
 p = ""
 num = 1
 server = '38'

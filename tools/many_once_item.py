@@ -7,7 +7,7 @@ from func_dragon import *
 import os
 
 print("start time:",time.asctime(time.localtime()))
-account = "lz001"
+account = "fenjie"
 server = "qa"                           
 item_type = (24,27,36)
 '''
@@ -23,7 +23,7 @@ if server == "38":
     server = "http://dtest.gameyici.com"
 elif server == "qa":
     server = "https://dqa.hphorse.net"
-pat = os.getcwd()
+pat = os.path.dirname(__file__)
 table = open("{pat}\\ItemTemplate.csv".format(pat=pat),'r',encoding='utf-8')
 log_res = login_gm(server)                      #��¼GMƽ̨
 info = get_playerid(account, log_res,server)    #��ȡplayerId

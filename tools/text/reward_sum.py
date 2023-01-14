@@ -1,14 +1,23 @@
 #%%
 
-#打开文件
-table_reward = open('D:\\pyprogram\\PyTestTools\\dragon\\tools\\text\\reward.txt',"r",encoding="utf-8-sig")
 table_item = open("D:\\pyprogram\\PyTestTools\\dragon\\tools\\ItemTemplate.csv","r",encoding="utf-8-sig")
+
+temp = open('D:\\pyprogram\\PyTestTools\\dragon\\tools\\text\\reward.txt',"r",encoding="utf-8-sig")
+rewards = []
+for line in temp:
+    x = eval(line)
+    if type(x[0]) == list:
+        for i in x:
+            rewards.append(i)
+    else:
+        rewards.append(x)
+
+temp.close()
 
 #创建奖池
 reward_num = {}
 #统计奖励数量
-for line in table_reward:
-    reward = eval(line)
+for reward in rewards:
     while len(reward) < 2:
         reward.append(1)
     if str(reward[0]) in reward_num:
@@ -27,7 +36,6 @@ for key in reward_num:
         print("{name}:{num}".format(name=item[key],num=reward_num[key]))
     except:
         print(key,":",reward_num[key])
-table_reward.close()
 table_item.close()
 
 # %%

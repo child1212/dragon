@@ -75,9 +75,9 @@ def many_mails(mail_title, mail_content, reward, server, pid_file_path, res_file
     res_file.close()
 
 #########################################
-mail_title = "升版本"
-mail_content = "2022/10/19"
-reward = [[1003,1],[30000,1],[27695,1],[2100,1]]
+mail_title = "System Compensation"
+mail_content = "Dear adventurer, the bug regarding merging DNA and Dragons has been fixed. Below is the compensation for the inconvenience this may have caused."
+reward = [[1001,25],[1003,100]]
 server = "38"
 group_num = 10
 pid_file_path = "pid_list.txt"
@@ -91,6 +91,9 @@ elif server == "qa":
     server = "https://dqa.hphorse.net"
 elif server == "dragon":
     server = "https://dragon.hphorse.net"
+elif server == "cn":
+    server = "https://dragon-pr.bettagames.com"
+    
 
 
 many_mails(mail_title, mail_content, reward, server, pid_file_path, res_file_path, group_num)

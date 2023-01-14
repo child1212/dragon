@@ -8,8 +8,8 @@ import requests
 import json
 import random
 from xieyi import *
-server = "38"
-activityId = 100005
+server = "act"
+activityId = 110006
 
 if server == "38":
     server = "http://dtest.gameyici.com"
@@ -42,13 +42,13 @@ data = {}
 #插入机器人
 for i in range(100):
     account = "act{i}".format(i=i)
-    log = login(account,server,version="24.1.0")
+    log = login(account,server,version="25.1.0")
     data_rank = []
     data_faker = '{"pid":"","level":0,"activityId":0,"score":0}'
     data_faker = json.loads(data_faker)
     pid = log.playerId
     level = random.choice(range(12,40))
-    score = i+100 #random.choice(range(50,100))
+    score = i+200 #random.choice(range(50,100))
     data_faker["pid"] = pid
     data_faker["level"] = 16
     data_faker["activityId"] = activityId
@@ -63,8 +63,8 @@ for i in range(100):
 #######################################################
 # %%
 #插入1890-1896
-# transcript = {"4l4bzp":799,"5l5bzp":798,"6l6bzp":797,"7l7bzp":590,"8l8bzp":550,"9l9bzp":55,"3l3bzp":50}
-transcript = {"swd29":2,"swd28":100,"swd27":148,"swd26":180,"swd25":190,"swd24":1,"swd23":700,"swd22":1178,"swd21":1179,"swd20":1180}#pid:分数
+transcript = {"4l4bzp":799,"5l5bzp":798,"6l6bzp":797,"7l7bzp":290,"8l8bzp":250,"9l9bzp":55,"3l3bzp":99}
+# transcript = {"swd29":2,"swd28":100,"swd27":148,"swd26":180,"swd25":190,"swd24":1,"swd23":700,"swd22":1178,"swd21":1179,"swd20":1180}#pid:分数
 for key in transcript:
     data_rank = []
     data_faker = '{"pid":"","level":0,"activityId":0,"score":0}'
@@ -93,10 +93,10 @@ level = random.choice(range(12,40))
 
 
 
-data_faker["pid"] = "swd29"
+data_faker["pid"] = "5l5bzp"
 data_faker["level"] = 52
-data_faker["activityId"] = activityId
-data_faker["score"] = 1
+data_faker["activityId"] = 9003
+data_faker["score"] = 95
 
 
 

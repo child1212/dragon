@@ -1,9 +1,8 @@
-ItemId
-factoryid
-sceneid
-factorytype
-buyMaterial
-consumeDiamond
+page
+goldCount
+diamondCount
+energyCount
+method
 level
 platform
 playerid

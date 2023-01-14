@@ -112,7 +112,32 @@ def get_playerid(accountid,login_res,host):
     res = json.loads(res['ret'] )
     res = {"playerid":res["playerId"],"sessionid":res["sessionId"]}
     return res
+#获取accountid
+def get_accountid(playerid,login_res,host):
+    data_checkout = '{"accountId":"","playerId":"","sessionId":0,"optionIndex":0,"itemId":null,"itemNum":null,"stageId":null,"taskId":null,"newAccount":null,"newPlayerId":null,"buildingId":null,"nickname":null}'
+    data_checkout = json.loads(data_checkout)
+    data_checkout['playerId'] = playerid
+    data_checkout = json.dumps(data_checkout)
+    
+    url_checkout = '{host}/BI/bi/biqatool/list'.format(host=host)
 
+    headers = {
+    "Accept": "application/json, text/javascript, */*; q=0.01",
+    "X-Requested-With": "XMLHttpRequest",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36",
+    "Content-Type": "application/json",
+    "Origin": "{host}".format(host=host),
+    "Referer": "{host}/BI/modules/bi/biqatool.html".format(host=host),
+    "Accept-Encoding": "gzip, deflate",
+    "Accept-Language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7"
+    }
+
+    response = requests.post(url_checkout, data =data_checkout,cookies = login_res.cookies, headers=headers)
+
+    res = json.loads(response.text)
+    res = json.loads(res['ret'] )
+    res = {"accountid":res["accountId"],"sessionid":res["sessionId"]}
+    return res
 #登录gm工具
 def login_gm(host):
     url_login = '{host}/BI/sys/login'.format(host=host)
@@ -273,3 +298,13 @@ def clear_item(playerid,login_res,host):
     res_list = res_item.text
     res_list = json.loads(res_list)
     return res_list
+
+
+
+
+
+
+
+
+
+

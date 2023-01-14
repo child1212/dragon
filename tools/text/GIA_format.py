@@ -5,7 +5,7 @@ import json
 gia = open("gia.txt","r",encoding="utf-8")
 giar = open("gia_out.txt","w",encoding="utf-8")
 
-custom = ("method","remain","change")
+custom = ("adplatform","result")
 
 for c in custom:
     giar.write(c+";")

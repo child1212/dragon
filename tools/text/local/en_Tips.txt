@@ -1,0 +1,4 @@
+tip_task_ildeBuilding_island:{idleBuildingName},
+tip_itemNotEnough:{itemName},
+tip_cleanerLevel:{level},
+tip_itemGetway_noBuilding:{buildingName},
