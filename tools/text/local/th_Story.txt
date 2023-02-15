@@ -1,7 +1,6 @@
-chapter_1
-chapter_2
-chapter_3
-chapter_4
-chapter_5
-chapter_6
-chapter.locked
+chapter_1:{br},{br},{br},{br},
+chapter_2:{br},{br},{br},{br},
+chapter_3:{br},{br},{br},{br},{br},{br},
+chapter_4:{br},{br},{br},{br},
+chapter_5:{br},{br},{br},{br},{br},{br},
+chapter_6:{br},{br},{br},{br},{br},{br},{br},{br},{br},{br},

@@ -19,7 +19,6 @@ tree_oak
 tree_palm
 tree_pine
 stone
-mushroom
 wood_pile
 iron_ore
 fence
@@ -250,7 +249,6 @@ giftbox
 coating
 messydraw
 wood
-glass
 plush
 lightbulb
 stagnant_water
@@ -476,3 +474,14 @@ Herbs
 pollen
 hidepoint
 lime
+energymushroom
+shears
+record
+timber
+hatdrawing
+coatdrawing
+skirtdrawing
+glasses
+specialspices
+luckyclover
+clover

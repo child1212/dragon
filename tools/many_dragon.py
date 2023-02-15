@@ -11,8 +11,8 @@ import os
 
 
 print("start time:",time.asctime(time.localtime()))
-account = "datui110"
-level = "2"
+account = "my05"
+level = ""
 p = ""
 num = 1
 server = '38'
@@ -25,10 +25,20 @@ server = '38'
 
 # item = items()
 pat = os.getcwd()
-if server == "38":
-    server = "http://dtest.gameyici.com"   
+if server == "ntest":
+    server = "https://nfa-test.bettagames.com"
+elif server == "nqa":
+    server = "https://qa-nfa.hphorse.net"
+elif server == "nrelease":
+    server = "https://online-nfa.hphorse.net"
+elif server == "38":
+    server = "http://dtest.gameyici.com"
 elif server == "qa":
     server = "https://dqa.hphorse.net"
+elif server == "dragon":
+    server = "https://dragon.hphorse.net"
+elif server == "act":
+    server = "http://dact.gameyici.com"
 table = open("{pat}\\MagicalCreaturesTemplate.csv".format(pat=pat),'r',encoding="utf-8-sig")
 log_res = login_gm(server)                      #��¼GMƽ̨
 info = get_playerid(account, log_res,server)    #��ȡplayerId

@@ -75,27 +75,37 @@ def many_mails(mail_title, mail_content, reward, server, pid_file_path, res_file
     res_file.close()
 
 #########################################
-mail_title = "System Compensation"
-mail_content = "Dear adventurer, the bug regarding merging DNA and Dragons has been fixed. Below is the compensation for the inconvenience this may have caused."
-reward = [[1001,25],[1003,100]]
-server = "38"
+mail_title = "Compensation Mail"
+mail_content = "Dear players, we are sorry for the problem during the repair of Dragon's Nest, this problem has been fixed now, this is some of our thoughts, please check it"
+reward = [[101001,2],[102001,2],[103001,2],[104001,2],[105001,2],[106001,2],[107001,2],[108001,2],[109001,2],[110001,2],[111001,2],[201001,2],[202001,2],[203001,2],[204001,2],[205001,2],[206001,2],[207001,2],[301001,2],[302001,2],[303001,2],[401001,2],[402001,2],[403001,2],[404001,2],[2020,9000],[2021,9000],[2022,9000],[2023,9000]]
+server = "ntest"
 group_num = 10
 pid_file_path = "pid_list.txt"
 res_file_path = "result_list.txt"
 
 #########################################
 
-if server == "38":
+if server == "ntest":
+    server = "https://nfa-test.bettagames.com"
+elif server == "nqa":
+    server = "https://qa-nfa.hphorse.net"
+elif server == "nrelease":
+    server = "https://online-nfa.hphorse.net"
+elif server == "38":
     server = "http://dtest.gameyici.com"
 elif server == "qa":
     server = "https://dqa.hphorse.net"
 elif server == "dragon":
     server = "https://dragon.hphorse.net"
-elif server == "cn":
-    server = "https://dragon-pr.bettagames.com"
-    
+elif server == "act":
+    server = "http://dact.gameyici.com"
 
 
 many_mails(mail_title, mail_content, reward, server, pid_file_path, res_file_path, group_num)
 
+# %%
+for num in (101,102,103,104,105,106,107,108,109,110,111,201,202,203,204,205,206,207,301,302,303,401,402,403,404,):
+    print('[{num}001,2],'.format(num=num),end='')
+for num in range(2020,2024):
+    print('[{num},9000],'.format(num=num),end='')
 # %%

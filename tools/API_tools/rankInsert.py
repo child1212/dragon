@@ -8,13 +8,21 @@ import requests
 import json
 import random
 from xieyi import *
-server = "act"
-activityId = 110006
+server = "ntest"
+activityId = 9001
 
-if server == "38":
+if server == "ntest":
+    server = "https://nfa-test.bettagames.com"
+elif server == "nqa":
+    server = "https://qa-nfa.hphorse.net"
+elif server == "nrelease":
+    server = "https://online-nfa.hphorse.net"
+elif server == "38":
     server = "http://dtest.gameyici.com"
 elif server == "qa":
     server = "https://dqa.hphorse.net"
+elif server == "dragon":
+    server = "https://dragon.hphorse.net"
 elif server == "act":
     server = "http://dact.gameyici.com"
 def RankIns(data,host="https://dqa.hphorse.net"):
@@ -42,13 +50,13 @@ data = {}
 #插入机器人
 for i in range(100):
     account = "act{i}".format(i=i)
-    log = login(account,server,version="25.1.0")
+    log = login(account,server,version="2.1.0")
     data_rank = []
     data_faker = '{"pid":"","level":0,"activityId":0,"score":0}'
     data_faker = json.loads(data_faker)
     pid = log.playerId
     level = random.choice(range(12,40))
-    score = i+200 #random.choice(range(50,100))
+    score = i+100 #random.choice(range(50,100))
     data_faker["pid"] = pid
     data_faker["level"] = 16
     data_faker["activityId"] = activityId
@@ -63,8 +71,9 @@ for i in range(100):
 #######################################################
 # %%
 #插入1890-1896
-transcript = {"4l4bzp":799,"5l5bzp":798,"6l6bzp":797,"7l7bzp":290,"8l8bzp":250,"9l9bzp":55,"3l3bzp":99}
-# transcript = {"swd29":2,"swd28":100,"swd27":148,"swd26":180,"swd25":190,"swd24":1,"swd23":700,"swd22":1178,"swd21":1179,"swd20":1180}#pid:分数
+transcript = {"li2001":799,"li2002":798,"li2003":797,"li2004":290,"li2005":250,"li2006":55,"li2000":99}
+transcript = {"li0001":799,"li0002":798,"li0003":797,"li0004":290,"li0005":250,"li0006":55,"li0007":99}
+transcript = {"swd29":2,"swd28":100,"swd27":148,"swd26":180,"swd25":190,"swd24":1,"swd23":700,"swd22":1178,"swd21":1179,"swd20":1180}#pid:分数
 for key in transcript:
     data_rank = []
     data_faker = '{"pid":"","level":0,"activityId":0,"score":0}'

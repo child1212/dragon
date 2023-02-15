@@ -3,25 +3,32 @@ import sys
 sys.path.append('D:\\pyprogram\\PyTestTools\\dragon\\function')
 import requests
 import json
-import random
 from xieyi import *
+from func_dragon import *
 
 print("请提前检查奖励积分配置！！！！！")
 print("请提前检查奖励积分配置！！！！！")
 print("请提前检查奖励积分配置！！！！！")
 
-server = "act"
+server = "ntest"
 activityId = int(input("activityid:"))
-playerid = input("playerid:")
+account = input("accoutid:")
 level = int(input("level:"))
 
-if server == "38":
+if server == "ntest":
+    server = "https://nfa-test.bettagames.com"
+elif server == "nqa":
+    server = "https://qa-nfa.hphorse.net"
+elif server == "nrelease":
+    server = "https://online-nfa.hphorse.net"
+elif server == "38":
     server = "http://dtest.gameyici.com"
 elif server == "qa":
     server = "https://dqa.hphorse.net"
+elif server == "dragon":
+    server = "https://dragon.hphorse.net"
 elif server == "act":
-    server = "http://dact.gameyici.com"
-#构造修改玩家数据的函数
+    server = "http://dact.gameyici.com"#构造修改玩家数据的函数
 def RankIns(data,host="https://dqa.hphorse.net"):
     url_banding = "{host}/BI/open/disMatch".format(host=host)
     headers = {
@@ -49,6 +56,7 @@ def RankIns(data,host="https://dqa.hphorse.net"):
 mine = {}
 table_item = open("D:\\pyprogram\\PyTestTools\\dragon\\tools\\ItemTemplate.csv","r",encoding="utf-8-sig")
 item = {}
+total = {}#
 for line in table_item:
     line_l = line.split(",")
     item[str(line_l[0])] = line_l[1]
@@ -61,17 +69,46 @@ for line in sr:
 #llll是配置，格式[分数，[[奖励1,数量],[奖励2,数量]]]
     llll = line.split("\t")
 
+#===========================
+    log_res = login_gm(server)                      #登录GM平台
+    info = get_playerid(account, log_res,server)  #获取playerId
+    player = info["playerid"]
+    session = info["sessionid"]
+    # player = 'lc8b8r' 
+    lis = get_itemlist(player,session,account,log_res,server)
+    lis = lis['item']
+    lis_dic = json.loads(lis)
+    tacc = {}#
+
+    for tp in lis_dic:
+        if tp["num"] != 0:
+            tacc[tp["name"]] = tp["num"]#新的
+            old_tacc = total.get(account)
+            if old_tacc is not None:
+                if tacc.get(tp["name"]) != old_tacc.get(tp["name"]):
+                    if old_tacc.get(tp["name"]) is not None:
+                        print('='*(25-len(tp["name"])*2),tp["name"],":",tp["num"],"-"*(10-len(str(tp["num"]))),"change:",tacc[tp["name"]]-old_tacc.get(tp["name"]))
+                    else:
+                        print('='*(25-len(tp["name"])*2),tp["name"],":",tp["num"],"-"*(10-len(str(tp["num"]))),"change:",tacc[tp["name"]])
+    total[account] = tacc
+    
+
+
+    print("\n\n")
+    print("==========================\n")
 #修改玩家积分
     data_rank = []
     data_faker = '{"pid":"","level":0,"activityId":0,"score":0}'
     data_faker = json.loads(data_faker)
-    data_faker["pid"] = playerid
+    data_faker["pid"] = player
     data_faker["level"] = level
     data_faker["activityId"] = activityId
     data_faker["score"] = int(llll[0])-1
     data_faker = json.dumps(data_faker)
     data_rank.append(data_faker)
     RankIns(str(data_rank),server)
+
+    print("==========================\n"+account,":")
 
 
 
@@ -82,10 +119,42 @@ for line in sr:
             mine[reward[0]] += reward[1]
         else:
             mine[reward[0]] = reward[1]
-        print("{name}:{num}".format(name=item[str(reward[0])],num=mine[reward[0]]))
+        print("{name}:{num}".format(name=item[str(reward[0])],num=reward[1]))#mine[reward[0]]))
     # for i in mine:
     #     print("{name}:{num}".format(name=item[str(i)],num=mine[i]))
-    input("contune?")
-    print("============================\n")
+    running = input("contune?")
+    while running == '1':
+        #===========================
+        log_res = login_gm(server)                      #登录GM平台
+        info = get_playerid(account, log_res,server)  #获取playerId
+        player = info["playerid"]
+        session = info["sessionid"]
+        # player = 'lc8b8r' 
+        lis = get_itemlist(player,session,account,log_res,server)
+        lis = lis['item']
+        lis_dic = json.loads(lis)
+        tacc = {}#
+
+        for tp in lis_dic:
+            if tp["num"] != 0:
+                tacc[tp["name"]] = tp["num"]#新的
+                old_tacc = total.get(account)
+                if old_tacc is not None:
+                    if tacc.get(tp["name"]) != old_tacc.get(tp["name"]):
+                        if old_tacc.get(tp["name"]) is not None:
+                            print('='*(25-len(tp["name"])*2),tp["name"],":",tp["num"],"-"*(10-len(str(tp["num"]))),"change:",tacc[tp["name"]]-old_tacc.get(tp["name"]))
+                        else:
+                            print('='*(25-len(tp["name"])*2),tp["name"],":",tp["num"],"-"*(10-len(str(tp["num"]))),"change:",tacc[tp["name"]])
+        total[account] = tacc
+        
+
+
+        print("\n\n")
+        print("==========================\n")
+        running = input("contune?")
+
 sr.close()
+
+
+
 

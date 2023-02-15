@@ -84,22 +84,28 @@ def many_mails(mail_title, mail_content, reward, server, pid_file_path, res_file
 
 #########################################
 mail_content = time.asctime(time.localtime())
-server = "38" 
+server = "ntest" 
 group_num = 10
 pid_file_path = "PidListExp.txt"
 res_file_path = "result_list.txt"
 
 #########################################
 
-if server == "38":
+if server == "ntest":
+    server = "https://nfa-test.bettagames.com"
+elif server == "nqa":
+    server = "https://qa-nfa.hphorse.net"
+elif server == "nrelease":
+    server = "https://online-nfa.hphorse.net"
+elif server == "38":
     server = "http://dtest.gameyici.com"
 elif server == "qa":
     server = "https://dqa.hphorse.net"
 elif server == "dragon":
     server = "https://dragon.hphorse.net"
-elif server == "cn":
-    server = "http://dragon-pr.bettagames.com"
-    
+elif server == "act":
+    server = "http://dact.gameyici.com"
+
 
 for data_list in expList:
     mail_title = "等级:{level}".format(level=data_list[0])

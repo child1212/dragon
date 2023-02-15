@@ -7,14 +7,14 @@ from func_dragon import *
 import os
 
 print("start time:",time.asctime(time.localtime()))
-account = "1008"
-num = -20
-server = "test"      
+account = "li0000"
+num = 10000
+server = "ntest"      
 # items = (101001,102001,103001,104001,201001,202001)
-items = (32002,1001)
+# items = {2020,2021,2022,2023,31001,31002,31003,31004,32001,32002,1001}
+items = {1001}
 
-
-if server == "test":
+if server == "ntest":
     server = "https://nfa-test.bettagames.com"
 
 log_res = login_gm(server)                      #��¼GMƽ̨
