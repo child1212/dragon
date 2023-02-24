@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x16TeamMapModuleMsg.proto\x12\x0e\x63om.common.msg\x1a\x13ItemModuleMsg.proto\x1a\x17\x41\x63tivityModuleMsg.proto\"\x15\n\x07NpcTask\x12\n\n\x02id\x18\x01 \x02(\t\"@\n\x1a\x41\x63tivityTeamMapInfoRequest\x12\x0e\n\x06teamId\x18\x01 \x01(\t\x12\x12\n\nactivityId\x18\x02 \x01(\t\"\x84\x01\n\x0c\x41\x64vPlayerMsg\x12\x0b\n\x03pid\x18\x01 \x01(\t\x12\x0e\n\x06\x61vatar\x18\x02 \x01(\t\x12\r\n\x05\x66rame\x18\x03 \x01(\t\x12\x10\n\x08nickname\x18\x04 \x01(\t\x12\x10\n\x08skinNino\x18\x05 \x01(\t\x12\x13\n\x0bskinHeroine\x18\x06 \x01(\t\x12\x0f\n\x07\x65ndTime\x18\x07 \x01(\x03\"\xda\x01\n\x1b\x41\x63tivityTeamMapInfoResponse\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\x10\n\x08\x61\x64vcount\x18\x02 \x01(\x05\x12\x32\n\x0c\x61\x64vPlayerMsg\x18\x03 \x01(\x0b\x32\x1c.com.common.msg.AdvPlayerMsg\x12\x15\n\rfinishProcess\x18\x04 \x01(\x05\x12%\n\x04task\x18\x05 \x01(\x0b\x32\x17.com.common.msg.NpcTask\x12\x17\n\x0flastScoreReward\x18\x06 \x01(\t\x12\r\n\x05layer\x18\x07 \x01(\x05\"D\n\x1e\x41\x63tivityTeamMapStartAdvRequest\x12\x0e\n\x06teamId\x18\x01 \x01(\t\x12\x12\n\nactivityId\x18\x02 \x01(\t\"\xea\x01\n\x1f\x41\x63tivityTeamMapStartAdvResponse\x12\x0e\n\x06\x61\x64vCnt\x18\x01 \x01(\x05\x12%\n\x04\x63ost\x18\x02 \x01(\x0b\x32\x17.com.common.msg.ItemMsg\x12\x0f\n\x07sceneId\x18\x03 \x01(\t\x12%\n\x04task\x18\x04 \x01(\x0b\x32\x17.com.common.msg.NpcTask\x12\x15\n\rfinishProcess\x18\x05 \x01(\x05\x12\x32\n\x0c\x61\x64vPlayerMsg\x18\x06 \x01(\x0b\x32\x1c.com.common.msg.AdvPlayerMsg\x12\r\n\x05layer\x18\x07 \x01(\x05\"V\n\x1f\x41\x63tivityTeamMapNpcAppearRequest\x12\x0e\n\x06teamId\x18\x01 \x01(\t\x12\x12\n\nactivityId\x18\x02 \x01(\t\x12\x0f\n\x07sceneId\x18\x03 \x01(\t\"I\n ActivityTeamMapNpcAppearResponse\x12%\n\x04task\x18\x01 \x01(\x0b\x32\x17.com.common.msg.NpcTask\"n\n#ActivityTeamMapSubmitNpcTaskRequest\x12\x0e\n\x06teamId\x18\x01 \x01(\t\x12\x12\n\nactivityId\x18\x02 \x01(\t\x12\x0f\n\x07sceneId\x18\x03 \x01(\t\x12\x12\n\nnpcPlantId\x18\x04 \x01(\t\"&\n$ActivityTeamMapSubmitNpcTaskResponse\"I\n!ActivityTeamMapScoreRewardRequest\x12\x12\n\nactivityId\x18\x01 \x01(\t\x12\x10\n\x08rewardId\x18\x02 \x01(\t\"N\n\"ActivityTeamMapScoreRewardResponse\x12(\n\x07rewards\x18\x02 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"6\n ActivityTeamMapRankRewardRequest\x12\x12\n\nactivityId\x18\x01 \x01(\t\"W\n!ActivityTeamMapRankRewardResponse\x12\x32\n\x0brankRewards\x18\x01 \x01(\x0b\x32\x1d.com.common.msg.RankRewardMsg\"E\n\x1f\x41\x63tivityTeamMapChangeMapRequest\x12\x0e\n\x06teamId\x18\x01 \x01(\t\x12\x12\n\nactivityId\x18\x02 \x01(\t\"B\n ActivityTeamMapChangeMapResponse\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\r\n\x05layer\x18\x02 \x01(\x05*\x90\x03\n\x1aTeamMapModuleMsgSubCommand\x12.\n(TEAMMAPMODULEMSG_SUB_ACTIVITYTEAMMAPINFO\x10\xed\xd6\x01\x12\x32\n,TEAMMAPMODULEMSG_SUB_ACTIVITYTEAMMAPSTARTADV\x10\xee\xd6\x01\x12\x33\n-TEAMMAPMODULEMSG_SUB_ACTIVITYTEAMMAPNPCAPPEAR\x10\xef\xd6\x01\x12\x37\n1TEAMMAPMODULEMSG_SUB_ACTIVITYTEAMMAPSUBMITNPCTASK\x10\xf0\xd6\x01\x12\x35\n/TEAMMAPMODULEMSG_SUB_ACTIVITYTEAMMAPSCOREREWARD\x10\xf1\xd6\x01\x12\x34\n.TEAMMAPMODULEMSG_SUB_ACTIVITYTEAMMAPRANKREWARD\x10\xf2\xd6\x01\x12\x33\n-TEAMMAPMODULEMSG_SUB_ACTIVITYTEAMMAPCHANGEMAP\x10\xf3\xd6\x01'
+  serialized_pb=b'\n\x16TeamMapModuleMsg.proto\x12\x0e\x63om.common.msg\x1a\x13ItemModuleMsg.proto\x1a\x17\x41\x63tivityModuleMsg.proto\"\x15\n\x07NpcTask\x12\n\n\x02id\x18\x01 \x02(\t\"@\n\x1a\x41\x63tivityTeamMapInfoRequest\x12\x0e\n\x06teamId\x18\x01 \x01(\t\x12\x12\n\nactivityId\x18\x02 \x01(\t\"\x84\x01\n\x0c\x41\x64vPlayerMsg\x12\x0b\n\x03pid\x18\x01 \x01(\t\x12\x0e\n\x06\x61vatar\x18\x02 \x01(\t\x12\r\n\x05\x66rame\x18\x03 \x01(\t\x12\x10\n\x08nickname\x18\x04 \x01(\t\x12\x10\n\x08skinNino\x18\x05 \x01(\t\x12\x13\n\x0bskinHeroine\x18\x06 \x01(\t\x12\x0f\n\x07\x65ndTime\x18\x07 \x01(\x03\"\x9b\x02\n\x1b\x41\x63tivityTeamMapInfoResponse\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\x10\n\x08\x61\x64vcount\x18\x02 \x01(\x05\x12\x32\n\x0c\x61\x64vPlayerMsg\x18\x03 \x01(\x0b\x32\x1c.com.common.msg.AdvPlayerMsg\x12\x15\n\rfinishProcess\x18\x04 \x01(\x05\x12%\n\x04task\x18\x05 \x01(\x0b\x32\x17.com.common.msg.NpcTask\x12\x17\n\x0flastScoreReward\x18\x06 \x01(\t\x12\r\n\x05layer\x18\x07 \x01(\x05\x12\r\n\x05score\x18\x08 \x01(\x05\x12\x13\n\x0blastAdvTime\x18\t \x01(\x03\x12\x1b\n\x13lastScoreRewardPass\x18\n \x01(\t\"R\n\x1e\x41\x63tivityTeamMapStartAdvRequest\x12\x0e\n\x06teamId\x18\x01 \x01(\t\x12\x12\n\nactivityId\x18\x02 \x01(\t\x12\x0c\n\x04\x63ost\x18\x03 \x01(\x05\"\xfb\x01\n\x1f\x41\x63tivityTeamMapStartAdvResponse\x12\x0e\n\x06\x61\x64vCnt\x18\x01 \x01(\x05\x12%\n\x04\x63ost\x18\x02 \x01(\x0b\x32\x17.com.common.msg.ItemMsg\x12\x0f\n\x07sceneId\x18\x03 \x01(\t\x12%\n\x04task\x18\x04 \x01(\x0b\x32\x17.com.common.msg.NpcTask\x12\x15\n\rfinishProcess\x18\x05 \x01(\x05\x12\x32\n\x0c\x61\x64vPlayerMsg\x18\x06 \x01(\x0b\x32\x1c.com.common.msg.AdvPlayerMsg\x12\r\n\x05layer\x18\x07 \x01(\x05\x12\x0f\n\x07\x61\x64vTime\x18\x08 \x01(\x03\"V\n\x1f\x41\x63tivityTeamMapNpcAppearRequest\x12\x0e\n\x06teamId\x18\x01 \x01(\t\x12\x12\n\nactivityId\x18\x02 \x01(\t\x12\x0f\n\x07sceneId\x18\x03 \x01(\t\"I\n ActivityTeamMapNpcAppearResponse\x12%\n\x04task\x18\x01 \x01(\x0b\x32\x17.com.common.msg.NpcTask\"n\n#ActivityTeamMapSubmitNpcTaskRequest\x12\x0e\n\x06teamId\x18\x01 \x01(\t\x12\x12\n\nactivityId\x18\x02 \x01(\t\x12\x0f\n\x07sceneId\x18\x03 \x01(\t\x12\x12\n\nnpcPlantId\x18\x04 \x01(\t\"&\n$ActivityTeamMapSubmitNpcTaskResponse\"I\n!ActivityTeamMapScoreRewardRequest\x12\x12\n\nactivityId\x18\x01 \x01(\t\x12\x10\n\x08rewardId\x18\x02 \x01(\t\"N\n\"ActivityTeamMapScoreRewardResponse\x12(\n\x07rewards\x18\x02 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"6\n ActivityTeamMapRankRewardRequest\x12\x12\n\nactivityId\x18\x01 \x01(\t\"W\n!ActivityTeamMapRankRewardResponse\x12\x32\n\x0brankRewards\x18\x01 \x01(\x0b\x32\x1d.com.common.msg.RankRewardMsg\"E\n\x1f\x41\x63tivityTeamMapChangeMapRequest\x12\x0e\n\x06teamId\x18\x01 \x01(\t\x12\x12\n\nactivityId\x18\x02 \x01(\t\"B\n ActivityTeamMapChangeMapResponse\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\r\n\x05layer\x18\x02 \x01(\x05\"\\\n%ActivityTeamMapScorePassRewardRequest\x12\x12\n\nactivityId\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\x05\x12\x11\n\trewardIds\x18\x03 \x03(\t\"W\n&ActivityTeamMapScorePassRewardResponse\x12-\n\x0cscoreRewards\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg*\xcb\x03\n\x1aTeamMapModuleMsgSubCommand\x12.\n(TEAMMAPMODULEMSG_SUB_ACTIVITYTEAMMAPINFO\x10\xed\xd6\x01\x12\x32\n,TEAMMAPMODULEMSG_SUB_ACTIVITYTEAMMAPSTARTADV\x10\xee\xd6\x01\x12\x33\n-TEAMMAPMODULEMSG_SUB_ACTIVITYTEAMMAPNPCAPPEAR\x10\xef\xd6\x01\x12\x37\n1TEAMMAPMODULEMSG_SUB_ACTIVITYTEAMMAPSUBMITNPCTASK\x10\xf0\xd6\x01\x12\x35\n/TEAMMAPMODULEMSG_SUB_ACTIVITYTEAMMAPSCOREREWARD\x10\xf1\xd6\x01\x12\x34\n.TEAMMAPMODULEMSG_SUB_ACTIVITYTEAMMAPRANKREWARD\x10\xf2\xd6\x01\x12\x33\n-TEAMMAPMODULEMSG_SUB_ACTIVITYTEAMMAPCHANGEMAP\x10\xf3\xd6\x01\x12\x39\n3TEAMMAPMODULEMSG_SUB_ACTIVITYTEAMMAPSCOREPASSREWARD\x10\xf4\xd6\x01'
   ,
   dependencies=[ItemModuleMsg__pb2.DESCRIPTOR,ActivityModuleMsg__pb2.DESCRIPTOR,])
 
@@ -68,11 +68,16 @@ _TEAMMAPMODULEMSGSUBCOMMAND = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='TEAMMAPMODULEMSG_SUB_ACTIVITYTEAMMAPSCOREPASSREWARD', index=7, number=27508,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1595,
-  serialized_end=1995,
+  serialized_start=1874,
+  serialized_end=2333,
 )
 _sym_db.RegisterEnumDescriptor(_TEAMMAPMODULEMSGSUBCOMMAND)
 
@@ -84,6 +89,7 @@ TEAMMAPMODULEMSG_SUB_ACTIVITYTEAMMAPSUBMITNPCTASK = 27504
 TEAMMAPMODULEMSG_SUB_ACTIVITYTEAMMAPSCOREREWARD = 27505
 TEAMMAPMODULEMSG_SUB_ACTIVITYTEAMMAPRANKREWARD = 27506
 TEAMMAPMODULEMSG_SUB_ACTIVITYTEAMMAPCHANGEMAP = 27507
+TEAMMAPMODULEMSG_SUB_ACTIVITYTEAMMAPSCOREPASSREWARD = 27508
 
 
 
@@ -289,6 +295,27 @@ _ACTIVITYTEAMMAPINFORESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='score', full_name='com.common.msg.ActivityTeamMapInfoResponse.score', index=7,
+      number=8, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='lastAdvTime', full_name='com.common.msg.ActivityTeamMapInfoResponse.lastAdvTime', index=8,
+      number=9, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='lastScoreRewardPass', full_name='com.common.msg.ActivityTeamMapInfoResponse.lastScoreRewardPass', index=9,
+      number=10, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -302,7 +329,7 @@ _ACTIVITYTEAMMAPINFORESPONSE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=313,
-  serialized_end=531,
+  serialized_end=596,
 )
 
 
@@ -328,6 +355,13 @@ _ACTIVITYTEAMMAPSTARTADVREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='cost', full_name='com.common.msg.ActivityTeamMapStartAdvRequest.cost', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -340,8 +374,8 @@ _ACTIVITYTEAMMAPSTARTADVREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=533,
-  serialized_end=601,
+  serialized_start=598,
+  serialized_end=680,
 )
 
 
@@ -402,6 +436,13 @@ _ACTIVITYTEAMMAPSTARTADVRESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='advTime', full_name='com.common.msg.ActivityTeamMapStartAdvResponse.advTime', index=7,
+      number=8, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -414,8 +455,8 @@ _ACTIVITYTEAMMAPSTARTADVRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=604,
-  serialized_end=838,
+  serialized_start=683,
+  serialized_end=934,
 )
 
 
@@ -460,8 +501,8 @@ _ACTIVITYTEAMMAPNPCAPPEARREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=840,
-  serialized_end=926,
+  serialized_start=936,
+  serialized_end=1022,
 )
 
 
@@ -492,8 +533,8 @@ _ACTIVITYTEAMMAPNPCAPPEARRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=928,
-  serialized_end=1001,
+  serialized_start=1024,
+  serialized_end=1097,
 )
 
 
@@ -545,8 +586,8 @@ _ACTIVITYTEAMMAPSUBMITNPCTASKREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1003,
-  serialized_end=1113,
+  serialized_start=1099,
+  serialized_end=1209,
 )
 
 
@@ -570,8 +611,8 @@ _ACTIVITYTEAMMAPSUBMITNPCTASKRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1115,
-  serialized_end=1153,
+  serialized_start=1211,
+  serialized_end=1249,
 )
 
 
@@ -609,8 +650,8 @@ _ACTIVITYTEAMMAPSCOREREWARDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1155,
-  serialized_end=1228,
+  serialized_start=1251,
+  serialized_end=1324,
 )
 
 
@@ -641,8 +682,8 @@ _ACTIVITYTEAMMAPSCOREREWARDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1230,
-  serialized_end=1308,
+  serialized_start=1326,
+  serialized_end=1404,
 )
 
 
@@ -673,8 +714,8 @@ _ACTIVITYTEAMMAPRANKREWARDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1310,
-  serialized_end=1364,
+  serialized_start=1406,
+  serialized_end=1460,
 )
 
 
@@ -705,8 +746,8 @@ _ACTIVITYTEAMMAPRANKREWARDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1366,
-  serialized_end=1453,
+  serialized_start=1462,
+  serialized_end=1549,
 )
 
 
@@ -744,8 +785,8 @@ _ACTIVITYTEAMMAPCHANGEMAPREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1455,
-  serialized_end=1524,
+  serialized_start=1551,
+  serialized_end=1620,
 )
 
 
@@ -783,8 +824,86 @@ _ACTIVITYTEAMMAPCHANGEMAPRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1526,
-  serialized_end=1592,
+  serialized_start=1622,
+  serialized_end=1688,
+)
+
+
+_ACTIVITYTEAMMAPSCOREPASSREWARDREQUEST = _descriptor.Descriptor(
+  name='ActivityTeamMapScorePassRewardRequest',
+  full_name='com.common.msg.ActivityTeamMapScorePassRewardRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='activityId', full_name='com.common.msg.ActivityTeamMapScorePassRewardRequest.activityId', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='type', full_name='com.common.msg.ActivityTeamMapScorePassRewardRequest.type', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='rewardIds', full_name='com.common.msg.ActivityTeamMapScorePassRewardRequest.rewardIds', index=2,
+      number=3, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1690,
+  serialized_end=1782,
+)
+
+
+_ACTIVITYTEAMMAPSCOREPASSREWARDRESPONSE = _descriptor.Descriptor(
+  name='ActivityTeamMapScorePassRewardResponse',
+  full_name='com.common.msg.ActivityTeamMapScorePassRewardResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='scoreRewards', full_name='com.common.msg.ActivityTeamMapScorePassRewardResponse.scoreRewards', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1784,
+  serialized_end=1871,
 )
 
 _ACTIVITYTEAMMAPINFORESPONSE.fields_by_name['advPlayerMsg'].message_type = _ADVPLAYERMSG
@@ -795,6 +914,7 @@ _ACTIVITYTEAMMAPSTARTADVRESPONSE.fields_by_name['advPlayerMsg'].message_type = _
 _ACTIVITYTEAMMAPNPCAPPEARRESPONSE.fields_by_name['task'].message_type = _NPCTASK
 _ACTIVITYTEAMMAPSCOREREWARDRESPONSE.fields_by_name['rewards'].message_type = ItemModuleMsg__pb2._ITEMMSG
 _ACTIVITYTEAMMAPRANKREWARDRESPONSE.fields_by_name['rankRewards'].message_type = ActivityModuleMsg__pb2._RANKREWARDMSG
+_ACTIVITYTEAMMAPSCOREPASSREWARDRESPONSE.fields_by_name['scoreRewards'].message_type = ItemModuleMsg__pb2._ITEMMSG
 DESCRIPTOR.message_types_by_name['NpcTask'] = _NPCTASK
 DESCRIPTOR.message_types_by_name['ActivityTeamMapInfoRequest'] = _ACTIVITYTEAMMAPINFOREQUEST
 DESCRIPTOR.message_types_by_name['AdvPlayerMsg'] = _ADVPLAYERMSG
@@ -811,6 +931,8 @@ DESCRIPTOR.message_types_by_name['ActivityTeamMapRankRewardRequest'] = _ACTIVITY
 DESCRIPTOR.message_types_by_name['ActivityTeamMapRankRewardResponse'] = _ACTIVITYTEAMMAPRANKREWARDRESPONSE
 DESCRIPTOR.message_types_by_name['ActivityTeamMapChangeMapRequest'] = _ACTIVITYTEAMMAPCHANGEMAPREQUEST
 DESCRIPTOR.message_types_by_name['ActivityTeamMapChangeMapResponse'] = _ACTIVITYTEAMMAPCHANGEMAPRESPONSE
+DESCRIPTOR.message_types_by_name['ActivityTeamMapScorePassRewardRequest'] = _ACTIVITYTEAMMAPSCOREPASSREWARDREQUEST
+DESCRIPTOR.message_types_by_name['ActivityTeamMapScorePassRewardResponse'] = _ACTIVITYTEAMMAPSCOREPASSREWARDRESPONSE
 DESCRIPTOR.enum_types_by_name['TeamMapModuleMsgSubCommand'] = _TEAMMAPMODULEMSGSUBCOMMAND
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -925,6 +1047,20 @@ ActivityTeamMapChangeMapResponse = _reflection.GeneratedProtocolMessageType('Act
   # @@protoc_insertion_point(class_scope:com.common.msg.ActivityTeamMapChangeMapResponse)
   })
 _sym_db.RegisterMessage(ActivityTeamMapChangeMapResponse)
+
+ActivityTeamMapScorePassRewardRequest = _reflection.GeneratedProtocolMessageType('ActivityTeamMapScorePassRewardRequest', (_message.Message,), {
+  'DESCRIPTOR' : _ACTIVITYTEAMMAPSCOREPASSREWARDREQUEST,
+  '__module__' : 'TeamMapModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.ActivityTeamMapScorePassRewardRequest)
+  })
+_sym_db.RegisterMessage(ActivityTeamMapScorePassRewardRequest)
+
+ActivityTeamMapScorePassRewardResponse = _reflection.GeneratedProtocolMessageType('ActivityTeamMapScorePassRewardResponse', (_message.Message,), {
+  'DESCRIPTOR' : _ACTIVITYTEAMMAPSCOREPASSREWARDRESPONSE,
+  '__module__' : 'TeamMapModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.ActivityTeamMapScorePassRewardResponse)
+  })
+_sym_db.RegisterMessage(ActivityTeamMapScorePassRewardResponse)
 
 
 # @@protoc_insertion_point(module_scope)

@@ -5,6 +5,7 @@ package com.common.msg;
 import "TaskModuleMsg.proto";
 import "ActivityModuleMsg.proto";
 import "ItemModuleMsg.proto";
+import "FactoryModuleMsg.proto";
 
 enum ActivityDragonSeasonModuleMsgSubCommand {
 	// 获取龙赛季周赛活动信息
@@ -13,7 +14,7 @@ enum ActivityDragonSeasonModuleMsgSubCommand {
 	ACTIVITYDRAGONSEASONMODULEMSG_SUB_DRAGONSEASONFINISHTASK = 27702;
 	// 删除任务
 	ACTIVITYDRAGONSEASONMODULEMSG_SUB_DRAGONSEASONDELETETASK = 27703;
-	// cd结束刷新任务
+	// 删除cd或完成任务cd结束刷新任务
 	ACTIVITYDRAGONSEASONMODULEMSG_SUB_DRAGONSEASONREFRESHTASK = 27704;
 	// 钻石购买任务
 	ACTIVITYDRAGONSEASONMODULEMSG_SUB_DRAGONSEASONDIAMONDBUYTASK = 27705;
@@ -27,6 +28,10 @@ enum ActivityDragonSeasonModuleMsgSubCommand {
 	ACTIVITYDRAGONSEASONMODULEMSG_SUB_DRAGONSEASONRANKREWARD = 27709;
 	// 获取龙赛季月赛活动信息
 	ACTIVITYDRAGONSEASONMODULEMSG_SUB_DRAGONSEASONMONTHINFO = 27710;
+	// 季月赛结束转换活动道具
+	ACTIVITYDRAGONSEASONMODULEMSG_SUB_DRAGONSEASONCONVERTITEM = 27711;
+	// 跳过提交cd刷新任务
+	ACTIVITYDRAGONSEASONMODULEMSG_SUB_DRAGONSEASONREFRESHSUBMITTASK = 27712;
 }
 
 // 周赛季任务
@@ -38,6 +43,7 @@ message DragonSeasonTaskMsg {
 	repeated ProtoTypes conditionParams = 5; // 随机出的任务条件
 	repeated ProtoTypes finishParams = 6;	 // 当前累计计数
 	optional bool locked = 7;	// 锁定（退出公会，加入低段位公会，不满足公会|段位条件的锁定，任务锁定不能计数、提交）
+	optional int64 submitTime = 8; // 任务提交时间
 }
 
 // 历史周赛季信息
@@ -105,7 +111,7 @@ message DragonSeasonDeleteTaskResponse {
 	optional int32 ret = 1;		// 删除结果0成功
 }
 
-// cd结束刷新任务请求
+// 删除cd或完成任务cd结束刷新任务请求
 message DragonSeasonRefreshTaskRequest {
 	// 周赛活动id
 	optional string activityId = 1;
@@ -113,7 +119,7 @@ message DragonSeasonRefreshTaskRequest {
 	optional int32 slot = 2;
 }
 
-// cd结束刷新任务响应
+// 删除cd或完成任务cd结束刷新任务响应
 message DragonSeasonRefreshTaskResponse {
 	optional DragonSeasonTaskMsg task = 1;
 }
@@ -190,4 +196,36 @@ message DragonSeasonMonthInfoRequest {
 message DragonSeasonMonthInfoResponse {
 	// 周活动信息
 	repeated ActivityMsg activities = 1;
+}
+
+// 月赛结束转换活动道具请求
+message DragonSeasonConvertItemRequest {
+	// 月赛活动id
+	optional string activityId = 1;
+}
+
+// 月赛结束转换活动道具响应
+message DragonSeasonConvertItemResponse {
+	// 工厂中生产的活动道具直接完成，返回变化的工厂信息
+	repeated FactoryMsg factorys = 1;
+}
+
+// 跳过提交cd刷新任务
+message DragonSeasonRefreshSubmitTaskRequest {
+	// 周赛活动id
+	optional string activityId = 1;
+	// 槽位
+	optional int32 slot = 2;
+	// 花费钻石
+	optional int32 costDiamond = 3;
+	// 是否通行证
+	optional bool goldpass = 4;
+}
+
+// 跳过提交cd刷新任务
+message DragonSeasonRefreshSubmitTaskResponse {
+	// 刷新的新任务
+	optional DragonSeasonTaskMsg task = 1;
+	// 实际花费钻石
+	optional int32 costDiamond = 2;
 }

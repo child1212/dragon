@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x17\x41\x63tivityModuleMsg.proto\x12\x0e\x63om.common.msg\x1a\x13ItemModuleMsg.proto\"\xd1\x01\n\x07RankMsg\x12\x10\n\x08playerId\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0e\n\x06\x61vatar\x18\x03 \x01(\t\x12\r\n\x05\x66rame\x18\x04 \x01(\t\x12\r\n\x05level\x18\x05 \x01(\x05\x12\r\n\x05score\x18\x06 \x01(\x05\x12\r\n\x05index\x18\x07 \x01(\x05\x12\x11\n\tlastIndex\x18\x08 \x01(\x05\x12\x13\n\x0brewardstate\x18\t \x01(\x05\x12\x0e\n\x06teamId\x18\n \x01(\t\x12\x10\n\x08teamname\x18\x0b \x01(\t\x12\x10\n\x08teamicon\x18\x0c \x01(\t\"o\n\x0bRankListMsg\x12\x0c\n\x04type\x18\x01 \x01(\x05\x12)\n\x08ranklist\x18\x02 \x03(\x0b\x32\x17.com.common.msg.RankMsg\x12\'\n\x06myrank\x18\x03 \x01(\x0b\x32\x17.com.common.msg.RankMsg\"\x86\x01\n\x0b\x41\x63tivityMsg\x12\x12\n\nactivityId\x18\x01 \x01(\t\x12\x11\n\tstartTime\x18\x02 \x01(\x03\x12\x0f\n\x07\x65ndTime\x18\x03 \x01(\x03\x12\x13\n\x0bprewarmTime\x18\x04 \x01(\x03\x12\x15\n\rlastEnterTime\x18\x05 \x01(\x03\x12\x13\n\x0brankEndTime\x18\x06 \x01(\x03\"G\n\x0e\x45ndActivityMsg\x12\x12\n\nactivityId\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\x05\x12\x13\n\x0brewardState\x18\x03 \x01(\x05\"Z\n\rRankRewardMsg\x12\x10\n\x08ranktype\x18\x01 \x01(\x05\x12\r\n\x05index\x18\x02 \x01(\x05\x12(\n\x07rewards\x18\x03 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"\x15\n\x13\x41\x63tivityListRequest\"\xb3\x01\n\x14\x41\x63tivityListResponse\x12/\n\nactivities\x18\x01 \x03(\x0b\x32\x1b.com.common.msg.ActivityMsg\x12\x33\n\x0ewarmActivities\x18\x02 \x03(\x0b\x32\x1b.com.common.msg.ActivityMsg\x12\x35\n\rendActivities\x18\x03 \x03(\x0b\x32\x1e.com.common.msg.EndActivityMsg\"2\n\x1c\x41\x63tivityCountdownOverRequest\x12\x12\n\nactivityId\x18\x01 \x01(\t\"\x1f\n\x1d\x41\x63tivityCountdownOverResponse\")\n\x13\x41\x63tivityRankRequest\x12\x12\n\nactivityId\x18\x01 \x01(\t\"B\n\x14\x41\x63tivityRankResponse\x12*\n\x05ranks\x18\x01 \x03(\x0b\x32\x1b.com.common.msg.RankListMsg*\xa1\x01\n\x1b\x41\x63tivityModuleMsgSubCommand\x12\'\n\"ACTIVITYMODULEMSG_SUB_ACTIVITYLIST\x10\xe1]\x12\x30\n+ACTIVITYMODULEMSG_SUB_ACTIVITYCOUNTDOWNOVER\x10\xe2]\x12\'\n\"ACTIVITYMODULEMSG_SUB_ACTIVITYRANK\x10\xe3]'
+  serialized_pb=b'\n\x17\x41\x63tivityModuleMsg.proto\x12\x0e\x63om.common.msg\x1a\x13ItemModuleMsg.proto\"\xe3\x01\n\x07RankMsg\x12\x10\n\x08playerId\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0e\n\x06\x61vatar\x18\x03 \x01(\t\x12\r\n\x05\x66rame\x18\x04 \x01(\t\x12\r\n\x05level\x18\x05 \x01(\x05\x12\r\n\x05score\x18\x06 \x01(\x05\x12\r\n\x05index\x18\x07 \x01(\x05\x12\x11\n\tlastIndex\x18\x08 \x01(\x05\x12\x13\n\x0brewardstate\x18\t \x01(\x05\x12\x0e\n\x06teamId\x18\n \x01(\t\x12\x10\n\x08teamname\x18\x0b \x01(\t\x12\x10\n\x08teamicon\x18\x0c \x01(\t\x12\x10\n\x08vipLevel\x18\r \x01(\x05\"o\n\x0bRankListMsg\x12\x0c\n\x04type\x18\x01 \x01(\x05\x12)\n\x08ranklist\x18\x02 \x03(\x0b\x32\x17.com.common.msg.RankMsg\x12\'\n\x06myrank\x18\x03 \x01(\x0b\x32\x17.com.common.msg.RankMsg\"\x86\x01\n\x0b\x41\x63tivityMsg\x12\x12\n\nactivityId\x18\x01 \x01(\t\x12\x11\n\tstartTime\x18\x02 \x01(\x03\x12\x0f\n\x07\x65ndTime\x18\x03 \x01(\x03\x12\x13\n\x0bprewarmTime\x18\x04 \x01(\x03\x12\x15\n\rlastEnterTime\x18\x05 \x01(\x03\x12\x13\n\x0brankEndTime\x18\x06 \x01(\x03\"Y\n\x0e\x45ndActivityMsg\x12\x12\n\nactivityId\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\x05\x12\x13\n\x0brewardState\x18\x03 \x01(\x05\x12\x10\n\x08\x65valuate\x18\x04 \x01(\x05\"Z\n\rRankRewardMsg\x12\x10\n\x08ranktype\x18\x01 \x01(\x05\x12\r\n\x05index\x18\x02 \x01(\x05\x12(\n\x07rewards\x18\x03 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"4\n\x0fHistoryScoreMsg\x12\x12\n\nactivityId\x18\x01 \x01(\t\x12\r\n\x05score\x18\x02 \x01(\x05\"\x15\n\x13\x41\x63tivityListRequest\"\xb3\x01\n\x14\x41\x63tivityListResponse\x12/\n\nactivities\x18\x01 \x03(\x0b\x32\x1b.com.common.msg.ActivityMsg\x12\x33\n\x0ewarmActivities\x18\x02 \x03(\x0b\x32\x1b.com.common.msg.ActivityMsg\x12\x35\n\rendActivities\x18\x03 \x03(\x0b\x32\x1e.com.common.msg.EndActivityMsg\"2\n\x1c\x41\x63tivityCountdownOverRequest\x12\x12\n\nactivityId\x18\x01 \x01(\t\"\x1f\n\x1d\x41\x63tivityCountdownOverResponse\")\n\x13\x41\x63tivityRankRequest\x12\x12\n\nactivityId\x18\x01 \x01(\t\"t\n\x14\x41\x63tivityRankResponse\x12*\n\x05ranks\x18\x01 \x03(\x0b\x32\x1b.com.common.msg.RankListMsg\x12\x30\n\x07history\x18\x02 \x03(\x0b\x32\x1f.com.common.msg.HistoryScoreMsg*\xa1\x01\n\x1b\x41\x63tivityModuleMsgSubCommand\x12\'\n\"ACTIVITYMODULEMSG_SUB_ACTIVITYLIST\x10\xe1]\x12\x30\n+ACTIVITYMODULEMSG_SUB_ACTIVITYCOUNTDOWNOVER\x10\xe2]\x12\'\n\"ACTIVITYMODULEMSG_SUB_ACTIVITYRANK\x10\xe3]'
   ,
   dependencies=[ItemModuleMsg__pb2.DESCRIPTOR,])
 
@@ -50,8 +50,8 @@ _ACTIVITYMODULEMSGSUBCOMMAND = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1093,
-  serialized_end=1254,
+  serialized_start=1233,
+  serialized_end=1394,
 )
 _sym_db.RegisterEnumDescriptor(_ACTIVITYMODULEMSGSUBCOMMAND)
 
@@ -154,6 +154,13 @@ _RANKMSG = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='vipLevel', full_name='com.common.msg.RankMsg.vipLevel', index=12,
+      number=13, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -167,7 +174,7 @@ _RANKMSG = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=65,
-  serialized_end=274,
+  serialized_end=292,
 )
 
 
@@ -212,8 +219,8 @@ _RANKLISTMSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=276,
-  serialized_end=387,
+  serialized_start=294,
+  serialized_end=405,
 )
 
 
@@ -279,8 +286,8 @@ _ACTIVITYMSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=390,
-  serialized_end=524,
+  serialized_start=408,
+  serialized_end=542,
 )
 
 
@@ -313,6 +320,13 @@ _ENDACTIVITYMSG = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='evaluate', full_name='com.common.msg.EndActivityMsg.evaluate', index=3,
+      number=4, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -325,8 +339,8 @@ _ENDACTIVITYMSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=526,
-  serialized_end=597,
+  serialized_start=544,
+  serialized_end=633,
 )
 
 
@@ -371,8 +385,47 @@ _RANKREWARDMSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=599,
-  serialized_end=689,
+  serialized_start=635,
+  serialized_end=725,
+)
+
+
+_HISTORYSCOREMSG = _descriptor.Descriptor(
+  name='HistoryScoreMsg',
+  full_name='com.common.msg.HistoryScoreMsg',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='activityId', full_name='com.common.msg.HistoryScoreMsg.activityId', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='score', full_name='com.common.msg.HistoryScoreMsg.score', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=727,
+  serialized_end=779,
 )
 
 
@@ -396,8 +449,8 @@ _ACTIVITYLISTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=691,
-  serialized_end=712,
+  serialized_start=781,
+  serialized_end=802,
 )
 
 
@@ -442,8 +495,8 @@ _ACTIVITYLISTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=715,
-  serialized_end=894,
+  serialized_start=805,
+  serialized_end=984,
 )
 
 
@@ -474,8 +527,8 @@ _ACTIVITYCOUNTDOWNOVERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=896,
-  serialized_end=946,
+  serialized_start=986,
+  serialized_end=1036,
 )
 
 
@@ -499,8 +552,8 @@ _ACTIVITYCOUNTDOWNOVERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=948,
-  serialized_end=979,
+  serialized_start=1038,
+  serialized_end=1069,
 )
 
 
@@ -531,8 +584,8 @@ _ACTIVITYRANKREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=981,
-  serialized_end=1022,
+  serialized_start=1071,
+  serialized_end=1112,
 )
 
 
@@ -551,6 +604,13 @@ _ACTIVITYRANKRESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='history', full_name='com.common.msg.ActivityRankResponse.history', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -563,8 +623,8 @@ _ACTIVITYRANKRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1024,
-  serialized_end=1090,
+  serialized_start=1114,
+  serialized_end=1230,
 )
 
 _RANKLISTMSG.fields_by_name['ranklist'].message_type = _RANKMSG
@@ -574,11 +634,13 @@ _ACTIVITYLISTRESPONSE.fields_by_name['activities'].message_type = _ACTIVITYMSG
 _ACTIVITYLISTRESPONSE.fields_by_name['warmActivities'].message_type = _ACTIVITYMSG
 _ACTIVITYLISTRESPONSE.fields_by_name['endActivities'].message_type = _ENDACTIVITYMSG
 _ACTIVITYRANKRESPONSE.fields_by_name['ranks'].message_type = _RANKLISTMSG
+_ACTIVITYRANKRESPONSE.fields_by_name['history'].message_type = _HISTORYSCOREMSG
 DESCRIPTOR.message_types_by_name['RankMsg'] = _RANKMSG
 DESCRIPTOR.message_types_by_name['RankListMsg'] = _RANKLISTMSG
 DESCRIPTOR.message_types_by_name['ActivityMsg'] = _ACTIVITYMSG
 DESCRIPTOR.message_types_by_name['EndActivityMsg'] = _ENDACTIVITYMSG
 DESCRIPTOR.message_types_by_name['RankRewardMsg'] = _RANKREWARDMSG
+DESCRIPTOR.message_types_by_name['HistoryScoreMsg'] = _HISTORYSCOREMSG
 DESCRIPTOR.message_types_by_name['ActivityListRequest'] = _ACTIVITYLISTREQUEST
 DESCRIPTOR.message_types_by_name['ActivityListResponse'] = _ACTIVITYLISTRESPONSE
 DESCRIPTOR.message_types_by_name['ActivityCountdownOverRequest'] = _ACTIVITYCOUNTDOWNOVERREQUEST
@@ -622,6 +684,13 @@ RankRewardMsg = _reflection.GeneratedProtocolMessageType('RankRewardMsg', (_mess
   # @@protoc_insertion_point(class_scope:com.common.msg.RankRewardMsg)
   })
 _sym_db.RegisterMessage(RankRewardMsg)
+
+HistoryScoreMsg = _reflection.GeneratedProtocolMessageType('HistoryScoreMsg', (_message.Message,), {
+  'DESCRIPTOR' : _HISTORYSCOREMSG,
+  '__module__' : 'ActivityModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.HistoryScoreMsg)
+  })
+_sym_db.RegisterMessage(HistoryScoreMsg)
 
 ActivityListRequest = _reflection.GeneratedProtocolMessageType('ActivityListRequest', (_message.Message,), {
   'DESCRIPTOR' : _ACTIVITYLISTREQUEST,

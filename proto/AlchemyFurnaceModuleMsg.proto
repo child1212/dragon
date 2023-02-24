@@ -40,6 +40,8 @@ message AlchemyFurnaceInfoResponse {
 
 //炼金请求
 message AlchemyRequest {
+	//是否观看了广告
+	optional bool ads = 1;
 }
 
 //炼金响应

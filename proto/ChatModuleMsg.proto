@@ -23,6 +23,8 @@ message ChatInfo {
 	required int64 timeStamp = 6;
 	//聊天内容
 	required string content = 7;
+	//vip等级
+	optional int32 vipLevel = 8;
 }
 
 //红包消息

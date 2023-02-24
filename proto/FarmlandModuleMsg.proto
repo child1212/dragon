@@ -56,6 +56,8 @@ message PlantCropResponse {
 message ReceiveCropMsg {
 	required string sceneId = 1;
 	required string plantId = 2;
+	//经过计算后的最终获取值
+	optional int32 count = 3;
 }
 
 // 领取 请求

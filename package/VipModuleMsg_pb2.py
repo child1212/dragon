@@ -12,6 +12,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+import ItemModuleMsg_pb2 as ItemModuleMsg__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -20,45 +21,10 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x12VipModuleMsg.proto\x12\x0e\x63om.common.msg\"\x10\n\x0eVipInfoRequest\"3\n\x0fVipInfoResponse\x12\x0c\n\x04\x64\x61ys\x18\x01 \x02(\x05\x12\x12\n\nawardIndex\x18\x02 \x03(\x05\"&\n\x10TakeAwardRequest\x12\x12\n\nawardIndex\x18\x01 \x02(\x05\"\x13\n\x11TakeAwardResponse*j\n\x10VipErrorCodeEnum\x12\x0f\n\tVIP_VALID\x10\xa9\xc3\x01\x12\x1f\n\x19VIP_AWARD_DAYS_NOT_ENOUGH\x10\xaa\xc3\x01\x12\x11\n\x0bVIP_INVALID\x10\xab\xc3\x01\x12\x11\n\x0bVIP_AWARDED\x10\xac\xc3\x01*Z\n\x16VipModuleMsgSubCommand\x12\x1e\n\x18VIPMODULEMSG_SUB_VIPINFO\x10\xa9\xc3\x01\x12 \n\x1aVIPMODULEMSG_SUB_TAKEAWARD\x10\xaa\xc3\x01'
-)
+  serialized_pb=b'\n\x12VipModuleMsg.proto\x12\x0e\x63om.common.msg\x1a\x13ItemModuleMsg.proto\"\x10\n\x0eVipInfoRequest\"-\n\rVipWelfareMsg\x12\r\n\x05wType\x18\x01 \x01(\x05\x12\r\n\x05times\x18\x02 \x01(\x03\"k\n\x0fVipInfoResponse\x12\x32\n\x0bvipWelfares\x18\x03 \x03(\x0b\x32\x1d.com.common.msg.VipWelfareMsg\x12\x11\n\tlevelGift\x18\x04 \x03(\x05\x12\x11\n\tdailyGift\x18\x05 \x03(\x05\"*\n\x19VipLevelGiftRewardRequest\x12\r\n\x05level\x18\x01 \x01(\x05\"\x1c\n\x1aVipLevelGiftRewardResponse\"*\n\x19VipDailyGiftRewardRequest\x12\r\n\x05level\x18\x01 \x01(\x05\"\x1c\n\x1aVipDailyGiftRewardResponse\"#\n\x13VipLevelHideRequest\x12\x0c\n\x04hide\x18\x01 \x01(\x08\"\x16\n\x14VipLevelHideResponse*\xb3\x01\n\x16VipModuleMsgSubCommand\x12\x1e\n\x18VIPMODULEMSG_SUB_VIPINFO\x10\x81\xe1\x01\x12)\n#VIPMODULEMSG_SUB_VIPLEVELGIFTREWARD\x10\x82\xe1\x01\x12)\n#VIPMODULEMSG_SUB_VIPDAILYGIFTREWARD\x10\x83\xe1\x01\x12#\n\x1dVIPMODULEMSG_SUB_VIPLEVELHIDE\x10\x84\xe1\x01'
+  ,
+  dependencies=[ItemModuleMsg__pb2.DESCRIPTOR,])
 
-_VIPERRORCODEENUM = _descriptor.EnumDescriptor(
-  name='VipErrorCodeEnum',
-  full_name='com.common.msg.VipErrorCodeEnum',
-  filename=None,
-  file=DESCRIPTOR,
-  create_key=_descriptor._internal_create_key,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='VIP_VALID', index=0, number=25001,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='VIP_AWARD_DAYS_NOT_ENOUGH', index=1, number=25002,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='VIP_INVALID', index=2, number=25003,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='VIP_AWARDED', index=3, number=25004,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-  ],
-  containing_type=None,
-  serialized_options=None,
-  serialized_start=170,
-  serialized_end=276,
-)
-_sym_db.RegisterEnumDescriptor(_VIPERRORCODEENUM)
-
-VipErrorCodeEnum = enum_type_wrapper.EnumTypeWrapper(_VIPERRORCODEENUM)
 _VIPMODULEMSGSUBCOMMAND = _descriptor.EnumDescriptor(
   name='VipModuleMsgSubCommand',
   full_name='com.common.msg.VipModuleMsgSubCommand',
@@ -67,30 +33,38 @@ _VIPMODULEMSGSUBCOMMAND = _descriptor.EnumDescriptor(
   create_key=_descriptor._internal_create_key,
   values=[
     _descriptor.EnumValueDescriptor(
-      name='VIPMODULEMSG_SUB_VIPINFO', index=0, number=25001,
+      name='VIPMODULEMSG_SUB_VIPINFO', index=0, number=28801,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='VIPMODULEMSG_SUB_TAKEAWARD', index=1, number=25002,
+      name='VIPMODULEMSG_SUB_VIPLEVELGIFTREWARD', index=1, number=28802,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='VIPMODULEMSG_SUB_VIPDAILYGIFTREWARD', index=2, number=28803,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='VIPMODULEMSG_SUB_VIPLEVELHIDE', index=3, number=28804,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=278,
-  serialized_end=368,
+  serialized_start=443,
+  serialized_end=622,
 )
 _sym_db.RegisterEnumDescriptor(_VIPMODULEMSGSUBCOMMAND)
 
 VipModuleMsgSubCommand = enum_type_wrapper.EnumTypeWrapper(_VIPMODULEMSGSUBCOMMAND)
-VIP_VALID = 25001
-VIP_AWARD_DAYS_NOT_ENOUGH = 25002
-VIP_INVALID = 25003
-VIP_AWARDED = 25004
-VIPMODULEMSG_SUB_VIPINFO = 25001
-VIPMODULEMSG_SUB_TAKEAWARD = 25002
+VIPMODULEMSG_SUB_VIPINFO = 28801
+VIPMODULEMSG_SUB_VIPLEVELGIFTREWARD = 28802
+VIPMODULEMSG_SUB_VIPDAILYGIFTREWARD = 28803
+VIPMODULEMSG_SUB_VIPLEVELHIDE = 28804
 
 
 
@@ -114,8 +88,47 @@ _VIPINFOREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=38,
-  serialized_end=54,
+  serialized_start=59,
+  serialized_end=75,
+)
+
+
+_VIPWELFAREMSG = _descriptor.Descriptor(
+  name='VipWelfareMsg',
+  full_name='com.common.msg.VipWelfareMsg',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='wType', full_name='com.common.msg.VipWelfareMsg.wType', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='times', full_name='com.common.msg.VipWelfareMsg.times', index=1,
+      number=2, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=77,
+  serialized_end=122,
 )
 
 
@@ -128,15 +141,22 @@ _VIPINFORESPONSE = _descriptor.Descriptor(
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='days', full_name='com.common.msg.VipInfoResponse.days', index=0,
-      number=1, type=5, cpp_type=1, label=2,
-      has_default_value=False, default_value=0,
+      name='vipWelfares', full_name='com.common.msg.VipInfoResponse.vipWelfares', index=0,
+      number=3, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='awardIndex', full_name='com.common.msg.VipInfoResponse.awardIndex', index=1,
-      number=2, type=5, cpp_type=1, label=3,
+      name='levelGift', full_name='com.common.msg.VipInfoResponse.levelGift', index=1,
+      number=4, type=5, cpp_type=1, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='dailyGift', full_name='com.common.msg.VipInfoResponse.dailyGift', index=2,
+      number=5, type=5, cpp_type=1, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -153,22 +173,22 @@ _VIPINFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=56,
-  serialized_end=107,
+  serialized_start=124,
+  serialized_end=231,
 )
 
 
-_TAKEAWARDREQUEST = _descriptor.Descriptor(
-  name='TakeAwardRequest',
-  full_name='com.common.msg.TakeAwardRequest',
+_VIPLEVELGIFTREWARDREQUEST = _descriptor.Descriptor(
+  name='VipLevelGiftRewardRequest',
+  full_name='com.common.msg.VipLevelGiftRewardRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='awardIndex', full_name='com.common.msg.TakeAwardRequest.awardIndex', index=0,
-      number=1, type=5, cpp_type=1, label=2,
+      name='level', full_name='com.common.msg.VipLevelGiftRewardRequest.level', index=0,
+      number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -185,14 +205,14 @@ _TAKEAWARDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=109,
-  serialized_end=147,
+  serialized_start=233,
+  serialized_end=275,
 )
 
 
-_TAKEAWARDRESPONSE = _descriptor.Descriptor(
-  name='TakeAwardResponse',
-  full_name='com.common.msg.TakeAwardResponse',
+_VIPLEVELGIFTREWARDRESPONSE = _descriptor.Descriptor(
+  name='VipLevelGiftRewardResponse',
+  full_name='com.common.msg.VipLevelGiftRewardResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -210,15 +230,134 @@ _TAKEAWARDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=149,
-  serialized_end=168,
+  serialized_start=277,
+  serialized_end=305,
 )
 
+
+_VIPDAILYGIFTREWARDREQUEST = _descriptor.Descriptor(
+  name='VipDailyGiftRewardRequest',
+  full_name='com.common.msg.VipDailyGiftRewardRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='level', full_name='com.common.msg.VipDailyGiftRewardRequest.level', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=307,
+  serialized_end=349,
+)
+
+
+_VIPDAILYGIFTREWARDRESPONSE = _descriptor.Descriptor(
+  name='VipDailyGiftRewardResponse',
+  full_name='com.common.msg.VipDailyGiftRewardResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=351,
+  serialized_end=379,
+)
+
+
+_VIPLEVELHIDEREQUEST = _descriptor.Descriptor(
+  name='VipLevelHideRequest',
+  full_name='com.common.msg.VipLevelHideRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='hide', full_name='com.common.msg.VipLevelHideRequest.hide', index=0,
+      number=1, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=381,
+  serialized_end=416,
+)
+
+
+_VIPLEVELHIDERESPONSE = _descriptor.Descriptor(
+  name='VipLevelHideResponse',
+  full_name='com.common.msg.VipLevelHideResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=418,
+  serialized_end=440,
+)
+
+_VIPINFORESPONSE.fields_by_name['vipWelfares'].message_type = _VIPWELFAREMSG
 DESCRIPTOR.message_types_by_name['VipInfoRequest'] = _VIPINFOREQUEST
+DESCRIPTOR.message_types_by_name['VipWelfareMsg'] = _VIPWELFAREMSG
 DESCRIPTOR.message_types_by_name['VipInfoResponse'] = _VIPINFORESPONSE
-DESCRIPTOR.message_types_by_name['TakeAwardRequest'] = _TAKEAWARDREQUEST
-DESCRIPTOR.message_types_by_name['TakeAwardResponse'] = _TAKEAWARDRESPONSE
-DESCRIPTOR.enum_types_by_name['VipErrorCodeEnum'] = _VIPERRORCODEENUM
+DESCRIPTOR.message_types_by_name['VipLevelGiftRewardRequest'] = _VIPLEVELGIFTREWARDREQUEST
+DESCRIPTOR.message_types_by_name['VipLevelGiftRewardResponse'] = _VIPLEVELGIFTREWARDRESPONSE
+DESCRIPTOR.message_types_by_name['VipDailyGiftRewardRequest'] = _VIPDAILYGIFTREWARDREQUEST
+DESCRIPTOR.message_types_by_name['VipDailyGiftRewardResponse'] = _VIPDAILYGIFTREWARDRESPONSE
+DESCRIPTOR.message_types_by_name['VipLevelHideRequest'] = _VIPLEVELHIDEREQUEST
+DESCRIPTOR.message_types_by_name['VipLevelHideResponse'] = _VIPLEVELHIDERESPONSE
 DESCRIPTOR.enum_types_by_name['VipModuleMsgSubCommand'] = _VIPMODULEMSGSUBCOMMAND
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -229,6 +368,13 @@ VipInfoRequest = _reflection.GeneratedProtocolMessageType('VipInfoRequest', (_me
   })
 _sym_db.RegisterMessage(VipInfoRequest)
 
+VipWelfareMsg = _reflection.GeneratedProtocolMessageType('VipWelfareMsg', (_message.Message,), {
+  'DESCRIPTOR' : _VIPWELFAREMSG,
+  '__module__' : 'VipModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.VipWelfareMsg)
+  })
+_sym_db.RegisterMessage(VipWelfareMsg)
+
 VipInfoResponse = _reflection.GeneratedProtocolMessageType('VipInfoResponse', (_message.Message,), {
   'DESCRIPTOR' : _VIPINFORESPONSE,
   '__module__' : 'VipModuleMsg_pb2'
@@ -236,19 +382,47 @@ VipInfoResponse = _reflection.GeneratedProtocolMessageType('VipInfoResponse', (_
   })
 _sym_db.RegisterMessage(VipInfoResponse)
 
-TakeAwardRequest = _reflection.GeneratedProtocolMessageType('TakeAwardRequest', (_message.Message,), {
-  'DESCRIPTOR' : _TAKEAWARDREQUEST,
+VipLevelGiftRewardRequest = _reflection.GeneratedProtocolMessageType('VipLevelGiftRewardRequest', (_message.Message,), {
+  'DESCRIPTOR' : _VIPLEVELGIFTREWARDREQUEST,
   '__module__' : 'VipModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.TakeAwardRequest)
+  # @@protoc_insertion_point(class_scope:com.common.msg.VipLevelGiftRewardRequest)
   })
-_sym_db.RegisterMessage(TakeAwardRequest)
+_sym_db.RegisterMessage(VipLevelGiftRewardRequest)
 
-TakeAwardResponse = _reflection.GeneratedProtocolMessageType('TakeAwardResponse', (_message.Message,), {
-  'DESCRIPTOR' : _TAKEAWARDRESPONSE,
+VipLevelGiftRewardResponse = _reflection.GeneratedProtocolMessageType('VipLevelGiftRewardResponse', (_message.Message,), {
+  'DESCRIPTOR' : _VIPLEVELGIFTREWARDRESPONSE,
   '__module__' : 'VipModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.TakeAwardResponse)
+  # @@protoc_insertion_point(class_scope:com.common.msg.VipLevelGiftRewardResponse)
   })
-_sym_db.RegisterMessage(TakeAwardResponse)
+_sym_db.RegisterMessage(VipLevelGiftRewardResponse)
+
+VipDailyGiftRewardRequest = _reflection.GeneratedProtocolMessageType('VipDailyGiftRewardRequest', (_message.Message,), {
+  'DESCRIPTOR' : _VIPDAILYGIFTREWARDREQUEST,
+  '__module__' : 'VipModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.VipDailyGiftRewardRequest)
+  })
+_sym_db.RegisterMessage(VipDailyGiftRewardRequest)
+
+VipDailyGiftRewardResponse = _reflection.GeneratedProtocolMessageType('VipDailyGiftRewardResponse', (_message.Message,), {
+  'DESCRIPTOR' : _VIPDAILYGIFTREWARDRESPONSE,
+  '__module__' : 'VipModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.VipDailyGiftRewardResponse)
+  })
+_sym_db.RegisterMessage(VipDailyGiftRewardResponse)
+
+VipLevelHideRequest = _reflection.GeneratedProtocolMessageType('VipLevelHideRequest', (_message.Message,), {
+  'DESCRIPTOR' : _VIPLEVELHIDEREQUEST,
+  '__module__' : 'VipModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.VipLevelHideRequest)
+  })
+_sym_db.RegisterMessage(VipLevelHideRequest)
+
+VipLevelHideResponse = _reflection.GeneratedProtocolMessageType('VipLevelHideResponse', (_message.Message,), {
+  'DESCRIPTOR' : _VIPLEVELHIDERESPONSE,
+  '__module__' : 'VipModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.VipLevelHideResponse)
+  })
+_sym_db.RegisterMessage(VipLevelHideResponse)
 
 
 # @@protoc_insertion_point(module_scope)

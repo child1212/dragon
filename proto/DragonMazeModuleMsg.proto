@@ -1,6 +1,8 @@
 syntax = "proto2";
 package com.common.msg;
 
+import "ItemModuleMsg.proto";
+
 enum DragonMazeModuleMsgSubCommand {
 	//请求龙迷宫活动信息
 	DRAGONMAZEMODULEMSG_SUB_DRAGONMAZEINFO = 26801;
@@ -12,7 +14,73 @@ enum DragonMazeModuleMsgSubCommand {
 	DRAGONMAZEMODULEMSG_SUB_DRAGONMAZESHOPINFO = 26804;
 	//请求购买商店商品
 	DRAGONMAZEMODULEMSG_SUB_BUYMAZESHOPPRODUCT = 26805;
+	//V23后请求龙迷宫活动信息
+	DRAGONMAZEMODULEMSG_SUB_DRAGONMAZEINFOV23 = 26806;
+	//v23快速通过龙迷宫请求(扫荡)
+	DRAGONMAZEMODULEMSG_SUB_QUICKPASSDRAGONMAZE = 26807;
+	//v23请求结束快速通过龙迷宫CD(结束扫荡CD)
+	DRAGONMAZEMODULEMSG_SUB_FINISHQUICKPASSCD = 26808;
 }
+
+//V23请求龙迷宫活动信息
+message DragonMazeInfoV23Request{
+}
+
+message MazeInfo{
+	//迷宫子类型(目前有4个子类型)
+	optional int32 type = 1;
+	//已完成层数
+	optional int32 finishLevel = 2;
+	//当前层结束时间
+	optional int64 endTime = 3;
+	//之前成功进入的层数
+	optional int32 lastEnterLevel = 4;
+	//快速通关CD结束时间戳
+	optional int64 quickPassEndTime = 5;
+}
+
+//V23请求龙迷宫活动信息返回
+message DragonMazeInfoV23Response{
+	//迷宫信息集合
+	repeated MazeInfo mazeInfos = 1;
+}
+
+//V23快速通过龙迷宫请求(扫荡)
+message QuickPassDragonMazeRequest{
+	//迷宫子类型
+	optional int32 type = 1;
+	//进入层数
+	optional int32 level = 2;
+	//进入迷宫携带的龙
+	repeated int64 creatures = 3;
+}
+
+//V23快速通过龙迷宫请求(扫荡)返回
+message QuickPassDragonMazeResponse{
+	//扣除完龙力后龙的信息
+	repeated MagicalCreatureMsg creatures = 1;
+	//奖励的道具
+	repeated ItemMsg items = 2;
+	//快速通过结束时间戳
+	optional int64 cdEndTime = 3;
+}
+
+//v23请求结束快速通过龙迷宫CD(结束扫荡CD)
+message FinishQuickPassCDRequest{
+	//迷宫子类型
+	optional int32 type = 1;
+	//消耗道具数量(用来做校验,在客户端消耗数量少于服务器数量时报错)
+	optional int32 cost = 2;
+	//看广告减少CD时间
+	optional bool ads = 3;
+}
+
+//v23请求结束快速通过龙迷宫CD(结束扫荡CD)返回
+message FinishQuickPassCDResponse {
+	//返回服务器消耗数量
+	optional int32 cost = 1;
+}
+
 
 //请求龙迷宫活动信息
 message DragonMazeInfoRequest {
@@ -40,8 +108,10 @@ message OpenOrEnterMazeRequest {
 	optional int32 diamonds = 1;
 	//开启迷宫时携带的龙(重复进入不用发送)
 	repeated int64 creatures = 2;
-	//进入层数(目前仅做校验使用)
+	//进入层数(目前仅做校验使用) 新版本level根据子类型level走
 	required int32 level = 3;
+	//迷宫子类型
+	optional int32 type = 4;
 }
 
 //请求开启或进入龙迷宫返回
@@ -52,6 +122,8 @@ message OpenOrEnterMazeResponse {
 
 //请求结束龙迷宫(主动手动结束)
 message DragonMazeEndRequest {
+	//迷宫子类型
+	optional int32 type = 1;
 }
 
 //请求结束龙迷宫返回
@@ -80,6 +152,8 @@ message DragonMazeShopInfoResponse {
 message BuyMazeShopProductRequest {
 	//DragonMazeShop配置id
 	required string id = 1;
+	//购买库存次数 以前是默认一次 现在是玩家自选
+	optional int32 count = 2;
 }
 
 //请求购买商店商品返回

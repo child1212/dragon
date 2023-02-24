@@ -10,8 +10,8 @@ import os
 
 
 print("start time:",time.asctime(time.localtime()))
-account = "li2001"
-server = 'qa'
+account = "te0001"
+server = 'nqa'
 
 
 
@@ -42,7 +42,7 @@ clear_item(player,log_res,server)
 # send_gift(22000, 100, player,session, account, log_res,server)
 # send_gift(30000, 100, player,session, account, log_res,server)
 send_gift(1001, 100000, player,session, account, log_res,server)
-send_gift(1003, 1000, player,session, account, log_res,server)
+send_gift(1003, 100, player,session, account, log_res,server)
 
 
 

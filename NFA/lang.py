@@ -1,7 +1,7 @@
 #%%
 #检测多语言格式，是否有参数配置错误
 names = ('AI','Dialog','Guide','Pops','Story','SystemErrorCode','Tips','UI')
-countries = {'en'}
+countries = {'en','de','en','fr','it','ja','ko','sp'}
 for country in countries:
     print("#===================="+country+"=======================#")
     for name in names:
@@ -56,7 +56,7 @@ for country in countries:
 # %%
 #检测中文字符
 names = ('AI','Dialog','Guide','Pops','Story','SystemErrorCode','Tips','UI')
-countries = {'en'}
+countries = {'en','de','en','fr','it','sp'}
 for country in countries:
     print("#===================="+country+"=======================#")
     exc = ("errorcode_18004","errorcode_18005")
@@ -82,7 +82,7 @@ for country in countries:
 #检测参数配置和中文不一致的情况
 #创建映射
 names = ('AI','Dialog','Guide','Pops','Story','SystemErrorCode','Tips','UI')
-countries = ('en','zh')
+countries = {'en','de','en','fr','it','ja','ko','sp','zh'}
 for country in countries:
     for name in names:
         lan = open("E:\\town\\FA\\client\\client\\Assets\\HomeLand\\Localization\\{country}\\{name}.bytes".format(country=country,name=name),"r",encoding="utf-8")
@@ -116,7 +116,7 @@ for line in val:
     stand[kx[0]] = kr
 val.close()
 # countries = ('ar','de','en','fr','it','ja','ko','ne','po','ru','sp','tc','th','tu','vi','zh')
-countries = {'en'}
+countries = {'en','de','en','fr','it','ja','ko','sp'}
 for country in countries:
     print("#===================="+country+"=======================#")
     comp = {}
@@ -143,7 +143,7 @@ for country in countries:
 # %%
 # 检测多语言丢失key的情况
 names = ('AI','Dialog','Guide','Pops','Story','SystemErrorCode','Tips','UI')
-countries = ('en','zh')
+countries = {'en','de','en','fr','it','sp','zh'}
 
 
 
@@ -168,7 +168,7 @@ for name in names:
             stand.add(line)
     val.close()
     # 开始对比
-    countries_compare = {"en"}
+    countries_compare = {'en','de','en','fr','it','sp'}
     for country in countries_compare:
         print("#===================="+country+"=======================#")
         comp = set()

@@ -11,11 +11,11 @@ import os
 
 
 print("start time:",time.asctime(time.localtime()))
-account = "my05"
-level = ""
+account = "li2001"
+level = "3"
 p = ""
 num = 1
-server = '38'
+server = 'qa'
 
 
 

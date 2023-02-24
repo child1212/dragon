@@ -16,6 +16,7 @@ import "AnimalModuleMsg.proto";
 import "DragonBubbleModuleMsg.proto";
 import "GrowthFundModuleMsg.proto";
 import "PiggyBankModuleMsg.proto";
+import "DragonBuildingModuleMsg.proto";
 
 enum CoreModuleMsgSubCommand {
 	//登录游戏
@@ -60,6 +61,12 @@ enum CoreModuleMsgSubCommand {
 	COREMODULEMSG_SUB_BACKREWARD = 1026;
 	// 注销账号
 	COREMODULEMSG_SUB_ACCOUNTCANCEL = 1027;
+	// 对时
+	COREMODULEMSG_SUB_TIME = 1028;
+	// 个人名片
+	COREMODULEMSG_SUB_BISCARD = 1029;
+	// 替换新手引导已通过步骤
+	COREMODULEMSG_SUB_REPLACEGUIDECOMPLETE = 1030;
 }
 
 // 个人信息请求
@@ -123,6 +130,10 @@ message ResourceMsg {
 	optional string teamId = 29;
 	//玩家再次加入队伍cd计时起始时间
 	optional int64 joinTeamCdStart = 30;
+	// Vip称号 隐藏true, 显示false
+	optional bool hideVipLevel = 31;
+	// 曾经订阅过的商品
+	repeated string subscribes = 32;
 }
 
 //登录请求
@@ -157,6 +168,10 @@ message LoginRequest {
 	optional string idfv = 14;
 	//时区
 	optional int32 timeZone = 15;
+	//邀请玩家id  已经废弃掉了 占用16的位置 不在使用
+	optional string invitePid = 16;
+	//绑定页面位置 运营打点需求
+	optional int32 bindpage = 17;
 }
 
 // 待选择的玩家信息 8.1.0修改
@@ -203,6 +218,10 @@ message LoginResponse {
 	optional int32 fbBind = 13;
 	//时区
 	optional int32 timeZone = 14;
+	//是否有fb绑定奖励 0：没有 1：有
+	optional int32 fbBindReward = 15;
+	//是否已完成首次绑定fb 0:否   1:是 (注意本次有fb绑定奖励或曾经发放过fb绑定奖励时此值为1)
+	optional int32 fbFirstBind = 16;
 }
 
 // 新手引导已通过步骤请求
@@ -283,6 +302,8 @@ message EnterGameResponse {
 	optional GrowthFundMsg growthFund = 48;
 	//小猪存钱罐
 	optional PiggyBankInfoMsg piggyBankInfo = 49;
+	// 龙乐园建筑任务
+	optional DragonBuildingTaskMsg task = 50;
 }
 
 //充值请求
@@ -482,4 +503,66 @@ message AccountCancelRequest {
 // 注销账号响应
 message AccountCancelResponse {
 	optional int32 ret = 1;	// 1.成功 2.Apple注销失败
+}
+
+// 对时请求
+message TimeRequest {
+	
+}
+
+// 对时响应
+message TimeResponse {
+	// 服务器时间(系统时间)
+	optional int64 serverTime = 1;
+	// 玩家时间
+	optional int64 playerTime = 2;
+}
+
+// 个人名片信息请求
+message BisCardRequest {
+	// 目标玩家ID
+	optional string targetId = 1;
+}
+
+// 公会名片信息
+message TeamBisCard {
+	optional string teamId = 1;			// 公会ID
+	optional string name = 2;			// 名称
+	optional string icon = 3;			// 图标
+	optional string president = 4;		// 会长ID
+}
+
+// 龙名片信息
+message DragonBisCard {
+	optional int64 creatureId = 1;		// 实例id
+	optional string templateId = 2;		// 模板id
+	repeated DragonSkinMsg skins = 3;	// 装扮
+	optional int32 power = 4;			// 龙之力
+}
+
+// 个人名片信息响应
+message BisCardResponse {
+	optional string pid = 1;			// pid
+	optional string nickname = 2;		// 昵称
+	optional string avatar = 3;			// 头像
+	optional string frame = 4;			// 头像框
+	repeated string inuseSkins = 5;		// 正在使用的皮肤
+	optional int32 level = 6;			// 等级
+	optional int32 power = 7;			// 龙之力
+	optional string progress = 8;		// 探索进度
+	optional TeamBisCard teamCard = 9;	// 公会名片信息
+	repeated DragonBisCard dra = 10;	// 龙名片信息
+	optional int32 vipLevel = 11;		// vip等级
+}
+
+// 替换新手引导已通过步骤
+message ReplaceGuideCompleteRequest{
+	// 删除新手引导步骤id
+	repeated string oldGuideId = 1;
+	// 完成新手引导步骤id
+	repeated string guideId = 2;
+}
+
+// 替换新手引导已通过步骤响应
+message ReplaceGuideCompleteResponse{
 }

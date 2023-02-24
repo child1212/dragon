@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x13\x43hatModuleMsg.proto\x12\x0e\x63om.common.msg\"v\n\x08\x43hatInfo\x12\x0b\n\x03pid\x18\x01 \x02(\t\x12\r\n\x05pname\x18\x02 \x02(\t\x12\x0c\n\x04head\x18\x03 \x02(\t\x12\r\n\x05\x66rame\x18\x04 \x02(\t\x12\r\n\x05title\x18\x05 \x02(\t\x12\x11\n\ttimeStamp\x18\x06 \x02(\x03\x12\x0f\n\x07\x63ontent\x18\x07 \x02(\t\"Z\n\x0bRedEnvelope\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12\x0e\n\x06itemid\x18\x02 \x01(\t\x12\x11\n\ttimeStamp\x18\x03 \x01(\x03\x12\x0b\n\x03pid\x18\x04 \x01(\t\x12\r\n\x05pname\x18\x05 \x01(\t\"n\n\x11RedEnvelopeRecord\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12\x0b\n\x03pid\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x0e\n\x06itemId\x18\x04 \x01(\t\x12\r\n\x05\x63ount\x18\x05 \x01(\x05\x12\x11\n\ttimeStamp\x18\x06 \x01(\x03\",\n\x0bSpecialInfo\x12\x0c\n\x04type\x18\x01 \x01(\x05\x12\x0f\n\x07msgBody\x18\x02 \x01(\x0c\"F\n\x0b\x43hatRequest\x12\x0b\n\x03\x63id\x18\x01 \x02(\t\x12*\n\x08\x63hatInfo\x18\x02 \x01(\x0b\x32\x18.com.common.msg.ChatInfo\"!\n\x0c\x43hatResponse\x12\x11\n\ttimeStamp\x18\x01 \x02(\x03\"1\n\x0f\x43hatListRequest\x12\x0b\n\x03\x63id\x18\x01 \x02(\t\x12\x11\n\ttimeStamp\x18\x02 \x02(\x03\"r\n\x10\x43hatListResponse\x12+\n\tchatInfos\x18\x01 \x03(\x0b\x32\x18.com.common.msg.ChatInfo\x12\x31\n\x0cspecialInfos\x18\x02 \x03(\x0b\x32\x1b.com.common.msg.SpecialInfo*Y\n\x17\x43hatModuleMsgSubCommand\x12\x1c\n\x16\x43HATMODULEMSG_SUB_CHAT\x10\xa5\xd5\x01\x12 \n\x1a\x43HATMODULEMSG_SUB_CHATLIST\x10\xa6\xd5\x01'
+  serialized_pb=b'\n\x13\x43hatModuleMsg.proto\x12\x0e\x63om.common.msg\"\x88\x01\n\x08\x43hatInfo\x12\x0b\n\x03pid\x18\x01 \x02(\t\x12\r\n\x05pname\x18\x02 \x02(\t\x12\x0c\n\x04head\x18\x03 \x02(\t\x12\r\n\x05\x66rame\x18\x04 \x02(\t\x12\r\n\x05title\x18\x05 \x02(\t\x12\x11\n\ttimeStamp\x18\x06 \x02(\x03\x12\x0f\n\x07\x63ontent\x18\x07 \x02(\t\x12\x10\n\x08vipLevel\x18\x08 \x01(\x05\"Z\n\x0bRedEnvelope\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12\x0e\n\x06itemid\x18\x02 \x01(\t\x12\x11\n\ttimeStamp\x18\x03 \x01(\x03\x12\x0b\n\x03pid\x18\x04 \x01(\t\x12\r\n\x05pname\x18\x05 \x01(\t\"n\n\x11RedEnvelopeRecord\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12\x0b\n\x03pid\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x0e\n\x06itemId\x18\x04 \x01(\t\x12\r\n\x05\x63ount\x18\x05 \x01(\x05\x12\x11\n\ttimeStamp\x18\x06 \x01(\x03\",\n\x0bSpecialInfo\x12\x0c\n\x04type\x18\x01 \x01(\x05\x12\x0f\n\x07msgBody\x18\x02 \x01(\x0c\"F\n\x0b\x43hatRequest\x12\x0b\n\x03\x63id\x18\x01 \x02(\t\x12*\n\x08\x63hatInfo\x18\x02 \x01(\x0b\x32\x18.com.common.msg.ChatInfo\"!\n\x0c\x43hatResponse\x12\x11\n\ttimeStamp\x18\x01 \x02(\x03\"1\n\x0f\x43hatListRequest\x12\x0b\n\x03\x63id\x18\x01 \x02(\t\x12\x11\n\ttimeStamp\x18\x02 \x02(\x03\"r\n\x10\x43hatListResponse\x12+\n\tchatInfos\x18\x01 \x03(\x0b\x32\x18.com.common.msg.ChatInfo\x12\x31\n\x0cspecialInfos\x18\x02 \x03(\x0b\x32\x1b.com.common.msg.SpecialInfo*Y\n\x17\x43hatModuleMsgSubCommand\x12\x1c\n\x16\x43HATMODULEMSG_SUB_CHAT\x10\xa5\xd5\x01\x12 \n\x1a\x43HATMODULEMSG_SUB_CHATLIST\x10\xa6\xd5\x01'
 )
 
 _CHATMODULEMSGSUBCOMMAND = _descriptor.EnumDescriptor(
@@ -43,8 +43,8 @@ _CHATMODULEMSGSUBCOMMAND = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=683,
-  serialized_end=772,
+  serialized_start=702,
+  serialized_end=791,
 )
 _sym_db.RegisterEnumDescriptor(_CHATMODULEMSGSUBCOMMAND)
 
@@ -111,6 +111,13 @@ _CHATINFO = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='vipLevel', full_name='com.common.msg.ChatInfo.vipLevel', index=7,
+      number=8, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -123,8 +130,8 @@ _CHATINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=39,
-  serialized_end=157,
+  serialized_start=40,
+  serialized_end=176,
 )
 
 
@@ -183,8 +190,8 @@ _REDENVELOPE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=159,
-  serialized_end=249,
+  serialized_start=178,
+  serialized_end=268,
 )
 
 
@@ -250,8 +257,8 @@ _REDENVELOPERECORD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=251,
-  serialized_end=361,
+  serialized_start=270,
+  serialized_end=380,
 )
 
 
@@ -289,8 +296,8 @@ _SPECIALINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=363,
-  serialized_end=407,
+  serialized_start=382,
+  serialized_end=426,
 )
 
 
@@ -328,8 +335,8 @@ _CHATREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=409,
-  serialized_end=479,
+  serialized_start=428,
+  serialized_end=498,
 )
 
 
@@ -360,8 +367,8 @@ _CHATRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=481,
-  serialized_end=514,
+  serialized_start=500,
+  serialized_end=533,
 )
 
 
@@ -399,8 +406,8 @@ _CHATLISTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=516,
-  serialized_end=565,
+  serialized_start=535,
+  serialized_end=584,
 )
 
 
@@ -438,8 +445,8 @@ _CHATLISTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=567,
-  serialized_end=681,
+  serialized_start=586,
+  serialized_end=700,
 )
 
 _CHATREQUEST.fields_by_name['chatInfo'].message_type = _CHATINFO

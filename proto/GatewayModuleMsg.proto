@@ -1,4 +1,3 @@
-//@ignore
 syntax = "proto2";
 package com.framwork.sx;
 

@@ -1,45 +1,66 @@
 syntax = "proto2";
 package com.common.msg;
 
-enum VipErrorCodeEnum{
-	//vip在有效期内 不能设置无效
-	VIP_VALID = 25001;
+import "ItemModuleMsg.proto";
 
-	//累计天数不足，不能领奖
-	VIP_AWARD_DAYS_NOT_ENOUGH = 25002;
-
-	//当前已经不是vip了
-	VIP_INVALID = 25003;
-	
-	//奖励已经领取过了
-	VIP_AWARDED = 25004;
-}
 enum VipModuleMsgSubCommand {
-	//vip基本信息
-	VIPMODULEMSG_SUB_VIPINFO = 25001;
-	//请求领取vip累计登陆奖励
-	VIPMODULEMSG_SUB_TAKEAWARD = 25002;
-	
+	// Vip信息请求
+	VIPMODULEMSG_SUB_VIPINFO = 28801;
+	// 领取等级礼包
+	VIPMODULEMSG_SUB_VIPLEVELGIFTREWARD = 28802;
+	// 领取每日礼包
+	VIPMODULEMSG_SUB_VIPDAILYGIFTREWARD = 28803;
+	// 设置隐藏VIP称号
+	VIPMODULEMSG_SUB_VIPLEVELHIDE = 28804;
 }
 
-// vip基本信息请求
+// Vip信息请求
 message VipInfoRequest {
 }
 
-// vip基本信息回复
+message VipWelfareMsg {
+	//福利卡类型  1:免费抽卡
+	optional int32 wType =1;
+	//福利卡已使用次数
+	optional int64 times = 2;
+}
+
+// Vip信息响应
 message VipInfoResponse {
-	// 累计登陆天数
-	required int32 days = 1;
-	//已经领取奖励的集合
-	repeated int32 awardIndex = 2;
+	//福利卡信息
+	repeated VipWelfareMsg vipWelfares = 3;
+	//已领取特权礼包
+    repeated int32 levelGift = 4;
+	//今日已领取免费礼包
+	repeated int32 dailyGift = 5;
 }
 
-//请求领取vip累计登陆奖励
-message TakeAwardRequest {
-	//从1开始 连续的值(具体参见策划配置调整)
-	required int32 awardIndex = 1;
+// 领取等级礼包请求
+message VipLevelGiftRewardRequest {
+	optional int32 level = 1;
 }
 
-//请求领取vip累计登陆奖励回复
-message TakeAwardResponse {
+// 领取等级礼包响应
+message VipLevelGiftRewardResponse {
+
+}
+
+// 领取每日礼包请求
+message VipDailyGiftRewardRequest {
+	optional int32 level = 1;
+}
+
+// 领取每日礼包响应
+message VipDailyGiftRewardResponse {
+
+}
+
+// 设置隐藏VIP称号请求
+message VipLevelHideRequest {
+	// 隐藏true, 显示false
+	optional bool hide = 1;
+}
+
+// 设置隐藏VIP称号响应
+message VipLevelHideResponse {
 }

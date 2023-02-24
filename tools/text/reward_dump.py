@@ -1,6 +1,6 @@
 #%%
-table_reward = open('D:\\pyprogram\\PyTestTools\\dragon\\tools\\text\\reward.txt',"r",encoding="utf-8-sig")
-table_item = open("D:\\pyprogram\\PyTestTools\\dragon\\tools\\ItemTemplate.csv","r",encoding="utf-8-sig")
+table_reward = open('D:\\pyprogram\\PyTestTools\\dragon\\tools\\text\\data\\reward.txt',"r",encoding="utf-8-sig")
+table_item = open("D:\\pyprogram\\PyTestTools\\dragon\\tools\\ItemTemplate-n.csv","r",encoding="utf-8-sig")
 
 #创建奖品名称映射
 item = {}

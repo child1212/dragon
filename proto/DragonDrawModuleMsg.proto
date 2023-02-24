@@ -29,6 +29,10 @@ message DragonDrawRequest {
 	optional string drawId = 1;
 	//抽奖次数
 	optional int32 count = 2;
+	// 是否通行证
+	optional bool goldpass = 3;
+	// 是否VIP免费
+	optional bool vipFree = 4;
 }
 
 // 抽奖响应

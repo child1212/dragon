@@ -20,6 +20,8 @@ message PiggyBankInfoMsg {
 	optional int32 energy = 3;
 	// 是否购买
 	optional bool bought = 4;
+	// 本轮开启时的分组
+	optional string group = 5;
 }
 
 // 开始小猪存钱罐请求

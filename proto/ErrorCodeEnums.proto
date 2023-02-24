@@ -64,6 +64,10 @@ enum ErrorCodeEnums {
 	ITEM_NOT_SUBSCRIBE_ITEM =  2008;
 	//订阅每天额外使用道具的服务已过期
 	ITEM_SUBSCRIBE_ITEM_EXPIRED = 2009;
+	//道具类型错误
+	ITEM_TYPE_ERROR = 2010;
+	//道具不能兑换
+	ITEM_CAN_NOT_EXCHANGE = 2011;
 	//*********************************************建筑模块***********************************************/
 	//建筑已达最大等级
 	BUIDING_TO_MAX_LEVEL = 3001;
@@ -142,6 +146,10 @@ enum ErrorCodeEnums {
 	COMMON_SYSTEM_REPEAT_OPEN = 13009;
 	// 没有回流奖励
 	COMMON_NO_BACK_REWAARD = 13010;
+	// 没超出上限
+	COMMON_NO_LIMIT_COUNT = 13011;
+	//字符不合法
+	ILLEGAL_WORDS = 13012;
 	/***********************************广告*******************************************/
 	// 广告未开启
 	ADS_CLOSED = 15001;
@@ -166,6 +174,10 @@ enum ErrorCodeEnums {
 	SCENE_COMPLETE_REWARDED = 16002;
 	// 场景关闭奖励未满足天津
 	SCENE_COMPLETE_REWARD_UNMET = 16003;
+	// 障碍已经被清理了
+	OBSTACLE_BE_CLEARED = 16004;
+	// 为满足场景解锁条件
+	SCENE_NOT_UNLOCK = 16005;
 	/***************************************魔法生物******************************************/
 	// 魔法生物数据异常
 	MAGICALCREATURE_DATA_ERROR = 25001;
@@ -225,6 +237,12 @@ enum ErrorCodeEnums {
 	MAGICALCREATURE_HANGUP_TODAY_LIMIT = 25028;
 	//总挂机产出次数已满
 	MAGICALCREATURE_HANGUP_TOTAL_LIMIT = 25029;
+	// 已经在目标龙巢中
+	MAGICALCREATURE_CHANGENEST_REPEATED = 25030;
+	// 目标龙巢还未解锁
+	MAGICALCREATURE_CHANGENEST_NOTOPENNEST = 25031;
+	// 超出龙巢容纳上限
+	MAGICALCREATURE_CHANGENEST_LIMIT = 25032;
 	/****************************************工厂******************************************/
 	// 工厂数据异常
 	FACTORY_DATA_ERROR = 25101;
@@ -297,6 +315,18 @@ enum ErrorCodeEnums {
 	ACTIVITY_BREED_DATA_NOT_EXIST_ERROR = 27004;
 	//繁育季任务已经领取过奖励
 	ACTIVITY_BREED_ALREADY_TAKE_AWARD_ERROR = 27005;
+	//活动已经领取过积分奖励
+	ACTIVITY_ALREADY_TAKE_SCORE_AWARD_ERROR = 27006;
+	//活动没有能领取的积分奖励
+	ACTIVITY_NO_TAKE_SCORE_AWARD_ERROR = 27007;
+	// 黄金通行证未解锁
+	ACTIVITY_GOLD_PASS_UNLOCK = 27008;
+	// 地图活动未解锁
+	ACTIVITY_MAP_UNLOCK = 27009;
+	//地图活动等级不足
+	ACTIVITY_MAP_LEVEL_NOT_ENOUGH = 27010;
+	//地图活动等级奖励已经领取了
+	ACTIVITY_MAP_LEVEL_AWARD_ALREADY_TOKEN = 27011;
 	/************************************活动结束********************************************************/
 
 	/************************************活跃彩蛋开始********************************************************/
@@ -398,6 +428,16 @@ enum ErrorCodeEnums {
 	SKIN_HAVE_EQUIP = 28506;
 	//不能在相同位置上装扮多个皮肤
 	SKIN_CAN_NOT_EQUIP_MANY = 28507;
+	//无须兑换，已经解锁过了
+	SKIN_DESIGN_ITEM_DO_NOT_NEED_EXCHANGE = 28508;
+	//打造订单重复
+	SKIN_PRODUCE_ORDER_REPEATED = 28509;
+	//打造订单不存在
+	SKIN_PRODUCE_ORDER_NOT_EXIST = 28510;
+	//打造订单未完成
+	SKIN_PRODUCE_ORDER_NOT_FINISH = 28511;
+	//打造订单进度未结束
+	SKIN_PRODUCE_ORDER_PROGRESS_NOT_END = 28512;
 	/************************************皮肤[28501-28600]*************************************************************/
 
 	/************************************龙迷宫[28601-28700]*************************************************************/
@@ -427,6 +467,18 @@ enum ErrorCodeEnums {
 	DRAGON_MAZE_SHOP_PRODUCT_NOT_EXIST = 28612;
 	//龙迷宫商品交换次数错误
 	DRAGON_MAZE_PRODUCT_BUY_COUNT_ERROR = 28613;
+	//选中的龙在迷宫中
+	DRAGON_MAZE_IN_MAZE_ERROR = 28614;
+	//龙类型错误
+	DRAGON_MAZE_DRAGON_TYPE_ERROR = 28615;
+	//扫荡的层数错误
+	DRAGON_MAZE_QUICK_PASS_LEVEL_ERROR = 28616;
+	//当前处在迷宫探索时间内
+	DRAGON_MAZE_IN_PROCESS_ERROR = 28617;
+	//当前在扫荡CD期间内
+	DRAGON_MAZE_QUICK_PASS_CD_ERROR = 28618;
+	//龙力不足
+	DRAGON_MAZE_DRAGON_STRENGTH_ERROR = 28619;
 	/************************************龙迷宫[28601-28700]*************************************************************/
 
 	
@@ -487,6 +539,10 @@ enum ErrorCodeEnums {
 	REDENVELOPE_ALREADY_TOKEN_ERROR = 28727;
 	//玩家已有队伍了
 	TEAM_PLAYER_HAS_TEAM_ERROR = 28728;
+	//队伍名称含有非法字符
+	TEAM_NAME_ILLEGAL_CONTENT_ERROR = 28729;
+	//队伍描述含有非法字符
+	TEAM_DESC_ILLEGAL_CONTENT_ERROR = 28730;
 	/************************************神龙部落[28701-28800]****************************************************************/
 
 	/************************************周限定礼包开始 [28801 - 28900] *****************************************/
@@ -540,8 +596,16 @@ enum ErrorCodeEnums {
 	TEAM_MAP_NO_TASK = 29205;
 	// 加入公会时间超过领奖时间
 	TEAM_MAP_JOIN_TEAM_AFTER_REWARD_TIME = 29206;
-	//未完成所有任务,不能切花地图
+	//未完成所有任务,不能切换地图
 	TEAM_MAP_NOT_FINISH_ALL_TASK = 29207;
+	//公会活动探险客户端消耗数量错误
+	TEAM_MAP_COST_NUM_ERROR = 29208;
+	//活动领取累计奖励id错误
+	TEAM_MAP_AWARD_INDEX_ERROR = 29209;
+	//排行奖励已经领取
+	TEAM_MAP_AWARD_ALREADY_TOKE_ERROR = 29210;
+	//未到结算时间,不能领奖
+	TEAM_MAP_NOT_TO_IN_RANK_END_ERROR = 29211;
 	/************************************公会活动结束 [29201- 29300] *****************************************/
 
 	/************************************小猪存钱罐开始 [29301- 29400] *****************************************/
@@ -584,6 +648,10 @@ enum ErrorCodeEnums {
 	DRAGONSEASON_TEAMID_ISNULL = 29413;
 	//还未参与活动
 	DRAGONSEASON_NOT_INACTIVITY = 29414;
+	//任务未删除也未完成 不能刷新
+	DRAGONSEASON_NOT_TASKNOTEND = 29415;
+	//跳过cd消耗错误
+	DRAGONSEASON_NOT_SKICPCD_COSTERROR = 29416;
 	/************************************龙赛季活动结束 [29401- 29500] *****************************************/
 
 	/************************************等级地图开始 [29501- 29600] *****************************************/
@@ -591,6 +659,202 @@ enum ErrorCodeEnums {
 	LEVELMAP_ID_ERROR = 29501;
 	//处于cd中，不能开启
 	LEVELMAP_CD_ERROR = 29502;
+	//应优先开启小Bp活动
+	LEVELMAP_SMALL_BP_SHOULD_OPEN_FIRST = 29503;
+	//等级地图开启中
+	LEVELMAP_OPEN_ERROR = 29504;
 	/************************************等级地图结束 [29501- 29600] *****************************************/
+
+	/************************************龙订单开始 [29601- 29700] *******************************************/
+	//回收龙已经开启过
+	RECYCLEDRAGON_ALREADY_OPEN = 29601;
+	//回收龙未启过
+	RECYCLEDRAGON_NOT_OPEN = 29602;
+	//当前有进行中的回收龙订单
+	RECYCLEDRAGON_NOT_END = 29603;
+	//回收龙订单未开始
+	RECYCLEDRAGON_NOT_START = 29604;
+	//回收龙订单不在cd中
+	RECYCLEDRAGON_NOT_CD = 29605;
+	//回收龙类型不是商店龙
+	RECYCLEDRAGON_NOT_SHOPDRAGON = 29606;
+	//回收龙不是需求类型
+	RECYCLEDRAGON_NOT_ORDERNEED = 29607;
+	//有未领取的传送奖励
+	RECYCLEDRAGON_HAVE_TRANSFERREWARD = 29608;
+	//没有未领取的传送奖励
+	RECYCLEDRAGON_NOT_HAVE_TRANSFERREWARD = 29609;
+	//没有未领取的累计积分
+	RECYCLEDRAGON_NOT_HAVE_CUMULATIVESCORE = 29610;
+	/************************************龙订单结束 [29601- 29700] ********************************************/
+
+	/************************************龙pve(龙探索)开始 [29701- 29800] ********************* ***************/
+	//龙探索消耗数量错误
+	DRAGONPVE_ADV_COST_NUM_ERROR = 29701;
+	/************************************龙pve(龙探索)结束 [29701- 29800] *************************************/
+
+	/************************************龙抽卡开始 [29801- 29900] ********************* ***************/
+	//龙抽卡 通行证状态不一致
+	DRAGONDRAW_GOLDPASS_ERROR = 29801;
+	//龙抽卡 首次免费不使用vip特权
+	DRAGONDRAW_VIP_ERROR = 29802;
+	//龙抽卡 vip特权免费次数已用完
+	DRAGONDRAW_VIP_COUNT_ERROR = 29803;
+	/************************************龙抽卡结束 [29801- 29900] *************************************/
+
+	/************************************龙钓鱼活动开始 [29901- 30000] ********************* ***************/
+	//超出宝箱掉落道具数量上限
+	DRAGONFISHING_DROPLIMIT_ERROR = 29901;
+	//龙之力不足
+	DRAGONFISHING_ENERGY_NOTENOUGH = 29902;
+	//不在游戏中不能结算
+	DRAGONFISHING_NOTINGAME = 29903;
+	//鱼重量超出范围
+	DRAGONFISHING_FISHWEIGHT_LIMIT = 29904;
+	/************************************龙钓鱼活动结束 [29901- 30000] *************************************/
+
+	/************************************挂机系统开始 [30001- 30100] ********************* ***************/
+	//挂机建筑已经激活
+	HANGUP_BUILDING_OPENED= 30001;
+	//挂机建筑配置不存在
+	HANGUP_BUILDING_TEMPLATE_NOT_EXIST = 30002;
+	//挂机建筑未激活
+	HANGUP_BUILDING_NOT_OPEN = 30003;
+	//玩家等级不足
+	HANGUP_LEVELUP_LEVEL_NOT_ENOUGH = 30004;
+	//龙力不足
+	HANGUP_LEVELUP_STRENGTH_NOT_ENOUGH = 30005;
+	//龙个数不足
+	HANGUP_LEVELUP_DRAGON_NOT_ENOUGH = 30006;
+	//领取时间不足
+	HANGUP_TAKE_AWARD_TIME_NOT_ENOUGH = 30007;
+	/************************************挂机系统结束 [30001- 30100] *************************************/
+
+	/************************************回流活动开始 [30101- 30200] ********************* ***************/
+	//回流数据错误
+	REFLOW_DATA_ERROR = 30101;
+	//回流活动未结束
+	REFLOW_NOT_END_ERROR = 30102;
+	//回流活动已结束
+	REFLOW_END_ERROR = 30103;
+	//回流活动登录奖励CD中
+	REFLOW_LOGIN_REWARD_CD_ERROR = 30104;
+	//回流活动无登录奖励可领
+	REFLOW_NO_LOGIN_REWARD_ERROR = 30105;
+	//回流活动找不到任务
+	REFLOW_TASK_NOT_FOUND_ERROR = 30106;
+	//回流活动任务奖励已领取
+	REFLOW_TASK_AWARD_ALREADY_TOKEN_ERROR = 30107;
+	//回流活动任务奖励条件不满足
+	REFLOW_TASK_AWARD_CONDITION_ERROR = 30108;
+	//回流活动任务奖励时间不满足
+	REFLOW_TASK_AWARD_TIME_ERROR = 30109;
+	//回流活动刷新福利卡时间错误
+	REFLOW_REFRESH_WELFARE_TIME_ERROR = 30110;
+	//回流活动福利卡类型错误
+	REFLOW_REFRESH_WELFARE_TYPE_ERROR = 30111;
+	//回流活动福利卡次数已用完
+	REFLOW_REFRESH_WELFARE_TIMES_ERROR = 30112;
+	//回流活动礼包奖励id错误
+	REFLOW_GIFTID_ERROR = 30113;
+	/************************************回流活动结束 [30101- 30200] *************************************/
+
+	/************************************小BP活动开始 [30201- 30300] *************************************/
+	//小bp活动数据不存在
+	SMALLBP_ACT_DATA_ERROR = 30201;
+	//小bp活动已结束
+	SMALLBP_ACT_END_ERROR = 30202;
+	//小bp活动任务数据不存在
+	SMALLBP_ACT_TASK_DATA_ERROR = 30203;
+	//小bp活动任务条件不满足
+	SMALLBP_ACT_TASK_CONDITION_ERROR = 30204;
+	//小bp活动任务奖励已领取
+	SMALLBP_ACT_TASK_TOKEN_ERROR = 30205;
+	//小bp活动等级不足错误
+	SMALLBP_ACT_LEVEL_ERROR = 30206;
+	//小bp活动等级奖励已领取
+	SMALLBP_ACT_LEVEL_AWRAD_TOKEN_ERROR = 30207;
+	//小bp活动等级配置不存在
+	SMALLBP_ACT_LEVEL_CFG_ERROR = 30208;
+	//小bp活动通行证锁定
+	SMALLBP_ACT_PASSPORT_LOCK_ERROR = 30209;
+	/************************************小BP活动结束 [30201- 30300] *************************************/
+
+	/************************************翻翻乐活动开始 [30301- 30400] *************************************/
+	//翻翻乐重复开启
+	LUCKYCARD_REPEATED_START = 30301;
+	//翻翻乐cd中
+	LUCKYCARD_CD_ERROR = 30302;
+	//翻翻乐未开启
+	LUCKYCARD_NOT_OPEN = 30303;
+	//翻翻乐重复翻卡
+	LUCKYCARD_REPEATED_FLIP = 30304;
+	/************************************翻翻乐活动结束 [30301- 30400] *************************************/
+
+	/************************************VIP开始 [30401- 30500] *************************************/
+	//Vip重复领取等级礼包
+	VIP_REPEATED_LEVEL_REWARD = 30401;
+	//Vip领取等级礼包等级不足
+	VIP_LEVEL_REWARD_LEVEL_ERROR = 30402;
+	//Vip重复领取每日礼包
+	VIP_REPEATED_DAILY_REWARD = 30403;
+	//Vip领取每日礼包等级不足
+	VIP_DAILY_REWARD_LEVEL_ERROR = 30404;
+	//Vip数据不存在
+	VIP_DATA_ERROR = 30405;
+	/************************************VIP结束 [30401- 30500] *************************************/
+
+	/************************************挖矿开始 [30501- 30600] *************************************/
+	//挖矿进度未完成不可开启下一组
+	MINING_NOTFINISH_GROUP = 30501;
+	//挖矿此位置不能挖
+	MINING_POS_CANNOT_DIG = 30502;
+	//挖矿此位置已经挖完
+	MINING_POS_DIGED = 30503;
+	//挖矿boss还未战胜
+	MINING_BOSS_NOTPKWIN = 30504;
+	//挖矿周重置时间未到
+	MINING_WEEKRESET_TIMEERROR = 30505;
+	//挖矿委托未结束
+	MINING_COMMISSION_NOTEND = 30506;
+	//不是boss格子
+	MINING_NOT_BOSS_GRID = 30507;
+	//boss已开始
+	MINING_BOSS_STARTED = 30508;
+	//boss已清除
+	MINING_BOSS_CLEARD = 30509;
+	/************************************挖矿结束 [30501- 30600] *************************************/
+
+	/************************************龙乐园建筑开始 [30601- 30700] *************************************/
+	//龙乐园建筑不存在
+	DRAGON_BUILDING_NOT_EXIST = 30601;
+	//龙乐园任务奖励都已领取
+	DRAGON_BUILDING_TASK_REWARDED = 30602;
+	//龙乐园任务奖励任务ID错误
+	DRAGON_BUILDING_TASK_REWARDID_ERROR = 30603;
+	//龙乐园建筑挂机未产出
+	DRAGON_BUILDING_HANGUP_ERROR = 30604;
+	/************************************龙乐园建筑结束 [30601- 30700] *************************************/
+
+	/************************************活动抽奖开始 [30701- 30800] *************************************/
+	//选号阶段已结束
+	SELECT_ALREADY_END = 30701;
+	//已到最大选号数量限制
+	SELECT_NUM_TO_MAX = 30702;
+	//今日已领取过免费卷
+	FREE_ALREADY_TOKEN = 30703;
+	//周日特殊抽奖阶段已结束
+	SPECIAL_LOTTERY_END = 30704;
+	//参与奖励已经领取
+	JOIN_AWARD_ALREADY_TOKEN = 30705;
+	//未参与过活动
+	NOT_JOINED_ACTIVITY = 30706;
+	//不在领取参与奖励阶段
+	CAN_NOT_TAKE_JOIN_STAGE = 30707;
+	//已获奖励,不能领参与奖
+	ALREADY_TOKEN_OHTER_AWARD = 30708;
+	//第7日不能领取免费卷
+	NOT_HAS_FREE_TICKET = 30709;
+	/************************************活动抽奖结束 [30701- 30800] *************************************/
 
 }

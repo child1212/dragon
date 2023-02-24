@@ -25,7 +25,7 @@ message RechargeRequest {
 
 //充值响应
 message RechargeResponse {
-	
+	optional int64 goldPassTime = 1;	//如果购买的是黄金通行证 返回黄金通行证开启时间戳(毫秒) 购买其他产品此值无效
 }
 
 message Subscribe {
@@ -47,6 +47,8 @@ message SubscribeInfoResponse {
 	repeated string  expiredSubscribes = 1;
 	//客户端未同步 但在服务器有存储的有效数据集合(应该为pc测试  如果为ios 和 android 要查一下问题)
 	repeated Subscribe subscribes = 2;
+	//续订的产品(目前只是根据过期时间不一致来判断的 没有什么其他好方法， 需要等平台升级sdk才能够更好的实现)
+	repeated string contineSubscribes = 3;
 }
 
 //请求订阅过期后处理

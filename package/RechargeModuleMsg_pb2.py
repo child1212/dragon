@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x17RechargeModuleMsg.proto\x12\x0e\x63om.common.msg\"$\n\x0fRechargeRequest\x12\x11\n\torderInfo\x18\x01 \x01(\t\"\x12\n\x10RechargeResponse\"/\n\tSubscribe\x12\x11\n\tproductId\x18\x01 \x02(\t\x12\x0f\n\x07\x65xpired\x18\x02 \x02(\x03\"E\n\x14SubscribeInfoRequest\x12-\n\nsubscribes\x18\x01 \x03(\x0b\x32\x19.com.common.msg.Subscribe\"a\n\x15SubscribeInfoResponse\x12\x19\n\x11\x65xpiredSubscribes\x18\x01 \x03(\t\x12-\n\nsubscribes\x18\x02 \x03(\x0b\x32\x19.com.common.msg.Subscribe\",\n\x17SubscribeExpiredRequest\x12\x11\n\tproductId\x18\x01 \x02(\t\"\x1a\n\x18SubscribeExpiredResponse\"N\n\x12LimitedTimeProduct\x12\x13\n\x0bproductType\x18\x01 \x02(\x05\x12\x12\n\nexpiryTime\x18\x02 \x02(\x03\x12\x0f\n\x07process\x18\x03 \x01(\x05\"7\n ProcessLimitedTimeProductRequest\x12\x13\n\x0bproductType\x18\x01 \x02(\x05\"#\n!ProcessLimitedTimeProductResponse\"\x15\n\x13\x41\x46ReportListRequest\"*\n\x14\x41\x46ReportListResponse\x12\x12\n\neventnames\x18\x01 \x03(\t\",\n\x16\x41\x46ReportConfirmRequest\x12\x12\n\neventnames\x18\x01 \x03(\t\"\x19\n\x17\x41\x46ReportConfirmResponse*\xa4\x02\n\x1bRechargeModuleMsgSubCommand\x12#\n\x1eRECHARGEMODULEMSG_SUB_RECHARGE\x10\xb9\x17\x12(\n#RECHARGEMODULEMSG_SUB_SUBSCRIBEINFO\x10\xba\x17\x12+\n&RECHARGEMODULEMSG_SUB_SUBSCRIBEEXPIRED\x10\xbb\x17\x12\x34\n/RECHARGEMODULEMSG_SUB_PROCESSLIMITEDTIMEPRODUCT\x10\xbc\x17\x12\'\n\"RECHARGEMODULEMSG_SUB_AFREPORTLIST\x10\xbd\x17\x12*\n%RECHARGEMODULEMSG_SUB_AFREPORTCONFIRM\x10\xbe\x17'
+  serialized_pb=b'\n\x17RechargeModuleMsg.proto\x12\x0e\x63om.common.msg\"$\n\x0fRechargeRequest\x12\x11\n\torderInfo\x18\x01 \x01(\t\"(\n\x10RechargeResponse\x12\x14\n\x0cgoldPassTime\x18\x01 \x01(\x03\"/\n\tSubscribe\x12\x11\n\tproductId\x18\x01 \x02(\t\x12\x0f\n\x07\x65xpired\x18\x02 \x02(\x03\"E\n\x14SubscribeInfoRequest\x12-\n\nsubscribes\x18\x01 \x03(\x0b\x32\x19.com.common.msg.Subscribe\"|\n\x15SubscribeInfoResponse\x12\x19\n\x11\x65xpiredSubscribes\x18\x01 \x03(\t\x12-\n\nsubscribes\x18\x02 \x03(\x0b\x32\x19.com.common.msg.Subscribe\x12\x19\n\x11\x63ontineSubscribes\x18\x03 \x03(\t\",\n\x17SubscribeExpiredRequest\x12\x11\n\tproductId\x18\x01 \x02(\t\"\x1a\n\x18SubscribeExpiredResponse\"N\n\x12LimitedTimeProduct\x12\x13\n\x0bproductType\x18\x01 \x02(\x05\x12\x12\n\nexpiryTime\x18\x02 \x02(\x03\x12\x0f\n\x07process\x18\x03 \x01(\x05\"7\n ProcessLimitedTimeProductRequest\x12\x13\n\x0bproductType\x18\x01 \x02(\x05\"#\n!ProcessLimitedTimeProductResponse\"\x15\n\x13\x41\x46ReportListRequest\"*\n\x14\x41\x46ReportListResponse\x12\x12\n\neventnames\x18\x01 \x03(\t\",\n\x16\x41\x46ReportConfirmRequest\x12\x12\n\neventnames\x18\x01 \x03(\t\"\x19\n\x17\x41\x46ReportConfirmResponse\"\x1c\n\x1a\x41\x46ReportHistoryListRequest\"1\n\x1b\x41\x46ReportHistoryListResponse\x12\x12\n\neventnames\x18\x01 \x03(\t*\xd4\x02\n\x1bRechargeModuleMsgSubCommand\x12#\n\x1eRECHARGEMODULEMSG_SUB_RECHARGE\x10\xb9\x17\x12(\n#RECHARGEMODULEMSG_SUB_SUBSCRIBEINFO\x10\xba\x17\x12+\n&RECHARGEMODULEMSG_SUB_SUBSCRIBEEXPIRED\x10\xbb\x17\x12\x34\n/RECHARGEMODULEMSG_SUB_PROCESSLIMITEDTIMEPRODUCT\x10\xbc\x17\x12\'\n\"RECHARGEMODULEMSG_SUB_AFREPORTLIST\x10\xbd\x17\x12*\n%RECHARGEMODULEMSG_SUB_AFREPORTCONFIRM\x10\xbe\x17\x12.\n)RECHARGEMODULEMSG_SUB_AFREPORTHISTORYLIST\x10\xbf\x17'
 )
 
 _RECHARGEMODULEMSGSUBCOMMAND = _descriptor.EnumDescriptor(
@@ -60,11 +60,16 @@ _RECHARGEMODULEMSGSUBCOMMAND = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='RECHARGEMODULEMSG_SUB_AFREPORTHISTORYLIST', index=6, number=3007,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=709,
-  serialized_end=1001,
+  serialized_start=839,
+  serialized_end=1179,
 )
 _sym_db.RegisterEnumDescriptor(_RECHARGEMODULEMSGSUBCOMMAND)
 
@@ -75,6 +80,7 @@ RECHARGEMODULEMSG_SUB_SUBSCRIBEEXPIRED = 3003
 RECHARGEMODULEMSG_SUB_PROCESSLIMITEDTIMEPRODUCT = 3004
 RECHARGEMODULEMSG_SUB_AFREPORTLIST = 3005
 RECHARGEMODULEMSG_SUB_AFREPORTCONFIRM = 3006
+RECHARGEMODULEMSG_SUB_AFREPORTHISTORYLIST = 3007
 
 
 
@@ -118,6 +124,13 @@ _RECHARGERESPONSE = _descriptor.Descriptor(
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='goldPassTime', full_name='com.common.msg.RechargeResponse.goldPassTime', index=0,
+      number=1, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -131,7 +144,7 @@ _RECHARGERESPONSE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=81,
-  serialized_end=99,
+  serialized_end=121,
 )
 
 
@@ -169,8 +182,8 @@ _SUBSCRIBE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=101,
-  serialized_end=148,
+  serialized_start=123,
+  serialized_end=170,
 )
 
 
@@ -201,8 +214,8 @@ _SUBSCRIBEINFOREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=150,
-  serialized_end=219,
+  serialized_start=172,
+  serialized_end=241,
 )
 
 
@@ -228,6 +241,13 @@ _SUBSCRIBEINFORESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='contineSubscribes', full_name='com.common.msg.SubscribeInfoResponse.contineSubscribes', index=2,
+      number=3, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -240,8 +260,8 @@ _SUBSCRIBEINFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=221,
-  serialized_end=318,
+  serialized_start=243,
+  serialized_end=367,
 )
 
 
@@ -272,8 +292,8 @@ _SUBSCRIBEEXPIREDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=320,
-  serialized_end=364,
+  serialized_start=369,
+  serialized_end=413,
 )
 
 
@@ -297,8 +317,8 @@ _SUBSCRIBEEXPIREDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=366,
-  serialized_end=392,
+  serialized_start=415,
+  serialized_end=441,
 )
 
 
@@ -343,8 +363,8 @@ _LIMITEDTIMEPRODUCT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=394,
-  serialized_end=472,
+  serialized_start=443,
+  serialized_end=521,
 )
 
 
@@ -375,8 +395,8 @@ _PROCESSLIMITEDTIMEPRODUCTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=474,
-  serialized_end=529,
+  serialized_start=523,
+  serialized_end=578,
 )
 
 
@@ -400,8 +420,8 @@ _PROCESSLIMITEDTIMEPRODUCTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=531,
-  serialized_end=566,
+  serialized_start=580,
+  serialized_end=615,
 )
 
 
@@ -425,8 +445,8 @@ _AFREPORTLISTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=568,
-  serialized_end=589,
+  serialized_start=617,
+  serialized_end=638,
 )
 
 
@@ -457,8 +477,8 @@ _AFREPORTLISTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=591,
-  serialized_end=633,
+  serialized_start=640,
+  serialized_end=682,
 )
 
 
@@ -489,8 +509,8 @@ _AFREPORTCONFIRMREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=635,
-  serialized_end=679,
+  serialized_start=684,
+  serialized_end=728,
 )
 
 
@@ -514,8 +534,65 @@ _AFREPORTCONFIRMRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=681,
-  serialized_end=706,
+  serialized_start=730,
+  serialized_end=755,
+)
+
+
+_AFREPORTHISTORYLISTREQUEST = _descriptor.Descriptor(
+  name='AFReportHistoryListRequest',
+  full_name='com.common.msg.AFReportHistoryListRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=757,
+  serialized_end=785,
+)
+
+
+_AFREPORTHISTORYLISTRESPONSE = _descriptor.Descriptor(
+  name='AFReportHistoryListResponse',
+  full_name='com.common.msg.AFReportHistoryListResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='eventnames', full_name='com.common.msg.AFReportHistoryListResponse.eventnames', index=0,
+      number=1, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=787,
+  serialized_end=836,
 )
 
 _SUBSCRIBEINFOREQUEST.fields_by_name['subscribes'].message_type = _SUBSCRIBE
@@ -534,6 +611,8 @@ DESCRIPTOR.message_types_by_name['AFReportListRequest'] = _AFREPORTLISTREQUEST
 DESCRIPTOR.message_types_by_name['AFReportListResponse'] = _AFREPORTLISTRESPONSE
 DESCRIPTOR.message_types_by_name['AFReportConfirmRequest'] = _AFREPORTCONFIRMREQUEST
 DESCRIPTOR.message_types_by_name['AFReportConfirmResponse'] = _AFREPORTCONFIRMRESPONSE
+DESCRIPTOR.message_types_by_name['AFReportHistoryListRequest'] = _AFREPORTHISTORYLISTREQUEST
+DESCRIPTOR.message_types_by_name['AFReportHistoryListResponse'] = _AFREPORTHISTORYLISTRESPONSE
 DESCRIPTOR.enum_types_by_name['RechargeModuleMsgSubCommand'] = _RECHARGEMODULEMSGSUBCOMMAND
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -634,6 +713,20 @@ AFReportConfirmResponse = _reflection.GeneratedProtocolMessageType('AFReportConf
   # @@protoc_insertion_point(class_scope:com.common.msg.AFReportConfirmResponse)
   })
 _sym_db.RegisterMessage(AFReportConfirmResponse)
+
+AFReportHistoryListRequest = _reflection.GeneratedProtocolMessageType('AFReportHistoryListRequest', (_message.Message,), {
+  'DESCRIPTOR' : _AFREPORTHISTORYLISTREQUEST,
+  '__module__' : 'RechargeModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.AFReportHistoryListRequest)
+  })
+_sym_db.RegisterMessage(AFReportHistoryListRequest)
+
+AFReportHistoryListResponse = _reflection.GeneratedProtocolMessageType('AFReportHistoryListResponse', (_message.Message,), {
+  'DESCRIPTOR' : _AFREPORTHISTORYLISTRESPONSE,
+  '__module__' : 'RechargeModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.AFReportHistoryListResponse)
+  })
+_sym_db.RegisterMessage(AFReportHistoryListResponse)
 
 
 # @@protoc_insertion_point(module_scope)

@@ -46,6 +46,8 @@ enum TeamModuleMsgSubCommand {
 	TEAMMODULEMSG_SUB_APPLYLIST = 27022;
 	//请求玩家已经申请的公会列表
 	TEAMMODULEMSG_SUB_APPLYTEAMLIST = 27023;
+	//请求玩家提示信息
+	TEAMMODULEMSG_SUB_TIPMSGLIST = 27024;
 }
 
 // 创建部落消息
@@ -68,6 +70,10 @@ message CreateTeamRequest {
 message CreateTeamResponse {
 	// 部落id
 	required string id = 1;
+	// 0 为成功 其他为错误码
+	optional int32 result = 2;
+	// 敏感词集合
+	repeated string sensiveWords = 3;
 }
 
 // 加入部落消息
@@ -162,6 +168,8 @@ message TeamBaseInfo {
 	optional string desc = 8;
 	// 部落状态
 	optional int32 state = 9;
+	//部落段位(目前为马拉松活动生成,注意一下初始段位为0,逻辑上对一下初始段位是否显示)
+	optional int32 stage = 10;
 }
 
 message TeamMemberInfo {
@@ -180,6 +188,8 @@ message TeamMemberInfo {
 	optional int32 maxDragonStrength = 8;
 	//头像框
 	optional string frame = 9;
+	//vip等级
+	optional int32 vipLevel = 10;
 }
 
 // 部落信息请求响应 
@@ -222,6 +232,10 @@ message UpdateTeamRequest {
 
 //  更新部落请求响应 
 message UpdateTeamResponse {
+	// 0 为成功 其他为错误码
+	optional int32 result = 1;
+	// 敏感词集合
+	repeated string sensiveWords = 2;
 }
 
 // 请求部落推荐列表
@@ -345,6 +359,8 @@ message PlayerInfo {
 	optional int32 level = 5;
 	//头像框
 	optional string frame = 6;
+	//vip等级
+	optional int32 vipLevel = 7;
 }
 
 message HelpPlayerInfo {
@@ -430,6 +446,8 @@ message HelpNotifyInfo {
 	optional string account = 5;
 	//头像框
 	optional string frame = 6;
+	//vip等级
+	optional int32 vipLevel = 7;
 }
 
 //请求其他玩家赠与物品通知返回
@@ -521,4 +539,20 @@ message ApplyTeam {
 //玩家已经申请的公会列表集合响应
 message ApplyTeamListResponse {
 	repeated ApplyTeam applyTeams = 1;
+}
+
+//玩家请求队伍提示列表
+message TipMsgListRequest {
+}
+
+message TeamTip {
+	//提示id
+	optional int32 id = 1;
+	//提示需要的参数
+	repeated string params = 2;
+}
+
+//玩家已经申请的公会列表集合响应
+message TipMsgListResponse {
+	repeated TeamTip teamTips = 1;
 }

@@ -1,0 +1,76 @@
+syntax = "proto2";
+package com.common.msg;
+
+enum SmallBPModuleMsgSubCommand {
+	// 小BP活动信息
+	SMALLBPMODULEMSG_SUB_SMALLBPINFO = 28601;
+	// 领取小BP任务奖励
+	SMALLBPMODULEMSG_SUB_TAKESMALLBPTASKREWARD = 28602;
+	// 领取小BP等级奖励
+	SMALLBPMODULEMSG_SUB_TAKESMALLBPLEVELREWARD = 28603;
+	// 小Bp活动结束通知(主要用于检测发送补领邮件)
+	SMALLBPMODULEMSG_SUB_SMALLBPEND = 28604;
+}
+
+// 小BP活动信息请求
+message SmallBPInfoRequest {
+}
+
+// 小BP活动任务
+message SmallBPTaskMsg {
+	optional int32 slotId = 1;// 槽位
+	optional int32 count = 2;//累计次数
+	//当前槽位已经领取奖励的任务集合
+	repeated string tasks = 3;
+}
+
+//小BP活动
+message SmallBPActMsg {
+	optional string actId = 1;//活动id
+	optional int64 endTime = 2;//活动结束时间
+	repeated SmallBPTaskMsg taskMsgs = 3;//小BP任务数据
+	optional int32 exp = 4;// 经验
+	optional int32 level = 5;// 等级
+	optional bool unlockPass = 6;// 是否解锁通行证
+	repeated int32 baseRewards = 7;// 已领取level（基础奖励）
+	repeated int32 passRewards = 8;// 已领取level（通行证奖励) 
+	optional bool tip = 9;// 是否是活动开启后首次获取活动信息  0:否 1:是
+}
+
+// 小BP活动信息响应
+message SmallBPInfoResponse {
+	optional SmallBPActMsg activityMsg = 1;//最近一个开启或者关闭的活动 或者是lua生成的默认值 当前没有开启过活动
+}
+
+
+// 领取小BP任务奖励请求
+message TakeSmallBPTaskRewardRequest {
+	optional string actId = 1;//活动id
+	optional string taskId = 2;	//任务id
+}
+
+// 领取小BP任务奖励请求响应
+message TakeSmallBPTaskRewardResponse {
+}
+
+// 领取小BP等级奖励请求
+message TakeSmallBPLevelRewardRequest {
+	optional string actId = 1;//活动id
+	optional int32 type = 2;// 奖励类型 1:基础奖励 2:通行证奖励
+	optional int32 level = 3;// 奖励等级
+}
+
+// 领取小BP等级奖励响应
+message TakeSmallBPLevelRewardResponse {
+
+}
+
+//小Bp活动结束通知请求(主要用于检测发送补领邮件)
+message SmallBPEndRequest {
+	optional string actId = 1;//活动id
+}
+
+//小Bp活动结束通知响应(主要用于检测发送补领邮件)
+message SmallBPEndResponse {
+	optional bool mail = 1;//是否有邮件
+}

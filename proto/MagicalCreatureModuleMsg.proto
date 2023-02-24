@@ -75,6 +75,12 @@ enum MagicalCreatureModuleMsgSubCommand {
 	MAGICALCREATUREMODULEMSG_SUB_COMMISSIONFINISH = 24034;
 	// 加速龙体力恢复
 	MAGICALCREATUREMODULEMSG_SUB_ACCELERATERECOVERY = 24035;
+	// 更换龙所在龙巢
+	MAGICALCREATUREMODULEMSG_SUB_CHANGENEST = 24036;
+	//请求离线喂龙数据(月卡新增功能)
+	MAGICALCREATUREMODULEMSG_SUB_AUTOFEED = 24037;
+	//请求在线喂龙
+	MAGICALCREATUREMODULEMSG_SUB_ONLINEAUTOFEED = 24038;
 }
 
 message MagicalCreatureBuyMsg {
@@ -84,6 +90,8 @@ message MagicalCreatureBuyMsg {
   required int32 buyCnt = 2;
   // 模板类型(0龙、1繁育)
   optional int32 type = 3;
+  // 未出龙的繁育次数
+  optional int32 notDragonBreedCnt = 4;
 }
 
 message MagicalNestMsg {
@@ -150,6 +158,10 @@ message BreedRequest {
 	optional string actId = 3;
 	//繁育次数
 	optional int32 count = 4;
+	//是否使用了回流活动福利卡
+	optional bool useWelfare = 5;
+	// 看广告繁育
+	optional bool ads = 6;
 }
 
 // 培育 响应
@@ -182,6 +194,8 @@ message GetCreatureDataResponse {
 	optional int32 breedAwards = 6;
 	//培育未得龙次数
 	optional int32 notDragonBreedCnt = 7;
+	//皇冠龙抽奖次数
+	optional int32 crownDrawCnt = 8;
 }
 
 message OpenNestRequest {
@@ -418,6 +432,8 @@ message CommissionRequest {
 message CommissionResponse {
 	// 道具同步
 	repeated ItemMsg items = 1;
+	// 龙信息同步
+	repeated MagicalCreatureMsg creatures = 2;
 }
 
 // 加速委托请求
@@ -426,6 +442,8 @@ message AccelerateCommissionRequest {
 	optional string commissionId = 1;
 	// 道具id
 	optional string itemId = 2;
+	// 看广告免费加速
+	optional bool ads = 3;
 }
 
 // 加速委托响应
@@ -495,6 +513,8 @@ message BreedRewardResponse {
 	repeated ItemMsg productItems = 3;
 	//获取的多个龙的其他龙数据同步
 	repeated MagicalCreatureMsg others = 4;
+	// since 22.1 龙繁育次数变化同步
+	repeated MagicalCreatureBuyMsg buys = 5;
 }
 
 // 领取龙的挂机奖励 请求
@@ -575,4 +595,56 @@ message AccelerateRecoveryResponse {
 	required MagicalCreatureMsg creature = 1;
 	// 同步道具
 	repeated ItemMsg items = 2;	
+}
+
+// 更换龙所在龙巢信息
+message ChangeNestMsg {
+  // 巢类型
+  required int64 creatureId = 1;
+  // 巢类型
+  required int32 nestType = 2;
+}
+
+// 更换龙所在龙巢请求
+message ChangeNestRequest {
+	repeated ChangeNestMsg changeNests = 1;
+	
+}
+
+// 更换龙所在龙巢响应
+message ChangeNestResponse {
+	repeated MagicalCreatureMsg creatures = 1;
+}
+
+// 请求离线喂龙数据(月卡新增功能)
+message AutoFeedRequest {
+}
+
+message AutoFeedRet {
+	//所有自动喂完龙的数据同步
+	repeated MagicalCreatureMsg creatures = 1;
+	//消耗道具
+	repeated ItemMsg costItems = 2;
+	//拆分后新增的道具
+	repeated ItemMsg addItems = 3;
+	//是否有道具不足的情况
+	optional bool itemNotEnough = 4;
+}
+
+// 自动喂龙数据(月卡新增功能)响应
+message AutoFeedResponse {
+	optional AutoFeedRet autoFeedRet = 1;
+}
+
+//请求在线自动喂龙
+message OnlineAutoFeedRequest {
+	//请求要喂的龙的集合
+	repeated int64 creatureIds = 1;
+}
+
+//请求在线自动喂龙响应
+message OnlineAutoFeedResponse {
+	optional AutoFeedRet autoFeedRet = 1;
+	//没有喂成功的龙的集合
+	repeated MagicalCreatureMsg notFeedCreatures = 2;
 }

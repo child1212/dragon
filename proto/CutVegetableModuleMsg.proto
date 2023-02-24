@@ -1,0 +1,48 @@
+syntax = "proto2";
+package com.common.msg;
+
+enum CutVegetableModuleMsgSubCommand {
+	//请求开启小游戏
+	CUTVEGETABLEMODULEMSG_SUB_OPENGAME = 29101;
+	//请求结束小游戏
+	CUTVEGETABLEMODULEMSG_SUB_CLOSEGAME = 29102;
+	//请求小游戏信息
+	CUTVEGETABLEMODULEMSG_SUB_GAMEINFOS = 29103;
+}
+
+
+message OpenGameRequest {
+	optional string actId = 1;//活动id
+	optional string level = 2;//关卡id
+}
+
+message OpenGameResponse {
+}
+
+message CloseGameRequest {
+	optional string actId = 1;//活动id
+	optional int32 score = 2;// 本次获得的积分
+	optional string levelId = 3;// 切菜关卡id（服务器无用 为客户端存储）
+}
+
+message CloseGameResponse {
+	//本次领取到的等级奖励最大值（返回领奖等级最大值，本次没有领取也会返回）
+	optional int32 awardLevel = 1;
+	//本次兑换的体力值
+	optional int32 exchange = 2;
+}
+
+message GameInfosRequest {
+	optional string actId = 1;//活动id
+}
+
+message GameInfosResponse {
+	//地图消耗的体力(只累计没有兑换成入场卷的体力)
+	optional int32 energies = 1;
+	//目前的积分
+	optional int32 scores = 2;
+	//已经领取的等级奖励最大值
+	optional int32 awardLevel = 3;
+	//客户端在结束游戏是传递的值(没有传递过为lua生成的协议默认值)
+	optional string levelId = 4;
+}

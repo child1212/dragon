@@ -84,7 +84,7 @@ def many_mails(mail_title, mail_content, reward, server, pid_file_path, res_file
 
 #########################################
 mail_content = time.asctime(time.localtime())
-server = "ntest" 
+server = "nqa" 
 group_num = 10
 pid_file_path = "PidListExp.txt"
 res_file_path = "result_list.txt"

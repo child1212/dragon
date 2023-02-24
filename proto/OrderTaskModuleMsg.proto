@@ -164,6 +164,8 @@ message FinishOrderTaskRequest {
   optional int32 playerLevel = 9;
   // 看广告双倍奖励
   optional bool ads = 10;
+  // 是否使用了回流活动福利卡
+  optional bool welfare = 11;
 }
 
 // 完成并刷新订单 响应
@@ -223,6 +225,8 @@ message TimeOrderShipmentRequest {
   optional string ticketId = 2;
   // 看广告装载
   optional bool ads = 3;
+  //是否使用了回流活动福利卡
+  optional bool useWelfare = 4;
 }
 
 // 装载航海订单 响应
@@ -237,7 +241,8 @@ message TimeOrderDeliverRequest {
 
 // 交付航海订单 响应
 message TimeOrderDeliverResponse {
-
+	//交付是否受订阅特权影响  true:受影响 false:不受影响
+	optional bool privilege = 1;
 }
 
 // 清除航海CD  请求

@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1e\x41\x63tivityParkourModuleMsg.proto\x12\x0e\x63om.common.msg\x1a\x13ItemModuleMsg.proto\x1a\x17\x41\x63tivityModuleMsg.proto\"(\n\x12ParkourInfoRequest\x12\x12\n\nactivityId\x18\x01 \x01(\t\"c\n\x13ParkourInfoResponse\x12\x0c\n\x04life\x18\x01 \x01(\x05\x12\x19\n\x11startRecoveryTime\x18\x02 \x01(\x03\x12\r\n\x05level\x18\x03 \x01(\x05\x12\x14\n\x0clastRewardId\x18\x04 \x01(\t\".\n\x18ParkourStartLevelRequest\x12\x12\n\nactivityId\x18\x01 \x01(\t\"D\n\x19ParkourStartLevelResponse\x12\x0c\n\x04life\x18\x01 \x01(\x05\x12\x19\n\x11startRecoveryTime\x18\x02 \x01(\x03\"W\n\x19ParkourFinishLevelRequest\x12\x12\n\nactivityId\x18\x01 \x01(\t\x12&\n\x05items\x18\x02 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"\x1c\n\x1aParkourFinishLevelResponse\"?\n\x15ParkourBuyLifeRequest\x12\x12\n\nactivityId\x18\x01 \x01(\t\x12\x12\n\nconsumeCnt\x18\x02 \x01(\x05\"\x18\n\x16ParkourBuyLifeResponse\".\n\x18ParkourRankRewardRequest\x12\x12\n\nactivityId\x18\x01 \x01(\t\"O\n\x19ParkourRankRewardResponse\x12\x32\n\x0brankRewards\x18\x01 \x03(\x0b\x32\x1d.com.common.msg.RankRewardMsg*\xaa\x02\n\"ActivityParkourModuleMsgSubCommand\x12.\n(ACTIVITYPARKOURMODULEMSG_SUB_PARKOURINFO\x10\xdd\xd3\x01\x12\x34\n.ACTIVITYPARKOURMODULEMSG_SUB_PARKOURSTARTLEVEL\x10\xde\xd3\x01\x12\x35\n/ACTIVITYPARKOURMODULEMSG_SUB_PARKOURFINISHLEVEL\x10\xdf\xd3\x01\x12\x31\n+ACTIVITYPARKOURMODULEMSG_SUB_PARKOURBUYLIFE\x10\xe0\xd3\x01\x12\x34\n.ACTIVITYPARKOURMODULEMSG_SUB_PARKOURRANKREWARD\x10\xe1\xd3\x01'
+  serialized_pb=b'\n\x1e\x41\x63tivityParkourModuleMsg.proto\x12\x0e\x63om.common.msg\x1a\x13ItemModuleMsg.proto\x1a\x17\x41\x63tivityModuleMsg.proto\"(\n\x12ParkourInfoRequest\x12\x12\n\nactivityId\x18\x01 \x01(\t\"\x8f\x01\n\x13ParkourInfoResponse\x12\x0c\n\x04life\x18\x01 \x01(\x05\x12\x19\n\x11startRecoveryTime\x18\x02 \x01(\x03\x12\r\n\x05level\x18\x03 \x01(\x05\x12\x14\n\x0clastRewardId\x18\x04 \x01(\t\x12\x15\n\rconsumeEnergy\x18\x05 \x01(\x05\x12\x13\n\x0b\x63onvertLife\x18\x06 \x01(\x05\".\n\x18ParkourStartLevelRequest\x12\x12\n\nactivityId\x18\x01 \x01(\t\"D\n\x19ParkourStartLevelResponse\x12\x0c\n\x04life\x18\x01 \x01(\x05\x12\x19\n\x11startRecoveryTime\x18\x02 \x01(\x03\"W\n\x19ParkourFinishLevelRequest\x12\x12\n\nactivityId\x18\x01 \x01(\t\x12&\n\x05items\x18\x02 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"\x1c\n\x1aParkourFinishLevelResponse\"?\n\x15ParkourBuyLifeRequest\x12\x12\n\nactivityId\x18\x01 \x01(\t\x12\x12\n\nconsumeCnt\x18\x02 \x01(\x05\"\x18\n\x16ParkourBuyLifeResponse\".\n\x18ParkourRankRewardRequest\x12\x12\n\nactivityId\x18\x01 \x01(\t\"O\n\x19ParkourRankRewardResponse\x12\x32\n\x0brankRewards\x18\x01 \x03(\x0b\x32\x1d.com.common.msg.RankRewardMsg*\xaa\x02\n\"ActivityParkourModuleMsgSubCommand\x12.\n(ACTIVITYPARKOURMODULEMSG_SUB_PARKOURINFO\x10\xdd\xd3\x01\x12\x34\n.ACTIVITYPARKOURMODULEMSG_SUB_PARKOURSTARTLEVEL\x10\xde\xd3\x01\x12\x35\n/ACTIVITYPARKOURMODULEMSG_SUB_PARKOURFINISHLEVEL\x10\xdf\xd3\x01\x12\x31\n+ACTIVITYPARKOURMODULEMSG_SUB_PARKOURBUYLIFE\x10\xe0\xd3\x01\x12\x34\n.ACTIVITYPARKOURMODULEMSG_SUB_PARKOURRANKREWARD\x10\xe1\xd3\x01'
   ,
   dependencies=[ItemModuleMsg__pb2.DESCRIPTOR,ActivityModuleMsg__pb2.DESCRIPTOR,])
 
@@ -61,8 +61,8 @@ _ACTIVITYPARKOURMODULEMSGSUBCOMMAND = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=697,
-  serialized_end=995,
+  serialized_start=742,
+  serialized_end=1040,
 )
 _sym_db.RegisterEnumDescriptor(_ACTIVITYPARKOURMODULEMSGSUBCOMMAND)
 
@@ -143,6 +143,20 @@ _PARKOURINFORESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='consumeEnergy', full_name='com.common.msg.ParkourInfoResponse.consumeEnergy', index=4,
+      number=5, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='convertLife', full_name='com.common.msg.ParkourInfoResponse.convertLife', index=5,
+      number=6, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -155,8 +169,8 @@ _PARKOURINFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=138,
-  serialized_end=237,
+  serialized_start=139,
+  serialized_end=282,
 )
 
 
@@ -187,8 +201,8 @@ _PARKOURSTARTLEVELREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=239,
-  serialized_end=285,
+  serialized_start=284,
+  serialized_end=330,
 )
 
 
@@ -226,8 +240,8 @@ _PARKOURSTARTLEVELRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=287,
-  serialized_end=355,
+  serialized_start=332,
+  serialized_end=400,
 )
 
 
@@ -265,8 +279,8 @@ _PARKOURFINISHLEVELREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=357,
-  serialized_end=444,
+  serialized_start=402,
+  serialized_end=489,
 )
 
 
@@ -290,8 +304,8 @@ _PARKOURFINISHLEVELRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=446,
-  serialized_end=474,
+  serialized_start=491,
+  serialized_end=519,
 )
 
 
@@ -329,8 +343,8 @@ _PARKOURBUYLIFEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=476,
-  serialized_end=539,
+  serialized_start=521,
+  serialized_end=584,
 )
 
 
@@ -354,8 +368,8 @@ _PARKOURBUYLIFERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=541,
-  serialized_end=565,
+  serialized_start=586,
+  serialized_end=610,
 )
 
 
@@ -386,8 +400,8 @@ _PARKOURRANKREWARDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=567,
-  serialized_end=613,
+  serialized_start=612,
+  serialized_end=658,
 )
 
 
@@ -418,8 +432,8 @@ _PARKOURRANKREWARDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=615,
-  serialized_end=694,
+  serialized_start=660,
+  serialized_end=739,
 )
 
 _PARKOURFINISHLEVELREQUEST.fields_by_name['items'].message_type = ItemModuleMsg__pb2._ITEMMSG

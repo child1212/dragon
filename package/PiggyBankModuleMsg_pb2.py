@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x18PiggyBankModuleMsg.proto\x12\x0e\x63om.common.msg\x1a\x13ItemModuleMsg.proto\"U\n\x10PiggyBankInfoMsg\x12\x0e\n\x06\x62\x61nkId\x18\x01 \x01(\t\x12\x11\n\tstartTime\x18\x02 \x01(\x03\x12\x0e\n\x06\x65nergy\x18\x03 \x01(\x05\x12\x0e\n\x06\x62ought\x18\x04 \x01(\x08\"\'\n\x15PiggyBankStartRequest\x12\x0e\n\x06\x62\x61nkId\x18\x01 \x02(\t\"\x18\n\x16PiggyBankStartResponse\"\x1a\n\x18PiggyBankUpdateIdRequest\"\x1b\n\x19PiggyBankUpdateIdResponse*{\n\x1cPiggyBankModuleMsgSubCommand\x12+\n%PIGGYBANKMODULEMSG_SUB_PIGGYBANKSTART\x10\xd1\xd7\x01\x12.\n(PIGGYBANKMODULEMSG_SUB_PIGGYBANKUPDATEID\x10\xd2\xd7\x01'
+  serialized_pb=b'\n\x18PiggyBankModuleMsg.proto\x12\x0e\x63om.common.msg\x1a\x13ItemModuleMsg.proto\"d\n\x10PiggyBankInfoMsg\x12\x0e\n\x06\x62\x61nkId\x18\x01 \x01(\t\x12\x11\n\tstartTime\x18\x02 \x01(\x03\x12\x0e\n\x06\x65nergy\x18\x03 \x01(\x05\x12\x0e\n\x06\x62ought\x18\x04 \x01(\x08\x12\r\n\x05group\x18\x05 \x01(\t\"\'\n\x15PiggyBankStartRequest\x12\x0e\n\x06\x62\x61nkId\x18\x01 \x02(\t\"\x18\n\x16PiggyBankStartResponse\"\x1a\n\x18PiggyBankUpdateIdRequest\"\x1b\n\x19PiggyBankUpdateIdResponse*{\n\x1cPiggyBankModuleMsgSubCommand\x12+\n%PIGGYBANKMODULEMSG_SUB_PIGGYBANKSTART\x10\xd1\xd7\x01\x12.\n(PIGGYBANKMODULEMSG_SUB_PIGGYBANKUPDATEID\x10\xd2\xd7\x01'
   ,
   dependencies=[ItemModuleMsg__pb2.DESCRIPTOR,])
 
@@ -45,8 +45,8 @@ _PIGGYBANKMODULEMSGSUBCOMMAND = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=276,
-  serialized_end=399,
+  serialized_start=291,
+  serialized_end=414,
 )
 _sym_db.RegisterEnumDescriptor(_PIGGYBANKMODULEMSGSUBCOMMAND)
 
@@ -92,6 +92,13 @@ _PIGGYBANKINFOMSG = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='group', full_name='com.common.msg.PiggyBankInfoMsg.group', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -105,7 +112,7 @@ _PIGGYBANKINFOMSG = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=65,
-  serialized_end=150,
+  serialized_end=165,
 )
 
 
@@ -136,8 +143,8 @@ _PIGGYBANKSTARTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=152,
-  serialized_end=191,
+  serialized_start=167,
+  serialized_end=206,
 )
 
 
@@ -161,8 +168,8 @@ _PIGGYBANKSTARTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=193,
-  serialized_end=217,
+  serialized_start=208,
+  serialized_end=232,
 )
 
 
@@ -186,8 +193,8 @@ _PIGGYBANKUPDATEIDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=219,
-  serialized_end=245,
+  serialized_start=234,
+  serialized_end=260,
 )
 
 
@@ -211,8 +218,8 @@ _PIGGYBANKUPDATEIDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=247,
-  serialized_end=274,
+  serialized_start=262,
+  serialized_end=289,
 )
 
 DESCRIPTOR.message_types_by_name['PiggyBankInfoMsg'] = _PIGGYBANKINFOMSG

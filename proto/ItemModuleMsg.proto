@@ -20,6 +20,10 @@ enum ItemModuleMsgSubCommand {
 	ITEMMODULEMSG_SUB_SUPPLEMENTENERGY = 2009;
 	//快捷补充
 	ITEMMODULEMSG_SUB_SUPPLEMENTITEM = 2010;
+	//替换道具请求(版本变化旧道具转成新道具)
+	ITEMMODULEMSG_SUB_REPLACEITEM = 2011;
+	//道具分解
+	ITEMMODULEMSG_SUB_DECOMPOSEITEM = 2012;
 }
 
 //玩家道具
@@ -65,6 +69,64 @@ message SubItemResponse {
 	optional bool isSuccess = 1;
 }
 
+// 龙技能
+message DragonSkillMsg {
+	// 技能
+	optional string skillId = 1;
+	// 技能时间
+	optional int64 skillTime = 2;
+}
+
+// 龙装扮
+message DragonSkinMsg {
+	// 装扮实例ID
+	optional int64 skinId = 1;
+	// 装扮配置ID
+	optional string tplId = 2;
+	// 龙ID
+	optional int64 creatureId = 3;
+	// 增加的体力上限
+	optional int32 energyLimit = 4;
+	// 装备的时间 
+	optional int64 equipTime = 5;
+}
+
+//龙信息
+message MagicalCreatureMsg {
+	// 实例id
+	required int64 creatureId = 1;
+	// 模板id
+	required string templateId = 2;
+	// 体力
+	optional int32 physicalStrength = 3;
+	// 上次体力恢复时间
+	optional int64 getPhysicalStrengthTime = 4;
+	// 所在巢type
+	optional int32 nestType = 5;
+	// 上次收集挂机收益时间
+	optional int64 lastCollectHangUpRewardTime = 6;
+	// 饱食结束时间
+	optional int64 repletionEndTime = 7;
+	// cd时间内抚摸奖励次数
+	optional int32 rewardCnt = 8;
+	// cd时间内首次抚摸领奖励时间
+	optional int64 firstRewardTime = 9;
+	// 是否为探索龙
+	optional bool explore = 10;
+	// 龙技能
+	repeated DragonSkillMsg skills = 11;
+	//上一次皇冠龙挂机奖励时间
+	optional int64 lastCrownHangUpRewardTime = 12;
+	// 装扮
+	repeated DragonSkinMsg skins = 13;
+	//龙迷宫状态结束时间
+	optional int64 mazeEndTime = 14;
+	// 每日领取挂机奖励次数
+	optional int32 todayHangUpRewardCnt = 15;
+	// 总领取挂机奖励次数
+	optional int32 totalHangUpRewardCnt = 16;
+}
+
 //使用道具请求
 message UseItemRequest {
 	//使用的道具id
@@ -89,6 +151,8 @@ message UseItemResponse {
 	optional int64 creatureId = 3;
 	//使用礼包后获得的道具
 	repeated ItemMsg items = 4;
+	//龙道具使用后获得龙
+	repeated MagicalCreatureMsg creatures = 5;
 }
 
 //兑换道具请求
@@ -152,64 +216,6 @@ message SupplementEnergyResponse {
 	required int32 energies = 3;
 }
 
-// 龙技能
-message DragonSkillMsg {
-	// 技能
-	optional string skillId = 1;
-	// 技能时间
-	optional int64 skillTime = 2;
-}
-
-// 龙装扮
-message DragonSkinMsg {
-	// 装扮实例ID
-	optional int64 skinId = 1;
-	// 装扮配置ID
-	optional string tplId = 2;
-	// 龙ID
-	optional int64 creatureId = 3;
-	// 增加的体力上限
-	optional int32 energyLimit = 4;
-	// 装备的时间 
-	optional int64 equipTime = 5;
-}
-
-//龙信息
-message MagicalCreatureMsg {
-	// 实例id
-	required int64 creatureId = 1;
-	// 模板id
-	required string templateId = 2;
-	// 体力
-	optional int32 physicalStrength = 3;
-	// 上次体力恢复时间
-	optional int64 getPhysicalStrengthTime = 4;
-	// 所在巢type
-	optional int32 nestType = 5;
-	// 上次收集挂机收益时间
-	optional int64 lastCollectHangUpRewardTime = 6;
-	// 饱食结束时间
-	optional int64 repletionEndTime = 7;
-	// cd时间内抚摸奖励次数
-	optional int32 rewardCnt = 8;
-	// cd时间内首次抚摸领奖励时间
-	optional int64 firstRewardTime = 9;
-	// 是否为探索龙
-	optional bool explore = 10;
-	// 龙技能
-	repeated DragonSkillMsg skills = 11;
-	//上一次皇冠龙挂机奖励时间
-	optional int64 lastCrownHangUpRewardTime = 12;
-	// 装扮
-	repeated DragonSkinMsg skins = 13;
-	//龙迷宫状态结束时间
-	optional int64 mazeEndTime = 14;
-	// 每日领取挂机奖励次数
-	optional int32 todayHangUpRewardCnt = 15;
-	// 总领取挂机奖励次数
-	optional int32 totalHangUpRewardCnt = 16;
-}
-
 message SupplementItem {
 	//兑换道具模板id
 	optional string itemTemplateId = 1;
@@ -227,4 +233,21 @@ message SupplementItemRequest {
 //快捷补充响应
 message SupplementItemResponse {
 	
+}
+
+//替换道具请求(版本变化旧道具转成新道具)
+message ReplaceItemRequest {
+}
+
+//替换道具请求(版本变化旧道具转成新道具)响应
+message ReplaceItemResponse {
+}
+
+//道具分解请求
+message DecomposeItemRequest {
+	repeated string itemIds = 1;
+}
+
+//道具分解响应
+message DecomposeItemResponse {
 }

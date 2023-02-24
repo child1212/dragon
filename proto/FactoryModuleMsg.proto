@@ -16,6 +16,16 @@ enum FactoryModuleMsgSubCommand {
 	FACTORYMODULEMSG_SUB_FACTORYCENTERUPLEVEL = 25105;
 	// 使用道具加速生产
 	FACTORYMODULEMSG_SUB_USEITEMACCELERATEPRODUCE = 25106;
+	// 使用图纸道具解锁生产
+	FACTORYMODULEMSG_SUB_USEDESIGNITEMUNLOCK = 25107;
+}
+
+// 打造记录 也用作生产解锁
+message ProduceRecordMsg {
+	// 打造道具id
+	required string itemId = 1;
+	// 打造次数
+	required int32 times = 2;
 }
 
 message FactoryMsg {
@@ -27,6 +37,8 @@ message FactoryMsg {
   required int64 startTime = 3;
   // 生产物资
   repeated string itemIds = 4;
+  // 生产次数
+  repeated ProduceRecordMsg produceRecords = 5;
 }
 
 message FactoryProduceMsg {
@@ -54,7 +66,7 @@ message AddFactoryProduceRequest {
 
 // 添加生产物资队列 响应
 message AddFactoryProduceResponse {
-	// 同步道具
+	// 同步消耗道具
 	repeated ItemMsg items = 1;
 	repeated FactoryMsg factorys = 2;
 }
@@ -66,7 +78,7 @@ message ReceiveFactoryProduceRequest {
 
 // 领取生产物资 响应
 message ReceiveFactoryProduceResponse {
-	// 同步道具
+	// 获得道具
 	repeated ItemMsg items = 1;
 	repeated FactoryMsg factorys = 2;
 }
@@ -81,7 +93,7 @@ message AccelerateProduceRequest {
 
 // 加速生产 响应
 message AccelerateProduceResponse {
-	// 同步道具
+	// 获得道具
 	repeated ItemMsg items = 1;
 	repeated FactoryMsg factorys = 2;
 }
@@ -92,7 +104,6 @@ message FactoryCenterUpLevelRequest {
 
 // 生产基地升级 响应
 message FactoryCenterUpLevelResponse {
-	// 同步道具
 	repeated ItemMsg items = 1;
 }
 
@@ -105,7 +116,17 @@ message UseItemAccelerateProduceRequest {
 
 // 使用道具加速生产 响应
 message UseItemAccelerateProduceResponse {
-	// 同步道具
+	// 获得道具
 	repeated ItemMsg items = 1;
 	repeated FactoryMsg factorys = 2;
+}
+
+// 使用图纸道具解锁生产 请求
+message UseDesignitemUnlockRequest {
+	// 道具id
+	repeated string itemTemplateIds = 1;
+}
+
+// 使用图纸道具解锁生产 响应
+message UseDesignitemUnlockResponse {
 }

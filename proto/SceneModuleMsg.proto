@@ -4,6 +4,8 @@ import "ItemModuleMsg.proto";
 import "FarmlandModuleMsg.proto";
 import "ConvertFactoryModuleMsg.proto";
 import "CommonTaskModuleMsg.proto";
+import "FactoryModuleMsg.proto";
+import "DragonBuildingModuleMsg.proto";
 
 enum SceneModuleMsgSubCommand {
 	// 场景数据
@@ -58,6 +60,8 @@ enum SceneModuleMsgSubCommand {
 	SCENEMODULEMSG_SUB_CLOSERELICSCENE = 25325;
 	// 完成场景奖励
 	SCENEMODULEMSG_SUB_COMPLETEREWARD = 25326;
+	// 转动水管
+	SCENEMODULEMSG_SUB_TURNPIPE = 25327;
 }
 
 // 障碍物
@@ -150,6 +154,13 @@ message LimitTimePlant {
 	optional int64 endTime = 2;
 }
 
+message PipeMsg {
+	//地图障碍物生成的唯一id
+	optional string plantId = 1;
+	//水管目前状态
+	optional int32 state = 2;
+}
+
 // 场景数据返回
 message SceneInfoResponse {
 	// 障碍物
@@ -176,6 +187,14 @@ message SceneInfoResponse {
 	optional SceneStarMsg starMsg = 11;
 	//限时障碍信息
 	repeated LimitTimePlant limitTimePlants = 12;
+	//水管信息集合
+	repeated PipeMsg pipeMsgs = 13;
+	// 障碍组已掉落的障碍id
+	repeated string dropPlantIds = 14;
+	// 生产工厂信息
+	repeated FactoryMsg factorys = 15;
+	// 龙乐园建筑
+	repeated DragonBuildingMsg dragonBuildings = 16;
 }
 
 // 收集障碍物成就奖励
@@ -214,6 +233,8 @@ message ClearPlantResponse {
 	repeated ItemMsg costs = 7;
 	//龙信息同步 可能会加龙体力等
 	repeated MagicalCreatureMsg creatures = 8;
+	// 是否掉落宝藏
+	optional bool dropTreasure = 9;
 }
 
 //查询场景障碍物是否被清除 用于没有场景数据时的查询
@@ -639,4 +660,22 @@ message CompleteRewardRequest {
 
 // 完成场景奖励响应
 message CompleteRewardResponse {
+}
+
+// 转动水管请求
+message TurnPipeRequest{
+	//场景id
+	optional string sceneId =1;
+	//障碍物唯一id
+	optional string plantId = 2;
+}
+
+// 转动水管响应
+message TurnPipeResponse{
+	//是否接通
+	optional bool finished = 1;
+	//消耗道具数量
+	repeated ItemMsg costs = 2;
+	//障碍物信息
+	optional PlantMsg plants = 3;
 }

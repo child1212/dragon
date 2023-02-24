@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x19\x44ragonDrawModuleMsg.proto\x12\x0e\x63om.common.msg\x1a\x13ItemModuleMsg.proto\"\x17\n\x15\x44ragonDrawInfoRequest\"@\n\x16\x44ragonDrawInfoResponse\x12\r\n\x05times\x18\x01 \x01(\x05\x12\x17\n\x0fnoMustItemTimes\x18\x02 \x01(\x05\"2\n\x11\x44ragonDrawRequest\x12\x0e\n\x06\x64rawId\x18\x01 \x01(\t\x12\r\n\x05\x63ount\x18\x02 \x01(\x05\"U\n\x12\x44ragonDrawResponse\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12\x17\n\x0fnoMustItemTimes\x18\x02 \x01(\x05*w\n\x1d\x44ragonDrawModuleMsgSubCommand\x12,\n&DRAGONDRAWMODULEMSG_SUB_DRAGONDRAWINFO\x10\x89\xd6\x01\x12(\n\"DRAGONDRAWMODULEMSG_SUB_DRAGONDRAW\x10\x8a\xd6\x01'
+  serialized_pb=b'\n\x19\x44ragonDrawModuleMsg.proto\x12\x0e\x63om.common.msg\x1a\x13ItemModuleMsg.proto\"\x17\n\x15\x44ragonDrawInfoRequest\"@\n\x16\x44ragonDrawInfoResponse\x12\r\n\x05times\x18\x01 \x01(\x05\x12\x17\n\x0fnoMustItemTimes\x18\x02 \x01(\x05\"U\n\x11\x44ragonDrawRequest\x12\x0e\n\x06\x64rawId\x18\x01 \x01(\t\x12\r\n\x05\x63ount\x18\x02 \x01(\x05\x12\x10\n\x08goldpass\x18\x03 \x01(\x08\x12\x0f\n\x07vipFree\x18\x04 \x01(\x08\"U\n\x12\x44ragonDrawResponse\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12\x17\n\x0fnoMustItemTimes\x18\x02 \x01(\x05*w\n\x1d\x44ragonDrawModuleMsgSubCommand\x12,\n&DRAGONDRAWMODULEMSG_SUB_DRAGONDRAWINFO\x10\x89\xd6\x01\x12(\n\"DRAGONDRAWMODULEMSG_SUB_DRAGONDRAW\x10\x8a\xd6\x01'
   ,
   dependencies=[ItemModuleMsg__pb2.DESCRIPTOR,])
 
@@ -45,8 +45,8 @@ _DRAGONDRAWMODULEMSGSUBCOMMAND = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=296,
-  serialized_end=415,
+  serialized_start=331,
+  serialized_end=450,
 )
 _sym_db.RegisterEnumDescriptor(_DRAGONDRAWMODULEMSGSUBCOMMAND)
 
@@ -142,6 +142,20 @@ _DRAGONDRAWREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='goldpass', full_name='com.common.msg.DragonDrawRequest.goldpass', index=2,
+      number=3, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='vipFree', full_name='com.common.msg.DragonDrawRequest.vipFree', index=3,
+      number=4, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -155,7 +169,7 @@ _DRAGONDRAWREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=157,
-  serialized_end=207,
+  serialized_end=242,
 )
 
 
@@ -193,8 +207,8 @@ _DRAGONDRAWRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=209,
-  serialized_end=294,
+  serialized_start=244,
+  serialized_end=329,
 )
 
 _DRAGONDRAWRESPONSE.fields_by_name['items'].message_type = ItemModuleMsg__pb2._ITEMMSG

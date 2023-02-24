@@ -38,6 +38,8 @@ message RankMsg {
 	optional string teamname = 11;
 	// 公会头像
 	optional string teamicon = 12;
+	// vip等级
+	optional int32 vipLevel = 13;
 }
 
 // 排行榜信息
@@ -74,6 +76,8 @@ message EndActivityMsg {
 	optional int32 type = 2;
 	// 奖励状态 0: 没有奖励 1:有奖励
 	optional int32 rewardState = 3;
+	// 评价状态 1: 已评价 0:未评价
+	optional int32 evaluate = 4;
 }
 
 // 排行榜奖励信息

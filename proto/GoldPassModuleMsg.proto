@@ -16,6 +16,8 @@ enum GoldPassModuleMsgSubCommand {
 	GOLDPASSMODULEMSG_SUB_GOLDPASSREWARD = 25904;
 	// 满级宝箱兑换
 	GOLDPASSMODULEMSG_SUB_GOLDPASSMAXLEVELBOX = 25905;
+	// 跳过任务
+	GOLDPASSMODULEMSG_SUB_GOLDPASSSKIPTASK = 25906;
 }
 
 // 黄金通信证信息请求
@@ -44,6 +46,8 @@ message GoldPassInfoResponse {
 	repeated int32 baseRewards = 9;				// 已领取level（基础奖励）
 	repeated int32 passRewards = 10;			// 已领取level（通行证奖励) 
 	optional int32 exchangeGold = 11;			// 满级兑换的金币 
+	optional int64 unlockTime = 12;			// 解锁黄金通行证的时间戳(毫秒) 如没有解锁此值无效
+	optional int32 taskNum= 13;			// 通行证多倍积分已提交任务数量
 }
 
 // 黄金通行证任务完成结果
@@ -96,4 +100,14 @@ message GoldPassMaxLevelBoxRequest {
 message GoldPassMaxLevelBoxResponse {
 	// 兑换的奖励
 	repeated ItemMsg rewards = 1;
+}
+
+// 跳过任务请求
+message GoldPassSkipTaskRequest {
+	optional string activityId = 1;	// 活动ID
+}
+
+// 跳过任务响应
+message GoldPassSkipTaskResponse {
+	optional GoldPassInfoResponse info = 1;
 }

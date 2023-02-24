@@ -82,14 +82,14 @@ for line in sr:
 
     for tp in lis_dic:
         if tp["num"] != 0:
-            tacc[tp["name"]] = tp["num"]#新的
+            tacc[(str(tp["id"]))+"-"+tp["name"]] = tp["num"]#新的
             old_tacc = total.get(account)
             if old_tacc is not None:
-                if tacc.get(tp["name"]) != old_tacc.get(tp["name"]):
-                    if old_tacc.get(tp["name"]) is not None:
-                        print('='*(25-len(tp["name"])*2),tp["name"],":",tp["num"],"-"*(10-len(str(tp["num"]))),"change:",tacc[tp["name"]]-old_tacc.get(tp["name"]))
+                if tacc.get((str(tp["id"]))+"-"+tp["name"]) != old_tacc.get((str(tp["id"]))+"-"+tp["name"]):
+                    if old_tacc.get((str(tp["id"]))+"-"+tp["name"]) is not None:
+                        print('='*(32-len(tp["name"])*2-len((str(tp["id"])))),(str(tp["id"]))+"-"+tp["name"],":",tp["num"],"-"*(10-len(str(tp["num"]))),"change:",tacc[(str(tp["id"]))+"-"+tp["name"]]-old_tacc.get((str(tp["id"]))+"-"+tp["name"]))
                     else:
-                        print('='*(25-len(tp["name"])*2),tp["name"],":",tp["num"],"-"*(10-len(str(tp["num"]))),"change:",tacc[tp["name"]])
+                        print('='*(32-len(tp["name"])*2-len((str(tp["id"])))),(str(tp["id"]))+"-"+tp["name"],":",tp["num"],"-"*(10-len(str(tp["num"]))),"change:",tacc[(str(tp["id"]))+"-"+tp["name"]])
     total[account] = tacc
     
 
