@@ -77,7 +77,7 @@ def many_mails(mail_title, mail_content, reward, server, pid_file_path, res_file
 #########################################
 mail_title = "Activity map compensation"
 mail_content = "Dear player, this is the compensation for your reward, please check it"
-reward = [[110001,2]]
+reward = [[101001,10],[102001,10],[103001,10],[104001,10],[105001,10],[106001,10],[107001,10],[108001,10],[109001,10],[110001,10],[111001,10],[201001,10],[202001,10],[203001,10],[204001,10],[205001,10],[206001,10],[207001,10],[301001,10],[302001,10],[303001,10],[401001,10],[402001,10],[403001,10],[404001,10],[1002,10000000]]
 server = "nqa"
 group_num = 10
 pid_file_path = "pid_list.txt"

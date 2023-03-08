@@ -1,7 +1,9 @@
 #%%
+import os
+pack_pos = os.path.dirname(os.path.dirname(__file__))
 import sys
-sys.path.append('D:\\pyprogram\\PyTestTools\\dragon\\package')
-sys.path.append('D:\\pyprogram\\PyTestTools\\dragon\\function')
+sys.path.append('{pack_pos}\\function'.format(pack_pos=pack_pos))
+sys.path.append('{pack_pos}\\package'.format(pack_pos=pack_pos))
 from func_dragon import *
 from xieyi import *
 import GatewayModuleMsg_pb2
@@ -14,11 +16,11 @@ import requests
 # account = "e7f31a3db7b2446589eb37d053caba3e"
 # account = "C71519CC-15DB-44AB-BE21-757A097E0408"
 # account = "DBFABEFD-A297-4C48-B94E-4EC185B6AEE3"
-account = "2902"
+account = "li2001"
 
 server = "qa"
-version = "29.1.0"
-scene = "4"#input("输入地图编号")
+version = "30.1.0"
+scene = "8"#input("输入地图编号")
 skip = 0
 
 

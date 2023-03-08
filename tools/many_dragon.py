@@ -1,7 +1,9 @@
 #%%
+import os
+pack_pos = os.path.dirname(os.path.dirname(__file__))
 import sys
-
-sys.path.append('D:\\pyprogram\\PyTestTools\\dragon\\function')
+sys.path.append('{pack_pos}\\function'.format(pack_pos=pack_pos))
+sys.path.append('{pack_pos}\\package'.format(pack_pos=pack_pos))
 import time
 from func_dragon import *
 import os
@@ -11,8 +13,8 @@ import os
 
 
 print("start time:",time.asctime(time.localtime()))
-account = "li2001"
-level = "3"
+account = "zty001"
+level = "泥块"
 p = ""
 num = 1
 server = 'qa'

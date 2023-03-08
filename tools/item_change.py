@@ -1,15 +1,17 @@
 #%%
+import os
+pack_pos = os.path.dirname(os.path.dirname(__file__))
 import sys
-sys.path.append('D:\\pyprogram\\PyTestTools\\dragon\\function')
+sys.path.append('{pack_pos}\\function'.format(pack_pos=pack_pos))
 import time
 from func_dragon import *
-import os
 
 
 #######################################################################################
 #道具各项参数d6e0c013d2c377bbeb3f56a262cf3b99
-accounts = {"te0000","xx0000"}                               #账号                             #
-server = "ntest"                                    #服务器前缀<dev:"tlogin", qa:"qausa">  #
+#FA : 91a4a00cc23bdae216d5dc2519da2c77
+accounts = {"603681214128417"}                       #账号                             #
+server = "dragon"                                    #服务器前缀<dev:"tlogin", qa:"qausa">  #
 #######################################################################################
 
 if server == "ntest":
@@ -65,6 +67,7 @@ while run == '':
         # print("\n\n")
     print("=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=\n")
     run = input("contune?")
+    os.system("adb shell input tap 2074 1262")
 
 
 

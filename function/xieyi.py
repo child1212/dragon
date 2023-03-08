@@ -8,6 +8,7 @@ import GatewayModuleMsg_pb2#结构
 import GMModuleMsg_pb2
 import ChatModuleMsg_pb2
 import TeamModuleMsg_pb2
+import VipModuleMsg_pb2
 
 #登录#1001
 def login(account,server,version):
@@ -261,6 +262,39 @@ def leave_team(login_res,server,version,cid):
     struct.sequenceId = 0
     struct.version = version
     url = "{server}/game/{version}?id=27003&uid={pid}".format(server=server, version=version, pid=login_res.playerId)
+    response = requests.put(url,data=request.SerializeToString())
+    if response.status_code==200 : 
+        resa.ParseFromString(response.content)
+        res_100.ParseFromString(resa.bodys[0].msgBody)
+        print(resa)
+        return resa
+    else:
+        print("Server Disconnected ！！!")
+        return 0
+
+
+def get_vip(login_res,server,version):
+    '''
+    login_res:1001返回数据
+    server:服务器
+    version:版本号
+    cid:公会id
+    '''
+    request = GatewayModuleMsg_pb2.GatewayPackageRequest()
+    msgbody = VipModuleMsg_pb2.VipInfoRequest()
+    resa = GatewayModuleMsg_pb2.GatewayPackageResponse()
+    res_100 = VipModuleMsg_pb2.VipInfoResponse()
+    request.senderId = login_res.playerId
+    request.sessionId = login_res.sessionId
+    msg = msgbody.SerializeToString()
+    struct = request.bodys.add()
+    struct.code = 0
+    struct.msgId =28801
+    struct.msgBody = msg
+    struct.genTime = int(time.time()*1000)
+    struct.sequenceId = 0
+    struct.version = version
+    url = "{server}/game/{version}?id=28801&uid={pid}".format(server=server, version=version, pid=login_res.playerId)
     response = requests.put(url,data=request.SerializeToString())
     if response.status_code==200 : 
         resa.ParseFromString(response.content)

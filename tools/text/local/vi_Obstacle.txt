@@ -485,3 +485,16 @@ glasses
 specialspices
 luckyclover
 clover
+explosive
+data
+Energystone
+element
+barricade
+AIchips
+carrot
+blackfabric
+waterpipe
+cogs
+Wirerings
+TreasureChest
+plaster

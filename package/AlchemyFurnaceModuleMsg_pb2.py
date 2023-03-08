@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1d\x41lchemyFurnaceModuleMsg.proto\x12\x0e\x63om.common.msg\x1a\x13ItemModuleMsg.proto\"\x1b\n\x19\x41lchemyFurnaceInfoRequest\"7\n\rCumulateAward\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"\xca\x01\n\x1a\x41lchemyFurnaceInfoResponse\x12\x11\n\tcdEndMill\x18\x02 \x02(\x03\x12\x1e\n\x16\x63umulativeAwardEndMill\x18\x03 \x02(\x03\x12\x0e\n\x06itemId\x18\x04 \x02(\t\x12\x37\n\x10\x63umulativeAwards\x18\x05 \x03(\x0b\x32\x1d.com.common.msg.CumulateAward\x12\x15\n\rcumulativeNum\x18\x06 \x02(\x05\x12\x19\n\x11\x63umulativeCfgNums\x18\x07 \x03(\x05\"\x1d\n\x0e\x41lchemyRequest\x12\x0b\n\x03\x61\x64s\x18\x01 \x01(\x08\"b\n\x0f\x41lchemyResponse\x12,\n\x0brewardItems\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12\x11\n\tcdEndTime\x18\x02 \x02(\x03\x12\x0e\n\x06itemId\x18\x03 \x02(\t\"=\n\x1d\x46inishAlchemyFurnaceCDRequest\x12\x0f\n\x07needNum\x18\x01 \x02(\x05\x12\x0b\n\x03\x61\x64s\x18\x02 \x01(\x08\"-\n\x1e\x46inishAlchemyFurnaceCDResponse\x12\x0b\n\x03num\x18\x01 \x02(\x05\"\x14\n\x12SkipAlchemyRequest\"\x15\n\x13SkipAlchemyResponse*\xed\x01\n!AlchemyFurnaceModuleMsgSubCommand\x12\x34\n.ALCHEMYFURNACEMODULEMSG_SUB_ALCHEMYFURNACEINFO\x10\x91\xcb\x01\x12)\n#ALCHEMYFURNACEMODULEMSG_SUB_ALCHEMY\x10\x92\xcb\x01\x12\x38\n2ALCHEMYFURNACEMODULEMSG_SUB_FINISHALCHEMYFURNACECD\x10\x93\xcb\x01\x12-\n\'ALCHEMYFURNACEMODULEMSG_SUB_SKIPALCHEMY\x10\x94\xcb\x01'
+  serialized_pb=b'\n\x1d\x41lchemyFurnaceModuleMsg.proto\x12\x0e\x63om.common.msg\x1a\x13ItemModuleMsg.proto\"\x1b\n\x19\x41lchemyFurnaceInfoRequest\"7\n\rCumulateAward\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"\xca\x01\n\x1a\x41lchemyFurnaceInfoResponse\x12\x11\n\tcdEndMill\x18\x02 \x02(\x03\x12\x1e\n\x16\x63umulativeAwardEndMill\x18\x03 \x02(\x03\x12\x0e\n\x06itemId\x18\x04 \x02(\t\x12\x37\n\x10\x63umulativeAwards\x18\x05 \x03(\x0b\x32\x1d.com.common.msg.CumulateAward\x12\x15\n\rcumulativeNum\x18\x06 \x02(\x05\x12\x19\n\x11\x63umulativeCfgNums\x18\x07 \x03(\x05\"\x10\n\x0e\x41lchemyRequest\"b\n\x0f\x41lchemyResponse\x12,\n\x0brewardItems\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12\x11\n\tcdEndTime\x18\x02 \x02(\x03\x12\x0e\n\x06itemId\x18\x03 \x02(\t\"=\n\x1d\x46inishAlchemyFurnaceCDRequest\x12\x0f\n\x07needNum\x18\x01 \x02(\x05\x12\x0b\n\x03\x61\x64s\x18\x02 \x01(\x08\"-\n\x1e\x46inishAlchemyFurnaceCDResponse\x12\x0b\n\x03num\x18\x01 \x02(\x05\"\x14\n\x12SkipAlchemyRequest\"\x15\n\x13SkipAlchemyResponse*\xed\x01\n!AlchemyFurnaceModuleMsgSubCommand\x12\x34\n.ALCHEMYFURNACEMODULEMSG_SUB_ALCHEMYFURNACEINFO\x10\x91\xcb\x01\x12)\n#ALCHEMYFURNACEMODULEMSG_SUB_ALCHEMY\x10\x92\xcb\x01\x12\x38\n2ALCHEMYFURNACEMODULEMSG_SUB_FINISHALCHEMYFURNACECD\x10\x93\xcb\x01\x12-\n\'ALCHEMYFURNACEMODULEMSG_SUB_SKIPALCHEMY\x10\x94\xcb\x01'
   ,
   dependencies=[ItemModuleMsg__pb2.DESCRIPTOR,])
 
@@ -55,8 +55,8 @@ _ALCHEMYFURNACEMODULEMSGSUBCOMMAND = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=648,
-  serialized_end=885,
+  serialized_start=635,
+  serialized_end=872,
 )
 _sym_db.RegisterEnumDescriptor(_ALCHEMYFURNACEMODULEMSGSUBCOMMAND)
 
@@ -200,13 +200,6 @@ _ALCHEMYREQUEST = _descriptor.Descriptor(
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
-    _descriptor.FieldDescriptor(
-      name='ads', full_name='com.common.msg.AlchemyRequest.ads', index=0,
-      number=1, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -220,7 +213,7 @@ _ALCHEMYREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=361,
-  serialized_end=390,
+  serialized_end=377,
 )
 
 
@@ -265,8 +258,8 @@ _ALCHEMYRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=392,
-  serialized_end=490,
+  serialized_start=379,
+  serialized_end=477,
 )
 
 
@@ -304,8 +297,8 @@ _FINISHALCHEMYFURNACECDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=492,
-  serialized_end=553,
+  serialized_start=479,
+  serialized_end=540,
 )
 
 
@@ -336,8 +329,8 @@ _FINISHALCHEMYFURNACECDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=555,
-  serialized_end=600,
+  serialized_start=542,
+  serialized_end=587,
 )
 
 
@@ -361,8 +354,8 @@ _SKIPALCHEMYREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=602,
-  serialized_end=622,
+  serialized_start=589,
+  serialized_end=609,
 )
 
 
@@ -386,8 +379,8 @@ _SKIPALCHEMYRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=624,
-  serialized_end=645,
+  serialized_start=611,
+  serialized_end=632,
 )
 
 _CUMULATEAWARD.fields_by_name['items'].message_type = ItemModuleMsg__pb2._ITEMMSG

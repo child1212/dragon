@@ -12,7 +12,6 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-import ItemModuleMsg_pb2 as ItemModuleMsg__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -21,9 +20,8 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x19\x44ragonMazeModuleMsg.proto\x12\x0e\x63om.common.msg\x1a\x13ItemModuleMsg.proto\"\x1a\n\x18\x44ragonMazeInfoV23Request\"p\n\x08MazeInfo\x12\x0c\n\x04type\x18\x01 \x01(\x05\x12\x13\n\x0b\x66inishLevel\x18\x02 \x01(\x05\x12\x0f\n\x07\x65ndTime\x18\x03 \x01(\x03\x12\x16\n\x0elastEnterLevel\x18\x04 \x01(\x05\x12\x18\n\x10quickPassEndTime\x18\x05 \x01(\x03\"H\n\x19\x44ragonMazeInfoV23Response\x12+\n\tmazeInfos\x18\x01 \x03(\x0b\x32\x18.com.common.msg.MazeInfo\"L\n\x1aQuickPassDragonMazeRequest\x12\x0c\n\x04type\x18\x01 \x01(\x05\x12\r\n\x05level\x18\x02 \x01(\x05\x12\x11\n\tcreatures\x18\x03 \x03(\x03\"\x8f\x01\n\x1bQuickPassDragonMazeResponse\x12\x35\n\tcreatures\x18\x01 \x03(\x0b\x32\".com.common.msg.MagicalCreatureMsg\x12&\n\x05items\x18\x02 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12\x11\n\tcdEndTime\x18\x03 \x01(\x03\"C\n\x18\x46inishQuickPassCDRequest\x12\x0c\n\x04type\x18\x01 \x01(\x05\x12\x0c\n\x04\x63ost\x18\x02 \x01(\x05\x12\x0b\n\x03\x61\x64s\x18\x03 \x01(\x08\")\n\x19\x46inishQuickPassCDResponse\x12\x0c\n\x04\x63ost\x18\x01 \x01(\x05\"\x17\n\x15\x44ragonMazeInfoRequest\"w\n\x16\x44ragonMazeInfoResponse\x12\r\n\x05\x63ount\x18\x01 \x02(\x05\x12\x13\n\x0b\x66inishLevel\x18\x02 \x02(\x05\x12\x0f\n\x07\x65ndTime\x18\x03 \x02(\x03\x12\x10\n\x08\x62uyCount\x18\x04 \x02(\x05\x12\x16\n\x0elastEnterLevel\x18\x05 \x02(\x05\"Z\n\x16OpenOrEnterMazeRequest\x12\x10\n\x08\x64iamonds\x18\x01 \x01(\x05\x12\x11\n\tcreatures\x18\x02 \x03(\x03\x12\r\n\x05level\x18\x03 \x02(\x05\x12\x0c\n\x04type\x18\x04 \x01(\x05\"*\n\x17OpenOrEnterMazeResponse\x12\x0f\n\x07\x65ndTime\x18\x01 \x02(\x03\"$\n\x14\x44ragonMazeEndRequest\x12\x0c\n\x04type\x18\x01 \x01(\x05\"\x17\n\x15\x44ragonMazeEndResponse\"\x1b\n\x19\x44ragonMazeShopInfoRequest\"<\n\x0fMazeShopProduct\x12\n\n\x02id\x18\x01 \x02(\t\x12\r\n\x05\x63ount\x18\x02 \x02(\x05\x12\x0e\n\x06pIndex\x18\x03 \x02(\x05\"O\n\x1a\x44ragonMazeShopInfoResponse\x12\x31\n\x08products\x18\x01 \x03(\x0b\x32\x1f.com.common.msg.MazeShopProduct\"6\n\x19\x42uyMazeShopProductRequest\x12\n\n\x02id\x18\x01 \x02(\t\x12\r\n\x05\x63ount\x18\x02 \x01(\x05\"\x1c\n\x1a\x42uyMazeShopProductResponse*\xa2\x03\n\x1d\x44ragonMazeModuleMsgSubCommand\x12,\n&DRAGONMAZEMODULEMSG_SUB_DRAGONMAZEINFO\x10\xb1\xd1\x01\x12-\n\'DRAGONMAZEMODULEMSG_SUB_OPENORENTERMAZE\x10\xb2\xd1\x01\x12+\n%DRAGONMAZEMODULEMSG_SUB_DRAGONMAZEEND\x10\xb3\xd1\x01\x12\x30\n*DRAGONMAZEMODULEMSG_SUB_DRAGONMAZESHOPINFO\x10\xb4\xd1\x01\x12\x30\n*DRAGONMAZEMODULEMSG_SUB_BUYMAZESHOPPRODUCT\x10\xb5\xd1\x01\x12/\n)DRAGONMAZEMODULEMSG_SUB_DRAGONMAZEINFOV23\x10\xb6\xd1\x01\x12\x31\n+DRAGONMAZEMODULEMSG_SUB_QUICKPASSDRAGONMAZE\x10\xb7\xd1\x01\x12/\n)DRAGONMAZEMODULEMSG_SUB_FINISHQUICKPASSCD\x10\xb8\xd1\x01'
-  ,
-  dependencies=[ItemModuleMsg__pb2.DESCRIPTOR,])
+  serialized_pb=b'\n\x19\x44ragonMazeModuleMsg.proto\x12\x0e\x63om.common.msg\"\x17\n\x15\x44ragonMazeInfoRequest\"w\n\x16\x44ragonMazeInfoResponse\x12\r\n\x05\x63ount\x18\x01 \x02(\x05\x12\x13\n\x0b\x66inishLevel\x18\x02 \x02(\x05\x12\x0f\n\x07\x65ndTime\x18\x03 \x02(\x03\x12\x10\n\x08\x62uyCount\x18\x04 \x02(\x05\x12\x16\n\x0elastEnterLevel\x18\x05 \x02(\x05\"L\n\x16OpenOrEnterMazeRequest\x12\x10\n\x08\x64iamonds\x18\x01 \x01(\x05\x12\x11\n\tcreatures\x18\x02 \x03(\x03\x12\r\n\x05level\x18\x03 \x02(\x05\"*\n\x17OpenOrEnterMazeResponse\x12\x0f\n\x07\x65ndTime\x18\x01 \x02(\x03\"\x16\n\x14\x44ragonMazeEndRequest\"\x17\n\x15\x44ragonMazeEndResponse\"\x1b\n\x19\x44ragonMazeShopInfoRequest\"<\n\x0fMazeShopProduct\x12\n\n\x02id\x18\x01 \x02(\t\x12\r\n\x05\x63ount\x18\x02 \x02(\x05\x12\x0e\n\x06pIndex\x18\x03 \x02(\x05\"O\n\x1a\x44ragonMazeShopInfoResponse\x12\x31\n\x08products\x18\x01 \x03(\x0b\x32\x1f.com.common.msg.MazeShopProduct\"\'\n\x19\x42uyMazeShopProductRequest\x12\n\n\x02id\x18\x01 \x02(\t\"\x1c\n\x1a\x42uyMazeShopProductResponse*\x8d\x02\n\x1d\x44ragonMazeModuleMsgSubCommand\x12,\n&DRAGONMAZEMODULEMSG_SUB_DRAGONMAZEINFO\x10\xb1\xd1\x01\x12-\n\'DRAGONMAZEMODULEMSG_SUB_OPENORENTERMAZE\x10\xb2\xd1\x01\x12+\n%DRAGONMAZEMODULEMSG_SUB_DRAGONMAZEEND\x10\xb3\xd1\x01\x12\x30\n*DRAGONMAZEMODULEMSG_SUB_DRAGONMAZESHOPINFO\x10\xb4\xd1\x01\x12\x30\n*DRAGONMAZEMODULEMSG_SUB_BUYMAZESHOPPRODUCT\x10\xb5\xd1\x01'
+)
 
 _DRAGONMAZEMODULEMSGSUBCOMMAND = _descriptor.EnumDescriptor(
   name='DragonMazeModuleMsgSubCommand',
@@ -57,26 +55,11 @@ _DRAGONMAZEMODULEMSGSUBCOMMAND = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='DRAGONMAZEMODULEMSG_SUB_DRAGONMAZEINFOV23', index=5, number=26806,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='DRAGONMAZEMODULEMSG_SUB_QUICKPASSDRAGONMAZE', index=6, number=26807,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='DRAGONMAZEMODULEMSG_SUB_FINISHQUICKPASSCD', index=7, number=26808,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1222,
-  serialized_end=1640,
+  serialized_start=606,
+  serialized_end=875,
 )
 _sym_db.RegisterEnumDescriptor(_DRAGONMAZEMODULEMSGSUBCOMMAND)
 
@@ -86,297 +69,7 @@ DRAGONMAZEMODULEMSG_SUB_OPENORENTERMAZE = 26802
 DRAGONMAZEMODULEMSG_SUB_DRAGONMAZEEND = 26803
 DRAGONMAZEMODULEMSG_SUB_DRAGONMAZESHOPINFO = 26804
 DRAGONMAZEMODULEMSG_SUB_BUYMAZESHOPPRODUCT = 26805
-DRAGONMAZEMODULEMSG_SUB_DRAGONMAZEINFOV23 = 26806
-DRAGONMAZEMODULEMSG_SUB_QUICKPASSDRAGONMAZE = 26807
-DRAGONMAZEMODULEMSG_SUB_FINISHQUICKPASSCD = 26808
 
-
-
-_DRAGONMAZEINFOV23REQUEST = _descriptor.Descriptor(
-  name='DragonMazeInfoV23Request',
-  full_name='com.common.msg.DragonMazeInfoV23Request',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=66,
-  serialized_end=92,
-)
-
-
-_MAZEINFO = _descriptor.Descriptor(
-  name='MazeInfo',
-  full_name='com.common.msg.MazeInfo',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='type', full_name='com.common.msg.MazeInfo.type', index=0,
-      number=1, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='finishLevel', full_name='com.common.msg.MazeInfo.finishLevel', index=1,
-      number=2, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='endTime', full_name='com.common.msg.MazeInfo.endTime', index=2,
-      number=3, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='lastEnterLevel', full_name='com.common.msg.MazeInfo.lastEnterLevel', index=3,
-      number=4, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='quickPassEndTime', full_name='com.common.msg.MazeInfo.quickPassEndTime', index=4,
-      number=5, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=94,
-  serialized_end=206,
-)
-
-
-_DRAGONMAZEINFOV23RESPONSE = _descriptor.Descriptor(
-  name='DragonMazeInfoV23Response',
-  full_name='com.common.msg.DragonMazeInfoV23Response',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='mazeInfos', full_name='com.common.msg.DragonMazeInfoV23Response.mazeInfos', index=0,
-      number=1, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=208,
-  serialized_end=280,
-)
-
-
-_QUICKPASSDRAGONMAZEREQUEST = _descriptor.Descriptor(
-  name='QuickPassDragonMazeRequest',
-  full_name='com.common.msg.QuickPassDragonMazeRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='type', full_name='com.common.msg.QuickPassDragonMazeRequest.type', index=0,
-      number=1, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='level', full_name='com.common.msg.QuickPassDragonMazeRequest.level', index=1,
-      number=2, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='creatures', full_name='com.common.msg.QuickPassDragonMazeRequest.creatures', index=2,
-      number=3, type=3, cpp_type=2, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=282,
-  serialized_end=358,
-)
-
-
-_QUICKPASSDRAGONMAZERESPONSE = _descriptor.Descriptor(
-  name='QuickPassDragonMazeResponse',
-  full_name='com.common.msg.QuickPassDragonMazeResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='creatures', full_name='com.common.msg.QuickPassDragonMazeResponse.creatures', index=0,
-      number=1, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='items', full_name='com.common.msg.QuickPassDragonMazeResponse.items', index=1,
-      number=2, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='cdEndTime', full_name='com.common.msg.QuickPassDragonMazeResponse.cdEndTime', index=2,
-      number=3, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=361,
-  serialized_end=504,
-)
-
-
-_FINISHQUICKPASSCDREQUEST = _descriptor.Descriptor(
-  name='FinishQuickPassCDRequest',
-  full_name='com.common.msg.FinishQuickPassCDRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='type', full_name='com.common.msg.FinishQuickPassCDRequest.type', index=0,
-      number=1, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='cost', full_name='com.common.msg.FinishQuickPassCDRequest.cost', index=1,
-      number=2, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='ads', full_name='com.common.msg.FinishQuickPassCDRequest.ads', index=2,
-      number=3, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=506,
-  serialized_end=573,
-)
-
-
-_FINISHQUICKPASSCDRESPONSE = _descriptor.Descriptor(
-  name='FinishQuickPassCDResponse',
-  full_name='com.common.msg.FinishQuickPassCDResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='cost', full_name='com.common.msg.FinishQuickPassCDResponse.cost', index=0,
-      number=1, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=575,
-  serialized_end=616,
-)
 
 
 _DRAGONMAZEINFOREQUEST = _descriptor.Descriptor(
@@ -399,8 +92,8 @@ _DRAGONMAZEINFOREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=618,
-  serialized_end=641,
+  serialized_start=45,
+  serialized_end=68,
 )
 
 
@@ -459,8 +152,8 @@ _DRAGONMAZEINFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=643,
-  serialized_end=762,
+  serialized_start=70,
+  serialized_end=189,
 )
 
 
@@ -493,13 +186,6 @@ _OPENORENTERMAZEREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='type', full_name='com.common.msg.OpenOrEnterMazeRequest.type', index=3,
-      number=4, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -512,8 +198,8 @@ _OPENORENTERMAZEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=764,
-  serialized_end=854,
+  serialized_start=191,
+  serialized_end=267,
 )
 
 
@@ -544,8 +230,8 @@ _OPENORENTERMAZERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=856,
-  serialized_end=898,
+  serialized_start=269,
+  serialized_end=311,
 )
 
 
@@ -557,13 +243,6 @@ _DRAGONMAZEENDREQUEST = _descriptor.Descriptor(
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
-    _descriptor.FieldDescriptor(
-      name='type', full_name='com.common.msg.DragonMazeEndRequest.type', index=0,
-      number=1, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -576,8 +255,8 @@ _DRAGONMAZEENDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=900,
-  serialized_end=936,
+  serialized_start=313,
+  serialized_end=335,
 )
 
 
@@ -601,8 +280,8 @@ _DRAGONMAZEENDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=938,
-  serialized_end=961,
+  serialized_start=337,
+  serialized_end=360,
 )
 
 
@@ -626,8 +305,8 @@ _DRAGONMAZESHOPINFOREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=963,
-  serialized_end=990,
+  serialized_start=362,
+  serialized_end=389,
 )
 
 
@@ -672,8 +351,8 @@ _MAZESHOPPRODUCT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=992,
-  serialized_end=1052,
+  serialized_start=391,
+  serialized_end=451,
 )
 
 
@@ -704,8 +383,8 @@ _DRAGONMAZESHOPINFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1054,
-  serialized_end=1133,
+  serialized_start=453,
+  serialized_end=532,
 )
 
 
@@ -724,13 +403,6 @@ _BUYMAZESHOPPRODUCTREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='count', full_name='com.common.msg.BuyMazeShopProductRequest.count', index=1,
-      number=2, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -743,8 +415,8 @@ _BUYMAZESHOPPRODUCTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1135,
-  serialized_end=1189,
+  serialized_start=534,
+  serialized_end=573,
 )
 
 
@@ -768,21 +440,11 @@ _BUYMAZESHOPPRODUCTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1191,
-  serialized_end=1219,
+  serialized_start=575,
+  serialized_end=603,
 )
 
-_DRAGONMAZEINFOV23RESPONSE.fields_by_name['mazeInfos'].message_type = _MAZEINFO
-_QUICKPASSDRAGONMAZERESPONSE.fields_by_name['creatures'].message_type = ItemModuleMsg__pb2._MAGICALCREATUREMSG
-_QUICKPASSDRAGONMAZERESPONSE.fields_by_name['items'].message_type = ItemModuleMsg__pb2._ITEMMSG
 _DRAGONMAZESHOPINFORESPONSE.fields_by_name['products'].message_type = _MAZESHOPPRODUCT
-DESCRIPTOR.message_types_by_name['DragonMazeInfoV23Request'] = _DRAGONMAZEINFOV23REQUEST
-DESCRIPTOR.message_types_by_name['MazeInfo'] = _MAZEINFO
-DESCRIPTOR.message_types_by_name['DragonMazeInfoV23Response'] = _DRAGONMAZEINFOV23RESPONSE
-DESCRIPTOR.message_types_by_name['QuickPassDragonMazeRequest'] = _QUICKPASSDRAGONMAZEREQUEST
-DESCRIPTOR.message_types_by_name['QuickPassDragonMazeResponse'] = _QUICKPASSDRAGONMAZERESPONSE
-DESCRIPTOR.message_types_by_name['FinishQuickPassCDRequest'] = _FINISHQUICKPASSCDREQUEST
-DESCRIPTOR.message_types_by_name['FinishQuickPassCDResponse'] = _FINISHQUICKPASSCDRESPONSE
 DESCRIPTOR.message_types_by_name['DragonMazeInfoRequest'] = _DRAGONMAZEINFOREQUEST
 DESCRIPTOR.message_types_by_name['DragonMazeInfoResponse'] = _DRAGONMAZEINFORESPONSE
 DESCRIPTOR.message_types_by_name['OpenOrEnterMazeRequest'] = _OPENORENTERMAZEREQUEST
@@ -796,55 +458,6 @@ DESCRIPTOR.message_types_by_name['BuyMazeShopProductRequest'] = _BUYMAZESHOPPROD
 DESCRIPTOR.message_types_by_name['BuyMazeShopProductResponse'] = _BUYMAZESHOPPRODUCTRESPONSE
 DESCRIPTOR.enum_types_by_name['DragonMazeModuleMsgSubCommand'] = _DRAGONMAZEMODULEMSGSUBCOMMAND
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
-
-DragonMazeInfoV23Request = _reflection.GeneratedProtocolMessageType('DragonMazeInfoV23Request', (_message.Message,), {
-  'DESCRIPTOR' : _DRAGONMAZEINFOV23REQUEST,
-  '__module__' : 'DragonMazeModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.DragonMazeInfoV23Request)
-  })
-_sym_db.RegisterMessage(DragonMazeInfoV23Request)
-
-MazeInfo = _reflection.GeneratedProtocolMessageType('MazeInfo', (_message.Message,), {
-  'DESCRIPTOR' : _MAZEINFO,
-  '__module__' : 'DragonMazeModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.MazeInfo)
-  })
-_sym_db.RegisterMessage(MazeInfo)
-
-DragonMazeInfoV23Response = _reflection.GeneratedProtocolMessageType('DragonMazeInfoV23Response', (_message.Message,), {
-  'DESCRIPTOR' : _DRAGONMAZEINFOV23RESPONSE,
-  '__module__' : 'DragonMazeModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.DragonMazeInfoV23Response)
-  })
-_sym_db.RegisterMessage(DragonMazeInfoV23Response)
-
-QuickPassDragonMazeRequest = _reflection.GeneratedProtocolMessageType('QuickPassDragonMazeRequest', (_message.Message,), {
-  'DESCRIPTOR' : _QUICKPASSDRAGONMAZEREQUEST,
-  '__module__' : 'DragonMazeModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.QuickPassDragonMazeRequest)
-  })
-_sym_db.RegisterMessage(QuickPassDragonMazeRequest)
-
-QuickPassDragonMazeResponse = _reflection.GeneratedProtocolMessageType('QuickPassDragonMazeResponse', (_message.Message,), {
-  'DESCRIPTOR' : _QUICKPASSDRAGONMAZERESPONSE,
-  '__module__' : 'DragonMazeModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.QuickPassDragonMazeResponse)
-  })
-_sym_db.RegisterMessage(QuickPassDragonMazeResponse)
-
-FinishQuickPassCDRequest = _reflection.GeneratedProtocolMessageType('FinishQuickPassCDRequest', (_message.Message,), {
-  'DESCRIPTOR' : _FINISHQUICKPASSCDREQUEST,
-  '__module__' : 'DragonMazeModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.FinishQuickPassCDRequest)
-  })
-_sym_db.RegisterMessage(FinishQuickPassCDRequest)
-
-FinishQuickPassCDResponse = _reflection.GeneratedProtocolMessageType('FinishQuickPassCDResponse', (_message.Message,), {
-  'DESCRIPTOR' : _FINISHQUICKPASSCDRESPONSE,
-  '__module__' : 'DragonMazeModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.FinishQuickPassCDResponse)
-  })
-_sym_db.RegisterMessage(FinishQuickPassCDResponse)
 
 DragonMazeInfoRequest = _reflection.GeneratedProtocolMessageType('DragonMazeInfoRequest', (_message.Message,), {
   'DESCRIPTOR' : _DRAGONMAZEINFOREQUEST,

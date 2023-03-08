@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x13ItemModuleMsg.proto\x12\x0e\x63om.common.msg\"A\n\x07ItemMsg\x12\x16\n\x0eitemTemplateId\x18\x01 \x01(\t\x12\r\n\x05\x63ount\x18\x02 \x01(\x05\x12\x0f\n\x07\x63\x64Times\x18\x03 \x03(\x03\"\x1f\n\x0fItemListRequest\x12\x0c\n\x04\x66lag\x18\x01 \x01(\x05\":\n\x10ItemListResponse\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"I\n\x10ItemChangeNotify\x12\x0e\n\x06isAdds\x18\x01 \x03(\x08\x12%\n\x04msgs\x18\x02 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"=\n\x0eSubItemRequest\x12\x17\n\x0fitemTemplateIds\x18\x01 \x03(\t\x12\x12\n\nitemCounts\x18\x02 \x03(\x05\"$\n\x0fSubItemResponse\x12\x11\n\tisSuccess\x18\x01 \x01(\x08\"4\n\x0e\x44ragonSkillMsg\x12\x0f\n\x07skillId\x18\x01 \x01(\t\x12\x11\n\tskillTime\x18\x02 \x01(\x03\"j\n\rDragonSkinMsg\x12\x0e\n\x06skinId\x18\x01 \x01(\x03\x12\r\n\x05tplId\x18\x02 \x01(\t\x12\x12\n\ncreatureId\x18\x03 \x01(\x03\x12\x13\n\x0b\x65nergyLimit\x18\x04 \x01(\x05\x12\x11\n\tequipTime\x18\x05 \x01(\x03\"\xd7\x03\n\x12MagicalCreatureMsg\x12\x12\n\ncreatureId\x18\x01 \x02(\x03\x12\x12\n\ntemplateId\x18\x02 \x02(\t\x12\x18\n\x10physicalStrength\x18\x03 \x01(\x05\x12\x1f\n\x17getPhysicalStrengthTime\x18\x04 \x01(\x03\x12\x10\n\x08nestType\x18\x05 \x01(\x05\x12#\n\x1blastCollectHangUpRewardTime\x18\x06 \x01(\x03\x12\x18\n\x10repletionEndTime\x18\x07 \x01(\x03\x12\x11\n\trewardCnt\x18\x08 \x01(\x05\x12\x17\n\x0f\x66irstRewardTime\x18\t \x01(\x03\x12\x0f\n\x07\x65xplore\x18\n \x01(\x08\x12.\n\x06skills\x18\x0b \x03(\x0b\x32\x1e.com.common.msg.DragonSkillMsg\x12!\n\x19lastCrownHangUpRewardTime\x18\x0c \x01(\x03\x12,\n\x05skins\x18\r \x03(\x0b\x32\x1d.com.common.msg.DragonSkinMsg\x12\x13\n\x0bmazeEndTime\x18\x0e \x01(\x03\x12\x1c\n\x14todayHangUpRewardCnt\x18\x0f \x01(\x05\x12\x1c\n\x14totalHangUpRewardCnt\x18\x10 \x01(\x05\"j\n\x0eUseItemRequest\x12\x16\n\x0eitemTemplateId\x18\x01 \x01(\t\x12\r\n\x05\x63ount\x18\x02 \x01(\x05\x12\r\n\x05param\x18\x03 \x01(\t\x12\x11\n\tlevelType\x18\x04 \x01(\x05\x12\x0f\n\x07useType\x18\x05 \x01(\x05\"\xae\x01\n\x0fUseItemResponse\x12\x16\n\x0eitemTemplateId\x18\x01 \x01(\t\x12\x10\n\x08\x65ntityId\x18\x02 \x01(\t\x12\x12\n\ncreatureId\x18\x03 \x01(\x03\x12&\n\x05items\x18\x04 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\x12\x35\n\tcreatures\x18\x05 \x03(\x0b\x32\".com.common.msg.MagicalCreatureMsg\"n\n\x13\x45xchangeItemRequest\x12\x16\n\x0eitemTemplateId\x18\x01 \x01(\t\x12\r\n\x05\x63ount\x18\x02 \x01(\x05\x12\r\n\x05isUse\x18\x03 \x01(\x08\x12\x11\n\tlevelType\x18\x04 \x01(\x05\x12\x0e\n\x06source\x18\x05 \x01(\x05\"\x16\n\x14\x45xchangeItemResponse\"\'\n\x10\x46indItemsRequest\x12\x13\n\x0btemplateIds\x18\x01 \x03(\t\">\n\x11\x46indItemsResponse\x12)\n\x08itemMsgs\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"!\n\x13\x43ollectItemsRequest\x12\n\n\x02id\x18\x01 \x02(\t\"\x16\n\x14\x43ollectItemsResponse\"K\n\x17SupplementEnergyRequest\x12\x0c\n\x04mark\x18\x01 \x02(\x05\x12\x10\n\x08\x64iamonds\x18\x02 \x02(\x05\x12\x10\n\x08\x65nergies\x18\x03 \x02(\x05\"L\n\x18SupplementEnergyResponse\x12\x0c\n\x04mark\x18\x01 \x02(\x05\x12\x10\n\x08\x64iamonds\x18\x02 \x02(\x05\x12\x10\n\x08\x65nergies\x18\x03 \x02(\x05\"G\n\x0eSupplementItem\x12\x16\n\x0eitemTemplateId\x18\x01 \x01(\t\x12\r\n\x05\x63ount\x18\x02 \x01(\x05\x12\x0e\n\x06source\x18\x03 \x01(\x05\"F\n\x15SupplementItemRequest\x12-\n\x05items\x18\x01 \x03(\x0b\x32\x1e.com.common.msg.SupplementItem\"\x18\n\x16SupplementItemResponse\"\x14\n\x12ReplaceItemRequest\"\x15\n\x13ReplaceItemResponse\"\'\n\x14\x44\x65\x63omposeItemRequest\x12\x0f\n\x07itemIds\x18\x01 \x03(\t\"\x17\n\x15\x44\x65\x63omposeItemResponse*\xa3\x03\n\x17ItemModuleMsgSubCommand\x12\x1f\n\x1aITEMMODULEMSG_SUB_ITEMLIST\x10\xd1\x0f\x12\x1e\n\x19ITEMMODULEMSG_SUB_USEITEM\x10\xd2\x0f\x12\x1e\n\x19ITEMMODULEMSG_SUB_SUBITEM\x10\xd3\x0f\x12!\n\x1cITEMMODULEMSG_SUB_ITEMCHANGE\x10\xd4\x0f\x12#\n\x1eITEMMODULEMSG_SUB_EXCHANGEITEM\x10\xd5\x0f\x12 \n\x1bITEMMODULEMSG_SUB_FINDITEMS\x10\xd7\x0f\x12#\n\x1eITEMMODULEMSG_SUB_COLLECTITEMS\x10\xd8\x0f\x12\'\n\"ITEMMODULEMSG_SUB_SUPPLEMENTENERGY\x10\xd9\x0f\x12%\n ITEMMODULEMSG_SUB_SUPPLEMENTITEM\x10\xda\x0f\x12\"\n\x1dITEMMODULEMSG_SUB_REPLACEITEM\x10\xdb\x0f\x12$\n\x1fITEMMODULEMSG_SUB_DECOMPOSEITEM\x10\xdc\x0f'
+  serialized_pb=b'\n\x13ItemModuleMsg.proto\x12\x0e\x63om.common.msg\"A\n\x07ItemMsg\x12\x16\n\x0eitemTemplateId\x18\x01 \x01(\t\x12\r\n\x05\x63ount\x18\x02 \x01(\x05\x12\x0f\n\x07\x63\x64Times\x18\x03 \x03(\x03\"\x1f\n\x0fItemListRequest\x12\x0c\n\x04\x66lag\x18\x01 \x01(\x05\":\n\x10ItemListResponse\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"I\n\x10ItemChangeNotify\x12\x0e\n\x06isAdds\x18\x01 \x03(\x08\x12%\n\x04msgs\x18\x02 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"=\n\x0eSubItemRequest\x12\x17\n\x0fitemTemplateIds\x18\x01 \x03(\t\x12\x12\n\nitemCounts\x18\x02 \x03(\x05\"$\n\x0fSubItemResponse\x12\x11\n\tisSuccess\x18\x01 \x01(\x08\"j\n\x0eUseItemRequest\x12\x16\n\x0eitemTemplateId\x18\x01 \x01(\t\x12\r\n\x05\x63ount\x18\x02 \x01(\x05\x12\r\n\x05param\x18\x03 \x01(\t\x12\x11\n\tlevelType\x18\x04 \x01(\x05\x12\x0f\n\x07useType\x18\x05 \x01(\x05\"w\n\x0fUseItemResponse\x12\x16\n\x0eitemTemplateId\x18\x01 \x01(\t\x12\x10\n\x08\x65ntityId\x18\x02 \x01(\t\x12\x12\n\ncreatureId\x18\x03 \x01(\x03\x12&\n\x05items\x18\x04 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"n\n\x13\x45xchangeItemRequest\x12\x16\n\x0eitemTemplateId\x18\x01 \x01(\t\x12\r\n\x05\x63ount\x18\x02 \x01(\x05\x12\r\n\x05isUse\x18\x03 \x01(\x08\x12\x11\n\tlevelType\x18\x04 \x01(\x05\x12\x0e\n\x06source\x18\x05 \x01(\x05\"\x16\n\x14\x45xchangeItemResponse\"\'\n\x10\x46indItemsRequest\x12\x13\n\x0btemplateIds\x18\x01 \x03(\t\">\n\x11\x46indItemsResponse\x12)\n\x08itemMsgs\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"!\n\x13\x43ollectItemsRequest\x12\n\n\x02id\x18\x01 \x02(\t\"\x16\n\x14\x43ollectItemsResponse\"K\n\x17SupplementEnergyRequest\x12\x0c\n\x04mark\x18\x01 \x02(\x05\x12\x10\n\x08\x64iamonds\x18\x02 \x02(\x05\x12\x10\n\x08\x65nergies\x18\x03 \x02(\x05\"L\n\x18SupplementEnergyResponse\x12\x0c\n\x04mark\x18\x01 \x02(\x05\x12\x10\n\x08\x64iamonds\x18\x02 \x02(\x05\x12\x10\n\x08\x65nergies\x18\x03 \x02(\x05\"4\n\x0e\x44ragonSkillMsg\x12\x0f\n\x07skillId\x18\x01 \x01(\t\x12\x11\n\tskillTime\x18\x02 \x01(\x03\"j\n\rDragonSkinMsg\x12\x0e\n\x06skinId\x18\x01 \x01(\x03\x12\r\n\x05tplId\x18\x02 \x01(\t\x12\x12\n\ncreatureId\x18\x03 \x01(\x03\x12\x13\n\x0b\x65nergyLimit\x18\x04 \x01(\x05\x12\x11\n\tequipTime\x18\x05 \x01(\x03\"\xd7\x03\n\x12MagicalCreatureMsg\x12\x12\n\ncreatureId\x18\x01 \x02(\x03\x12\x12\n\ntemplateId\x18\x02 \x02(\t\x12\x18\n\x10physicalStrength\x18\x03 \x01(\x05\x12\x1f\n\x17getPhysicalStrengthTime\x18\x04 \x01(\x03\x12\x10\n\x08nestType\x18\x05 \x01(\x05\x12#\n\x1blastCollectHangUpRewardTime\x18\x06 \x01(\x03\x12\x18\n\x10repletionEndTime\x18\x07 \x01(\x03\x12\x11\n\trewardCnt\x18\x08 \x01(\x05\x12\x17\n\x0f\x66irstRewardTime\x18\t \x01(\x03\x12\x0f\n\x07\x65xplore\x18\n \x01(\x08\x12.\n\x06skills\x18\x0b \x03(\x0b\x32\x1e.com.common.msg.DragonSkillMsg\x12!\n\x19lastCrownHangUpRewardTime\x18\x0c \x01(\x03\x12,\n\x05skins\x18\r \x03(\x0b\x32\x1d.com.common.msg.DragonSkinMsg\x12\x13\n\x0bmazeEndTime\x18\x0e \x01(\x03\x12\x1c\n\x14todayHangUpRewardCnt\x18\x0f \x01(\x05\x12\x1c\n\x14totalHangUpRewardCnt\x18\x10 \x01(\x05\"G\n\x0eSupplementItem\x12\x16\n\x0eitemTemplateId\x18\x01 \x01(\t\x12\r\n\x05\x63ount\x18\x02 \x01(\x05\x12\x0e\n\x06source\x18\x03 \x01(\x05\"F\n\x15SupplementItemRequest\x12-\n\x05items\x18\x01 \x03(\x0b\x32\x1e.com.common.msg.SupplementItem\"\x18\n\x16SupplementItemResponse*\xd9\x02\n\x17ItemModuleMsgSubCommand\x12\x1f\n\x1aITEMMODULEMSG_SUB_ITEMLIST\x10\xd1\x0f\x12\x1e\n\x19ITEMMODULEMSG_SUB_USEITEM\x10\xd2\x0f\x12\x1e\n\x19ITEMMODULEMSG_SUB_SUBITEM\x10\xd3\x0f\x12!\n\x1cITEMMODULEMSG_SUB_ITEMCHANGE\x10\xd4\x0f\x12#\n\x1eITEMMODULEMSG_SUB_EXCHANGEITEM\x10\xd5\x0f\x12 \n\x1bITEMMODULEMSG_SUB_FINDITEMS\x10\xd7\x0f\x12#\n\x1eITEMMODULEMSG_SUB_COLLECTITEMS\x10\xd8\x0f\x12\'\n\"ITEMMODULEMSG_SUB_SUPPLEMENTENERGY\x10\xd9\x0f\x12%\n ITEMMODULEMSG_SUB_SUPPLEMENTITEM\x10\xda\x0f'
 )
 
 _ITEMMODULEMSGSUBCOMMAND = _descriptor.EnumDescriptor(
@@ -75,21 +75,11 @@ _ITEMMODULEMSGSUBCOMMAND = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='ITEMMODULEMSG_SUB_REPLACEITEM', index=9, number=2011,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='ITEMMODULEMSG_SUB_DECOMPOSEITEM', index=10, number=2012,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2034,
-  serialized_end=2453,
+  serialized_start=1867,
+  serialized_end=2212,
 )
 _sym_db.RegisterEnumDescriptor(_ITEMMODULEMSGSUBCOMMAND)
 
@@ -103,8 +93,6 @@ ITEMMODULEMSG_SUB_FINDITEMS = 2007
 ITEMMODULEMSG_SUB_COLLECTITEMS = 2008
 ITEMMODULEMSG_SUB_SUPPLEMENTENERGY = 2009
 ITEMMODULEMSG_SUB_SUPPLEMENTITEM = 2010
-ITEMMODULEMSG_SUB_REPLACEITEM = 2011
-ITEMMODULEMSG_SUB_DECOMPOSEITEM = 2012
 
 
 
@@ -328,6 +316,417 @@ _SUBITEMRESPONSE = _descriptor.Descriptor(
 )
 
 
+_USEITEMREQUEST = _descriptor.Descriptor(
+  name='UseItemRequest',
+  full_name='com.common.msg.UseItemRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='itemTemplateId', full_name='com.common.msg.UseItemRequest.itemTemplateId', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='count', full_name='com.common.msg.UseItemRequest.count', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='param', full_name='com.common.msg.UseItemRequest.param', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='levelType', full_name='com.common.msg.UseItemRequest.levelType', index=3,
+      number=4, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='useType', full_name='com.common.msg.UseItemRequest.useType', index=4,
+      number=5, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=375,
+  serialized_end=481,
+)
+
+
+_USEITEMRESPONSE = _descriptor.Descriptor(
+  name='UseItemResponse',
+  full_name='com.common.msg.UseItemResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='itemTemplateId', full_name='com.common.msg.UseItemResponse.itemTemplateId', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='entityId', full_name='com.common.msg.UseItemResponse.entityId', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='creatureId', full_name='com.common.msg.UseItemResponse.creatureId', index=2,
+      number=3, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='items', full_name='com.common.msg.UseItemResponse.items', index=3,
+      number=4, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=483,
+  serialized_end=602,
+)
+
+
+_EXCHANGEITEMREQUEST = _descriptor.Descriptor(
+  name='ExchangeItemRequest',
+  full_name='com.common.msg.ExchangeItemRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='itemTemplateId', full_name='com.common.msg.ExchangeItemRequest.itemTemplateId', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='count', full_name='com.common.msg.ExchangeItemRequest.count', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='isUse', full_name='com.common.msg.ExchangeItemRequest.isUse', index=2,
+      number=3, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='levelType', full_name='com.common.msg.ExchangeItemRequest.levelType', index=3,
+      number=4, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='source', full_name='com.common.msg.ExchangeItemRequest.source', index=4,
+      number=5, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=604,
+  serialized_end=714,
+)
+
+
+_EXCHANGEITEMRESPONSE = _descriptor.Descriptor(
+  name='ExchangeItemResponse',
+  full_name='com.common.msg.ExchangeItemResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=716,
+  serialized_end=738,
+)
+
+
+_FINDITEMSREQUEST = _descriptor.Descriptor(
+  name='FindItemsRequest',
+  full_name='com.common.msg.FindItemsRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='templateIds', full_name='com.common.msg.FindItemsRequest.templateIds', index=0,
+      number=1, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=740,
+  serialized_end=779,
+)
+
+
+_FINDITEMSRESPONSE = _descriptor.Descriptor(
+  name='FindItemsResponse',
+  full_name='com.common.msg.FindItemsResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='itemMsgs', full_name='com.common.msg.FindItemsResponse.itemMsgs', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=781,
+  serialized_end=843,
+)
+
+
+_COLLECTITEMSREQUEST = _descriptor.Descriptor(
+  name='CollectItemsRequest',
+  full_name='com.common.msg.CollectItemsRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='id', full_name='com.common.msg.CollectItemsRequest.id', index=0,
+      number=1, type=9, cpp_type=9, label=2,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=845,
+  serialized_end=878,
+)
+
+
+_COLLECTITEMSRESPONSE = _descriptor.Descriptor(
+  name='CollectItemsResponse',
+  full_name='com.common.msg.CollectItemsResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=880,
+  serialized_end=902,
+)
+
+
+_SUPPLEMENTENERGYREQUEST = _descriptor.Descriptor(
+  name='SupplementEnergyRequest',
+  full_name='com.common.msg.SupplementEnergyRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='mark', full_name='com.common.msg.SupplementEnergyRequest.mark', index=0,
+      number=1, type=5, cpp_type=1, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='diamonds', full_name='com.common.msg.SupplementEnergyRequest.diamonds', index=1,
+      number=2, type=5, cpp_type=1, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='energies', full_name='com.common.msg.SupplementEnergyRequest.energies', index=2,
+      number=3, type=5, cpp_type=1, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=904,
+  serialized_end=979,
+)
+
+
+_SUPPLEMENTENERGYRESPONSE = _descriptor.Descriptor(
+  name='SupplementEnergyResponse',
+  full_name='com.common.msg.SupplementEnergyResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='mark', full_name='com.common.msg.SupplementEnergyResponse.mark', index=0,
+      number=1, type=5, cpp_type=1, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='diamonds', full_name='com.common.msg.SupplementEnergyResponse.diamonds', index=1,
+      number=2, type=5, cpp_type=1, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='energies', full_name='com.common.msg.SupplementEnergyResponse.energies', index=2,
+      number=3, type=5, cpp_type=1, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=981,
+  serialized_end=1057,
+)
+
+
 _DRAGONSKILLMSG = _descriptor.Descriptor(
   name='DragonSkillMsg',
   full_name='com.common.msg.DragonSkillMsg',
@@ -362,8 +761,8 @@ _DRAGONSKILLMSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=375,
-  serialized_end=427,
+  serialized_start=1059,
+  serialized_end=1111,
 )
 
 
@@ -422,8 +821,8 @@ _DRAGONSKINMSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=429,
-  serialized_end=535,
+  serialized_start=1113,
+  serialized_end=1219,
 )
 
 
@@ -559,426 +958,8 @@ _MAGICALCREATUREMSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=538,
-  serialized_end=1009,
-)
-
-
-_USEITEMREQUEST = _descriptor.Descriptor(
-  name='UseItemRequest',
-  full_name='com.common.msg.UseItemRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='itemTemplateId', full_name='com.common.msg.UseItemRequest.itemTemplateId', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='count', full_name='com.common.msg.UseItemRequest.count', index=1,
-      number=2, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='param', full_name='com.common.msg.UseItemRequest.param', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='levelType', full_name='com.common.msg.UseItemRequest.levelType', index=3,
-      number=4, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='useType', full_name='com.common.msg.UseItemRequest.useType', index=4,
-      number=5, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1011,
-  serialized_end=1117,
-)
-
-
-_USEITEMRESPONSE = _descriptor.Descriptor(
-  name='UseItemResponse',
-  full_name='com.common.msg.UseItemResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='itemTemplateId', full_name='com.common.msg.UseItemResponse.itemTemplateId', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='entityId', full_name='com.common.msg.UseItemResponse.entityId', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='creatureId', full_name='com.common.msg.UseItemResponse.creatureId', index=2,
-      number=3, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='items', full_name='com.common.msg.UseItemResponse.items', index=3,
-      number=4, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='creatures', full_name='com.common.msg.UseItemResponse.creatures', index=4,
-      number=5, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1120,
-  serialized_end=1294,
-)
-
-
-_EXCHANGEITEMREQUEST = _descriptor.Descriptor(
-  name='ExchangeItemRequest',
-  full_name='com.common.msg.ExchangeItemRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='itemTemplateId', full_name='com.common.msg.ExchangeItemRequest.itemTemplateId', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='count', full_name='com.common.msg.ExchangeItemRequest.count', index=1,
-      number=2, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='isUse', full_name='com.common.msg.ExchangeItemRequest.isUse', index=2,
-      number=3, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='levelType', full_name='com.common.msg.ExchangeItemRequest.levelType', index=3,
-      number=4, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='source', full_name='com.common.msg.ExchangeItemRequest.source', index=4,
-      number=5, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1296,
-  serialized_end=1406,
-)
-
-
-_EXCHANGEITEMRESPONSE = _descriptor.Descriptor(
-  name='ExchangeItemResponse',
-  full_name='com.common.msg.ExchangeItemResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1408,
-  serialized_end=1430,
-)
-
-
-_FINDITEMSREQUEST = _descriptor.Descriptor(
-  name='FindItemsRequest',
-  full_name='com.common.msg.FindItemsRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='templateIds', full_name='com.common.msg.FindItemsRequest.templateIds', index=0,
-      number=1, type=9, cpp_type=9, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1432,
-  serialized_end=1471,
-)
-
-
-_FINDITEMSRESPONSE = _descriptor.Descriptor(
-  name='FindItemsResponse',
-  full_name='com.common.msg.FindItemsResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='itemMsgs', full_name='com.common.msg.FindItemsResponse.itemMsgs', index=0,
-      number=1, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1473,
-  serialized_end=1535,
-)
-
-
-_COLLECTITEMSREQUEST = _descriptor.Descriptor(
-  name='CollectItemsRequest',
-  full_name='com.common.msg.CollectItemsRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='id', full_name='com.common.msg.CollectItemsRequest.id', index=0,
-      number=1, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1537,
-  serialized_end=1570,
-)
-
-
-_COLLECTITEMSRESPONSE = _descriptor.Descriptor(
-  name='CollectItemsResponse',
-  full_name='com.common.msg.CollectItemsResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1572,
-  serialized_end=1594,
-)
-
-
-_SUPPLEMENTENERGYREQUEST = _descriptor.Descriptor(
-  name='SupplementEnergyRequest',
-  full_name='com.common.msg.SupplementEnergyRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='mark', full_name='com.common.msg.SupplementEnergyRequest.mark', index=0,
-      number=1, type=5, cpp_type=1, label=2,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='diamonds', full_name='com.common.msg.SupplementEnergyRequest.diamonds', index=1,
-      number=2, type=5, cpp_type=1, label=2,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='energies', full_name='com.common.msg.SupplementEnergyRequest.energies', index=2,
-      number=3, type=5, cpp_type=1, label=2,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1596,
-  serialized_end=1671,
-)
-
-
-_SUPPLEMENTENERGYRESPONSE = _descriptor.Descriptor(
-  name='SupplementEnergyResponse',
-  full_name='com.common.msg.SupplementEnergyResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='mark', full_name='com.common.msg.SupplementEnergyResponse.mark', index=0,
-      number=1, type=5, cpp_type=1, label=2,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='diamonds', full_name='com.common.msg.SupplementEnergyResponse.diamonds', index=1,
-      number=2, type=5, cpp_type=1, label=2,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='energies', full_name='com.common.msg.SupplementEnergyResponse.energies', index=2,
-      number=3, type=5, cpp_type=1, label=2,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1673,
-  serialized_end=1749,
+  serialized_start=1222,
+  serialized_end=1693,
 )
 
 
@@ -1023,8 +1004,8 @@ _SUPPLEMENTITEM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1751,
-  serialized_end=1822,
+  serialized_start=1695,
+  serialized_end=1766,
 )
 
 
@@ -1055,8 +1036,8 @@ _SUPPLEMENTITEMREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1824,
-  serialized_end=1894,
+  serialized_start=1768,
+  serialized_end=1838,
 )
 
 
@@ -1080,124 +1061,16 @@ _SUPPLEMENTITEMRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1896,
-  serialized_end=1920,
-)
-
-
-_REPLACEITEMREQUEST = _descriptor.Descriptor(
-  name='ReplaceItemRequest',
-  full_name='com.common.msg.ReplaceItemRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1922,
-  serialized_end=1942,
-)
-
-
-_REPLACEITEMRESPONSE = _descriptor.Descriptor(
-  name='ReplaceItemResponse',
-  full_name='com.common.msg.ReplaceItemResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1944,
-  serialized_end=1965,
-)
-
-
-_DECOMPOSEITEMREQUEST = _descriptor.Descriptor(
-  name='DecomposeItemRequest',
-  full_name='com.common.msg.DecomposeItemRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='itemIds', full_name='com.common.msg.DecomposeItemRequest.itemIds', index=0,
-      number=1, type=9, cpp_type=9, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1967,
-  serialized_end=2006,
-)
-
-
-_DECOMPOSEITEMRESPONSE = _descriptor.Descriptor(
-  name='DecomposeItemResponse',
-  full_name='com.common.msg.DecomposeItemResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=2008,
-  serialized_end=2031,
+  serialized_start=1840,
+  serialized_end=1864,
 )
 
 _ITEMLISTRESPONSE.fields_by_name['items'].message_type = _ITEMMSG
 _ITEMCHANGENOTIFY.fields_by_name['msgs'].message_type = _ITEMMSG
+_USEITEMRESPONSE.fields_by_name['items'].message_type = _ITEMMSG
+_FINDITEMSRESPONSE.fields_by_name['itemMsgs'].message_type = _ITEMMSG
 _MAGICALCREATUREMSG.fields_by_name['skills'].message_type = _DRAGONSKILLMSG
 _MAGICALCREATUREMSG.fields_by_name['skins'].message_type = _DRAGONSKINMSG
-_USEITEMRESPONSE.fields_by_name['items'].message_type = _ITEMMSG
-_USEITEMRESPONSE.fields_by_name['creatures'].message_type = _MAGICALCREATUREMSG
-_FINDITEMSRESPONSE.fields_by_name['itemMsgs'].message_type = _ITEMMSG
 _SUPPLEMENTITEMREQUEST.fields_by_name['items'].message_type = _SUPPLEMENTITEM
 DESCRIPTOR.message_types_by_name['ItemMsg'] = _ITEMMSG
 DESCRIPTOR.message_types_by_name['ItemListRequest'] = _ITEMLISTREQUEST
@@ -1205,9 +1078,6 @@ DESCRIPTOR.message_types_by_name['ItemListResponse'] = _ITEMLISTRESPONSE
 DESCRIPTOR.message_types_by_name['ItemChangeNotify'] = _ITEMCHANGENOTIFY
 DESCRIPTOR.message_types_by_name['SubItemRequest'] = _SUBITEMREQUEST
 DESCRIPTOR.message_types_by_name['SubItemResponse'] = _SUBITEMRESPONSE
-DESCRIPTOR.message_types_by_name['DragonSkillMsg'] = _DRAGONSKILLMSG
-DESCRIPTOR.message_types_by_name['DragonSkinMsg'] = _DRAGONSKINMSG
-DESCRIPTOR.message_types_by_name['MagicalCreatureMsg'] = _MAGICALCREATUREMSG
 DESCRIPTOR.message_types_by_name['UseItemRequest'] = _USEITEMREQUEST
 DESCRIPTOR.message_types_by_name['UseItemResponse'] = _USEITEMRESPONSE
 DESCRIPTOR.message_types_by_name['ExchangeItemRequest'] = _EXCHANGEITEMREQUEST
@@ -1218,13 +1088,12 @@ DESCRIPTOR.message_types_by_name['CollectItemsRequest'] = _COLLECTITEMSREQUEST
 DESCRIPTOR.message_types_by_name['CollectItemsResponse'] = _COLLECTITEMSRESPONSE
 DESCRIPTOR.message_types_by_name['SupplementEnergyRequest'] = _SUPPLEMENTENERGYREQUEST
 DESCRIPTOR.message_types_by_name['SupplementEnergyResponse'] = _SUPPLEMENTENERGYRESPONSE
+DESCRIPTOR.message_types_by_name['DragonSkillMsg'] = _DRAGONSKILLMSG
+DESCRIPTOR.message_types_by_name['DragonSkinMsg'] = _DRAGONSKINMSG
+DESCRIPTOR.message_types_by_name['MagicalCreatureMsg'] = _MAGICALCREATUREMSG
 DESCRIPTOR.message_types_by_name['SupplementItem'] = _SUPPLEMENTITEM
 DESCRIPTOR.message_types_by_name['SupplementItemRequest'] = _SUPPLEMENTITEMREQUEST
 DESCRIPTOR.message_types_by_name['SupplementItemResponse'] = _SUPPLEMENTITEMRESPONSE
-DESCRIPTOR.message_types_by_name['ReplaceItemRequest'] = _REPLACEITEMREQUEST
-DESCRIPTOR.message_types_by_name['ReplaceItemResponse'] = _REPLACEITEMRESPONSE
-DESCRIPTOR.message_types_by_name['DecomposeItemRequest'] = _DECOMPOSEITEMREQUEST
-DESCRIPTOR.message_types_by_name['DecomposeItemResponse'] = _DECOMPOSEITEMRESPONSE
 DESCRIPTOR.enum_types_by_name['ItemModuleMsgSubCommand'] = _ITEMMODULEMSGSUBCOMMAND
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -1269,27 +1138,6 @@ SubItemResponse = _reflection.GeneratedProtocolMessageType('SubItemResponse', (_
   # @@protoc_insertion_point(class_scope:com.common.msg.SubItemResponse)
   })
 _sym_db.RegisterMessage(SubItemResponse)
-
-DragonSkillMsg = _reflection.GeneratedProtocolMessageType('DragonSkillMsg', (_message.Message,), {
-  'DESCRIPTOR' : _DRAGONSKILLMSG,
-  '__module__' : 'ItemModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.DragonSkillMsg)
-  })
-_sym_db.RegisterMessage(DragonSkillMsg)
-
-DragonSkinMsg = _reflection.GeneratedProtocolMessageType('DragonSkinMsg', (_message.Message,), {
-  'DESCRIPTOR' : _DRAGONSKINMSG,
-  '__module__' : 'ItemModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.DragonSkinMsg)
-  })
-_sym_db.RegisterMessage(DragonSkinMsg)
-
-MagicalCreatureMsg = _reflection.GeneratedProtocolMessageType('MagicalCreatureMsg', (_message.Message,), {
-  'DESCRIPTOR' : _MAGICALCREATUREMSG,
-  '__module__' : 'ItemModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.MagicalCreatureMsg)
-  })
-_sym_db.RegisterMessage(MagicalCreatureMsg)
 
 UseItemRequest = _reflection.GeneratedProtocolMessageType('UseItemRequest', (_message.Message,), {
   'DESCRIPTOR' : _USEITEMREQUEST,
@@ -1361,6 +1209,27 @@ SupplementEnergyResponse = _reflection.GeneratedProtocolMessageType('SupplementE
   })
 _sym_db.RegisterMessage(SupplementEnergyResponse)
 
+DragonSkillMsg = _reflection.GeneratedProtocolMessageType('DragonSkillMsg', (_message.Message,), {
+  'DESCRIPTOR' : _DRAGONSKILLMSG,
+  '__module__' : 'ItemModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.DragonSkillMsg)
+  })
+_sym_db.RegisterMessage(DragonSkillMsg)
+
+DragonSkinMsg = _reflection.GeneratedProtocolMessageType('DragonSkinMsg', (_message.Message,), {
+  'DESCRIPTOR' : _DRAGONSKINMSG,
+  '__module__' : 'ItemModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.DragonSkinMsg)
+  })
+_sym_db.RegisterMessage(DragonSkinMsg)
+
+MagicalCreatureMsg = _reflection.GeneratedProtocolMessageType('MagicalCreatureMsg', (_message.Message,), {
+  'DESCRIPTOR' : _MAGICALCREATUREMSG,
+  '__module__' : 'ItemModuleMsg_pb2'
+  # @@protoc_insertion_point(class_scope:com.common.msg.MagicalCreatureMsg)
+  })
+_sym_db.RegisterMessage(MagicalCreatureMsg)
+
 SupplementItem = _reflection.GeneratedProtocolMessageType('SupplementItem', (_message.Message,), {
   'DESCRIPTOR' : _SUPPLEMENTITEM,
   '__module__' : 'ItemModuleMsg_pb2'
@@ -1381,34 +1250,6 @@ SupplementItemResponse = _reflection.GeneratedProtocolMessageType('SupplementIte
   # @@protoc_insertion_point(class_scope:com.common.msg.SupplementItemResponse)
   })
 _sym_db.RegisterMessage(SupplementItemResponse)
-
-ReplaceItemRequest = _reflection.GeneratedProtocolMessageType('ReplaceItemRequest', (_message.Message,), {
-  'DESCRIPTOR' : _REPLACEITEMREQUEST,
-  '__module__' : 'ItemModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.ReplaceItemRequest)
-  })
-_sym_db.RegisterMessage(ReplaceItemRequest)
-
-ReplaceItemResponse = _reflection.GeneratedProtocolMessageType('ReplaceItemResponse', (_message.Message,), {
-  'DESCRIPTOR' : _REPLACEITEMRESPONSE,
-  '__module__' : 'ItemModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.ReplaceItemResponse)
-  })
-_sym_db.RegisterMessage(ReplaceItemResponse)
-
-DecomposeItemRequest = _reflection.GeneratedProtocolMessageType('DecomposeItemRequest', (_message.Message,), {
-  'DESCRIPTOR' : _DECOMPOSEITEMREQUEST,
-  '__module__' : 'ItemModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.DecomposeItemRequest)
-  })
-_sym_db.RegisterMessage(DecomposeItemRequest)
-
-DecomposeItemResponse = _reflection.GeneratedProtocolMessageType('DecomposeItemResponse', (_message.Message,), {
-  'DESCRIPTOR' : _DECOMPOSEITEMRESPONSE,
-  '__module__' : 'ItemModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.DecomposeItemResponse)
-  })
-_sym_db.RegisterMessage(DecomposeItemResponse)
 
 
 # @@protoc_insertion_point(module_scope)

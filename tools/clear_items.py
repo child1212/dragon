@@ -1,6 +1,8 @@
 #%%
+import os
+pack_pos = os.path.dirname(os.path.dirname(__file__))
 import sys
-sys.path.append('D:\\pyprogram\\PyTestTools\\dragon\\function')
+sys.path.append('{pack_pos}\\function'.format(pack_pos=pack_pos))
 import time
 from func_dragon import *
 import os
@@ -10,8 +12,8 @@ import os
 
 
 print("start time:",time.asctime(time.localtime()))
-account = "te0001"
-server = 'nqa'
+account = "li2001"
+server = 'qa'
 
 
 
@@ -43,6 +45,7 @@ clear_item(player,log_res,server)
 # send_gift(30000, 100, player,session, account, log_res,server)
 send_gift(1001, 100000, player,session, account, log_res,server)
 send_gift(1003, 100, player,session, account, log_res,server)
+# send_gift(14074, 1, player,session, account, log_res,server)
 
 
 

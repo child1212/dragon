@@ -1,7 +1,9 @@
 #%%
+import os
+pack_pos = os.path.dirname(os.path.dirname(__file__))
 import sys
-sys.path.append('D:\\pyprogram\\PyTestTools\\dragon\\package')
-sys.path.append('D:\\pyprogram\\PyTestTools\\dragon\\function')
+sys.path.append('{pack_pos}\\function'.format(pack_pos=pack_pos))
+sys.path.append('{pack_pos}\\package'.format(pack_pos=pack_pos))
 from func_dragon import *
 from xieyi import *
 

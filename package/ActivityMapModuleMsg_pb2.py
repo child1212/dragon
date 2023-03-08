@@ -23,7 +23,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1a\x41\x63tivityMapModuleMsg.proto\x12\x0e\x63om.common.msg\x1a\x19\x43ommonTaskModuleMsg.proto\x1a\x13ItemModuleMsg.proto\x1a\x17\x41\x63tivityModuleMsg.proto\",\n\x16\x41\x63tivityMapInfoRequest\x12\x12\n\nactivityId\x18\x01 \x02(\t\"\xcd\x01\n\x17\x41\x63tivityMapInfoResponse\x12)\n\x05tasks\x18\x01 \x03(\x0b\x32\x1a.com.common.msg.CommonTask\x12\r\n\x05score\x18\x02 \x02(\x05\x12\x12\n\nawardIndex\x18\x03 \x02(\x05\x12\x10\n\x08\x65valuate\x18\x04 \x01(\x05\x12\r\n\x05level\x18\x05 \x01(\x05\x12\x0b\n\x03\x65xp\x18\x06 \x01(\x05\x12\x12\n\nbaseLevels\x18\x07 \x03(\x05\x12\x12\n\npassLevels\x18\x08 \x03(\x05\x12\x0e\n\x06unlock\x18\t \x01(\x08\"1\n\x1bTakeActivityMapAwardRequest\x12\x12\n\nactivityId\x18\x01 \x02(\t\"F\n\x1cTakeActivityMapAwardResponse\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"R\n\x1c\x43hristmasTurnableDrawRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\x0f\n\x07plantId\x18\x02 \x01(\t\x12\x10\n\x08\x64rawtype\x18\x03 \x01(\x05\"=\n\x13\x43hristmasDrawReward\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"d\n\x1d\x43hristmasTurnableDrawResponse\x12\x38\n\x0b\x64rawRewards\x18\x01 \x03(\x0b\x32#.com.common.msg.ChristmasDrawReward\x12\t\n\x01n\x18\x02 \x01(\x05\"*\n\x14MapRankRewardRequest\x12\x12\n\nactivityId\x18\x01 \x01(\t\"K\n\x15MapRankRewardResponse\x12\x32\n\x0brankRewards\x18\x01 \x03(\x0b\x32\x1d.com.common.msg.RankRewardMsg\"(\n\x12MapEvaluateRequest\x12\x12\n\nactivityId\x18\x01 \x02(\t\"\x15\n\x13MapEvaluateResponse\"E\n\x17TakeBpLevelAwardRequest\x12\r\n\x05\x61\x63tId\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\x05\x12\r\n\x05level\x18\x03 \x01(\x05\"\x1a\n\x18TakeBpLevelAwardResponse*\xc6\x02\n\x1e\x41\x63tivityMapModuleMsgSubCommand\x12.\n(ACTIVITYMAPMODULEMSG_SUB_ACTIVITYMAPINFO\x10\xbd\xcd\x01\x12\x33\n-ACTIVITYMAPMODULEMSG_SUB_TAKEACTIVITYMAPAWARD\x10\xbe\xcd\x01\x12\x34\n.ACTIVITYMAPMODULEMSG_SUB_CHRISTMASTURNABLEDRAW\x10\xbf\xcd\x01\x12,\n&ACTIVITYMAPMODULEMSG_SUB_MAPRANKREWARD\x10\xc0\xcd\x01\x12*\n$ACTIVITYMAPMODULEMSG_SUB_MAPEVALUATE\x10\xc1\xcd\x01\x12/\n)ACTIVITYMAPMODULEMSG_SUB_TAKEBPLEVELAWARD\x10\xc2\xcd\x01'
+  serialized_pb=b'\n\x1a\x41\x63tivityMapModuleMsg.proto\x12\x0e\x63om.common.msg\x1a\x19\x43ommonTaskModuleMsg.proto\x1a\x13ItemModuleMsg.proto\x1a\x17\x41\x63tivityModuleMsg.proto\",\n\x16\x41\x63tivityMapInfoRequest\x12\x12\n\nactivityId\x18\x01 \x02(\t\"g\n\x17\x41\x63tivityMapInfoResponse\x12)\n\x05tasks\x18\x01 \x03(\x0b\x32\x1a.com.common.msg.CommonTask\x12\r\n\x05score\x18\x02 \x02(\x05\x12\x12\n\nawardIndex\x18\x03 \x02(\x05\"1\n\x1bTakeActivityMapAwardRequest\x12\x12\n\nactivityId\x18\x01 \x02(\t\"F\n\x1cTakeActivityMapAwardResponse\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"R\n\x1c\x43hristmasTurnableDrawRequest\x12\x0f\n\x07sceneId\x18\x01 \x01(\t\x12\x0f\n\x07plantId\x18\x02 \x01(\t\x12\x10\n\x08\x64rawtype\x18\x03 \x01(\x05\"=\n\x13\x43hristmasDrawReward\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"d\n\x1d\x43hristmasTurnableDrawResponse\x12\x38\n\x0b\x64rawRewards\x18\x01 \x03(\x0b\x32#.com.common.msg.ChristmasDrawReward\x12\t\n\x01n\x18\x02 \x01(\x05\"*\n\x14MapRankRewardRequest\x12\x12\n\nactivityId\x18\x01 \x01(\t\"K\n\x15MapRankRewardResponse\x12\x32\n\x0brankRewards\x18\x01 \x03(\x0b\x32\x1d.com.common.msg.RankRewardMsg*\xe9\x01\n\x1e\x41\x63tivityMapModuleMsgSubCommand\x12.\n(ACTIVITYMAPMODULEMSG_SUB_ACTIVITYMAPINFO\x10\xbd\xcd\x01\x12\x33\n-ACTIVITYMAPMODULEMSG_SUB_TAKEACTIVITYMAPAWARD\x10\xbe\xcd\x01\x12\x34\n.ACTIVITYMAPMODULEMSG_SUB_CHRISTMASTURNABLEDRAW\x10\xbf\xcd\x01\x12,\n&ACTIVITYMAPMODULEMSG_SUB_MAPRANKREWARD\x10\xc0\xcd\x01'
   ,
   dependencies=[CommonTaskModuleMsg__pb2.DESCRIPTOR,ItemModuleMsg__pb2.DESCRIPTOR,ActivityModuleMsg__pb2.DESCRIPTOR,])
 
@@ -54,21 +54,11 @@ _ACTIVITYMAPMODULEMSGSUBCOMMAND = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='ACTIVITYMAPMODULEMSG_SUB_MAPEVALUATE', index=4, number=26305,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='ACTIVITYMAPMODULEMSG_SUB_TAKEBPLEVELAWARD', index=5, number=26306,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1031,
-  serialized_end=1357,
+  serialized_start=764,
+  serialized_end=997,
 )
 _sym_db.RegisterEnumDescriptor(_ACTIVITYMAPMODULEMSGSUBCOMMAND)
 
@@ -77,8 +67,6 @@ ACTIVITYMAPMODULEMSG_SUB_ACTIVITYMAPINFO = 26301
 ACTIVITYMAPMODULEMSG_SUB_TAKEACTIVITYMAPAWARD = 26302
 ACTIVITYMAPMODULEMSG_SUB_CHRISTMASTURNABLEDRAW = 26303
 ACTIVITYMAPMODULEMSG_SUB_MAPRANKREWARD = 26304
-ACTIVITYMAPMODULEMSG_SUB_MAPEVALUATE = 26305
-ACTIVITYMAPMODULEMSG_SUB_TAKEBPLEVELAWARD = 26306
 
 
 
@@ -143,48 +131,6 @@ _ACTIVITYMAPINFORESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='evaluate', full_name='com.common.msg.ActivityMapInfoResponse.evaluate', index=3,
-      number=4, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='level', full_name='com.common.msg.ActivityMapInfoResponse.level', index=4,
-      number=5, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='exp', full_name='com.common.msg.ActivityMapInfoResponse.exp', index=5,
-      number=6, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='baseLevels', full_name='com.common.msg.ActivityMapInfoResponse.baseLevels', index=6,
-      number=7, type=5, cpp_type=1, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='passLevels', full_name='com.common.msg.ActivityMapInfoResponse.passLevels', index=7,
-      number=8, type=5, cpp_type=1, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='unlock', full_name='com.common.msg.ActivityMapInfoResponse.unlock', index=8,
-      number=9, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -197,8 +143,8 @@ _ACTIVITYMAPINFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=166,
-  serialized_end=371,
+  serialized_start=165,
+  serialized_end=268,
 )
 
 
@@ -229,8 +175,8 @@ _TAKEACTIVITYMAPAWARDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=373,
-  serialized_end=422,
+  serialized_start=270,
+  serialized_end=319,
 )
 
 
@@ -261,8 +207,8 @@ _TAKEACTIVITYMAPAWARDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=424,
-  serialized_end=494,
+  serialized_start=321,
+  serialized_end=391,
 )
 
 
@@ -307,8 +253,8 @@ _CHRISTMASTURNABLEDRAWREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=496,
-  serialized_end=578,
+  serialized_start=393,
+  serialized_end=475,
 )
 
 
@@ -339,8 +285,8 @@ _CHRISTMASDRAWREWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=580,
-  serialized_end=641,
+  serialized_start=477,
+  serialized_end=538,
 )
 
 
@@ -378,8 +324,8 @@ _CHRISTMASTURNABLEDRAWRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=643,
-  serialized_end=743,
+  serialized_start=540,
+  serialized_end=640,
 )
 
 
@@ -410,8 +356,8 @@ _MAPRANKREWARDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=745,
-  serialized_end=787,
+  serialized_start=642,
+  serialized_end=684,
 )
 
 
@@ -442,136 +388,8 @@ _MAPRANKREWARDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=789,
-  serialized_end=864,
-)
-
-
-_MAPEVALUATEREQUEST = _descriptor.Descriptor(
-  name='MapEvaluateRequest',
-  full_name='com.common.msg.MapEvaluateRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='activityId', full_name='com.common.msg.MapEvaluateRequest.activityId', index=0,
-      number=1, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=866,
-  serialized_end=906,
-)
-
-
-_MAPEVALUATERESPONSE = _descriptor.Descriptor(
-  name='MapEvaluateResponse',
-  full_name='com.common.msg.MapEvaluateResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=908,
-  serialized_end=929,
-)
-
-
-_TAKEBPLEVELAWARDREQUEST = _descriptor.Descriptor(
-  name='TakeBpLevelAwardRequest',
-  full_name='com.common.msg.TakeBpLevelAwardRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='actId', full_name='com.common.msg.TakeBpLevelAwardRequest.actId', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='type', full_name='com.common.msg.TakeBpLevelAwardRequest.type', index=1,
-      number=2, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='level', full_name='com.common.msg.TakeBpLevelAwardRequest.level', index=2,
-      number=3, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=931,
-  serialized_end=1000,
-)
-
-
-_TAKEBPLEVELAWARDRESPONSE = _descriptor.Descriptor(
-  name='TakeBpLevelAwardResponse',
-  full_name='com.common.msg.TakeBpLevelAwardResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1002,
-  serialized_end=1028,
+  serialized_start=686,
+  serialized_end=761,
 )
 
 _ACTIVITYMAPINFORESPONSE.fields_by_name['tasks'].message_type = CommonTaskModuleMsg__pb2._COMMONTASK
@@ -588,10 +406,6 @@ DESCRIPTOR.message_types_by_name['ChristmasDrawReward'] = _CHRISTMASDRAWREWARD
 DESCRIPTOR.message_types_by_name['ChristmasTurnableDrawResponse'] = _CHRISTMASTURNABLEDRAWRESPONSE
 DESCRIPTOR.message_types_by_name['MapRankRewardRequest'] = _MAPRANKREWARDREQUEST
 DESCRIPTOR.message_types_by_name['MapRankRewardResponse'] = _MAPRANKREWARDRESPONSE
-DESCRIPTOR.message_types_by_name['MapEvaluateRequest'] = _MAPEVALUATEREQUEST
-DESCRIPTOR.message_types_by_name['MapEvaluateResponse'] = _MAPEVALUATERESPONSE
-DESCRIPTOR.message_types_by_name['TakeBpLevelAwardRequest'] = _TAKEBPLEVELAWARDREQUEST
-DESCRIPTOR.message_types_by_name['TakeBpLevelAwardResponse'] = _TAKEBPLEVELAWARDRESPONSE
 DESCRIPTOR.enum_types_by_name['ActivityMapModuleMsgSubCommand'] = _ACTIVITYMAPMODULEMSGSUBCOMMAND
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -657,34 +471,6 @@ MapRankRewardResponse = _reflection.GeneratedProtocolMessageType('MapRankRewardR
   # @@protoc_insertion_point(class_scope:com.common.msg.MapRankRewardResponse)
   })
 _sym_db.RegisterMessage(MapRankRewardResponse)
-
-MapEvaluateRequest = _reflection.GeneratedProtocolMessageType('MapEvaluateRequest', (_message.Message,), {
-  'DESCRIPTOR' : _MAPEVALUATEREQUEST,
-  '__module__' : 'ActivityMapModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.MapEvaluateRequest)
-  })
-_sym_db.RegisterMessage(MapEvaluateRequest)
-
-MapEvaluateResponse = _reflection.GeneratedProtocolMessageType('MapEvaluateResponse', (_message.Message,), {
-  'DESCRIPTOR' : _MAPEVALUATERESPONSE,
-  '__module__' : 'ActivityMapModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.MapEvaluateResponse)
-  })
-_sym_db.RegisterMessage(MapEvaluateResponse)
-
-TakeBpLevelAwardRequest = _reflection.GeneratedProtocolMessageType('TakeBpLevelAwardRequest', (_message.Message,), {
-  'DESCRIPTOR' : _TAKEBPLEVELAWARDREQUEST,
-  '__module__' : 'ActivityMapModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.TakeBpLevelAwardRequest)
-  })
-_sym_db.RegisterMessage(TakeBpLevelAwardRequest)
-
-TakeBpLevelAwardResponse = _reflection.GeneratedProtocolMessageType('TakeBpLevelAwardResponse', (_message.Message,), {
-  'DESCRIPTOR' : _TAKEBPLEVELAWARDRESPONSE,
-  '__module__' : 'ActivityMapModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.TakeBpLevelAwardResponse)
-  })
-_sym_db.RegisterMessage(TakeBpLevelAwardResponse)
 
 
 # @@protoc_insertion_point(module_scope)

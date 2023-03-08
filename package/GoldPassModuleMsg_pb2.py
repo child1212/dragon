@@ -23,7 +23,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x17GoldPassModuleMsg.proto\x12\x0e\x63om.common.msg\x1a\x17\x41\x63tivityModuleMsg.proto\x1a\x13TaskModuleMsg.proto\x1a\x13ItemModuleMsg.proto\")\n\x13GoldPassInfoRequest\x12\x12\n\nactivityId\x18\x01 \x01(\t\"l\n\x0fGoldPassTaskMsg\x12\x0e\n\x06status\x18\x01 \x01(\x05\x12\x0e\n\x06taskId\x18\x02 \x01(\t\x12\r\n\x05tplId\x18\x03 \x01(\t\x12*\n\x06params\x18\x04 \x03(\x0b\x32\x1a.com.common.msg.ProtoTypes\"\x85\x03\n\x14GoldPassInfoResponse\x12\x30\n\x0b\x61\x63tivityMsg\x18\x01 \x01(\x0b\x32\x1b.com.common.msg.ActivityMsg\x12\x1c\n\x14\x64\x61ilyTaskRefreshTime\x18\x02 \x01(\x03\x12\x1d\n\x15weeklyTaskRefreshTime\x18\x03 \x01(\x03\x12\x0b\n\x03\x65xp\x18\x04 \x01(\x05\x12\r\n\x05level\x18\x05 \x01(\x05\x12\x12\n\nunlockPass\x18\x06 \x01(\x08\x12\x33\n\ndailyTasks\x18\x07 \x03(\x0b\x32\x1f.com.common.msg.GoldPassTaskMsg\x12\x34\n\x0bweeklyTasks\x18\x08 \x03(\x0b\x32\x1f.com.common.msg.GoldPassTaskMsg\x12\x13\n\x0b\x62\x61seRewards\x18\t \x03(\x05\x12\x13\n\x0bpassRewards\x18\n \x03(\x05\x12\x14\n\x0c\x65xchangeGold\x18\x0b \x01(\x05\x12\x12\n\nunlockTime\x18\x0c \x01(\x03\x12\x0f\n\x07taskNum\x18\r \x01(\x05\"7\n\x18GoldPassFinishTaskRetMsg\x12\x0e\n\x06taskId\x18\x01 \x01(\t\x12\x0b\n\x03ret\x18\x02 \x01(\x05\"@\n\x19GoldPassFinishTaskRequest\x12\x12\n\nactivityId\x18\x01 \x01(\t\x12\x0f\n\x07taskIds\x18\x02 \x03(\t\"j\n\x1aGoldPassFinishTaskResponse\x12\x36\n\x04rets\x18\x01 \x03(\x0b\x32(.com.common.msg.GoldPassFinishTaskRetMsg\x12\x14\n\x0c\x65xchangeGold\x18\x02 \x01(\x05\"<\n\x17GoldPassBuyLevelRequest\x12\x12\n\nactivityId\x18\x01 \x01(\t\x12\r\n\x05level\x18\x02 \x01(\x05\"\x1a\n\x18GoldPassBuyLevelResponse\"H\n\x15GoldPassRewardRequest\x12\x12\n\nactivityId\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\x05\x12\r\n\x05level\x18\x03 \x01(\x05\"\x18\n\x16GoldPassRewardResponse\"\x1c\n\x1aGoldPassMaxLevelBoxRequest\"G\n\x1bGoldPassMaxLevelBoxResponse\x12(\n\x07rewards\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"-\n\x17GoldPassSkipTaskRequest\x12\x12\n\nactivityId\x18\x01 \x01(\t\"N\n\x18GoldPassSkipTaskResponse\x12\x32\n\x04info\x18\x01 \x01(\x0b\x32$.com.common.msg.GoldPassInfoResponse*\xb0\x02\n\x1bGoldPassModuleMsgSubCommand\x12(\n\"GOLDPASSMODULEMSG_SUB_GOLDPASSINFO\x10\xad\xca\x01\x12.\n(GOLDPASSMODULEMSG_SUB_GOLDPASSFINISHTASK\x10\xae\xca\x01\x12,\n&GOLDPASSMODULEMSG_SUB_GOLDPASSBUYLEVEL\x10\xaf\xca\x01\x12*\n$GOLDPASSMODULEMSG_SUB_GOLDPASSREWARD\x10\xb0\xca\x01\x12/\n)GOLDPASSMODULEMSG_SUB_GOLDPASSMAXLEVELBOX\x10\xb1\xca\x01\x12,\n&GOLDPASSMODULEMSG_SUB_GOLDPASSSKIPTASK\x10\xb2\xca\x01'
+  serialized_pb=b'\n\x17GoldPassModuleMsg.proto\x12\x0e\x63om.common.msg\x1a\x17\x41\x63tivityModuleMsg.proto\x1a\x13TaskModuleMsg.proto\x1a\x13ItemModuleMsg.proto\")\n\x13GoldPassInfoRequest\x12\x12\n\nactivityId\x18\x01 \x01(\t\"l\n\x0fGoldPassTaskMsg\x12\x0e\n\x06status\x18\x01 \x01(\x05\x12\x0e\n\x06taskId\x18\x02 \x01(\t\x12\r\n\x05tplId\x18\x03 \x01(\t\x12*\n\x06params\x18\x04 \x03(\x0b\x32\x1a.com.common.msg.ProtoTypes\"\xe0\x02\n\x14GoldPassInfoResponse\x12\x30\n\x0b\x61\x63tivityMsg\x18\x01 \x01(\x0b\x32\x1b.com.common.msg.ActivityMsg\x12\x1c\n\x14\x64\x61ilyTaskRefreshTime\x18\x02 \x01(\x03\x12\x1d\n\x15weeklyTaskRefreshTime\x18\x03 \x01(\x03\x12\x0b\n\x03\x65xp\x18\x04 \x01(\x05\x12\r\n\x05level\x18\x05 \x01(\x05\x12\x12\n\nunlockPass\x18\x06 \x01(\x08\x12\x33\n\ndailyTasks\x18\x07 \x03(\x0b\x32\x1f.com.common.msg.GoldPassTaskMsg\x12\x34\n\x0bweeklyTasks\x18\x08 \x03(\x0b\x32\x1f.com.common.msg.GoldPassTaskMsg\x12\x13\n\x0b\x62\x61seRewards\x18\t \x03(\x05\x12\x13\n\x0bpassRewards\x18\n \x03(\x05\x12\x14\n\x0c\x65xchangeGold\x18\x0b \x01(\x05\"7\n\x18GoldPassFinishTaskRetMsg\x12\x0e\n\x06taskId\x18\x01 \x01(\t\x12\x0b\n\x03ret\x18\x02 \x01(\x05\"@\n\x19GoldPassFinishTaskRequest\x12\x12\n\nactivityId\x18\x01 \x01(\t\x12\x0f\n\x07taskIds\x18\x02 \x03(\t\"j\n\x1aGoldPassFinishTaskResponse\x12\x36\n\x04rets\x18\x01 \x03(\x0b\x32(.com.common.msg.GoldPassFinishTaskRetMsg\x12\x14\n\x0c\x65xchangeGold\x18\x02 \x01(\x05\"<\n\x17GoldPassBuyLevelRequest\x12\x12\n\nactivityId\x18\x01 \x01(\t\x12\r\n\x05level\x18\x02 \x01(\x05\"\x1a\n\x18GoldPassBuyLevelResponse\"H\n\x15GoldPassRewardRequest\x12\x12\n\nactivityId\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\x05\x12\r\n\x05level\x18\x03 \x01(\x05\"\x18\n\x16GoldPassRewardResponse\"\x1c\n\x1aGoldPassMaxLevelBoxRequest\"G\n\x1bGoldPassMaxLevelBoxResponse\x12(\n\x07rewards\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg*\x82\x02\n\x1bGoldPassModuleMsgSubCommand\x12(\n\"GOLDPASSMODULEMSG_SUB_GOLDPASSINFO\x10\xad\xca\x01\x12.\n(GOLDPASSMODULEMSG_SUB_GOLDPASSFINISHTASK\x10\xae\xca\x01\x12,\n&GOLDPASSMODULEMSG_SUB_GOLDPASSBUYLEVEL\x10\xaf\xca\x01\x12*\n$GOLDPASSMODULEMSG_SUB_GOLDPASSREWARD\x10\xb0\xca\x01\x12/\n)GOLDPASSMODULEMSG_SUB_GOLDPASSMAXLEVELBOX\x10\xb1\xca\x01'
   ,
   dependencies=[ActivityModuleMsg__pb2.DESCRIPTOR,TaskModuleMsg__pb2.DESCRIPTOR,ItemModuleMsg__pb2.DESCRIPTOR,])
 
@@ -59,16 +59,11 @@ _GOLDPASSMODULEMSGSUBCOMMAND = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='GOLDPASSMODULEMSG_SUB_GOLDPASSSKIPTASK', index=5, number=25906,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1307,
-  serialized_end=1611,
+  serialized_start=1143,
+  serialized_end=1401,
 )
 _sym_db.RegisterEnumDescriptor(_GOLDPASSMODULEMSGSUBCOMMAND)
 
@@ -78,7 +73,6 @@ GOLDPASSMODULEMSG_SUB_GOLDPASSFINISHTASK = 25902
 GOLDPASSMODULEMSG_SUB_GOLDPASSBUYLEVEL = 25903
 GOLDPASSMODULEMSG_SUB_GOLDPASSREWARD = 25904
 GOLDPASSMODULEMSG_SUB_GOLDPASSMAXLEVELBOX = 25905
-GOLDPASSMODULEMSG_SUB_GOLDPASSSKIPTASK = 25906
 
 
 
@@ -252,20 +246,6 @@ _GOLDPASSINFORESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='unlockTime', full_name='com.common.msg.GoldPassInfoResponse.unlockTime', index=11,
-      number=12, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='taskNum', full_name='com.common.msg.GoldPassInfoResponse.taskNum', index=12,
-      number=13, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -279,7 +259,7 @@ _GOLDPASSINFORESPONSE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=264,
-  serialized_end=653,
+  serialized_end=616,
 )
 
 
@@ -317,8 +297,8 @@ _GOLDPASSFINISHTASKRETMSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=655,
-  serialized_end=710,
+  serialized_start=618,
+  serialized_end=673,
 )
 
 
@@ -356,8 +336,8 @@ _GOLDPASSFINISHTASKREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=712,
-  serialized_end=776,
+  serialized_start=675,
+  serialized_end=739,
 )
 
 
@@ -395,8 +375,8 @@ _GOLDPASSFINISHTASKRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=778,
-  serialized_end=884,
+  serialized_start=741,
+  serialized_end=847,
 )
 
 
@@ -434,8 +414,8 @@ _GOLDPASSBUYLEVELREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=886,
-  serialized_end=946,
+  serialized_start=849,
+  serialized_end=909,
 )
 
 
@@ -459,8 +439,8 @@ _GOLDPASSBUYLEVELRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=948,
-  serialized_end=974,
+  serialized_start=911,
+  serialized_end=937,
 )
 
 
@@ -505,8 +485,8 @@ _GOLDPASSREWARDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=976,
-  serialized_end=1048,
+  serialized_start=939,
+  serialized_end=1011,
 )
 
 
@@ -530,8 +510,8 @@ _GOLDPASSREWARDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1050,
-  serialized_end=1074,
+  serialized_start=1013,
+  serialized_end=1037,
 )
 
 
@@ -555,8 +535,8 @@ _GOLDPASSMAXLEVELBOXREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1076,
-  serialized_end=1104,
+  serialized_start=1039,
+  serialized_end=1067,
 )
 
 
@@ -587,72 +567,8 @@ _GOLDPASSMAXLEVELBOXRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1106,
-  serialized_end=1177,
-)
-
-
-_GOLDPASSSKIPTASKREQUEST = _descriptor.Descriptor(
-  name='GoldPassSkipTaskRequest',
-  full_name='com.common.msg.GoldPassSkipTaskRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='activityId', full_name='com.common.msg.GoldPassSkipTaskRequest.activityId', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1179,
-  serialized_end=1224,
-)
-
-
-_GOLDPASSSKIPTASKRESPONSE = _descriptor.Descriptor(
-  name='GoldPassSkipTaskResponse',
-  full_name='com.common.msg.GoldPassSkipTaskResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='info', full_name='com.common.msg.GoldPassSkipTaskResponse.info', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1226,
-  serialized_end=1304,
+  serialized_start=1069,
+  serialized_end=1140,
 )
 
 _GOLDPASSTASKMSG.fields_by_name['params'].message_type = TaskModuleMsg__pb2._PROTOTYPES
@@ -661,7 +577,6 @@ _GOLDPASSINFORESPONSE.fields_by_name['dailyTasks'].message_type = _GOLDPASSTASKM
 _GOLDPASSINFORESPONSE.fields_by_name['weeklyTasks'].message_type = _GOLDPASSTASKMSG
 _GOLDPASSFINISHTASKRESPONSE.fields_by_name['rets'].message_type = _GOLDPASSFINISHTASKRETMSG
 _GOLDPASSMAXLEVELBOXRESPONSE.fields_by_name['rewards'].message_type = ItemModuleMsg__pb2._ITEMMSG
-_GOLDPASSSKIPTASKRESPONSE.fields_by_name['info'].message_type = _GOLDPASSINFORESPONSE
 DESCRIPTOR.message_types_by_name['GoldPassInfoRequest'] = _GOLDPASSINFOREQUEST
 DESCRIPTOR.message_types_by_name['GoldPassTaskMsg'] = _GOLDPASSTASKMSG
 DESCRIPTOR.message_types_by_name['GoldPassInfoResponse'] = _GOLDPASSINFORESPONSE
@@ -674,8 +589,6 @@ DESCRIPTOR.message_types_by_name['GoldPassRewardRequest'] = _GOLDPASSREWARDREQUE
 DESCRIPTOR.message_types_by_name['GoldPassRewardResponse'] = _GOLDPASSREWARDRESPONSE
 DESCRIPTOR.message_types_by_name['GoldPassMaxLevelBoxRequest'] = _GOLDPASSMAXLEVELBOXREQUEST
 DESCRIPTOR.message_types_by_name['GoldPassMaxLevelBoxResponse'] = _GOLDPASSMAXLEVELBOXRESPONSE
-DESCRIPTOR.message_types_by_name['GoldPassSkipTaskRequest'] = _GOLDPASSSKIPTASKREQUEST
-DESCRIPTOR.message_types_by_name['GoldPassSkipTaskResponse'] = _GOLDPASSSKIPTASKRESPONSE
 DESCRIPTOR.enum_types_by_name['GoldPassModuleMsgSubCommand'] = _GOLDPASSMODULEMSGSUBCOMMAND
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -762,20 +675,6 @@ GoldPassMaxLevelBoxResponse = _reflection.GeneratedProtocolMessageType('GoldPass
   # @@protoc_insertion_point(class_scope:com.common.msg.GoldPassMaxLevelBoxResponse)
   })
 _sym_db.RegisterMessage(GoldPassMaxLevelBoxResponse)
-
-GoldPassSkipTaskRequest = _reflection.GeneratedProtocolMessageType('GoldPassSkipTaskRequest', (_message.Message,), {
-  'DESCRIPTOR' : _GOLDPASSSKIPTASKREQUEST,
-  '__module__' : 'GoldPassModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.GoldPassSkipTaskRequest)
-  })
-_sym_db.RegisterMessage(GoldPassSkipTaskRequest)
-
-GoldPassSkipTaskResponse = _reflection.GeneratedProtocolMessageType('GoldPassSkipTaskResponse', (_message.Message,), {
-  'DESCRIPTOR' : _GOLDPASSSKIPTASKRESPONSE,
-  '__module__' : 'GoldPassModuleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:com.common.msg.GoldPassSkipTaskResponse)
-  })
-_sym_db.RegisterMessage(GoldPassSkipTaskResponse)
 
 
 # @@protoc_insertion_point(module_scope)

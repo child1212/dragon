@@ -2,18 +2,38 @@
 import time
 import requests
 import json
+import os
+pack_pos = os.path.dirname(os.path.dirname(__file__))
 import sys
-sys.path.append('D:\\pyprogram\\PyTestTools\\dragon\\function')
+sys.path.append('{pack_pos}\\function'.format(pack_pos=pack_pos))
 from func_dragon import *
 from xieyi import *
 param = {}
 
 ###############################################
-server = "ntest"
-account = 'xx0000'
+server = "qa"
+account = 'li2005'
 player = ''
-param["nickName"] = "毛阿毛"
-param["level"] = 20
+
+# #等级
+# param["level"] = 14
+# #昵称
+param["nickName"] = "回归"      
+# #时间差
+d,h,m = 33,0,0
+param["timeOffset"] = (((d*24)+h)*60+m)*60*1000   
+# #经验
+# param["exp"] = 22299             
+# #最后一次付费时间
+# param["lastRechargeTime"] = time.time()*1000    
+# #支付金额
+# param["totalPayAmount"] = 1000000      
+# #皮肤 ["27351","27352","27350","27353"]
+# param["heroineSkins"] = [27202]   
+# #隐藏VIP等级开关
+# param["hideVipLevel"] = True
+
+
 
 ################################################
 

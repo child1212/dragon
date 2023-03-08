@@ -2,10 +2,10 @@
 
 import json
 
-gia = open("gia.txt","r",encoding="utf-8")
-giar = open("gia_out.txt","w",encoding="utf-8")
+gia = open("D:\\pyprogram\\PyTestTools\\dragon\\tools\\text\\data\\gia.txt","r",encoding="utf-8")
+giar = open("D:\\pyprogram\\PyTestTools\\dragon\\tools\\text\\data\\gia_out.txt","w",encoding="utf-8")
 
-custom = {"uid"}
+custom = {"result","enterid"}
 
 for c in custom:
     giar.write(c+";")

@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x17\x46\x61rmlandModuleMsg.proto\x12\x0e\x63om.common.msg\x1a\x13ItemModuleMsg.proto\"A\n\x0b\x46\x61rmlandMsg\x12\x0f\n\x07plantId\x18\x01 \x02(\t\x12\x11\n\tstartTime\x18\x02 \x01(\x03\x12\x0e\n\x06\x63ropId\x18\x03 \x01(\t\"I\n\x13OpenFarmlandRequest\x12\x0f\n\x07sceneId\x18\x01 \x02(\t\x12\x0f\n\x07plantId\x18\x02 \x02(\t\x12\x10\n\x08plantIds\x18\x03 \x03(\t\"\x16\n\x14OpenFarmlandResponse\"S\n\x0cPlantCropMsg\x12\x0f\n\x07sceneId\x18\x01 \x02(\t\x12\x0f\n\x07plantId\x18\x02 \x02(\t\x12\x0e\n\x06\x63ropId\x18\x03 \x02(\t\x12\x11\n\tstartTime\x18\x04 \x02(\x03\"D\n\x10PlantCropRequest\x12\x30\n\nplantCrops\x18\x01 \x03(\x0b\x32\x1c.com.common.msg.PlantCropMsg\";\n\x11PlantCropResponse\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"A\n\x0eReceiveCropMsg\x12\x0f\n\x07sceneId\x18\x01 \x02(\t\x12\x0f\n\x07plantId\x18\x02 \x02(\t\x12\r\n\x05\x63ount\x18\x03 \x01(\x05\"J\n\x12ReceiveCropRequest\x12\x34\n\x0creceiveCrops\x18\x01 \x03(\x0b\x32\x1e.com.common.msg.ReceiveCropMsg\"=\n\x13ReceiveCropResponse\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"F\n\x11\x41\x63\x63\x65lerateGrowMsg\x12\x0f\n\x07sceneId\x18\x01 \x02(\t\x12\x0f\n\x07plantId\x18\x02 \x02(\t\x12\x0f\n\x07\x61\x63\x63Time\x18\x03 \x01(\x03\"S\n\x15\x41\x63\x63\x65lerateGrowRequest\x12:\n\x0f\x61\x63\x63\x65lerateGrows\x18\x01 \x03(\x0b\x32!.com.common.msg.AccelerateGrowMsg\"@\n\x16\x41\x63\x63\x65lerateGrowResponse\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg*\xc3\x01\n\x1b\x46\x61rmlandModuleMsgSubCommand\x12(\n\"FARMLANDMODULEMSG_SUB_OPENFARMLAND\x10\xb9\xc6\x01\x12%\n\x1f\x46\x41RMLANDMODULEMSG_SUB_PLANTCROP\x10\xba\xc6\x01\x12\'\n!FARMLANDMODULEMSG_SUB_RECEIVECROP\x10\xbb\xc6\x01\x12*\n$FARMLANDMODULEMSG_SUB_ACCELERATEGROW\x10\xbc\xc6\x01'
+  serialized_pb=b'\n\x17\x46\x61rmlandModuleMsg.proto\x12\x0e\x63om.common.msg\x1a\x13ItemModuleMsg.proto\"A\n\x0b\x46\x61rmlandMsg\x12\x0f\n\x07plantId\x18\x01 \x02(\t\x12\x11\n\tstartTime\x18\x02 \x01(\x03\x12\x0e\n\x06\x63ropId\x18\x03 \x01(\t\"I\n\x13OpenFarmlandRequest\x12\x0f\n\x07sceneId\x18\x01 \x02(\t\x12\x0f\n\x07plantId\x18\x02 \x02(\t\x12\x10\n\x08plantIds\x18\x03 \x03(\t\"\x16\n\x14OpenFarmlandResponse\"S\n\x0cPlantCropMsg\x12\x0f\n\x07sceneId\x18\x01 \x02(\t\x12\x0f\n\x07plantId\x18\x02 \x02(\t\x12\x0e\n\x06\x63ropId\x18\x03 \x02(\t\x12\x11\n\tstartTime\x18\x04 \x02(\x03\"D\n\x10PlantCropRequest\x12\x30\n\nplantCrops\x18\x01 \x03(\x0b\x32\x1c.com.common.msg.PlantCropMsg\";\n\x11PlantCropResponse\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"2\n\x0eReceiveCropMsg\x12\x0f\n\x07sceneId\x18\x01 \x02(\t\x12\x0f\n\x07plantId\x18\x02 \x02(\t\"J\n\x12ReceiveCropRequest\x12\x34\n\x0creceiveCrops\x18\x01 \x03(\x0b\x32\x1e.com.common.msg.ReceiveCropMsg\"=\n\x13ReceiveCropResponse\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg\"F\n\x11\x41\x63\x63\x65lerateGrowMsg\x12\x0f\n\x07sceneId\x18\x01 \x02(\t\x12\x0f\n\x07plantId\x18\x02 \x02(\t\x12\x0f\n\x07\x61\x63\x63Time\x18\x03 \x01(\x03\"S\n\x15\x41\x63\x63\x65lerateGrowRequest\x12:\n\x0f\x61\x63\x63\x65lerateGrows\x18\x01 \x03(\x0b\x32!.com.common.msg.AccelerateGrowMsg\"@\n\x16\x41\x63\x63\x65lerateGrowResponse\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.com.common.msg.ItemMsg*\xc3\x01\n\x1b\x46\x61rmlandModuleMsgSubCommand\x12(\n\"FARMLANDMODULEMSG_SUB_OPENFARMLAND\x10\xb9\xc6\x01\x12%\n\x1f\x46\x41RMLANDMODULEMSG_SUB_PLANTCROP\x10\xba\xc6\x01\x12\'\n!FARMLANDMODULEMSG_SUB_RECEIVECROP\x10\xbb\xc6\x01\x12*\n$FARMLANDMODULEMSG_SUB_ACCELERATEGROW\x10\xbc\xc6\x01'
   ,
   dependencies=[ItemModuleMsg__pb2.DESCRIPTOR,])
 
@@ -55,8 +55,8 @@ _FARMLANDMODULEMSGSUBCOMMAND = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=876,
-  serialized_end=1071,
+  serialized_start=861,
+  serialized_end=1056,
 )
 _sym_db.RegisterEnumDescriptor(_FARMLANDMODULEMSGSUBCOMMAND)
 
@@ -324,13 +324,6 @@ _RECEIVECROPMSG = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='count', full_name='com.common.msg.ReceiveCropMsg.count', index=2,
-      number=3, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -344,7 +337,7 @@ _RECEIVECROPMSG = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=446,
-  serialized_end=511,
+  serialized_end=496,
 )
 
 
@@ -375,8 +368,8 @@ _RECEIVECROPREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=513,
-  serialized_end=587,
+  serialized_start=498,
+  serialized_end=572,
 )
 
 
@@ -407,8 +400,8 @@ _RECEIVECROPRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=589,
-  serialized_end=650,
+  serialized_start=574,
+  serialized_end=635,
 )
 
 
@@ -453,8 +446,8 @@ _ACCELERATEGROWMSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=652,
-  serialized_end=722,
+  serialized_start=637,
+  serialized_end=707,
 )
 
 
@@ -485,8 +478,8 @@ _ACCELERATEGROWREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=724,
-  serialized_end=807,
+  serialized_start=709,
+  serialized_end=792,
 )
 
 
@@ -517,8 +510,8 @@ _ACCELERATEGROWRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=809,
-  serialized_end=873,
+  serialized_start=794,
+  serialized_end=858,
 )
 
 _PLANTCROPREQUEST.fields_by_name['plantCrops'].message_type = _PLANTCROPMSG

@@ -1,7 +1,10 @@
 #%%
 from os import name
+import os
+pack_pos = os.path.dirname(os.path.dirname(__file__))
 import sys
-sys.path.append('D:\\pyprogram\\PyTestTools\\dragon\\function')
+sys.path.append('{pack_pos}\\function'.format(pack_pos=pack_pos))
+sys.path.append('{pack_pos}\\package'.format(pack_pos=pack_pos))
 from xieyi import *
 
 account = 1061
