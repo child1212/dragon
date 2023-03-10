@@ -10,11 +10,11 @@ import os
 
 
 
-
+#在这里填写参数=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*
 print("start time:",time.asctime(time.localtime()))
-account = "li2001"
-server = 'qa'
-
+account = "te0000"
+server = 'nqa'
+#在这里填写参数=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*
 
 
 
@@ -43,7 +43,10 @@ session = info['sessionid']
 clear_item(player,log_res,server)
 # send_gift(22000, 100, player,session, account, log_res,server)
 # send_gift(30000, 100, player,session, account, log_res,server)
+send_gift(1002, 100000000, player,session, account, log_res,server)
 send_gift(1001, 100000, player,session, account, log_res,server)
+send_gift(81003, 1000, player,session, account, log_res,server)
+send_gift(83001, 1000, player,session, account, log_res,server)
 send_gift(1003, 100, player,session, account, log_res,server)
 # send_gift(14074, 1, player,session, account, log_res,server)
 

@@ -12,7 +12,7 @@ import json
 import random
 from xieyi import *
 server = "ntest"
-activityId = 112
+activityId = 9002
 version="3.1.0"
 
 

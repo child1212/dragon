@@ -209,6 +209,7 @@ for name in names:
 #                         break
 #         lan.close()
 #%%
+#筛选dragon
 names = ('AI','Dialog','Guide','Pops','Story','SystemErrorCode','Tips','UI')
 countries = {'en'}
 for country in countries:
@@ -218,8 +219,9 @@ for country in countries:
         lan = open("E:\\town\\FA\\client\\client\\Assets\\HomeLand\\Localization\\{country}\\{name}.bytes".format(country=country,name=name),"r",encoding="utf-8")
 
         for line in lan:
-            if "dragon" in line:
-                print(line)
+            r = line.split('=')
+            if "dragon" in r[-1]:
+                print(r[0])
         lan.close()
 
 # %%

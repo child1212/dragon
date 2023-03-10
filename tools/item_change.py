@@ -8,10 +8,10 @@ from func_dragon import *
 
 
 #######################################################################################
-#道具各项参数d6e0c013d2c377bbeb3f56a262cf3b99
+#dragon : d6e0c013d2c377bbeb3f56a262cf3b99\603681214128417
 #FA : 91a4a00cc23bdae216d5dc2519da2c77
-accounts = {"603681214128417"}                       #账号                             #
-server = "dragon"                                    #服务器前缀<dev:"tlogin", qa:"qausa">  #
+accounts = {"91a4a00cc23bdae216d5dc2519da2c77"}                       #账号                             #
+server = "nrelease"                                    #服务器前缀<dev:"tlogin", qa:"qausa">  #
 #######################################################################################
 
 if server == "ntest":
@@ -31,6 +31,7 @@ elif server == "act":
 
 total = {}#
 run = ''
+no = 501
 while run == '':
     for account in accounts:
         print(account+":","\n=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=")
@@ -67,8 +68,13 @@ while run == '':
         # print("\n\n")
     print("=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=\n")
     run = input("contune?")
-    os.system("adb shell input tap 2074 1262")
-
+    # # os.system("adb shell input tap 2071 718")
+    # # os.system("adb shell input tap 1619 914")
+    # os.system("adb exec-out screencap -p >e://screenshot/upgrade{no}.jpg".format(no=no))
+    # os.system("adb shell input tap 1619 914")
+    
+    
+    no += 1
 
 
 

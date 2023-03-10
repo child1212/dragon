@@ -16,12 +16,12 @@ account = 'li2005'
 player = ''
 
 # #等级
-# param["level"] = 14
-# #昵称
-param["nickName"] = "回归"      
+param["level"] = 20
+# # #昵称
+# param["nickName"] = "回归"      
 # #时间差
-d,h,m = 33,0,0
-param["timeOffset"] = (((d*24)+h)*60+m)*60*1000   
+# d,h,m = 0,0,76
+# param["timeOffset"] = (((d*24)+h)*60+m)*60*1000   
 # #经验
 # param["exp"] = 22299             
 # #最后一次付费时间
@@ -69,3 +69,5 @@ for i in playerinfo["page"]["list"]:
 
 change_Properties(info_dic,player,log_res,server,param)
 
+
+# %%
