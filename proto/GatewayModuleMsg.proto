@@ -1,0 +1,36 @@
+syntax = "proto2";
+package com.framwork.sx;
+
+//消息结构
+message MessageStruct {
+	//状态码
+	optional int32 code = 1;
+	//消息id
+	optional int32 msgId = 2;
+	//消息体
+	optional bytes msgBody = 3;
+	//请求或相应产生时间
+	optional int64 genTime = 4;
+	//sequenceId( 防止缓存消息重发 )
+	optional int64 sequenceId = 5;
+	// 客户端版本号
+	optional string version = 6;
+}
+
+//网络传输消息
+message GatewayPackageRequest {
+	//消息发送人id
+	optional string senderId = 1;
+	//会话id
+	optional int64 sessionId = 2;
+	//消息结构
+	repeated MessageStruct bodys = 3;
+}
+
+//网络传输消息
+message GatewayPackageResponse {
+	//消息结构
+	repeated MessageStruct bodys = 1;
+	// 同步标记
+	repeated int32 flags = 2;
+}

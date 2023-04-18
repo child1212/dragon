@@ -1,0 +1,199 @@
+syntax = "proto2";
+
+package com.common.msg;
+
+enum ActivityLotteryModuleMsgSubCommand {
+	//获取抽奖活动信息 从ActivityLotteryInfoResponse中反查数据结构看起来更容易理解
+	ACTIVITYLOTTERYMODULEMSG_SUB_ACTIVITYLOTTERYINFO = 29401;
+	//请求抽奖
+	ACTIVITYLOTTERYMODULEMSG_SUB_LOTTERY = 29402;
+	//请求普通开奖结果(上一场的结果)
+	ACTIVITYLOTTERYMODULEMSG_SUB_LOTTERYRESULT = 29403;
+	//请求特殊开奖结果(周日(即最后一天)开奖结果)
+	ACTIVITYLOTTERYMODULEMSG_SUB_SPECIALLOTTERYRESULT = 29404;
+	//请求领取免费奖卷
+	ACTIVITYLOTTERYMODULEMSG_SUB_TAKEFREETICKET = 29405;
+	//昵称是否显示设置
+	ACTIVITYLOTTERYMODULEMSG_SUB_NICKNAMESET = 29406;
+	//周日抽奖请求增加权重
+	ACTIVITYLOTTERYMODULEMSG_SUB_SPECIALLOTTERY = 29407;
+	//请求领取参与活动奖励
+	ACTIVITYLOTTERYMODULEMSG_SUB_TAKEJOINAWARD = 29408;
+}
+
+message ActivityLotteryInfoRequest{
+	//活动id
+	optional string actId = 1;
+}
+
+message PlayerBase {
+	//玩家id
+	optional string pid = 1;
+	//玩家名字(空字符串说明玩家隐藏了名字)
+	optional string name = 2;
+	// 头像
+	optional string avatar = 3;
+	// 头像框
+	optional string frame = 4;
+	//玩家等级
+	optional int32 level = 5;
+}
+
+message PlayerSelect {
+	//玩家id
+	optional PlayerBase info = 1;
+	//玩家已选号码集合
+	repeated int32 nums = 2;
+}
+
+message LotterySelect {
+	//已选号码集合
+	repeated PlayerSelect selects =1;
+	//开始时间戳
+	optional int64 startTimeStamp = 2;
+	//玩家抽奖卷未中奖次数(参见文档周一到周六抽奖概率补充规则部分)
+	optional int32 notHit = 3;
+	//本次开启选号顺序数
+	optional int32 uuid = 4;
+	//奖池数量
+	optional int32 pool = 5;
+}
+
+message HitPlayer {
+	//中奖玩家排名
+	optional int32 rank = 1;
+	//中奖玩家信息
+	optional PlayerBase playerBase = 2;
+}
+
+message LotteryResult{
+	//大奖号码
+	optional int32 num = 1;
+	//中奖玩家
+	repeated HitPlayer players = 2;
+	//本次开启选号顺序数
+	optional int32 uuid = 3;
+	//奖池数量
+	optional int32 pool = 4;
+	//对于实时的在此阶段时数据有效 历史数据此值无效
+	optional int64 startTimeStamp = 5;
+}
+
+message SpecialLotteryWeight {
+	//玩家信息
+	optional PlayerBase base = 1;
+	//玩家权重
+	optional int32 weight = 2;
+}
+
+message SpecialLottery {
+	//奖池总数(单位美分)
+	optional int32 pool = 1;
+	//可中奖人数
+	optional int32 hit = 2;
+	//权重排序情况
+	repeated SpecialLotteryWeight  rankWeights =3;
+	//中奖权重
+	optional int32 weight = 4;
+}
+
+message SpecialLotteryResult {
+	//奖池总数(单位美分)
+	optional int32 pool = 1;
+	//可中奖人数
+	optional int32 hit = 2;
+	//中奖玩家信息
+	repeated PlayerBase playerBase = 3;
+	//中奖权重
+	optional int32 weight = 4;
+}
+
+message ActivityLotteryInfoResponse {
+	//阶段  1:周一到周六选号  2:周一到周六奖励阶段  3:周日抽奖阶段 4:周日奖励阶段  -1:达到当日最大场次 停止选号
+	optional int32 stage = 1;
+	//选号阶段数据
+	optional LotterySelect select = 2;
+	//周一到周六奖励阶段
+	optional LotteryResult lotteryResult = 3;
+	//周日抽奖阶段
+	optional SpecialLottery specialLottery = 4;
+	//周日奖励阶段
+	optional SpecialLotteryResult specialLotteryResult = 5;
+	//昵称设置 0:显示 1：关闭  
+	optional int32 nickNameSet =6;
+	//上次领取免费卷时间戳
+	optional int64  freeTicketTimeStamp = 7;
+	//参与抽奖时间戳(用于判断玩家是否参加过活动)
+	optional int64  lotteryTimeStamp = 8;
+	//领取参加奖励时间戳
+	optional int64  takeJoinAwardTimeStamp = 9;
+}
+
+message LotteryRequest {
+	//活动id
+	optional string actId = 1;
+	//选中号码集合
+	repeated int32 nums = 2;
+}
+
+message LotteryResponse {
+	//本次玩家已成功选择的号码
+	repeated int32 successNums = 1;
+	//重新同步所有已经成功选择的号码
+	repeated int32 nums = 2;
+}
+
+message LotteryResultRequest {
+	//活动id
+	optional string actId = 1;
+}
+
+message LotteryResultResponse {
+	//上次抽奖结果
+	optional LotteryResult lotteryResult = 1;
+}
+
+message SpecialLotteryResultRequest {
+	//活动id
+	optional string actId = 1;
+}
+
+message SpecialLotteryResultResponse {
+	//特殊抽奖结果
+	optional SpecialLotteryResult result = 1;
+}
+
+message TakeFreeTicketRequest {
+	//活动id
+	optional string actId = 1;
+}
+
+message TakeFreeTicketResponse {
+}
+
+message NickNameSetRequest {
+	//活动id
+	optional string actId = 1;
+	//昵称设置 0:显示 1：关闭  
+	optional int32 set = 2;
+}
+
+message NickNameSetResponse {
+}
+
+message SpecialLotteryRequest {
+	//活动id
+	optional string actId = 1;
+}
+
+message SpecialLotteryResponse {
+
+}
+
+message TakeJoinAwardRequest{
+	//活动id
+	optional string actId = 1;
+}
+
+message TakeJoinAwardResponse{
+}

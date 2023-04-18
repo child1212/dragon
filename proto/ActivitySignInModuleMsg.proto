@@ -1,0 +1,39 @@
+syntax = "proto2";
+package com.common.msg;
+
+enum ActivitySignInModuleMsgSubCommand {
+	// 签到活动信息
+	ACTIVITYSIGNINMODULEMSG_SUB_ACTIVITYSIGNININFO = 29741;
+	// 签到
+	ACTIVITYSIGNINMODULEMSG_SUB_ACTIVITYSIGNIN = 29742;
+}
+
+// 签到活动信息请求
+message ActivitySignInInfoRequest {
+	// 活动id
+ 	optional string actId = 1;
+}
+
+// 签到活动信息响应
+message ActivitySignInInfoResponse {
+	// 签到天数
+	repeated int32 days = 1;
+	// 补签次数
+	optional int32 supplementSignInCnt = 2;
+}
+
+// 签到请求
+message ActivitySignInRequest {
+	// 活动id
+ 	optional string actId = 1;
+ 	// 签到天数
+	optional int32 day = 2;
+	// 是否是补签
+	optional bool supplement = 3;
+}
+
+// 签到响应
+message ActivitySignInResponse {
+}
+
+

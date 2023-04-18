@@ -77,7 +77,7 @@ def many_mails(mail_title, mail_content, reward, server, pid_file_path, res_file
 #########################################
 mail_title = "Activity map compensation"
 mail_content = "Dear player, this is the compensation for your reward, please check it"
-reward = [[101001,10],[102001,10],[103001,10],[104001,10],[105001,10],[106001,10],[107001,10],[108001,10],[109001,10],[110001,10],[111001,10],[201001,10],[202001,10],[203001,10],[204001,10],[205001,10],[206001,10],[207001,10],[301001,10],[302001,10],[303001,10],[401001,10],[402001,10],[403001,10],[404001,10],[1002,100000000],[304001,10],[405001,10]]
+reward = [[20008,1]]
 server = "ntest"
 group_num = 10
 pid_file_path = "pid_list.txt"
@@ -99,19 +99,9 @@ elif server == "dragon":
     server = "https://dragon.hphorse.net"
 elif server == "act":
     server = "http://dact.gameyici.com"
+    
+rewards = [[[101001, 1]], [[102001, 1]], [[103001, 1]], [[104001, 1]], [[105001, 1]], [[106001, 1]], [[107001, 1]], [[108001, 1]], [[109001, 1]], [[110001, 1]], [[111001, 1]], [[112001, 1]], [[201001, 1]], [[202001, 1]], [[203001, 1]], [[204001, 1]], [[205001, 1]], [[206001, 1]], [[207001, 1]], [[301001, 1]], [[302001, 1]], [[303001, 1]], [[304001, 1]], [[401001, 1]], [[402001, 1]], [[403001, 1]], [[404001, 1]], [[405001, 1]], [[406001, 1]], [[407001, 1]], [[408001, 1]]]
+for reward in rewards:
+    many_mails(mail_title, mail_content, reward, server, pid_file_path, res_file_path, group_num)
 
 
-many_mails(mail_title, mail_content, reward, server, pid_file_path, res_file_path, group_num)
-
-# %%
-for num in (101,102,103,104,105,106,107,108,109,110,111,201,202,203,204,205,206,207,301,302,303,401,402,403,404,):
-    print('[{num}001,2],'.format(num=num),end='')
-for num in range(2020,2024):
-    print('[{num},9000],'.format(num=num),end='')
-# %%
-gifts = open("D:\\pyprogram\\PyTestTools\\dragon\\tools\\API_tools\\gift.txt",'r',encoding='utf-8-sig')
-for i in gifts:
-    i = i.replace("\n","")
-    print('[{num},1],'.format(num=i),end='')
-gifts.close()
-# %%

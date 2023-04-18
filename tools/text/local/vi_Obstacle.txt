@@ -498,3 +498,8 @@ cogs
 Wirerings
 TreasureChest
 plaster
+golfclub
+javelin
+football
+SportingGoods
+drinks

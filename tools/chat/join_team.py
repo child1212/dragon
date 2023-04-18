@@ -13,9 +13,9 @@ import time
 import requests
 
 account = "rank101"
-cid = "jif73z"
-server = "38"
-version = "21.1.0"
+cid = "bke2s9"
+server = "act"
+version = "31.1.0"
 
 
 
@@ -23,8 +23,11 @@ if server == "38":
     server = "http://dtest.gameyici.com"
 elif server == "qa":
     server = "https://dqa.hphorse.net"
+elif server == "act":
+    server = "http://dact.gameyici.com"
 
-for i in range(1):
+
+for i in range(30,60):
     account = "youhua00{i}".format(i=i)
     log = login(account,server,version)
     res_1002 = entergame(log,server,version)

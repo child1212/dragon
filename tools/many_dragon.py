@@ -12,12 +12,13 @@ import pandas as pd
 
 
 print("start time:",time.asctime(time.localtime()))
-account = "te0000"
+account = "mm1000"
 level = ""
 attribute = ""
+typ = 0
 num = 1
 server = 'ntest'
-project = "NFA"#dragon/NFA
+project = "NFA"#DFA/NFA
 
 
 
@@ -43,7 +44,7 @@ elif server == "dragon":
 elif server == "act":
     server = "http://dact.gameyici.com"
 
-if project == "dragon":
+if project == "DFA":
     file_path = "E:\\town\\dragon\\dragon-config\\excel\\DataFile"
 
     table = pd.read_excel("{file_path}\\MagicalCreaturesTemplate.xlsx".format(file_path=file_path))
@@ -56,7 +57,7 @@ if project == "dragon":
         if "{level}".format(level=level) in data[line,3] and "icon_dragon_attribute{p}".format(p=attribute) in data[line,10]:
             result = send_gift(data[line,0], num, player,session, account, log_res,server)
             print(data[line,0],data[line,3], num,result)
-
+running = 0
 if project == "NFA":
     file_path = "E:\\town\\FA\\nfa-config\\excel\\DataFile"
     table = pd.read_excel("{file_path}\\MagicalCreaturesTemplate.xlsx".format(file_path=file_path))
@@ -67,9 +68,11 @@ if project == "NFA":
     data = table.values
     for line in range(3,len(data)):
         if data[line,0]-data[line,3]*1000 == 1:
-            if attribute == '' or data[line,10][1] == attribute:
-                result = send_gift(data[line,0], num, player,session, account, log_res,server)
-                print(data[line,0],data[line,2], num,result)
+            if "{level}".format(level=level) in data[line,2]:
+                if attribute == '' or data[line,10][1] == attribute:
+                    if typ == 0 or data[line,3] == typ:
+                        result = send_gift(data[line,0], num, player,session, account, log_res,server)
+                        print(data[line,0],data[line,2], num,result)
 
 
 
@@ -87,7 +90,7 @@ if project == "NFA":
 # send_gift(2008, 1000, player,session, account, log_res,server)
 # send_gift(7005, 1000, player,session, account, log_res,server)
 # # send_gift(27500, 1, player,session, account, log_res,server)
-send_gift(1001, 10000, player,session, account, log_res,server)
+# send_gift(1001, 10000, player,session, account, log_res,server)
 print("playerid:-{player}\nMission Completed!".format(player=player))
 
 

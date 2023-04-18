@@ -1,0 +1,45 @@
+syntax = "proto2";
+package com.common.msg;
+
+enum SevenDaysModuleMsgSubCommand {
+	// 7日活动信息
+	SEVENDAYSMODULEMSG_SUB_SEVENDAYSINFO = 29721;
+	// 领取奖励
+	SEVENDAYSMODULEMSG_SUB_TAKESEVENDAYSAWARD = 29722;
+}
+
+// 7日活动信息请求
+message SevenDaysInfoRequest {
+	//活动id
+	optional string actId = 1;
+}
+
+// 7日活动信息任务
+message SevenDaysTaskMsg {
+	optional int32 days = 1;//第X天
+	optional int32 count = 2;//累计次数
+	repeated int32 awardIndexes = 3;//奖励索引集合 从0开始 0表示已领取第一个奖励
+}
+
+//7日活动
+message SevenDaysActMsg {
+	optional string actId = 1;//活动id
+	repeated SevenDaysTaskMsg taskMsgs = 2;//任务数据
+}
+
+// 7日活动信息响应
+message SevenDaysInfoResponse {
+	optional SevenDaysActMsg activityMsg = 1;
+}
+
+// 领取7日活动任务奖励请求
+message TakeSevenDaysAwardRequest {
+	optional string actId = 1;//活动id
+	optional int32 days = 2;//第X天
+	optional int32 awardIndex = 3;//奖励索引 从0开始 0表示请求领取第一个奖励
+}
+
+// 领取7日活动奖励请求响应
+message TakeSevenDaysAwardResponse {
+	optional bool finalPrize = 1;//本次是否奖励了最终大奖
+}

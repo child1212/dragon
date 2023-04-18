@@ -1,0 +1,193 @@
+syntax = "proto2";
+package com.common.msg;
+
+import "ItemModuleMsg.proto";
+import "ActivityModuleMsg.proto";
+
+enum TeamMapModuleMsgSubCommand {
+	// 公会地图活动信息
+	TEAMMAPMODULEMSG_SUB_ACTIVITYTEAMMAPINFO = 27501;
+	// 公会地图活动开始冒险
+	TEAMMAPMODULEMSG_SUB_ACTIVITYTEAMMAPSTARTADV = 27502;
+	//公会地图活动npc出现消息
+	TEAMMAPMODULEMSG_SUB_ACTIVITYTEAMMAPNPCAPPEAR = 27503;
+	//公会地图活动提交npc任务
+	TEAMMAPMODULEMSG_SUB_ACTIVITYTEAMMAPSUBMITNPCTASK = 27504;
+	//公会地图活动阶段累计奖励领取请求
+	TEAMMAPMODULEMSG_SUB_ACTIVITYTEAMMAPSCOREREWARD = 27505;
+	//公会地图活动排行榜奖励领取请求
+	TEAMMAPMODULEMSG_SUB_ACTIVITYTEAMMAPRANKREWARD = 27506;
+	//公会地图活动请求切换地图
+	TEAMMAPMODULEMSG_SUB_ACTIVITYTEAMMAPCHANGEMAP = 27507;
+	// 公会地图活动阶段累计通行证奖励请求
+	TEAMMAPMODULEMSG_SUB_ACTIVITYTEAMMAPSCOREPASSREWARD = 27508;
+}
+
+//npc任务信息(先只实现单人任务)
+message NpcTask {
+	//参见ActivityTribeTaskTemplate中的id
+	required string id = 1;
+}
+
+// 公会地图活动信息请求
+message ActivityTeamMapInfoRequest {
+	// 公会ID
+	optional string teamId = 1;
+	// 活动ID
+	optional string activityId = 2;
+}
+
+// 冒险玩家信息
+message AdvPlayerMsg {
+	optional string pid = 1;
+	optional string avatar = 2;
+	optional string frame = 3;
+	optional string nickname = 4;
+	optional string skinNino = 5;
+	optional string skinHeroine = 6;
+	//玩家结束探索时间戳
+	optional int64 endTime = 7;
+}
+
+// 公会地图活动信息响应
+message ActivityTeamMapInfoResponse {
+	// 场景ID
+	optional string sceneId = 1;
+	// 已冒险次数
+	optional int32 advcount = 2;
+	// 冒险玩家信息
+	optional AdvPlayerMsg advPlayerMsg = 3;
+	// 已完成探索进度信息(0表示还没有完成过任务节点)
+	optional int32 finishProcess = 4;
+	//  当前正在进行的任务(可能没有,客户端会是lua协议代码的默认值)
+	optional NpcTask task = 5;
+	// 上次领取的阶段奖励
+	optional string lastScoreReward = 6;
+	// 第几层
+	optional int32 layer = 7;
+	// 累计奖励积分
+	optional int32 score = 8;
+	// 上次公会地图探险时间戳(数值为0代表活动开启后没有冒险)
+	optional int64 lastAdvTime = 9;
+	// 上次领取的通行证奖励
+	optional string lastScoreRewardPass = 10;
+}
+
+// 公会地图活动开始冒险请求
+message ActivityTeamMapStartAdvRequest {
+	// 公会ID
+	optional string teamId = 1;
+	// 活动ID
+	optional string activityId = 2;
+	// 进入活动消耗数量,无消耗传0 (服务器用来判断数值是否一致 如果客户端消耗比服务器消耗值小 服务器会报错 参见ErrorCodeEnums.TEAM_MAP_COST_NUM_ERROR)
+	optional int32 cost = 3;
+}
+
+// 公会地图活动开始冒险响应
+message ActivityTeamMapStartAdvResponse {
+	// 今日已冒险次数(0 1 2 3)
+	optional int32 advCnt = 1;
+	// 消耗数量(免费情况 ID有值 数量为0)
+	optional ItemMsg cost = 2;
+	//当前场景id
+	optional string sceneId = 3;
+	// 当前正在进行的任务(可能没有,客户端会是lua协议代码的默认值)
+	optional NpcTask task = 4;
+	// 给最新值信息
+	optional int32 finishProcess = 5;
+	// 冒险玩家信息 如果有的话
+	optional AdvPlayerMsg advPlayerMsg = 6;
+	// 第几层
+	optional int32 layer = 7;
+	//玩家自己冒险时间戳(其他玩家正在冒险中此值无效)
+	optional int64 advTime = 8;
+}
+
+//公会地图活动npc出现消息
+message ActivityTeamMapNpcAppearRequest {
+	// 公会ID
+	optional string teamId = 1;
+	// 活动ID
+	optional string activityId = 2;
+	// 场景ID
+	optional string sceneId = 3;
+}
+
+//公会地图活动npc出现响应
+message ActivityTeamMapNpcAppearResponse {
+	// npc对应的任务信息(如果上一个任务还没有完成，服务器直接返回错误码)
+	optional NpcTask task = 1;
+}
+
+//公会地图活动提交npc任务
+message ActivityTeamMapSubmitNpcTaskRequest {
+	// 公会ID
+	optional string teamId = 1;
+	// 活动ID
+	optional string activityId = 2;
+	// 场景ID
+	optional string sceneId = 3;
+	//地编中生成的npc唯一id（用于将其加入到地图清除列表中）
+	optional string npcPlantId = 4;
+}
+
+//公会地图活动提交npc任务响应
+message ActivityTeamMapSubmitNpcTaskResponse {
+}
+
+// 阶段累计奖励领取请求
+message ActivityTeamMapScoreRewardRequest {
+	// 活动id
+	optional string activityId = 1;
+	// 奖励id
+	optional string rewardId = 2;
+}
+
+// 阶段累计奖励领取响应
+message ActivityTeamMapScoreRewardResponse {
+	// 奖励道具
+	repeated ItemMsg rewards = 2;
+}
+
+//公会地图活动排行榜奖励领取请求
+message ActivityTeamMapRankRewardRequest {
+	// 活动id
+	optional string activityId = 1;
+}
+
+//公会地图活动排行榜奖励领取响应
+message ActivityTeamMapRankRewardResponse {
+	// 奖励
+	optional RankRewardMsg rankRewards = 1;
+}
+
+//公会地图活动请求切换地图
+message ActivityTeamMapChangeMapRequest {
+	// 公会ID
+	optional string teamId = 1;
+	// 活动ID
+	optional string activityId = 2;
+}
+
+//公会地图活动请求切换地图响应
+message ActivityTeamMapChangeMapResponse {
+	optional string sceneId = 1;
+	// 第几层
+	optional int32 layer = 2;
+}
+
+// 公会地图活动阶段累计通行证奖励请求
+message	ActivityTeamMapScorePassRewardRequest {
+	// 活动id
+	optional string activityId = 1;
+	// 0:通行证奖励 1: 普通奖励+通行证奖励
+	optional int32 type = 2;
+	// 奖励id
+	repeated string rewardIds = 3;
+}
+
+// 公会地图活动阶段累计通行证奖励返回
+message	ActivityTeamMapScorePassRewardResponse {
+	// 奖励道具
+	repeated ItemMsg scoreRewards = 1;
+}

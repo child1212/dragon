@@ -1,0 +1,40 @@
+syntax = "proto2";
+package com.common.msg;
+
+enum GiftBoxModuleMsgSubCommand {
+	// 请求活动礼包信息
+	GIFTBOXMODULEMSG_SUB_GIFTBOXINFO = 14001;
+	// 开启活动礼包
+	GIFTBOXMODULEMSG_SUB_OPENGIFTBOX = 14002;
+}
+
+message GiftBoxMsg {
+	// 活动礼包类型
+	optional int32 giftType = 1;
+	// 已购买的礼包配置id
+	repeated string giftIds = 2;
+	// 当日活动礼包结束时间戳
+	optional int64 endTime = 3;
+}
+
+// 活动礼包信息 请求
+message GiftBoxInfoRequest {
+
+}
+
+// 活动礼包信息 响应
+message GiftBoxInfoResponse {
+	// 活动礼包信息
+	optional GiftBoxMsg giftBoxs = 1;
+}
+
+// 开启活动礼包 请求
+message OpenGiftBoxRequest {
+	// 活动礼包类型
+	optional int32 giftType = 1;
+}
+
+// 开启活动礼包 响应
+message OpenGiftBoxResponse {
+
+}

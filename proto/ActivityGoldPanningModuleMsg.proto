@@ -1,0 +1,63 @@
+syntax = "proto2";
+
+package com.common.msg;
+
+import "CommonTaskModuleMsg.proto";
+import "ItemModuleMsg.proto";
+import "ActivityModuleMsg.proto";
+
+enum ActivityGoldPanningModuleMsgSubCommand {
+	// 获取淘金活动信息
+	ACTIVITYGOLDPANNINGMODULEMSG_SUB_GOLDPANNINGINFO = 28001;
+	// 排行榜奖励领取
+	ACTIVITYGOLDPANNINGMODULEMSG_SUB_GOLDPANNINGRANKREWARD = 28002;
+	// 领取活动采集宝箱数量奖励
+	ACTIVITYGOLDPANNINGMODULEMSG_SUB_GOLDPANNINGTAKEAWARD = 28003;
+}
+
+message GoldPanningSceneMsg {
+	// 场景id
+	optional string sceneId = 1;
+	// 获得宝藏数量
+	optional int32 treasureCnt = 2;
+	// 场景是否进入过
+	optional bool entered = 3;
+}
+
+// 获取淘金活动信息请求
+message GoldPanningInfoRequest {
+	//活动id
+	optional string activityId = 1;
+}
+
+//获取淘金活动信息响应
+message GoldPanningInfoResponse {
+	// 淘金活动场景信息
+	repeated GoldPanningSceneMsg scenes = 1;
+	//已经奖励的index(有效值从0开始 如果为-1 说明没有奖励过)
+	required int32 awardIndex = 2;
+}
+
+// 排行榜奖励领取请求
+message GoldPanningRankRewardRequest {
+	// 活动id
+	optional string activityId = 1;
+}
+
+// 排行榜奖励领取响应
+message GoldPanningRankRewardResponse {
+	// 奖励
+	repeated RankRewardMsg rankRewards = 1;
+}
+
+// 领取活动采集宝箱数量奖励请求
+message GoldPanningTakeAwardRequest {
+	//活动id
+	required string activityId = 1;
+}
+
+// 领取活动采集宝箱数量奖励响应
+message GoldPanningTakeAwardResponse {
+	//奖励的道具集合
+	repeated ItemMsg items = 1;
+}

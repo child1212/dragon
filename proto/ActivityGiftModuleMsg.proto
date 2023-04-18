@@ -1,0 +1,25 @@
+syntax = "proto2";
+package com.common.msg;
+
+enum ActivityGiftModuleMsgSubCommand {
+	// 活动礼包信息
+	ACTIVITYGIFTMODULEMSG_SUB_ACTIVITYGIFTINFO = 29761;
+}
+
+message ActivityGiftMsg {
+	// 商品id
+	required string shopId = 1;
+	// 购买次数
+	required int32 boughtCount = 2;
+}
+
+// 活动礼包信息请求
+message ActivityGiftInfoRequest {
+	// 活动id
+ 	optional string actId = 1;
+}
+
+// 活动礼包信息响应
+message ActivityGiftInfoResponse {
+	repeated ActivityGiftMsg gifts = 1;
+}

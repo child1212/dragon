@@ -1,0 +1,45 @@
+syntax = "proto2";
+package com.common.msg;
+import "ItemModuleMsg.proto";
+
+enum BuffModuleMsgSubCommand {
+	//获取buff列表请求
+	BUFFMODULEMSG_SUB_BUFFLIST = 11001;
+	//激活buff请求
+	BUFFMODULEMSG_SUB_BUFFACTIVE = 11002;
+}
+
+//buff信息
+message BuffMsg {
+	//buff实例id
+	optional int64 buffId = 1;
+	//buff模板id
+	optional string buffTemplateId = 2;
+	//buff剩余时间（毫秒）
+	optional int64 duration = 3;
+}
+
+//buff列表请求
+message BuffListRequest {
+	
+}
+
+//buff列表响应
+message BuffListResponse {
+	//生效buff
+	repeated BuffMsg effectiveBuffs = 1;
+}
+
+//激活buff请求
+message BuffActiveRequest {
+	// 道具id (消耗道具激活buff)
+	optional string itemId = 1;
+}
+
+//激活buff响应
+message BuffActiveResponse {
+	//buff信息
+	optional BuffMsg buffMsg = 1;
+	// 道具信息
+	repeated ItemMsg items = 2;
+}

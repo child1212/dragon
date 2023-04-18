@@ -1,0 +1,151 @@
+syntax = "proto2";
+package com.common.msg;
+
+import "ItemModuleMsg.proto";
+
+enum RecycleDragonModuleMsgSubCommand {
+	// 回收龙信息
+	RECYCLEDRAGONMODULEMSG_SUB_RECYCLEDRAGONINFO = 27901;
+	// 开启回收龙
+	RECYCLEDRAGONMODULEMSG_SUB_RECYCLEDRAGONOPEN = 27902;
+	// 生成回收龙订单
+	RECYCLEDRAGONMODULEMSG_SUB_RECYCLEDRAGONCREATE = 27903;
+	// 删除回收龙订单
+	RECYCLEDRAGONMODULEMSG_SUB_RECYCLEDRAGONDELETE = 27904;
+	// 跳过回收龙CD
+	RECYCLEDRAGONMODULEMSG_SUB_RECYCLEDRAGONSKIPCD = 27905;
+	// 回收传送
+	RECYCLEDRAGONMODULEMSG_SUB_RECYCLEDRAGONTRANSFER = 27907;
+	// 领取回收传送奖励
+	RECYCLEDRAGONMODULEMSG_SUB_RECYCLEDRAGONTRANSFERREWARD = 27908;
+	// 领取累计积分奖励
+	RECYCLEDRAGONMODULEMSG_SUB_RECYCLEDRAGONCUMULATIVEREWARD = 27909;
+}
+
+message RecycleCount {
+	// 龙类型
+    optional int32 dragonType = 1;
+    // 回收次数 (按一级龙计算）
+    optional int32 count = 2;
+}
+
+message CumulativeReward {
+	// 奖励id 从0开始
+    optional int32 rewardId = 1;
+    // 奖励
+    repeated ItemMsg rewards = 2;
+}
+
+// 回收龙信息 请求
+message RecycleDragonInfoRequest {
+}
+
+// 回收龙信息 响应
+message RecycleDragonInfoResponse {
+	// 回收开始时间
+    optional int64 startTime = 1;
+    // 回收龙类型
+    repeated int32 dragonTypes = 2;
+    // 累计贡献奖励索引
+    optional int32 cumulativeRewardId = 3;
+    // 累计贡献积分
+    optional int32 cumulativeScore = 4;
+    // 回收龙计数
+    repeated RecycleCount recycleCounts = 5;
+    // 累计奖励
+    repeated CumulativeReward cumulativeRewards = 6;
+    // 未领取回收龙奖励
+    repeated ItemMsg unclaimedTransferRewards = 7;
+    // 未领取累计积分
+    optional int32 unclaimedScore = 8;
+}
+
+// 开启回收龙 请求
+message RecycleDragonOpenRequest {
+	//回收龙类型
+	repeated int32 dragonTypes = 1;
+}
+
+// 开启回收龙 响应
+message RecycleDragonOpenResponse {
+	// 累计奖励
+    repeated CumulativeReward cumulativeRewards = 1;
+}
+
+// 生成回收龙订单 请求
+message RecycleDragonCreateRequest {
+	//开始时间
+	optional int64 startTime = 1;
+	//回收龙类型
+	repeated int32 dragonTypes = 2;
+}
+
+// 生成回收龙订单 响应
+message RecycleDragonCreateResponse {
+}
+
+// 删除回收龙订单 请求
+message RecycleDragonDeleteRequest {
+	//下一次开始时间
+	optional int64 startTime = 1;
+	//下一次回收龙类型
+	repeated int32 dragonTypes = 2;
+}
+
+// 删除回收龙订单 响应
+message RecycleDragonDeleteResponse {
+}
+
+// 跳过回收龙CD 请求
+message RecycleDragonSkipCdRequest {
+	// 花费
+	optional ItemMsg costItem = 1;
+	// 看广告加速
+	optional bool ads = 2;
+}
+
+// 跳过回收龙CD 响应
+message RecycleDragonSkipCdResponse {
+}
+
+// 回收传送 请求
+message RecycleDragonTransferRequest {
+	//龙id
+	repeated int64 creatureId = 1;
+	//下一次开始时间
+	optional int64 startTime = 2;
+	//下一次回收龙类型
+	repeated int32 dragonTypes = 3;
+}
+
+// 回收传送 响应
+message RecycleDragonTransferResponse {
+	// 其他龙同步(龙收集系统影响其他龙之力)
+	repeated MagicalCreatureMsg others = 1;
+}
+
+// 领取回收传送奖励 请求
+message RecycleDragonTransferRewardRequest {
+}
+
+// 领取回收传送奖励 响应
+message RecycleDragonTransferRewardResponse {
+	// 回收龙贡献奖励
+	repeated ItemMsg contributeRewards = 1;
+}
+
+// 领取累计积分奖励 请求
+message RecycleDragonCumulativeRewardRequest {
+}
+
+// 领取累计积分奖励 响应
+message RecycleDragonCumulativeRewardResponse {
+	// 获得累计奖励
+    repeated CumulativeReward rewards = 1;
+	// 累计贡献奖励索引
+    optional int32 cumulativeRewardId = 2;
+    // 累计贡献积分
+    optional int32 cumulativeScore = 3;
+    // 最新累计奖励
+    repeated CumulativeReward cumulativeRewards = 4;
+}

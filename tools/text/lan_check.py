@@ -175,24 +175,117 @@ for name in names:
 
 
 # %%
+# 下方为CN用
 # %%
-# #检测参数首字母大写
-# names = ('AI','Dialog','Dragon','Guide','Obstacle','Pops','Story','SystemErrorCode','Tips','UI')
-# countries = ('ar','de','en','fr','it','ja','ko','ne','po','ru','sp','tc','th','tu','vi','zh')
-# for country in countries:
-#     print("#===================="+country+"=======================#")
-#     for name in names:
-#         lan = open("E:\\town\\dragon\\client\\client\\Assets\\HomeLand\\Localization\\{country}\\{name}.bytes".format(country=country,name=name),"r",encoding="utf-8")
-#         f_l = ('{Q','{W','{E','{R','{T','{Y','{U','{I','{O','{P','{A','{S','{D','{F','{G','{H','{J','{K','{L','{Z','{X','{C','{V','{B','{N','{M')
-#         ig = {'UI_personaldata_short2','ui_AdventureGift_des','ui_goldpass_task_49','ui_goldpass_task_50','ui_goldpass_task_55'}
-#         for line in lan:
-#             for u in f_l:
-#                 if u in line:
-#                     r = 1
-#                     for i in ig:
-#                         if i in line:
-#                             r=0
-#                     if r != 0:
-#                         print(line)
-#                         break
-#         lan.close()
+# 检测英文
+
+names = ('AI','Dialog','Dragon','Guide','Obstacle','Pops','Story','SystemErrorCode','Tips','UI')
+# names = ('Story','UI')
+countries = {'zh'}
+
+ku = open("D:\\pyprogram\\PyTestTools\\dragon\\tools\\text\\ciku.txt",'r',encoding='utf-8-sig')
+ku = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"
+ku = ",<>?;':\"{{}}[]\\|!@#$^*_`"
+ku = {"魂魄","杀死","砍死","猎杀"}
+for name in names:
+    print("\n#####################"+name+"########################")
+    for country in countries:
+        lan = open("E:\\town\\dragon\\client\\client\\Assets\\HomeLand\\Localization\\{country}\\{name}.bytes".format(country=country,name=name),"r",encoding="utf-8")
+        for line in lan:
+            keys = line.split("=")
+            for p in ku:
+                p = p.replace("\n",'')
+                x = keys[1]
+                run = 1
+                word = ''
+                for i in x:
+                    if i == '{' or i == '<':
+                        run = 0
+                    if run == 1:
+                        word += i
+                    if i == "}"or i == '>':
+                        run = 1
+                if p in word:
+                    print(line)
+                    break
+        lan.close()
+
+
+# %%
+# 检测连续的标点
+names = ('AI','Dialog','Dragon','Guide','Obstacle','Pops','Story','SystemErrorCode','Tips','UI')
+# names = ('Story','UI')
+countries = {'zh'}
+
+ku = "！@#￥%……&*（）——+？/》《【】》？、=-·~“”’‘；："
+for name in names:
+    print("\n#####################"+name+"########################")
+    for country in countries:
+        lan = open("E:\\town\\dragon\\client\\client\\Assets\\HomeLand\\Localization\\{country}\\{name}.bytes".format(country=country,name=name),"r",encoding="utf-8")
+        for line in lan:
+            keys = line.split("=")
+            # for p in ku:
+            #     p = p.replace("\n",'')
+            x = keys[1]
+            run = 1
+            word = ''
+            for i in x:
+                if i == '{' or i == '<':
+                    run = 0
+                if run == 1:
+                    word += i
+                if i == "}"or i == '>':
+                    run = 1
+            for index in range(len(word)):
+                if word[index] in ku and word[index+1] in ku and word[index] != "…":
+                    print(line)
+                    break
+
+        lan.close()
+
+
+# %%
+# 检测句子末尾没有标点
+
+names = ('AI','Dialog','Dragon','Guide','Obstacle','Pops','Story','SystemErrorCode','Tips','UI')
+# names = ('Story','UI')
+countries = {'zh'}
+
+ku = open("D:\\pyprogram\\PyTestTools\\dragon\\tools\\text\\ciku.txt",'r',encoding='utf-8-sig')
+ku = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"
+ku = "！。？…"
+for name in names:
+    print("\n#####################"+name+"########################")
+    for country in countries:
+        lan = open("E:\\town\\dragon\\client\\client\\Assets\\HomeLand\\Localization\\{country}\\{name}.bytes".format(country=country,name=name),"r",encoding="utf-8")
+        for line in lan:
+            keys = line.split("=")
+            ke = keys[1].replace("\n","")
+            if "\u4e00" < ke[-1] <"\u9fff":
+                print(line)
+        lan.close()
+
+#"\u4e00" < ke[-1] <"\u9fff" or
+
+# %%
+# 检测标点处换行
+
+names = ('AI','Dialog','Dragon','Guide','Obstacle','Pops','Story','SystemErrorCode','Tips','UI')
+# names = ('Story','UI')
+countries = {'zh'}
+
+ku = open("D:\\pyprogram\\PyTestTools\\dragon\\tools\\text\\ciku.txt",'r',encoding='utf-8-sig')
+ku = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"
+ku = "！。？…，"
+for name in names:
+    print("\n#####################"+name+"########################")
+    for country in countries:
+        lan = open("E:\\town\\dragon\\client\\client\\Assets\\HomeLand\\Localization\\{country}\\{name}.bytes".format(country=country,name=name),"r",encoding="utf-8")
+        for line in lan:
+            keys = line.split("=")
+            ke = keys[1].replace("\n","")
+            if len(ke) >= 45:
+                if ke[44] in ku:
+                # if "原住民" in ke:
+                    print(line)
+        lan.close()

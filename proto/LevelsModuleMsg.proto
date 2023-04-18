@@ -1,0 +1,192 @@
+syntax = "proto2";
+package com.common.msg;
+
+import "ItemModuleMsg.proto";
+
+enum LevelsModuleMsgSubCommand {
+	//开始关卡请求
+   LEVELSMODULEMSG_SUB_STARTLEVEL = 8001;
+   //完成关卡请求
+   LEVELSMODULEMSG_SUB_FINISHLEVEL = 8002;
+   //记录战报请求 
+   LEVELSMODULEMSG_SUB_RECARDCLEARDETAIL = 8003;
+   //获取战报请求
+   LEVELSMODULEMSG_SUB_GETCLEARDETAIL = 8004;
+   //获取全部战报id请求
+   LEVELSMODULEMSG_SUB_GETALLDETAILID = 8005;
+   //删除全部战报请求
+   LEVELSMODULEMSG_SUB_DELALLDETAIL = 8006;
+   //关卡钥匙修正请求
+   LEVELSMODULEMSG_SUB_MODIFYLEVELMATERIAL = 8007;
+   //关卡宝箱请求
+   LEVELSMODULEMSG_SUB_LEVELBOX = 8008;
+   //发放满级活动关卡奖励
+   LEVELSMODULEMSG_SUB_MAXEDLEVELREWARDS = 8009;
+}
+
+// 关卡宝箱msg
+message LevelBoxMsg {
+	// 宝箱id
+	optional string boxId = 1;
+	// 道具数量
+	optional int32 itemNum = 2;
+}
+
+//开始关卡请求
+message StartLevelRequest {
+	// 关卡id
+	required int32 levelId = 1;
+	// 关卡类型（0.普通关卡 1.满级活动 2.巅峰魔法师 3.父亲节活动）
+	optional int32 levelType = 2;
+	// 活动id
+	optional string activityId = 3;
+	//是否观看广告
+	optional bool  adsFlag= 4;
+}
+
+message StartLevelResponse {
+
+}
+
+//完成关卡请求
+message FinishLevelRequest {
+	//关卡id
+	required int32 levelId = 1;
+	//1.通关 2.退出 3.失败
+	required int32 type = 2;
+	//通关时间(秒)
+	optional int64 time = 3;
+	//分数
+	optional int32 score = 4;
+	//星星
+	optional int32 star = 5;
+	// 关卡类型（0.普通关卡 1.满级活动 2.巅峰魔法师 3.父亲节活动）
+	optional int32 levelType = 6;
+	// 乌鸦数（水晶球活动）
+	optional int32 crystalTickets = 7;
+	// 木板数 sincev1.11
+	optional int32 woodNum = 8;
+	// 满级活动宝箱开出来的累计道具
+	repeated ItemMsg maxedItems = 9;
+	// 满级活动得到的宝箱数量
+	optional int32 maxedBoxNum = 10;
+	// 巅峰魔法师道具数
+	optional int32 topMagicianNum = 11;
+	// 活动id
+	optional string activityId = 12;
+	//完成关卡活动能获得的道具 以后活动有类似逻辑的可以复用 不要新加了
+	repeated ItemMsg activityItems = 13;
+	//完成关卡活动获得的排行数值 以后活动有类似逻辑的可以复用 不要新加了
+	optional int32 activityRankScore = 14;
+	//扭蛋券(扭蛋活动)
+	optional int32 gashaponTickets = 15;
+	//棋子数(魔法生物任务)
+	optional int32 chessmanCnt = 16;
+}
+
+message FinishLevelResponse {
+
+}
+
+
+//记录消除战报请求
+message RecardClearDetailRequest {
+	//战报id
+	required string detailId = 1;
+	//战报内容
+	required string detailInfo = 2;
+}
+
+//记录消除战报响应
+message RecardClearDetailResponse {
+	
+}
+
+//获取消除战报请求
+message GetClearDetailRequest {
+	//玩家id
+	required string pid = 1;
+	//战报id
+	required string detailId = 2;
+}
+
+//获取消除战报响应
+message GetClearDetailResponse {
+	//玩家id
+	required string pid = 1;
+	//战报id
+	required string detailId = 2;
+	//战报内容
+	required string detailInfo = 3;
+}
+
+//获取全部战报id请求
+message GetAllDetailIdRequest {
+	//玩家id
+	required string pid = 1;
+}
+
+//获取全部战报id响应
+message GetAllDetailIdResponse {
+	//战报id所属的玩家id
+	required string pid = 1;
+	//全部战报id
+	repeated string detailIds = 2;
+}
+
+//删除全部战报请求
+message DelAllDetailRequest {
+	//玩家id
+	required string pid = 1;
+}
+
+//删除全部战报响应
+message DelAllDetailResponse {
+}
+
+//关卡钥匙修正请求
+message ModifyLevelMaterialRequest {
+	// 关卡id
+	optional int32 levelId = 1;
+	// 钥匙数量
+	optional int32 material = 2;
+}
+
+//关卡钥匙修正响应
+message ModifyLevelMaterialResponse {
+
+}
+
+// 关卡宝箱请求
+message LevelBoxRequest {
+	// 获得的宝箱列表
+	repeated LevelBoxMsg boxs = 1;
+	// 关卡类型 参见StartLevelRequest中的levelType
+	optional int32 levelType = 2;
+	//是否观看了宝箱奖励翻倍广告
+	optional bool adsFlag = 3;
+}
+
+// 关卡宝箱响应
+message LevelBoxResponse {
+
+}
+
+// 发放满级活动闯关奖励
+message MaxedLevelRewardsRequest {
+	//关卡id
+	required int32 levelId = 1;
+	// 活动id
+	optional string activityId = 2;
+	// 满级活动宝箱开出来的累计道具
+	repeated ItemMsg maxedItems = 3;
+	// 满级活动得到的宝箱数量
+	optional int32 maxedBoxNum = 4;
+}
+
+message MaxedLevelRewardsResponse {
+
+}
+
+
+

@@ -1,0 +1,123 @@
+syntax = "proto2";
+package com.common.msg;
+import "ItemModuleMsg.proto";
+enum AnimalModuleMsgSubCommand {
+	//请求小动物活动信息
+	ANIMALMODULEMSG_SUB_ANIMALINFO = 26501;
+	//请求开启小动物活动
+	ANIMALMODULEMSG_SUB_OPENANIMALACTIVITY = 26502;
+	//小动物首次出现请求
+	ANIMALMODULEMSG_SUB_ANIMALAPPEAR = 26503;
+	//上交小动物任务
+	ANIMALMODULEMSG_SUB_SUBMITANIMALTASK = 26504;
+	//请求小动物累计奖励
+	ANIMALMODULEMSG_SUB_TAKEANIMALAWARD = 26505;
+	//请求小动物活动结束处理
+	ANIMALMODULEMSG_SUB_ANIMALEND = 26506;
+}
+
+// 请求小动物活动信息
+message AnimalInfoRequest {
+}
+
+message AnimalTask {
+	//AnimalTaskTemplate中配置的id
+	required string id = 1;
+	//任务结束时间(0：结束时间无效 其他值:结束时间戳)
+	required int64 endTime = 2;
+	//任务需求物资
+	repeated ItemMsg needItems =3;
+	//任务奖励物资
+	repeated ItemMsg awardItems =4;
+	//任务状态  0:未提交 1:已提交
+	required int32 state = 5;
+	//任务难度 1：easy 2：medium  3：hard
+	required int32 difficulty = 6;
+}
+
+message Animal{
+	//AnimalObstacleTemplate表中配置的id
+	required string id = 1;
+	//动物任务信息
+	optional AnimalTask task = 2;
+}
+
+message AnimalActivity {
+	//对应的活动id（AnimalRewardTemplate表中配置的id）
+	required string id = 1;
+	//开启活动的动物id（ AnimalObstacleTemplate表中配置的id）
+	required string animalId =2;
+	//活动中已经出现的动物数据集合
+	repeated Animal animals= 3;
+	//活动结束时间
+	required int64 endMillTime = 4;
+	//已经领取奖励的index集合(index 从0开始)
+	repeated int32 awardIndexes= 5;
+	//结束处理  （0 未处理 1 已处理）
+	optional int32 endHandle = 6;
+}
+
+// 请求小动物活动信息响应
+message AnimalInfoResponse {
+	//未开启活动的情况下服务器不传递此值 (此值为lua生成文件的默认值)
+	optional AnimalActivity animalActivity = 1;
+}
+
+//请求开启小动物活动
+message OpenAnimalActivityRequest {
+	//触发开启活动的小动物（ AnimalObstacleTemplate表中配置的id）
+	required string animalId = 1;
+}
+
+//请求开启小动物活动响应
+message OpenAnimalActivityResponse {
+	//对应的活动id（AnimalRewardTemplate表中配置的id）
+	required string id = 1;
+	//结束时间
+	required int64 endMillTime = 2;
+	//开启活动的小动物信息
+	required Animal animal = 3;
+}
+
+
+//小动物首次出现请求
+message AnimalAppearRequest {
+	//出现的动物id（ AnimalObstacleTemplate表中配置的id）
+	required string animalId = 1;
+}
+
+//小动物首次出现请求响应
+message AnimalAppearResponse {
+	//出现的动物信息
+	required Animal animal = 1;
+}
+
+//上交小动物任务请求
+message SubmitAnimalTaskRequest {
+	//动物id（ AnimalObstacleTemplate表中配置的id）
+	required string animalId = 1;
+}
+
+//上交小动物任务请求响应
+message SubmitAnimalTaskResponse {
+}
+
+
+//请求领取小动物累计奖励
+message TakeAnimalAwardRequest {
+	//累计奖励索引(从0开始)
+	required int32 awardIndex = 1;
+}
+
+//请求领取小动物累计奖励响应
+message TakeAnimalAwardResponse {
+
+}
+
+//请求小动物活动结束处理
+message AnimalEndRequest {
+}
+
+//请求小动物活动结束处理响应
+message AnimalEndResponse {
+}

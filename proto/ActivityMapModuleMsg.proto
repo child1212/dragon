@@ -1,0 +1,120 @@
+syntax = "proto2";
+
+package com.common.msg;
+
+import "CommonTaskModuleMsg.proto";
+import "ItemModuleMsg.proto";
+import "ActivityModuleMsg.proto";
+
+enum ActivityMapModuleMsgSubCommand {
+	//获取地图活动信息
+	ACTIVITYMAPMODULEMSG_SUB_ACTIVITYMAPINFO = 26301;
+	//领取活动积分进度奖励(一次性领取完所有能领的奖励)
+	ACTIVITYMAPMODULEMSG_SUB_TAKEACTIVITYMAPAWARD = 26302;
+	//圣诞树抽奖
+	ACTIVITYMAPMODULEMSG_SUB_CHRISTMASTURNABLEDRAW = 26303;
+	//排行榜奖励
+	ACTIVITYMAPMODULEMSG_SUB_MAPRANKREWARD = 26304;
+	//评价
+	ACTIVITYMAPMODULEMSG_SUB_MAPEVALUATE = 26305;
+	//领取bp等级奖励
+	ACTIVITYMAPMODULEMSG_SUB_TAKEBPLEVELAWARD = 26306;
+	//结束邮件请求请参见12002消息
+}
+
+
+//获取地图活动信息请求
+message ActivityMapInfoRequest {
+	//活动id
+	required string activityId = 1;
+}
+
+//获取地图活动信息响应
+message ActivityMapInfoResponse {
+	//所有存储信息的任务信息
+	repeated CommonTask tasks = 1;
+	//已获取积分
+	required int32 score = 2;
+	//已经奖励的index(有效值从0开始 如果为-1 说明没有奖励过)
+	required int32 awardIndex = 3;
+	// 评价状态 1: 已评价 0:未评价
+	optional int32 evaluate = 4;
+	// bp等级
+	optional int32 level = 5;
+	// bp经验
+	optional int32 exp = 6;
+	// 已经领取的基础奖励集合
+	repeated int32 baseLevels = 7;
+	//  已经领取的同行证奖励集合
+	repeated int32 passLevels = 8;
+	//是否解锁了通行证
+	optional bool unlock = 9;
+}
+
+//领取活动积分进度奖励请求
+message TakeActivityMapAwardRequest {
+	//活动id
+	required string activityId = 1;
+}
+
+//领取活动积分进度奖励响应
+message TakeActivityMapAwardResponse {
+	//奖励的道具集合
+	repeated ItemMsg items = 1;
+}
+
+// 圣诞树抽奖请求
+message ChristmasTurnableDrawRequest {
+	// 场景ID
+	optional string sceneId = 1;
+	// 障碍物ID
+	optional string plantId = 2;
+	// 抽奖类型 1.单抽 2.十连 3.五连(情人节)
+	optional int32 drawtype = 3;
+}
+
+// 圣诞树抽奖奖励
+message ChristmasDrawReward {
+	// 道具
+	repeated ItemMsg items = 1;
+}
+
+// 圣诞树抽奖响应
+message ChristmasTurnableDrawResponse {
+	// 圣诞树抽奖奖励
+	repeated ChristmasDrawReward drawRewards = 1;
+	// 再抽N次
+	optional int32 n = 2;
+}
+
+// 排行榜奖励请求
+message MapRankRewardRequest {
+	// 活动ID
+	optional string activityId = 1;
+}
+
+// 排行榜奖励响应
+message MapRankRewardResponse {
+	// 奖励
+	repeated RankRewardMsg rankRewards = 1;
+}
+
+// 评价请求
+message MapEvaluateRequest {
+	//活动id
+	required string activityId = 1;
+}
+
+// 评价响应
+message MapEvaluateResponse {
+	
+}
+
+message TakeBpLevelAwardRequest {
+	optional string actId = 1;//活动id
+	optional int32 type = 2;// 奖励类型 1:基础奖励 2:通行证奖励
+	optional int32 level = 3;// 奖励等级
+}
+
+message TakeBpLevelAwardResponse {
+} 

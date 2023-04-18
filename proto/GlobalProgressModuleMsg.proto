@@ -1,0 +1,100 @@
+syntax = "proto2";
+package com.common.msg;
+
+import "ItemModuleMsg.proto";
+
+enum GlobalProgressModuleMsgSubCommand {
+	// 全局进度奖励信息请求
+	GLOBALPROGRESSMODULEMSG_SUB_GLOBALPROGRESSINFO = 29781;
+	// 请求领取奖励
+	GLOBALPROGRESSMODULEMSG_SUB_TAKEAWARD = 29782;
+	// 请求删除特殊商品 (商店购买消息需要客户端帮忙传递一下购买商品对应的number(活动编号)和)turn(轮次))
+	GLOBALPROGRESSMODULEMSG_SUB_DELSPECIALAWARD = 29783;
+	// 客户端请求最新任务信息(活动时间结束时或者任务完成时及时刷新下一个任务)
+	GLOBALPROGRESSMODULEMSG_SUB_REFRESHTASKINFO = 29784;
+}
+
+//全局进度奖励信息请求
+message GlobalProgressInfoRequest{
+	
+}
+
+message SpecialProduct {
+	//商品信息
+	optional ItemMsg product = 1;
+	//商品Id
+	optional string shopId = 2;
+	//倍率
+	optional int32  rate = 3;
+}
+
+message TaskInfo {
+	//需要的道具
+	optional ItemMsg need = 1;
+	//奖励的道具
+	optional ItemMsg award = 2;
+	//现在已完成的数量
+	optional int32 finishNum = 3;
+	//是否已领奖励  0：未领过 1：已经领取过
+	optional bool awarded = 4;
+	//特殊商品信息(可能没有 没有就是lua默认值)
+	optional SpecialProduct product = 5;
+	//活动编号(用于标识唯一的任务,玩家可能积攒过多的任务，没有活动编号服务器无法识别唯一任务)
+	optional int32 number = 6;
+	//本次活动编号的轮次
+	optional int32 turn = 7;
+}
+//全局进度奖励信息请求返回
+message GlobalProgressInfoResponse{
+	//未处理完的任务信息集合(任务已完成 没有领奖或没有处理特殊商品)
+	repeated TaskInfo taskInfos = 1;
+	//当前最新任务信息
+	optional TaskInfo taskInfo = 2;
+	//活动结束时间戳
+	optional int64 endTimeStamp = 3;
+}
+
+//任务标识
+message TaskComposeKey {
+	//活动编号(用于标识唯一的任务,玩家可能积攒过多的任务，没有活动编号服务器无法识别唯一任务)
+	optional int32 number = 1;
+	//本次活动编号的轮次
+	optional int32 turn = 2;
+}
+
+//请求领取奖励
+message TakeAwardRequest {
+	repeated TaskComposeKey keys =1;
+}
+
+//请求领取奖励返回
+message TakeAwardResponse {
+	//之前已经领取过奖励
+	repeated TaskComposeKey awarded =1;
+	//任务还没有完成
+	repeated TaskComposeKey notFinished =2;
+	//未完成的任务当前服务器的数量
+	repeated int32 notFinishedNowNum =3;
+	//没有找到任务(可能之前已经领过奖励删除了)
+	repeated TaskComposeKey notFound =4;
+}
+
+//请求删除特殊商品
+message DelSpecialAwardRequest {
+	repeated TaskComposeKey keys =1;
+}
+
+//请求删除特殊商品返回
+message DelSpecialAwardResponse {
+}
+
+message RefreshTaskInfoRequest{
+	
+}
+
+message RefreshTaskInfoResponse{
+	//当前最新任务信息
+	optional TaskInfo taskInfo = 1;
+	//活动结束时间戳
+	optional int64 endTimeStamp = 2;
+}

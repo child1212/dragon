@@ -1,0 +1,277 @@
+syntax = "proto2";
+package com.common.msg;
+
+import "ItemModuleMsg.proto";
+
+enum MiningModuleMsgSubCommand {
+	// 挖矿信息
+	MININGMODULEMSG_SUB_MININGINFO = 29001;
+	// 挖矿生成
+	MININGMODULEMSG_SUB_MININGCREATE = 29002;
+	// 挖格子 锄头、雷管、炸药包
+	MININGMODULEMSG_SUB_MININGDIG = 29003;
+	// 开宝箱
+	MININGMODULEMSG_SUB_MININGBOX = 29004;
+	// BossPK
+	MININGMODULEMSG_SUB_MININGBOSSPK = 29005;
+	// 委托
+	MININGMODULEMSG_SUB_MININGCOMMISSION = 29006;
+	// 领取委托奖励
+	MININGMODULEMSG_SUB_MININGCOMMISSIONREWARD = 29007;
+	// 周累计挖掘层数奖励
+	MININGMODULEMSG_SUB_MININGWEEKDIGFLOORREWARD = 29008;
+	// 周累计重置
+	MININGMODULEMSG_SUB_MININGWEEKRESET = 29009;
+	// 遇见BOSS
+	MININGMODULEMSG_SUB_MININGBOSSSTART = 29010;
+	// 刷新BOSS
+	MININGMODULEMSG_SUB_MININGBOSSREFRESH = 29011;
+	// 切换矿洞奖励类型
+	MININGMODULEMSG_SUB_MININGCHANGEREWARDTYPE = 29012;
+	// 领取每日奖励
+	MININGMODULEMSG_SUB_MININGDAYREWARD = 29013;
+}
+
+message MiningCommissionMsg {
+	// 洞穴Id 自增
+	optional int64 commissionId = 1;
+	// 洞穴配置Id
+	optional string tplId = 2;
+	// 开始时间
+	optional int64 startTime = 3;
+	// 龙列表
+	repeated int64 creatures = 4;
+	// 龙模板id 释放龙后需要UI上显示
+	repeated string creatureTemplateIds = 5;
+}
+
+// boss
+message MiningBossMsg {
+	// boss配置id
+	required string bossId = 1;
+	// 龙之力
+	required int32 energy = 2;
+	// 开始时间
+    optional int64 startTime = 3;
+}
+
+// 特殊事件
+message MiningEventMsg {
+	// 类型(1.委托)
+	required int32 eventType = 1;
+	// 配置id
+	required string tplId = 2;
+}
+
+// 格子
+message MiningGridMsg {
+	// 位置
+	required int32 pos = 1;
+	// 挖掘次数
+	required int32 digCnt = 2;
+	// 是否清除 (boss格子时表示boss是否通关)
+	required bool cleared = 3;
+	// 奖励 无奖励时为空
+	optional ItemMsg reward = 4;
+	// 特殊事件 无特殊事件时为空
+	optional MiningEventMsg event = 5;
+	// boss属性
+	optional MiningBossMsg boss = 6;
+}
+
+// 行
+message MiningFloorMsg {
+	// MiningTemplate配置id
+	required string floorId = 1;
+	// 格子数据
+  	repeated MiningGridMsg grids = 2;
+}
+
+// 挖矿信息请求
+message MiningInfoRequest {
+}
+
+// 挖矿信息响应
+message MiningInfoResponse {
+	// 组id (有序 最后一个为最新生成的组)
+	repeated int32 group = 1;
+	// 行数据
+  	repeated MiningFloorMsg floors = 2;
+  	// 委托
+  	repeated MiningCommissionMsg commissions = 3;
+  	// 已生成组次数
+  	optional int32 groupCnt = 4;
+	// 下次刷新时间
+    optional int64 nextRefreshTime = 5;
+    // 每周开始时的层数
+    optional int32 lastRewardDigFloor = 6;
+    // 挖矿每周累计奖励领取id(-1未领取,0-n配置中已领取的index)
+    optional int32 digFloorRewardId = 7;
+	// 每日奖励状态
+	optional bool dayReward = 8;
+	// 奖励类型
+	optional int32 rewardType = 9;
+	// 切换奖励类型时间
+	optional int64 changeTypeTime = 10;
+}
+
+// 挖矿生成请求
+message MiningCreateRequest {
+	// 组id
+	required int32 group = 1;
+}
+
+// 挖矿生成响应
+message MiningCreateResponse {
+	// 新生成组的行数据
+  	repeated MiningFloorMsg floors = 1;
+}
+
+message DigGridMsg {
+	// 层id
+	optional string floorId = 1;
+	// 位置
+	optional int32 pos = 2;
+}
+
+// 挖格子请求
+message MiningDigRequest {
+	// 锄头、雷管、炸药包道具id
+	optional string digItemId = 1;
+	// 挖的格子
+	repeated DigGridMsg digGrids = 2;
+}
+
+// 挖格子响应
+message MiningDigResponse {
+  	// 获得委托
+  	repeated MiningCommissionMsg commissions = 1;
+}
+
+// 开宝箱请求
+message MiningBoxRequest {
+	// 宝箱格子
+	required DigGridMsg digGrid = 1;
+}
+
+// 开宝箱响应
+message MiningBoxResponse {
+	repeated ItemMsg rewards = 1;
+}
+
+// BossPK请求
+message MiningBossPKRequest {
+	// 层id
+	required string floorId = 1;
+	// 位置
+	required int32 pos = 2;
+	// 龙列表
+	repeated int64 creatures = 3;
+	// 挖的最大层数(作废)
+	optional int32 maxFloor = 4;
+	// 是否钻石跳过
+	optional bool diamondPass = 5;
+}
+
+// 挖格子响应
+message MiningBossPKResponse {
+	// pk是否胜利
+	required bool win = 1;
+	repeated MagicalCreatureMsg creatures = 2;
+}
+
+// 委托请求
+message MiningCommissionRequest {
+	// 洞穴Id 自增
+	optional int64 commissionId = 1;
+	// 龙列表
+	repeated int64 creatures = 2;
+}
+
+// 委托响应
+message MiningCommissionResponse {
+}
+
+// 领取委托奖励请求
+message MiningCommissionRewardRequest {
+	// 洞穴Id
+	optional int64 commissionId = 1;
+}
+
+// 领取委托奖励响应
+message MiningCommissionRewardResponse {
+}
+
+// 周累计挖掘层数奖励请求
+message MiningWeekDigFloorRewardRequest {
+	// 挖的最大层数
+	optional int32 maxFloor = 1;
+}
+
+// 周累计挖掘层数奖励响应
+message MiningWeekDigFloorRewardResponse {
+}
+
+// 周累计重置请求
+message MiningWeekResetRequest {
+	// 挖的最大层数
+	optional int32 maxFloor = 1;
+}
+
+// 周累计重置响应
+message MiningWeekResetResponse {
+    // 下次刷新时间
+    optional int64 nextRefreshTime = 1;
+}
+
+// 遇见BOSS请求
+message MiningBossStartRequest {
+	// 层id
+	required string floorId = 1;
+	// 位置
+	required int32 pos = 2;
+}
+
+// 遇见BOSS响应
+message MiningBossStartResponse {
+	
+}
+
+// 刷新BOSS请求
+message MiningBossRefreshRequest {
+	// 层id
+	required string floorId = 1;
+	// 位置
+	required int32 pos = 2;
+}
+
+// 刷新BOSS响应
+message MiningBossRefreshResponse {
+	// 新boss
+	required MiningBossMsg boss = 1;
+}
+
+// 刷新空洞奖励请求
+message MiningChangeRewardTypeRequest {
+	// 类型
+	optional int32 rewardType = 1;
+}
+
+// 刷新空洞奖励响应
+message MiningChangeRewardTypeResponse {
+	// 更新奖励的格子数据
+  	repeated MiningFloorMsg floors = 2;
+}
+
+// 领取每日奖励请求
+message MiningDayRewardRequest {
+	// 最大层数
+	optional int32 maxFloor = 1;
+	// 看广告领额外奖励
+	optional bool ads = 2;
+}
+
+// 领取每日奖励响应
+message MiningDayRewardResponse {
+	
+}

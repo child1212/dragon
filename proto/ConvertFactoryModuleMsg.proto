@@ -1,0 +1,87 @@
+syntax = "proto2";
+package com.common.msg;
+
+import "ItemModuleMsg.proto";
+
+enum ConvertFactoryModuleMsgSubCommand {
+	// 转换
+	CONVERTFACTORYMODULEMSG_SUB_CONVERT = 25501;
+	// 清除cd
+	CONVERTFACTORYMODULEMSG_SUB_CLEARCD = 25502;
+	// 处理溢出 cd结束时
+	CONVERTFACTORYMODULEMSG_SUB_OVERFLOWDEAL = 25503;
+}
+
+message ConvertSlotMsg {
+	// 槽id
+	required int32 slotId = 1;
+	// 存储值
+	required int32 storeValue = 2;
+	// cd开始时间
+	optional int64 cdStartTime = 3;
+}
+
+message ConvertFactoryMsg {
+	// 障碍物唯一ID
+	required string plantId = 1;
+	// 溢出值
+	required int32 overflowValue = 2;
+	// 转换槽信息
+	repeated ConvertSlotMsg convertSlots = 3;
+}
+
+message ConvertMsg {
+	required string itemId = 1;
+	required int64 convertTime = 2;
+}
+
+// 转换 请求
+message ConvertRequest {
+	required string sceneId = 1;
+	required string plantId = 2;
+	required string factoryId = 3;
+	repeated ConvertMsg convertMsgs = 4;
+	// 当前槽数量(通行证等添加槽位总和已前端为准)
+	optional int32 slotCnt = 5;
+}
+
+// 转换 响应
+message ConvertResponse {
+	// 同步道具
+	repeated ItemMsg items = 1;
+	// 同步转换工厂信息
+	required ConvertFactoryMsg convertFactorys = 2;
+}
+
+// 清除cd 请求
+message ClearCdRequest {
+	required string sceneId = 1;
+	required string plantId = 2;
+	required int32 slotId = 3;
+	required string factoryId = 4;
+	// 当前槽数量(通行证等添加槽位总和已前端为准)
+	optional int32 slotCnt = 5;
+}
+
+// 清除cd 响应
+message ClearCdResponse {
+	// 同步道具
+	repeated ItemMsg items = 1;
+	// 同步转换工厂信息
+	required ConvertFactoryMsg convertFactorys = 2;
+}
+
+message OverflowDealRequest {
+	required string sceneId = 1;
+	required string plantId = 2;
+	required string factoryId = 3;
+	// 当前槽数量(通行证等添加槽位总和已前端为准)
+	optional int32 slotCnt = 4;
+}
+
+message OverflowDealResponse {
+	// 同步道具
+	repeated ItemMsg items = 1;
+	// 同步转换工厂信息
+	required ConvertFactoryMsg convertFactorys = 2;
+}

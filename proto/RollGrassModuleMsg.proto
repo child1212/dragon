@@ -1,0 +1,61 @@
+syntax = "proto2";
+package com.common.msg;
+import "ItemModuleMsg.proto";
+
+enum RollGrassModuleMsgSubCommand {
+	//请求开启小游戏
+	ROLLGRASSMODULEMSG_SUB_OPENROLLGRASSGAME = 29301;
+	//请求结束小游戏
+	ROLLGRASSMODULEMSG_SUB_CLOSEROLLGRASSGAME = 29302;
+	//请求小游戏信息
+	ROLLGRASSMODULEMSG_SUB_GAMEROLLGRASSINFOS = 29303;
+	//请求领取小游戏积分奖励
+	ROLLGRASSMODULEMSG_SUB_GAMEROLLGRASSSCOREAWARD = 29304;
+}
+
+//请求开启小游戏
+message OpenRollGrassGameRequest {
+	optional string actId = 1;//活动id
+	optional string levelId = 2;//关卡id
+}
+//请求开启小游戏响应
+message OpenRollGrassGameResponse {
+}
+
+//请求结束小游戏
+message CloseRollGrassGameRequest {
+	optional string actId = 1;//活动id
+	optional string levelId = 2;//关卡id
+	optional int32  num= 3;// 完成任务数量
+}
+
+//请求结束小游戏响应
+message CloseRollGrassGameResponse {
+	repeated ItemMsg items = 1;//关卡结束奖励的道具
+}
+
+//请求小游戏信息
+message GameRollGrassInfosRequest {
+	optional string actId = 1;//活动id
+}
+
+//请求小游戏信息响应
+message GameRollGrassInfosResponse {
+	//目前的积分
+	optional int32 scores = 1;
+	//已经领取的奖励标记值(0表示没有领取过奖励 1表示领取了第一个奖励 以此类推)
+	optional int32 awardNum = 2;
+	//已通关关卡id  如果没有通关 此值不传递 客户端为lua默认值
+	optional string levelId = 3;
+}
+
+//请求领取小游戏积分奖励
+message GameRollGrassScoreAwardRequest {
+	optional string actId = 1;//活动id
+}
+
+//请求领取小游戏积分奖励响应
+message GameRollGrassScoreAwardResponse {
+	//已经领取的奖励标记值(0表示没有领取过奖励 1表示领取了第一个奖励 以此类推)
+	optional int32 awardNum = 1;
+}

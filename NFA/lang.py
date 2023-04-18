@@ -1,11 +1,11 @@
 #%%
 #检测多语言格式，是否有参数配置错误
-names = ('AI','Dialog','Guide','Pops','Story','SystemErrorCode','Tips','UI')
+names = ('AI','Dialog','Guide','Pops','Story','SystemErrorCode','Tips','UI','Partnerbubble')
 countries = {'en','de','en','fr','it','ja','ko','sp'}
 for country in countries:
     print("#===================="+country+"=======================#")
     for name in names:
-        lan = open("E:\\town\\dragon\\client\\client\\Assets\\HomeLand\\Localization\\{country}\\{name}.bytes".format(country=country,name=name),"r",encoding="utf-8")
+        lan = open("E:\\town\\FA\\client\\client\\Assets\\HomeLand\\Localization\\{country}\\{name}.bytes".format(country=country,name=name),"r",encoding="utf-8")
 
         l_k = ("a","b","c","d","e","f","g","h","i",'j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','0','1','2','3','4','5','6','7','8','9','_')
         l_a = ("a","b","c","d","e","f","g","h","i",'j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','0','1','2','3','4','5','6','7','8','9','_','Q','W','E','R','T','Y','U','I','O','P','A','S','D','F','G','H','J','K','L','Z','X','C','V','B','N','M')
@@ -55,7 +55,7 @@ for country in countries:
 
 # %%
 #检测中文字符
-names = ('AI','Dialog','Guide','Pops','Story','SystemErrorCode','Tips','UI')
+names = ('AI','Dialog','Guide','Pops','Story','SystemErrorCode','Tips','UI','Partnerbubble')
 countries = {'en','de','en','fr','it','sp'}
 for country in countries:
     print("#===================="+country+"=======================#")
@@ -81,7 +81,7 @@ for country in countries:
 # %%
 #检测参数配置和中文不一致的情况
 #创建映射
-names = ('AI','Dialog','Guide','Pops','Story','SystemErrorCode','Tips','UI')
+names = ('AI','Dialog','Guide','Pops','Story','SystemErrorCode','Tips','UI','Partnerbubble')
 countries = {'en','de','en','fr','it','ja','ko','sp','zh'}
 for country in countries:
     for name in names:
@@ -142,7 +142,7 @@ for country in countries:
 
 # %%
 # 检测多语言丢失key的情况
-names = ('AI','Dialog','Guide','Pops','Story','SystemErrorCode','Tips','UI')
+names = ('AI','Dialog','Guide','Pops','Story','SystemErrorCode','Tips','UI',"Partnerbubble")
 countries = {'en','de','en','fr','it','sp','zh'}
 
 
@@ -210,8 +210,8 @@ for name in names:
 #         lan.close()
 #%%
 #筛选dragon
-names = ('AI','Dialog','Guide','Pops','Story','SystemErrorCode','Tips','UI')
-countries = {'en'}
+names = ('AI','Dialog','Guide','Pops','Story','SystemErrorCode','Tips','UI','Partnerbubble')
+countries = {'en',"it"}
 for country in countries:
     print("#===================="+country+"=======================#")
     exc = ("errorcode_18004","errorcode_18005")
@@ -220,8 +220,22 @@ for country in countries:
 
         for line in lan:
             r = line.split('=')
-            if "dragon" in r[-1]:
+            if "Cynthia" in r[-1]:
                 print(r[0])
         lan.close()
 
 # %%
+names = ('AI','Dialog','Guide','Pops','Story','SystemErrorCode','Tips','UI',"Partnerbubble")
+countries = {'en','de','en','fr','it','sp','zh'}
+for country in countries:
+    print("#===================="+country+"=======================#")
+    exc = ("errorcode_18004","errorcode_18005")
+    for name in names:
+        lan = open("E:\\town\\FA\\client\\client\\Assets\\HomeLand\\Localization\\{country}\\{name}.bytes".format(country=country,name=name),"r",encoding="utf-8")
+
+        for line in lan:
+            r = line.split('=')
+            x = r[-1].replace(' ','').replace('\n','')
+            if x[-1] == ',' or x[-1] == '，':
+                print(r[0])
+        lan.close()

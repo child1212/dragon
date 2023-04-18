@@ -1,0 +1,31 @@
+syntax = "proto2";
+package com.common.msg;
+
+import "CommonTaskModuleMsg.proto";
+
+enum DotTaskModuleMsgSubCommand {
+	// 积分版任务信息
+	DOTTASKMODULEMSG_SUB_DOTTASKINFO = 29821;
+	// 请求提交积分版任务
+	DOTTASKMODULEMSG_SUB_SUBMITDOTTASK = 29822;
+}
+
+// 积分版任务信息请求
+message DotTaskInfoRequest {
+	
+}
+
+// 积分版任务信息响应
+message DotTaskInfoResponse {
+	//任务数据 参见CommonTaskModuleMsg中CommonTask配置
+	repeated CommonTask tasks = 1;
+}
+
+// 请求提交积分版任务
+message SubmitDotTaskRequest {
+	optional string taskId = 1;//任务id
+}
+
+// 请求提交积分版任务响应
+message SubmitDotTaskResponse {
+}

@@ -182,3 +182,7 @@ guide_partner_3
 guide_partner_lay_1
 guide_partner_lay_2
 guide_partner_lay_3
+Partner_order_1
+Partner_order_2
+Partner_order_3
+Partner_order_4

@@ -1,0 +1,91 @@
+syntax = "proto2";
+package com.common.msg;
+
+enum ProsperityErrorCodeEnum {
+	//繁荣度升级奖励已领取
+	PROSPERITY_LEVELUP_GIFT_ALREADY_TOKEN = 22001;
+	//繁荣度等级不足
+	PROSPERITY_LEVEL_NOT_ENOUGH = 22002;
+	//繁荣度特惠礼包已购买
+	PROSPERITY_SHOP_GITF_ALREADY_BOUGHT =  22003;
+	//繁荣度数据不存在错误
+	PROSPERITY_DATA_NOT_EXIST =  22004;
+	//货币不足
+	PROSPERITY_MONEY_NOT_ENOUGH =  22005;
+}
+
+enum ProsperityModuleMsgSubCommand {
+	//请求领取繁荣度升级礼包
+	PROSPERITYMODULEMSG_SUB_LEVELUPGIFT= 22001;
+	//请求繁荣度排行榜
+	PROSPERITYMODULEMSG_SUB_RANKLIST = 22002;
+	//请求购买特惠礼包(用钻石购买)
+	PROSPERITYMODULEMSG_SUB_BUYPREFERENTIALGOODS = 22003;
+}
+
+//enterGame返回
+message ProsperityInfoResponse {
+	//繁荣度等级  客户端已有计算机制
+	//required int32 level = 1;
+	//繁荣度达到的最高等级
+	required int32 maxLevel = 2;
+	//繁荣度等级礼包领取情况（已经领取的等级的集合，没领取的情况集合为空 如 1,3,5 表示 1 、3 、5级已经领取）
+	repeated int32 levelUpGifts = 3;
+	//繁荣度商店特惠礼包购买情况（已经购买的等级的集合 ，没购买的情况集合为空 如 1,3,5 表示 1 、3 、5级已经购买）
+	repeated int32 shopGifts = 4;
+	//当前等级繁荣度的具体数值 客户端已有计算机制
+	//required int32 curValue = 5;
+}
+
+// 请求领取繁荣度升级礼包
+message LevelUpGiftRequest {
+	//领取的等级
+	required int32 level = 1;
+}
+message LevelUpGiftResponse {
+	
+}
+
+//请求繁荣度排行榜信息
+message RankListRequest {
+
+}
+
+// 排名信息
+message RankInfoMsg {
+	// 玩家id
+	required string playerId = 1;
+	// 排名
+	optional int32 index = 2;
+	// 分数(繁荣度等级)
+	optional int32 score = 3;
+	// 名字
+	optional string name = 4;
+	// ICON
+	optional string icon = 5;
+	// fb account
+	optional string account = 6;
+	// 关卡等级
+	optional int32 level = 7;
+	//是否为vip
+	optional bool isVip = 8;
+}
+
+//请求繁荣度排行榜信息回复
+message RankListResponse {
+	//排行信息
+	repeated RankInfoMsg rankInfoMsgs = 1;
+	//玩家排名  -1 表示玩家未上榜   >0 标识玩家在榜单中位置
+	optional int32 rankIndex = 2;
+}
+
+// 请求购买特惠礼包
+message BuyPreferentialGoodsRequest {
+	//繁荣度等级
+	required int32 level = 1;
+}
+//购买特惠礼包响应
+message BuyPreferentialGoodsResponse {
+	
+}
+

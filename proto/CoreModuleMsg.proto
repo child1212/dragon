@@ -1,0 +1,586 @@
+syntax = "proto2";
+package com.common.msg;
+
+import "ItemModuleMsg.proto";
+import "DayRewardModuleMsg.proto";
+import "BuffModuleMsg.proto";
+import "TaskModuleMsg.proto";
+import "AdsModuleMsg.proto";
+import "MagicalCreatureModuleMsg.proto";
+import "FactoryModuleMsg.proto";
+import "OrderTaskModuleMsg.proto";
+import "SceneModuleMsg.proto";
+import "RechargeModuleMsg.proto";
+import "GiftModuleMsg.proto";
+import "AnimalModuleMsg.proto";
+import "DragonBubbleModuleMsg.proto";
+import "GrowthFundModuleMsg.proto";
+import "PiggyBankModuleMsg.proto";
+import "DragonBuildingModuleMsg.proto";
+
+enum CoreModuleMsgSubCommand {
+	//登录游戏
+	COREMODULEMSG_SUB_LOGIN = 1001;
+	//进入游戏请求
+    COREMODULEMSG_SUB_ENTERGAME = 1002;
+    //充值请求
+    COREMODULEMSG_SUB_RECHARGEOLD = 1003;
+	//新手引导已通过步骤
+	COREMODULEMSG_SUB_GUIDECOMPLETEIDS = 1004;
+	//新手引导通过步骤
+	COREMODULEMSG_SUB_GUIDECOMPLETE = 1005;
+	//发起支付，预生成订单
+	COREMODULEMSG_SUB_STARTRECHARGE = 1006;
+	//关闭支付
+	COREMODULEMSG_SUB_CLOSERECHARGE = 1007;
+	//修改玩家名字
+	COREMODULEMSG_SUB_ALTERPLAYERNAME = 1008;
+	//修改玩家头像
+	COREMODULEMSG_SUB_ALTERPLAYERICON = 1009;
+	//刷新角色创建时间
+	COREMODULEMSG_SUB_REFRESHCREATETIME = 1010;
+	//获取更新奖励信息
+	COREMODULEMSG_SUB_VERSIONREWARDSINFO = 1011;
+	//领取更新奖励
+	COREMODULEMSG_SUB_GETVERSIONREWARDS = 1012;
+	//Facebook关注奖励
+	COREMODULEMSG_SUB_FACEBOOKFOLLOWREWARD = 1019;
+	//钻石商店购买
+	COREMODULEMSG_SUB_DIAMONDPURCHASE = 1020;
+	// 心跳
+	COREMODULEMSG_SUB_HEARTBEAT = 1021;
+	// 系统开启记录
+	COREMODULEMSG_SUB_SYSTEMOPEN = 1022;
+	// 精力同步
+	COREMODULEMSG_SUB_ENERGY = 1023;
+	// 个人信息
+	COREMODULEMSG_SUB_PLAYERINFO = 1024;
+	// 更改个人信息
+	COREMODULEMSG_SUB_PLAYERINFOMODIFY = 1025;
+	// 领取回归奖励
+	COREMODULEMSG_SUB_BACKREWARD = 1026;
+	// 注销账号
+	COREMODULEMSG_SUB_ACCOUNTCANCEL = 1027;
+	// 对时
+	COREMODULEMSG_SUB_TIME = 1028;
+	// 个人名片
+	COREMODULEMSG_SUB_BISCARD = 1029;
+	// 替换新手引导已通过步骤
+	COREMODULEMSG_SUB_REPLACEGUIDECOMPLETE = 1030;
+	// 请求注册账号
+	COREMODULEMSG_SUB_REGISTERACCOUNT = 1031;
+}
+
+// 个人信息请求
+message PlayerInfoRequest {
+	
+}
+
+// 个人信息响应
+message PlayerInfoResponse {
+	optional string pid = 1;			// 编号pid
+	optional string nickname = 2;		// 昵称
+	optional string avatar = 3;			// 头像
+	repeated string unlockAvatars = 4;	// 已解锁头像
+	optional string frame = 5;			// 头像框
+	repeated string unlockFrames = 6;	// 已解锁头像框
+	repeated string inuseSkins = 7;		// 正在使用的皮肤
+	repeated string unlockSkins = 8;	// 已解锁的皮肤
+}
+
+//玩家资源信息
+message ResourceMsg {
+	//玩家昵称 -1为默认值
+	optional string nickName = 1;
+	//玩家性别
+	optional bool sex = 2;
+	//钻石数
+	optional int32 diamonds = 3;
+	//物资数
+	optional int32 material = 4;
+	//精力
+	optional int32 energyValue = 5; 
+	//上一次领取精力时间(毫秒)
+	optional int64 energyValueTime = 6;
+	//icon
+	optional string icon = 7;
+	//精力上限
+	optional int32 energyLimit = 8;
+	//角色创建时间
+	optional int64 createTime = 11;
+	//玩家修改名字次数
+	optional int32 alterNameCnt = 12;
+	//是否付费用户 (0.不是， >0.是)
+	optional int32 payPlayer = 13;
+	//玩家注册时版本号
+	optional string registVersion = 14;
+	//上次进入游戏时间
+	optional int64 previousEnterTime = 20;
+	// 历史总充值(单位:美分)
+	optional int32 totalRecharge = 21;
+	// 生产基地等级
+	optional int32 factoryCenterLv = 24;
+	// 经验
+	optional int32 exp = 25;
+	// 消耗体力数：累计到150可领取奖励，领取后重置为0
+	optional int64 consumeEnergyCnt = 26;
+	// 等级
+	optional int32 level = 27;
+	//最近一次消费时间
+	optional int64 lastRechargeTime = 28;
+	//玩家队伍id
+	optional string teamId = 29;
+	//玩家再次加入队伍cd计时起始时间
+	optional int64 joinTeamCdStart = 30;
+	// Vip称号 隐藏true, 显示false
+	optional bool hideVipLevel = 31;
+	// 曾经订阅过的商品
+	repeated string subscribes = 32;
+	// 特殊特权币礼包已购买次数
+	optional int32  specialGiftN = 33;
+}
+
+//登录请求
+message LoginRequest {
+	//账号类型 0.普通 1.GM
+	optional int32 type = 1;
+	//玩家账号
+	optional string account = 2;
+	//此值为上次登录的客户端本地账号 不一定是游客（8.1.0修改，只有绑定操作时才传该值 ） 
+	optional string visitorAccount = 3;
+	//系统类型  0.安卓 1.ios 2 win64
+	optional int32 osType = 4;
+	//平台类型 0.游客 1.fb 2.乐逗 3.正常IOS(需要与乐逗ios区分开) 4.自定义账号平台
+	optional int32 platformType = 5;
+	//fb和ios登录和自定义平台验证token
+	optional string inputToken = 6;
+	//邮箱
+	optional string mail = 7;
+	//idfa（安卓用户为uuid，ios用户为idfa，统一用字段idfa表示）
+	optional string idfa = 8;
+	//设备国家（如：en_US 没有写00）
+	optional string deviceCountry = 9;
+	//设备唯一id
+	optional string deviceId = 10;
+	//广告用户分层
+	optional string adsGroup = 11;
+	//玩家绑定账号选择的playerId (8.1.0修改)
+	optional string playerId = 12;
+	// 乐逗playerId
+	optional string ledouPlayerId = 13;
+	//idfv
+	optional string idfv = 14;
+	//时区
+	optional int32 timeZone = 15;
+	//邀请玩家id  已经废弃掉了 占用16的位置 不在使用
+	optional string invitePid = 16;
+	//绑定页面位置 运营打点需求
+	optional int32 bindpage = 17;
+}
+
+// 待选择的玩家信息 8.1.0修改
+message SelectPlayerInfo {
+	//玩家id
+	required string playerId = 1;
+	//玩家钻石数量
+	optional int32 diamond = 2;
+	//玩家等级
+	optional int32 level = 3;
+	//玩家上次登录时间
+	optional int64 lastLoginMill = 4;
+	//玩家昵称
+	optional string name = 5;
+}
+
+//登录响应
+message LoginResponse {
+	//登录状态 0.正常登录 1.首次登录 2.需要选择playerid再次登录(8.1.0修改) 3.自定义账号密码不正确
+	optional int32 loginStatus = 1;
+	//账号类型 0.普通 1.GM
+	optional int32 type = 2;
+	//玩家id
+	optional string playerId = 3;
+	//会话id
+	optional int64 sessionId = 4;
+	//当前系统时间
+	optional int64 curTime = 5;
+	//是否绑定游客操作( 0.不是新绑定 1.新fb账号绑定 )
+	optional int32 bindStatus = 6;
+	//sequenceId( 缓存消息序号 )
+	optional int64 sequenceId = 7;
+	//账号类型( 0.游客 1.fb 2.乐逗 4.apple) 按位操作 5表示fb+apple
+	optional int32 accountType = 8;
+	//需要选择账号的信息 8.1.0修改
+	repeated SelectPlayerInfo selectPlayerInfos = 9;
+	//增加上一次登录的deviceid 客户端用于判断玩家是否更换过设备
+	optional string lastDeviceId = 10;
+	//登录返回fbAccount 如果有fb的情况 其实主要作用是用来读取fb头像
+	optional string fbAccount = 11;
+	//FB关注状态(0.未关注 1.已关注)
+	optional int32 fbFollow = 12;
+	//FB绑定状态(0.未绑定 1.已绑定)
+	optional int32 fbBind = 13;
+	//时区
+	optional int32 timeZone = 14;
+	//是否有fb绑定奖励 0：没有 1：有
+	optional int32 fbBindReward = 15;
+	//是否已完成首次绑定fb 0:否   1:是 (注意本次有fb绑定奖励或曾经发放过fb绑定奖励时此值为1)
+	optional int32 fbFirstBind = 16;
+	//积分墙任务标识  0:没有标识  1:有标识
+	optional int32 dotTaskFlag = 17;
+}
+
+// 新手引导已通过步骤请求
+message GuideCompleteIdsRequest{
+
+}
+
+// 新手引导已通过步骤响应
+message GuideCompleteIdsResponse{
+	// 已完成新手引导步骤id
+	repeated string guideIds = 1;
+}
+
+//进入游戏请求
+message EnterGameRequest {
+	optional bool flag = 1;
+}
+
+// 系统开启记录
+message SystemOpenInfo {
+	// key
+	repeated string systemIds = 1;
+}
+
+//进入游戏响应
+message EnterGameResponse {
+	//玩家资源信息
+	optional ResourceMsg resourceMsg = 1;
+	//道具列表信息
+	optional ItemListResponse itemList = 3;
+	//任务列表信息
+	optional TaskListResponse taskList = 4;
+	//拥有的buff列表
+	optional BuffListResponse buffList = 5;
+	//签到信息
+	optional DayRewardInfoResponse dayRewardInfo = 6;
+	//新手引导信息
+	optional GuideCompleteIdsResponse guideIds = 9;
+	//激励广告信息
+	optional AdsIncentiveInfoResponse adsIncentive = 12;
+	// 过期邮件奖励
+	repeated ItemMsg expireMailRewards = 19;
+	// 魔法生物购买次数
+	repeated MagicalCreatureBuyMsg magicalCreatureBuys = 30;
+	// 魔法生物
+	repeated MagicalCreatureMsg magicalCreatures = 31;
+	// 系统开启记录
+	optional SystemOpenInfo systemOpenInfo = 32;
+	// 生产工厂信息
+	repeated FactoryMsg factorys = 34;
+	// 订单总进度信息
+	optional OrderTaskProgressMsg orderTaskProgress = 35;
+	// 订单信息
+	repeated OrderTaskMsg orderTasks = 36;
+	// 魔法生物巢
+	repeated MagicalNestMsg magicalNests = 37;
+	// 航海订单
+	optional TimeOrderMsg timeOrder = 38;
+	//场景关闭信息返回
+	optional SceneCloseTimeResponse sceneCloseTimeResp = 39;
+	//家园委托信息
+	repeated CommissionMsg commissions = 40;
+	// 玩家个人信息：头像、框、皮肤等
+	optional PlayerInfoResponse playerInfoResp = 41;
+	// 工厂加速次数
+	optional int32 factoryAccelerateCnt = 42;
+	// 是否有回归奖励
+	optional bool backReward = 43;
+	//限时商品信息
+	repeated LimitedTimeProduct limitedTimeProducts = 44;
+	//月卡礼包信息
+	optional MonthGiftInfo monthGiftInfo = 45;
+	//小动物活动信息
+	optional AnimalInfoResponse animalInfo = 46;
+	//龙气泡信息
+	optional DragonBubbleMsg dragonBubble = 47;
+	//成长礼包
+	optional GrowthFundMsg growthFund = 48;
+	//小猪存钱罐
+	optional PiggyBankInfoMsg piggyBankInfo = 49;
+	// 龙乐园建筑任务
+	optional DragonBuildingTaskMsg task = 50;
+}
+
+//充值请求
+message RechargeOldRequest {
+	//订单信息
+	required string orderInfo = 1;
+	//平台类型 0.google 1.ios
+	required int32 platformType = 3;
+	//购买的产品id
+	required string productId = 4;
+	//游戏服务器订单id
+	required int64 gameOrderId = 5; 
+	//extra
+	optional string dcInfo = 6;
+}
+
+message RechargeOldResponse {
+	//是否是沙箱的订单(这个值有且为true时为沙箱订单)
+	optional bool sandbox = 1;
+}
+
+// 客户端发起支付，预生成订单
+message StartRechargeRequest{
+	//平台类型 0.google 1.ios
+	required int32 platformType = 1;
+	//购买的产品id
+	required string productId = 2;
+}
+
+// 服务器返回，预生成订单
+message StartRechargeResponse{
+	//游戏服务器订单id
+	required int64 gameOrderId = 1;
+}
+
+// 客户端关闭支付，结束订单状态
+message CloseRechargeRequest{
+	//游戏服务器订单id
+	required int64 gameOrderId = 1;
+	//关闭支付原因
+	required string reason = 2;
+}
+
+// 服务器关闭支付，结束订单状态
+message CloseRechargeResponse{
+
+}
+
+// 完成新手引导请求
+message GuideCompleteRequest{
+	// 已完成新手引导步骤id
+	required string guideId = 1;
+}
+
+// 完成新手引导响应
+message GuideCompleteResponse{
+}
+
+// 修改玩家名字请求
+message AlterPlayerNameRequest{
+	// 要修改的名字
+	required string playerName = 1;
+}
+
+// 修改玩家名字响应
+message AlterPlayerNameResponse{
+
+}
+
+// 修改玩家头像请求
+message AlterPlayerIconRequest{
+	// 要修改的头像   1-8为系统默认头像，999为fb头像
+	required string icon = 1;
+}
+
+// 修改玩家头像响应
+message AlterPlayerIconResponse{
+
+}
+
+// 刷新角色创建时间请求
+message RefreshCreateTimeRequest{
+	
+}
+
+// 刷新角色创建时间响应
+message RefreshCreateTimeResponse{
+	
+}
+
+// 获取版本更新奖励信息
+message VersionRewardsInfoRequest{
+}
+
+message VersionRewardsInfoResponse{
+	//更新奖励信息，null:无待领取奖励，非空:待领取的奖励
+	optional string versionInfo = 1;//version:rewards(itemId,count；itemId,count) e.: 1.4.45:300001,20;300002,30
+}
+
+// 领取版本更新奖励
+message GetVersionRewardsRequest{
+}
+
+message GetVersionRewardsResponse{
+	//optional ret = 1;//0:失败，1：成功
+	optional string versionInfo = 2;
+}
+
+//Facebook关注奖励请求
+message FacebookFollowRewardRequest {
+	
+}
+
+//Facebook关注奖励响应
+message FacebookFollowRewardResponse {
+	
+}
+
+//钻石购买请求
+message DiamondPurchaseRequest {
+	required string shopId = 1;
+}
+
+
+//钻石购买响应
+message DiamondPurchaseResponse {
+	
+}
+
+//心跳请求
+message HeartBeatRequest {
+	
+}
+
+//心跳返回
+message HeartBeatResponse {
+	// 服务器时间
+	required int64 serverTime = 1;
+	// 同步标记
+	repeated int32 flags = 2;
+}
+
+// 系统开启请求
+message SystemOpenRequest {
+	repeated string systemId = 1;
+}
+
+// 系统开启返回
+message SystemOpenResponse {
+	
+}
+
+// 精力信息请求
+message EnergyRequest {
+	
+}
+
+// 精力信息响应
+message EnergyResponse {
+	optional int32 cur = 1;			//当前精力数
+	optional int32 limit = 2;			//精力上限
+	optional int64 energyValueTime = 3;	//上一次领取精力时间(毫秒)
+	optional int64 energyExtraTime= 4;	//上一次计算的剩余未使用时间(毫秒)
+	optional int32 speed= 5;			//精力恢复速度
+}
+
+// 更改个人信息请求
+message PlayerInfoModifyRequest {
+	optional string nicnname = 1;		// 昵称
+	optional string avatar = 2;			// 头像
+	optional string frame = 3;			// 头像框
+	repeated string skin = 4;			// 皮肤
+	
+}
+
+// 更改个人信息响应
+message PlayerInfoModifyResponse {
+	
+}
+
+// 领取回归奖励请求
+message BackRewardRequest {
+	
+}
+
+// 领取回归奖励响应
+message BackRewardResponse {
+	repeated ItemMsg rewards = 1;
+}
+
+// 注销账号请求
+message AccountCancelRequest {
+	optional int32 cause = 1;	// 注销原因 1.不喜欢这个游戏 2.游戏bug太多 3.信息骚扰、数据泄露
+	optional string authcode = 2;
+}
+
+// 注销账号响应
+message AccountCancelResponse {
+	optional int32 ret = 1;	// 1.成功 2.Apple注销失败
+}
+
+// 对时请求
+message TimeRequest {
+	
+}
+
+// 对时响应
+message TimeResponse {
+	// 服务器时间(系统时间)
+	optional int64 serverTime = 1;
+	// 玩家时间
+	optional int64 playerTime = 2;
+}
+
+// 个人名片信息请求
+message BisCardRequest {
+	// 目标玩家ID
+	optional string targetId = 1;
+}
+
+// 公会名片信息
+message TeamBisCard {
+	optional string teamId = 1;			// 公会ID
+	optional string name = 2;			// 名称
+	optional string icon = 3;			// 图标
+	optional string president = 4;		// 会长ID
+}
+
+// 龙名片信息
+message DragonBisCard {
+	optional int64 creatureId = 1;		// 实例id
+	optional string templateId = 2;		// 模板id
+	repeated DragonSkinMsg skins = 3;	// 装扮
+	optional int32 power = 4;			// 龙之力
+}
+
+// 个人名片信息响应
+message BisCardResponse {
+	optional string pid = 1;			// pid
+	optional string nickname = 2;		// 昵称
+	optional string avatar = 3;			// 头像
+	optional string frame = 4;			// 头像框
+	repeated string inuseSkins = 5;		// 正在使用的皮肤
+	optional int32 level = 6;			// 等级
+	optional int32 power = 7;			// 龙之力
+	optional string progress = 8;		// 探索进度
+	optional TeamBisCard teamCard = 9;	// 公会名片信息
+	repeated DragonBisCard dra = 10;	// 龙名片信息
+	optional int32 vipLevel = 11;		// vip等级
+}
+
+// 替换新手引导已通过步骤
+message ReplaceGuideCompleteRequest{
+	// 删除新手引导步骤id
+	repeated string oldGuideId = 1;
+	// 完成新手引导步骤id
+	repeated string guideId = 2;
+}
+
+// 替换新手引导已通过步骤响应
+message ReplaceGuideCompleteResponse{
+}
+
+message RegisterAccountRequest {
+	//注册的账号
+	optional string account = 1;
+	//注册的密码
+	optional string password = 2;
+}
+
+message RegisterAccountResponse {
+	//结果 0 成功 1 账号已存在请换一个账号注册
+	optional int32 ret = 1;
+}

@@ -1,0 +1,84 @@
+syntax = "proto2";
+package com.common.msg;
+
+import "ItemModuleMsg.proto";
+
+enum DiggingEventModuleMsgSubCommand {
+	// 获取挖地活动信息
+	DIGGINGEVENTMODULEMSG_SUB_DIGGINGEVENTINFO = 29801;
+	// 挖地
+	DIGGINGEVENTMODULEMSG_SUB_DIGGINGEVENTDIG = 29802;
+	// 体力消耗进度奖励
+	DIGGINGEVENTMODULEMSG_SUB_DIGGINGEVENTPROGRESSREWARD = 29803;
+	// 活动结束领取活未领取进度奖励
+	DIGGINGEVENTMODULEMSG_SUB_UNRECEIVEPROGRESSREWARD = 29804;
+}
+
+message DiggingEventReward {
+	// 奖励id(服务器生成 唯一)
+ 	optional int32 rewardId = 1;
+	// 奖励道具
+	optional ItemMsg item = 2;
+ 	// 位置(大于0表示已被获得)
+    optional int32 position = 3;
+	// 奖励类型1、2、3 (3是最终大奖)
+    optional int32 rewardType = 4;
+}
+
+// 获取挖地活动信息请求
+message DiggingEventInfoRequest {
+ 	// 活动id
+	required string activityId = 1;
+}
+
+// 获取挖地活动信息响应
+message DiggingEventInfoResponse {
+    // 免费挖地体力
+    optional int32 freeEnergy = 1;
+    // 购买挖地体力
+    optional int32 buyEnergy = 2;
+	// 挖宝体力消耗
+	optional int32 digConsume = 3;
+	// 已领取累计奖励索引（数组索引从0开始)
+	repeated int32 progressRewards = 4;
+	// 奖励
+	repeated DiggingEventReward rewards = 5;
+}
+
+// 挖地请求
+message DiggingEventDigRequest {
+ 	// 活动id
+	required string activityId = 1;
+	// 挖的地块位置
+    optional int32 position = 2;
+}
+
+// 挖地响应
+message DiggingEventDigResponse {
+	// 奖励id
+	optional int32 rewardId = 1;
+	// 挖出大奖后刷新的奖池（未挖出大奖为空数组）
+	repeated DiggingEventReward rewards = 2;
+}
+
+// 体力消耗进度奖励请求
+message DiggingEventProgressRewardRequest {
+ 	// 活动id
+	required string activityId = 1;
+	// 要领取的挖宝体力消耗奖励Id (数组索引从0开始)
+	optional int32 rewardIndex = 2;
+}
+
+// 体力消耗进度奖励响应
+message DiggingEventProgressRewardResponse {
+}
+
+// 活动结束领取活未领取进度奖励
+message UnReceiveProgressRewardRequest {
+ 	// 活动id
+	required string activityId = 1;
+}
+
+// 活动结束领取活未领取进度奖励
+message UnReceiveProgressRewardResponse {
+}

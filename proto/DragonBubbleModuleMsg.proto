@@ -1,0 +1,70 @@
+syntax = "proto2";
+package com.common.msg;
+
+import "ItemModuleMsg.proto";
+
+enum DragonBubbleModuleMsgSubCommand {
+	// 龙气泡生成请求
+	DRAGONBUBBLEMODULEMSG_SUB_CREATE = 26601;
+	// 龙气泡补足请求
+	DRAGONBUBBLEMODULEMSG_SUB_SUPPLEMENT = 26602;
+	// 龙气泡领取
+	DRAGONBUBBLEMODULEMSG_SUB_REWARD = 26603;
+}
+
+message BubbleMsg {
+  // 气泡id
+  optional int64 bubbleId = 1;
+  // 奖励id
+  optional string itemId = 2;
+  // 奖励数量
+  optional int32 count = 3;
+}
+
+// 龙气泡数据
+message DragonBubbleMsg {
+	// 上次投放时间
+	optional int64 startTime = 1;
+	// 今日已生成次数
+	optional int32 todayTimes = 2;
+	// 单次总次数
+	optional int32 singleTotalTimes = 3;
+	// 本轮已生成次数
+	optional int32 singleTimes = 4;
+	// 气泡
+	repeated BubbleMsg bubbles = 5;
+	// 已生成气泡的龙
+	repeated int64 dragons = 6;
+	// 上次刷新重置时间
+	optional int64 resetTime = 7;
+	// 投放时的等级
+	optional int32 level = 8;
+}
+
+// 生成气泡请求
+message CreateRequest {
+}
+
+// 生成气泡响应
+message CreateResponse {
+	optional DragonBubbleMsg dragonBubble = 1;
+}
+
+// 补足气泡请求
+message SupplementRequest {
+}
+
+// 补足气泡响应
+message SupplementResponse {
+	optional DragonBubbleMsg dragonBubble = 1;
+}
+
+// 气泡领取请求
+message RewardRequest {
+	optional int64 bubbleId = 1;
+}
+
+// 气泡领取响应
+message RewardResponse {
+	optional DragonBubbleMsg dragonBubble = 1;
+}

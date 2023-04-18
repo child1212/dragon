@@ -1,0 +1,97 @@
+syntax = "proto2";
+package com.common.msg;
+
+import "ItemModuleMsg.proto";
+
+enum DragonBuildingModuleMsgSubCommand {
+	// 龙乐园建筑摆放
+	DRAGONBUILDINGMODULEMSG_SUB_DRAGONBUILDINGSET = 29201;
+	// 龙乐园建筑移动
+	DRAGONBUILDINGMODULEMSG_SUB_DRAGONBUILDINGMOVE = 29202;
+	// 领取龙乐园建筑挂机奖励
+	DRAGONBUILDINGMODULEMSG_SUB_DRAGONBUILDINGHANGUPREWARD = 29203;
+	// 领取龙乐园建筑任务奖励
+	DRAGONBUILDINGMODULEMSG_SUB_DRAGONBUILDINGTASKREWARD = 29204;
+	// 领取龙乐园建筑任务刷新
+	DRAGONBUILDINGMODULEMSG_SUB_DRAGONBUILDINGTASKREFRESH = 29205;
+}
+
+//龙乐园建筑任务信息
+message DragonBuildingTaskMsg{
+	//任务Id
+	required string taskId = 1;
+	//任务次数
+	required int32 taskCnt = 2;
+	//任务状态0未完成1已完成2已提交3所有任务都完成
+	required int32 state = 3;
+	//任务对应建筑已摆放数量
+	required int32 taskBuildingCnt = 4;
+}
+
+//龙乐园建筑信息
+message DragonBuildingMsg{
+	//建筑动态id
+	required string id = 1;
+	//模板id
+	required string tid = 2;
+	//建筑的位置信息(前端生成)[x, y]
+	repeated int32 pos = 3;
+	//奖励刷新时间
+	required int64 rewardRefreshTime = 4;
+}
+
+
+// 龙乐园建筑摆放请求
+message DragonBuildingSetRequest {
+	//道具Id
+	required string itemTemplateId = 1;
+	//建筑的位置信息(前端生成)[x, y]
+	repeated int32 pos = 2;
+}
+
+// 龙乐园建筑摆放响应
+message DragonBuildingSetResponse {
+	//建筑动态id
+	required string id = 1;
+}
+
+// 龙乐园建筑移动请求
+message DragonBuildingMoveRequest {
+	//建筑动态id
+	required string id = 1;
+	//建筑的位置信息(前端生成)[x, y]
+	repeated int32 pos = 2;
+}
+
+// 龙乐园建筑移动响应
+message DragonBuildingMoveResponse {
+}
+
+// 领取龙乐园建筑挂机奖励请求
+message DragonBuildingHangUpRewardRequest {
+	//建筑动态id
+	repeated string id = 1;
+}
+
+// 领取龙乐园建筑挂机奖励响应
+message DragonBuildingHangUpRewardResponse {
+}
+
+// 领取龙乐园建筑任务奖励请求
+message DragonBuildingTaskRewardRequest {
+	//任务索引
+	required string taskId = 1;
+}
+
+// 领取龙乐园建筑任务奖励响应
+message DragonBuildingTaskRewardResponse {
+}
+
+// 领取龙乐园建筑任务刷新请求
+message DragonBuildingTaskRefreshRequest {
+}
+
+// 领取龙乐园建筑任务刷新响应
+message DragonBuildingTaskRefreshResponse {
+	optional DragonBuildingTaskMsg task = 1;
+}

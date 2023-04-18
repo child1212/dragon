@@ -1,0 +1,44 @@
+syntax = "proto2";
+package com.common.msg;
+
+import "ItemModuleMsg.proto";
+
+enum PiggyBankModuleMsgSubCommand {
+	// 开始小猪存钱罐
+	PIGGYBANKMODULEMSG_SUB_PIGGYBANKSTART = 27601;
+	// 小猪存钱罐升档
+	PIGGYBANKMODULEMSG_SUB_PIGGYBANKUPDATEID = 27602;
+}
+
+// 小猪存钱罐信息
+message PiggyBankInfoMsg {
+	// 当前开启存钱罐ID
+	optional string bankId = 1;
+	// 开始时间ms
+	optional int64 startTime = 2;
+	// 储存体力数
+	optional int32 energy = 3;
+	// 是否购买
+	optional bool bought = 4;
+	// 本轮开启时的分组
+	optional string group = 5;
+}
+
+// 开始小猪存钱罐请求
+message PiggyBankStartRequest {
+ 	// 存钱罐ID
+	required string bankId = 1;
+}
+
+// 开始小猪存钱罐响应
+message PiggyBankStartResponse {
+	
+}
+
+// 小猪存钱罐升档请求
+message PiggyBankUpdateIdRequest {
+}
+
+// 小猪存钱罐升档响应
+message PiggyBankUpdateIdResponse {
+}

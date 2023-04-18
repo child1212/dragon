@@ -1,0 +1,35 @@
+syntax = "proto2";
+package com.common.msg;
+enum DiamondRebateModuleMsgSubCommand {
+	//获取钻石返利活动信息
+	DIAMONDREBATEMODULEMSG_SUB_DIAMONDREBATEINFO = 29701;
+	//请求领取钻石返利奖励
+	DIAMONDREBATEMODULEMSG_SUB_TAKEREBATEAWARD = 29702;
+}
+
+//获取钻石返利活动信息
+message DiamondRebateInfoRequest {
+	//活动id
+	optional string actId = 1;
+}
+
+//获取钻石返利活动信息
+message DiamondRebateInfoResponse {
+	//钻石消耗值
+	optional int32 cost = 1;
+	//已奖励到档位id集合 参见ActivityScoreRewardTemplate中的id
+	repeated string ids = 2;
+}
+
+//请求领取钻石返利奖励
+message TakeRebateAwardRequest {
+	//活动id
+	optional string actId = 1;
+	//请求领取的档位 参见ActivityScoreRewardTemplate中的id
+	optional string id = 2;
+}
+
+//请求领取钻石返利奖励返回
+message TakeRebateAwardResponse {
+}
+

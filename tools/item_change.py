@@ -9,9 +9,9 @@ from func_dragon import *
 
 #######################################################################################
 #dragon : d6e0c013d2c377bbeb3f56a262cf3b99\603681214128417
-#FA : 91a4a00cc23bdae216d5dc2519da2c77
-accounts = {"91a4a00cc23bdae216d5dc2519da2c77"}                       #账号                             #
-server = "nrelease"                                    #服务器前缀<dev:"tlogin", qa:"qausa">  #
+#FA : 91a4a00cc23bdae216d5dc2519da2c77\623293505cf755ed47851789c0bb1c48
+accounts = {"mm1000"}                       #账号                             #
+server = "ntest"                                    #服务器前缀<dev:"tlogin", qa:"qausa">  #
 #######################################################################################
 
 if server == "ntest":
@@ -68,12 +68,12 @@ while run == '':
         # print("\n\n")
     print("=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=\n")
     run = input("contune?")
-    # # os.system("adb shell input tap 2071 718")
-    # # os.system("adb shell input tap 1619 914")
+    # os.system("adb shell input tap 2071 718")
+    # os.system("adb shell input tap 1619 914")
     # os.system("adb exec-out screencap -p >e://screenshot/upgrade{no}.jpg".format(no=no))
     # os.system("adb shell input tap 1619 914")
     
-    
+    # os.system("python D:\\pyprogram\\PyTestTools\\dragon\\tools\\template\\globalProgress.py")
     no += 1
 
 
@@ -82,5 +82,7 @@ while run == '':
 
 
 
+
+# %%
 
 # %%

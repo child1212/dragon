@@ -1,0 +1,217 @@
+syntax = "proto2";
+package com.common.msg;
+
+import "ItemModuleMsg.proto";
+
+enum SkinProduceModuleMsgSubCommand {
+	// 请求皮肤打造信息
+	SKINPRODUCEMODULEMSG_SUB_PRODUCEINFO = 26701;
+	// 皮肤打造解锁请求
+	SKINPRODUCEMODULEMSG_SUB_UNLOCK = 26702;
+	// 龙皮肤打造请求
+	SKINPRODUCEMODULEMSG_SUB_PRODUCEDRAGONSKIN = 26703;
+	// 图纸道具使用请求
+	SKINPRODUCEMODULEMSG_SUB_USEDESIGNITEM = 26704;
+	// 皮肤道具使用请求
+	SKINPRODUCEMODULEMSG_SUB_USEDRAGONSKINITEM = 26705;
+	// 删除皮肤
+	SKINPRODUCEMODULEMSG_SUB_DELETEDRAGONSKIN = 26706;
+	// 开启装扮功能
+	SKINPRODUCEMODULEMSG_SUB_OPENSKINPRODUCE = 26707;
+	// 兑换图纸道具请求
+	SKINPRODUCEMODULEMSG_SUB_EXCHANGEDESIGNITEM = 26708;
+	// 龙皮肤生成打造订单
+	SKINPRODUCEMODULEMSG_SUB_PRODUCEDRAGONSKINORDER = 26709;
+	// 龙皮肤打造加速
+	SKINPRODUCEMODULEMSG_SUB_DRAGONSKINORDERACCELERATE = 26710;
+	// 龙皮肤打造订单完成
+	SKINPRODUCEMODULEMSG_SUB_PRODUCEDRAGONSKINORDERREWARD = 26711;
+	// 龙皮肤打造进度开始
+	SKINPRODUCEMODULEMSG_SUB_ORDERPROGRESSSTART = 26712;
+	// 龙皮肤开始打造订单
+	SKINPRODUCEMODULEMSG_SUB_PRODUCEDRAGONSKINORDERSTART = 26713;
+}
+
+message SkinProduceMsg {
+	// 模板id
+	optional string tplId = 1;
+	// 打造次数
+	optional int32 count = 2;
+	// 状态 0.获得 1.解锁
+	optional int32 state = 3;
+}
+
+message SkinProduceOrderMsg {
+	// 订单品质
+	optional int32 quality = 1;
+	// 订单开始时间
+	optional int64 startTime = 2;
+	// 打造装扮id
+	optional string skinTplId = 3;
+	// 额外奖励
+	repeated ItemMsg extraRewards = 4;
+}
+
+// 信息 请求
+message ProduceInfoRequest {
+}
+
+// 信息 响应
+message ProduceInfoResponse {
+	repeated SkinProduceMsg produces = 1;
+	// 打造订单
+	repeated SkinProduceOrderMsg produceOrders = 2;
+	// 累计奖励进度开始时间
+	optional int64 cumulativeStartTime = 3;
+	// 累计奖励打造订单次数(进度cd内记次)
+    optional int32 cumulativeOrderCnt = 4;
+}
+
+// 解锁 请求
+message UnlockRequest {
+	// 模板id
+	optional string tplId = 1;
+}
+
+// 解锁 响应
+message UnlockResponse {
+}
+
+// 打造 请求
+message ProduceDragonSkinRequest {
+	// 模板id
+	optional string tplId = 1;
+}
+
+// 打造 响应
+message ProduceDragonSkinResponse {
+	// 是否打造成功
+	optional bool succ = 1;
+	// 获得的皮肤 成功时有
+	optional DragonSkinMsg newSkin = 2;
+	// 获得的补偿 失败时有
+	repeated ItemMsg items = 3;
+	// 打造数据
+	optional SkinProduceMsg produce = 4;
+	// 消耗的皮肤
+	repeated int64 consumeSkinIds = 5;
+}
+
+// 图纸道具使用请求 请求
+message UseDesignItemRequest {
+	// 道具id
+	repeated string itemTemplateIds = 1;
+}
+
+// 图纸道具使用请求 响应
+message UseDesignItemResponse {
+}
+
+// 皮肤道具使用 请求
+message UseDragonSkinItemRequest {
+	// 道具
+	repeated ItemMsg items = 1;
+}
+
+// 皮肤道具使用 响应
+message UseDragonSkinItemResponse {
+	repeated DragonSkinMsg skins = 1;
+}
+
+// 删除皮肤 请求
+message DeleteDragonSkinRequest {
+	// 装扮实例ID
+	optional int64 skinId = 1;
+}
+
+// 删除皮肤 响应
+message DeleteDragonSkinResponse {
+	// 龙信息同步
+	optional MagicalCreatureMsg creature = 1;
+}
+
+// 开启装扮功能 请求
+message OpenSkinProduceRequest {
+}
+
+// 开启装扮功能 响应
+message OpenSkinProduceResponse {
+}
+
+//兑换图纸道具请求
+message ExchangeDesignItemRequest {
+	//要兑换的图纸道具id
+	optional string itemTemplateId = 1;
+}
+
+//兑换图纸道具响应
+message ExchangeDesignItemResponse {
+}
+
+// 龙皮肤打造订单 请求
+message ProduceDragonSkinOrderRequest {
+	// 订单品质
+	optional int32 quality = 1;
+	// 打造出皮肤模板id
+	optional string resultSkinId = 2;
+}
+
+// 龙皮肤打造订单 响应
+message ProduceDragonSkinOrderResponse {
+	// 额外奖励
+	repeated ItemMsg extraRewards = 1;
+}
+
+// 龙皮肤打造加速 请求
+message DragonSkinOrderAccelerateRequest {
+	optional int32 quality = 1;
+	// 消耗item
+	required ItemMsg consume = 2;
+}
+
+// 龙皮肤打造加速 响应
+message DragonSkinOrderAccelerateResponse {
+	
+}
+
+// 龙皮肤打造订单完成 请求
+message ProduceDragonSkinOrderRewardRequest {
+	// 订单品质
+	optional int32 quality = 1;
+}
+
+// 龙皮肤打造订单完成 响应
+message ProduceDragonSkinOrderRewardResponse {
+	// 获得的皮肤
+	optional DragonSkinMsg newSkin = 1;
+	// 进度奖励
+	repeated ItemMsg items = 2;
+	// 累计奖励打造订单次数(进度cd内记次)
+    optional int32 cumulativeOrderCnt = 3;
+}
+
+// 龙皮肤打造进度开始 请求
+message OrderProgressStartRequest {
+	// 开始时间
+	required int64 startTime = 1;
+}
+
+// 龙皮肤打造进度开始 响应
+message OrderProgressStartResponse {
+}
+
+// 龙皮肤打造订单开始 请求
+message ProduceDragonSkinOrderStartRequest {
+	// 订单品质
+	optional int32 quality = 1;
+	// 消耗的皮肤
+	repeated int64 consumeSkinIds = 2;
+	//是否使用了回流活动福利卡
+	optional bool useWelfare = 3;
+	// 看广告免费打造
+	optional bool ads = 4;
+}
+
+// 龙皮肤打造订单开始 响应
+message ProduceDragonSkinOrderStartResponse {
+}

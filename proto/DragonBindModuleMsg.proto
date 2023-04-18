@@ -1,0 +1,45 @@
+syntax = "proto2";
+package com.common.msg;
+
+import "ItemModuleMsg.proto";
+
+enum DragonBindModuleMsgSubCommand {
+	// 龙收集信息
+	DRAGONBINDMODULEMSG_SUB_DRAGONBINDINFO = 29601;
+	// 龙搜集奖励属性激活
+	DRAGONBINDMODULEMSG_SUB_DRAGONBINDACTIVATE = 29602;
+}
+
+message DragonBindActivateMsg {
+ 	// 奖励属性配置id
+ 	optional string bindId = 1;
+ 	// 等级
+ 	optional int32 level = 2;
+}
+
+// 龙收集信息请求
+message DragonBindInfoRequest {
+}
+
+// 龙收集信息响应
+message DragonBindInfoResponse {
+	repeated DragonBindActivateMsg binds = 1;
+}
+
+message DragonBindMsg {
+	// 奖励属性配置id
+  	optional string bindId = 1;
+  	// 等级
+  	optional int32 level = 2;
+}
+
+// 龙搜集奖励属性激活请求
+message DragonBindActivateRequest {
+	repeated DragonBindMsg dragonBindMsgs = 1;
+}
+
+// 龙搜集奖励属性激活响应
+message DragonBindActivateResponse {
+	// 激活后龙之力变化的龙同步
+	repeated MagicalCreatureMsg creatures = 1;
+}

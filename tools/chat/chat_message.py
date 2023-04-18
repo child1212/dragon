@@ -16,7 +16,7 @@ account = "tan111"
 cid = "1_3hapgn"
 message = "this is a test message!"
 server = "38"
-version = "18.1.0"
+version = "31.1.0"
 
 
 

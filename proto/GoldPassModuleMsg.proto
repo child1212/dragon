@@ -1,0 +1,113 @@
+syntax = "proto2";
+package com.common.msg;
+
+import "ActivityModuleMsg.proto";
+import "TaskModuleMsg.proto";
+import "ItemModuleMsg.proto";
+
+enum GoldPassModuleMsgSubCommand {
+	// 黄金通信证信息
+	GOLDPASSMODULEMSG_SUB_GOLDPASSINFO = 25901;
+	// 完成黄金通行证任务
+	GOLDPASSMODULEMSG_SUB_GOLDPASSFINISHTASK = 25902;
+	// 购买黄金通行证等级
+	GOLDPASSMODULEMSG_SUB_GOLDPASSBUYLEVEL = 25903;
+	// 领取黄金通行证奖励
+	GOLDPASSMODULEMSG_SUB_GOLDPASSREWARD = 25904;
+	// 满级宝箱兑换
+	GOLDPASSMODULEMSG_SUB_GOLDPASSMAXLEVELBOX = 25905;
+	// 跳过任务
+	GOLDPASSMODULEMSG_SUB_GOLDPASSSKIPTASK = 25906;
+}
+
+// 黄金通信证信息请求
+message GoldPassInfoRequest {
+	optional string activityId = 1;	// 活动ID
+}
+
+// 黄金通行证任务
+message GoldPassTaskMsg {
+	optional int32 status = 1;	// 任务状态 0:未完成 1:已完成（未领取） 2:已领取
+	optional string taskId = 2; // 任务ID GoldPassTaskLibTemplate#id
+	optional string tplId = 3;  // 模板ID GoldPassTaskTemplate#id
+	repeated ProtoTypes params = 4;		// 当前累计计数
+}
+
+// 黄金通信证信息响应
+message GoldPassInfoResponse {
+	optional ActivityMsg activityMsg = 1;		// 活动信息
+	optional int64 dailyTaskRefreshTime = 2;	// 每日任务刷新时间
+	optional int64 weeklyTaskRefreshTime = 3;	// 每周任务刷新时间
+	optional int32 exp = 4;						// 经验
+	optional int32 level = 5;					// 等级
+	optional bool unlockPass = 6;				// 是否解锁通行证
+	repeated GoldPassTaskMsg dailyTasks = 7;	// 每日任务
+	repeated GoldPassTaskMsg weeklyTasks = 8;	// 每周任务
+	repeated int32 baseRewards = 9;				// 已领取level（基础奖励）
+	repeated int32 passRewards = 10;			// 已领取level（通行证奖励) 
+	optional int32 exchangeGold = 11;			// 满级兑换的金币 
+	optional int64 unlockTime = 12;			// 解锁黄金通行证的时间戳(毫秒) 如没有解锁此值无效
+	optional int32 taskNum= 13;			// 通行证多倍积分已提交任务数量
+}
+
+// 黄金通行证任务完成结果
+message GoldPassFinishTaskRetMsg {
+	optional string taskId = 1;		// 任务ID
+	optional int32 ret = 2;			// 完成结果0成功
+}
+
+// 完成黄金通行证任务请求
+message GoldPassFinishTaskRequest {
+	optional string activityId = 1;	// 活动ID
+	repeated string taskIds = 2;	// 任务ID
+}
+
+// 完成黄金通行证任务响应
+message GoldPassFinishTaskResponse {
+	repeated GoldPassFinishTaskRetMsg rets = 1;	// 完成结果
+	optional int32 exchangeGold = 2;			// 满级兑换的金币 
+}
+
+// 购买黄金通行证等级请求
+message GoldPassBuyLevelRequest {
+	optional string activityId = 1;	// 活动ID
+	optional int32 level = 2;		// 等级
+}
+
+// 购买黄金通行证等级响应
+message GoldPassBuyLevelResponse {
+
+}
+
+// 领取黄金通行证奖励请求
+message GoldPassRewardRequest {
+	optional string activityId = 1;	// 活动ID
+	optional int32 type = 2;		// 奖励类型 1:基础奖励 2:通行证奖励
+	optional int32 level = 3;		// 奖励等级
+}
+
+// 领取黄金通行证奖励响应
+message GoldPassRewardResponse {
+
+}
+
+// 满级宝箱兑换请求
+message GoldPassMaxLevelBoxRequest {
+	
+}
+
+// 满级宝箱兑换响应
+message GoldPassMaxLevelBoxResponse {
+	// 兑换的奖励
+	repeated ItemMsg rewards = 1;
+}
+
+// 跳过任务请求
+message GoldPassSkipTaskRequest {
+	optional string activityId = 1;	// 活动ID
+}
+
+// 跳过任务响应
+message GoldPassSkipTaskResponse {
+	optional GoldPassInfoResponse info = 1;
+}

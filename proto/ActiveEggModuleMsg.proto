@@ -1,0 +1,100 @@
+syntax = "proto2";
+package com.common.msg;
+import "ItemModuleMsg.proto";
+
+enum ActiveEggModuleMsgSubCommand {
+	// 活跃彩蛋信息
+	ACTIVEEGGMODULEMSG_SUB_ACTIVEEGGINFO = 26201;
+	// 活跃彩蛋钻石加速冷却
+	ACTIVEEGGMODULEMSG_SUB_ACTIVEEGGDIAMONDCD = 26202;
+	// 开启活跃彩蛋
+	ACTIVEEGGMODULEMSG_SUB_ACTIVEEGGOPEN = 26203;
+	// 更多彩蛋
+	ACTIVEEGGMODULEMSG_SUB_ACTIVEEGGSYSTEMINFO = 26204;
+	// 领取系统奖励彩蛋
+	ACTIVEEGGMODULEMSG_SUB_ACTIVEEGGSYSTEMRECEIVE = 26205;
+	// 开启系统奖励彩蛋
+	ACTIVEEGGMODULEMSG_SUB_ACTIVEEGGSYSTEMOPEN = 26206;
+}
+
+// 活跃彩蛋信息请求
+message ActiveEggInfoRequest {
+
+}
+
+// 活跃彩蛋
+message ActiveEggMsg {
+	optional int32 eggId = 1;	// 彩蛋唯一ID
+	optional int32 type = 2; 	// 彩蛋类型
+	optional int32 status = 3;  // 状态 0:开启 1:兑换 2:冷却 3:等待
+	optional int32 cur = 4; 	// 当前活跃值
+	optional int32 max = 5; 	// 需要活跃值
+	optional int64 cd = 6;		// 剩余冷却时间ms
+}
+
+// 活跃彩蛋信息响应
+message ActiveEggInfoResponse {
+	repeated ActiveEggMsg eggs = 1;			// 活跃彩蛋
+	optional int32 cumulativeEnergy = 2;	// 累计消耗体力
+}
+
+// 活跃彩蛋钻石加速冷却请求
+message ActiveEggDiamondCDRequest {
+	optional int32 eggId = 1;	// 彩蛋唯一ID
+	optional int32 diamond = 2;	// 钻石
+}
+
+// 活跃彩蛋钻石加速冷却响应
+message ActiveEggDiamondCDResponse {
+	optional int32 retCode = 1;		// 0: 成功 其它错误码报错并用下面的列表同步
+	repeated ActiveEggMsg eggs = 2;	// 活跃彩蛋
+	optional int32 cost = 3;		// 扣除钻石数量
+}
+
+// 开启活跃彩蛋请求
+message ActiveEggOpenRequest {
+	repeated int32 eggIds = 1;	// 彩蛋唯一ID
+}
+
+// 开启活跃彩蛋响应
+message ActiveEggOpenResponse {
+	repeated ItemMsg rewards = 1;	// 奖励
+	repeated ActiveEggMsg eggs = 2;	// 活跃彩蛋
+}
+
+// 更多彩蛋请求
+message ActiveEggSystemInfoRequest {
+	
+}
+
+// 更多彩蛋响应
+message ActiveEggSystemInfoResponse {
+	repeated ActiveEggMsg systemEggs = 1;	// 未领取的系统奖励蛋
+	repeated string receivedSystems = 2;	// 领取过的奖励彩蛋系统
+}
+
+// 领取系统奖励彩蛋请求
+message ActiveEggSystemReceiveRequest {
+	optional string systemId = 1;	// 系统ID
+}
+
+// 领取系统奖励彩蛋响应
+message ActiveEggSystemReceiveResponse {
+	repeated ActiveEggMsg systemEggs = 1;	// 未领取的系统奖励蛋
+}
+
+// 开启系统奖励彩蛋请求
+message ActiveEggSystemOpenRequest {
+	repeated int32 eggIds = 1;	// 彩蛋唯一ID
+}
+
+// 彩蛋奖励
+message EggReward {
+	optional int32 eggId = 1;		// 彩蛋唯一ID
+	repeated ItemMsg rewards = 2;	// 奖励
+}
+
+// 开启系统奖励彩蛋响应
+message ActiveEggSystemOpenResponse {
+	repeated EggReward eggRewards = 1;	// 奖励
+}

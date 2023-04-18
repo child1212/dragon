@@ -1,0 +1,161 @@
+syntax = "proto2";
+package com.common.msg;
+
+import "ItemModuleMsg.proto";
+
+enum DragonMazeModuleMsgSubCommand {
+	//请求龙迷宫活动信息
+	DRAGONMAZEMODULEMSG_SUB_DRAGONMAZEINFO = 26801;
+	//请求开启或进入龙迷宫
+	DRAGONMAZEMODULEMSG_SUB_OPENORENTERMAZE = 26802;
+	//请求结束龙迷宫
+	DRAGONMAZEMODULEMSG_SUB_DRAGONMAZEEND = 26803;
+	//请求商店信息
+	DRAGONMAZEMODULEMSG_SUB_DRAGONMAZESHOPINFO = 26804;
+	//请求购买商店商品
+	DRAGONMAZEMODULEMSG_SUB_BUYMAZESHOPPRODUCT = 26805;
+	//V23后请求龙迷宫活动信息
+	DRAGONMAZEMODULEMSG_SUB_DRAGONMAZEINFOV23 = 26806;
+	//v23快速通过龙迷宫请求(扫荡)
+	DRAGONMAZEMODULEMSG_SUB_QUICKPASSDRAGONMAZE = 26807;
+	//v23请求结束快速通过龙迷宫CD(结束扫荡CD)
+	DRAGONMAZEMODULEMSG_SUB_FINISHQUICKPASSCD = 26808;
+}
+
+//V23请求龙迷宫活动信息
+message DragonMazeInfoV23Request{
+}
+
+message MazeInfo{
+	//迷宫子类型(目前有4个子类型)
+	optional int32 type = 1;
+	//已完成层数
+	optional int32 finishLevel = 2;
+	//当前层结束时间
+	optional int64 endTime = 3;
+	//之前成功进入的层数
+	optional int32 lastEnterLevel = 4;
+	//快速通关CD结束时间戳
+	optional int64 quickPassEndTime = 5;
+}
+
+//V23请求龙迷宫活动信息返回
+message DragonMazeInfoV23Response{
+	//迷宫信息集合
+	repeated MazeInfo mazeInfos = 1;
+}
+
+//V23快速通过龙迷宫请求(扫荡)
+message QuickPassDragonMazeRequest{
+	//迷宫子类型
+	optional int32 type = 1;
+	//进入层数
+	optional int32 level = 2;
+	//进入迷宫携带的龙
+	repeated int64 creatures = 3;
+}
+
+//V23快速通过龙迷宫请求(扫荡)返回
+message QuickPassDragonMazeResponse{
+	//扣除完龙力后龙的信息
+	repeated MagicalCreatureMsg creatures = 1;
+	//奖励的道具
+	repeated ItemMsg items = 2;
+	//快速通过结束时间戳
+	optional int64 cdEndTime = 3;
+}
+
+//v23请求结束快速通过龙迷宫CD(结束扫荡CD)
+message FinishQuickPassCDRequest{
+	//迷宫子类型
+	optional int32 type = 1;
+	//消耗道具数量(用来做校验,在客户端消耗数量少于服务器数量时报错)
+	optional int32 cost = 2;
+	//看广告减少CD时间
+	optional bool ads = 3;
+}
+
+//v23请求结束快速通过龙迷宫CD(结束扫荡CD)返回
+message FinishQuickPassCDResponse {
+	//返回服务器消耗数量
+	optional int32 cost = 1;
+}
+
+
+//请求龙迷宫活动信息
+message DragonMazeInfoRequest {
+}
+
+
+//请求龙迷宫活动信息返回
+message DragonMazeInfoResponse {
+	//当前剩余次数
+	required int32 count  = 1;
+	//已完成层数
+	required int32 finishLevel = 2;
+	//当前层结束时间
+	required int64 endTime = 3;
+	//已使用钻石购买次数
+	required int32 buyCount = 4;
+	//之前成功进入的层数(在未到达结束时间时，重复进入此层，到达时间后客户端重新判断要进入的层，
+	//此值主要是因为版本更新可能会新增层数,玩家之前可能完成了最高层，一直重复的在玩最高层)
+	required int32 lastEnterLevel = 5;
+}
+
+//请求开启或进入龙迷宫
+message OpenOrEnterMazeRequest {
+	//进入使用钻石购买消耗钻石数(重复进入无需发送)
+	optional int32 diamonds = 1;
+	//开启迷宫时携带的龙(重复进入不用发送)
+	repeated int64 creatures = 2;
+	//进入层数(目前仅做校验使用) 新版本level根据子类型level走
+	required int32 level = 3;
+	//迷宫子类型
+	optional int32 type = 4;
+}
+
+//请求开启或进入龙迷宫返回
+message OpenOrEnterMazeResponse {
+	//副本结束时间
+	required int64 endTime = 1;
+}
+
+//请求结束龙迷宫(主动手动结束)
+message DragonMazeEndRequest {
+	//迷宫子类型
+	optional int32 type = 1;
+}
+
+//请求结束龙迷宫返回
+message DragonMazeEndResponse {
+}
+
+//请求商店信息
+message DragonMazeShopInfoRequest {
+}
+
+message MazeShopProduct{
+	//DragonMazeShop配置id
+	required string id = 1;
+	//已购买次数(和配置的库存直接进行大小比较来确定是否还可以购买)
+	required int32 count = 2;
+	//随机的商品索引值(从0开始)
+	required int32 pIndex = 3;
+}
+
+//请求商店信息返回
+message DragonMazeShopInfoResponse {
+	repeated MazeShopProduct products = 1;
+}
+
+//请求购买商店商品
+message BuyMazeShopProductRequest {
+	//DragonMazeShop配置id
+	required string id = 1;
+	//购买库存次数 以前是默认一次 现在是玩家自选
+	optional int32 count = 2;
+}
+
+//请求购买商店商品返回
+message BuyMazeShopProductResponse {
+}
