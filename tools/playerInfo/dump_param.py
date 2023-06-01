@@ -10,8 +10,8 @@ from func_dragon import *
 from xieyi import *
 
 
-server = "ntest"
-accounts = {"robot0"}
+server = "nqa"
+accounts = {"xin001"}
 player = ''
 
 
@@ -47,7 +47,11 @@ for account in accounts:
     properties = json.loads(info_dic["P{player}@{{{player}}}-Properties".format(player=player)])
     # t = properties.get("lastRechargeTime")
     # t = time.localtime(t//1000)
-    # t = time.strftime("%Y-%m-%d / %H:%M:%S")
-    for line in properties:
-        print(line,properties[line])
+    # t = time.strftime("%Y-%m-%d / %H:%M:%S",t)
+    # print(t)
+    # for line in properties:
+
+    #     print(line,properties[line])
+    print("level:",properties.get("level"))
+    print("exp  :",properties.get("exp"))
     

@@ -1,0 +1,7 @@
+PartnerTalk1_103_1:{br},
+PartnerTalk1_103_3:{br},
+PartnerTalk2_105_4:{br},
+PartnerTalk4_107_1:{br},
+PartnerTalk4_106_3:{br},
+PartnerTalk5_111_5:{br},
+PartnerTalk6_106_1:{br},

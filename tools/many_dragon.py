@@ -12,13 +12,14 @@ import pandas as pd
 
 
 print("start time:",time.asctime(time.localtime()))
-account = "mm1000"
+account = "mm0000"
 level = ""
 attribute = ""
 typ = 0
 num = 1
 server = 'ntest'
 project = "NFA"#DFA/NFA
+group = 50
 
 
 
@@ -53,9 +54,11 @@ if project == "DFA":
     player = info['playerid']
     session = info['sessionid']
     data = table.values
+    x = 0
     for line in range(3,len(data)):
-        if "{level}".format(level=level) in data[line,3] and "icon_dragon_attribute{p}".format(p=attribute) in data[line,10]:
+        if "{level}".format(level=level) in data[line,3] and "icon_dragon_attribute{p}".format(p=attribute) in data[line,10] and x <= group:
             result = send_gift(data[line,0], num, player,session, account, log_res,server)
+            x += 1
             print(data[line,0],data[line,3], num,result)
 running = 0
 if project == "NFA":
@@ -66,12 +69,15 @@ if project == "NFA":
     player = info['playerid']
     session = info['sessionid']
     data = table.values
+    x = 0
     for line in range(3,len(data)):
-        if data[line,0]-data[line,3]*1000 == 1:
+        # if data[line,0]-data[line,3]*1000 == 1:
+        if data[line,0]-data[line,3]*1000 == 1 and x < group and data[line,3] > 0:
             if "{level}".format(level=level) in data[line,2]:
                 if attribute == '' or data[line,10][1] == attribute:
                     if typ == 0 or data[line,3] == typ:
                         result = send_gift(data[line,0], num, player,session, account, log_res,server)
+                        x += 1
                         print(data[line,0],data[line,2], num,result)
 
 

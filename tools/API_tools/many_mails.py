@@ -77,7 +77,7 @@ def many_mails(mail_title, mail_content, reward, server, pid_file_path, res_file
 #########################################
 mail_title = "Activity map compensation"
 mail_content = "Dear player, this is the compensation for your reward, please check it"
-reward = [[20008,1]]
+reward = [[113001,1]]
 server = "ntest"
 group_num = 10
 pid_file_path = "pid_list.txt"
@@ -89,19 +89,21 @@ if server == "ntest":
     server = "https://nfa-test.bettagames.com"
 elif server == "nqa":
     server = "https://qa-nfa.hphorse.net"
-elif server == "nrelease":
-    server = "https://online-nfa.hphorse.net"
+# elif server == "nrelease":
+#     server = "https://online-nfa.hphorse.net"
 elif server == "38":
     server = "http://dtest.gameyici.com"
 elif server == "qa":
     server = "https://dqa.hphorse.net"
-elif server == "dragon":
-    server = "https://dragon.hphorse.net"
+# elif server == "dragon":
+    # server = "https://dragon.hphorse.net"
 elif server == "act":
     server = "http://dact.gameyici.com"
     
-rewards = [[[101001, 1]], [[102001, 1]], [[103001, 1]], [[104001, 1]], [[105001, 1]], [[106001, 1]], [[107001, 1]], [[108001, 1]], [[109001, 1]], [[110001, 1]], [[111001, 1]], [[112001, 1]], [[201001, 1]], [[202001, 1]], [[203001, 1]], [[204001, 1]], [[205001, 1]], [[206001, 1]], [[207001, 1]], [[301001, 1]], [[302001, 1]], [[303001, 1]], [[304001, 1]], [[401001, 1]], [[402001, 1]], [[403001, 1]], [[404001, 1]], [[405001, 1]], [[406001, 1]], [[407001, 1]], [[408001, 1]]]
-for reward in rewards:
+x = [101001,102001,103001,104001,105001,106001,107001,108001,109001,110001,111001,112001,113001,114001,115001,116001,117001,201001,202001,203001,204001,205001,206001,207001,208001,301001,302001,303001,304001,305001,306001,401001,402001,403001,404001,405001,406001,407001,408001,409001,410001]
+for i in x:
+    reward = [[i,1]]   
+
     many_mails(mail_title, mail_content, reward, server, pid_file_path, res_file_path, group_num)
 
 

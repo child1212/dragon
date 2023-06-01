@@ -5,7 +5,7 @@ import json
 gia = open("D:\\pyprogram\\PyTestTools\\dragon\\tools\\text\\data\\gia.txt","r",encoding="utf-8")
 giar = open("D:\\pyprogram\\PyTestTools\\dragon\\tools\\text\\data\\gia_out.txt","w",encoding="utf-8")
 
-custom = {"parents","itemId","itemCount"}
+custom = {"remain","change","itemId","itemCount"}
 
 for c in custom:
     giar.write(c+";")

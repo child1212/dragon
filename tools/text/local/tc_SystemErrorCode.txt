@@ -312,3 +312,4 @@ errorcode_28509
 errorcode_28510
 errorcode_28511
 errorcode_28512
+errorcode_13012

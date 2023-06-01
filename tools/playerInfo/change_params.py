@@ -11,28 +11,27 @@ from xieyi import *
 param = {}
 
 ###############################################
-server = "38"
-accounts = {"3202"}
-player = ''
+server = "ntest"
+accounts = {"mm0698"}
 
 # #等级
-# param["level"] = 16
+# param["level"] = 15
 # # #昵称
-# param["nickName"] = "gold"      
-
+# param["nickName"] = "gold"
 # #时间差
-from_current_time = True
-d,h,m = 0,10,0
-param["timeOffset"] = (((d*24)+h)*60+m)*60*1000   
-template_time = param["timeOffset"]
+
+# from_current_time = True
+# d,h,m = 0,1,0
+# param["timeOffset"] = (((d*24)+h)*60+m)*60*1000
+# template_time = param["timeOffset"]
 
 # #经验
-# param["exp"] = 200             
+# param["exp"] = 200
 
 # #最后一次付费时间
-# param["lastRechargeTime"] = (time.time()-60*24*3600)*1000    
+# param["lastRechargeTime"] = (time.time()-60*24*3600)*1000
 
-# #支付金额
+#支付金额
 # param["totalPayAmount"] = 1000000      
 
 # #皮肤 ["27351","27352","27350","27353"]

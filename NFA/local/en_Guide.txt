@@ -186,3 +186,16 @@ Partner_order_1
 Partner_order_2
 Partner_order_3
 Partner_order_4
+guide_Partner_story_1
+guide_Partner_story_2
+guide_Partner_story_3
+jewelry_shop_guide1
+jewelry_shop_guide2
+partner_episode_guide1
+partner_episode_guide2
+partner_episode_guide3
+partner_episode_guide4
+Architectural_skin_guide1
+Architectural_skin_guide3
+Architectural_skin_guide4
+Architectural_skin_guide2

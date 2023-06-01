@@ -11,9 +11,9 @@ import pandas
 import os
 
 print("start time:",time.asctime(time.localtime()))
-account = "yy0002"
+account = "mm0000"
 server = "ntest"                           
-item_type = {4}
+item_type = {2}
 '''
 2:女主皮肤
 4:帽子
@@ -46,7 +46,7 @@ player = info['playerid']
 session = info['sessionid']
 
 for line in skins:
-    if line[4] == 4:
+    if line[4] in item_type:
         result = send_gift(line[0], 1, player,session, account, log_res,server)
         print(line[0],line[1], result)
 

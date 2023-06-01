@@ -46,7 +46,7 @@ def change_globalProgress(info,playerid,login_res,host,params):
 
 ###############################################
 server = "qa"
-accounts = {"li2000"}
+accounts = {"3298"}
 player = ''
 
 tasks = [[2002,25],[2003,25],[2004,25],[2001,40]]
