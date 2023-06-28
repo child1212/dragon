@@ -9,7 +9,7 @@ from func_dragon import *
 
 #######################################################################################
 #dragon : d6e0c013d2c377bbeb3f56a262cf3b99\603681214128417
-#FA : d5c99e6af7b7d828dacf9a804d621503\91a4a00cc23bdae216d5dc2519da2c77\623293505cf755ed47851789c0bb1c48\
+#FA : d5c99e6af7b7d828dacf9a804d621503\511821434459738\91a4a00cc23bdae216d5dc2519da2c77\623293505cf755ed47851789c0bb1c48\
 accounts = {input("account:")}                           #账号                                 #
 server = input('server:')                                    #服务器前缀<dev:"tlogin", qa:"qausa">  #
 printAll = False
