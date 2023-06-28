@@ -12,11 +12,11 @@ import pandas as pd
 
 
 print("start time:",time.asctime(time.localtime()))
-account = "mm0000"
+account = "fa0700"
 level = ""
 attribute = ""
-typ = 0
-num = 1
+typ = [301,303,310,409,309]#nfa专属
+num = 10
 server = 'ntest'
 project = "NFA"#DFA/NFA
 group = 50
@@ -75,7 +75,7 @@ if project == "NFA":
         if data[line,0]-data[line,3]*1000 == 1 and x < group and data[line,3] > 0:
             if "{level}".format(level=level) in data[line,2]:
                 if attribute == '' or data[line,10][1] == attribute:
-                    if typ == 0 or data[line,3] == typ:
+                    if typ == [] or data[line,3] in typ:
                         result = send_gift(data[line,0], num, player,session, account, log_res,server)
                         x += 1
                         print(data[line,0],data[line,2], num,result)
@@ -96,7 +96,7 @@ if project == "NFA":
 # send_gift(2008, 1000, player,session, account, log_res,server)
 # send_gift(7005, 1000, player,session, account, log_res,server)
 # # send_gift(27500, 1, player,session, account, log_res,server)
-# send_gift(1001, 10000, player,session, account, log_res,server)
+send_gift(1002, 10000000, player,session, account, log_res,server)
 print("playerid:-{player}\nMission Completed!".format(player=player))
 
 

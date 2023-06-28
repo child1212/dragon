@@ -4,8 +4,9 @@ guide_10003
 guide_10004
 guide_10005
 guide_10006
-guide_11001
 guide_11002_Deprecated
+guide_10105
+guide_10106
 guide_10101
 guide_10102
 guide_10103
@@ -69,6 +70,12 @@ guide_27001
 guide_27002
 guide_27003
 guide_27004
+guide_27101
+guide_27102
+guide_27103
+guide_27104
+guide_27105
+guide_27106
 guide_28001
 guide_28002
 guide_28003
@@ -199,3 +206,4 @@ Architectural_skin_guide1
 Architectural_skin_guide3
 Architectural_skin_guide4
 Architectural_skin_guide2
+commission_unlock_guide

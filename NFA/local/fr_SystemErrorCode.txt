@@ -112,7 +112,6 @@ purchase.success.text
 purchase.fail.text
 errorcode_18004
 errorcode_18005
-errorcode_18005
 errorcode_1011
 errorcode_14016
 errorcode_14017

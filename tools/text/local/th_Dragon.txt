@@ -598,3 +598,11 @@ dragon_desc_145301
 dragon_desc_145302
 dragon_desc_145303
 dragon_desc_145304
+dragon_name_145401
+dragon_name_145402
+dragon_name_145403
+dragon_name_145404
+dragon_desc_145401
+dragon_desc_145402
+dragon_desc_145403
+dragon_desc_145404

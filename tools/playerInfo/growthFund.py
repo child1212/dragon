@@ -14,9 +14,9 @@ param = {}
 
 #################################################
 server = "38"
-accounts = {"li2022"}
+accounts = {"li2023"}
 # 等级
-param["growthFund"] = '{"@class":"com.game.mongo.model.PlayerGrowthFund","shopId":null,"rewardIds":["java.util.ArrayList",[]],"shopIds":["java.util.ArrayList",["2005","25"]]}'
+# param["growthFund"] = '{"@class":"com.game.mongo.model.PlayerGrowthFund","shopId":null,"rewardIds":["java.util.ArrayList",[]],"shopIds":["java.util.ArrayList",[]]}'
 # # 等级
 # param["level"] = 30
 # 昵称
@@ -79,9 +79,9 @@ for account in accounts:
         p[key] = param[key]
 
 
-    change_Param(prop,log_res,server,p)
+    # change_Param(prop,log_res,server,p)
+    print(p)
 
 
-    
 
 # %%

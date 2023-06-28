@@ -12,8 +12,8 @@ import os
 
 print("start time:",time.asctime(time.localtime()))
 account = "mm0000"
-server = "ntest"                           
-item_type = {2}
+server = "nqa"                           
+item_type = {4}
 '''
 2:女主皮肤
 4:帽子

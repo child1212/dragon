@@ -9,7 +9,7 @@ from func_dragon import *
 from xieyi import *
 
 
-class player_data():
+class player_data:
     def __init__(self,playerInfo) -> None:
         self.msg = playerInfo.get("msg")
         self.code = playerInfo.get("code")
@@ -19,25 +19,55 @@ class player_data():
         for i in self.page.get("list"):
             self.allData[i["key"]] = i["value"]
 
-class ActiveEgg():
+class ActiveEgg:
     def __init__(self,player_data) -> None:
         self.key = 'P{playerid}@{{{playerid}}}-ActiveEgg'.format(playerid=player_data.playerid)
         self.value = player_data.allData.get(self.key)
         self.data = json.loads(self.value)
 
-class Properties():
+class Properties:
     def __init__(self,player_data) -> None:
         self.key = 'P{playerid}@{{{playerid}}}-Properties'.format(playerid=player_data.playerid)
         self.value = player_data.allData.get(self.key)
         self.data = json.loads(self.value)
 
-class GrowthFund():
+class GrowthFund:
     def __init__(self,player_data) -> None:
         self.key = 'P{playerid}@{{{playerid}}}-GrowthFund'.format(playerid=player_data.playerid)
         self.value = player_data.allData.get(self.key)
         self.data = json.loads(self.value)
 
+class Mail:
+    def __init__(self,player_data) -> None:
+        self.key = 'P{playerid}@{{{playerid}}}-Mail'.format(playerid=player_data.playerid)
+        self.value = player_data.allData.get(self.key)
+        self.data = json.loads(self.value)
 
+class Activity:
+    def __init__(self,player_data) -> None:
+        self.key = 'P{playerid}@{{{playerid}}}-Activity'.format(playerid=player_data.playerid)
+        self.value = player_data.allData.get(self.key)
+        self.data = json.loads(self.value)
+
+class Ads:
+    def __init__(self,player_data) -> None:
+        self.key = 'P{playerid}@{{{playerid}}}-Ads'.format(playerid=player_data.playerid)
+        self.value = player_data.allData.get(self.key)
+        self.data = json.loads(self.value)
+
+class OrderTask:
+    def __init__(self,player_data) -> None:
+        self.key = 'P{playerid}@{{{playerid}}}-OrderTask'.format(playerid=player_data.playerid)
+        self.value = player_data.allData.get(self.key)
+        self.data = json.loads(self.value)
+
+class MagicalCreature:
+    def __init__(self,player_data) -> None:
+        self.key = 'P{playerid}@{{{playerid}}}-MagicalCreature'.format(playerid=player_data.playerid)
+        self.value = player_data.allData.get(self.key)
+        self.data = json.loads(self.value)
+
+        
 #%%
 def change_Param(classname,login_res,host,params):
     '''

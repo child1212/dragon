@@ -9,9 +9,9 @@ from func_dragon import *
 
 #######################################################################################
 #dragon : d6e0c013d2c377bbeb3f56a262cf3b99\603681214128417
-#FA : 91a4a00cc23bdae216d5dc2519da2c77\623293505cf755ed47851789c0bb1c48
-accounts = {"li2022"}                            #账号                                 #
-server = "38"                                    #服务器前缀<dev:"tlogin", qa:"qausa">  #
+#FA : d5c99e6af7b7d828dacf9a804d621503\91a4a00cc23bdae216d5dc2519da2c77\623293505cf755ed47851789c0bb1c48\
+accounts = {input("account:")}                           #账号                                 #
+server = input('server:')                                    #服务器前缀<dev:"tlogin", qa:"qausa">  #
 printAll = False
 #######################################################################################
 
@@ -31,12 +31,14 @@ elif server == "dragon":
 elif server == "act":
     server = "http://dact.gameyici.com"
 
-total = {}#
+total = {}
+for account in accounts:
+    total[account] = {}
 run = ''
 no = 501
 while run == '':
     for account in accounts:
-        print(account+":","\n=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=")
+        print(account+":","\n=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=")
 
 
         log_res = login_gm(server)                      #登录GM平台
@@ -49,30 +51,68 @@ while run == '':
         lis_dic = json.loads(lis)
         tacc = {}#
 
+        # for tp in lis_dic:
+        #     tacc[new_name] = tp.get("num")#新的
+        #     old_tacc = total.get(account)
+        #     # 有旧的
+        #     if old_tacc is not None:
+        #         #新旧一样
+        #         if tacc.get(new_name) == old_tacc.get(new_name):
+        #             if printAll and tp.get("num") != 0:
+        #                 print('='*(32-len(tp.get("name"))*2-len((str(tp.get("id"))))),new_name,":",tp.get("num"))
+        #             else:
+        #                 pass
+        #         #新旧不一
+        #         else:
+        #             print('='*(32-len(tp.get("name"))*2-len((str(tp.get("id"))))),new_name,":",tp.get("num"),"-"*(10-len(str(tp.get("num")))),"change:",tacc[new_name]-old_tacc.get(new_name))
+        #     # 没有旧的
+        #     else:
+        #         if tp.get("num") != 0:
+        #             print('='*(32-len(tp.get("name"))*2-len((str(tp.get("id"))))),new_name,":",tp.get("num"))
+        # total[account] = tacc
         for tp in lis_dic:
-            tacc[(str(tp["id"]))+"-"+tp["name"]] = tp["num"]#新的
+            new_name = (str(tp.get("id")))+"-"+tp.get("name")
+            tacc[new_name] = tp.get("num")#新的
             old_tacc = total.get(account)
-            # 有旧的
-            if old_tacc is not None:
-                #新旧不一
-                if tacc.get((str(tp["id"]))+"-"+tp["name"]) != old_tacc.get((str(tp["id"]))+"-"+tp["name"]):
-                    print('='*(32-len(tp["name"])*2-len((str(tp["id"])))),(str(tp["id"]))+"-"+tp["name"],":",tp["num"],"-"*(10-len(str(tp["num"]))),"change:",tacc[(str(tp["id"]))+"-"+tp["name"]]-old_tacc.get((str(tp["id"]))+"-"+tp["name"]))
+            old_tacc_keys = set(old_tacc.keys())
+            tacc_keys = set(tacc.keys())
+            # 未升版本&有旧的
+            if old_tacc_keys == tacc_keys:
                 #新旧一样
-                else:
-                    if printAll and tp["num"] != 0:
-                        print('='*(32-len(tp["name"])*2-len((str(tp["id"])))),(str(tp["id"]))+"-"+tp["name"],":",tp["num"])
+                if tacc.get(new_name) == old_tacc.get(new_name):
+                    if printAll and tp.get("num") != 0:
+                        print('='*(32-len(tp.get("name"))*2-len((str(tp.get("id"))))),new_name,":",tp.get("num"))
                     else:
                         pass
+                #新旧不一
+                else:
+                    print('='*(32-len(tp.get("name"))*2-len((str(tp.get("id"))))),new_name,":",tp.get("num"),"-"*(10-len(str(tp.get("num")))),"change:",tacc[new_name]-old_tacc.get(new_name))
             # 没有旧的
+            elif old_tacc_keys == set():
+                if tp.get("num") != 0:
+                    print('='*(32-len(tp.get("name"))*2-len((str(tp.get("id"))))),new_name,":",tp.get("num"))
+            # 升版本了
             else:
-                if tp["num"] != 0:
-                    print('='*(32-len(tp["name"])*2-len((str(tp["id"])))),(str(tp["id"]))+"-"+tp["name"],":",tp["num"])
+                if new_name in (tacc_keys-old_tacc_keys):
+                    print('='*(32-len(tp.get("name"))*2-len((str(tp.get("id"))))),new_name,":",tp.get("num"))
+                else:
+                    if tacc.get(new_name) == old_tacc.get(new_name):
+                        if printAll and tp.get("num") != 0:
+                            print('='*(32-len(tp.get("name"))*2-len((str(tp.get("id"))))),new_name,":",tp.get("num"))
+                        else:
+                            pass
+                    #新旧不一
+                    else:
+                        print('='*(32-len(tp.get("name"))*2-len((str(tp.get("id"))))),new_name,":",tp.get("num"),"-"*(10-len(str(tp.get("num")))),"change:",tacc[new_name]-old_tacc.get(new_name))
+                
+
+
+
         total[account] = tacc
-        
 
 
         # print("\n\n")
-    print("=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=\n")
+    print("=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=\n")
     run = input("contune?")
     # os.system("adb shell input tap 2071 718")
     # os.system("adb shell input tap 1619 914")
@@ -90,6 +130,8 @@ while run == '':
 
 
 # %%
+
+
 
 # %%
 

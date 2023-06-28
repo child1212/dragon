@@ -3,6 +3,7 @@ import time
 import requests
 import json
 import os
+import copy
 pack_pos = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
 import sys
 sys.path.append('{pack_pos}\\function'.format(pack_pos=pack_pos))
@@ -12,23 +13,22 @@ from player_data import *
 param = {}
 
 #################################################
-server = "38"
-accounts = {"li2022"}
-
+server = "ntest"
+accounts = {"fa0700"}
 # 等级
 # param["level"] = 30
+# 经验
+# param["exp"] = 3399
 # 昵称
 # param["nickName"] = "gold"
 # 时间差
 
-# from_current_time = True
-# d,h,m = 20,0,0
-# param["timeOffset"] = (((d*24)+h)*60+m)*60*1000
-# template_time = param["timeOffset"]
+from_current_time = True
+d,h,m = 3,0,0
+param["timeOffset"] = (((d*24)+h)*60+m)*60*1000
+template_time = param["timeOffset"]
 
 
-# 经验
-# param["exp"] = 106799
 
 # 最后一次付费时间
 # param["lastRechargeTime"] = (time.time()-60*24*3600)*1000
@@ -83,3 +83,12 @@ for account in accounts:
     
 
 # %%
+# 单发道具
+item_id = "34000"
+num = -97
+for account in accounts:
+    info = get_playerid(account, log_res,server)    #��ȡplayerId
+    player = info['playerid']
+    session = info['sessionid']
+
+    send_gift(item_id,num, player,session, account, log_res,server)

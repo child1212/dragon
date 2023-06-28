@@ -1,7 +1,6 @@
 
 #%%
 from time import sleep
-from py import code
 import requests
 import json
 
@@ -75,12 +74,19 @@ def many_mails(mail_title, mail_content, reward, server, pid_file_path, res_file
     res_file.close()
 
 #########################################
-mail_title = "Activity map compensation"
-mail_content = "Dear player, this is the compensation for your reward, please check it"
-reward = [[113001,1]]
-server = "ntest"
+#邮件标题
+mail_title = "Server Opening and Pre-registration Rewards"
+#邮件内容
+mail_content = "Dear Adventurers,\n\nThank you for joining us for the grand opening of Fairyscapes Adventure! To celebrate the occasion, we are giving away 50 Free Diamonds every day from June 15th to June 17th. The rewards for each day will be distributed through mail the following day, so don't forget to come back and claim them! We wish you all have a magical experience as you embark on your journey through Fairytale Land!\n\nFairyscapes Adventure Team"
+#邮件奖励[[奖励1,数量][奖励2,数量][...,...]]
+reward = [[1001,50]]
+#服务器地址
+server = "nrelease"
+#每组玩家数量
 group_num = 10
+#玩家列表
 pid_file_path = "pid_list.txt"
+#输出结果
 res_file_path = "result_list.txt"
 
 #########################################
@@ -89,21 +95,17 @@ if server == "ntest":
     server = "https://nfa-test.bettagames.com"
 elif server == "nqa":
     server = "https://qa-nfa.hphorse.net"
-# elif server == "nrelease":
-#     server = "https://online-nfa.hphorse.net"
 elif server == "38":
     server = "http://dtest.gameyici.com"
 elif server == "qa":
     server = "https://dqa.hphorse.net"
-# elif server == "dragon":
-    # server = "https://dragon.hphorse.net"
 elif server == "act":
     server = "http://dact.gameyici.com"
+# elif server == "dragon":
+#     server = "https://dragon.hphorse.net"
+# elif server == "nrelease":
+#     server = "https://online-nfa.hphorse.net"
     
-x = [101001,102001,103001,104001,105001,106001,107001,108001,109001,110001,111001,112001,113001,114001,115001,116001,117001,201001,202001,203001,204001,205001,206001,207001,208001,301001,302001,303001,304001,305001,306001,401001,402001,403001,404001,405001,406001,407001,408001,409001,410001]
-for i in x:
-    reward = [[i,1]]   
-
-    many_mails(mail_title, mail_content, reward, server, pid_file_path, res_file_path, group_num)
+many_mails(mail_title, mail_content, reward, server, pid_file_path, res_file_path, group_num)
 
 
