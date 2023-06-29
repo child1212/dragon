@@ -1,1 +1,1 @@
-FILE_PATH = "E:\\town\\FA\\nfa-config\\excel\\DataFile"
+FILE_PATH = "E:\\FA\\nfa-config\\excel\\DataFile"

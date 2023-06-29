@@ -12,10 +12,10 @@ import pandas as pd
 
 
 print("start time:",time.asctime(time.localtime()))
-account = "fa0700"
+account = "799"
 level = ""
 attribute = ""
-typ = [301,303,310,409,309]#nfa专属
+typ = [101,102,103,104,110,109,107,112,114,105]#nfa专属
 num = 10
 server = 'ntest'
 project = "NFA"#DFA/NFA
@@ -46,7 +46,7 @@ elif server == "act":
     server = "http://dact.gameyici.com"
 
 if project == "DFA":
-    file_path = "E:\\town\\dragon\\dragon-config\\excel\\DataFile"
+    file_path = "E:\\dragon\\dragon-config\\excel\\DataFile"
 
     table = pd.read_excel("{file_path}\\MagicalCreaturesTemplate.xlsx".format(file_path=file_path))
     log_res = login_gm(server)                      #
@@ -62,7 +62,7 @@ if project == "DFA":
             print(data[line,0],data[line,3], num,result)
 running = 0
 if project == "NFA":
-    file_path = "E:\\town\\FA\\nfa-config\\excel\\DataFile"
+    file_path = "E:\\FA\\nfa-config\\excel\\DataFile"
     table = pd.read_excel("{file_path}\\MagicalCreaturesTemplate.xlsx".format(file_path=file_path))
     log_res = login_gm(server)                      #
     info = get_playerid(account, log_res,server)    #
