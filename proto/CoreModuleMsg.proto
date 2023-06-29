@@ -176,6 +176,8 @@ message LoginRequest {
 	optional string invitePid = 16;
 	//绑定页面位置 运营打点需求
 	optional int32 bindpage = 17;
+	//最新打点需求
+	optional string userid_ini = 18;
 }
 
 // 待选择的玩家信息 8.1.0修改
@@ -228,6 +230,8 @@ message LoginResponse {
 	optional int32 fbFirstBind = 16;
 	//积分墙任务标识  0:没有标识  1:有标识
 	optional int32 dotTaskFlag = 17;
+	//用户归因中来源信息（解析不出来 服务器不返回 客户端应该是lua默认值）
+	optional string campaign = 18;
 }
 
 // 新手引导已通过步骤请求

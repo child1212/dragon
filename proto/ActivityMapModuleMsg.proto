@@ -20,6 +20,13 @@ enum ActivityMapModuleMsgSubCommand {
 	//领取bp等级奖励
 	ACTIVITYMAPMODULEMSG_SUB_TAKEBPLEVELAWARD = 26306;
 	//结束邮件请求请参见12002消息
+	
+	//获取地图礼包信息
+	ACTIVITYMAPMODULEMSG_SUB_MAPGIFTINFO = 26307;
+	//请求领取礼包每日奖励
+	ACTIVITYMAPMODULEMSG_SUB_MAPGIFTDAYAWARD = 26308;
+	//请求领取购买所有地图礼包后的大奖(幸运卡)
+	ACTIVITYMAPMODULEMSG_SUB_TAKEMAPGIFTJACKPOT = 26309;
 }
 
 
@@ -118,3 +125,45 @@ message TakeBpLevelAwardRequest {
 
 message TakeBpLevelAwardResponse {
 } 
+
+//获取地图礼包信息(幸运卡礼包)请求
+message MapGiftInfoRequest {
+	optional string actId = 1;//活动id
+}
+
+message MapGiftInfo {
+	//商品id
+	optional string shopId = 1;
+	//礼包奖励时间戳
+	optional int64 awardTimestamp = 2;
+
+}
+
+//获取地图礼包信息(幸运卡礼包)请求返回
+message MapGiftInfoResponse {
+	//返回玩家已购买的礼包
+	repeated MapGiftInfo mapGiftInfos = 1;
+	//是否已经领取了大奖
+	optional bool tokenJackpot = 2;
+}
+
+//请求领取礼包每日奖励
+message MapGiftDayAwardRequest{
+	optional string actId = 1;//活动id
+	optional string shopId = 2;//商品id
+}
+
+//请求领取礼包每日奖励返回
+message MapGiftDayAwardResponse{
+
+}
+
+//请求领取购买所有地图礼包后的大奖(幸运卡)
+message TakeMapGiftJackpotRequest{
+	optional string actId = 1;//活动id
+}
+
+//请求领取购买所有地图礼包后的大奖(幸运卡)返回
+message TakeMapGiftJackpotResponse{
+	
+}

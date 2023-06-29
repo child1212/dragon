@@ -9,8 +9,11 @@ ActivityGoldPanningModuleMsg.proto
 ActivityLotteryModuleMsg.proto
 ActivityMapModuleMsg.proto
 ActivityModuleMsg.proto
+ActivityMonopolyModuleMsg.proto
 ActivityMowModuleMsg.proto
 ActivityParkourModuleMsg.proto
+ActivitySignInModuleMsg.proto
+ActivityThreeClearModuleMsg.proto
 AdsModuleMsg.proto
 AlchemyFurnaceModuleMsg.proto
 AnimalModuleMsg.proto
@@ -22,6 +25,10 @@ ConvertFactoryModuleMsg.proto
 CoreModuleMsg.proto
 CutVegetableModuleMsg.proto
 DayRewardModuleMsg.proto
+DiamondRebateModuleMsg.proto
+DiggingEventModuleMsg.proto
+DotTaskModuleMsg.proto
+DragonBindModuleMsg.proto
 DragonBubbleModuleMsg.proto
 DragonBuildingModuleMsg.proto
 DragonDrawModuleMsg.proto
@@ -35,6 +42,7 @@ GashaponModuleMsg.proto
 GatewayModuleMsg.proto
 GiftBoxModuleMsg.proto
 GiftModuleMsg.proto
+GlobalProgressModuleMsg.proto
 GMModuleMsg.proto
 GoldPassModuleMsg.proto
 GrowthFundModuleMsg.proto
@@ -52,6 +60,7 @@ MiningModuleMsg.proto
 MonthSignInModuleMsg.proto
 OrderTaskModuleMsg.proto
 PiggyBankModuleMsg.proto
+PlayerStrategyModuleMsg.proto
 PlayGopherModuleMsg.proto
 ProsperityModuleMsg.proto
 RandomShopModuleMsg.proto
@@ -62,6 +71,7 @@ RichManModuleMsg.proto
 RollGrassModuleMsg.proto
 ScarecrowModuleMsg.proto
 SceneModuleMsg.proto
+SevenDaysModuleMsg.proto
 SkinProduceModuleMsg.proto
 SmallBPModuleMsg.proto
 TaskModuleMsg.proto

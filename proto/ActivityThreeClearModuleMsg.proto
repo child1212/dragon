@@ -1,0 +1,98 @@
+syntax = "proto2";
+
+package com.common.msg;
+
+import "ItemModuleMsg.proto";
+import "ActivityModuleMsg.proto";
+
+enum ActivityThreeClearModuleMsgSubCommand {
+	// 获取羊了个羊活动信息
+	ACTIVITYTHREECLEARMODULEMSG_SUB_THREECLEARINFO = 29881;
+	// 结束关卡
+	ACTIVITYTHREECLEARMODULEMSG_SUB_FINISHTHREECLEARLEVEL = 29882;
+	// 关卡复活
+	ACTIVITYTHREECLEARMODULEMSG_SUB_THREECLEARLEVELREVIVE = 29883;
+	// 关卡卡点宝箱领取
+	ACTIVITYTHREECLEARMODULEMSG_SUB_THREECLEARLEVELPOINTREWARD = 29884;
+	// 体力购买
+	ACTIVITYTHREECLEARMODULEMSG_SUB_THREECLEARENERGYBUY = 29885;
+}
+
+// 羊了个羊体力
+message ThreeClearEnergyMsg {
+	// 上次体力恢复时间
+	optional int64 lastRecoverTime = 1;
+	// 活动体力道具
+	optional ItemMsg energyItem = 2;
+}
+
+// 获取羊了个羊活动信息请求
+message ThreeClearInfoRequest {
+	//活动id
+	optional string activityId = 1;
+}
+
+//获取羊了个羊活动信息响应
+message ThreeClearInfoResponse {
+	// 关卡id
+	optional int32 levelId = 1;
+	// 上次体力恢复时间
+	optional int64 lastRecoverTime = 2;
+	// 关卡节点宝箱领取记录
+	repeated int32 levelRewards = 3;
+	// 每一关复活次数 结束关卡时重置
+	optional int32 reviveCnt = 4;
+	// 同步活动道具
+	repeated ItemMsg items = 5;
+	// 历史最高完成的关卡id (关卡奖励只发一次, 回退关卡后重新挑战胜利时不发<=maxLevelId的关卡奖励)
+	optional int32 maxLevelId = 6;
+	// 每日复活次数
+    optional int32 todayReviveCnt = 7;
+}
+
+// 结束关卡请求
+message FinishThreeClearLevelRequest {
+	// 当前关卡id
+	optional int32 levelId = 1;
+	// 是否成功 (失败回退到上一个存档点)
+	optional bool succ = 2;
+}
+
+// 结束关卡响应
+message FinishThreeClearLevelResponse {
+	// 体力同步
+	optional ThreeClearEnergyMsg energy = 1;
+	// 关卡id
+	optional int32 levelId = 2;
+	// 历史最高完成的关卡id
+	optional int32 maxLevelId = 3;
+}
+
+// 关卡复活请求
+message ThreeClearLevelReviveRequest {
+}
+
+// 关卡复活响应
+message ThreeClearLevelReviveResponse {
+
+}
+
+// 关卡宝箱领取请求
+message ThreeClearLevelPointRewardRequest {
+	// 关卡id
+	optional int32 levelId = 1;
+}
+
+// 关卡宝箱领取请求
+message ThreeClearLevelPointRewardResponse {
+}
+
+// 体力购买请求
+message ThreeClearEnergyBuyRequest {
+}
+
+// 体力购买请求
+message ThreeClearEnergyBuyResponse {
+	// 体力同步
+	optional ThreeClearEnergyMsg energy = 1;
+}

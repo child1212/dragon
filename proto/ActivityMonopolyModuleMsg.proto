@@ -1,0 +1,115 @@
+syntax = "proto2";
+
+package com.common.msg;
+
+import "ItemModuleMsg.proto";
+import "ActivityModuleMsg.proto";
+
+enum ActivityMonopolyModuleMsgSubCommand {
+	// 获取大富翁活动信息
+	ACTIVITYMONOPOLYMODULEMSG_SUB_MONOPOLYINFO = 29901;
+	// 掷筛子
+	ACTIVITYMONOPOLYMODULEMSG_SUB_MONOPOLYROLLDICE = 29902;
+	// 关卡结束
+	ACTIVITYMONOPOLYMODULEMSG_SUB_MONOPOLYLEVELFINISH = 29903;
+	// 关卡内获得属性道具
+	ACTIVITYMONOPOLYMODULEMSG_SUB_MONOPOLYLEVELPROPSITEM = 29904;
+	// 领取层数奖励请求
+	ACTIVITYMONOPOLYMODULEMSG_SUB_MONOPOLYFLOORREWARD = 29905;
+	// 扫荡上层
+	ACTIVITYMONOPOLYMODULEMSG_SUB_MONOPOLYQUICKPASS = 29906;
+	// 恢复血量
+	ACTIVITYMONOPOLYMODULEMSG_SUB_MONOPOLYRECOVERHP = 29907;
+}
+
+// 获取大富翁活动信息请求
+message MonopolyInfoRequest {
+	// 活动id
+	optional string activityId = 1;
+}
+
+// 获取大富翁活动信息响应
+message MonopolyInfoResponse {
+	// 已完成关卡id
+	optional int32 levelId = 1;
+	// 同步活动道具
+	repeated ItemMsg items = 2;
+	// 已领取层数奖励(等级)
+	optional int32 floorRewardId = 3;
+	// 每日通关层数
+	optional int32 todayFloorCnt = 4;
+	// 每日任务关卡id
+	optional int32 taskLevelId = 5;
+	// 每日任务索引
+	optional int32 taskIndex = 6;
+	// 每日任务状态（0进行中、1已领奖）
+	optional int32 taskState = 7;
+	// 每日恢复血量次数
+	optional int32 recoverHpCnt = 8;
+}
+
+// 掷筛子请求
+message MonopolyRollDiceRequest {
+}
+
+// 掷筛子响应
+message MonopolyRollDiceResponse {
+}
+
+// 结束关卡请求
+message MonopolyLevelFinishRequest {
+	// 当前关卡id
+	optional int32 levelId = 1;
+	// 是否成功
+	optional bool succ = 2;
+	// 游戏内获得奖励
+	repeated ItemMsg items = 3;
+}
+
+// 结束关卡响应
+message MonopolyLevelFinishResponse {
+}
+
+// 关卡内获得属性道具请求
+message MonopolyLevelPropsItemRequest {
+	// 当前关卡id
+	optional int32 levelId = 1;
+	// 游戏内获得属性奖励
+	repeated ItemMsg items = 2;
+}
+
+// 关卡内获得属性道具响应
+message MonopolyLevelPropsItemResponse {
+}
+
+
+// 领取层数奖励请求
+message MonopolyFloorRewardRequest {
+}
+
+// 领取层数奖励响应
+message MonopolyFloorRewardResponse {
+	// 层奖励id
+	optional int32 floorRewardId = 1;
+	// 奖励
+	repeated ItemMsg items = 2;
+}
+
+// 扫荡上层请求
+message MonopolyQuickPassRequest {
+	
+}
+
+// 扫荡上层响应
+message MonopolyQuickPassResponse {
+	// 奖励
+	repeated ItemMsg items = 1;
+}
+
+// 恢复血量响应
+message MonopolyRecoverHpRequest {
+}
+
+// 恢复血量响应
+message MonopolyRecoverHpResponse {
+}

@@ -1,6 +1,8 @@
 #%%
+import os
+pack_pos = os.path.dirname(os.path.dirname(__file__))
 import sys
-sys.path.append('D:\\pyprogram\\PyTestTools\\dragon\\package')
+sys.path.append('{pack_pos}\\package'.format(pack_pos=pack_pos))
 import time
 import requests
 import CoreModuleMsg_pb2  #登录、进入游戏、引导
@@ -304,3 +306,4 @@ def get_vip(login_res,server,version):
     else:
         print("Server Disconnected ！！!")
         return 0
+# %%

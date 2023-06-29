@@ -11,12 +11,16 @@ message GrowthFundMsg {
 	optional string shopId = 1;
 	// 已领取Id
 	repeated string rewardIds = 2;
+	// 商品id v34.1
+	repeated string shopIds = 3;
 }
 
 // 领取奖励 请求
 message ReceiveRewardRequest {
 	// -1全部领取; 其他配置id单独领取
 	required string rewardId = 1;
+	// v34.1 领取分段; rewardId为-1时需传
+	optional int32 segmentation = 2;
 }
 
 // 领取奖励 响应

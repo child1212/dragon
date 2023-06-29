@@ -12,6 +12,12 @@ enum GlobalProgressModuleMsgSubCommand {
 	GLOBALPROGRESSMODULEMSG_SUB_DELSPECIALAWARD = 29783;
 	// 客户端请求最新任务信息(活动时间结束时或者任务完成时及时刷新下一个任务)
 	GLOBALPROGRESSMODULEMSG_SUB_REFRESHTASKINFO = 29784;
+	
+	//请求全局进度信息V33.1
+	GLOBALPROGRESSMODULEMSG_SUB_GLOBALPROGRESSINFOV33 = 29785;
+	//请求触发新一轮的任务v33.1
+	GLOBALPROGRESSMODULEMSG_SUB_TRIGGERTASKV33 = 29786;
+	//复用 领奖请求和删除特殊商品请求  领奖请求中同步下一个任务信息
 }
 
 //全局进度奖励信息请求
@@ -77,6 +83,10 @@ message TakeAwardResponse {
 	repeated int32 notFinishedNowNum =3;
 	//没有找到任务(可能之前已经领过奖励删除了)
 	repeated TaskComposeKey notFound =4;
+	//v33.1新增 下一个任务信息  正常领奖成功后返回
+	optional TaskInfo taskInfo = 5;
+	//v33.1新增 任务结束时间戳 正常领奖成功后返回
+	optional int64 endTimeStamp = 6;
 }
 
 //请求删除特殊商品
@@ -96,5 +106,32 @@ message RefreshTaskInfoResponse{
 	//当前最新任务信息
 	optional TaskInfo taskInfo = 1;
 	//活动结束时间戳
+	optional int64 endTimeStamp = 2;
+}
+
+//请求全局进度信息V33.1
+message GlobalProgressInfoV33Request {	
+}
+//请求全局进度信息V33.1返回
+message GlobalProgressInfoV33Response {
+	//当前任务信息 (可能没有任务信息  任务已超时结束 或触发次数不足 此时服务器不发送数据 前端使用lua默认值)
+	optional TaskInfo taskInfo = 1;
+	//任务结束时间戳 (可能没有任务)
+	optional int64 endTimeStamp = 2;
+	//当日触发数量
+	optional int32 dayTriggerNum = 3;
+	//当日累计消耗精力数量
+	optional int32 dayStatisticsNum = 4;
+}
+
+//请求触发下一个8轮任务
+message TriggerTaskV33Request {
+	
+}
+//请求触发下一个8轮任务返回
+message TriggerTaskV33Response{
+	//任务信息 
+	optional TaskInfo taskInfo = 1;
+	//任务结束时间戳
 	optional int64 endTimeStamp = 2;
 }

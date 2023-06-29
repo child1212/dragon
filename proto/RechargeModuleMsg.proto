@@ -20,6 +20,10 @@ enum RechargeModuleMsgSubCommand {
 	RECHARGEMODULEMSG_SUB_AFREPORTHISTORYLIST = 3007;
 	// 请求使用特权币购买商品
 	RECHARGEMODULEMSG_SUB_BUYSHOPPRODUCTWITHITEM = 3008;
+	// 请求购买后商品可多次领取物品的商品信息
+	RECHARGEMODULEMSG_SUB_SHOPDAYAWARDINFOS = 3009;
+	// 请求领取购买后商品每日的奖励
+	RECHARGEMODULEMSG_SUB_TAKESHOPDAYAWARD = 3010;
 }
 
 //充值请求
@@ -38,6 +42,8 @@ message Subscribe {
 	required string productId =1;
 	//过期时间(单位:秒)
 	required int64 expired =2;
+	//订阅的订单id
+	optional string orderId =3;
 }
 
 //同步玩家订阅信息
@@ -123,4 +129,30 @@ message BuyShopProductWithItemRequest {
 
 //用特权币购买商店商品请求返回
 message BuyShopProductWithItemResponse {
+}
+
+//请求购买后商品可多次领取物品的商品信息
+message ShopDayAwardInfosRequest {
+}
+
+message ShopDayAwardInfo{
+	//参见ShopTemplate中id配置
+	optional string shopId =1;
+	//截止时间戳(在截止时间点之前都能够领取奖励)
+	optional int64 endTime = 2;
+	//上次领取每日奖励时间
+	optional int64 lastAward = 3;
+}
+//请求购买后商品可多次领取物品的商品信息返回
+message ShopDayAwardInfosResponse{
+	repeated ShopDayAwardInfo infos = 1;
+}
+
+//请求领取购买后商品每日的奖励
+message TakeShopDayAwardRequest{
+	optional string shopId = 1;
+}
+
+//请求领取购买后商品每日的奖励返回
+message TakeShopDayAwardResponse{
 }

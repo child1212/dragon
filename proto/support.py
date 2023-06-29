@@ -6,13 +6,13 @@
 #获得python库
 
 import os
-path_n = os.getcwd()    #获取当前路径
-
+path_n = os.path.dirname(__file__)    #获取当前路径
+path_r = "{a}\\package".format(a=os.path.dirname(path_n))    #获取上一级路径
 l = open("list.txt", "r")
 bat = open("list.bat", "w")
 for line in l:
     if "proto" in line:
-        bat.write("protoc -I={path_n} --python_out={path_n} {path_n}\\{line}".format(path_n=path_n, line=line))
+        bat.write("protoc -I={path_n} --python_out={path_r} {path_n}\\{line}".format(path_n=path_n,path_r=path_r, line=line))
 
 l.close()
 bat.close()

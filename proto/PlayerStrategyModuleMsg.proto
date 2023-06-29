@@ -1,0 +1,44 @@
+syntax = "proto2";
+package com.common.msg;
+
+enum PlayerStrategyModuleMsgSubCommand {
+	// 玩家策略优化信息请求
+	PLAYERSTRATEGYMODULEMSG_SUB_PLAYERSTRATEGYINFO = 29841;
+	// 请求领取优化策略每日奖励(玩家一直在线跨天之后请求)
+	PLAYERSTRATEGYMODULEMSG_SUB_TAKEDAYREWARD = 29842;
+}
+
+// 玩家策略优化信息请求
+message PlayerStrategyInfoRequest {
+
+}
+
+message StrategyInfo {
+	//参见PlayerStrategyTemplate中配置的id
+	optional string id =1;
+	//触发时间戳
+	optional int64 trigger =2;
+	//结束时间戳(endTime时间为0时表示不确定结束时间,结束时间受礼包触发影响)
+	optional int64 endTime =3;
+	//上次赠送奖励时间戳
+	optional int64 lastAward = 4;
+	//本次是否奖励了每日buff
+	optional bool awardedBuff = 5;
+	//已经奖励每日buff的次数
+	optional int32 awardCount = 6;
+}
+
+// 玩家策略优化信息请求返回
+message PlayerStrategyInfoResponse {
+	//玩家策略优化信息集合(不包含没有CD的,例如彩蛋积分翻倍的需求)
+	repeated StrategyInfo datas = 1;
+}
+
+// 请求领取优化策略每日奖励(玩家一直在线跨天之后请求)
+message TakeDayRewardRequest{
+	//参见PlayerStrategyTemplate中配置的id
+	optional string id =1;
+}
+// 请求领取优化策略每日奖励返回(玩家一直在线跨天之后请求)
+message TakeDayRewardResponse{
+}

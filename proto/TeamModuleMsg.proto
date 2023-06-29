@@ -823,21 +823,7 @@ message CommissionStartResponse {
 	
 }
 
-//委托领取奖励请求
-message CommissionRewardRequest {
-	// 委托任务id
-	optional int32 taskId = 1;
-}
 
-//委托领取奖励响应
-message CommissionRewardResponse {
-	// 新生成的委托任务
-	optional CommissionTask task = 1;
-	// 委托积分
-	optional int32 commissionScore = 2;
-	// 龙信息同步
-	repeated MagicalCreatureMsg creatures = 3;
-}
 
 //委托加速请求
 message CommissionAccelerateRequest {
@@ -880,35 +866,4 @@ message CommissionBuyCntRequest {
 
 //购买今日委托次数
 message CommissionBuyCntResponse {
-}
-
-//委托完成
-message CommissionFinishRequest {
-	// 委托任务id
-	repeated int32 taskIds = 1;
-}
-
-//委托完成
-message CommissionFinishResponse {
-	// 龙信息同步
-	repeated MagicalCreatureMsg creatures = 1;
-}
-
-//委托累计积分奖励
-message CommissionScoreRewardRequest {
-}
-
-//委托累计积分奖励
-message CommissionScoreRewardResponse {
-}
-
-
-//委托公会累计积分请求
-message CommissionScoreRequest {
-}
-
-//委托公会累计积分请求
-message CommissionScoreResponse {
-	// 委托积分
-	optional int32 commissionScore = 1;
 }
