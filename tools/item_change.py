@@ -5,12 +5,13 @@ import sys
 sys.path.append('{pack_pos}\\function'.format(pack_pos=pack_pos))
 import time
 from func_dragon import *
+from player_data import *
 
 
 #######################################################################################
 #dragon : d6e0c013d2c377bbeb3f56a262cf3b99\603681214128417
 #FA : d5c99e6af7b7d828dacf9a804d621503\511821434459738\91a4a00cc23bdae216d5dc2519da2c77\623293505cf755ed47851789c0bb1c48\
-accounts = {input("account:")}                           #账号                                 #
+accounts = {input("account:"),input("account:")}                           #账号                                 #
 server = input('server:')                                    #服务器前缀<dev:"tlogin", qa:"qausa">  #
 printAll = False
 #######################################################################################
@@ -31,45 +32,35 @@ elif server == "dragon":
 elif server == "act":
     server = "http://dact.gameyici.com"
 
+total_recharge = {}
 total = {}
 for account in accounts:
     total[account] = {}
+    total_recharge[account] = 0
 run = ''
 no = 501
 while run == '':
     for account in accounts:
         print(account+":","\n=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=")
 
+        try:
+            log_res = login_gm(server)                      #登录GM平台
+            info = get_playerid(account, log_res,server)  #获取playerId
+            player = info["playerid"]
+            session = info["sessionid"]
+            # player = 'lc8b8r' 
+            playerinfo = get_player_info(account,player,server,log_res)
+            palyerdata = player_data(playerinfo)
+            prop = Properties(palyerdata)
 
-        log_res = login_gm(server)                      #登录GM平台
-        info = get_playerid(account, log_res,server)  #获取playerId
-        player = info["playerid"]
-        session = info["sessionid"]
-        # player = 'lc8b8r' 
-        lis = get_itemlist(player,session,account,log_res,server)
-        lis = lis['item']
-        lis_dic = json.loads(lis)
-        tacc = {}#
+            lis = get_itemlist(player,session,account,log_res,server)
+            lis = lis['item']
+            lis_dic = json.loads(lis)
+            tacc = {}#
+        except:
+            print(account,"登录失败")
+            break
 
-        # for tp in lis_dic:
-        #     tacc[new_name] = tp.get("num")#新的
-        #     old_tacc = total.get(account)
-        #     # 有旧的
-        #     if old_tacc is not None:
-        #         #新旧一样
-        #         if tacc.get(new_name) == old_tacc.get(new_name):
-        #             if printAll and tp.get("num") != 0:
-        #                 print('='*(32-len(tp.get("name"))*2-len((str(tp.get("id"))))),new_name,":",tp.get("num"))
-        #             else:
-        #                 pass
-        #         #新旧不一
-        #         else:
-        #             print('='*(32-len(tp.get("name"))*2-len((str(tp.get("id"))))),new_name,":",tp.get("num"),"-"*(10-len(str(tp.get("num")))),"change:",tacc[new_name]-old_tacc.get(new_name))
-        #     # 没有旧的
-        #     else:
-        #         if tp.get("num") != 0:
-        #             print('='*(32-len(tp.get("name"))*2-len((str(tp.get("id"))))),new_name,":",tp.get("num"))
-        # total[account] = tacc
         for tp in lis_dic:
             new_name = (str(tp.get("id")))+"-"+tp.get("name")
             tacc[new_name] = tp.get("num")#新的
@@ -107,7 +98,8 @@ while run == '':
                 
 
 
-
+        print('\n充值总金额：',prop.data["totalPayAmount"],"===============change:",prop.data["totalPayAmount"]-total_recharge[account])
+        total_recharge[account] = prop.data["totalPayAmount"]
         total[account] = tacc
 
 

@@ -48,7 +48,6 @@ guide_10006
 guide_10007
 guide_10008
 guide_10009
-guide_11001
 guide_11002_Deprecated
 guide_10101
 guide_10102
@@ -266,3 +265,6 @@ guide_Vegetables_6
 guide_Vegetables_7
 guide_Vegetables_8
 guide_Vegetables_9
+guide_activity2314_0
+guide_activity2314_2
+guide_activity2314_3

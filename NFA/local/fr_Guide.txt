@@ -64,6 +64,7 @@ guide_16004
 guide_18001
 guide_10804
 guide_10805
+guide_10806
 guide_26001
 guide_26002
 guide_27001
@@ -207,3 +208,11 @@ Architectural_skin_guide3
 Architectural_skin_guide4
 Architectural_skin_guide2
 commission_unlock_guide
+sceneLevel_8_guide1
+commission_building_guide1
+commission_building_guide2
+commission_building_guide3
+new_map
+guide_roll_4richman_0
+guide_roll_4richman_1
+guide_roll_4richman_2

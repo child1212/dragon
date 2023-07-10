@@ -81,7 +81,7 @@ mail_content = "Dear Adventurers,\n\nThank you for joining us for the grand open
 #邮件奖励[[奖励1,数量][奖励2,数量][...,...]]
 reward = [[1001,50]]
 #服务器地址
-server = "nrelease"
+server = "nqa"
 #每组玩家数量
 group_num = 10
 #玩家列表

@@ -75,8 +75,8 @@ class MagicalCreature_class:
             print(self.partners_new_dict[k].get('templateId'))
 
 #################################################
-server = "qa"
-account = "li2011"
+server = "38"
+account = input("account:")
 
 
 

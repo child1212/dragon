@@ -13,13 +13,16 @@ from player_data import *
 param_ad = {}
 
 #################################################
-server = "nqa"
-accounts = {"mm0601"}
+server = "qa"
+accounts = {"ol3498","ol3499"}
+# accounts = {"ol3489","ol3488"}
+# accounts = {"ol3479","ol3478"}
+
 
 # 锁分组
 param_ad["locked"] = 1
 # 分组
-param_ad["group"] = 8
+param_ad["group"] = 5
 
 
 
@@ -59,12 +62,11 @@ for account in accounts:
     change_Param(ad,log_res,server,p)
     print(p)
 
-    
 
 # %%
 # 单发道具
-item_id = "7005"
-num = 800
+item_id = "1002"
+num = -2545558
 for account in accounts:
     info = get_playerid(account, log_res,server)    #��ȡplayerId
     player = info['playerid']

@@ -33,6 +33,8 @@ bubble_305_1
 bubble_306_1
 bubble_307_1
 bubble_308_1
+bubble_309_1
+bubble_310_1
 bubble_401_1
 bubble_402_1
 bubble_403_1
@@ -78,6 +80,8 @@ hungertext_305_1
 hungertext_306_1
 hungertext_307_1
 hungertext_308_1
+hungertext_309_1
+hungertext_310_1
 hungertext_401_1
 hungertext_402_1
 hungertext_403_1
@@ -123,6 +127,8 @@ feedingtext_305_1
 feedingtext_306_1
 feedingtext_307_1
 feedingtext_308_1
+feedingtext_309_1
+feedingtext_310_1
 feedingtext_401_1
 feedingtext_402_1
 feedingtext_403_1
@@ -168,6 +174,8 @@ borntext_305_1
 borntext_306_1
 borntext_307_1
 borntext_308_1
+borntext_309_1
+borntext_310_1
 borntext_401_1
 borntext_402_1
 borntext_403_1
@@ -213,6 +221,8 @@ upgradeabletext_305_1
 upgradeabletext_306_1
 upgradeabletext_307_1
 upgradeabletext_308_1
+upgradeabletext_309_1
+upgradeabletext_310_1
 upgradeabletext_401_1
 upgradeabletext_402_1
 upgradeabletext_403_1
@@ -258,6 +268,8 @@ bornwildtext_305_1
 bornwildtext_306_1
 bornwildtext_307_1
 bornwildtext_308_1
+bornwildtext_309_1
+bornwildtext_310_1
 bornwildtext_401_1
 bornwildtext_402_1
 bornwildtext_403_1
@@ -303,6 +315,8 @@ leavecountrytext_305_1
 leavecountrytext_306_1
 leavecountrytext_307_1
 leavecountrytext_308_1
+leavecountrytext_309_1
+leavecountrytext_310_1
 leavecountrytext_401_1
 leavecountrytext_402_1
 leavecountrytext_403_1
@@ -348,6 +362,8 @@ wildstrolltext_305_1
 wildstrolltext_306_1
 wildstrolltext_307_1
 wildstrolltext_308_1
+wildstrolltext_309_1
+wildstrolltext_310_1
 wildstrolltext_401_1
 wildstrolltext_402_1
 wildstrolltext_403_1

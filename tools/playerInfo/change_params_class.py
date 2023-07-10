@@ -13,18 +13,22 @@ from player_data import *
 param = {}
 
 #################################################
-server = "ntest"
-accounts = {"fa0700"}
+server = "qa"
+accounts = {"ol3499","ol3498"}
+# accounts = {"3401","3402"}
+
+# accounts = {"ol3489","ol3488"}
+
 # 等级
-# param["level"] = 30
+# param["level"] = 8
 # 经验
-# param["exp"] = 3399
+# param["exp"] = 8899
 # 昵称
 # param["nickName"] = "gold"
 # 时间差
 
 from_current_time = True
-d,h,m = 3,0,0
+d,h,m = 7,0,0
 param["timeOffset"] = (((d*24)+h)*60+m)*60*1000
 template_time = param["timeOffset"]
 
@@ -79,13 +83,16 @@ for account in accounts:
         prop.data[k] = param[k]
     change_Param(prop,log_res,server,prop.data)
 
+    # x = prop.data["exp"]
+    # print(x-y)
+    # y = x
 
     
 
 # %%
 # 单发道具
-item_id = "34000"
-num = -97
+item_id = "2100"
+num = -50
 for account in accounts:
     info = get_playerid(account, log_res,server)    #��ȡplayerId
     player = info['playerid']
