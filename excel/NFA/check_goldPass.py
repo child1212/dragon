@@ -218,7 +218,7 @@ for i in range(3,lenth_cfg):
         vv = set()
         for j in json.loads(cfg[i,2]):
             vv.add(tuple(j))
-        ww = {(gpid,1,2,5,3),(gpid-1,1,2,5,3)}
+        ww = {(gpid,1,2,5,3),(gpid-1,1,2,5,3),(gpid-2,1,2,5,3)}
         if vv != ww:
             print("config:黄金通行证特权配置错误",cfg[i,0])
     
@@ -226,7 +226,7 @@ for i in range(3,lenth_cfg):
         vv = set()
         for j in json.loads(cfg[i,2]):
             vv.add(tuple(j))
-        ww = {(gpid,1200),(gpid-1,1200)}
+        ww = {(gpid,1200),(gpid-1,1200),(gpid-2,1200)}
         if vv != ww:
             print("config:黄金通行证特权配置错误",cfg[i,0])
     
@@ -234,20 +234,13 @@ for i in range(3,lenth_cfg):
         vv = set()
         for j in json.loads(cfg[i,2]):
             vv.add(tuple(j))
-        ww = {(gpid,1000),(gpid-1,1000)}
+        ww = {(gpid,1000),(gpid-1,1000),(gpid-2,1000)}
         if vv != ww:
             print("config:黄金通行证特权配置错误",cfg[i,0])
     
     if cfg[i,0] == "goldPassFileIndex":
         vv = set()
-        for j in json.loads(cfg[i,2]):
-            vv.add(tuple(j))
-        if gpid%2 == 0:
-            ww = {(gpid,2),(gpid-1,1)}
-        else:
-            ww = {(gpid,1),(gpid-1,2)}
-        if vv != ww:
-            print("config:黄金通行证特权配置错误",cfg[i,0])
+        print("config:检测通行证配置",cfg[i,2],gpid)
 
 
 

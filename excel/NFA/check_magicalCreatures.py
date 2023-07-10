@@ -1,7 +1,7 @@
 #%%
 import pandas as pd
 import json
-df = pd.read_excel("E:\\town\\FA\\nfa-config\\excel\\DataFile\\MagicalCreaturesTemplate.xlsx")
+df = pd.read_excel("E:\\FA\\nfa-config\\excel\\DataFile\\MagicalCreaturesTemplate.xlsx")
 #检测id
 #品质：等级上限
 maxlevel = {1:15,2:15,3:15,4:15}
