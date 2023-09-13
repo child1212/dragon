@@ -67,6 +67,12 @@ class MagicalCreature:
         self.value = player_data.allData.get(self.key)
         self.data = json.loads(self.value)
 
+class gift:
+    def __init__(self,player_data) -> None:
+        self.key = 'P{playerid}@{{{playerid}}}-gift'.format(playerid=player_data.playerid)
+        self.value = player_data.allData.get(self.key)
+        self.data = json.loads(self.value)
+
         
 #%%
 def change_Param(classname,login_res,host,params):

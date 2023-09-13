@@ -16,7 +16,7 @@ for country in countries:
             l_list = l.split("=")
             r = l_list[1]
             for lett in r:
-                if lett not in letters:
+                if lett not in letters_en:
                     x.add(lett)   
                     print(lett)
                     print(line)        
@@ -37,7 +37,7 @@ for country in countries:
     print("#===================="+country+"=======================#")
     exc = ("errorcode_18004","errorcode_18005")
     for name in names:
-        lan = open("E:\\town\\FA\\client\\client\\Assets\\HomeLand\\Localization\\{country}\\{name}.bytes".format(country=country,name=name),"r",encoding="utf-8")
+        lan = open("E:\\FA\\client\\client\\Assets\\HomeLand\\Localization\\{country}\\{name}.bytes".format(country=country,name=name),"r",encoding="utf-8")
 
         for line in lan:
             if "errorcode_18004" in line or "errorcode_18005" in line:
@@ -58,7 +58,7 @@ for country in countries:
 #检测参数配置和中文不一致的情况
 #创建映射
 names = ('AI','Dialog','Guide','Pops','Story','SystemErrorCode','Tips','UI','Partnerbubble')
-countries = {'en','de','en','fr','it','ja','ko','sp','zh'}
+countries = {'en','de','en','fr','it','ja','ko','sp','zh','tc'}
 for country in countries:
     for name in names:
         lan = open("E:\\FA\\client\\client\\Assets\\HomeLand\\Localization\\{country}\\{name}.bytes".format(country=country,name=name),"r",encoding="utf-8")
@@ -92,7 +92,7 @@ for line in val:
     stand[kx[0]] = kr
 val.close()
 # countries = ('ar','de','en','fr','it','ja','ko','ne','po','ru','sp','tc','th','tu','vi','zh')
-countries = {'en','de','en','fr','it','ja','ko','sp'}
+countries = {'en','de','en','fr','it','ja','ko','sp','tc'}
 for country in countries:
     print("#===================="+country+"=======================#")
     comp = {}
@@ -119,7 +119,7 @@ for country in countries:
 # %%
 # 检测多语言丢失key的情况
 names = ('AI','Dialog','Guide','Pops','Story','SystemErrorCode','Tips','UI',"Partnerbubble")
-countries = {'en','de','en','fr','it','sp','zh'}
+countries = {'en','de','en','fr','it','sp','zh',"tc"}
 
 
 
@@ -144,7 +144,7 @@ for name in names:
             stand.add(line)
     val.close()
     # 开始对比
-    countries_compare = {'en','de','en','fr','it','sp'}
+    countries_compare = {'en','de','en','fr','it','sp','tc'}
     for country in countries_compare:
         print("#===================="+country+"=======================#")
         comp = set()

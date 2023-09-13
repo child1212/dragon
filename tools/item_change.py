@@ -9,9 +9,11 @@ from player_data import *
 
 
 #######################################################################################
-#dragon : d6e0c013d2c377bbeb3f56a262cf3b99\603681214128417
+#dragon : b444f6745dcf87f4ed82393dd92dc61a\603681214128417
 #FA : d5c99e6af7b7d828dacf9a804d621503\511821434459738\91a4a00cc23bdae216d5dc2519da2c77\623293505cf755ed47851789c0bb1c48\
-accounts = {input("account:"),input("account:")}                           #账号                                 #
+acc = input("account:")
+acc_1 = acc.split(",")
+accounts = set(acc_1)                                        #账号                                 #
 server = input('server:')                                    #服务器前缀<dev:"tlogin", qa:"qausa">  #
 printAll = False
 #######################################################################################
@@ -22,7 +24,6 @@ elif server == "nqa":
     server = "https://qa-nfa.hphorse.net"
 elif server == "nrelease":
     server = "https://online-nfa.hphorse.net"
-
 elif server == "38":
     server = "http://dtest.gameyici.com"
 elif server == "qa":
@@ -39,10 +40,10 @@ for account in accounts:
     total_recharge[account] = 0
 run = ''
 no = 501
-while run == '':
+while run != "stop":
+    go = 1
     for account in accounts:
         print(account+":","\n=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=")
-
         try:
             log_res = login_gm(server)                      #登录GM平台
             info = get_playerid(account, log_res,server)  #获取playerId
@@ -52,6 +53,7 @@ while run == '':
             playerinfo = get_player_info(account,player,server,log_res)
             palyerdata = player_data(playerinfo)
             prop = Properties(palyerdata)
+            ads = Ads(palyerdata)
 
             lis = get_itemlist(player,session,account,log_res,server)
             lis = lis['item']
@@ -59,8 +61,8 @@ while run == '':
             tacc = {}#
         except:
             print(account,"登录失败")
+            go = 0
             break
-
         for tp in lis_dic:
             new_name = (str(tp.get("id")))+"-"+tp.get("name")
             tacc[new_name] = tp.get("num")#新的
@@ -99,13 +101,15 @@ while run == '':
 
 
         print('\n充值总金额：',prop.data["totalPayAmount"],"===============change:",prop.data["totalPayAmount"]-total_recharge[account])
+        print("group:",ads.data["group"])
         total_recharge[account] = prop.data["totalPayAmount"]
         total[account] = tacc
 
 
         # print("\n\n")
     print("=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=\n")
-    run = input("contune?")
+    if go == 1:
+        run = input("contune?")
     # os.system("adb shell input tap 2071 718")
     # os.system("adb shell input tap 1619 914")
     # os.system("adb exec-out screencap -p >e://screenshot/upgrade{no}.jpg".format(no=no))

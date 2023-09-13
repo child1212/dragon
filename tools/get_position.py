@@ -1,8 +1,8 @@
 #%%
 #横版
 #填写参数
-x = '00000ab5'  #adb shell getevent -t -l  ABS_MT_POSITION_X   
-y = '000006aa'  #adb shell getevent -t -l  ABS_MT_POSITION_Y
+x = '00000960'  #adb shell getevent -t -l  ABS_MT_POSITION_X   
+y = '00000a03'  #adb shell getevent -t -l  ABS_MT_POSITION_Y
 xmin = 0     
 xmax = 4095  #adb shell getevent -p       0035
 ymin = 0

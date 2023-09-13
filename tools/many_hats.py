@@ -11,14 +11,14 @@ import os
 
 print("start time:",time.asctime(time.localtime()))
 account = "onl799"
-server = "nqa"                           
+server = "ntest"                           
 item_type = {4}
-hat_type = {1,2,3,4}
 '''
 2:女主皮肤
 4:帽子
 '''
 # item = items()
+hat_type = {1,2,3,4}
 
 
 

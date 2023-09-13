@@ -12,8 +12,8 @@ import os
 
 #在这里填写参数=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*
 print("start time:",time.asctime(time.localtime()))
-accounts = {"mm0698"}
-server = 'ntest'
+accounts = {"ol3499"}
+server = '38'
 #在这里填写参数=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*
 
 
@@ -54,7 +54,7 @@ for account in accounts:
 
 
 
-print("playerid:-{player}\nItem cleared!".format(player=player))
+    print("playerid:-{player}\nItem cleared!".format(player=player))
 
 
 

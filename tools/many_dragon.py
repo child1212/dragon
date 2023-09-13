@@ -12,15 +12,15 @@ import pandas as pd
 
 
 print("start time:",time.asctime(time.localtime()))
-account = "ol3498"
+account = "onl799"
 level = ""
 attribute = ""
-typ = [101,102,103,104,110,109,107,112,114,105]#nfa专属
+# typ = [109,203,204,310,311,312,315,411,413,308,]#nfa专属
 typ = []
-num = 1
-server = '38'
-project = "DFA"#DFA/NFA
-group = 186
+num = 10
+server = 'nqa'
+project = "NFA"#DFA/NFA
+group = 60
 
 
 

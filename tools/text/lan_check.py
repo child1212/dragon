@@ -55,7 +55,7 @@ for country in countries:
     print("#===================="+country+"=======================#")
     exc = ("errorcode_18004","errorcode_18005")
     for name in names:
-        lan = open("E:\\town\\dragon\\client\\client\\Assets\\HomeLand\\Localization\\{country}\\{name}.bytes".format(country=country,name=name),"r",encoding="utf-8")
+        lan = open("E:\\dragon\\client\\client\\Assets\\HomeLand\\Localization\\{country}\\{name}.bytes".format(country=country,name=name),"r",encoding="utf-8")
 
         for line in lan:
             if "errorcode_18004" in line or "errorcode_18005" in line:

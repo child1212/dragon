@@ -54,7 +54,7 @@ for i in range(4,lenth):
 
         
         #检测本期活动配置与上期活动配置区别
-        if i > lenth-28:
+        if i > lenth-29:
             # if i == lenth-27:
             #     print("奖励帽子图标：",gpl[i,4])
             #     hat_icon = gpl[i,4]
@@ -64,7 +64,7 @@ for i in range(4,lenth):
             #     hat_name = gpl[i,10]
             #     print("奖励帽子描述:",gpl[i,11])
             #     hat_des = gpl[i,11]
-            if i == lenth-12:
+            if i == lenth-13:
                 #比对奖励icon
                 if gpl[i,4] == gpl[i-27,4]:
                     if str(gpl[i,4]) != "nan":
@@ -87,7 +87,7 @@ for i in range(4,lenth):
                 frame_name = gpl[i,10]
                 print("奖励头像框描述:",gpl[i,11])
                 frame_des = gpl[i,11]
-            elif i == lenth-4:
+            elif i == lenth-5:
                 #比对奖励icon
                 if gpl[i,4] == gpl[i-27,4]:
                     if str(gpl[i,4]) != "nan":

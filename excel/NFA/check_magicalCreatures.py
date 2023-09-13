@@ -84,11 +84,11 @@ while index_1 < len(df.values):
             #         if df.values[index_1,title.get("type")] != 304:
             #             print(df.values[index_1+i,0],"productionTime")
             # if not 0.45 <= ((json.loads(df.values[index_1+i-1,title.get("productivity")])[1] - json.loads(df.values[index_1+i,title.get("productivity")])[1])/json.loads(df.values[index_1,title.get("productivity")])[1])*m_l <= 0.5 :
-            if ((json.loads(df.values[index_1+i-1,title.get("productivity")])[1] - json.loads(df.values[index_1+i,title.get("productivity")])[1])/json.loads(df.values[index_1,title.get("productivity")])[1])*m_l != 0 :
+            # if ((json.loads(df.values[index_1+i-1,title.get("productivity")])[1] - json.loads(df.values[index_1+i,title.get("productivity")])[1])/json.loads(df.values[index_1,title.get("productivity")])[1])*m_l != 0 :
 
-                if i != m_l-1:
-                    if df.values[index_1,title.get("type")] != 304:
-                        print(df.values[index_1+i,0],"productionTime",((json.loads(df.values[index_1+i-1,title.get("productivity")])[1] - json.loads(df.values[index_1+i,title.get("productivity")])[1])/json.loads(df.values[index_1,title.get("productivity")])[1])*m_l)
+            #     if i != m_l-1:
+            #         if df.values[index_1,title.get("type")] != 304:
+            #             print(df.values[index_1+i,0],"productionTime",((json.loads(df.values[index_1+i-1,title.get("productivity")])[1] - json.loads(df.values[index_1+i,title.get("productivity")])[1])/json.loads(df.values[index_1,title.get("productivity")])[1])*m_l)
             #检测生产数量--没规则做不到
             #if df.values[index_1,30] != 
             

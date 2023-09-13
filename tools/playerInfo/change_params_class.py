@@ -14,24 +14,36 @@ param = {}
 
 #################################################
 server = "qa"
-accounts = {"ol3499","ol3498"}
+# accounts = {"370001","3700"}
 # accounts = {"3401","3402"}
+# accounts = {"ol3496","ol3497"}
+accounts = {"ol3599","ol3598"}
 
-# accounts = {"ol3489","ol3488"}
+# # 等级
+param["level"] = 50
 
-# 等级
-# param["level"] = 8
 # 经验
-# param["exp"] = 8899
+# param["exp"] = 8200
+
 # 昵称
 # param["nickName"] = "gold"
+
+# 新渠道
+# param["campaign"] = "23856992579970254"#"23851245022520315","17335329307"
+
 # 时间差
-
-from_current_time = True
-d,h,m = 7,0,0
-param["timeOffset"] = (((d*24)+h)*60+m)*60*1000
-template_time = param["timeOffset"]
-
+# from_current_time = True
+# x = 1
+# if x == 1:
+#     d,h,m = 8,0,0
+# elif x == 2:
+#     d,h,m = 0,2,24
+# elif x == 3:
+#     d,h,m = 13,8,-15
+# elif x == 4:
+#     d,h,m = 0,-1,0
+# param["timeOffset"] = (((d*24)+h)*60+m)*60*1000
+# template_time = param["timeOffset"]
 
 
 # 最后一次付费时间
@@ -91,8 +103,8 @@ for account in accounts:
 
 # %%
 # 单发道具
-item_id = "2100"
-num = -50
+item_id = "1004"
+num = 200
 for account in accounts:
     info = get_playerid(account, log_res,server)    #��ȡplayerId
     player = info['playerid']

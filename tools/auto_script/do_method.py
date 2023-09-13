@@ -2,6 +2,8 @@
 import os
 from time import sleep
 
+os.system("adb shell wm size 1080x2400")
+
 def click(x,y):
     os.system("adb shell input tap {x} {y}".format(x=x, y=y))
 
@@ -42,3 +44,5 @@ while True:
     input("Enter")
 
 
+
+# %%

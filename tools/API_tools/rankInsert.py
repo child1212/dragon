@@ -11,9 +11,9 @@ import requests
 import json
 import random
 from xieyi import *
-server = "ntest"
+server = "38"
 activityId = 100007
-version="8.1.0"
+version="38.1.0"
 
 
 
@@ -55,7 +55,7 @@ data = {}
 #%%
 #插入机器人
 for i in range(100):
-    account = "act{i}".format(i=i)
+    account = "onl{i}".format(i=i)
     log = login(account,server,version)
     data_rank = []
     data_faker = '{"pid":"","level":0,"activityId":0,"score":0}'
@@ -70,7 +70,7 @@ for i in range(100):
     data_faker = json.dumps(data_faker)
     data_rank.append(data_faker)
     RankIns(str(data_rank),server)
-    # time.sleep(3)
+    time.sleep(3)
     data[account] = (level,score)
 
 
@@ -80,7 +80,7 @@ for i in range(100):
 transcript = {"li2001":799,"li2002":798,"li2003":797,"li2004":290,"li2005":250,"li2006":55,"li2000":99}
 transcript = {"li0001":799,"li0002":798,"li0003":797,"li0004":290,"li0005":250,"li0006":55,"li0007":99}
 transcript = {"swd29":2,"swd28":200,"swd27":248,"swd26":280,"swd25":290,"swd24":1,"swd23":700,"swd22":1178,"swd21":1179,"swd20":1180}#pid:分数
-transcript = {"swd50":500,"swd51":499,"swd52":498,"swd53":497,"swd54":100,"swd55":290,"swd56":280,"swd57":240}#pid:分数
+# transcript = {"swd50":500,"swd51":499,"swd52":498,"swd53":497,"swd54":100,"swd55":290,"swd56":280,"swd57":240}#pid:分数
 
 for key in transcript:
     data_rank = []
