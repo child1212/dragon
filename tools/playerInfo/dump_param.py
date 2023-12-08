@@ -10,8 +10,8 @@ from func_dragon import *
 from xieyi import *
 
 
-server = "nqa"
-accounts = {"xin001"}
+server = "38"
+accounts = {"13BB168D-2B67-43BB-A9A7-969ECD46F380"}
 player = ''
 
 
@@ -50,8 +50,8 @@ for account in accounts:
     # t = time.strftime("%Y-%m-%d / %H:%M:%S",t)
     # print(t)
     # for line in properties:
-
+    
     #     print(line,properties[line])
-    print("level:",properties.get("level"))
-    print("exp  :",properties.get("exp"))
+    print(player,"campaign:",properties.get("campaign"))
+    # print("exp  :",properties.get("exp"))
     

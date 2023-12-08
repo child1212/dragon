@@ -79,11 +79,12 @@ mail_title = "Test Mail"
 #邮件内容
 mail_content = "Dear Adventurers,\n\nThank you for joining us for the grand opening of Fairyscapes Adventure! To celebrate the occasion, we are giving away 50 Free Diamonds every day from June 15th to June 17th. The rewards for each day will be distributed through mail the following day, so don't forget to come back and claim them! We wish you all have a magical experience as you embark on your journey through Fairytale Land!\n\nFairyscapes Adventure Team"
 #邮件奖励[[奖励1,数量][奖励2,数量][...,...]]
-reward = [[1001,50]]
-#服务器地址
-server = input("请输入服务器地址:")
+reward = [[int(input("道具id:")),int(input("道具数量:"))]]
+# reward = [[60011,2],[60012,2]]
 #玩家id
 playerid_list = [input("请输入玩家id:")]
+#服务器地址
+server = input("请输入服务器地址:")
 #########################################
 
 if server == "ntest":
@@ -101,4 +102,6 @@ elif server == "act":
 # elif server == "nrelease":
 #     server = "https://online-nfa.hphorse.net"
     
+# for i in range(50):
+#     result = mails(playerid_list,mail_title,mail_content,reward,server)
 result = mails(playerid_list,mail_title,mail_content,reward,server)

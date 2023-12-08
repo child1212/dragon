@@ -13,17 +13,17 @@ from player_data import *
 param = {}
 
 #################################################
-server = "qa"
+server = "ntest"
 # accounts = {"370001","3700"}
-# accounts = {"3401","3402"}
-# accounts = {"ol3496","ol3497"}
-accounts = {"ol3599","ol3598"}
+accounts = {"799"}
+# accounts = {"ol3698","ol3699"}
+# accounts = {"ol3499","ol3498"}
 
 # # 等级
-param["level"] = 50
+# param["level"] = 26
 
 # 经验
-# param["exp"] = 8200
+# param["exp"] = 1980
 
 # 昵称
 # param["nickName"] = "gold"
@@ -31,26 +31,27 @@ param["level"] = 50
 # 新渠道
 # param["campaign"] = "23856992579970254"#"23851245022520315","17335329307"
 
-# 时间差
+# # 时间差
 # from_current_time = True
 # x = 1
 # if x == 1:
-#     d,h,m = 8,0,0
+#     d,h,m = 3,0,0
 # elif x == 2:
-#     d,h,m = 0,2,24
+#     d,h,m = 0,0,28
 # elif x == 3:
-#     d,h,m = 13,8,-15
+#     d,h,m = 18,0,0
 # elif x == 4:
 #     d,h,m = 0,-1,0
 # param["timeOffset"] = (((d*24)+h)*60+m)*60*1000
 # template_time = param["timeOffset"]
 
 
+
 # 最后一次付费时间
 # param["lastRechargeTime"] = (time.time()-60*24*3600)*1000
 
 # 支付金额
-# param["totalPayAmount"] = 1000000      
+# param["totalPayAmount"] = 0     
 
 # 皮肤 ["27351","27352","27350","27353"]
 # param["heroineSkins"] = [27202]   
@@ -103,8 +104,8 @@ for account in accounts:
 
 # %%
 # 单发道具
-item_id = "1004"
-num = 200
+item_id = "1003"
+num = 360000
 for account in accounts:
     info = get_playerid(account, log_res,server)    #��ȡplayerId
     player = info['playerid']

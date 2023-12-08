@@ -8,12 +8,13 @@ import requests
 import json
 from xieyi import *
 from func_dragon import *
+import pandas as pd
 
 print("请提前检查奖励积分配置！！！！！")
 print("请提前检查奖励积分配置！！！！！")
 print("请提前检查奖励积分配置！！！！！")
 
-server = "ntest"
+server = input("server:")
 activityId = int(input("activityid:"))
 account = input("accoutid:")
 level = int(input("level:"))
@@ -57,16 +58,17 @@ def RankIns(data,host="https://dqa.hphorse.net"):
 
 #创建奖品名称映射
 mine = {}
-table_item = open("D:\\pyprogram\\PyTestTools\\dragon\\tools\\ItemTemplate.csv","r",encoding="utf-8-sig")
-item = {}
 total = {}#
-for line in table_item:
-    line_l = line.split(",")
-    item[str(line_l[0])] = line_l[1]
-table_item.close()
+
+item = {}
+table_item = pd.read_excel("E:\\FA\\nfa-config\\excel\\DataFile\\ItemTemplate.xlsx")
+table_item_val = table_item.values
+for i in range(3,len(table_item_val)):
+    item[str(table_item_val[i][0])] = table_item_val[i][1]
+
 
 #打开配置文件
-sr = open("D:\\pyprogram\\PyTestTools\\dragon\\tools\\ScoreReward.txt","r")
+sr = open("E:\\PyTools\\dragon\\tools\\ScoreReward.txt","r")
 for line in sr:
     line = line.replace("\n","")
 #llll是配置，格式[分数，[[奖励1,数量],[奖励2,数量]]]
@@ -157,6 +159,11 @@ for line in sr:
         running = input("contune?")
 
 sr.close()
+input("continue")
+
+
+
+
 
 
 

@@ -16,13 +16,14 @@ param_mc = {}
 # server = "qa"
 # accounts = {"ol3497","ol3496"}
 # accounts = {"ol3499","ol3498"}
-server = "38"
-accounts = {"ol3498","ol3499"}
+server = "ntest"
+# accounts = {"ol3498","ol3499"}
+accounts = {"799"}
 
 # 锁分组
 param_mc["skins"] = {}
 # 分组
-# param_mc["creatures"] = {}
+param_mc["creatures"] = {}
 
 
 

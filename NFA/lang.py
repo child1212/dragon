@@ -1,38 +1,7 @@
-from langdetect import detect
-from langdetect import detect_lang
-#%%
-#检测多语言格式，是否有参数配置错误
-names = ('AI','Dialog','Guide','Pops','Story','SystemErrorCode','Tips','UI','Partnerbubble')
-countries = {'en'}
-x = set()
-for country in countries:
-    print("#===================="+country+"=======================#")
-    for name in names:
-        lan = open("E:\\FA\\client\\client\\Assets\\HomeLand\\Localization\\{country}\\{name}.bytes".format(country=country,name=name),"r",encoding="utf-8")
-        letters_en = ("qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890,.?/!@#$%^&*()-_=+[{]}\\|;:'\",<.>/? …’")
-        for line in lan:
-            l = line.replace("\n","").replace("\r","")
-            
-            l_list = l.split("=")
-            r = l_list[1]
-            for lett in r:
-                if lett not in letters_en:
-                    x.add(lett)   
-                    print(lett)
-                    print(line)        
-            # if detect(r) != "en":
-            #     print(line)
-        lan.close()
-
-
-
-
-
-
 # %%
 #检测中文字符
 names = ('AI','Dialog','Guide','Pops','Story','SystemErrorCode','Tips','UI','Partnerbubble')
-countries = {'en','de','en','fr','it','sp'}
+countries = {'en','de','en','fr','it','sp','ko'}
 for country in countries:
     print("#===================="+country+"=======================#")
     exc = ("errorcode_18004","errorcode_18005")

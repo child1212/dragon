@@ -6,7 +6,7 @@ sys.path.append('{pack_pos}\\function'.format(pack_pos=pack_pos))
 sys.path.append('{pack_pos}\\package'.format(pack_pos=pack_pos))
 from func_dragon import *
 
-server = "qa"                               #服务器前缀<dev:"tlogin", qa:"qausa">  #
+server = "38"                               #服务器前缀<dev:"tlogin", qa:"qausa">  #
 
 if server == "38":
     server = "http://dtest.gameyici.com"

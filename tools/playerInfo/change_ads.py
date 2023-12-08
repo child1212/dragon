@@ -15,15 +15,16 @@ param_ad = {}
 #################################################
 server = "qa"
 # accounts = {"ol3699","ol3698"}
-accounts = {"ol3598","ol3599"}
-# accounts = {"799"}
+# accounts = {"ol3495","ol3497"}
+# accounts = {"ol3499","ol3498"}
+accounts = {"4101"}
 
 
 
 # 锁分组
 param_ad["locked"] = 1
 # 分组
-param_ad["group"] = 11
+param_ad["group"] = 8
 # 礼包
 # param_ad["recordInfos"] = []
 
@@ -67,8 +68,8 @@ for account in accounts:
 
 # %%
 # 单发道具
-item_id = "1001"
-num = 16555
+item_id = "2100"
+num = -50
 for account in accounts:
     info = get_playerid(account, log_res,server)    #��ȡplayerId
     player = info['playerid']

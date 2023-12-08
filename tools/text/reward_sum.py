@@ -1,13 +1,13 @@
 #%%
 import pandas as pd
-project = "DFA"
+project = "NFA"
 if project == "NFA":
-    table_item = pd.read_excel("E:\\town\\FA\\nfa-config\\excel\\DataFile\\ItemTemplate.xlsx")
+    table_item = pd.read_excel("E:\\FA\\nfa-config\\excel\\DataFile\\ItemTemplate.xlsx")
     table_item = table_item.values
 elif project == "DFA":
-    table_item = pd.read_excel("E:\\town\\dragon\\dragon-config\\excel\\DataFile\\ItemTemplate.xlsx")
+    table_item = pd.read_excel("E:\\dragon\\dragon-config\\excel\\DataFile\\ItemTemplate.xlsx")
     table_item = table_item.values
-temp = open('D:\\pyprogram\\PyTestTools\\dragon\\tools\\text\\reward.txt',"r",encoding="utf-8-sig")
+temp = open('E:\\PyTools\\dragon\\tools\\text\\reward.txt',"r",encoding="utf-8-sig")
 rewards = []
 for line in temp:
     x = eval(line)

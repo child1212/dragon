@@ -12,8 +12,8 @@ import os
 
 #在这里填写参数=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*
 print("start time:",time.asctime(time.localtime()))
-accounts = {"ol3499"}
-server = '38'
+accounts = {"onl797"}
+server = 'ntest'
 #在这里填写参数=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*
 
 

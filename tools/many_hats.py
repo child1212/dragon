@@ -10,7 +10,7 @@ import pandas
 import os
 
 print("start time:",time.asctime(time.localtime()))
-account = "onl799"
+account = "799"
 server = "ntest"                           
 item_type = {4}
 '''

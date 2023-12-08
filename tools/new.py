@@ -16,11 +16,11 @@ import requests
 # account = "e7f31a3db7b2446589eb37d053caba3e"
 # account = "C71519CC-15DB-44AB-BE21-757A097E0408"
 # account = "DBFABEFD-A297-4C48-B94E-4EC185B6AEE3"
-account = "ol3479"
+account = "4101"
 
-server = "38"
-version = "37.1.0"
-scene = "3"#input("输入地图编号")
+server = "qa"
+version = "41.1.0"
+scene = "2"#input("输入地图编号")
 skip = 0
 
 
