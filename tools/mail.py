@@ -104,4 +104,6 @@ elif server == "act":
     
 # for i in range(50):
 #     result = mails(playerid_list,mail_title,mail_content,reward,server)
-result = mails(playerid_list,mail_title,mail_content,reward,server)
+while True:    
+    result = mails(playerid_list,mail_title,mail_content,reward,server)
+    input("continue!")

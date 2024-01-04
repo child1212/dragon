@@ -630,3 +630,4 @@ dragon_desc_145701
 dragon_desc_145702
 dragon_desc_145703
 dragon_desc_145704
+partner_name_315

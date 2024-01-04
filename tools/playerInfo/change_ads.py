@@ -17,14 +17,14 @@ server = "qa"
 # accounts = {"ol3699","ol3698"}
 # accounts = {"ol3495","ol3497"}
 # accounts = {"ol3499","ol3498"}
-accounts = {"4101"}
+accounts = {"ol3497","ol3498"}
 
 
 
 # 锁分组
 param_ad["locked"] = 1
 # 分组
-param_ad["group"] = 8
+param_ad["group"] = 7
 # 礼包
 # param_ad["recordInfos"] = []
 

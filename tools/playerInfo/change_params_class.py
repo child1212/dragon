@@ -13,17 +13,18 @@ from player_data import *
 param = {}
 
 #################################################
-server = "ntest"
+server = "38"
 # accounts = {"370001","3700"}
-accounts = {"799"}
+# accounts = {"onl795","onl796"}
 # accounts = {"ol3698","ol3699"}
-# accounts = {"ol3499","ol3498"}
+accounts = {"ol3498"}
+# accounts = {"max014"}
 
 # # 等级
-# param["level"] = 26
+# param["level"] = 11
 
 # 经验
-# param["exp"] = 1980
+# param["exp"] = 1950
 
 # 昵称
 # param["nickName"] = "gold"
@@ -32,18 +33,18 @@ accounts = {"799"}
 # param["campaign"] = "23856992579970254"#"23851245022520315","17335329307"
 
 # # 时间差
-# from_current_time = True
-# x = 1
-# if x == 1:
-#     d,h,m = 3,0,0
-# elif x == 2:
-#     d,h,m = 0,0,28
-# elif x == 3:
-#     d,h,m = 18,0,0
-# elif x == 4:
-#     d,h,m = 0,-1,0
-# param["timeOffset"] = (((d*24)+h)*60+m)*60*1000
-# template_time = param["timeOffset"]
+from_current_time = True
+x = 1
+if x == 1:
+    d,h,m = 15,0,0
+elif x == 2:
+    d,h,m = 0,0,10
+elif x == 3:
+    d,h,m = 0,0,52
+elif x == 4:
+    d,h,m = 0,-1,0
+param["timeOffset"] = (((d*24)+h)*60+m)*60*1000
+template_time = param["timeOffset"]
 
 
 
@@ -51,7 +52,7 @@ accounts = {"799"}
 # param["lastRechargeTime"] = (time.time()-60*24*3600)*1000
 
 # 支付金额
-# param["totalPayAmount"] = 0     
+# param["totalPayAmount"] = 999
 
 # 皮肤 ["27351","27352","27350","27353"]
 # param["heroineSkins"] = [27202]   
@@ -104,8 +105,8 @@ for account in accounts:
 
 # %%
 # 单发道具
-item_id = "1003"
-num = 360000
+item_id = "1007"
+num = -10
 for account in accounts:
     info = get_playerid(account, log_res,server)    #��ȡplayerId
     player = info['playerid']

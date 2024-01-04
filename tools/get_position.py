@@ -1,14 +1,14 @@
 #%%
 #横版
 #填写参数
-x = '00000960'  #adb shell getevent -t -l  ABS_MT_POSITION_X   
-y = '00000a03'  #adb shell getevent -t -l  ABS_MT_POSITION_Y
+x = '000009b5'  #adb shell getevent -t -l  ABS_MT_POSITION_X   
+y = '000008a9'  #adb shell getevent -t -l  ABS_MT_POSITION_Y
 xmin = 0     
 xmax = 4095  #adb shell getevent -p       0035
 ymin = 0
 ymax = 4095  #adb shell getevent -p       0036
-width = 1080  #adb shell wm size
-high = 2400
+width = 1440  #adb shell wm size
+high = 3088
 
 
 xx = int('{x}'.format(x=x),16)

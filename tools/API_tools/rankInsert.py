@@ -12,8 +12,8 @@ import json
 import random
 from xieyi import *
 server = "ntest"
-activityId = 141
-version="15.1.0"
+activityId = 10002
+version="16.1.0"
 
 
 
@@ -77,8 +77,8 @@ for i in range(100):
 #######################################################
 # %%
 #插入1890-1896
-# transcript = {"swd29":2,"swd28":200,"swd27":248,"swd26":280,"swd25":290,"swd24":1,"swd23":700,"swd22":1178,"swd21":1179,"swd20":1180}#pid:分数
-transcript = {"swd50":500+300,"swd51":499+300,"swd52":498+300,"swd53":497+300,"swd54":100,"swd55":290,"swd56":280,"swd57":240}#pid:分数
+transcript = {"swd29":2,"swd28":200,"swd27":248,"swd26":280,"swd25":290,"swd24":1,"swd23":700,"swd22":1178,"swd21":1179,"swd20":1180}#pid:分数
+# transcript = {"swd50":500+300,"swd51":499+300,"swd52":498+300,"swd53":497+300,"swd54":100,"swd55":290,"swd56":280,"swd57":240}#pid:分数
 # transcript = {"onl799":5000,"onl798":4999,"onl797":4998,"onl796":4997,"onl795":100,"wb3qqk":290}#pid:分数
 
 for key in transcript:
@@ -109,10 +109,10 @@ level = random.choice(range(12,40))
 
 
 
-data_faker["pid"] = "wb3qqk"
-data_faker["level"] = 17
+data_faker["pid"] = "max014"
+data_faker["level"] = 59
 data_faker["activityId"] = activityId
-data_faker["score"] = 1000
+data_faker["score"] = 130
 
 
 

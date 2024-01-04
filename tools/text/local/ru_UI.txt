@@ -1487,6 +1487,7 @@ ui_goldpass_task_45
 ui_goldpass_task_46
 ui_goldpass_task_47
 ui_goldpass_task_48
+ui_goldpass_task_56
 ui_goldpass_reward_1
 ui_goldpass_reward_1_desc
 ui_goldpass_reward_2
@@ -4719,6 +4720,8 @@ UI_common_scene_task_cooking
 UI_common_scene_task_save
 UI_common_scene_task_kill
 UI_fulllevel_last_scene
+UI_common_scene_task_activation
+UI_common_scene_task_calm
 item_4459
 item_des_4459
 item_getway_4459
@@ -9033,6 +9036,8 @@ UI_update_mail_title_40.1
 UI_update_mail_desc_40.1
 UI_update_mail_title_41.1
 UI_update_mail_desc_41.1
+UI_update_mail_title_42.1
+UI_update_mail_desc_42.1
 dragonskin_27110
 dragonskin_desc_27110
 item_desc_27751
@@ -10442,6 +10447,11 @@ ui_finddiff_2
 ui_finddiff_3
 ui_finddiff_4
 ui_finddiff_start1
+ui_finddiff2_1
+ui_finddiff2_2
+ui_finddiff2_3
+ui_finddiff2_4
+ui_finddiff2_start1
 UI_2322ThiefMagic_letter
 UI_2322ThiefMagic_recipient
 UI_2322ThiefMagic_sender
@@ -11304,6 +11314,8 @@ UI_2324ToyCity_titleB
 UI_event2324_task1
 ui_type83_des6
 ui_type83_des7
+UI_2328ChristmasVillages_title
+UI_2328ChristmasVillages_des
 item_37002
 item_desc_37002
 ui_event2326_Processingtable
@@ -11638,6 +11650,7 @@ ui_event2328_factory1
 ui_event2328_factory2
 ui_event2328_factory3
 ui_event2328_factory4
+ui_event2328_Totem
 partner_desc_331
 partner_desc_329
 UI_2329LanternShowA_title

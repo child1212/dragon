@@ -16,7 +16,7 @@ for i in range(4,lenth):
     c = type(eval(cer[i,6])) == list
     d = type(eval(cer[i,6])[0]) == list
     e = len(eval(cer[i,6])) == 1
-    f = eval(cer[i,6])[0][0] in (1003,1002,15000,1001,30000,11001,42000,60015,16000)
+    f = eval(cer[i,6])[0][0] in (1003,1002,15000,1001,30000,11001,42000,60015,60012,60011,16000)
 
 
     if a and b and c and d and e and f:

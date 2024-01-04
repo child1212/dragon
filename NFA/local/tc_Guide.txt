@@ -255,3 +255,9 @@ UI_drivert_water_guide1
 UI_drivert_water_guide2
 UI_drivert_water_guide3
 UI_drivert_water_guide4
+UI_drivert_water_guide5
+UI_drivert_water_guide6
+UI_drivert_water_guide7
+UI_drivert_water_guide8
+UI_drivert_water_progress
+UI_drivert_water_select_level

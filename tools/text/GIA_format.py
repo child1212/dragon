@@ -2,8 +2,8 @@
 
 import json
 
-gia = open("D:\\pyprogram\\PyTestTools\\dragon\\tools\\text\\data\\gia.txt","r",encoding="utf-8")
-giar = open("D:\\pyprogram\\PyTestTools\\dragon\\tools\\text\\data\\gia_out.txt","w",encoding="utf-8")
+gia = open("E:\\PyTools\\dragon\\tools\\text\\data\\gia.txt","r",encoding="utf-8")
+giar = open("E:\\PyTools\\dragon\\tools\\text\\data\\gia_out.txt","w",encoding="utf-8")
 
 custom = {"remain","change","itemId","itemCount"}
 

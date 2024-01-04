@@ -14,9 +14,9 @@ param_gif = {}
 
 #################################################
 server = "qa"
-accounts = {"799","onl799"}
-# accounts = {"ol3489","ol3488"}
-accounts = {"ol3479","ol3478"}
+# accounts = {"799","onl799"}
+accounts = {"ol3698","ol3699"}
+# accounts = {"ol3479","ol3478"}
 
 # 礼包
 param_gif["gifts"] = []
