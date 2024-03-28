@@ -13,18 +13,19 @@ from player_data import *
 param = {}
 
 #################################################
-server = "38"
+server = "nqa"
 # accounts = {"370001","3700"}
-# accounts = {"onl795","onl796"}
+# accounts = {"onl899","899"}
 # accounts = {"ol3698","ol3699"}
-accounts = {"ol3498"}
-# accounts = {"max014"}
+# accounts = {"ol4598","ol4599"}
+accounts = {"2020","2021"}
+# accounts = {"onl798"}
 
 # # 等级
-# param["level"] = 11
+param["level"] = 11
 
 # 经验
-# param["exp"] = 1950
+# param["exp"] = 1900
 
 # 昵称
 # param["nickName"] = "gold"
@@ -36,9 +37,9 @@ accounts = {"ol3498"}
 from_current_time = True
 x = 1
 if x == 1:
-    d,h,m = 15,0,0
+    d,h,m = 5,0,0
 elif x == 2:
-    d,h,m = 0,0,10
+    d,h,m = 0,0,-2
 elif x == 3:
     d,h,m = 0,0,52
 elif x == 4:
@@ -48,11 +49,12 @@ template_time = param["timeOffset"]
 
 
 
+
 # 最后一次付费时间
 # param["lastRechargeTime"] = (time.time()-60*24*3600)*1000
 
 # 支付金额
-# param["totalPayAmount"] = 999
+# param["totalPayAmount"] = 33333
 
 # 皮肤 ["27351","27352","27350","27353"]
 # param["heroineSkins"] = [27202]   
@@ -105,11 +107,13 @@ for account in accounts:
 
 # %%
 # 单发道具
-item_id = "1007"
-num = -10
+item_id = "7005"
+num = 100
 for account in accounts:
     info = get_playerid(account, log_res,server)    #��ȡplayerId
     player = info['playerid']
     session = info['sessionid']
 
     send_gift(item_id,num, player,session, account, log_res,server)
+
+# %%

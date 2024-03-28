@@ -10,21 +10,23 @@ sys.path.append('{pack_pos}\\function'.format(pack_pos=pack_pos))
 from func_dragon import *
 from xieyi import *
 from player_data import *
-param_mc = {}
+param_pig = {}
 
 #################################################
-# server = "qa"
 server = "nqa"
-# accounts = {"ol3497","ol3496"}
+# accounts = {"ol3699","ol3698"}
+# accounts = {"ol3495","ol3497"}
 # accounts = {"ol3499","ol3498"}
-# accounts = {"ol4599","ol4598"}
 accounts = {"onl799","onl798"}
 
-# 锁分组
-param_mc["skins"] = {}
-# 分组
-param_mc["creatures"] = {}
 
+
+# 锁分组
+param_pig["energy"] = 1450
+# 分组
+# param_ad["group"] = 7
+# 礼包
+# param_ad["recordInfos"] = []
 
 
 
@@ -47,7 +49,6 @@ elif server == "act":
 
 
 for account in accounts:
-    print(account)
     player = ''
     log_res = login_gm(server)    
     if not player:
@@ -56,14 +57,13 @@ for account in accounts:
     playerinfo = get_player_info(account,player,server,log_res)
 
     palyerdata = player_data(playerinfo)
-    mc = MagicalCreature(palyerdata)
+    pig = PiggyBank(palyerdata)
     #复制数据
-    p = copy.deepcopy(mc.data)
-    for key in param_mc:
-        p[key] = param_mc[key]
-    change_Param(mc,log_res,server,p)
-    # print(p)
-    print(mc.data.get("skins"))
-    
-
+    p = copy.deepcopy(pig.data)
+    for key in param_pig:
+        dat = json.loads(p["piggyBank"])
+        dat[key] = param_pig[key]
+        p["piggyBank"] = json.dumps(dat)
+    change_Param(pig,log_res,server,p)
+    print(p)
 

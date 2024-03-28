@@ -10,8 +10,8 @@ import pandas
 import os
 
 print("start time:",time.asctime(time.localtime()))
-account = "799"
-server = "ntest"                           
+account = "onl799"
+server = "nqa"                           
 item_type = {4}
 '''
 2:女主皮肤
