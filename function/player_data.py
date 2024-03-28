@@ -85,6 +85,11 @@ class Pve:
         self.value = player_data.allData.get(self.key)
         self.data = json.loads(self.value)
 
+class PiggyBank:
+    def __init__(self,player_data) -> None:
+        self.key = 'P{playerid}@{{{playerid}}}-PiggyBank'.format(playerid=player_data.playerid)
+        self.value = player_data.allData.get(self.key)
+        self.data = json.loads(self.value)
         
 #%%
 def change_Param(classname,login_res,host,params):

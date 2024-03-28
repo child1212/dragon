@@ -1,0 +1,1 @@
+python E:\PyTools\dragon\tools\auto_script\click_screen.py

@@ -11,9 +11,9 @@ import requests
 import json
 import random
 from xieyi import *
-server = "ntest"
-activityId = 10002
-version="16.1.0"
+server = "38"
+activityId = 100005
+version="44.1.0"
 
 
 

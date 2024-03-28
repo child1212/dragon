@@ -14,8 +14,8 @@ def swipe(x1,y1,x2,y2):
 def swipe_k(x1,y1,x2,y2):
     os.system("adb shell input swipe {x1} {y1} {x2} {y2} 200".format(x1=x1, y1=y1, x2=x2, y2=y2))
 
-xa,xb,xc,xd = 1683,1935,2186,2431
-ya,yb,yc = 579,923,1241
+xa,xb,xc,xd = 1206,1466,1664,1858
+ya,yb,yc = 448,695,926
 
 
 

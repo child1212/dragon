@@ -1,1 +1,1 @@
-adb -d shell wm size 1080x2400
+adb -d shell wm size reset

@@ -13,10 +13,11 @@ from player_data import *
 param_gif = {}
 
 #################################################
-server = "qa"
-# accounts = {"799","onl799"}
-accounts = {"ol3698","ol3699"}
+server = "nqa"
+# accounts = {"899","onl899"}
+# accounts = {"ol3698","ol3699"}
 # accounts = {"ol3479","ol3478"}
+accounts = {"onl796","onl797"}
 
 # 礼包
 param_gif["gifts"] = []

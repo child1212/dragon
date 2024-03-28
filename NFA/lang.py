@@ -1,5 +1,6 @@
 # %%
 #检测中文字符
+print("检测中文字符")
 names = ('AI','Dialog','Guide','Pops','Story','SystemErrorCode','Tips','UI','Partnerbubble')
 countries = {'en','de','en','fr','it','sp','ko'}
 for country in countries:
@@ -23,7 +24,7 @@ for country in countries:
 
 
 
-# %%
+print("检测参数配置和中文不一致的情况")
 #检测参数配置和中文不一致的情况
 #创建映射
 names = ('AI','Dialog','Guide','Pops','Story','SystemErrorCode','Tips','UI','Partnerbubble')
@@ -85,7 +86,7 @@ for country in countries:
 
 
 
-# %%
+print("检测多语言丢失key的情况")
 # 检测多语言丢失key的情况
 names = ('AI','Dialog','Guide','Pops','Story','SystemErrorCode','Tips','UI',"Partnerbubble")
 countries = {'en','de','en','fr','it','sp','zh',"tc"}

@@ -11,3 +11,5 @@ for x in old:
     olds.add(x[0])
 
 change = news - olds
+
+# %%

@@ -19,8 +19,8 @@ accounts = {"onl799"}
 
 
 #energy
-score = 250
-actid = 13005
+score = 500
+actid = 13024
 coefficient = 10
 param["energy"] = score*coefficient-1
 

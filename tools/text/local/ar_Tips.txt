@@ -1,7 +1,0 @@
-LoadingScene.LoadingView.Tips.1
-LoadingScene.LoadingView.Tips.2
-LoadingScene.LoadingView.Tips.3
-LoadingScene.LoadingView.Tips.4
-LoadingScene.LoadingView.Tips.5
-LoadingScene.LoadingView.Tips.6
-LoadingScene.LoadingView.Tips.7

@@ -29,7 +29,7 @@ elif server == "38":
 elif server == "qa":
     server = "https://dqa.hphorse.net"
 elif server == "dragon":
-    server = "https://dragon.hphorse.net"
+    server = "https://online.hphorse.net"
 elif server == "act":
     server = "http://dact.gameyici.com"
 
@@ -128,7 +128,9 @@ while run != "stop":
 # %%
 
 
-
 # %%
 
 # %%
+
+
+
