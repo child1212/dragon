@@ -10,7 +10,7 @@ def time_to_unix_time(str_time):
 activity = pd.read_excel("E:\\FA\\nfa-config\\excel\\DataFile\\ActivityTemplate.xlsx")
 
 data_activity = activity.values
-
+# %%
 #key:activity type
 #value:activity time
 activity_keep_time = {}
