@@ -15,14 +15,15 @@ param = {}
 #################################################
 server = "nqa"
 # accounts = {"370001","3700"}
-# accounts = {"onl899","899"}
+# accounts = {"onl796","onl797"}
 # accounts = {"ol3698","ol3699"}
 # accounts = {"ol4598","ol4599"}
-accounts = {"2020","2021"}
-# accounts = {"onl798"}
+accounts = {"ol2098","ol2099"}
+# accounts = {"ol4599","ol4598"}
+accounts = {"onl799","onl798"}
 
 # # 等级
-param["level"] = 11
+# param["level"] = 14
 
 # 经验
 # param["exp"] = 1900
@@ -37,13 +38,13 @@ param["level"] = 11
 from_current_time = True
 x = 1
 if x == 1:
-    d,h,m = 5,0,0
+    d,h,m = 3,6,48
 elif x == 2:
-    d,h,m = 0,0,-2
+    d,h,m = 0,0,-5
 elif x == 3:
     d,h,m = 0,0,52
 elif x == 4:
-    d,h,m = 0,-1,0
+    d,h,m = 0,0,0
 param["timeOffset"] = (((d*24)+h)*60+m)*60*1000
 template_time = param["timeOffset"]
 
@@ -54,7 +55,7 @@ template_time = param["timeOffset"]
 # param["lastRechargeTime"] = (time.time()-60*24*3600)*1000
 
 # 支付金额
-# param["totalPayAmount"] = 33333
+# param["totalPayAmount"] = 3333
 
 # 皮肤 ["27351","27352","27350","27353"]
 # param["heroineSkins"] = [27202]   
@@ -64,13 +65,13 @@ template_time = param["timeOffset"]
 
 
 if server == "ntest":
-    server = "https://nfa-test.bettagames.com"
+    server = "http://192.168.1.143"
 elif server == "nqa":
     server = "https://qa-nfa.hphorse.net"
 elif server == "nrelease":
     server = "https://online-nfa.hphorse.net"
 elif server == "38":
-    server = "http://dtest.gameyici.com"
+    server = "http://192.168.1.140"
 elif server == "qa":
     server = "https://dqa.hphorse.net"
 elif server == "dragon":
@@ -107,8 +108,8 @@ for account in accounts:
 
 # %%
 # 单发道具
-item_id = "7005"
-num = 100
+item_id = "1003"
+num = 100000
 for account in accounts:
     info = get_playerid(account, log_res,server)    #��ȡplayerId
     player = info['playerid']

@@ -12,15 +12,15 @@ import os
 
 #在这里填写参数=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*
 print("start time:",time.asctime(time.localtime()))
-accounts = {"onl798"}
-server = 'ntest'
+accounts = {"ol4599","ol4598"}
+server = 'qa'
 #在这里填写参数=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*
 
 
 
 
 if server == "ntest":
-    server = "https://nfa-test.bettagames.com"
+    server = "http://192.168.1.143"
 elif server == "nqa":
     server = "https://qa-nfa.hphorse.net"
 elif server == "nrelease":

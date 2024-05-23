@@ -15,9 +15,10 @@ param_gif = {}
 #################################################
 server = "nqa"
 # accounts = {"899","onl899"}
-# accounts = {"ol3698","ol3699"}
+accounts = {"ol3698","ol3699"}
 # accounts = {"ol3479","ol3478"}
-accounts = {"onl796","onl797"}
+# accounts = {"ol4598","ol4599"}
+accounts = {"onl798","onl799"}
 
 # 礼包
 param_gif["gifts"] = []
@@ -27,7 +28,7 @@ param_gif["gifts"] = []
 
 
 if server == "ntest":
-    server = "https://nfa-test.bettagames.com"
+    server = "http://192.168.1.143"
 elif server == "nqa":
     server = "https://qa-nfa.hphorse.net"
 elif server == "nrelease":

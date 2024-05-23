@@ -11,7 +11,7 @@ import os
 
 print("start time:",time.asctime(time.localtime()))
 account = "onl799"
-server = "nqa"                           
+server = "ntest"                           
 item_type = {4}
 '''
 2:女主皮肤
@@ -23,7 +23,7 @@ hat_type = {1,2,3,4}
 
 
 if server == "ntest":
-    server = "https://nfa-test.bettagames.com"
+    server = "http://192.168.1.143"
 elif server == "nqa":
     server = "https://qa-nfa.hphorse.net"
 elif server == "nrelease":

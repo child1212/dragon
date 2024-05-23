@@ -19,13 +19,13 @@ printAll = False
 #######################################################################################
 
 if server == "ntest":
-    server = "https://nfa-test.bettagames.com"
+    server = "http://192.168.1.143"
 elif server == "nqa":
     server = "https://qa-nfa.hphorse.net"
 elif server == "nrelease":
     server = "https://online-nfa.hphorse.net"
 elif server == "38":
-    server = "http://dtest.gameyici.com"
+    server = "http://192.168.1.140"
 elif server == "qa":
     server = "https://dqa.hphorse.net"
 elif server == "dragon":

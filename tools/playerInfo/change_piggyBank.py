@@ -13,16 +13,17 @@ from player_data import *
 param_pig = {}
 
 #################################################
-server = "nqa"
+server = "ntest"
 # accounts = {"ol3699","ol3698"}
 # accounts = {"ol3495","ol3497"}
 # accounts = {"ol3499","ol3498"}
-accounts = {"onl799","onl798"}
+# accounts = {"onl796","onl797"}
+accounts = {"onl799"}
 
 
 
 # 锁分组
-param_pig["energy"] = 1450
+param_pig["energy"] = 10
 # 分组
 # param_ad["group"] = 7
 # 礼包
@@ -32,7 +33,7 @@ param_pig["energy"] = 1450
 
 
 if server == "ntest":
-    server = "https://nfa-test.bettagames.com"
+    server = "http://192.168.1.143"
 elif server == "nqa":
     server = "https://qa-nfa.hphorse.net"
 elif server == "nrelease":

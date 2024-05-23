@@ -88,7 +88,7 @@ server = input("请输入服务器地址:")
 #########################################
 
 if server == "ntest":
-    server = "https://nfa-test.bettagames.com"
+    server = "http://192.168.1.143"
 elif server == "nqa":
     server = "https://qa-nfa.hphorse.net"
 elif server == "38":

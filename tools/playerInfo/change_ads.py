@@ -24,7 +24,7 @@ accounts = {"ol4599","ol4598"}
 # 锁分组
 param_ad["locked"] = 1
 # 分组
-param_ad["group"] = 7
+param_ad["group"] = 6
 # 礼包
 # param_ad["recordInfos"] = []
 
@@ -32,7 +32,7 @@ param_ad["group"] = 7
 
 
 if server == "ntest":
-    server = "https://nfa-test.bettagames.com"
+    server = "http://192.168.1.143"
 elif server == "nqa":
     server = "https://qa-nfa.hphorse.net"
 elif server == "nrelease":

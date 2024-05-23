@@ -14,11 +14,11 @@ param_mc = {}
 
 #################################################
 # server = "qa"
-server = "nqa"
+server = "ntest"
 # accounts = {"ol3497","ol3496"}
 # accounts = {"ol3499","ol3498"}
 # accounts = {"ol4599","ol4598"}
-accounts = {"onl799","onl798"}
+accounts = {"onl799"}
 
 # 锁分组
 param_mc["skins"] = {}
@@ -30,7 +30,7 @@ param_mc["creatures"] = {}
 
 
 if server == "ntest":
-    server = "https://nfa-test.bettagames.com"
+    server = "http://192.168.1.143"
 elif server == "nqa":
     server = "https://qa-nfa.hphorse.net"
 elif server == "nrelease":
@@ -67,3 +67,5 @@ for account in accounts:
     
 
 
+
+# %%

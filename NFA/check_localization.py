@@ -19,7 +19,7 @@ import config
 local_file_path = config.g_art_home
 
 print("--检测中文字符--")
-names = ('AI','Dialog','Guide','Pops','Story','SystemErrorCode','Tips','UI','Partnerbubble')
+names = ('AI','Dialog','dragon','Guide','Obstacle','Pops','Story','SystemErrorCode','Tips','UI')
 countries = {'ar','de','en','fr','it','ko','ne','po','ru','sp','th','tu','vi'}
 for country in countries:
     print("#===================="+country+"=======================#")
@@ -40,7 +40,7 @@ for country in countries:
 
 print("\n\n--检测参数配置和中文不一致的情况--")
 
-names = ('AI','Dialog','Guide','Pops','Story','SystemErrorCode','Tips','UI','Partnerbubble')
+names = ('AI','Dialog','dragon','Guide','Obstacle','Pops','Story','SystemErrorCode','Tips','UI')
 countries = {'ar','de','en','fr','it','ja','ko','ne','po','ru','sp','zh','tc','th','tu','vi'}
 
 local_values = {}
@@ -92,7 +92,7 @@ for country in countries:
 
 
 print("\n\n--检测多语言丢失key的情况--")
-names = ('AI','Dialog','Guide','Pops','Story','SystemErrorCode','Tips','UI',"Partnerbubble")
+names = ('AI','Dialog','dragon','Guide','Obstacle','Pops','Story','SystemErrorCode','Tips','UI')
 countries = {'en','de','en','fr','it','sp','zh',"tc"}
 
 

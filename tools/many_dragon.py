@@ -12,11 +12,11 @@ import pandas as pd
 
 
 print("start time:",time.asctime(time.localtime()))
-account = "onl798"
+account = "onl796"
 level = ""
 attribute = ""
 typ = []
-typ = {342}#nfa专属
+# typ = {101}#nfa专属
 num = 10
 server = 'nqa'
 project = "NFA"#DFA/NFA
@@ -32,7 +32,7 @@ group = 100
 pat = os.path.dirname(__file__)
 
 if server == "ntest":
-    server = "https://nfa-test.bettagames.com"
+    server = "http://192.168.1.143"
 elif server == "nqa":
     server = "https://qa-nfa.hphorse.net"
 elif server == "nrelease":
